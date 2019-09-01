@@ -1,0 +1,492 @@
+.container-fluid
+	max-width: 1860px
+	margin: auto
+
+header
+	background-image: url(../img/bg.jpg)
+	padding: 40px 0 0 0
+	background-position: center
+
+.social
+	justify-content: flex-end
+	height: 100%
+	a
+		margin-right: 10px
+
+.pt50
+	padding-top: 50px
+
+.slick-slide
+	outline: 0
+
+body
+	margin: 0
+	padding: 0
+	overflow-x: hidden
+	font-family: 'Roboto', sans-serif
+
+.right-border
+	height: 39px
+	width: 1px
+	background: #C4C4C4
+	margin-right: 30px
+
+h1
+	font-family: 'Roboto Condensed', sans-serif
+	font-size: 44px
+	text-transform: uppercase
+	position: relative
+	span
+		color: #EC1C35
+		font-size: 39px
+
+.title
+	&::before
+		content: ''
+		background: #FFFFFF
+		opacity: 0.6
+		height: 40px
+		position: absolute
+		width: 320%
+		left: -100%
+		top: 55px
+		z-index: 0
+
+
+.df
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+
+.ali
+	align-items: center
+
+nav
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	height: 100%
+	justify-content: flex-end
+	.city
+		display: flex
+		align-items: center
+		margin-right: 60px
+		font-family: 'Roboto', sans-serif
+		text-decoration: none
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 16px
+		letter-spacing: 0.05em
+		color: #202020
+		img
+			margin-right: 7px
+	ul
+		margin: 0
+		padding: 0
+		display: inline-block
+		.active
+			color: #EC1C35
+		li
+			display: inline-block
+			list-style-type: none
+			margin-right: 60px
+			a
+				font-family: 'Roboto', sans-serif
+				text-decoration: none
+				font-style: normal
+				font-weight: normal
+				font-size: 14px
+				line-height: 16px
+				letter-spacing: 0.05em
+				color: #202020
+
+.img-responsive
+	max-width: 100%
+	height: auto
+
+.btn-mobile-menu
+	background-color: transparent
+	box-shadow: 0 0 0 0 transparent
+	outline: 0
+	border: 0
+	cursor: pointer
+	display: none
+
+.close-menu
+	display: none
+
+.overflow-hidden
+	overflow: hidden
+
+.nav-active
+	.close-menu
+		display: block
+	.hamburger
+		display: none
+	ul
+		display: block
+		top: -40px
+		position: absolute
+		right: 0
+		width: 70%
+		height: 1000vh
+		background-color: #E9F2F4
+		padding-top: 180px
+		padding-left: 40px
+		z-index: 11
+		li
+			display: block
+			margin-bottom: 40px
+			a
+				font-family: Roboto
+				font-style: normal
+				font-weight: normal
+				font-size: 18px
+				line-height: 21px
+
+.video-iframe
+	position: relative
+	padding-bottom: 56.25%
+	padding-top: 30px
+	height: 0
+	overflow: hidden
+
+.video-iframe iframe
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+
+.text-wrp
+	padding-top: 100px
+
+.slider
+	img
+		width: 100%
+		padding: 10px
+		position: relative
+		z-index: 3
+	.bg
+		position: absolute
+		left: 0
+		top: -20px
+		z-index: 2
+		max-width: 425px
+	span
+		font-family: Roboto
+		font-style: normal
+		font-weight: normal
+		font-size: 12px
+		letter-spacing: 0.02em
+		color: #1C0637
+		opacity: 0.3
+		position: absolute
+		right: 0
+		z-index: 4
+		top: 40%
+		right: -125px
+		transform: rotate(-90deg) translateY(-40%)
+		&::before
+			content: ''
+			position: absolute
+			height: 1px
+			width: 80px
+			left: -90px
+			top: 50%
+			transform: translateY(-50%)
+			background-color: #ABABAB
+
+.next
+	margin-left: 70px
+
+.slick-arrow
+	left: 60% !important
+	top: 80% !important
+	transform: translateX(-60%) translateY(-80%) !important
+	width: 60px !important
+	height: 60px !important
+	background-color: #fff !important
+	z-index: 11
+	transition: all .35s
+	svg
+		path
+			transition: all .35s
+	&::before
+		content: '' !important
+	&:hover
+		background: linear-gradient(90deg, #EC1C35 2.12%, #EF3D52 61.77%) !important
+		box-shadow: 0px 4px 8px rgba(236, 28, 53, 0.3)
+		border-radius: 1px
+		transition: all .35s
+		svg
+			path
+				stroke: #fff
+				transition: all .35s
+	
+.slick-next
+	margin-left: 70px
+
+
+.slide-text
+	position: relative
+	z-index: 2
+	padding-left: 100px
+	h2
+		font-family: Roboto Condensed
+		font-style: normal
+		font-weight: bold
+		font-size: 56px
+		line-height: 130%
+		text-transform: uppercase
+		color: #EC1C35
+	p
+		font-family: Roboto
+		font-style: normal
+		font-weight: normal
+		font-size: 18px
+		line-height: 1.4
+		letter-spacing: 0.05em
+		color: #202020
+
+.mt-80
+	margin-top: -80px
+	p
+		font-family: Roboto
+		font-style: normal
+		font-weight: normal
+		font-size: 18px
+		line-height: 150%
+		letter-spacing: 0.05em
+		color: #202020
+	.callback
+		display: block
+		width: 100%
+		border: 0
+		background: linear-gradient(90deg, #EC1C35 2.12%, #EF3D52 61.77%)
+		box-shadow: 0px 4px 8px rgba(236, 28, 53, 0.3)
+		border-radius: 30px
+		color: #fff
+		padding: 20px 0
+		font-family: Roboto
+		font-style: normal
+		font-weight: bold
+		font-size: 14px
+		line-height: 16px
+		text-align: center
+		letter-spacing: 0.05em
+		text-transform: uppercase
+		text-decoration: none
+		transition: all .35s ease
+		&:active
+			background: linear-gradient(90deg, #EC1C35 2.12%, #EC1C35 61.77%)
+			box-shadow: 0px 4px 8px rgba(236, 28, 53, 0.3)
+			transition: all .35s ease
+		&:hover
+			background: linear-gradient(90deg, #EF3D52 2.12%, #EF3D52 61.77%)
+			box-shadow: 0px 4px 8px rgba(236, 28, 53, 0.3)
+			transition: all .35s ease
+
+.video-youtube
+	margin-bottom: -50px
+
+.slider
+	margin-top: 100px
+	position: relative
+	overflow: hidden
+	margin-bottom: 80px
+	&::before
+		content: ""
+		position: absolute
+		background: #E9F2F4
+		border-radius: 1px 0px 0px 1px
+		height: 350px
+		top: 35%
+		transform: translateY(-35%)
+		width: 100%
+		left: 45%
+		z-index: 1
+	.container
+		z-index: 2
+		position: relative
+
+.df-slide
+	display: -webkit-flex !important
+	display: -moz-flex !important
+	display: -ms-flex !important
+	display: -o-flex !important
+	display: flex !important
+
+.slider
+	.row
+		display: none
+		&:first-child
+			display: flex
+
+@media (max-width: 1400px)
+	nav
+		.city
+			margin-right: 20px
+		ul
+			li
+				margin-right: 20px
+
+@media (max-width: 1200px)
+	.slide-text h2
+		margin-bottom: 20px
+		font-size: 32px
+
+	.slider::before
+		content: ''
+		top: 30%
+		transform: translateY(-30%)
+		height: 300px
+
+	.slick-arrow
+		top: 80% !important
+
+	.slide-text p
+		font-size: 16px
+
+@media (max-width: 993px)
+	.slider span
+		display: none
+	.slider
+		margin-top: 200px
+		
+	.btn-mobile-menu
+		display: block
+		position: relative
+		z-index: 12
+
+	.slick-arrow
+		top: 95% !important
+
+	.slide-text p
+		font-size: 14px
+	nav
+		ul
+			display: none
+		.city
+			margin-right: 60px
+
+	.slider::before
+		content: ''
+		top: 40%
+		transform: translateY(-30%)
+		height: 300px
+
+	.none-md
+		display: none
+
+	.text-wrp
+		text-align: center
+		margin-bottom: 40px
+		padding-top: 60px
+
+	.mt-80 .callback
+		display: inline-block
+		width: auto
+		padding: 20px 60px
+
+	.video-youtube
+		margin-bottom: -150px
+
+	.title
+		&::before
+			width: 180%
+			height: 51px
+			top: 90px
+		h1
+			font-family: Roboto Condensed
+			font-style: normal
+			font-weight: bold
+			font-size: 72px
+			line-height: 1
+			text-align: center
+			text-transform: uppercase
+			span
+				line-height: 1.1
+
+@media (max-width: 768px)
+	.slide-text
+		padding: 0 30px
+		h2
+			text-align: center
+
+	.slider
+		overflow: visible
+		&::before
+			height: 200px
+			top: 88%
+			width: 95%
+			left: 5%
+	.slick-arrow
+		top: 108% !important
+		left: 15% !important
+
+
+@media (max-width: 630px)
+	nav .city
+		display: none
+
+@media (max-width: 580px)
+	.video-youtube .video-youtube__new-play-btn
+		max-width: 60px !important
+		max-height: 60px !important
+	.position-none
+		position: unset !important
+
+	.nav-active
+		ul
+			width: 100%
+			padding-left: 0
+			text-align: center
+			li
+				margin-right: 0
+	.video-youtube
+		margin-bottom: -30px
+	.title
+		&::before
+			content: ""
+			height: 21px
+			top: 40px
+			width: 195%
+		h1
+			font-size: 36px
+			display: block
+		span
+			display: block
+			font-size: 28px
+
+@media (max-width: 499px)
+	.slider::before
+		top: 86%
+
+@media (max-width: 470px)
+	.img-responsive
+		max-width: 120px
+
+@media (max-width: 430px)
+	.slider::before
+		top: 84%
+
+@media (max-width: 400px)
+	.slider::before
+		top: 81%
+		height: 270px
+
+@media (max-width: 350px)
+	.img-responsive
+		max-width: 100px
+
+	.slider::before
+		top: 72%
+		height: 350px
+

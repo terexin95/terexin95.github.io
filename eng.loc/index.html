@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Школа «ИН ЯЗ»</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#1645BE">
+	<!-- Custom Browsers Color End -->
+
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="bootstrap/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
+	<link rel="stylesheet" href="slick/slick.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:400,500,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<style>
+	.hidden {
+  display: none !important;
+	}
+
+	.wrapper {
+	  max-width: 100%;
+	  width: 100%;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+
+	/* -------------------------------------------------------------------------
+	   begin Video Youtube
+	 * ------------------------------------------------------------------------- */
+	.video-youtube {
+	  position: relative;
+	  padding-bottom: 56.25%;
+	  padding-top: 25px;
+	  height: 0;
+	}
+	.video-youtube.video-youtube_overlay:before {
+	  content: '';
+	  position: absolute;
+	  left: 0;
+	  right: 0;
+	  top: 0;
+	  bottom: 0;
+	  background-color: transparent;
+	  width: 100%;
+	  height: 100%;
+	  display: block;
+	  z-index: 5;
+	}
+	.video-youtube .video-youtube__content {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 100%;
+	  height: 100%;
+	  background-image: url(img/youtube.png);
+	  -webkit-background-size: cover;
+	  background-size: cover;
+	}
+	.video-youtube .video-youtube__content.video-youtube__content_hide-origin-play-btn {
+	  width: 10000%;
+	  height: 10000%;
+	  -webkit-transform: scale(0.01);
+	          transform: scale(0.01);
+	  -webkit-transform-origin: top left;
+	          transform-origin: top left;
+	}
+	.video-youtube .video-youtube__content.video-youtube__content_hide-origin-play-btn::-moz-selection {
+	  background-color: transparent;
+	}
+	.video-youtube .video-youtube__content.video-youtube__content_hide-origin-play-btn::selection {
+	  background-color: transparent;
+	}
+
+	.video-youtube .video-youtube__new-play-btn {
+	  max-width: 153px;
+	  max-height: 153px;
+	  width: 100%;
+	  height: 100%;
+	  border: none;
+	  background-color: transparent;
+	  background-image: url(img/subtract.png);
+	  background-size: contain;
+	  background-repeat: no-repeat;
+	  display: block;
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  -webkit-transform: translate(-50%, -50%);
+	          transform: translate(-50%, -50%);
+	  z-index: 10;
+	  cursor: pointer;
+	}
+
+	/* -------------------------------------------------------------------------
+	   end Video Youtube
+	 * ------------------------------------------------------------------------- */
+	</style>
+
+	<header>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-10 df ali">
+					<img class="img-responsive" src="img/logo.png" alt="Школа «ИН ЯЗ»">
+					<div class="right-border"></div>
+					<img class="img-responsive" src="img/sub.logo.png" alt="Школа «ИН ЯЗ»">
+				</div>
+				<div class="col-xl-7 col-lg-8 col-md-6 col-sm-6 col-2 position-none">
+					<nav>
+						<div class="city">
+							<img src="img/map-pin.png" alt="">
+							Волгоград
+						</div>
+						<button class="btn-mobile-menu">
+							<svg class="hamburger" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5.5 22H38.5" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M5.5 11H38.5" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M5.5 33H38.5" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg>
+							<svg class="close-menu" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<rect x="8" y="5" width="44" height="3.66667" rx="1.83333" transform="rotate(45 8 5)" fill="#202020"/>
+								<rect x="5" y="36" width="44" height="3.66667" rx="1.83333" transform="rotate(-45 5 36)" fill="#202020"/>
+							</svg>
+						</button>
+						<ul>
+							<li><a class="active" href="#schools">Школа</a></li>
+							<li><a href="#vantage">Преимущества</a></li>
+							<li><a href="#forms">Заявка</a></li>
+							<li><a href="#contacts">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col-xl-2 col-lg-1 none-md">
+					<div class="social df ali">
+						<a href="#"><img src="img/vk.png" alt="Вконтакте"></a>
+						<a href="#"><img src="img/instagram.png" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<div class="container pt50">
+				<div class="row">
+					<div class="col-lg-5">
+						<div class="title">
+							<h1>
+								Школа «ИН ЯЗ» 
+								<span>серьезный подход 
+								к изучению английского языка</span>
+							</h1>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-80">
+					<div class="col-lg-3">
+						<div class="text-wrp">
+							<p>Оставь заявку и получи купон на первое занятие</p>
+							<a href="#" class="callback">
+								Оставить заявку
+							</a>
+						</div>
+					</div>
+					<div class="col-lg-9">
+						<div class="wrapper">
+						  <!-- begin Video Youtube
+						  =========================================================================== -->
+						  <div class="video-youtube video-youtube_overlay">
+						    <div id="video-youtube__content" class="video-youtube__content video-youtube__content_hide-origin-play-btn"></div>
+						    <button type="button" class="video-youtube__new-play-btn"></button>
+						  </div>
+						  <!-- end Video Youtube
+						  =========================================================================== -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section class="slider">
+			<div class="container">
+				<div class="slider-slick">
+					<div>
+						<div class="row">
+							<div class="col-md-5">
+								<img src="img/document.png" alt="">
+								<img class="bg" src="img/document.png">
+								<span>Сертификат подтверждающий квалификацию</span>
+							</div>
+							<div class="col-md-7">
+								<div class="slide-text">
+									<h2>Сертификация</h2>
+									<p>ИнЯз школа иностранных языков является авторизованным центров по приему Кембриджских экзаменов с 2014 года. </p>
+									<p>Наши учителя и экзаменаторы — эксперты в области иноязычного образования высочайших мировых стандартов, которые имеют колоссальный опыт работы</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="row">
+							<div class="col-md-5">
+								<img src="img/document.png" alt="">
+								<img class="bg" src="img/document.png">
+							</div>
+							<div class="col-md-7">
+								<div class="slide-text">
+									<h2>Сертификация 2</h2>
+									<p>ИнЯз школа иностранных языков является авторизованным центров по приему Кембриджских экзаменов с 2014 года. </p>
+									<p>Наши учителя и экзаменаторы — эксперты в области иноязычного образования высочайших мировых стандартов, которые имеют колоссальный опыт работы</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+<script src="js/jquery.min.js"></script>
+<script src="slick/slick.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+	'use strict';
+	/* -------------------------------------------------------------------------
+	   begin Video Youtube
+	 * ------------------------------------------------------------------------- */
+
+	function onYouTubePlayerAPIReady() {
+	  var playerYoutube;
+
+	  playerYoutube = new YT.Player("video-youtube__content", {
+	    videoId: "eGZ1QA3_hZw",
+	    playerVars: {
+	      // 'controls': 0,
+	      // 'showinfo': 0,
+	      // 'autohide': 1
+	    },
+	    events: {
+	      onReady: onYouTubePlayerReady
+	    }
+	  });
+	}
+
+	function onYouTubePlayerReady(event) {
+	  // https://developers.google.com/youtube/iframe_api_reference#Events
+	  var targetYoutubeVideo = event.target;
+	  var videoDomElem = document.getElementById(
+	    event.target.getIframe().getAttribute("id")
+	  );
+	  var newPLayBtn = videoDomElem.nextElementSibling;
+
+	  newPLayBtn.addEventListener("click", function(event) {
+	    targetYoutubeVideo.playVideo();
+	    this.classList.add('hidden');
+	    videoDomElem.classList.remove('video-youtube__content_hide-origin-play-btn');
+	    videoDomElem.parentNode.classList.remove('video-youtube_overlay');
+	  });
+	}
+
+	var tag = document.createElement("script");
+
+	tag.src = "https://www.youtube.com/iframe_api";
+	var firstScriptTag = document.getElementsByTagName("script")[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+	/* -------------------------------------------------------------------------
+	   end Video Youtube
+	 * ------------------------------------------------------------------------- */
+</script>
+</body>
+</html>
