@@ -191,7 +191,7 @@ nav
 		right: 0
 		z-index: 4
 		top: 40%
-		right: -125px
+		right: -130px
 		transform: rotate(-90deg) translateY(-40%)
 		&::before
 			content: ''
@@ -202,6 +202,45 @@ nav
 			top: 50%
 			transform: translateY(-50%)
 			background-color: #ABABAB
+
+.overlay
+	position: fixed
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0
+	background-color: rgba(#000, .4)
+	z-index: 100
+	display: none
+
+.modal
+	max-width: 1100px
+	padding: 30px
+	background-color: #fff
+	position: fixed
+	left: 50%
+	transform: translateX(-50%)
+	top: 20px
+	bottom: 20px
+	overflow-y: scroll
+	z-index: 101
+	display: none
+	&-close
+		position: absolute
+		top: 20px
+		right: 20px
+		font-size: 40px
+		cursor: pointer
+	h2
+		font-family: Roboto
+		font-style: normal
+		font-weight: bold
+		font-size: 36px
+		margin-top: 0
+		line-height: 1
+		letter-spacing: 0.05em
+		text-transform: uppercase
+		color: #EC1C35
 
 .next
 	margin-left: 70px
@@ -300,7 +339,7 @@ nav
 	margin-top: 100px
 	position: relative
 	overflow: hidden
-	margin-bottom: 80px
+	margin-bottom: 130px
 	&::before
 		content: ""
 		position: absolute
@@ -329,6 +368,193 @@ nav
 		&:first-child
 			display: flex
 
+.linea
+	background-color: #202020
+	padding: 30px 0
+	padding-top: 0
+	background-image: url(../img/border.png)
+	background-repeat: no-repeat
+	background-position: center
+	.col-lg-7
+		padding-left: 140px
+	&-block
+		position: absolute
+		top: -105px
+		&-num
+			font-family: Roboto
+			font-style: normal
+			font-weight: 700
+			background: linear-gradient(90deg, #EC1C35 2.12%, #EF3D52 61.77%)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			font-size: 240px
+			line-height: 1
+		p
+			margin-top: 0px
+			font-family: Roboto Medium
+			font-style: normal
+			font-weight: 500
+			font-size: 18px
+			line-height: 1.2
+			letter-spacing: 0.05em
+			color: #FFFFFF
+		&-text
+			h3
+				font-family: Roboto Black
+				font-style: normal
+				font-weight: 900
+				font-size: 64px
+				line-height: 1.5
+				color: #FFFFFF
+				margin-bottom: 20px
+				margin-top: 20px
+			p
+				font-family: Roboto Medium
+				font-style: normal
+				font-weight: 500
+				font-size: 18px
+				line-height: 1.2
+				letter-spacing: 0.05em
+				color: #FFFFFF
+
+body .group
+	label
+		color: rgba(#202020, .4)
+	input
+		border-color: rgba(#202020, .3)
+
+.form-mail-btn
+	display: block
+	width: 100%
+	border: 0
+	background: linear-gradient(90deg, #EC1C35 2.12%, #EF3D52 61.77%)
+	box-shadow: 0px 4px 8px rgba(236, 28, 53, 0.3)
+	border-radius: 30px
+	color: #fff
+	padding: 20px 0px
+	font-family: Roboto
+	font-style: normal
+	font-weight: bold
+	font-size: 14px
+	line-height: 16px
+	text-align: center
+	letter-spacing: 0.05em
+	text-transform: uppercase
+	text-decoration: none
+	transition: all .35s ease
+	cursor: pointer
+	&:active
+		background: linear-gradient(90deg, #EC1C35 2.12%, #EC1C35 61.77%)
+		box-shadow: 0px 4px 8px rgba(236, 28, 53, 0.3)
+		transition: all .35s ease
+	&:hover
+		background: linear-gradient(90deg, #EF3D52 2.12%, #EF3D52 61.77%)
+		box-shadow: 0px 4px 8px rgba(236, 28, 53, 0.3)
+		transition: all .35s ease
+
+.title-h2
+	position: relative
+	margin-bottom: 60px
+	&::before
+		content: ""
+		background: #E9F2F4
+		opacity: 0.6
+		height: 40px
+		position: absolute
+		width: 150%
+		left: -100%
+		top: 25px
+		z-index: 0
+	h2
+		position: relative
+		font-family: Roboto Condensed
+		font-style: normal
+		font-weight: bold
+		font-size: 46px
+		line-height: 1
+		text-transform: uppercase
+		color: #EC1C35
+		z-index: 1
+		margin-bottom: 30px
+	p
+		z-index: 1
+		position: relative
+		font-family: Roboto
+		font-style: normal
+		font-weight: normal
+		font-size: 18px
+		line-height: 150%
+		letter-spacing: 0.05em
+		color: #202020
+
+.mail-form
+	position: relative
+	p
+		max-width: 1170px
+		margin: auto
+		font-family: Roboto
+		font-style: normal
+		font-weight: normal
+		font-size: 14px
+		line-height: 150%
+		letter-spacing: 0.05em
+		color: #202020
+		margin-top: 25px
+		a
+			color: #EC1C35
+			text-decoration: none
+			&:hover
+				text-decoration: none
+
+.thanks
+	text-align: center
+	display: none
+	h3
+		font-family: Roboto Condensed
+		font-style: normal
+		font-weight: bold
+		font-size: 44px
+		line-height: 130%
+		text-transform: uppercase
+		color: #202020
+		margin-bottom: 0
+	p
+		font-family: Roboto
+		font-style: normal
+		font-weight: normal
+		font-size: 18px
+		line-height: 150%
+		text-align: center
+		letter-spacing: 0.05em
+		color: #202020
+		
+
+.lang
+	.input-menu
+		position: absolute
+		background-color: #fff
+		z-index: 1
+		width: 100%
+		padding-left: 10px
+		li
+			list-style-type: none
+			cursor: pointer
+	&::after
+		content: ''
+		background-image: url(../img/arrow-bottom.svg)
+		width: 8px
+		height: 4px
+		background-size: cover
+		right: 5px
+		top: 50%
+		transform: translateY(-50%)
+		position: absolute
+
+.text-center
+	text-align: center
+
+
+
 @media (max-width: 1400px)
 	nav
 		.city
@@ -341,6 +567,11 @@ nav
 	.slide-text h2
 		margin-bottom: 20px
 		font-size: 32px
+
+	.form-mail-btn
+		margin-top: 40px
+		display: inline-block
+		width: auto
 
 	.slider::before
 		content: ''
@@ -355,10 +586,39 @@ nav
 		font-size: 16px
 
 @media (max-width: 993px)
+	.form
+		overflow-x: hidden
+	.form-mail-btn
+		padding: 20px 60px
+	.politic
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+		bottom: 0
+		p
+			width: 50%
+			margin-left: 0
+	.linea-block-text h3
+		margin: 0
+	.linea-block-text p
+		margin: 0
 	.slider span
 		display: none
 	.slider
 		margin-top: 200px
+
+	.group
+		margin-bottom: 35px
+
+	.linea
+		.col-lg-7
+			padding-left: 20px
+		&-block
+			top: -40px
+			p
+				padding-top: 18px
+			&-num
+				font-size: 120px
 		
 	.btn-mobile-menu
 		display: block
@@ -367,6 +627,17 @@ nav
 
 	.slick-arrow
 		top: 95% !important
+
+	.title-h2::before
+		content: ''
+		top: 10px
+		width: 190%
+
+	.form
+		h2
+			font-size: 32px
+		.text-center
+			text-align: right
 
 	.slide-text p
 		font-size: 14px
@@ -415,10 +686,39 @@ nav
 				line-height: 1.1
 
 @media (max-width: 768px)
+	.form
+		h2
+			text-align: center
+
+	.title-h2::before
+		width: 220%
+
+	.title-h2
+		margin-bottom: 30px
+
+	.politic p
+		width: 100%
+		margin-top: 0
+
+	.form .text-center
+		text-align: center
+
+	.politic
+		bottom: 100px
+	.form-mail-btn
+		margin-top: 140px
+	.linea
+		margin-top: 170px
+		.row
+			.col-lg-7
+				margin-top: 170px
 	.slide-text
 		padding: 0 30px
 		h2
 			text-align: center
+
+	.linea-block p
+		width: 60%
 
 	.slider
 		overflow: visible
@@ -465,6 +765,13 @@ nav
 			display: block
 			font-size: 28px
 
+.form
+	padding: 30px 0
+
+.input-menu
+	display: none
+
+
 @media (max-width: 499px)
 	.slider::before
 		top: 86%
@@ -477,10 +784,17 @@ nav
 	.slider::before
 		top: 84%
 
+	.linea-block-text p
+		font-size: 16px
+
 @media (max-width: 400px)
 	.slider::before
 		top: 81%
 		height: 270px
+
+@media (max-width: 360px)
+	.linea-block-text p
+		font-size: 13px
 
 @media (max-width: 350px)
 	.img-responsive

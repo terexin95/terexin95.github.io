@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="bootstrap/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="slick/slick-theme.css">
 	<link rel="stylesheet" href="slick/slick.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:400,500,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:400,500,700,900&display=swap" rel="stylesheet">
 
 </head>
 
@@ -30,6 +30,98 @@
 	.hidden {
   display: none !important;
 	}
+
+	.group 			  { 
+	position:relative;
+  }
+  .group  input 				{
+	font-size: 16px;
+	line-height: 20px;
+	padding:10px 10px 10px 5px;
+	display:block;
+	width: 100%;
+	border:none;
+	border-bottom:1px solid #757575;
+  }
+  .group input:focus 		{ outline:none; }
+  
+  /* LABEL ======================================= */
+  .group label 				 {
+	color:#999; 
+	font-size:16px;
+	font-weight:normal;
+	position:absolute;
+	pointer-events:none;
+	left:5px;
+	top: 15px;
+	transition:0.2s ease all; 
+	-moz-transition:0.2s ease all; 
+	-webkit-transition:0.2s ease all;
+  }
+  
+  /* active state */
+  .group input:focus ~ label, input:valid ~ label 		{
+	top:-20px;
+	font-size:14px;
+	color:#EC1C35;
+  }
+  
+  /* BOTTOM BARS ================================= */
+  .group .bar 	{ position:relative; display:block; width: 100%; }
+  .group .bar:before, .bar:after 	{
+	content:'';
+	height:2px; 
+	width:0;
+	bottom:1px; 
+	position:absolute;
+	background:#EC1C35; 
+	transition:0.2s ease all; 
+	-moz-transition:0.2s ease all; 
+	-webkit-transition:0.2s ease all;
+  }
+  .group .bar:before {
+	left:50%;
+  }
+  .group .bar:after {
+	right:50%; 
+  }
+  
+  /* active state */
+  .group input:focus ~ .bar:before, input:focus ~ .bar:after {
+	width:50%;
+  }
+  
+  /* HIGHLIGHTER ================================== */
+  .group .highlight {
+	position:absolute;
+	height:60%; 
+	width:100px; 
+	top:25%; 
+	left:0;
+	pointer-events:none;
+	opacity:0.5;
+  }
+  
+  /* active state */
+  .group input:focus ~ .highlight {
+	-webkit-animation:inputHighlighter 0.3s ease;
+	-moz-animation:inputHighlighter 0.3s ease;
+	animation:inputHighlighter 0.3s ease;
+  }
+  
+  /* ANIMATIONS ================ */
+  @-webkit-keyframes inputHighlighter {
+	  from { background:#5264AE; }
+	to 	{ width:0; background:transparent; }
+  }
+  @-moz-keyframes inputHighlighter {
+	  from { background:#5264AE; }
+	to 	{ width:0; background:transparent; }
+  }
+  @keyframes inputHighlighter {
+	  from { background:#5264AE; }
+	to 	{ width:0; background:transparent; }
+  }
 
 	.wrapper {
 	  max-width: 100%;
@@ -213,6 +305,7 @@
 							<div class="col-md-5">
 								<img src="img/document.jpg" alt="">
 								<img class="bg" src="img/document.jpg">
+								<span>Сертификат подтверждающий квалификацию</span>
 							</div>
 							<div class="col-md-7">
 								<div class="slide-text">
@@ -226,10 +319,117 @@
 				</div>
 			</div>
 		</section>
+		<section class="linea">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-md-4">
+						<div class="linea-block">
+							<div class="linea-block-num">768</div>
+							<p>Учеников успешно закончили наши курсы</p>
+						</div>
+					</div>
+					<div class="col-lg-7 col-md-8">
+						<div class="row">
+							<div class="col-md-6 col-sm-6 col-6">
+								<div class="linea-block-text">
+									<h3>135+</h3>
+									<p>Лет общий опыт наших преподавателей</p>
+								</div>	
+							</div>
+							<div class="col-md-6 col-sm-6 col-6">
+								<div class="linea-block-text">
+									<h3>18</h3>
+									<p>Профессиональных преподавателей</p>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="form">
+			<div class="container">
+				<div class="title-h2">
+					<h2>Определим ваш уровень владения языком</h2>
+					<p>Оставьте заявку и наш менеджер свяжется с вами. Это абсолютно бесплатно.</p>
+				</div>
+			</div>
+			<form class="mail-form">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4 col-xl-3">
+							<div class="group">      
+								<input type="text" name="name" required="">
+								<span class="highlight"></span>
+								<span class="bar"></span>
+								<label>Имя</label>
+							</div>
+						</div>
+						<div class="col-lg-4 col-xl-3">
+							<div class="group">      
+								<input type="text" name="phone" required="">
+								<span class="highlight"></span>
+								<span class="bar"></span>
+								<label>Телефон</label>
+							</div>
+						</div>
+						<div class="col-lg-4 col-xl-3">
+							<div class="group lang">      
+								<input type="text" name="language" required="">
+								<span class="highlight"></span>
+								<span class="bar"></span>
+								<label>Выберите язык для изучения</label>
+								<ul class="input-menu">
+									<li data-value="английский язык">Английский язык</li>
+									<li data-value="французский язык">Французский язык</li>
+									<li data-value="немецкий язык">Немецкий язык</li>
+									<li data-value="испанский язык">Испанский язык</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-12 col-xl-3 text-center">
+							<button class="form-mail-btn">Отправить заявку</button>
+						</div>
+					</div>
+				</div>
+				<div class="container politic"><p>Нажимая кнопку “Оставить заявку” вы даете согласие на обработку персональных данных и соглашаетесь с <a href="#politics" class="btn-modal">Политикой конфиденциальности</a></p></div>
+			</form>
+			<div class="thanks">
+				<div class="container">
+					<h3>Cпасибо за вашу заявку!</h3>
+					<p>Через некоторое время с вами свяжется специалист</p>
+				</div>
+			</div>
+		</section>
 	</main>
+
+	<div class="overlay"></div>
+	<div class="modal">
+		<h2>Пользовательское соглашение</h2>
+		<div class="modal-close"><svg width="34" height="25" viewBox="0 0 44 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<rect x="8" y="1" width="44" height="3.66667" rx="1.83333" transform="rotate(45 8 1)" fill="#202020"/>
+		<rect x="5" y="32" width="44" height="3.66667" rx="1.83333" transform="rotate(-45 5 32)" fill="#202020"/>
+		</svg>
+		</div>
+		<h4>1.ОПРЕДЕЛЕНИЕ ТЕРМИНОВ</h4>
+		<p>1.1.Публичная оферта (далее – «Оферта») - публичное предложение Продавца, адресованное неопределенному кругу лиц, заключить с Продавцом договор купли-продажи товара дистанционным способом (далее - «Договор») на условиях, содержащихся в настоящей Оферте, включая все Приложения. </p>
+		<p>1.2. Заказ Товара на сайте Интернет-магазина – позиции указанные Покупателем из ассортимента Товара, предложенного к продаже, при оформлении заявки на приобретение Товара на сайте Интернет-магазина или через Оператора. </p>
+		<h4>2. ОБЩИЕ ПОЛОЖЕНИЯ </h4>
+		<p>2.1. Заказ Покупателем Товара, размещенного на сайте Интернет-магазина означает, что Покупатель согласен со всеми условиями настоящей Оферты. </p>
+		<p>2.2. Администрация сайта Интернет-магазина имеет право вносить изменения в Оферту без уведомления Покупателя. </p>
+		<p>2.3. Срок действия Оферты не ограничен, если иное не указано на сайте Интернет-магазина.</p>
+		<p>2.4. Продавец предоставляет Покупателю полную и достоверную информацию о Товаре, включая информацию об основных потребительских свойствах Товара, месте изготовления, а также информацию о гарантийном сроке и сроке годности Товара на сайте Интернет магазина, в разделе название раздела. </p>
+		<h4>3. ЦЕНА ТОВАРА </h4>
+		<p>3.1. Цена на каждую позицию Товара указана на сайте Интернет-магазина. </p>
+		<p>3.2. Продавец имеет право в одностороннем порядке изменить цену на любую позицию Товара. </p>
+		<p>3.3. В случае изменения цены на заказанный Товар Продавец обязуется в течение количество дней проинформировать Покупателя об изменении цены Товара. </p>
+		<p>3.4. Покупатель вправе подтвердить либо аннулировать Заказ на приобретение Товара, если цена изменена Продавцом после оформления Заказа. </p>
+		<p>3.5. Изменение Продавцом цены на оплаченный Покупателем Товар не допускается. </p>
+	</div>
 
 <script src="js/jquery.min.js"></script>
 <script src="slick/slick.min.js"></script>
+<script src="js/sprincrement.js"></script>
 <script src="js/main.js"></script>
 <script>
 	'use strict';
