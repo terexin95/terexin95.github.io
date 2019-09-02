@@ -4,7 +4,7 @@
 
 header
 	background-image: url(../img/bg.jpg)
-	padding: 40px 0 0 0
+	padding: 40px 50px 0
 	background-position: center
 
 .social
@@ -33,23 +33,24 @@ body
 
 h1
 	font-family: 'Roboto Condensed', sans-serif
-	font-size: 44px
+	font-size: 45px
 	text-transform: uppercase
 	position: relative
+	line-height: 1
 	span
 		color: #EC1C35
-		font-size: 39px
+		font-size: 34px
 
 .title
 	&::before
 		content: ''
 		background: #FFFFFF
 		opacity: 0.6
-		height: 40px
+		height: 35px
 		position: absolute
 		width: 320%
 		left: -100%
-		top: 55px
+		top: 45px
 		z-index: 0
 
 
@@ -165,7 +166,7 @@ nav
 	height: 100%
 
 .text-wrp
-	padding-top: 100px
+	padding-top: 50px
 
 .slider
 	img
@@ -295,7 +296,7 @@ nav
 		color: #202020
 
 .mt-80
-	margin-top: -80px
+	margin-top: -55px
 	p
 		font-family: Roboto
 		font-style: normal
@@ -323,6 +324,29 @@ nav
 		text-transform: uppercase
 		text-decoration: none
 		transition: all .35s ease
+		margin-top: 40px
+		position: relative
+		transition: all .3s ease
+		overflow: hidden
+		&::after
+			content: ""
+			display: block
+			width: 10px
+			height: 300px
+			filter: blur(12px)
+			margin-left: 60px
+			background: #fff
+			position: absolute
+			left: -40px
+			top: -150px
+			z-index: 1
+			transform: rotate(45deg)
+			transition: all 0.1s
+			animation-name: linear
+			animation-duration: 7s
+			animation-delay: 0.05s
+			animation-timing-function: ease-in-out
+			animation-iteration-count: infinite
 		&:active
 			background: linear-gradient(90deg, #EC1C35 2.12%, #EC1C35 61.77%)
 			box-shadow: 0px 4px 8px rgba(236, 28, 53, 0.3)
@@ -331,6 +355,20 @@ nav
 			background: linear-gradient(90deg, #EF3D52 2.12%, #EF3D52 61.77%)
 			box-shadow: 0px 4px 8px rgba(236, 28, 53, 0.3)
 			transition: all .35s ease
+
+@keyframes linear
+	0%
+		left: -30px
+		margin-left: 0px
+	30%
+		left: 110%
+		margin-left: 80px
+	100%
+		left: 110%
+		margin-left: 80px
+
+.wrapper
+	box-shadow: 0px -2px 16px rgba(40, 68, 73, 0.3)
 
 .video-youtube
 	margin-bottom: -50px
@@ -368,6 +406,11 @@ nav
 		&:first-child
 			display: flex
 
+.lang
+	&:focus
+		.input-menu
+			display: block
+
 .linea
 	background-color: #202020
 	padding: 30px 0
@@ -379,7 +422,7 @@ nav
 		padding-left: 140px
 	&-block
 		position: absolute
-		top: -105px
+		top: -103px
 		&-num
 			font-family: Roboto
 			font-style: normal
@@ -391,7 +434,7 @@ nav
 			line-height: 1
 		p
 			margin-top: 0px
-			font-family: Roboto Medium
+			font-family: Roboto
 			font-style: normal
 			font-weight: 500
 			font-size: 18px
@@ -400,7 +443,7 @@ nav
 			color: #FFFFFF
 		&-text
 			h3
-				font-family: Roboto Black
+				font-family: Roboto
 				font-style: normal
 				font-weight: 900
 				font-size: 64px
@@ -409,7 +452,7 @@ nav
 				margin-bottom: 20px
 				margin-top: 20px
 			p
-				font-family: Roboto Medium
+				font-family: Roboto
 				font-style: normal
 				font-weight: 500
 				font-size: 18px
@@ -443,6 +486,27 @@ body .group
 	text-decoration: none
 	transition: all .35s ease
 	cursor: pointer
+	position: relative
+	overflow: hidden
+	&::after
+		content: ""
+		display: block
+		width: 10px
+		height: 300px
+		filter: blur(12px)
+		margin-left: 60px
+		background: #fff
+		position: absolute
+		left: -40px
+		top: -150px
+		z-index: 1
+		transform: rotate(45deg)
+		transition: all 0.1s
+		animation-name: linear
+		animation-duration: 7s
+		animation-delay: 0.05s
+		animation-timing-function: ease-in-out
+		animation-iteration-count: infinite
 	&:active
 		background: linear-gradient(90deg, #EC1C35 2.12%, #EC1C35 61.77%)
 		box-shadow: 0px 4px 8px rgba(236, 28, 53, 0.3)
@@ -528,6 +592,25 @@ body .group
 		letter-spacing: 0.05em
 		color: #202020
 		
+.mail-form
+	.btn-modal-3
+		position: relative
+		z-index: 1
+		margin-left: 3px
+		display: inline-block
+		&::after
+			content: ''
+			width: calc(100% + 6px)
+			left: -3px
+			right: -3px
+			bottom: -2px
+			position: absolute
+			background-color: #E9F2F4
+			height: 10px
+			z-index: 0
+		span
+			position: relative
+			z-index: 1
 
 .lang
 	.input-menu
@@ -539,6 +622,7 @@ body .group
 		li
 			list-style-type: none
 			cursor: pointer
+			padding-bottom: 3px
 	&::after
 		content: ''
 		background-image: url(../img/arrow-bottom.svg)
@@ -667,6 +751,9 @@ footer
 		font-size: 16px
 
 @media (max-width: 993px)
+	header
+		padding-left: 0
+		padding-right: 0
 	.footer-block
 		position: unset
 		left: auto
@@ -788,6 +875,10 @@ footer
 				line-height: 1.1
 
 @media (max-width: 768px)
+	.modal
+		left: 10px
+		right: 10px
+		transform: translateX(0)
 	.form
 		h2
 			text-align: center
@@ -905,6 +996,58 @@ footer
 	.img-responsive
 		max-width: 120px
 
+	.title span
+		font-size: 17px
+		margin-top: 10px
+
+	.text-wrp
+		padding-top: 30px
+		p
+			font-size: 14px
+
+	.mt-80 .callback
+		margin-top: 20px
+
+	header
+		.container
+			.col-lg-9
+				padding: 0
+
+	.slider
+		margin-top: 90px
+
+	.linea
+		background-size: contain
+
+	.form
+		h2
+			font-size: 24px
+		p
+			font-size: 14px
+
+	footer
+		margin-top: 20px
+
+	#ymaps1567458412916784724
+		height: 300px !important
+
+	.title-h2 h2
+		font-size: 24px
+
+	.footer-block .footer-contacts .title-h2::before
+		content: ''
+		top: 10px
+		height: 30px
+
+	.footer-block .footer-contacts h4, .footer-block .footer-contacts h3
+		font-size: 18px
+
+	.footer-contacts p
+		font-size: 14px
+
+	.footer-nav ul li
+		padding-bottom: 5px
+
 @media (max-width: 430px)
 	.slider::before
 		top: 84%
@@ -923,7 +1066,7 @@ footer
 
 @media (max-width: 350px)
 	.img-responsive
-		max-width: 100px
+		max-width: 80px
 
 	.slider::before
 		top: 72%

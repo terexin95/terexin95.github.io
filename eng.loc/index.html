@@ -179,8 +179,8 @@
 	}
 
 	.video-youtube .video-youtube__new-play-btn {
-	  max-width: 153px;
-	  max-height: 153px;
+	  max-width: 80px;
+	  max-height: 80px;
 	  width: 100%;
 	  height: 100%;
 	  border: none;
@@ -201,6 +201,23 @@
 	/* -------------------------------------------------------------------------
 	   end Video Youtube
 	 * ------------------------------------------------------------------------- */
+	 .modal::-webkit-scrollbar-track
+		{
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+		}
+
+		.modal::-webkit-scrollbar
+		{
+			width: 12px;
+			background-color: #F5F5F5;
+		}
+
+		.modal::-webkit-scrollbar-thumb
+		{
+			border-radius: 0px;
+			-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+			background-color: #555;
+		}
 	</style>
 
 	<header>
@@ -229,17 +246,17 @@
 							</svg>
 						</button>
 						<ul>
-							<li><a class="active" href="#schools">Школа</a></li>
-							<li><a href="#vantage">Преимущества</a></li>
-							<li><a href="#forms">Заявка</a></li>
-							<li><a href="#contacts">Контакты</a></li>
+							<li><a class="flowing-scroll" href="#schools">Школа</a></li>
+							<li><a class="flowing-scroll" href="#vantage">Преимущества</a></li>
+							<li><a class="flowing-scroll" href="#forms">Заявка</a></li>
+							<li><a class="flowing-scroll" href="#contacts">Контакты</a></li>
 						</ul>
 					</nav>
 				</div>
 				<div class="col-xl-2 col-lg-1 none-md">
 					<div class="social df ali">
-						<a href="#"><img src="img/vk.png" alt="Вконтакте"></a>
-						<a href="#"><img src="img/instagram.png" alt=""></a>
+						<a href="https://vk.com/public61169858" target="_blank"><img src="img/vk.png" alt=""></a>
+						<a href="http://instagram.com/inyaz.rf" target="_blank"><img src="img/instagram.png" alt=""></a>
 					</div>
 				</div>
 			</div>
@@ -259,7 +276,7 @@
 					<div class="col-lg-3">
 						<div class="text-wrp">
 							<p>Оставь заявку и получи купон на первое занятие</p>
-							<a href="#" class="callback">
+							<a href="#forms" class="flowing-scroll callback">
 								Оставить заявку
 							</a>
 						</div>
@@ -392,7 +409,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="container politic"><p>Нажимая кнопку “Оставить заявку” вы даете согласие на обработку персональных данных и соглашаетесь с <a href="#politics" class="btn-modal">Политикой конфиденциальности</a></p></div>
+				<div class="container politic"><p>Нажимая кнопку “Оставить заявку” вы даете согласие на обработку персональных данных и соглашаетесь с <a href="#politics" class="btn-modal-3"><span>Политикой конфиденциальности</span></a></p></div>
 			</form>
 			<div class="thanks">
 				<div class="container">
@@ -418,8 +435,8 @@
 						<div class="footer-contacts-social">
 							<h4>Наши соцсети</h4>
 							<div class="footer-contacts-social-link">
-								<a href="#"><img src="img/vk.png" alt=""></a>
-								<a href="#"><img src="img/instagram.png" alt=""></a>
+								<a href="https://vk.com/public61169858" target="_blank"><img src="img/vk-1.png" alt=""></a>
+								<a href="http://instagram.com/inyaz.rf" target="_blank"><img src="img/instagram-1.png" alt=""></a>
 							</div>
 						</div>
 					</div>

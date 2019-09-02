@@ -16,14 +16,23 @@ $('.slider-slick').slick({
 });
 
 $('input[name="language"]').click(function(){
-	$(this).parent().find('ul').slideToggle();
+	$(this).parent().find('ul').slideDown();
+	$(this).focus();
+});
+
+// $('input[name="language"]').focusout(function(){
+// 	$(this).parent().find('ul').hide();
+// });
+
+$('.mail-form input').not('input[name="language"]').focus(function(){
+	$('.input-menu').hide();
 });
 
 $('.input-menu li').click(function(){
-	$('.lang input').focus();
+	$('.lang input').focusout();
 	var lang = $(this).attr('data-value');
 	$('input[name="language"]').val(lang);
-	$('.input-menu').slideUp();
+	$('.input-menu').hide();
 	console.log($(this).attr('data-value'));
 });
 
@@ -84,6 +93,18 @@ $(document).ready(function() {
 		});
 		return false;
 	});
+
+	$('.flowing-scroll').on( 'click', function(){ 
+    var el = $(this);
+    var dest = el.attr('href'); // получаем направление
+    if(dest !== undefined && dest !== '') { // проверяем существование
+        $('html').animate({ 
+            scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
+        }, 500 // скорость прокрутки
+        );
+    }
+    return false;
+});
 	
 });
 
