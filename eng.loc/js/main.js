@@ -28,13 +28,34 @@ $('.input-menu li').click(function(){
 });
 
 $('.modal-close').click(function(){
-	$('.modal').fadeOut(300);
+	$('#modal-1, #modal-2, #modal-3, #modal-4').fadeOut(300);
 	$('.overlay').fadeOut(400);
 	$('body').css({'overflow' : 'unset'});
 });
 
-$('.btn-modal').click(function(){
-	$('.modal').fadeIn(500);
+$('.btn-modal-1').click(function(){
+	$('#modal-2').fadeIn(500);
+	$('.overlay').fadeIn(400);
+	$('body').css({'overflow' : 'hidden'});
+	return false;
+});
+
+$('.btn-modal-2').click(function(){
+	$('#modal-3').fadeIn(500);
+	$('.overlay').fadeIn(400);
+	$('body').css({'overflow' : 'hidden'});
+	return false;
+});
+
+$('.btn-modal-3').click(function(){
+	$('#modal-1').fadeIn(500);
+	$('.overlay').fadeIn(400);
+	$('body').css({'overflow' : 'hidden'});
+	return false;
+});
+
+$('.btn-modal-4').click(function(){
+	$('#modal-4').fadeIn(500);
 	$('.overlay').fadeIn(400);
 	$('body').css({'overflow' : 'hidden'});
 	return false;
