@@ -37,4 +37,31 @@ $('.btn-modal').click(function(){
 	$('.modal').fadeIn(500);
 	$('.overlay').fadeIn(400);
 	$('body').css({'overflow' : 'hidden'});
+	return false;
+});
+
+$('header ul li a').click(function(){
+	$('header ul li a').removeClass('active');
+	$(this).addClass('active');
+	$('.btn-mobile-menu').parent().removeClass('nav-active');
+	$('body').removeClass('overflow-hidden');
+});
+
+$(document).ready(function() {
+
+	$(".mail-form").submit(function() {
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: $(this).serialize()
+		}).done(function() {
+			$(this).find("input").val("");
+			alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+			$(".mail-form").trigger("reset");
+			$('.thanks').fadeIn();
+			$(".mail-form").slideUp();
+		});
+		return false;
+	});
+	
 });
