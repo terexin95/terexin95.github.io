@@ -95,7 +95,7 @@ nav {
       display: inline-block;
       list-style-type: none;
       margin-right: 60px; }
-      nav ul li::last-child {
+      nav ul li:last-child {
         margin-right: 40px; }
       nav ul li a {
         font-family: "Roboto", sans-serif;
