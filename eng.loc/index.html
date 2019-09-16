@@ -133,7 +133,7 @@
 	/* -------------------------------------------------------------------------
 	   begin Video Youtube
 	 * ------------------------------------------------------------------------- */
-	.video-youtube {
+/*	.video-youtube {
 	  position: relative;
 	  padding-bottom: 56.25%;
 	  padding-top: 25px;
@@ -158,7 +158,7 @@
 	  left: 0;
 	  width: 100%;
 	  height: 100%;
-	  background-image: url(img/youtube.jpg);
+	  background-image: url(http://img.youtube.com/vi/mMT7SEzaLag/maxresdefault.jpg);
 	  background-position: right;
 	  -webkit-background-size: cover;
 	  background-size: cover;
@@ -196,7 +196,7 @@
 	          transform: translate(-50%, -50%);
 	  z-index: 10;
 	  cursor: pointer;
-	}
+	}*/
 
 	/* -------------------------------------------------------------------------
 	   end Video Youtube
@@ -221,12 +221,15 @@
 	</style>
 
 	<header>
+		<div class="border-bg">
+			<img src="img/br.png" alt="">
+		</div>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-10 df ali">
-					<img class="img-responsive" src="img/logo.png" alt="Школа «ИН ЯЗ»">
+				<div class="col-xl-3 df col-lg-3 col-md-6 col-sm-6 col-10 df ali">
+					<div class="logo-div"><img class="img-responsive" src="img/logo.png" alt="Школа «ИН ЯЗ»"></div>
 					<div class="right-border"></div>
-					<img class="img-responsive" src="img/sub.logo.png" alt="Школа «ИН ЯЗ»">
+					<div class="logo-div"><img class="img-responsive" src="img/sub.logo.png" alt="Школа «ИН ЯЗ»"></div>
 				</div>
 				<div class="col-xl-7 col-lg-8 col-md-6 col-sm-6 col-2 position-none">
 					<nav>
@@ -282,13 +285,18 @@
 						</div>
 					</div>
 					<div class="col-lg-9">
-						<div class="wrapper">
+						<div class="wrapper" style="position: relative;
+  padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;">
 						  <!-- begin Video Youtube
 						  =========================================================================== -->
-						  <div class="video-youtube video-youtube_overlay">
-						    <div id="video-youtube__content" class="video-youtube__content video-youtube__content_hide-origin-play-btn"></div>
-						    <button type="button" class="video-youtube__new-play-btn"></button>
-						  </div>
+						  <iframe style="  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;" width="825" height="489" src="https://www.youtube.com/embed/mMT7SEzaLag" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						  <!-- end Video Youtube
 						  =========================================================================== -->
 						</div>
@@ -305,7 +313,7 @@
 						<div class="row">
 							<div class="col-md-5">
 								<img src="img/document.jpg" alt="">
-								<img class="bg" src="img/document.jpg">
+								<img class="bg" src="img/document1.jpg">
 								<span>Сертификат подтверждающий квалификацию</span>
 							</div>
 							<div class="col-md-7">
@@ -320,7 +328,7 @@
 					<div>
 						<div class="row">
 							<div class="col-md-5">
-								<img src="img/document.jpg" alt="">
+								<img src="img/document1.jpg" alt="">
 								<img class="bg" src="img/document.jpg">
 								<span>Сертификат подтверждающий квалификацию</span>
 							</div>
@@ -337,6 +345,9 @@
 			</div>
 		</section>
 		<section class="linea" id="vantage">
+			<div class="border-bg">
+				<img src="img/br1.png" alt="">
+			</div>
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-5 col-md-4">
@@ -392,7 +403,7 @@
 						</div>
 						<div class="col-lg-4 col-xl-3">
 							<div class="group lang">      
-								<input type="text" name="language" required="">
+								<input type="text" name="language" value="Английский язык" required="">
 								<span class="highlight"></span>
 								<span class="bar"></span>
 								<label>Выберите язык для изучения</label>
@@ -420,8 +431,11 @@
 		</section>
 	</main>
 	<footer id="contacts">
+		<div class="border-bg">
+			<img src="img/br2.png" alt="">
+		</div>
 		<div class="map-yandex">
-			<script type="text/javascript" charset="utf-8" defer src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6e28feadacf226fc6f9f7cbc095b7b9990f4828d05fb3f5b195eed6355d80e1e&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=true"></script>
+			<script charset="utf-8" defer src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6e28feadacf226fc6f9f7cbc095b7b9990f4828d05fb3f5b195eed6355d80e1e&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false"></script>
 		</div>
 		<div class="container footer-block">
 			<div class="row">
@@ -560,7 +574,7 @@
 <script src="slick/slick.min.js"></script>
 <script src="js/sprincrement.js"></script>
 <script src="js/main.js"></script>
-<script>
+<!-- <script>
 	'use strict';
 	/* -------------------------------------------------------------------------
 	   begin Video Youtube
@@ -570,7 +584,7 @@
 	  var playerYoutube;
 
 	  playerYoutube = new YT.Player("video-youtube__content", {
-	    videoId: "eGZ1QA3_hZw",
+	    videoId: "mMT7SEzaLag",
 	    playerVars: {
 	      // 'controls': 0,
 	      // 'showinfo': 0,
@@ -607,6 +621,6 @@
 	/* -------------------------------------------------------------------------
 	   end Video Youtube
 	 * ------------------------------------------------------------------------- */
-</script>
+</script> -->
 </body>
 </html>

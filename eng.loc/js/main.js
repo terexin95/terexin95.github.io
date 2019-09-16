@@ -20,7 +20,7 @@ $('input[name="language"]').click(function(){
 	$(this).focus();
 });
 
-// $('input[name="language"]').focusout(function(){
+// $('.lang').focusout(function(){
 // 	$(this).parent().find('ul').hide();
 // });
 
@@ -86,7 +86,6 @@ $(document).ready(function() {
 			data: $(this).serialize()
 		}).done(function() {
 			$(this).find("input").val("");
-			alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
 			$(".mail-form").trigger("reset");
 			$('.thanks').fadeIn();
 			$(".mail-form").slideUp();
