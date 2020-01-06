@@ -17,7 +17,7 @@
 
 </head>
 
-<body class="log-in-app">
+<body>
 
 	<!-- Custom HTML / Remove before use -->
 	<header class="site-header">
@@ -39,47 +39,16 @@
 						<ul>
 							<li><a href="/">Главная</a></li>
 							<li><a href="tournaments.html">Турниры</a></li>
-							<li><a href="drawing.html">Розыгрыши</a></li>
+							<li><a class="active" href="drawing.html">Розыгрыши</a></li>
 							<li><a href="broadcast.html">Трансляции</a></li>
 							<li><a href="/">Магазин</a></li>
-                        </ul>
-                        <a href="#" class="out">Выйти</a>
+						</ul>
 					</nav>
 				</div>
-				<div class="col-md-3 order-md-0 order-2 slide-mobile lk-login">
-					<div class="login-on">
-                        <div class="login-on-img">
-                            <img src="img/logon.png" alt="">
-                        </div>
-                        <a href="#">DreadedHotDog1983</a>
-                        <div class="menu-login">
-                            <p>
-                                <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect x="1.42188" y="12.5" width="10" height="3" rx="1.5" stroke="#E65425"/>
-                                    <rect x="1.42188" y="8.5" width="10" height="3" rx="1.5" stroke="#E65425"/>
-                                    <rect x="1.42188" y="4.5" width="10" height="3" rx="1.5" stroke="#E65425"/>
-                                    <rect x="12.4219" y="12.5" width="10" height="3" rx="1.5" stroke="#E65425"/>
-                                    <rect x="12.4219" y="8.5" width="10" height="3" rx="1.5" stroke="#E65425"/>
-                                    <rect x="12.4219" y="4.5" width="10" height="3" rx="1.5" stroke="#E65425"/>
-                                    <rect x="12.4219" y="0.5" width="10" height="3" rx="1.5" stroke="#E65425"/>
-                                    </svg>
-                                    256 монет                                  
-                            </p>
-                            <p>
-                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M20.1171 12.1971H20.8973V7.51535H18.9076C18.0471 7.51535 17.347 6.81527 17.347 5.95477C17.347 5.37086 17.6695 4.84023 18.1886 4.56988L18.8532 4.22375L16.8662 0L0.940156 7.51188L0.941797 7.51535H0.921875V12.1971H1.70219C2.5627 12.1971 3.26277 12.8972 3.26277 13.7577C3.26277 14.6182 2.5627 15.3183 1.70219 15.3183H0.921875V20H20.8973V15.3182H20.117C19.2565 15.3182 18.5564 14.6182 18.5564 13.7577C18.5564 12.8972 19.2565 12.1971 20.1171 12.1971ZM11.5402 4.23766C11.7296 4.61387 12.1849 4.77332 12.5684 4.59293C12.9524 4.4123 13.1199 3.95898 12.9498 3.57281L16.1191 2.07793L16.8419 3.61445C16.1779 4.19887 15.7864 5.04437 15.7864 5.9548C15.7864 6.52309 15.9398 7.0559 16.2063 7.51539H4.59102L11.5402 4.23766ZM19.3367 16.7801V18.4394H15.8254C15.8254 18.0085 15.4761 17.6591 15.0452 17.6591C14.6142 17.6591 14.2649 18.0085 14.2649 18.4394H2.48246V16.7801C3.82715 16.4327 4.82332 15.2093 4.82332 13.7577C4.82332 12.306 3.82711 11.0825 2.48246 10.7352V9.0759H14.2648C14.2648 9.50684 14.6142 9.85617 15.0451 9.85617C15.4761 9.85617 15.8254 9.50684 15.8254 9.0759H19.3367V10.7352C17.992 11.0826 16.9958 12.306 16.9958 13.7577C16.9959 15.2094 17.992 16.4327 19.3367 16.7801Z" fill="#E65425"/>
-                                </svg>
-                                2 пропуска 
-                            </p>
-                            <ul>
-                                <li><a href="lk-1.html">Личный кабнет</a></li>
-                                <li><a href="team.html">Моя команда</a>
-                                <li><a href="edit.html">Редактировать профиль</a></li>
-                                <li><a href="#">Промокоды</a></li>
-                            </ul>
-                            <a href="#" class="out">Выйти</a>
-                        </div>
-                    </div>
+				<div class="col-md-3 order-md-0 order-2 slide-mobile">
+					<div class="login-wrap">
+						<a href="#" class="login">Войти</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -88,137 +57,460 @@
         <div class="breadcrumbs">
             <div class="container-fluid">
                 <ul>
-                    <li><a href="/">Личный кабинет</a></li>
-                    <li><span>Мой профиль</span></li>
+                    <li><a href="/">Главная</a></li>
+                    <li><span>Турниры</span></li>
                 </ul>
             </div>
         </div>
-        <section class="lk-block">
+        <section class="tournaments">
+			<div class="container-fluid">
+                <h2>Турниры</h2>
+                <p>Здесь мы публикуем все активные и прошедшие турниры.</p>
+                <div class="filtered">
+                    <div class="filter">
+                        <select>
+                            <option value="hide">Все игры</option>
+                            <option value="january" rel="icon-temperature">Dota</option>
+                            <option value="february">CS GO</option>
+                            <option value="march">Pubg</option>
+                            <option value="april">Fortnite</option>
+                        </select>
+                    </div>
+                    <div class="filter">
+                        <select>
+                            <option value="hide">Все статусы</option>
+                            <option value="january" rel="icon-temperature">Dota</option>
+                            <option value="february">CS GO</option>
+                            <option value="march">Pubg</option>
+                            <option value="april">Fortnite</option>
+                        </select>
+                    </div>
+                    <div class="filter">
+                        <select>
+                            <option value="hide">Все режимы</option>
+                            <option value="january" rel="icon-temperature">Dota</option>
+                            <option value="february">CS GO</option>
+                            <option value="march">Pubg</option>
+                            <option value="april">Fortnite</option>
+                        </select>
+                    </div>
+                </div>
+				<div class="table-flex">
+					<div class="table-flex-title">
+						<div class="table-flex-title-games">
+							ИГРА
+						</div>
+						<div class="table-flex-title-name">
+							НАЗВАНИЕ
+						</div>
+						<div class="table-flex-title-status">
+							СТАТУС
+						</div>
+						<div class="table-flex-title-format">
+							ФОРМАТ
+						</div>
+						<div class="table-flex-title-people">
+							УЧАСТНИКИ
+						</div>
+						<div class="table-flex-title-prize">
+							ПРИЗЫ
+						</div>
+					</div>
+					<div class="table-flex-line">
+						<div class="table-flex-line-games">
+							<img src="img/cs.svg" alt="">
+						</div>
+						<div class="table-flex-line-name">
+							<a href="#">FastCup Tournament #23</a>
+						</div>
+						<div class="table-flex-line-status">
+							<span>СТАТУС</span>
+							<p class="status-next">Предстоящий <span>10 дек. 2019 - 22:00</span></p>
+						</div>
+						<div class="table-flex-line-format">
+							<span>ФОРМАТ</span>
+							<p>5x5	<span>Elimination</span></p>
+						</div>
+						<div class="table-flex-line-people">
+							<span>УЧАСТНИКИ</span>
+							<p>23/128</p>
+						</div>
+						<div class="table-flex-line-prize">
+							<span>ПРИЗЫ</span>
+							<p>Сертификаты на покупки</p>
+						</div>
+						<div class="table-flex-line-button">
+							<a href="#">Учавствовать</a>
+						</div>
+					</div>
+					<div class="table-flex-line">
+						<div class="table-flex-line-games">
+							<img src="img/pubg.svg" alt="">
+						</div>
+						<div class="table-flex-line-name">
+							<a href="#">PUBG WTF CUP</a>
+						</div>
+						<div class="table-flex-line-status">
+							<span>СТАТУС</span>
+							<p class="status-prev">Прошедший <span>10 дек. 2019 - 22:00</span></p>
+						</div>
+						<div class="table-flex-line-format">
+							<span>ФОРМАТ</span>
+							<p>2x2	<span>Single Elimination</span></p>
+						</div>
+						<div class="table-flex-line-people">
+							<span>УЧАСТНИКИ</span>
+							<p>23/128</p>
+						</div>
+						<div class="table-flex-line-prize">
+							<span>ПРИЗЫ</span>
+							<p>1000р</p>
+						</div>
+						<div class="table-flex-line-button button-prev">
+							<a href="#">Результаты</a>
+						</div>
+					</div>
+					<div class="table-flex-line">
+						<div class="table-flex-line-games">
+							<img src="img/dota.svg" alt="">
+						</div>
+						<div class="table-flex-line-name">
+							<a href="#">DOTA 2 NEW TOURNAMENT</a>
+						</div>
+						<div class="table-flex-line-status">
+							<span>СТАТУС</span>
+							<p class="status-active">Активный <span>10 дек. 2019 - 22:00</span></p>
+						</div>
+						<div class="table-flex-line-format">
+							<span>ФОРМАТ</span>
+							<p>5x5	<span>Double Elimination</span></p>
+						</div>
+						<div class="table-flex-line-people">
+							<span>УЧАСТНИКИ</span>
+							<p>23/128</p>
+						</div>
+						<div class="table-flex-line-prize">
+							<span>ПРИЗЫ</span>
+							<p>Сертификаты на покупки</p>
+						</div>
+						<div class="table-flex-line-button">
+							<a href="#">Учавствовать</a>
+						</div>
+                    </div>
+                    <div class="table-flex-line">
+						<div class="table-flex-line-games">
+							<img src="img/cs.svg" alt="">
+						</div>
+						<div class="table-flex-line-name">
+							<a href="#">FastCup Tournament #23</a>
+						</div>
+						<div class="table-flex-line-status">
+							<span>СТАТУС</span>
+							<p class="status-next">Предстоящий <span>10 дек. 2019 - 22:00</span></p>
+						</div>
+						<div class="table-flex-line-format">
+							<span>ФОРМАТ</span>
+							<p>5x5	<span>Elimination</span></p>
+						</div>
+						<div class="table-flex-line-people">
+							<span>УЧАСТНИКИ</span>
+							<p>23/128</p>
+						</div>
+						<div class="table-flex-line-prize">
+							<span>ПРИЗЫ</span>
+							<p>Сертификаты на покупки</p>
+						</div>
+						<div class="table-flex-line-button">
+							<a href="#">Учавствовать</a>
+						</div>
+					</div>
+					<div class="table-flex-line">
+						<div class="table-flex-line-games">
+							<img src="img/pubg.svg" alt="">
+						</div>
+						<div class="table-flex-line-name">
+							<a href="#">PUBG WTF CUP</a>
+						</div>
+						<div class="table-flex-line-status">
+							<span>СТАТУС</span>
+							<p class="status-prev">Прошедший <span>10 дек. 2019 - 22:00</span></p>
+						</div>
+						<div class="table-flex-line-format">
+							<span>ФОРМАТ</span>
+							<p>2x2	<span>Single Elimination</span></p>
+						</div>
+						<div class="table-flex-line-people">
+							<span>УЧАСТНИКИ</span>
+							<p>23/128</p>
+						</div>
+						<div class="table-flex-line-prize">
+							<span>ПРИЗЫ</span>
+							<p>1000р</p>
+						</div>
+						<div class="table-flex-line-button button-prev">
+							<a href="#">Результаты</a>
+						</div>
+					</div>
+					<div class="table-flex-line">
+						<div class="table-flex-line-games">
+							<img src="img/dota.svg" alt="">
+						</div>
+						<div class="table-flex-line-name">
+							<a href="#">DOTA 2 NEW TOURNAMENT</a>
+						</div>
+						<div class="table-flex-line-status">
+							<span>СТАТУС</span>
+							<p class="status-active">Активный <span>10 дек. 2019 - 22:00</span></p>
+						</div>
+						<div class="table-flex-line-format">
+							<span>ФОРМАТ</span>
+							<p>5x5	<span>Double Elimination</span></p>
+						</div>
+						<div class="table-flex-line-people">
+							<span>УЧАСТНИКИ</span>
+							<p>23/128</p>
+						</div>
+						<div class="table-flex-line-prize">
+							<span>ПРИЗЫ</span>
+							<p>Сертификаты на покупки</p>
+						</div>
+						<div class="table-flex-line-button">
+							<a href="#">Учавствовать</a>
+						</div>
+                    </div>
+                    <div class="table-flex-line">
+						<div class="table-flex-line-games">
+							<img src="img/cs.svg" alt="">
+						</div>
+						<div class="table-flex-line-name">
+							<a href="#">FastCup Tournament #23</a>
+						</div>
+						<div class="table-flex-line-status">
+							<span>СТАТУС</span>
+							<p class="status-next">Предстоящий <span>10 дек. 2019 - 22:00</span></p>
+						</div>
+						<div class="table-flex-line-format">
+							<span>ФОРМАТ</span>
+							<p>5x5	<span>Elimination</span></p>
+						</div>
+						<div class="table-flex-line-people">
+							<span>УЧАСТНИКИ</span>
+							<p>23/128</p>
+						</div>
+						<div class="table-flex-line-prize">
+							<span>ПРИЗЫ</span>
+							<p>Сертификаты на покупки</p>
+						</div>
+						<div class="table-flex-line-button">
+							<a href="#">Учавствовать</a>
+						</div>
+					</div>
+					<div class="table-flex-line">
+						<div class="table-flex-line-games">
+							<img src="img/pubg.svg" alt="">
+						</div>
+						<div class="table-flex-line-name">
+							<a href="#">PUBG WTF CUP</a>
+						</div>
+						<div class="table-flex-line-status">
+							<span>СТАТУС</span>
+							<p class="status-prev">Прошедший <span>10 дек. 2019 - 22:00</span></p>
+						</div>
+						<div class="table-flex-line-format">
+							<span>ФОРМАТ</span>
+							<p>2x2	<span>Single Elimination</span></p>
+						</div>
+						<div class="table-flex-line-people">
+							<span>УЧАСТНИКИ</span>
+							<p>23/128</p>
+						</div>
+						<div class="table-flex-line-prize">
+							<span>ПРИЗЫ</span>
+							<p>1000р</p>
+						</div>
+						<div class="table-flex-line-button button-prev">
+							<a href="#">Результаты</a>
+						</div>
+					</div>
+					<div class="table-flex-line">
+						<div class="table-flex-line-games">
+							<img src="img/dota.svg" alt="">
+						</div>
+						<div class="table-flex-line-name">
+							<a href="#">DOTA 2 NEW TOURNAMENT</a>
+						</div>
+						<div class="table-flex-line-status">
+							<span>СТАТУС</span>
+							<p class="status-active">Активный <span>10 дек. 2019 - 22:00</span></p>
+						</div>
+						<div class="table-flex-line-format">
+							<span>ФОРМАТ</span>
+							<p>5x5	<span>Double Elimination</span></p>
+						</div>
+						<div class="table-flex-line-people">
+							<span>УЧАСТНИКИ</span>
+							<p>23/128</p>
+						</div>
+						<div class="table-flex-line-prize">
+							<span>ПРИЗЫ</span>
+							<p>Сертификаты на покупки</p>
+						</div>
+						<div class="table-flex-line-button">
+							<a href="#">Учавствовать</a>
+						</div>
+					</div>
+				</div>
+				<div class="pagination">
+					<a href="#">
+						<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7 1L2 6L7 11" stroke="#B0BFC6" stroke-width="2"/>
+						</svg>		
+					</a>
+					<ul>
+						<li>
+							<span class="active">1</span>
+						</li>
+						<li>
+							<a href="#">2</a>
+						</li>
+						<li>
+							<a href="#">3</a>
+						</li>
+						<li>...</li>
+						<li>
+							<a href="#">34</a>
+						</li>
+					</ul>
+					<a href="#">
+						<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M1.5 1L6.5 6L1.5 11" stroke="#E65425" stroke-width="2"/>
+						</svg>	
+					</a>
+				</div>
+			</div>
+        </section>
+        <section class="text-block container-fluid">
+            <h2>Турниры от WTF GAMERS</h2>
+            <p>
+                Сомнение рефлектирует естественный закон исключённого третьего.. Дискретность амбивалентно транспонирует гравитационный парадокс. Дискретность амбивалентно транспонирует гравитационный парадокс. Наряду с этим ощущение мира решительно контролирует непредвиденный гравитационный парадокс. Согласно мнению известных философов, дедуктивный ме.
+            </p>
+            <p>
+                Наряду с этим ощущение мира решительно контролирует непредвиденный гравитационный парадокс. Созерцание непредсказуемо. Смысл жизни, следовательно, творит данный закон внешнего мира. Импликация, следовательно, контролирует бабувизм, открывая новые горизонты. Дедуктивный метод решительно представляет собой бабувизм. Аксиома силлогиз.
+            </p> 
+            <p>
+                Надстройка нетривиальна. Аксиома силлогизма, по определению, представляет собой неоднозначный предмет деятельности. Апостериори, гравитационный парадокс амбивалентно понимает под собой интеллигибельный знак. Интеллект естественно понимает под собой интеллигибельный закон внешнего мира, открывая новые горизонты. Интеллект естественно понима.
+            </p>
+        </section>
+        <section class="news">
             <div class="container-fluid">
+                <h2>Новости</h2>
                 <div class="row">
-                    <div class="col-md-7">
-                        <div class="lk-wrap">
-                            <div class="lk-wrap-img">
-                                <img src="img/logon-big.png" alt="">
-                            </div>
-                            <div class="lk-wrap-text">
-                                <h1>DreadedHotDog1983</h1>
-                                <div class="lk-wrap-text-items">
-                                    <p><strong>BSG</strong></p>
+                    <div class="col-md-6">
+                        <a href="#">
+                            <div class="news-item" style="background-image: url(img/1.png), linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 104.14%);">
+                                <div class="news-item-text">
+                                    <div class="news-date">15 декабря 2019</div>
+                                    <h3>Открыта регистрация на новый онлайн турнир по CS:GO </h3>
+                                    <div class="ganres">
+                                        <div class="ganre">CS:GO</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="lk-wrap-buttons">
-                            <a href="edit.html"><svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10 4H3C2.46957 4 1.96086 4.21071 1.58579 4.58579C1.21071 4.96086 1 5.46957 1 6V20C1 20.5304 1.21071 21.0391 1.58579 21.4142C1.96086 21.7893 2.46957 22 3 22H17C17.5304 22 18.0391 21.7893 18.4142 21.4142C18.7893 21.0391 19 20.5304 19 20V13" stroke="#617E8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M17.5 2.5C17.8978 2.10217 18.4374 1.87868 19 1.87868C19.5626 1.87868 20.1022 2.10217 20.5 2.5C20.8978 2.89782 21.1213 3.43739 21.1213 4C21.1213 4.56261 20.8978 5.10217 20.5 5.5L11 15L7 16L8 12L17.5 2.5Z" stroke="#617E8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                Редактировать профиль</a>
-                            <a href="#" class="upload-img">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M23 15V19C23 19.5304 22.7893 20.0391 22.4142 20.4142C22.0391 20.7893 21.5304 21 21 21H7C6.46957 21 5.96086 20.7893 5.58579 20.4142C5.21071 20.0391 5 19.5304 5 19V15" stroke="#E65425" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M19 8L14 3L9 8" stroke="#E65425" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M14 3V15" stroke="#E65425" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                Загрузить изображение
-                                <form>
-                                    <input type="file" class="form-img-upload">
-                                </form>
-                            </a>
-                        </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="#">
+                            <div class="news-item" style="background-image: url(img/1.png), linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 104.14%);">
+                                <div class="news-item-text">
+                                    <div class="news-date">15 декабря 2019</div>
+                                    <h3>Открыта регистрация на новый онлайн турнир по CS:GO </h3>
+                                    <div class="ganres">
+                                        <div class="ganre">CS:GO</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="#">
+                            <div class="news-item" style="background-image: url(img/1.png), linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 104.14%);">
+                                <div class="news-item-text">
+                                    <div class="news-date">15 декабря 2019</div>
+                                    <h3>Открыта регистрация на новый онлайн турнир по CS:GO </h3>
+                                    <div class="ganres">
+                                        <div class="ganre">CS:GO</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="#">
+                            <div class="news-item" style="background-image: url(img/1.png), linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 104.14%);">
+                                <div class="news-item-text">
+                                    <div class="news-date">15 декабря 2019</div>
+                                    <h3>Открыта регистрация на новый онлайн турнир по CS:GO </h3>
+                                    <div class="ganres">
+                                        <div class="ganre">CS:GO</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="#">
+                            <div class="news-item" style="background-image: url(img/1.png), linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 104.14%);">
+                                <div class="news-item-text">
+                                    <div class="news-date">15 декабря 2019</div>
+                                    <h3>Открыта регистрация на новый онлайн турнир по CS:GO </h3>
+                                    <div class="ganres">
+                                        <div class="ganre">CS:GO</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="#">
+                            <div class="news-item" style="background-image: url(img/1.png), linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 104.14%);">
+                                <div class="news-item-text">
+                                    <div class="news-date">15 декабря 2019</div>
+                                    <h3>Открыта регистрация на новый онлайн турнир по CS:GO </h3>
+                                    <div class="ganres">
+                                        <div class="ganre">CS:GO</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="members">
-            <div class="container-fluid">
-                <div class="members-title">
-                    <h2>Участники</h2>
-                    <a href="#" class="add-member">+ Добавить участника</a>
+                <div class="pagination">
+                    <a href="#">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 1L2 6L7 11" stroke="#B0BFC6" stroke-width="2"/>
+                        </svg>		
+                    </a>
+                    <ul>
+                        <li>
+                            <span class="active">1</span>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            <a href="#">3</a>
+                        </li>
+                        <li>...</li>
+                        <li>
+                            <a href="#">34</a>
+                        </li>
+                    </ul>
+                    <a href="#">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 1L6.5 6L1.5 11" stroke="#E65425" stroke-width="2"/>
+                        </svg>	
+                    </a>
                 </div>
-                <div class="members-wrap members-wrap-edit">
-                    <div class="members-inner">
-                        <div class="members-item-title">
-                            <img src="img/cs.svg" alt="">
-                            <h3>DreadedHotDog1983</h3>
-                        </div>
-                        <div class="members-item-role">
-                            <select>
-                                <option value="hide">Капитан</option>
-                                <option value="january" rel="icon-temperature">Игрок</option>
-                                <option value="february">Игрок</option>
-                                <option value="march">Игрок</option>
-                                <option value="april">Игрок</option>
-                            </select>
-                            <a href="#">Покинуть</a>
-                        </div>
-                    </div>
-                    <div class="members-inner">
-                        <div class="members-item-title">
-                            <img src="img/cs.svg" alt="">
-                            <h3>flufyy</h3>
-                        </div>
-                        <div class="members-item-role">
-                            <select>
-                                <option value="hide">Игрок</option>
-                                <option value="january" rel="icon-temperature">Капитан</option>
-                                <option value="february">Игрок</option>
-                                <option value="march">Игрок</option>
-                                <option value="april">Игрок</option>
-                            </select>
-                            <a href="#">Покинуть</a>
-                        </div>
-                    </div>
-                    <div class="members-inner">
-                        <div class="members-item-title">
-                            <img src="img/cs.svg" alt="">
-                            <h3>gepard008</h3>
-                        </div>
-                        <div class="members-item-role">
-                            <select>
-                                <option value="hide">Игрок</option>
-                                <option value="january" rel="icon-temperature">Капитан</option>
-                                <option value="february">Игрок</option>
-                                <option value="march">Игрок</option>
-                                <option value="april">Игрок</option>
-                            </select>
-                            <a href="#">Покинуть</a>
-                        </div>
-                    </div>
-                    <div class="members-inner">
-                        <div class="members-item-title">
-                            <img src="img/cs.svg" alt="">
-                            <h3>razerorcamy</h3>
-                        </div>
-                        <div class="members-item-role">
-                            <select>
-                                <option value="hide">Игрок</option>
-                                <option value="january" rel="icon-temperature">Капитан</option>
-                                <option value="february">Игрок</option>
-                                <option value="march">Игрок</option>
-                                <option value="april">Игрок</option>
-                            </select>
-                            <a href="#">Покинуть</a>
-                        </div>
-                    </div>
-                    <div class="members-inner">
-                        <div class="members-item-title">
-                            <img src="img/cs.svg" alt="">
-                            <h3>moralezz</h3>
-                        </div>
-                        <div class="members-item-role">
-                            <select>
-                                <option value="hide">Игрок</option>
-                                <option value="january" rel="icon-temperature">Капитан</option>
-                                <option value="february">Игрок</option>
-                                <option value="march">Игрок</option>
-                                <option value="april">Игрок</option>
-                            </select>
-                            <a href="#">Покинуть</a>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="team-button team-button-1 add-member">+ Добавить участника</a>
             </div>
         </section>
     </main>
@@ -360,68 +652,6 @@
                         </div>
                     </div>
                 </div>
-        </div>
-    </div>
-    <div class="modal-1" id="modal-1">
-        <div class="modal-1-wrap">
-            <div class="modal-1-close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                </div>
-            <h2>Добавить участника</h2>
-            <p>Пригласите нового участника в Вашу команду</p>
-            <form>
-                <label>Пригласить по никнэйму</label>
-                <input type="text" placeholder="Введите никнэйм">
-                <span>или</span>
-                <label>Пригласить с помощью электронной почты</label>
-                <input type="email" placeholder="Введи e-mail адрес">
-                <div class="modal-1-wrap-buttons">
-                    <div class="modal-1-wrap-button modal-1-wrap-button-1">
-                        <button type="submit">+ Добавить</button>
-                    </div>
-                    <div class="modal-1-wrap-button modal-1-wrap-button-2">
-                        <button>Отмена</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-    <div class="modal-1" id="modal-2">
-        <div class="modal-1-wrap">
-            <div class="modal-1-close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-                </div>
-            <h2>Создать команду</h2>
-            <form>
-                <div class="img-upload">
-                    <div class="img-upload-item">
-                        <img src="img/upload.png" alt="">
-                        <input type="file">
-                    </div>
-                    <div class="img-upload-text">
-                        <p><strong>Загрузите логотип</strong><br>
-                            Рекомендуемый размер логотипа: <br>
-                            500х500px
-                        </p>
-                    </div>
-                </div>
-                <label>Название команды</label>
-                <input type="text" class="input-v2">
-                <label>Тег команды</label>
-                <input type="email" class="input-v2">
-                <div class="modal-1-wrap-buttons" style="margin-top: 10px;">
-                    <div class="modal-1-wrap-button modal-1-wrap-button-1">
-                        <button type="submit">Создать команду</button>
-                    </div>
-                    <div class="modal-1-wrap-button modal-1-wrap-button-2">
-                        <button>Отмена</button>
-                    </div>
-                </div>
-            </form>
         </div>
     </div>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>

@@ -46,6 +46,7 @@ $('.owl-carousel').owlCarousel({
     margin:10,
     autoplay : true,
     autoplayTimeout : 7000,
+    animateOut: 'fadeOut',
     responsive:{
         0:{
             items:1
