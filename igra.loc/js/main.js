@@ -116,9 +116,7 @@ $(".login-on").append('<div class="arrow-menu"></div>')
 
 $(".login-on-img, .login-on > a, .menu-login").wrapAll("<div class='login-on-wrap' />")
 
-$(".login-on-wrap").hover(function(){
-    $('.menu-login').stop(true,true).slideToggle();
-});
+
 
 $('.arrow-menu').click(function(){
     $('.menu-login').stop(true,true).slideToggle();
@@ -156,5 +154,8 @@ if($(window).width() < 767) {
         $('.modal').fadeIn();
         $('body').addClass('overflow-y');
         return false;
+    });
+    $(".login-on-wrap").hover(function(){
+        $('.menu-login').stop(true,true).slideToggle();
     });
   }
