@@ -44,3 +44,44 @@
 				max-width: 200px
 				margin-left: auto
 				margin-right: auto
+
+@media (max-width: 720px)
+	.nav-wrapper
+		justify-content: center
+	.nav-search, .nav-user
+		max-width: 100%
+		flex: 0 0 100%
+	.nav-search
+		order: 2
+		form
+			width: 312px
+			margin: auto
+			position: relative
+	.nav-user
+		display: flex
+		justify-content: center
+		margin: 20px 0
+	.block-one-img
+		display: none
+	.block-one-text
+		max-width: 100%
+		flex: 0 0 100%
+	.block-one-wrap
+		padding: 40px 20px
+		h1
+			margin-top: 0
+
+@media (max-width: 400px)
+	.block-one-text h1
+		font-size: 28px
+	.nav-menu ul li
+		padding: 0 10px
+		a
+			font-size: 12px
+	.block-one-text ul li
+		max-width: 44%
+		flex: 0 0 44%
+	.nav-search form
+		width: 100%
+		input
+			width: calc(100% - 40px)
