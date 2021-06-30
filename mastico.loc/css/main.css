@@ -412,7 +412,10 @@ footer {
     width: 120px; }
 
   .footer-search form {
-    max-width: 210px; }
+    max-width: 210px;
+    position: relative; }
+    .footer-search form button {
+      position: absolute; }
 
   .footer-wrap {
     flex-wrap: wrap; } }
