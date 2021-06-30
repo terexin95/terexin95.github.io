@@ -70,6 +70,17 @@
 		padding: 40px 20px
 		h1
 			margin-top: 0
+	.catalog-ul ul > li > ul
+		top: 100%
+		left: -1px
+		width: 268px
+		li
+			padding-left: 50px
+			&::before
+				content: ''
+				left: 30px
+	.has-menu::after
+		transform: rotate(90deg)
 
 @media (max-width: 400px)
 	.block-one-text h1

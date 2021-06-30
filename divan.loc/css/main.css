@@ -312,7 +312,20 @@ ul {
   .block-one-wrap {
     padding: 40px 20px; }
     .block-one-wrap h1 {
-      margin-top: 0; } }
+      margin-top: 0; }
+
+  .catalog-ul ul > li > ul {
+    top: 100%;
+    left: -1px;
+    width: 268px; }
+    .catalog-ul ul > li > ul li {
+      padding-left: 50px; }
+      .catalog-ul ul > li > ul li::before {
+        content: "";
+        left: 30px; }
+
+  .has-menu::after {
+    transform: rotate(90deg); } }
 @media (max-width: 400px) {
   .block-one-text h1 {
     font-size: 28px; }
