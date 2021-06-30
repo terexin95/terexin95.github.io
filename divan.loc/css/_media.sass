@@ -82,6 +82,18 @@
 	.has-menu::after
 		transform: rotate(90deg)
 
+	.footer-logo, .footer-menu, .footer-contacts, .footer-user
+		max-width: 45%
+		flex: 0 0 45%
+		justify-content: space-between
+	.footer-user-social
+		width: 120px
+	.footer-search form
+		max-width: 210px
+
+	.footer-wrap
+		flex-wrap: wrap
+
 @media (max-width: 400px)
 	.block-one-text h1
 		font-size: 28px
@@ -96,3 +108,29 @@
 		width: 100%
 		input
 			width: calc(100% - 40px)
+	.footer-logo, .footer-menu, .footer-contacts, .footer-user
+		max-width: 100%
+		flex: 0 0 100%
+		margin-bottom: 30px
+
+	.footer-contacts
+		text-align: center
+
+	.footer-contacts ul li::before
+		content: ""
+		display: none
+
+	.footer-user
+		text-align: center
+
+	.footer-user-social
+		margin: auto
+
+	.footer-search form
+		margin: auto
+
+	.footer-logo
+		text-align: center
+
+	.footer-menu
+		text-align: center

@@ -250,4 +250,90 @@ ul
 		background: linear-gradient(330deg, #81052E 16.79%, #D62D45 89.27%)
 		transition: 1.3s all ease
 
+footer
+	background-color: #898989
+	padding: 100px 0 70px
+
+.footer
+	&-wrap
+		max-width: 1260px
+		padding: 0 15px
+		margin: auto
+		display: flex
+		justify-content: space-between
+		ul
+			li
+				list-style-type: none
+		h4
+			margin: 0
+			font-size: 14px
+			color: rgba(#fff, .55)
+			margin-bottom: 25px
+	&-menu
+		ul
+			li
+				margin-bottom: 25px
+				a
+					font-size: 14px
+					font-weight: 600
+					color: rgba(#fff, .55)
+	&-contacts
+		ul
+			li
+				position: relative
+				padding-left: 20px
+				font-weight: 400
+				font-size: 14px
+				margin-bottom: 5px
+				color: rgba(#fff, .55)
+				a
+					color: rgba(#fff, .55)
+				&::before
+					content: ""
+					position: absolute
+					width: 11px
+					height: 11px
+					left: 0
+					top: 3px
+					background-color: #b2b2b2
+					border-radius: 100px
+	&-user
+		ul
+			li
+				position: relative
+				font-weight: 400
+				font-size: 14px
+				margin-bottom: 5px
+				color: rgba(#fff, .55)
+				a
+					color: rgba(#fff, .55)
+		&-social
+			display: flex
+			justify-content: space-between
+			margin-top: 10px
+	&-logo
+		p
+			font-size: 12px
+			color: rgba(#fff, .55)
+			font-weight: 100
+			line-height: 1.5
+	&-search
+		form
+			border-bottom: 1px solid rgba(#fff, .55)
+			padding: 15px 0
+			input
+				background-color: transparent
+				border: 0
+				box-shadow: 0 0 0 0 transparent
+				color: rgba(#fff, .55)
+				outline: 0
+				font-weight: 100
+				&::placeholder
+					color: rgba(#fff, .55)
+			button
+				background-color: transparent
+				box-shadow: 0 0 0 0 transparent
+				border: 0
+				cursor: pointer
+
 @import "_media.sass"
