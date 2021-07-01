@@ -1,0 +1,287 @@
+/**
+ * Created by IBAH on 18.04.2016.
+ */
+
+.section-module-form p {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 100;
+}
+
+.section-module-form .manager-name {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.section-module-form .manager-phone {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.section-module-form .manager-photo img {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.section-module-form .manager-description {
+    margin-bottom: 60px;
+}
+
+.section-module-form .manager-block {
+    height: 130px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.section-module-form .manager-block .block {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.section-module-form .managers-content {
+    width: 100%;
+    max-width: 500px;
+}
+
+.module_form_text_area {
+    font: 21px 'Roboto-Light', sans-serif;
+    border: 1px solid #202020 !important;
+    box-shadow: inset 0 -1px 0 #d2d2d2;
+    -webkit-box-shadow: inset 0 -1px 0 #d2d2d2;
+    -moz-box-shadow: inset 0 -1px 0 #d2d2d2;
+    -o-box-shadow: inset 0 -1px 0 #d2d2d2;
+    border-radius: 0;
+    padding: 15px !important;
+    width: 100% !important;
+    height: 100% !important;
+
+    resize: none !important;
+}
+
+.textarea_with_file {
+    width: 515px !important;
+    height: 215px !important;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+}
+
+.type_file {
+    visibility: hidden;
+    position: absolute;
+    left: -99999px;
+}
+
+.btn-file {
+    position: relative;
+    right: -185px;
+    bottom: 48px;
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    font: 14px 'Roboto-Light', sans-serif;
+    background-color: #8c8c8c;
+    display: inline-block;
+    color: white;
+    padding-top: 10px;
+    cursor: pointer;
+}
+
+.radio_module_form label {
+    cursor: pointer;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.radio_module_form input:checked + label {
+    text-decoration: underline;
+}
+
+.radio_module_form input {
+    visibility: hidden;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+    .section-module-form .manager-block .block p {
+        text-align: center;
+    }
+
+    .section-module-form .manager-block .block {
+        margin-left: 0;
+    }
+
+    .section-module-form .manager-description {
+        margin-bottom: 20px;
+    }
+
+    .section-module-form h2 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .section-module-form p {
+        font-size: 17px;
+    }
+
+    .section-module-form .manager-name {
+        font-size: 25px;
+    }
+
+    .section-module-form .manager-phone {
+        font-size: 18px;
+    }
+
+    .section-module-form {
+        height: auto !important;
+    }
+
+    .textarea_with_file {
+        width: auto !important;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .module_form_text_area {
+        width: auto !important;
+    }
+
+    .btn-file {
+        right: 0;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+    .section-module-form .manager-block .block p {
+        text-align: center;
+    }
+
+    .section-module-form .manager-block .block {
+        margin-left: 0;
+    }
+
+    .section-module-form .manager-description {
+        margin-bottom: 20px;
+    }
+
+    .section-module-form h2 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .section-module-form p {
+        font-size: 17px;
+    }
+
+    .section-module-form .manager-name {
+        font-size: 25px;
+    }
+
+    .section-module-form .manager-phone {
+        font-size: 18px;
+    }
+
+    .section-module-form {
+        height: auto !important;
+    }
+
+    .textarea_with_file {
+        width: auto !important;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .module_form_text_area {
+        width: auto !important;
+    }
+
+    .btn-file {
+        right: 0;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .section-module-form .manager-block .block p {
+        text-align: center;
+    }
+
+    .section-module-form .manager-block .block {
+        margin-left: 0;
+    }
+
+    .section-module-form .manager-description {
+        margin-bottom: 20px;
+    }
+
+    .section-module-form h2 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .section-module-form p {
+        font-size: 17px;
+    }
+
+    .section-module-form .manager-name {
+        font-size: 25px;
+    }
+
+    .section-module-form .manager-phone {
+        font-size: 18px;
+    }
+
+    .section-module-form {
+        height: auto !important;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .section-module-form .manager-block .block p {
+        text-align: center;
+    }
+
+    .section-module-form .manager-block .block {
+        margin-left: 0;
+    }
+
+    .section-module-form .manager-description {
+        margin-bottom: 20px;
+    }
+
+    .section-module-form h2 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .section-module-form p {
+        font-size: 17px;
+    }
+
+    .section-module-form .manager-name {
+        font-size: 25px;
+    }
+
+    .section-module-form .manager-phone {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1250px) {
+
+}
+
+@media only screen and (min-width: 1250px) and (max-width: 1300px) {
+    .section-module-form .manager-block .block {
+        margin-top: 30px;
+        margin-left: 30px;
+    }
+}
+
+
+

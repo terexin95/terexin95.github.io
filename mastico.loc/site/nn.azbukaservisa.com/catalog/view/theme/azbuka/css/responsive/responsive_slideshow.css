@@ -1,0 +1,290 @@
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+    .block_1200 {
+        width: 100%;
+    }
+
+    .lSSlideOuter {
+        margin-top: 0 !important;
+    }
+
+    .block-before-slideshow {
+        display: none;
+    }
+
+    div[id^='slideshow'] .item {
+        margin-top: 0 !important;
+    }
+
+    div[id^='slideshow'] .block_gallery p, div[id^='slideshow'] .block_gallery a {
+        font-size: 12px;
+    }
+
+    div[id^='slideshow'] .block_gallery {
+        padding: 0 !important;
+        float: none !important;
+        margin: 0 !important;
+        top: 0 !important;
+        max-width: none !important;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.39) !important;
+
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    div[id^='slideshow'] .for-margin {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        min-height: 1px;
+    }
+
+    div[id^='slideshow'] .flex {
+        display: block;
+        min-height: 1px;
+        width: 100%;
+    }
+
+    div[id^='slideshow'] .block_gallery > div {
+        padding: 50px;
+    }
+
+    div[id^='slideshow'] .block_gallery * {
+        color: black !important;
+    }
+
+    div[id^='slideshow'] .block_gallery p:nth-of-type(1) {
+        font-size: 25px !important;
+        padding: 30px;
+        text-align: left !important;
+        line-height: normal;
+    }
+
+    div[id^='slideshow'] .block_gallery p:nth-of-type(2) {
+        font-size: 25px !important;
+        padding: 30px;
+        line-height: normal;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 460px) {
+    div[id^='slideshow'] .block_gallery > div {
+        padding: 10px !important;
+    }
+
+    div[id^='slideshow'] .block_gallery h2 {
+        font-size: 30px !important;
+    }
+
+    div[id^='slideshow'] .block_gallery p:nth-of-type(1) {
+        font-size: 21px !important;
+    }
+
+    div[id^='slideshow'] .block_gallery p:nth-of-type(2) {
+        font-size: 21px !important;
+    }
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+    .block_1200 {
+        width: 100%;
+    }
+
+    div[id^='slideshow'] .block_gallery p:nth-of-type(1) {
+        font-size: 21px !important;
+    }
+
+    div[id^='slideshow'] .block_gallery p:nth-of-type(2) {
+        font-size: 21px !important;
+    }
+
+    div[id^='slideshow'] .block_gallery p, div[id^='slideshow'] .block_gallery a {
+        font-size: 12px;
+    }
+
+    div[id^='slideshow'] .block_gallery {
+        padding: 20px;
+        float: none !important;
+        margin: 0 auto;
+        top: 150px;
+    }
+
+}
+
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+    .block_1200 {
+        width: 95%;
+    }
+
+    div[id^='slideshow'] .block_gallery p, div[id^='slideshow'] .block_gallery a {
+        font-size: 14px;
+    }
+
+    .section_9 .block_gallery {
+        padding: 20px;
+        float: none !important;
+        margin: 0 auto;
+        top: 150px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .block_1200 {
+        width: 95%;
+    }
+
+    div[id^='slideshow'] .block_gallery p, div[id^='slideshow'] .block_gallery a {
+        font-size: 16px;
+    }
+
+    div[id^='slideshow'] .block_gallery {
+        padding: 25px;
+    }
+
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    div[id^='slideshow'] .block_gallery {
+        top: 100px;
+    }
+
+    div[id^='slideshow'] .block_1200 {
+        width: 95%;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1250px) {
+    div[id^='slideshow'] .block_1200 {
+        width: 1190px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1300px) {
+    div[id^='slideshow'] .block_gallery {
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    div[id^='slideshow'] .for-margin {
+        margin-left: calc((100vw - 1200px) / 2);
+        margin-right: calc((100vw - 1200px) / 2);
+    }
+}
+
+/*  for height */
+@media only screen and (min-height: 800px) and (max-height: 899px) {
+    div[id^='slideshow'] .block_gallery {
+        margin-right: 20px;
+        top: 110px;
+    }
+
+    .block-before-slideshow {
+        height: 100px !important;
+    }
+}
+
+@media only screen and (min-height: 900px) and (max-height: 999px) {
+    div[id^='slideshow'] .block_gallery {
+        margin-right: 20px;
+        top: 120px;
+    }
+
+    .block-before-slideshow {
+        height: 100px !important;
+    }
+}
+
+@media only screen and (min-height: 1000px) and (max-height: 1100px) {
+    div[id^='slideshow'] .block_gallery {
+        margin-right: 20px;
+        top: 125px;
+    }
+
+    .block-before-slideshow {
+        height: 100px !important;
+    }
+}
+
+@media only screen and (min-height: 1101px) and (max-height: 1200px) {
+    div[id^='slideshow'] .block_gallery {
+        margin-right: 20px;
+        top: 130px;
+    }
+
+    .block-before-slideshow {
+        height: 100px !important;
+    }
+}
+
+@media only screen and (min-height: 1201px) and (max-height: 1500px) {
+    div[id^='slideshow'] .block_gallery {
+        margin-right: 20px;
+        top: 135px;
+    }
+
+    .block-before-slideshow {
+        height: 105px !important;
+    }
+
+}
+
+div[id^='slideshow'] .item .image-full {
+    z-index: 1;
+}
+
+div[id^='slideshow'] {
+    overflow-y: hidden;
+}
+
+div[id^='slideshow'] .block_gallery {
+    background: #fff;
+    color: #000000;
+    padding: 40px;
+    max-width: 700px;
+    min-width: 450px;
+    display: block !important;
+}
+
+div[id^='slideshow'] .block_gallery h2 {
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 0;
+    text-align: left;
+    font-size: 40px;
+}
+
+div[id^='slideshow'] .item {
+    margin-top: 100px;
+}
+
+div[id^='slideshow'] .block_gallery {
+    width: 22vw;
+    position: absolute;
+    top: 120px;
+    opacity: 0;
+}
+
+div[id^='slideshow'] .position-left {
+    justify-content: space-between;
+}
+
+div[id^='slideshow'] .position-right {
+    justify-content: space-around;
+}
+
+.block-before-slideshow {
+    top: -1px;
+    height: 150px;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+}
+
+div[id^='slideshow'] .block_gallery .signature {
+    padding-top: 10px;
+    font-weight: bold;
+}
+

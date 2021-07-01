@@ -53,9 +53,9 @@ ul
 			li
 				list-style-type: none
 	&-callback
-		max-width: 200px
-		flex: 0 0 200px
-		text-align: center
+		max-width: 150px
+		flex: 0 0 150px
+		text-align: left
 		a
 			font-size: 14px
 			img
@@ -173,9 +173,11 @@ ul
 			border-radius: 10px
 			box-shadow: 0 0 0 0 transparent
 			outline: 0
+			font-family: "Montserrat", sans-serif
 			&::placeholder
 				color: #6e6e6e
 				font-size: 14px
+				font-family: "Montserrat", sans-serif
 		button
 			background-color: transparent
 			border: 0
@@ -207,7 +209,7 @@ ul
 		display: flex
 		margin: auto
 		padding-top: 130px
-		padding-bottom: 90px
+		padding-bottom: 100px
 	&-text
 		max-width: 50%
 		flex: 0 0 50%
@@ -224,8 +226,11 @@ ul
 				h3
 					font-size: 16px
 					color: #3e8e2b
+					margin: 0
 				p
 					font-size: 14px
+					margin: 0
+					margin-top: 10px
 	&-img
 		max-width: 50%
 		flex: 0 0 50%
@@ -328,12 +333,238 @@ footer
 				color: rgba(#fff, .55)
 				outline: 0
 				font-weight: 100
+				font-family: "Montserrat", sans-serif
 				&::placeholder
 					color: rgba(#fff, .55)
+					font-family: "Montserrat", sans-serif
 			button
 				background-color: transparent
 				box-shadow: 0 0 0 0 transparent
 				border: 0
 				cursor: pointer
+
+.block-two
+	background-color: #f9f9f9
+	padding: 100px 0 30px
+	&-wrap
+		max-width: 1260px
+		padding: 0 15px
+		margin: auto
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	&-text
+		max-width: 40%
+		flex: 0 0 40%
+	&-img
+		max-width: 50%
+		flex: 0 0 50%
+		img
+			width: 100%
+			margin-top: -150px
+
+section
+	h2
+		font-weight: 600
+		font-size: 28px
+	p
+		font-weight: 400
+		font-size: 16px
+		margin-bottom: 30px
+		line-height: 22px
+
+.calculator
+	&-wrap
+		max-width: 1260px
+		margin: auto
+		padding: 50px 15px 100px
+	&-item
+		padding: 30px
+		border-left: 1px solid #e1e1e1
+		border-right: 1px solid #e1e1e1
+		p
+			margin: 0
+			margin-bottom: 10px
+	&-block
+		max-width: 970px
+		margin: auto
+		margin-top: 50px
+		&-footer
+			display: flex
+			justify-content: center
+			padding: 40px 0
+			border-left: 1px solid #e1e1e1
+			border-right: 1px solid #e1e1e1
+			border-bottom: 1px solid #e1e1e1
+			border-radius: 0 0 10px 10px
+			.result
+				max-width: 35%
+				flex: 0 0 35%
+				&-text
+					font-size: 27px
+					font-weight: 500
+					margin: 0
+					margin-bottom: 20px
+				&-price
+					color: #3e8e2b
+					font-size: 33px
+					font-weight: 500
+					margin: 0
+			&-modal
+				max-width: 35%
+				flex: 0 0 35%
+				a
+					display: block
+					width: 275px
+					height: 70px
+					text-align: center
+					line-height: 70px
+					background: linear-gradient(330deg, #AE3032 26.79%, #D62D45 100%)
+					border-radius: 10px
+					color: #fff
+					font-weight: 600
+		&-title
+			height: 70px
+			font-size: 18px
+			text-align: center
+			font-weight: 500
+			background-color: #3e8e2b
+			border-radius: 10px 10px 0 0
+			line-height: 70px
+			color: #fff
+		&-descr
+			border: 1px solid #e1e1e1
+			padding: 40px 0
+			display: flex
+			align-items: center
+			justify-content: center
+			.button-reset
+				padding: 20px
+				border: 1px solid #000
+				border-radius: 10px
+				cursor: pointer
+				font-weight: 600
+				display: inline-block
+				&-wrap
+					max-width: 35%
+					flex: 0 0 35%
+			&-delivery
+				max-width: 35%
+				flex: 0 0 35%
+				h3
+					font-size: 13px
+					font-weight: 600
+					margin: 0
+				p
+					font-size: 13px
+					font-weight: 400
+					margin: 0
+
+.container_calculator
+	background-color: #d8e8d5
+	padding: 10px 20px
+	border-radius: 10px
+	.checkbox
+		display: flex
+		margin-bottom: 10px
+		label
+			max-width: 65%
+			flex: 0 0 65%
+		input
+			max-width: 5%
+			flex: 0 0 5%
+		.price
+			max-width: 30%
+			flex: 0 0 30%
+			display: flex
+			.count_scope
+				max-width: 50%
+				flex: 0 0 50%
+				.count
+					display: inline-block
+					width: 30px
+					text-align: center
+			.price_calc
+				max-width: 50%
+				flex: 0 0 50%
+				text-align: center
+
+.checkbox
+	label
+		position: relative
+	input[type="checkbox"]
+		padding: 0
+		height: initial
+		width: initial
+		margin-bottom: 0
+		display: none
+		cursor: pointer
+	label::before
+		content: ''
+		-webkit-appearance: none
+		background-color: transparent
+		border: 1px solid #333
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05)
+		padding: 8px
+		display: inline-block
+		position: relative
+		vertical-align: middle
+		cursor: pointer
+		margin-right: 15px
+
+.block-three
+	&-wrap
+		max-width: 1260px
+		padding: 0 15px
+		margin: auto
+	&-item
+		display: flex
+		justify-content: space-between
+		&-img
+			max-width: 47%
+			flex: 0 0 47%
+			img
+				max-width: 100%
+		&-text
+			max-width: 47%
+			flex: 0 0 47%
+			display: flex
+			align-items: center
+			&-sale
+				text-transform: uppercase
+				border: 1px solid #006833
+				color: #006833
+				font-size: 27px
+				padding: 10px 20px
+				border-radius: 10px
+				display: inline-block
+			h3
+				font-size: 33px
+				line-height: 40px
+				text-transform: uppercase
+
+.footer-line
+	&-wrap
+		display: flex
+		justify-content: space-between
+		max-width: 1260px
+		padding: 0 15px
+		margin: auto
+		align-items: center
+		ul
+			display: flex
+			margin: 0
+			padding: 0
+			li
+				list-style-type: none
+				margin-right: 20px
+				color: #686868
+				svg
+					path
+						fill: #686868
+		p
+			color: #686868
+
+
 
 @import "_media.sass"

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+
+    <meta name="viewport"
+          content="width=1200"/>
+
+    <title>Обратная связь</title>
+            <!-- Bootstrap -->
+    <link href="/catalog/view/theme/azbuka/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/catalog/view/theme/azbuka/css/style.css" rel="stylesheet">
+    <link href="/catalog/view/theme/azbuka/css/goods_style.css" rel="stylesheet">
+    <link href="/catalog/view/theme/azbuka/css/style_calculator.css" rel="stylesheet">
+    <link href="/catalog/view/theme/azbuka/css/add.css" rel="stylesheet">
+    <link href="/catalog/view/theme/azbuka/css/forms.css" rel="stylesheet">
+    <!--link href="/catalog/view/theme/azbuka/css/responsive/mobile320.css" rel="stylesheet"/-->
+    <!--link href="/catalog/view/theme/azbuka/css/responsive/mobile768.css" rel="stylesheet"/-->
+    <!--link href="/catalog/view/theme/azbuka/css/responsive/tablet_769_1199.css" rel="stylesheet"/-->
+
+
+    <link href="/catalog/view/theme/azbuka/css/animate.css" rel="stylesheet"/>
+
+    
+        <link href="http://nn.azbukaservisa.com/image/catalog/icons/logo.png" rel="icon"/>
+    
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="catalog/view/theme/azbuka/js/jquery-2.2.1.min.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6Lc247kZAAAAAAE-cm9xTKMqylBRCTxyUq81cBkn"></script>
+</head>
+<body>
+
+<header class="calculator_panel">
+    <div class="container simple-header">
+        <a href="http://nn.azbukaservisa.com/" class="back-link col-xs-4">Закрыть</a>
+
+        <p class="col-xs-4 title-simple-header">Обратная связь</p>
+
+        <p class="col-xs-4 telephone">8 (831) 272-73-05</p>
+    </div>
+</header>
+
+<div class="container-fluid">
+    <div class="row">
+        <section class="full">
+            <div class="section section-9-main-page image-full section-module-form" style="background-color: rgba(0,0,0,0); height: auto;">
+		<div id="div_form0">
+    <div class="text-center">
+        <h2>
+            Обратная связь        </h2>
+
+        <p><p>Мы с удовольствием ответим на ваш вопрос.</p><p>Или с особым вниманием примем просьбу об исправлении недостатка.</p><p>Пишите на info@azbukaservisa.com или на форму ниже.</p></p>
+
+        <div class="text-danger form-text">
+                    </div>
+
+        <div class="form-group">
+            <form method="post" enctype="multipart/form-data" action="http://nn.azbukaservisa.com/index.php?route=module/form/send&amp;form_id=12">
+                
+                                <div class="radio_module_form center-block">
+                                                            <input type="radio" name="type"
+                           value="Вопрос"
+                           id="Вопрос_input"
+                                        checked />
+                    <label for="Вопрос_input">Вопрос</label>
+                                        <input type="radio" name="type"
+                           value="Рекламация"
+                           id="Рекламация_input"
+                                         />
+                    <label for="Рекламация_input">Рекламация</label>
+                                        <input type="radio" name="type"
+                           value="Директору"
+                           id="Директору_input"
+                                         />
+                    <label for="Директору_input">Директору</label>
+                                    </div>
+                
+                
+
+                                <div class="textarea_with_file center-block">
+                    <textarea type="textarea_with_file" name="text_file"
+                    required                    class="form-control module_form_text_area" placeholder="Введите текст сообщения"></textarea>
+                    <span class="btn-file" data-target="text_file_file">
+                        Прикрепить файл
+                    </span>
+
+                </div>
+                <input class="type_file" accept=".zip,.txt,.png,.jpe,.jpeg,.jpg,.gif,.bmp,.ico,.tiff,.tif,.svg,.svgz,.zip,.rar,.msi,.cab,.mp3,.qt,.mov,.pdf,.psd,.ai,.eps,.ps,.doctext/plain,image/png,image/jpeg,image/gif,image/bmp,image/tiff,image/svg+xml,application/zip,application/x-zip,application/x-zip-compressed,application/rar,application/x-rar,application/x-rar-compressed,audio/mpeg,video/quicktime,application/pdf" type="file"
+                       name="text_file_file"/>
+                
+                
+
+                
+                <input type="text" name="name"
+                required                class="form-control company_input" placeholder="Ваше имя" />
+                
+                
+
+                
+                <input type="text" name="phone"
+                required                class="form-control company_input" placeholder="Номер телефона" />
+                
+                <input type="hidden" name="url_from" value="http://nn.azbukaservisa.com/feedback"/>
+                <input type="hidden" name="g-recaptcha-response">
+                <input type="hidden" name="action" value="form_submit_12">
+
+                <button id="button_form_submit0" type="submit"
+                        class="btn btn_company">Отправить</button>
+            </form>
+        </div>
+
+        
+
+    </div>
+</div>	</div>
+
+<div id="CallBackModalError" class="modal zoomIn" role="dialog">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<span data-dismiss="modal" class="close_icon rounded thick"></span>
+			<div class="modal-body">
+				<div class="section section-9-main-page">
+					<div class="text-center">
+						Произошла ошибка при отправке
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$('#button_form_submit0').click(function () {
+		$('#div_form0 .form-text').hide(0);
+	});
+
+	$('#button_form_modal0').click(function () {
+		$('#div_form0 form').get(0).reset();
+	});
+
+	$('#div_form0 form').submit(function (e) {
+
+		e.preventDefault();
+		var self = this;
+		grecaptcha.ready(function() {
+          grecaptcha.execute('6Lc247kZAAAAAAE-cm9xTKMqylBRCTxyUq81cBkn', {action: 'form_submit_12'}).then(function(token) {
+          	$('#div_form0 form input[name=g-recaptcha-response]').val(token);
+          	//var postData = $(this).serializeArray();
+			var postData = new FormData(self);
+			var formURL = $(self).attr('action');
+			$.ajax({
+				url: formURL,
+				processData: false,
+				contentType: false,
+				type: 'POST',
+				data: postData,
+				dataType: 'json',
+				success: function (data) {
+					var error = data.error;
+					if (error) {
+
+						$('#CallBackModal').addClass('animated zoomOut');
+						//$('#CallBackModal').modal('hide');
+						setTimeout(function () {
+							if ($('.modal-backdrop').length > 0) {
+								$('#formModalNotification').data('backdrop', 'false');
+							} else {
+								$('#formModalNotification').data('backdrop', 'true');
+							}
+
+							$('#CallBackModal').modal('hide');
+							$('#formModalNotification').modal('show');
+						}, 500);
+
+					} else {
+						$('#div_form0 .form-text').html(data.error_form);
+						$('#div_form0 .form-text').slideDown();
+					}
+				},
+				error: function (jqXHR, textStatus, errorThrown) {
+					error_event();
+				}
+			});
+          });
+        });
+
+
+		return false;
+	});
+
+	var error_event = function () {
+		$('#CallBackModalError').modal('show');
+	};
+
+</script>
+                                </section>
+
+
+    </div>
+</div>
+
+<div id="CallBackModal" class="modal zoomIn" role="dialog">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<span data-dismiss="modal" class="close_icon rounded thick"></span>
+			<div class="modal-body">
+				<div class="section section-9-main-page">
+					<div class="text-center">
+						<div class="section section-9-main-page image-full section-module-form" style="background-color: rgba(0,0,0,0); height: auto;">
+		<div id="div_form1">
+    <div class="text-center">
+        <h2>
+            Заказать звонок        </h2>
+
+        <p><p style="text-align: center; ">Оставьте заявку и менеджер свяжется с вами<br></p></p>
+
+        <div class="text-danger form-text">
+                    </div>
+
+        <div class="form-group">
+            <form method="post" enctype="multipart/form-data" action="http://nn.azbukaservisa.com/index.php?route=module/form/send&amp;form_id=11">
+                
+                
+
+                
+                <input type="text" name="name"
+                required                class="form-control company_input" placeholder="Имя" />
+                
+                
+
+                
+                <input type="text" name="phone"
+                required                class="form-control company_input" placeholder="Телефон" />
+                
+                <input type="hidden" name="url_from" value="http://nn.azbukaservisa.com/feedback"/>
+                <input type="hidden" name="g-recaptcha-response">
+                <input type="hidden" name="action" value="form_submit_11">
+
+                <button id="button_form_submit1" type="submit"
+                        class="btn btn_company">Заказать</button>
+            </form>
+        </div>
+
+                <a class="a_cancel btn btn_company">Отмена</a>
+        
+
+    </div>
+</div>	</div>
+
+<div id="CallBackModalError" class="modal zoomIn" role="dialog">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<span data-dismiss="modal" class="close_icon rounded thick"></span>
+			<div class="modal-body">
+				<div class="section section-9-main-page">
+					<div class="text-center">
+						Произошла ошибка при отправке
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$('#button_form_submit1').click(function () {
+		$('#div_form1 .form-text').hide(0);
+	});
+
+	$('#button_form_modal1').click(function () {
+		$('#div_form1 form').get(0).reset();
+	});
+
+	$('#div_form1 form').submit(function (e) {
+
+		e.preventDefault();
+		var self = this;
+		grecaptcha.ready(function() {
+          grecaptcha.execute('6Lc247kZAAAAAAE-cm9xTKMqylBRCTxyUq81cBkn', {action: 'form_submit_11'}).then(function(token) {
+          	$('#div_form1 form input[name=g-recaptcha-response]').val(token);
+          	//var postData = $(this).serializeArray();
+			var postData = new FormData(self);
+			var formURL = $(self).attr('action');
+			$.ajax({
+				url: formURL,
+				processData: false,
+				contentType: false,
+				type: 'POST',
+				data: postData,
+				dataType: 'json',
+				success: function (data) {
+					var error = data.error;
+					if (error) {
+
+						$('#CallBackModal').addClass('animated zoomOut');
+						//$('#CallBackModal').modal('hide');
+						setTimeout(function () {
+							if ($('.modal-backdrop').length > 0) {
+								$('#formModalNotification').data('backdrop', 'false');
+							} else {
+								$('#formModalNotification').data('backdrop', 'true');
+							}
+
+							$('#CallBackModal').modal('hide');
+							$('#formModalNotification').modal('show');
+						}, 500);
+
+					} else {
+						$('#div_form1 .form-text').html(data.error_form);
+						$('#div_form1 .form-text').slideDown();
+					}
+				},
+				error: function (jqXHR, textStatus, errorThrown) {
+					error_event();
+				}
+			});
+          });
+        });
+
+
+		return false;
+	});
+
+	var error_event = function () {
+		$('#CallBackModalError').modal('show');
+	};
+
+</script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="formModalNotification" class="modal zoomIn" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="section section-9-main-page">
+					<div>
+						<div class="text-center text-bold">
+							<h2>Спасибо!</h2>
+							<p>Ваше обращение принято. Менеджер свяжется <br/>с Вами в ближайшее время</p>
+
+							<div class="text-danger form-text"></div>
+							<button id="button_form_modal<b>Notice</b>: Undefined variable: module in <b>/var/www/azbukaservisa/data/www/azbukaservisa.com/catalog/view/theme/azbuka/template/common/footer_calculator.tpl</b> on line <b>27</b>" data-dismiss="modal"
+							        class="btn btn_company btn_ok">Ок
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="orderNotification" class="modal zoomIn" data-backdrop="false" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="section section-9-main-page">
+					<div>
+						<div class="text-center text-bold">
+							<h2>Спасибо!</h2>
+							<p>Ваш заказ принят. Менеджер свяжется <br/>с Вами в ближайшее время</p>
+
+							<div class="text-danger form-text"></div>
+							<button data-dismiss="modal" class="btn btn_company btn_ok">Ок</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="orderNotificationError" class="modal zoomIn" data-backdrop="false" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<div class="section section-9-main-page">
+					<div>
+						<div class="text-center text-bold">
+							<h2>Ошибка!</h2>
+							<p>Не удалось отправить сообщение</p>
+
+							<div class="text-danger form-text"></div>
+							<button data-dismiss="modal" class="btn btn_company btn_ok">Ок</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+
+<script src="catalog/view/theme/azbuka/js/jquery.inputmask.min.js" type="text/javascript"></script>
+<script src="catalog/view/theme/azbuka/js/bootstrap.min.js"></script>
+
+<script src="catalog/view/theme/azbuka/js/jquery.nicescroll.js"></script>
+<script src="catalog/view/theme/azbuka/js/events.js"></script>
+
+<script src="catalog/view/theme/azbuka/js/calculator.js"></script>
+
+<script type="text/javascript">
+
+	$(document).ready(function () {
+
+		$('#callModal').on('shown.bs.modal', function () {
+			$('header').addClass('supreme-container');
+			$('#div_form .form-text').html('');
+			$('#div_form .form-text').hide();
+		});
+
+		$('#div_form form').submit(function (e) {
+
+			var components = [];
+
+			$('input:checkbox.styled').each(function () {
+				if (this.checked) {
+					count = $(this).parent().find('.count').text();
+					components.push($(this).attr('component_id') + '-' + Number(count));
+				}
+
+			});
+
+			e.preventDefault();
+
+			if (components.length > 0) {
+
+
+				var name = $('#form_name').val();
+				var phone = $('#form_phone').val();
+				var formURL = $(this).attr('action');
+				$.ajax(
+					{
+						url: formURL,
+						type: "POST",
+						data: {
+							components: components,
+							name: name,
+							phone: phone
+						},
+						dataType: 'json',
+						success: function (data) {
+							var error = data.error;
+							if (error) {
+								$('#callModal form')[0].reset();
+
+								$('#callModal').addClass('animated zoomOut');
+								setTimeout(function () {
+									$('#orderNotification').modal({
+										'backdrop': false,
+										'show': true
+									});
+								}, 500);
+
+							} else {
+								$('#div_form .form-text').html(data.error_form);
+								$('#div_form .form-text').slideDown();
+							}
+						},
+						error: function (jqXHR, textStatus, errorThrown) {
+							$('#callModal').addClass('animated zoomOut');
+							setTimeout(function () {
+								$('#orderNotificationError').modal({
+									'backdrop': false,
+									'show': true
+								});
+							}, 500);
+						}
+					});
+			} else {
+				$('#div_form .form-text').html('<p>Выберите минимум один пункт из калькулятора</p>');
+				$('#div_form .form-text').slideDown();
+			}
+			return false;
+		});
+	});
+</script>
+
+<style>
+	html, body {
+		height: auto !important;
+	}
+</style>
+
+</html>

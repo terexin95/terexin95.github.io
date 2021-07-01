@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /admin
+Disallow: /image
+Allow: /image/catalog
+Disallow: /export
+Disallow: /system
+Disallow: /*utm_source
+Disallow: /*utm_medium
+Disallow: /*utm_campaign
+Disallow: /*_openstat
+Host: azbukaservisa.com

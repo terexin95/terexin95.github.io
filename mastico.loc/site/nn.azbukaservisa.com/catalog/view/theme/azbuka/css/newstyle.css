@@ -1,0 +1,104 @@
+
+.container .row .section:not(:last-child) {
+    margin-bottom: 0px;
+}
+
+.section_2 .team {
+    width: 46% !important;
+}
+
+.menu-header a {
+    color: #ffffff !important;
+}
+
+.menu-header a:hover {
+    color: rgba(255, 255, 255, 0.8) !important;
+    background-color: #404040;
+}
+
+.menu-header .dropdown span {
+    color: #ffffff !important;
+    font-size: 16px;
+}
+
+.menu-header .dropdown span:hover {
+    color: rgba(255, 255, 255, 0.8) !important;
+
+}
+
+.footer-menu a {
+    color: #ffffff !important;
+    background-color: #404040;
+}
+
+.footer-menu a:hover {
+    color: rgba(255, 255, 255, 0.8) !important;
+    background-color: #404040;
+}
+
+.footer-menu .navbar-nav a:hover {
+    color: rgba(255, 255, 255, 0.8) !important;
+    background-color: #404040;
+}
+
+.min-menu span {
+    font-size: 13px;
+    color: #000000;
+}
+
+.min-menu span:hover {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.fixed_menu .navbar-nav > li > a, .fixed_menu div:last-child > a {
+    font-size: 18px;
+    color: #ffffff;
+    line-height: 20px;
+}
+
+.dropdown .btn .icon-down {
+    width: 12px;
+    height: 6px;
+    background: url(/image/down.png) no-repeat;
+    display: inline-block;
+    position: relative;
+    top: -1px;
+}
+
+.menu_big_open > div:first-child > div ul {
+    padding: 0px;
+    list-style: none;
+    margin-top: 7px;
+    margin-bottom: 30px;
+}
+
+.category-info {
+    padding-bottom: 10px !important;
+}
+
+.section_9 .block_gallery a:hover {
+    font-size: 21px;
+    color: rgba(0, 0, 0, 0.8) !important;
+    text-decoration: none;
+    font-weight: 600 !important;
+}
+
+.div-with-link a:hover {
+    outline: 0;
+    color: /*rgba(255, 255, 255, 0.8)*/ #fc0 !important;
+    text-decoration: none;
+    font-weight: 600 !important;
+}
+
+.calculator_panel a, .calculator_panel p {
+    font-size: 21px;
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.calculator_panel a:hover {
+    font-size: 21px;
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-decoration: none;
+}

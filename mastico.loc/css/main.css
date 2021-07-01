@@ -49,9 +49,9 @@ ul {
   .header-social ul li {
     list-style-type: none; }
 .header-callback {
-  max-width: 200px;
-  flex: 0 0 200px;
-  text-align: center; }
+  max-width: 150px;
+  flex: 0 0 150px;
+  text-align: left; }
   .header-callback a {
     font-size: 14px; }
     .header-callback a img {
@@ -162,10 +162,12 @@ ul {
     border-width: 1px;
     border-radius: 10px;
     box-shadow: 0 0 0 0 transparent;
-    outline: 0; }
+    outline: 0;
+    font-family: "Montserrat", sans-serif; }
     .nav-search input::placeholder {
       color: #6e6e6e;
-      font-size: 14px; }
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif; }
   .nav-search button {
     background-color: transparent;
     border: 0;
@@ -196,7 +198,7 @@ ul {
     display: flex;
     margin: auto;
     padding-top: 130px;
-    padding-bottom: 90px; }
+    padding-bottom: 100px; }
   .block-one-text {
     max-width: 50%;
     flex: 0 0 50%; }
@@ -212,9 +214,12 @@ ul {
         list-style-type: none; }
         .block-one-text ul li h3 {
           font-size: 16px;
-          color: #3e8e2b; }
+          color: #3e8e2b;
+          margin: 0; }
         .block-one-text ul li p {
-          font-size: 14px; }
+          font-size: 14px;
+          margin: 0;
+          margin-top: 10px; }
   .block-one-img {
     max-width: 50%;
     flex: 0 0 50%;
@@ -306,14 +311,232 @@ footer {
     box-shadow: 0 0 0 0 transparent;
     color: rgba(255, 255, 255, 0.55);
     outline: 0;
-    font-weight: 100; }
+    font-weight: 100;
+    font-family: "Montserrat", sans-serif; }
     .footer-search form input::placeholder {
-      color: rgba(255, 255, 255, 0.55); }
+      color: rgba(255, 255, 255, 0.55);
+      font-family: "Montserrat", sans-serif; }
   .footer-search form button {
     background-color: transparent;
     box-shadow: 0 0 0 0 transparent;
     border: 0;
     cursor: pointer; }
+
+.block-two {
+  background-color: #f9f9f9;
+  padding: 100px 0 30px; }
+  .block-two-wrap {
+    max-width: 1260px;
+    padding: 0 15px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .block-two-text {
+    max-width: 40%;
+    flex: 0 0 40%; }
+  .block-two-img {
+    max-width: 50%;
+    flex: 0 0 50%; }
+    .block-two-img img {
+      width: 100%;
+      margin-top: -150px; }
+
+section h2 {
+  font-weight: 600;
+  font-size: 28px; }
+section p {
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 22px; }
+
+.calculator-wrap {
+  max-width: 1260px;
+  margin: auto;
+  padding: 50px 15px 100px; }
+.calculator-item {
+  padding: 30px;
+  border-left: 1px solid #e1e1e1;
+  border-right: 1px solid #e1e1e1; }
+  .calculator-item p {
+    margin: 0;
+    margin-bottom: 10px; }
+.calculator-block {
+  max-width: 970px;
+  margin: auto;
+  margin-top: 50px; }
+  .calculator-block-footer {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    border-left: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    border-radius: 0 0 10px 10px; }
+    .calculator-block-footer .result {
+      max-width: 35%;
+      flex: 0 0 35%; }
+      .calculator-block-footer .result-text {
+        font-size: 27px;
+        font-weight: 500;
+        margin: 0;
+        margin-bottom: 20px; }
+      .calculator-block-footer .result-price {
+        color: #3e8e2b;
+        font-size: 33px;
+        font-weight: 500;
+        margin: 0; }
+    .calculator-block-footer-modal {
+      max-width: 35%;
+      flex: 0 0 35%; }
+      .calculator-block-footer-modal a {
+        display: block;
+        width: 275px;
+        height: 70px;
+        text-align: center;
+        line-height: 70px;
+        background: linear-gradient(330deg, #AE3032 26.79%, #D62D45 100%);
+        border-radius: 10px;
+        color: #fff;
+        font-weight: 600; }
+  .calculator-block-title {
+    height: 70px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+    background-color: #3e8e2b;
+    border-radius: 10px 10px 0 0;
+    line-height: 70px;
+    color: #fff; }
+  .calculator-block-descr {
+    border: 1px solid #e1e1e1;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .calculator-block-descr .button-reset {
+      padding: 20px;
+      border: 1px solid #000;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: 600;
+      display: inline-block; }
+      .calculator-block-descr .button-reset-wrap {
+        max-width: 35%;
+        flex: 0 0 35%; }
+    .calculator-block-descr-delivery {
+      max-width: 35%;
+      flex: 0 0 35%; }
+      .calculator-block-descr-delivery h3 {
+        font-size: 13px;
+        font-weight: 600;
+        margin: 0; }
+      .calculator-block-descr-delivery p {
+        font-size: 13px;
+        font-weight: 400;
+        margin: 0; }
+
+.container_calculator {
+  background-color: #d8e8d5;
+  padding: 10px 20px;
+  border-radius: 10px; }
+  .container_calculator .checkbox {
+    display: flex;
+    margin-bottom: 10px; }
+    .container_calculator .checkbox label {
+      max-width: 65%;
+      flex: 0 0 65%; }
+    .container_calculator .checkbox input {
+      max-width: 5%;
+      flex: 0 0 5%; }
+    .container_calculator .checkbox .price {
+      max-width: 30%;
+      flex: 0 0 30%;
+      display: flex; }
+      .container_calculator .checkbox .price .count_scope {
+        max-width: 50%;
+        flex: 0 0 50%; }
+        .container_calculator .checkbox .price .count_scope .count {
+          display: inline-block;
+          width: 30px;
+          text-align: center; }
+      .container_calculator .checkbox .price .price_calc {
+        max-width: 50%;
+        flex: 0 0 50%;
+        text-align: center; }
+
+.checkbox label {
+  position: relative; }
+.checkbox input[type="checkbox"] {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer; }
+.checkbox label::before {
+  content: "";
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 1px solid #333;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 15px; }
+
+.block-three-wrap {
+  max-width: 1260px;
+  padding: 0 15px;
+  margin: auto; }
+.block-three-item {
+  display: flex;
+  justify-content: space-between; }
+  .block-three-item-img {
+    max-width: 47%;
+    flex: 0 0 47%; }
+    .block-three-item-img img {
+      max-width: 100%; }
+  .block-three-item-text {
+    max-width: 47%;
+    flex: 0 0 47%;
+    display: flex;
+    align-items: center; }
+    .block-three-item-text-sale {
+      text-transform: uppercase;
+      border: 1px solid #006833;
+      color: #006833;
+      font-size: 27px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      display: inline-block; }
+    .block-three-item-text h3 {
+      font-size: 33px;
+      line-height: 40px;
+      text-transform: uppercase; }
+
+.footer-line-wrap {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1260px;
+  padding: 0 15px;
+  margin: auto;
+  align-items: center; }
+  .footer-line-wrap ul {
+    display: flex;
+    margin: 0;
+    padding: 0; }
+    .footer-line-wrap ul li {
+      list-style-type: none;
+      margin-right: 20px;
+      color: #686868; }
+      .footer-line-wrap ul li svg path {
+        fill: #686868; }
+  .footer-line-wrap p {
+    color: #686868; }
 
 @media (max-width: 1280px) {
   .nav-menu {
@@ -327,6 +550,9 @@ footer {
   .nav-wrapper {
     flex-wrap: wrap; } }
 @media (max-width: 993px) {
+  .block-two-img img {
+    margin-top: 0; }
+
   .header-nav {
     order: 1;
     max-width: 100%;
@@ -339,8 +565,35 @@ footer {
     flex-wrap: wrap; } }
 @media (max-width: 756px) {
   .header-map {
-    display: none; } }
+    display: none; }
+
+  .block-two-text, .block-two-img {
+    max-width: 100%;
+    flex: 0 0 100%; }
+
+  .block-three-item {
+    flex-wrap: wrap; }
+    .block-three-item .block-three-item-img, .block-three-item .block-three-item-text {
+      max-width: 100%;
+      flex: 0 0 100%; } }
 @media (max-width: 558px) {
+  .block-two {
+    padding-top: 20px; }
+
+  .calculator-block-footer {
+    flex-wrap: wrap; }
+    .calculator-block-footer .result, .calculator-block-footer .calculator-block-footer-modal {
+      max-width: 100%;
+      flex: 0 0 100%; }
+    .calculator-block-footer .result {
+      text-align: center; }
+    .calculator-block-footer .calculator-block-footer-modal a {
+      margin: auto;
+      margin-top: 30px; }
+
+  .header-callback {
+    text-align: center; }
+
   .header-logo, .header-social, .header-callback {
     max-width: 100%;
     flex: 0 0 100%; }
@@ -358,7 +611,7 @@ footer {
     max-width: 200px;
     margin-left: auto;
     margin-right: auto; } }
-@media (max-width: 720px) {
+@media (max-width: 520px) {
   .nav-wrapper {
     justify-content: center; }
 
@@ -418,7 +671,35 @@ footer {
       position: absolute; }
 
   .footer-wrap {
-    flex-wrap: wrap; } }
+    flex-wrap: wrap; }
+
+  .container_calculator .checkbox {
+    flex-wrap: wrap; }
+
+  .container_calculator .checkbox label {
+    max-width: 100%;
+    flex: 0 0 100%; }
+
+  .container_calculator .checkbox .price {
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin-top: 10px;
+    margin-bottom: 20px; }
+
+  .calculator-block-descr .button-reset-wrap {
+    max-width: 100%;
+    flex: 0 0 100%; }
+
+  .calculator-block-descr {
+    flex-wrap: wrap;
+    text-align: center; }
+
+  .button-reset-wrap {
+    margin-bottom: 30px; }
+
+  .calculator-block-descr-delivery {
+    max-width: 100%;
+    flex: 0 0 100%; } }
 @media (max-width: 400px) {
   .block-one-text h1 {
     font-size: 28px; }
@@ -462,6 +743,13 @@ footer {
     text-align: center; }
 
   .footer-menu {
-    text-align: center; } }
+    text-align: center; }
+
+  .footer-line-wrap {
+    display: block;
+    margin-top: 20px; }
+
+  .block-three-item-text-sale {
+    font-size: 20px; } }
 
 /*# sourceMappingURL=main.css.map */

@@ -9,6 +9,8 @@
 	.nav-wrapper
 		flex-wrap: wrap
 @media (max-width: 993px)
+	.block-two-img img
+		margin-top: 0
 	.header-nav
 		order: 1
 		max-width: 100%
@@ -24,7 +26,33 @@
 	.header-map
 		display: none
 
+	.block-two-text, .block-two-img
+		max-width: 100%
+		flex: 0 0 100%
+
+	.block-three-item
+		flex-wrap: wrap
+		.block-three-item-img, .block-three-item-text
+			max-width: 100%
+			flex: 0 0 100%
+
 @media (max-width: 558px)
+	.block-two
+		padding-top: 20px
+	.calculator-block-footer
+		flex-wrap: wrap
+		.result, .calculator-block-footer-modal
+			max-width: 100%
+			flex: 0 0 100%
+		.result
+			text-align: center
+		.calculator-block-footer-modal
+			a
+				margin: auto
+				margin-top: 30px
+
+	.header-callback
+		text-align: center
 	.header
 		&-logo, &-social, &-callback
 			max-width: 100%
@@ -45,7 +73,7 @@
 				margin-left: auto
 				margin-right: auto
 
-@media (max-width: 720px)
+@media (max-width: 520px)
 	.nav-wrapper
 		justify-content: center
 	.nav-search, .nav-user
@@ -97,6 +125,34 @@
 	.footer-wrap
 		flex-wrap: wrap
 
+	.container_calculator .checkbox
+		flex-wrap: wrap
+
+	.container_calculator .checkbox label
+		max-width: 100%
+		flex: 0 0 100%
+
+	.container_calculator .checkbox .price
+		max-width: 100%
+		flex: 0 0 100%
+		margin-top: 10px
+		margin-bottom: 20px
+
+	.calculator-block-descr .button-reset-wrap
+		max-width: 100%
+		flex: 0 0 100%
+
+	.calculator-block-descr
+		flex-wrap: wrap
+		text-align: center
+
+	.button-reset-wrap
+		margin-bottom: 30px
+
+	.calculator-block-descr-delivery
+		max-width: 100%
+		flex: 0 0 100%
+
 @media (max-width: 400px)
 	.block-one-text h1
 		font-size: 28px
@@ -137,3 +193,10 @@
 
 	.footer-menu
 		text-align: center
+
+	.footer-line-wrap
+		display: block
+		margin-top: 20px
+
+	.block-three-item-text-sale
+		font-size: 20px

@@ -1,0 +1,17 @@
+div[id^="gallery-container"] {
+    /*overflow: hidden;*/
+}
+
+div[id^="gallery-container"] .item, .scroll_block_item .item {
+    float: left;
+    margin: 3px;
+    border: 0;
+    box-sizing: content-box;
+    overflow: hidden;
+    position: relative;
+}
+
+div[id^="gallery-container"] .item img, .scroll_block_item .item img {
+    width: auto;
+    height: 100%;
+}
