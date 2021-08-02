@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="font/stylesheet.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<title>Document</title>
+</head>
+<body>
+	<div class="bg-gradient">
+		<header class="site-header">
+			<div class="site-header-wrap">
+				<div class="site-header-menu">
+					<ul>
+						<li>
+							<a href="#">
+								Каталог
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Доставка
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Отзывы
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								Контакты
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="site-header-logo">
+					<a href="/">
+						<img src="img/logo.png" alt="">
+					</a>
+				</div>
+				<div class="site-header-social">
+					<div class="site-header-social-map">
+						<img src="img/map.png" alt="">
+						ул.Минина 14
+					</div>
+					<div class="site-header-social-phone">
+						<div class="site-header-social-phone-link">
+							<a href="tel:79991000000">
+								<img src="img/phone.png" alt="">
+								8 999 100-00-00
+							</a>
+						</div>
+						<div class="site-header-social-phone-button">
+							Заказать звонок
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<nav class="site-nav">
+			<div class="site-nav-wrap">
+				<div class="site-nav-menu">
+					<ul>
+						<li>
+							<a href="#">HQD</a>
+						</li>
+						<li>
+							<a href="#">Masking</a>
+						</li>
+						<li>
+							<a href="#">Puff bar</a>
+						</li>
+						<li>
+							<a href="#">IPLAY</a>
+						</li>
+						<li>
+							<a href="#">Easy Smoke</a>
+						</li>
+					</ul>
+				</div>
+				<div class="site-nav-search">
+					<form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ) ?>" >
+						<input type="text" value="" placeholder="Поиск по названию" name="s" id="s" />
+						<button type="submit" id="searchsubmit">
+							<img src="img/search.png" alt="">
+						</button>
+					</form>
+				</div>
+				<div class="site-nav-cart">
+					<a href="#">
+						<span>Корзина</span>
+						<img src="img/cart.png" alt="">
+						<div class="site-nav-cart-num">1</div>
+					</a>
+				</div>
+			</div>
+		</nav>
+		<div class="site-slider">
+			<div class="site-slider-wrap">
+				<div class="site-slider-item site-slider-item-visible site-slider-item-1">
+					<div class="site-slider-item-block">
+						<div class="site-slider-item-block-text">
+							<h1>POD-систему <span>бесплатно</span> надо?</h1>
+							<p>HQD на 300 затяжек в подарок при прокупке трех любых. <br>
+							При заказе онлайн - бесплатная доставка от 2000 рублей. </p>
+							<a href="#">Заказать</a>
+						</div>
+						<div class="site-slider-item-block-social">
+							<ul>
+								<li>
+									<a href="#">
+										<img src="img/inst.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="img/vk.png" alt="">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="site-slider-item-img">
+						<img src="img/slide.png" alt="">
+					</div>
+				</div>
+				<div class="site-slider-item site-slider-item-2">
+					<div class="site-slider-item-block">
+						<div class="site-slider-item-block-text">
+							<h1>POD-систему <span>бесплатно</span> надо?</h1>
+							<p>HQD на 300 затяжек в подарок при прокупке трех любых. <br>
+							При заказе онлайн - бесплатная доставка от 2000 рублей. </p>
+							<a href="#">Заказать</a>
+						</div>
+						<div class="site-slider-item-block-social">
+							<ul>
+								<li>
+									<a href="#">
+										<img src="img/inst.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="img/vk.png" alt="">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="site-slider-item-img">
+						<img src="img/slide.png" alt="">
+					</div>
+				</div>
+				<div class="site-slider-item site-slider-item-3">
+					<div class="site-slider-item-block">
+						<div class="site-slider-item-block-text">
+							<h1>POD-систему <span>бесплатно</span> надо?</h1>
+							<p>HQD на 300 затяжек в подарок при прокупке трех любых. <br>
+							При заказе онлайн - бесплатная доставка от 2000 рублей. </p>
+							<a href="#">Заказать</a>
+						</div>
+						<div class="site-slider-item-block-social">
+							<ul>
+								<li>
+									<a href="#">
+										<img src="img/inst.png" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="img/vk.png" alt="">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="site-slider-item-img">
+						<img src="img/slide.png" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="site-slider-nav">
+				<ul>
+					<li class="active" data-slider="site-slider-item-1"></li>
+					<li data-slider="site-slider-item-2"></li>
+					<li data-slider="site-slider-item-3"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="delivery">
+		<h2>доставим за 60 минут</h2>
+		<div class="delivery-wrap">
+			<div class="delivery-text">
+				<h3>Доставляем по нижнему новгороду прямо в руки</h3>
+				<p>
+					<span>Бесплатная доставка:</span> закажи на сумму от 2000 рублей, и мы доставим в любой район города. 
+				</p>
+				<p>
+					<span>Время доставки:</span> зависит от района, в который необходима доставка, обычно занимает от 30 до 60 минут. 
+
+				</p>
+				<p>
+					<span>Дополнительные условия:</span> при покупке четырех Pod-систем - доставка бесплатная (не зависимо от суммы). 
+				</p>
+				<div class="delivery-text-wrap">
+					<div class="delivery-text-wrap-item">
+						<img src="img/delivery1.png" alt="">
+					</div>
+					<div class="delivery-text-wrap-item">
+						<img src="img/delivery2.png" alt="">
+					</div>
+					<div class="delivery-text-wrap-item">
+						<img src="img/delivery3.png" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="delivery-img">
+				<img src="img/delivery.png" alt="">
+			</div>
+		</div>
+	</div>
+
+	<div class="reviews">
+		<h2>Спасибо вам за отзывы</h2>
+		<p>
+			Нажмите на фото
+		</p>
+		<div class="reviews-wrap">
+			<div class="reviews-inner">
+				<div class="reviews-item" style="background-image: url(img/rev.png);">
+					<div class="reviews-item-modal">
+						<img src="img/inst.jpg" alt="">
+					</div>
+				</div>
+				<div class="reviews-item" style="background-image: url(img/rev.png);">
+					<div class="reviews-item-modal">
+						<img src="img/inst.jpg" alt="">
+					</div>
+				</div>
+				<div class="reviews-item" style="background-image: url(img/rev.png);">
+					<div class="reviews-item-modal">
+						<img src="img/inst.jpg" alt="">
+					</div>
+				</div>
+				<div class="reviews-item" style="background-image: url(img/rev.png);">
+					<div class="reviews-item-modal">
+						<img src="img/inst.jpg" alt="">
+					</div>
+				</div>
+				<div class="reviews-item" style="background-image: url(img/rev.png);">
+					<div class="reviews-item-modal">
+						<img src="img/inst.jpg" alt="">
+					</div>
+				</div>
+				<div class="reviews-item" style="background-image: url(img/rev.png);">
+					<div class="reviews-item-modal">
+						<img src="img/inst.jpg" alt="">
+					</div>
+				</div>
+				<div class="reviews-item" style="background-image: url(img/rev.png);">
+					<div class="reviews-item-modal">
+						<img src="img/inst.jpg" alt="">
+					</div>
+				</div>
+				<div class="reviews-item" style="background-image: url(img/rev.png);">
+					<div class="reviews-item-modal">
+						<img src="img/inst.jpg" alt="">
+					</div>
+				</div>
+				<div class="reviews-item" style="background-image: url(img/rev.png);">
+					<div class="reviews-item-modal">
+						<img src="img/inst.jpg" alt="">
+					</div>
+				</div>
+				<div class="reviews-item" style="background-image: url(img/rev.png);">
+					<div class="reviews-item-modal">
+						<img src="img/inst.jpg" alt="">
+					</div>
+				</div>
+				<div class="reviews-item" style="background-image: url(img/rev.png);">
+					<div class="reviews-item-modal">
+						<img src="img/inst.jpg" alt="">
+					</div>
+				</div>
+				<div class="reviews-item" style="background-image: url(img/rev.png);">
+					<div class="reviews-item-modal">
+						<img src="img/inst.jpg" alt="">
+					</div>
+				</div>
+				<div class="reviews-item" style="background-image: url(img/rev.png);">
+					<div class="reviews-item-modal">
+						<img src="img/inst.jpg" alt="">
+					</div>
+				</div>
+				<div class="reviews-item" style="background-image: url(img/rev.png);">
+					<div class="reviews-item-modal">
+						<img src="img/inst.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="reviews-wrap-link">
+			<a href="#">
+				Перейти в каталог
+			</a>
+		</div>
+	</div>
+
+	<div class="callback">
+		<h2>Как с нами связаться</h2>
+		<div class="callback-wrap">
+			<div class="callback-contacts">
+				<h3>Контакты:</h3>
+				<ul>
+					<li>
+						<span>Телефон: </span><a href="tel:79992224040">8 999 222-40-40</a>
+					</li>
+					<li>
+						<span>E-mail: </span>parkur@gmail.com
+					</li>
+					<li>
+						<span>Instagram: </span>@parkur
+					</li>
+					<li>
+						<span>VK: </span>@parkur
+					</li>
+				</ul>
+				<ul class="callback-contacts-social">
+					<li>
+						<a href="#">
+							<img src="img/inst1.png" alt="">
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<img src="img/vk1.png" alt="">
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="callback-form">
+				<h3>мы перезвоним</h3>
+				<form>
+					<input type="text" name="name" placeholder="Как вас зовут">
+					<input type="tel" name="phone" placeholder="Ваш номер телефона">
+					<button type="submit">
+						Заказать звонок
+					</button>
+				</form>
+			</div>
+			<div class="callback-map">
+				<h3>Наше расположение:</h3>
+				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A254f209ed6ac8765fce5ca72a613ab216b0510860dffe33d94271ea9e9ce8303&amp;source=constructor" width="100%" height="280" frameborder="0"></iframe>
+			</div>
+		</div>
+	</div>
+
+	<footer class="site-footer">
+		<div class="site-footer-wrap">
+			<div class="site-footer-logo">
+				<img src="img/logo-footer.png" alt="">
+			</div>
+			<div class="site-footer-menu">
+				<ul>
+					<li>
+						<a href="#">
+							Каталог
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Доставка
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Отзывы
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Контакты
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="site-footer-mnu">
+				<a href="#">HQD</a>
+				<ul>
+					<li>
+						<a href="#">300 затяжек</a>
+					</li>
+					<li>
+						<a href="#">1200 затяжек</a>
+					</li>
+					<li>
+						<a href="#">1600 затяжек</a>
+					</li>
+					<li>
+						<a href="#">2000 затяжек</a>
+					</li>
+				</ul>
+			</div>
+			<div class="site-footer-mnu">
+				<a href="#">Masking</a>
+				<ul>
+					<li>
+						<a href="#">300 затяжек</a>
+					</li>
+					<li>
+						<a href="#">1200 затяжек</a>
+					</li>
+					<li>
+						<a href="#">1600 затяжек</a>
+					</li>
+					<li>
+						<a href="#">2000 затяжек</a>
+					</li>
+				</ul>
+			</div>
+			<div class="site-footer-mnu">
+				<a href="#">Puff bar</a>
+				<ul>
+					<li>
+						<a href="#">300 затяжек</a>
+					</li>
+					<li>
+						<a href="#">1200 затяжек</a>
+					</li>
+					<li>
+						<a href="#">1600 затяжек</a>
+					</li>
+					<li>
+						<a href="#">2000 затяжек</a>
+					</li>
+				</ul>
+			</div>
+			<div class="site-footer-mnu">
+				<a href="#">IPLAY</a>
+				<ul>
+					<li>
+						<a href="#">300 затяжек</a>
+					</li>
+					<li>
+						<a href="#">1200 затяжек</a>
+					</li>
+					<li>
+						<a href="#">1600 затяжек</a>
+					</li>
+					<li>
+						<a href="#">2000 затяжек</a>
+					</li>
+				</ul>
+			</div>
+			<div class="site-footer-mnu">
+				<a href="#">Easy Smoke</a>
+				<ul>
+					<li>
+						<a href="#">300 затяжек</a>
+					</li>
+					<li>
+						<a href="#">1200 затяжек</a>
+					</li>
+					<li>
+						<a href="#">1600 затяжек</a>
+					</li>
+					<li>
+						<a href="#">2000 затяжек</a>
+					</li>
+				</ul>
+			</div>
+			<div class="site-footer-social">
+				<div class="site-footer-social-map">
+					<a href="#">
+						<img src="img/map.png" alt="">
+						ул.Минина 14
+					</a>
+				</div>
+				<div class="site-footer-social-map">
+					<a href="#">
+						<img src="img/map.png" alt="">
+						10:00 - 24:00 <br>
+						без выходных
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="overlay"></div>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script>
+		$('.reviews-item').click(function(){
+			$(this).find('.reviews-item-modal').fadeIn();
+			$('.overlay').fadeIn();
+		});
+		$('.overlay').click(function(){
+			$('.overlay, .reviews-item-modal').fadeOut();
+		});
+		$('.site-slider-nav ul li').click(function(){
+			var slide = $(this).data('slider');
+			$('.site-slider-nav ul li').removeClass('active');
+			$(this).addClass('active');
+			$('.site-slider-item').removeClass('site-slider-item-visible');
+			$('.'+slide).addClass('site-slider-item-visible');
+		});
+	</script>
+
+</body>
+</html>

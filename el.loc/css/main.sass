@@ -1,0 +1,549 @@
+body
+	margin: 0
+	padding: 0
+	font-family: "Museo Sans Cyrl 500"
+
+.bg-gradient
+	background: linear-gradient(330deg, #C6FFDD 26.79%, #FBD786 63.4%, #F7797D 100%)
+
+ul
+	margin: 0
+	padding: 0
+
+.site
+	&-footer
+		background-color: #4f4f4f
+		padding: 100px 0
+		margin-top: 100px
+		ul
+			li
+				list-style-type: none
+				margin-bottom: 10px
+		a
+			color: #fff
+			text-decoration: none
+			transition: all .3s ease
+			border-bottom: 1px solid transparent
+			&:hover
+				border-bottom: 1px solid #fff
+				transition: all .3s ease
+		&-social
+			&-map
+				margin-bottom: 15px
+				a
+					display: flex
+					align-items: center
+					font-family: "Museo Sans Cyrl 100"
+					img
+						margin-right: 15px
+		&-wrap
+			max-width: 1230px
+			padding: 0 15px
+			display: flex
+			justify-content: space-between
+			margin: auto
+		&-mnu
+			> a
+				margin-bottom: 10px
+				display: inline-block
+			ul
+				li
+					a
+						font-family: "Museo Sans Cyrl 100"
+	&-slider
+		max-width: 1230px
+		padding: 0 15px
+		margin: auto
+		&-nav
+			ul
+				display: flex
+				align-items: center
+				justify-content: center
+				padding-top: 45px
+				padding-bottom: 30px
+				li
+					width: 14px
+					height: 14px
+					border-radius: 100px
+					background-color: #fff
+					list-style-type: none
+					margin: 0 4px
+					cursor: pointer
+				.active
+					background-color: #efa157
+		&-wrap
+			padding-top: 20px
+		&-item
+			display: flex
+			display: none
+			&-visible
+				display: flex
+			&-block
+				max-width: 50%
+				flex: 0 0 50%
+				display: flex
+				justify-content: space-between
+				flex-direction: column
+				padding-top: 90px
+				&-text
+					h1
+						font-size: 30px
+						line-height: 45px
+						color: #fff
+						text-transform: uppercase
+						font-family: "Museo Sans Cyrl 900"
+						span
+							color: #f95302
+					p
+						color: #fff
+						margin-bottom: 35px
+					a
+						width: 210px
+						height: 50px
+						font-family: "Museo Sans Cyrl 900"
+						border-radius: 20px
+						background-color: #6349ff
+						color: #fff
+						display: block
+						line-height: 50px
+						text-decoration: none
+						text-align: center
+						transition: box-shadow .3s ease
+						&:hover
+							box-shadow: 0 0 10px 1px #6349ff
+							transition: box-shadow .3s ease
+				&-social
+					ul
+						display: flex
+						align-items: center
+						li
+							list-style-type: none
+							margin-right: 20px
+			&-img
+				max-width: 50%
+				flex: 0 0 50%
+				text-align: center
+				img
+					max-width: 100%
+	&-nav
+		background-color: #fff
+		padding: 20px 0
+		&-cart
+			display: flex
+			justify-content: flex-end
+			max-width: 20%
+			flex: 0 0 20%
+			position: relative
+			&-num
+				position: absolute
+				font-size: 9px
+				color: #fff
+				background-color: #ff3f3f
+				border-radius: 100px
+				padding: 3px
+				right: -10px
+				top: -5px
+				max-width: 14px
+				width: 100%
+				text-align: center
+			a
+				display: flex
+				text-decoration: none
+				color: #7c0303
+				span
+					display: block
+					border-right: 1px solid #bd8181
+					padding: 0 10px
+					margin-right: 10px
+
+		&-search
+			max-width: 40%
+			flex: 0 0 40%
+			form
+				max-width: 375px
+				width: 100%
+				margin: auto
+				margin-right: 0
+				position: relative
+				input
+					width: calc(100% - 40px)
+					height: 25px
+					box-shadow: 0px 0px 6.324px rgba(#000000, .5)
+					border-radius: 10px
+					border: 0
+					padding: 0 20px
+					line-height: 25px
+					font-size: 13px
+					outline: 0
+					&::placeholder
+						color: rgab(#010101, .6)
+				button
+					position: absolute
+					right: 20px
+					top: 50%
+					transform: translateY(-50%)
+					background-color: transparent
+					outline: 0
+					border: 0
+					box-shadow: 0 0 0 0 transparent
+					cursor: pointer
+					img
+						vertical-align: bottom
+		&-wrap
+			display: flex
+			flex-wrap: wrap
+			max-width: 1230px
+			padding: 0 15px
+			margin: auto
+		&-menu
+			max-width: 40%
+			flex: 0 0 40%
+			ul
+				margin: 0
+				padding: 0
+				display: flex
+				align-items: center
+				justify-content: space-around
+				height: 100%
+				li
+					list-style-type: none
+					a
+						text-decoration: none
+						color: #7c0303
+						font-size: 16px
+						font-weight: 500
+						transition: all .3s ease
+						&:hover, &:active
+							border-bottom: 1px solid #7c0303
+							transition: all .3s ease
+	&-header
+		padding: 30px 0
+		&-wrap
+			display: flex
+			flex-wrap: wrap
+			max-width: 1230px
+			padding: 0 15px
+			margin: auto
+		&-social
+			max-width: 40%
+			flex: 0 0 40%
+			display: flex
+			justify-content: space-between
+			&-phone
+				max-width: 170px
+				flex: 0 0 170px
+				&-link
+					a
+						display: flex
+						align-items: center
+						justify-content: space-between
+						text-decoration: none
+						color: #fff
+				&-button
+					text-align: center
+					display: block
+					border: 1px solid #ff3f3f
+					border-radius: 10px
+					font-size: 16px
+					line-height: 25px
+					height: 25px
+					color: #ff3f3f
+					font-weight: 500
+					margin-top: 25px
+					transition: all .3s ease
+					cursor: pointer
+					&:hover, &:active
+						background-color: #ff3f3f
+						color: #fff
+						transition: all .3s ease
+			&-map
+				display: flex
+				color: #fff
+				font-size: 16px
+				align-items: center
+				font-weight: 100
+				img
+					vertical-align: bottom
+					margin-right: 20px
+		&-logo
+			max-width: 20%
+			flex: 0 0 20%
+			text-align: center
+			display: flex
+			align-items: center
+			justify-content: center
+			img
+				vertical-align: bottom
+		&-menu
+			max-width: 40%
+			flex: 0 0 40%
+			ul
+				margin: 0
+				padding: 0
+				display: flex
+				align-items: center
+				justify-content: space-around
+				height: 100%
+				li
+					list-style-type: none
+					a
+						text-decoration: none
+						color: #fff
+						font-size: 16px
+						font-weight: 500
+						transition: all .3s ease
+						&:hover, &:active
+							border-bottom: 1px solid #fff
+							transition: all .3s ease
+
+.delivery
+	max-width: 1230px
+	margin: auto
+	padding: 0 15px
+	h2
+		text-align: center
+		color: #7c0303
+		font-family: "Museo Sans Cyrl 900"
+		text-transform: uppercase
+		font-size: 25px
+		margin-bottom: 60px
+	&-wrap
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&-text
+		max-width: 48%
+		flex: 0 0 48%
+		color: #7c0303
+		h3
+			font-family: "Museo Sans Cyrl 900"
+			text-transform: uppercase
+			font-size: 20px
+			margin-top: 0
+			margin-bottom: 40px
+		p
+			font-size: 18px
+			line-height: 25px
+			margin-bottom: 20px
+			span
+				font-family: "Museo Sans Cyrl 900"
+		&-wrap
+			display: flex
+			justify-content: space-between
+			max-width: 80%
+			margin-top: 50px
+			flex-wrap: wrap
+	&-img
+		max-width: 48%
+		flex: 0 0 48%
+		display: flex
+		align-items: center
+		img
+			max-width: 100%
+			height: auto
+
+.reviews
+	padding: 100px 0 40px
+	background-position: center center
+	background-image: url(../img/bg.svg)
+	background-repeat: no-repeat
+	margin: 80px 0
+	h2
+		text-align: center
+		color: #fff
+		font-size: 27px
+		font-family: "Museo Sans Cyrl 900"
+		text-transform: uppercase
+		margin-bottom: 25px
+	p
+		text-align: center
+		font-family: "Museo Sans Cyrl 100"
+		font-size: 20px
+		color: #fff
+		text-transform: uppercase
+		margin-bottom: 25px
+	&-wrap
+		max-width: 1230px
+		padding: 0 15px
+		margin: auto
+		overflow: hidden
+		overflow-x: scroll
+		&::-webkit-scrollbar 
+			width: 10px /* ширина для вертикального скролла */
+			height: 10px/* высота для горизонтального скролла */
+			background-image: url(../img/line.png)
+			background-size: contain
+			background-repeat: no-repeat
+			background-position: center center
+			padding: 20px
+			border-radius: 3px
+		/* ползунок скроллбара */
+		&::-webkit-scrollbar-thumb 
+			background-color: #fff
+			border-radius: 3px
+			margin-top: -10px
+			transition: all .3s ease
+		&::-webkit-scrollbar-thumb:hover 
+				background-color: #ff3f3f
+				cursor: pointer
+				transition: all .3s ease
+		&::-webkit-scrollbar-button:vertical:start:decrement
+			background: linear-gradient(120deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(240deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(0deg, #02141a 30%, rgba(0, 0, 0, 0) 31%)
+			background-color: #f6f8f4
+			display: none
+		&::-webkit-scrollbar-button:vertical:end:increment 
+			background: linear-gradient(300deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(60deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(180deg, #02141a 30%, rgba(0, 0, 0, 0) 31%)
+			background-color: #f6f8f4
+			display: none
+		&::-webkit-scrollbar-button:horizontal:start:decrement 
+			background: linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%)
+			background-color: #f6f8f4
+			display: none
+		&::-webkit-scrollbar-button:horizontal:end:increment 
+			background: linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%)
+			background-color: #f6f8f4
+			display: none
+		&-link
+			text-align: center
+			margin-top: 30px
+			a
+				width: 200px
+				height: 50px
+				display: inline-block
+				margin: auto
+				line-height: 50px
+				text-align: center
+				background-color: #6349ff
+				border-radius: 20px
+				transition: box-shadow .3s ease
+				font-family: "Museo Sans Cyrl 900"
+				color: #fff
+				text-decoration: none
+				font-size: 16px
+				letter-spacing: 1.2
+				&:hover
+					box-shadow: 0 0 10px 1px #6349ff
+					transition: box-shadow .3s ease
+	&-inner
+		width: 2432px
+		display: flex
+		flex-wrap: wrap
+	&-item
+		max-width: 270px
+		height: 270px
+		flex: 0 0 270px
+		margin-right: 30px
+		margin-bottom: 30px
+		overflow: hidden
+		background-size: cover
+		border: 2px solid #fff
+		cursor: pointer
+		&-modal
+			position: fixed
+			width: 50%
+			height: 70%
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			text-align: center
+			z-index: 11
+			display: none
+			img
+				max-width: 400px
+				height: auto
+				vertical-align: bottom
+
+.overlay
+	position: fixed
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	background-color: rgba(0, 0, 0, .5)
+	display: none
+
+.callback
+	h2
+		text-align: center
+		text-transform: uppercase
+		font-family: "Museo Sans Cyrl 900"
+		font-size: 27px
+		color: #7c0303
+	&-wrap
+		max-width: 1230px
+		margin: auto
+		display: flex
+		justify-content: space-between
+		padding: 0 15px
+		flex-wrap: wrap
+		h3
+			text-align: center
+			font-size: 20px
+			font-family: "Museo Sans Cyrl 900"
+			text-transform: uppercase
+			color: #7c0303
+			margin-bottom: 40px
+	&-contacts
+		max-width: 210px
+		flex: 0 0 210px
+		ul
+			li
+				list-style-type: none
+				color: #7c0303
+				margin-bottom: 20px
+				a
+					color: #7c0303
+					text-decoration: none
+				span
+					font-family: "Museo Sans Cyrl 900"
+		&-social
+			display: flex
+			margin-top: 40px
+			li
+				margin-bottom: 0
+				margin-right: 20px
+	&-form
+		max-width: 370px
+		flex: 0 0 370px
+		form
+			input
+				display: block
+				width: calc(100% - 40px)
+				padding: 0
+				margin: 0
+				border: 0
+				height: 50px
+				line-height: 50px
+				padding: 0 20px
+				box-shadow: 0 2px 10px 1px rgba(#FF0012, .2)
+				border-radius: 20px
+				margin-bottom: 20px
+				outline: 0
+				font-family: "Museo Sans Cyrl 500"
+				font-size: 16px
+				&::placeholder
+					font-family: "Museo Sans Cyrl 500"
+			button
+				width: 100%
+				height: 50px
+				border-radius: 20px
+				outline: none
+				box-shadow: 0 0 0 0 transparent
+				background-color: transparent
+				border: 1px solid #ff3f3f
+				font-size: 16px
+				font-family: "Museo Sans Cyrl 900"
+				color: #ff3f3f
+				cursor: pointer
+				transition: all .3s ease
+				&:hover
+					background-color: #ff3f3f
+					color: #fff
+					transition: all .3s ease
+	&-map
+		max-width: 470px
+		flex: 0 0 470px
+		iframe
+			border-radius: 20px
+
+@import "_media.sass"
