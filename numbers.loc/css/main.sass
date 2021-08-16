@@ -1,0 +1,620 @@
+body
+	margin: 0
+	padding: 0
+	font-family: 'Inter', sans-serif
+
+.site-header
+	padding: 30px 0
+	&-hum
+		margin-left: 20px
+		display: none
+	&-wrap
+		display: flex
+		max-width: 1230px
+		padding: 0 15px
+		margin: auto
+		justify-content: space-between
+	&-lang
+		display: flex
+		align-items: center
+		margin-right: 30px
+		font-style: normal
+		font-weight: 600
+		font-size: 16px
+		line-height: 32px
+		color: #1C1B17
+		svg
+			margin-left: 5px
+	&-log
+		display: flex
+		align-items: center
+		padding: 0 30px
+		font-style: normal
+		font-weight: 600
+		font-size: 16px
+		line-height: 32px
+		color: #1C1B17
+		border-left: 2px solid #8F8F8F
+		border-right: 2px solid #8F8F8F
+		height: 15px
+		svg
+			margin-right: 10px
+	&-sign
+		display: flex
+		align-items: center
+		margin-left: 30px
+		font-style: normal
+		font-weight: 600
+		font-size: 16px
+		line-height: 32px
+		color: #1C1B17
+		svg
+			margin-right: 10px
+	&-item
+		max-width: 67%
+		flex: 0 0 67%
+		display: flex
+	&-form
+		max-width: calc(33% - 30px)
+		margin-left: 30px
+		flex: 0 0 calc(33% - 30px)
+		display: flex
+		justify-content: flex-end
+		align-items: center
+	&-logo
+		max-width: 190px
+		flex: 0 0 190px
+		margin-right: 20px
+	&-menu
+		display: flex
+		align-items: center
+		&-item
+			margin-right: 30px
+			a
+				text-decoration: none
+				color: #8f8f8f
+				font-weight: normal
+				font-size: 16px
+				line-height: 32px
+				transition: color .3s ease
+				&:hover, &:active
+					color: darken(#8f8f8f, 10%)
+					transition: color .3s ease
+
+.site-main
+	margin-bottom: 35px
+	.num-block
+		width: 230px
+		background-color: rgba(#fff, .95)
+		backdrop-filter: blur(10px)
+		position: absolute
+		bottom: 30px
+		right: 25px
+		border-radius: 10px
+		padding: 13px 10px
+	.num-text
+		font-weight: 400
+		font-size: 11px
+		line-height: 13px
+		color: #1C1B17
+		margin-top: 8px
+		span
+			font-weight: 700
+	&-wrap
+		max-width: 1230px
+		padding: 0 15px
+		margin: auto
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	&-download
+		max-width: calc(33% - 90px)
+		flex: 0 0 calc(33% - 90px)
+		margin-left: 30px
+		padding: 30px
+		background-color: #F18B29
+		background-image: url(../img/iphone.png)
+		background-repeat: no-repeat
+		background-position: bottom right
+		height: 373px
+		a
+			display: block
+			margin-bottom: 5px
+		p
+			margin: 0
+			font-weight: bold
+			font-size: 14px
+			line-height: 32px
+			color: #FFFFFF
+		h2
+			margin: 10px 0 15px
+			font-weight: bold
+			font-size: 32px
+			line-height: 39px
+			color: #FFFFFF
+	&-item
+		max-width: 67%
+		flex: 0 0 67%
+	&-banner
+		position: relative
+		margin-top: 25px
+		&-img
+			svg, img
+				width: 100%
+				vertical-align: bottom
+			&-2
+				display: none
+		&-text
+			position: absolute
+			top: 0
+			left: 0
+			width: 60%
+			padding: 25px
+			span
+				font-weight: bold
+				font-size: 14px
+				line-height: 32px
+				text-align: center
+				color: #FFFFFF
+			h1
+				font-weight: bold
+				font-size: 42px
+				line-height: 51px
+				color: #FFFFFF
+				margin: 12px 0
+			p
+				font-weight: 500
+				font-size: 16px
+				line-height: 155.3%
+				color: #FFFFFF
+				margin: 0
+				margin-bottom: 12px
+			a
+				display: inline-block
+				width: 215px
+				height: 50px
+				text-align: center
+				line-height: 50px
+				background-color: #292E5B
+				transition: background-color .3s ease
+				font-weight: 600
+				font-size: 16px
+				text-decoration: none
+				color: #FFFFFF
+				&:hover
+					background-color: darken(#292E5B, 10%)
+					transition: background-color .3s ease
+	&-search
+		position: relative
+		&-svg
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: 15px
+			display: flex
+			align-items: center
+			svg
+				margin-right: 15px
+		form
+			display: flex
+			input
+				max-width: calc(80% - 165px)
+				flex: 0 0 calc(80% - 165px)
+				height: 50px
+				border: 0
+				outline: 0
+				padding: 0
+				padding-left: 115px
+				padding-right: 50px
+				background-color: rgba(#292E5B, .1)
+				font-weight: normal
+				font-size: 16px
+				line-height: 32px
+				color: darken(#525252, 10%)
+				&::placeholder
+					color: #525252
+			button
+				max-width: 20%
+				flex: 0 0 20%
+				border: 0
+				outline: 0
+				box-shadow: 0
+				cursor: pointer
+				background-color: #292E5B
+				font-weight: 600
+				font-size: 16px
+				line-height: 32px
+				color: #FFFFFF
+				font-family: 'Inter', sans-serif
+				transition: background-color .3s ease
+				&:hover
+					background-color: darken(#292E5B, 10%)
+					transition: background-color .3s ease
+				svg
+					display: none
+
+.num
+	&-wrap
+		display: flex
+		justify-content: space-between
+	&-item
+		width: 38px
+		height: 47px
+		border: 1.5px solid #292E5B
+		border-radius: 14px
+		display: flex
+		align-items: center
+		font-weight: normal
+		font-size: 27.4656px
+		justify-content: center
+		color: #1C1B17
+
+.search
+	background-color: rgba(#292E5B, .1)
+	padding: 30px 0 70px
+	&-wrap
+		max-width: 1110px
+		padding: 0 15px
+		margin: auto
+		text-align: center
+		h2
+			margin: 0
+			font-weight: bold
+			font-size: 42px
+			line-height: 51px
+			color: #1C1B17
+			margin-bottom: 25px
+		p
+			margin: 0
+			font-weight: 600
+			font-size: 16px
+			line-height: 32px
+			color: #1C1B17
+			margin-bottom: 50px
+		&-btns
+			display: flex
+			max-width: 320px
+			margin: auto
+			justify-content: space-between
+			margin-top: 25px
+		&-btn
+			font-weight: normal
+			font-size: 16px
+			line-height: 20px
+			color: #1C1B17
+			cursor: pointer
+			&-active, &:active
+				color: #1C1B17
+				border-bottom: 1px solid #1C1B17
+				font-weight: 600
+		&-svg
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: 15px
+			display: flex
+			align-items: center
+			svg
+				margin-right: 10px
+		form
+			display: flex
+			width: 100%
+			position: relative
+			input
+				max-width: calc(80% - 165px)
+				flex: 0 0 calc(80% - 165px)
+				height: 50px
+				border: 0
+				outline: 0
+				padding: 0
+				padding-left: 115px
+				padding-right: 50px
+				background-color: #fff
+				font-weight: normal
+				font-size: 16px
+				line-height: 32px
+				color: darken(#525252, 10%)
+				&::placeholder
+					color: #525252
+			button
+				max-width: 20%
+				flex: 0 0 20%
+				border: 0
+				outline: 0
+				box-shadow: 0
+				cursor: pointer
+				background-color: #292E5B
+				font-weight: 600
+				font-size: 16px
+				line-height: 32px
+				color: #FFFFFF
+				font-family: 'Inter', sans-serif
+				transition: background-color .3s ease
+				display: flex
+				align-items: center
+				justify-content: center
+				&:hover
+					background-color: darken(#292E5B, 10%)
+					transition: background-color .3s ease
+
+.status
+	padding: 30px 0 0
+	&-wrap
+		display: flex
+		max-width: 1230px
+		padding: 0 15px
+		margin: auto
+		flex-wrap: wrap
+		justify-content: space-between
+	&-item
+		max-width: calc(23.5% - 70px)
+		flex: 0 0 calc(23.5% - 70px)
+		border: 1px solid #EAEAEF
+		padding: 25px 35px
+		&-button
+			margin-top: 15px
+			a
+				display: block
+				height: 50px
+				line-height: 50px
+				background-color: #292E5B
+				font-weight: 600
+				font-size: 16px
+				text-align: center
+				text-decoration: none
+				color: #FFFFFF
+				transition: background-color .3s ease
+				&:hover
+					background-color: darken(#292E5B, 10%)
+					transition: background-color .3s ease
+		&-price
+			margin: 30px 0
+			span
+				font-size: 16px
+				line-height: 32px
+				color: #1C1B17
+				opacity: 0.5
+			&-num
+				font-weight: bold
+				font-size: 32px
+				color: #0E0F0F
+		&-offer
+			display: flex
+			justify-content: space-between
+			border: 1px solid #FC7720
+			padding: 15px
+			margin-top: 20px
+			&-title
+				color: rgba(#FC7720, .9)
+				font-weight: normal
+				font-size: 16px
+				line-height: 16px
+				margin-bottom: 5px
+			&-text
+				font-size: 16px
+				line-height: 16px
+				color: rgba(#FC7720, .9)
+				span
+					font-weight: 600
+		h3
+			font-weight: 600
+			font-size: 24px
+			line-height: 32px
+			color: #1C1B17
+			margin: 0
+		p
+			font-weight: normal
+			font-size: 16px
+			line-height: 32px
+			color: #525252
+			margin: auto
+			margin-bottom: 20px
+			white-space: nowrap
+		.num-block
+			margin-top: 5px
+		.num-wrap
+			margin: 0 -20px
+		.num-item
+			border-color: #F2F2F2
+
+.site-footer
+	background-color: #1C1B17
+	padding: 20px 0 50px
+	margin-top: 50px
+	&-block
+		display: flex
+		justify-content: space-between
+		padding-top: 25px
+	&-cop
+		color: #fff
+		font-weight: normal
+		font-size: 16px
+	&-menu
+		display: flex
+		&-item
+			margin-left: 40px
+			a
+				color: #fff
+				text-decoration: none
+	&-wrap
+		max-width: 1230px
+		padding: 0 15px
+		margin: auto
+	&-line
+		display: flex
+		padding-bottom: 25px
+		border-bottom: 1px solid rgba(#fff, .1)
+	&-logo
+		margin-right: 20px
+	&-lang
+		display: flex
+		align-items: center
+		color: #fff
+		font-weight: 600
+		font-size: 16px
+		line-height: 32px
+		&-item
+			margin-left: 15px
+			display: flex
+			align-items: center
+			cursor: pointer
+			svg
+				margin-left: 5px
+
+.search-check
+	padding: 20px 0 40px
+	.search-wrap
+		max-width: 1230px
+		padding: 0 15px
+		text-align: left
+	p
+		margin: 0
+		margin-bottom: 5px
+		font-size: 14px
+		font-weight: bold
+	form
+		max-width: 800px
+
+.title-block
+	max-width: 1230px
+	padding: 0 15px
+	margin: auto
+	h2
+		font-weight: bold
+		color: #0E0F0F
+		font-size: 32px
+
+.site-header-menu-close
+	display: none
+
+.suggestions
+	max-width: 1230px
+	padding: 0 15px
+	margin: auto
+	margin-bottom: 15px
+	&-inner
+		display: flex
+		align-items: center
+		margin-bottom: 5px
+		&-text
+			color: #525252
+			font-size: 16px
+			a
+				color: #525252
+				font-size: 16px
+				text-decoration: none
+				border-bottom: 1px solid #525252
+	&-status
+		color: #FC7720
+		text-transform: uppercase
+		display: flex
+		align-items: center
+		margin-right: 10px
+		font-size: 16px
+		font-weight: 600
+		svg
+			margin-right: 10px
+	&-text
+		margin-top: 10px
+		font-weight: normal
+		font-size: 16px
+		line-height: 32px
+		color: #525252
+		a
+			font-weight: bold
+			text-decoration: none
+			color: rgba(14, 15, 15, 1)
+			font-size: 18px
+			border-bottom: 2px solid rgba(14, 15, 15, 1)
+	&-wrap
+		display: flex
+		padding: 35px 80px
+		justify-content: space-between
+		align-items: center
+		border: 1px solid #EAEAEF
+		&-block
+			display: flex
+			align-items: center
+			&-price
+				&-text
+					color: #525252
+					font-size: 16px
+				&-item
+					text-align: right
+					font-size: 32px
+					color: #292E5B
+					span
+						color: #0E0F0F
+						opacity: 0.5
+						font-size: 24px
+						text-decoration: line-through
+						display: inline-block
+						margin-right: 10px
+			&-cart
+				cursor: pointer
+				margin-left: 30px
+				svg
+					transition: .3s ease
+					circle, path
+						transition: .3s ease
+					&:hover
+						circle
+							fill: #292E5B
+							transition: .3s ease
+						path
+							stroke: #fff
+							transition: .3s ease
+		&-form
+			display: flex
+			align-items: center
+			a
+				display: block
+				margin-right: 25px
+				font-weight: normal
+				font-size: 16px
+				line-height: 32px
+				text-decoration: none
+				color: #525252
+			&-button
+				height: 50px
+				width: 220px
+				line-height: 50px
+				text-align: center
+				font-weight: 600
+				font-size: 16px
+				color: #FFFFFF
+				background-color: #292E5B
+				cursor: pointer
+				&:hover
+					background-color: darken(#292E5B, 10%)
+					transition: background-color .3s ease
+		&-line
+			max-width: 60%
+			flex: 0 0 60%
+			&-text
+				font-weight: 600
+				font-size: 24px
+				line-height: 32px
+				color: #1C1B17
+	&-remove
+		margin-right: 20px
+		cursor: pointer
+	&-info
+		display: flex
+		align-items: center
+		.num-block
+			width: 270px
+			margin-right: 20px
+		.num-item
+			border-color: #f2f2f2
+			svg
+				path
+					fill: #292E5B
+	&-active
+		margin: 45px auto
+		.num-item
+			svg
+				path
+					fill: #0E0F0F
+
+@import "_media.sass"
