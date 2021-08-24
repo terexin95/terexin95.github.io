@@ -29,9 +29,11 @@ function btnTouchMove(event) {
 	} else {
 		if (yDiff > 0) {
 			document.querySelector('.search-page__block').classList.add('search-page__block-bottom');
+			document.querySelector('.search-page__map').classList.add('search-page__map--active');
 			document.querySelector('.search-page__block').classList.remove('search-page__block-top');
 		} else {
 			document.querySelector('.search-page__block').classList.add('search-page__block-top');
+			document.querySelector('.search-page__map').classList.remove('search-page__map--active');
 			document.querySelector('.search-page__block').classList.remove('search-page__block-bottom');
 		}
 	}

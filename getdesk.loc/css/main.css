@@ -1247,6 +1247,8 @@ a {
         line-height: 28px; }
   .search-page__map {
     height: 100%; }
+    .search-page__map--active iframe {
+      z-index: 1 !important; }
   .search-page__block {
     position: absolute;
     transition: all 0.3s ease;
@@ -1515,6 +1517,10 @@ input::-webkit-inner-spin-button {
     flex: 0 0 47%;
     margin-bottom: 30px; } }
 @media (max-width: 1300px) {
+  .search-page__map iframe {
+    position: absolute;
+    z-index: -1; }
+
   .search-page--active .search-page__buttons {
     width: calc(100% - 40px); }
 
