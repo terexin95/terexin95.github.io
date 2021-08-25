@@ -6,7 +6,6 @@ body
 	overflow-x: hidden
 	font-family: 'DIN Pro'
 	background-color: #141519
-	max-width: 1920px
 	margin: auto
 
 a
@@ -38,6 +37,14 @@ img
 	display: flex
 	justify-content: space-between
 	align-items: center
+	&__burger, &__close
+		display: none
+		max-width: 40px
+		flex: 0 0 40px
+	&__burger--active
+		display: none
+	&__close--active
+		display: block
 	&__cart
 		a
 			position: relative
@@ -68,6 +75,8 @@ img
 		font-weight: bold
 		font-size: 14px
 		line-height: 17px
+		font-family: 'Montserrat', sans-serif
+		font-weight: bold
 
 .text-header
 	max-width: 1230px
@@ -201,7 +210,6 @@ img
 		color: rgba(#fff, .8)
 
 .rules
-	max-width: 1400px
 	margin: 65px auto 75px
 	display: flex
 	height: 500px
@@ -249,6 +257,7 @@ img
 			text-align: center
 			font-weight: bold
 			text-transform: uppercase
+			border-radius: 5px
 	&__inner
 		max-width: 50%
 		flex: 0 0 50%
@@ -354,6 +363,7 @@ img
 		position: relative
 		z-index: 1
 		flex-wrap: wrap
+		margin-top: 20px
 	&__link
 		font-weight: bold
 		font-size: 16px
@@ -526,11 +536,16 @@ img
 
 .filter
 	display: flex
-	flex-wrap: wrap
 	margin-bottom: 40px
 	margin-top: 10px
+	width: 100%
+	overflow-x: scroll
+	&::-webkit-scrollbar 
+		width: 0px
+		height: 0px
 	&__item
 		height: 45px
+		white-space: nowrap
 		border-radius: 5px
 		line-height: 45px
 		padding: 0 30px
@@ -549,7 +564,6 @@ img
 			transition: all .3s ease
 
 .form-callback
-	max-width: 1400px
 	background-color: $accent
 	padding: 55px 0
 	margin: auto
@@ -825,7 +839,7 @@ input::-webkit-inner-spin-button
 				text-transform: uppercase
 				margin-top: 15px
 			&-num
-				width: 30px
+				width: 32px
 				height: 32px
 				margin: auto
 				border-radius: 100%
@@ -834,6 +848,7 @@ input::-webkit-inner-spin-button
 				line-height: 32px
 				border: 1px solid #ccc
 				text-align: center
+				font-family: 'Montserrat', sans-serif
 				background-color: #FFFFFF
 				color: rgba(#393834, .8)
 				&-active
@@ -856,6 +871,16 @@ input::-webkit-inner-spin-button
 		padding-bottom: 25px
 		border-bottom: 2px solid rgba(#fff, .2)
 		margin-bottom: 20px
+		&-option
+			display: flex
+			align-items: center
+			font-size: 14px
+			color: #fff
+			text-transform: uppercase
+			font-weight: 500
+			margin-bottom: 10px
+			svg
+				margin: 0 8px
 		&:last-child
 			margin-bottom: 0
 			border-bottom: 0
@@ -872,7 +897,7 @@ input::-webkit-inner-spin-button
 			line-height: 23px
 			text-transform: uppercase
 			color: rgba(#fff, .8)
-			margin-bottom: 10px
+			margin-bottom: 5px
 		&-plus, &-minus
 			cursor: pointer
 			flex: 0 0 21px
@@ -925,6 +950,8 @@ input::-webkit-inner-spin-button
 	margin-top: 35px
 	margin-bottom: 25px
 	position: relative
+	&__filter
+		display: none
 	&__nav
 		max-width: 100%
 		flex: 0 0 100%
@@ -957,11 +984,48 @@ input::-webkit-inner-spin-button
 		max-width: calc(25% - 30px)
 		flex: 0 0 calc(25% - 30px)
 		margin-right: 30px
+		&-button
+			display: inline-block
+			margin-top: 25px
+			width: 100%
+			height: 55px
+			line-height: 55px
+			text-align: center
+			border-radius: 4px
+			border: 1px solid $accent
+			transition: all .3s ease
+			font-size: 14px
+			font-weight: bold
+			color: #fff
+			text-transform: uppercase
+			&:hover
+				background-color: $accent
+				transition: all .3s ease
+		&-header
+			display: none
+			justify-content: space-between
+			align-items: center
+			background-color: #2B2B2D
+			height: 60px
+			font-weight: bold
+			font-size: 24px
+			line-height: 30px
+			text-transform: uppercase
+			color: #fff
+			padding: 0 20px
+			margin-bottom: 35px
 	&__inner
 		max-width: 75%
 		flex: 0 0 75%
 		display: flex
 		flex-wrap: wrap
+		.filter
+			margin-top: 0
+			&__item
+				margin-top: 0
+		&-wrap
+			flex-wrap: wrap
+			display: flex
 	&__item
 		max-width: 31.5%
 		flex: 0 0 31.5%
@@ -1153,7 +1217,6 @@ input::-webkit-inner-spin-button
 		display: flex
 		max-width: 900px
 		margin: auto
-		flex-wrap: wrap
 		justify-content: space-between
 		.active
 			color: #fff
@@ -1474,6 +1537,14 @@ input::-webkit-inner-spin-button
 		margin-bottom: 12px
 	&__inner
 		display: flex
+		max-width: calc(100% - 78px)
+		flex: 0 0 calc(100% - 78px)
+		overflow-x: scroll
+		&::-webkit-scrollbar 
+			width: 0px
+			height: 0px
+	&__btns
+		flex: 0 0 48px
 	&__btn
 		width: 48px
 		height: 48px
@@ -1628,3 +1699,84 @@ input::-webkit-inner-spin-button
 		transition: all .3s ease
 		.sort__hidden
 			display: block
+
+.modal-menu
+	position: fixed
+	background-color: #141519
+	top: 105px
+	height: 100%
+	z-index: 11
+	left: 0
+	right: 0
+	bottom: 0
+	display: none
+	&--active
+		display: block
+	&__inner
+		height: 100%
+		overflow-y: scroll
+		&::-webkit-scrollbar 
+			width: 0px
+			height: 0px
+	&__phone
+		font-size: 14px
+		font-weight: bold
+		color: #fff
+		display: block
+		text-align: center
+		margin-bottom: 10px
+	&__email
+		display: block
+		text-align: center
+		color: rgba(#fff, .8)
+		font-size: 14px
+		font-weight: bold
+		margin-bottom: 10px
+	&__social
+		display: flex
+		justify-content: center
+		align-items: center
+		&-item
+			margin: 0 10px
+	&__users
+		border-top: 2px solid rgba(#fff, .2)
+		border-bottom: 2px solid rgba(#fff, .2)
+		padding-top: 15px
+		padding-bottom: 15px
+		display: flex
+		justify-content: center
+	&__user
+		font-family: 'Montserrat', sans-serif
+		font-weight: bold
+		font-size: 16px
+		line-height: 20px
+		display: flex
+		align-items: center
+		margin: 0 15px
+		svg
+			margin-right: 15px
+	&__wrap
+		padding-top: 50px
+		padding-bottom: 50px
+		text-align: center
+		position: relative
+		&::before, &::after
+			content: ""
+			background-color: $accent
+			width: 8px
+			height: 8px
+			border-radius: 100px
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+		&::before
+			top: 22px
+	&__item
+		display: block
+		font-size: 24px
+		line-height: 29px
+		margin-bottom: 30px
+		font-family: 'Montserrat', sans-serif
+		font-weight: bold
+		text-transform: uppercase
+@import "_media.sass"

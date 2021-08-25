@@ -1,0 +1,448 @@
+@media (max-width: 1400px)
+    .slider-page
+        flex-wrap: wrap
+    .slider-header__btns
+        max-width: 100%
+        flex: 0 0 100%
+        margin-top: 30px
+        justify-content: center
+    .slider-page .slider-header__btn-right, .slider-header__btn-left
+        position: inherit !important
+        margin: 0 20px
+@media (max-width: 1000px)
+    .header__user, .header__search
+        display: none
+    .header__inner
+        max-width: 40px
+    .header
+        padding-left: 20px
+        padding-right: 20px
+
+@media (max-width: 993px)
+    .cart__block
+        max-width: calc(100% - 40px)
+        flex: 0 0 calc(100% - 40px)
+    .cart__checkout
+        flex: 0 0 100%
+        max-width: 100%
+        margin-top: 25px
+    .shop
+        margin-top: 20px
+    .shop__filter
+        display: block
+        position: absolute
+        top: 70px
+        right: 0
+        color: #fff
+        display: flex
+        align-items: center
+        &-circle
+            width: 16px
+            height: 16px
+            border-radius: 100%
+            margin-left: 5px
+            background-color: $accent
+            font-size: 10px
+            line-height: 16px
+            text-align: center
+    .sort
+        top: 50px
+        left: 0
+        right: auto
+    .shop__inner .filter
+        margin-bottom: 65px
+    .accordion
+        padding: 0 20px
+    .shop__sidebar-button
+        width: calc(100% - 40px)
+        margin-left: 20px
+        margin-right: 20px
+    .accordion__text-range, .info, .range, .range-remove
+        width: 215px
+        margin-left: auto
+        margin-right: auto
+    .shop__inner
+        max-width: 100%
+        flex: 0 0 100%
+    .shop__sidebar
+        position: fixed
+        display: none
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+        background-color: #141519
+        z-index: 11
+        margin-right: 0
+        flex: 0 0 100%
+        max-width: 100%
+        &--active
+            display: block
+        &-header
+            display: flex
+    .construktor__left
+        max-width: 100%
+        flex: 0 0 100%
+    .construktor__right
+        max-width: 100%
+        flex: 0 0 100%
+    .construktor
+        flex-wrap: wrap
+    .construktor__inner
+        flex-wrap: wrap
+    .construktor__total
+        max-width: 100%
+        flex: 0 0 100%
+    .construktor__button
+        max-width: 100%
+        flex: 0 0 100%
+        margin-top: 10px
+    .tabs__toggle
+        margin-right: 20px
+    .tabs__button-group
+        width: 100%
+        overflow-x: scroll
+        &::-webkit-scrollbar 
+            width: 0px
+            height: 0px
+    .container
+        padding-top: 0
+        padding-bottom: 0
+    .breadcrumbs-theme
+        padding: 10px 20px
+    .single__img
+        max-width: calc(50% - 30px)
+        flex: 0 0 calc(50% - 30px)
+    .single__text
+        max-width: 50%
+        flex: 0 0 50%
+    .single__btns
+        display: none
+    .rules__block
+        max-width: 100%
+        flex: 0 0 100%
+    .rules__inner
+        display: none
+    .new-event__item
+        max-width: 280px
+        flex: 0 0 280px
+        margin-right: 20px
+    .new-event__wrap
+        overflow-x: scroll
+        flex-wrap: nowrap
+        &::-webkit-scrollbar 
+            width: 0px
+            height: 0px
+    .header__burger
+        display: block
+        &--active
+            display: none
+    .sticky
+        background-color: #141519
+    .sticky .header__logo a
+        height: 60px
+    .sticky .header__logo svg mask, .sticky .header__logo svg g
+        display: block
+    .sticky .header__logo svg
+        margin-top: 0
+    .sticky .header__user path, .sticky .header__search path, .sticky .header__cart path
+        stroke: #fff
+    .header__menu
+        display: none
+    .header__logo
+        height: 55px
+        overflow: hidden
+    .text-header
+        text-align: center
+    .text-header__title
+        width: 100%
+        max-width: 100%
+    .slider-header
+        flex-wrap: wrap
+        position: relative
+        padding-bottom: 65px
+    .slider-header__block
+        max-width: 100%
+        flex: 0 0 100%
+        margin-right: 0
+    .slider-header__title
+        
+    .slider-header__btns
+        display: none
+    .slider-header__link
+        position: absolute
+        bottom: 25px
+    .slider-header__wrap
+        overflow-x: scroll
+        &::-webkit-scrollbar 
+            width: 0px
+            height: 0px
+    .shop-home__item
+        max-width: 31.5%
+        flex: 0 0 31.5%
+        margin-right: 2.75%
+    .shop-home__item:nth-child(4n)
+        margin-right: 2.75%
+    .shop-home__item:nth-child(3n)
+        margin-right: 0
+    .footer__logo
+        max-width: 50%
+        flex: 0 0 50%
+    .item-products
+        position: relative
+        padding-bottom: 55px
+    .footer__wrap
+        flex-wrap: wrap
+        padding-left: 20px
+        padding-right: 20px
+    .footer__item
+        max-width: 50%
+        flex: 0 0 50%
+        order: 1
+        margin-bottom: 30px
+        &:last-child
+            order: 0
+    .footer__line
+        flex-wrap: wrap
+    .footer__copy
+        max-width: calc(100% - 60px)
+        flex: 0 0 calc(100% - 60px)
+        padding-left: 30px
+        padding-right: 30px
+        margin-top: 15px
+        margin-bottom: 15px
+        text-align: center
+        margin-right: 0
+    .footer__pay
+        max-width: 100%
+        flex: 0 0 100%
+        justify-content: center
+        margin-bottom: 15px
+    .footer__politic
+        max-width: calc(100% - 60px)
+        flex: 0 0 calc(100% - 60px)
+        padding-left: 30px
+        padding-right: 30px
+        text-align: center
+    .item-products__descr
+        display: none
+    .item-products__img
+        position: initial
+    .item-products__add-cart
+        opacity: 1
+        bottom: 15px
+        width: 130px
+        margin: auto
+        a
+            position: relative
+            font-size: 0
+            &::before
+                content: ''
+                position: absolute
+                width: 13px
+                height: 14px
+                background-image: url(../img/cart.svg)
+                background-size: cover
+                top: 50%
+                transform: translateY(-50%)
+                left: 27px
+            &::after
+                content: 'в корзину'
+                font-size: 12px
+                position: absolute
+                font-weight: bold
+                left: 50px
+
+@media (max-width: 768px)
+    .title
+        font-size: 16px
+        line-height: 20px
+    .slider-page
+        padding-top: 20px
+        padding-left: 0
+    .breadcrumbs__link, .breadcrumbs__span
+        font-size: 9px
+    .single__img-left, .single__img-right
+        display: none
+    .single__img
+        margin-left: -15px
+        max-width: calc(100% + 30px)
+        flex: 0 0 calc(100% + 30px)
+        margin-right: 0
+    .single__img-wrap
+        
+        padding-left: 10px
+        padding-right: 10px
+    .single__images
+        width: 100%
+        overflow-x: scroll
+        &::-webkit-scrollbar 
+            width: 0px
+            height: 0px
+    .single__quantity
+        max-width: 80px
+        flex: 0 0 80px
+        margin-left: 30px
+        margin-right: 0
+    .single__add-to-cart
+        flex-direction: row-reverse
+    .single__button
+        max-width: calc(100% - 110px)
+        flex: 0 0 calc(100% - 110px)
+    .single__text
+        max-width: 100%
+        flex: 0 0 100%
+        margin-right: 0
+        padding-top: 55px
+        position: relative
+        display: flex
+        flex-direction: column
+        .stars
+            position: absolute
+            top: 22px
+            width: 100%
+            .stars__review
+                position: absolute
+                right: 0
+    .single__decription
+        order: 1
+        margin-top: 0
+        border-top: 0px solid #000
+
+
+@media (max-width: 600px)
+    .cart
+        margin-bottom: 50px
+    .table__item
+        max-width: 100%
+        flex: 0 0 100%
+        justify-content: center
+        &:nth-child(2)
+            display: none
+    .cart__button
+        box-shadow: 0px 4px 20px rgba(177, 12, 34, 0.26)
+    .cart__item-title
+        font-size: 14px
+        line-height: 18px
+    .cart__item-img
+        flex: 0 0 78px
+        margin-right: 20px
+        img
+            width: 100%
+    .cart__item
+        position: relative
+        justify-content: flex-start
+    .cart__item-quantity
+        position: absolute
+        right: 0
+        bottom: 20px
+    .cart__item-remove
+        position: absolute
+        top: 0
+        right: 0
+    .cart__item-text
+        max-width: calc(100% - 186px)
+        flex: 0 0 calc(100% - 186px)
+    .shop__item
+        max-width: 48%
+        flex: 0 0 48%
+        margin-right: 4%
+        &:nth-child(2n)
+            margin-right: 0
+    .shop__item:nth-child(3n)
+        margin-right: auto
+    .construkt__btns
+        display: none
+    .construkt__inner
+        max-width: 100%
+        flex: 0 0 100%
+    .construktor__img
+        margin-left: -15px
+        margin-right: -15px
+    .construktor__chosen
+        margin-bottom: 30px
+    .construktor__title, .construktor__chosen-title
+        font-size: 24px
+        line-height: 30px
+    .shop-home__item
+        max-width: 47.5%
+        flex: 0 0 47.5%
+        margin-right: 5%
+    .shop-home__item:nth-child(4n)
+        margin-right: 0
+    .shop-home__item:nth-child(3n)
+        margin-right: 5%
+    .shop-home__item:nth-child(2n)
+        margin-right: 0
+    
+    .form-callback__form
+        flex-wrap: wrap
+    .form-callback__input
+        max-width: calc(100% - 40px)
+        flex: 0 0 calc(100% - 40px)
+        margin-right: 0
+        margin-bottom: 20px
+    .form-callback__button
+        max-width: 100%
+        flex: 0 0 100%
+        height: 45px
+    .shop-home__button a
+        width: 100%
+
+@media (max-width: 450px)
+    .cart__line-border
+        width: 50px
+    .text-header__title h1
+        font-size: 24px
+        line-height: 30px
+    .slider-header__title
+        font-size: 16px
+        line-height: 20px
+        margin-bottom: 18px
+    .rules__title
+        font-size: 32px
+        line-height: 40px
+    .new-event__title
+        font-size: 24px
+        line-height: 30px
+        margin-bottom: 30px
+    .new-event__button a
+        width: 100%
+    .were-play__shadow img
+        height: 500px
+        object-fit: cover
+    .footer__logo
+        position: relative
+        overflow: hidden
+        svg
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+    .item-products__title
+        font-size: 14px
+        line-height: 18px
+
+@media (max-width: 380px)
+    .item-products__inner
+        height: 85px
+    .item-products__add-cart
+        width: calc(100% - 20px)
+        left: 10px
+        right: 10px
+    .item-products__add-cart a::before
+        left: 15px
+    .item-products__add-cart a::after
+        left: 40px
+    .footer__link
+        font-size: 11px
+
+@media (max-width: 370px)
+    .price
+        white-space: nowrap
+    .cart__item-option
+        white-space: nowrap
+    .cart__item-img
+        flex: 0 0 48px
+    .cart__item-text
+        max-width: calc(100% - 156px)
+        flex: 0 0 calc(100% - 156px)
