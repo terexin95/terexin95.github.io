@@ -1674,13 +1674,18 @@ input::-webkit-inner-spin-button {
 .modal-menu {
   position: fixed;
   background-color: #141519;
-  top: 105px;
+  top: 0;
   height: 100%;
-  z-index: 11;
+  z-index: 12;
   left: 0;
   right: 0;
   bottom: 0;
   display: none; }
+  .modal-menu__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; }
   .modal-menu--active {
     display: block; }
   .modal-menu__inner {
@@ -2159,6 +2164,9 @@ input::-webkit-inner-spin-button {
     margin-top: 0;
     border-top: 0px solid #000; } }
 @media (max-width: 600px) {
+  .sticky {
+    position: relative; }
+
   .cart {
     margin-bottom: 50px; }
 

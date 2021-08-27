@@ -31,33 +31,35 @@ if(document.querySelector('.shop__filter')){
 
 }
 
-var sliderHeaderPosition = 0;
-var sliderHeaderWrap = document.querySelector('.slider-header__wrap');
-var sliderHeaderLeft = document.querySelector('.slider-header__btn-left');
-var sliderHeaderRight = document.querySelector('.slider-header__btn-right');
-var sliderHeaderItem = document.querySelectorAll('.slider-header-item').length;
+if(document.querySelector('.slider-header__wrap')){
+	var sliderHeaderPosition = 0;
+	var sliderHeaderWrap = document.querySelector('.slider-header__wrap');
+	var sliderHeaderLeft = document.querySelector('.slider-header__btn-left');
+	var sliderHeaderRight = document.querySelector('.slider-header__btn-right');
+	var sliderHeaderItem = document.querySelectorAll('.slider-header-item').length;
 
 
-var sliderHeaderWidth = sliderHeaderItem * -305 + 610;
-sliderHeaderRight.addEventListener('click', function(){
-	sliderHeaderPosition = sliderHeaderPosition - 305;
-	console.log(sliderHeaderPosition, sliderHeaderWidth);
-	if (sliderHeaderPosition === sliderHeaderWidth) {
-		sliderHeaderPosition = 0;
-		sliderHeaderWrap.style.transform = "translateX(0px)";
-	} else {
-		sliderHeaderWrap.style.transform = "translateX("+sliderHeaderPosition+"px)";
-	}
-});
+	var sliderHeaderWidth = sliderHeaderItem * -305 + 610;
+	sliderHeaderRight.addEventListener('click', function(){
+		sliderHeaderPosition = sliderHeaderPosition - 305;
+		console.log(sliderHeaderPosition, sliderHeaderWidth);
+		if (sliderHeaderPosition === sliderHeaderWidth) {
+			sliderHeaderPosition = 0;
+			sliderHeaderWrap.style.transform = "translateX(0px)";
+		} else {
+			sliderHeaderWrap.style.transform = "translateX("+sliderHeaderPosition+"px)";
+		}
+	});
 
-sliderHeaderLeft.addEventListener('click', function(){
-	if (sliderHeaderPosition === 0) {
-		sliderHeaderWrap.style.transform = "translateX(0px)";
-	} else {
-		sliderHeaderPosition = sliderHeaderPosition + 305;
-		sliderHeaderWrap.style.transform = "translateX("+sliderHeaderPosition+"px)";
-	}
-});
+	sliderHeaderLeft.addEventListener('click', function(){
+		if (sliderHeaderPosition === 0) {
+			sliderHeaderWrap.style.transform = "translateX(0px)";
+		} else {
+			sliderHeaderPosition = sliderHeaderPosition + 305;
+			sliderHeaderWrap.style.transform = "translateX("+sliderHeaderPosition+"px)";
+		}
+	});
+}
 
 if(document.querySelector('.header__burger')){
 	document.querySelector('.header__burger').addEventListener('click', function(){
