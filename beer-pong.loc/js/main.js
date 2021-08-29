@@ -31,6 +31,16 @@ if(document.querySelector('.shop__filter')){
 
 }
 
+if(document.querySelector('.delivery__content-button')){
+	var delBtn = document.querySelectorAll('.delivery__content-button');
+
+	for(var i = 0; i < delBtn.length; i++){
+		delBtn[i].addEventListener('click', function(){
+			this.parentElement.classList.toggle('delivery__wrap--active');
+		});
+	}
+}
+
 if(document.querySelector('.slider-header__wrap')){
 	var sliderHeaderPosition = 0;
 	var sliderHeaderWrap = document.querySelector('.slider-header__wrap');
