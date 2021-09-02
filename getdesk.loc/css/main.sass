@@ -1528,9 +1528,15 @@ input::-webkit-inner-spin-button
 	background: $accent
 	cursor: pointer
 
+.search-page__buttons-filters-accept
+	display: none
+
+.search-page__button-fullmap
+	display: none
+
 .range-slider
 	padding-bottom: 30px
-	height: 100%
+	height: auto
 	width: 270px
 	margin-top: 30px !important
 	padding-top: 25px
@@ -1541,7 +1547,9 @@ input::-webkit-inner-spin-button
 		display: flex
 		justify-content: space-between
 		align-items: center
-		margin-top: 40px
+		margin-top: 0px
+		padding-left: 50px
+		margin-right: 50px
 	&__btn
 		&-remove
 			display: flex
@@ -1558,6 +1566,7 @@ input::-webkit-inner-spin-button
 			line-height: 35px
 			color: #fff
 			font-size: 16px
+			text-align: center
 			cursor: pointer
 			font-weight: 500
 			&:hover, &:active
@@ -1593,9 +1602,11 @@ input::-webkit-inner-spin-button
 		border-color: $text
 		
 .search-page__block-top
-	height: 100% !important
+	height: calc(100% - 85px) !important
 	border-radius: 0 !important
 	z-index: 99999999
+	box-shadow: 0 0 0 0 transparent !important
+	
 
 .search-page__block-bottom
 	height: 110px !important

@@ -1498,9 +1498,15 @@ input::-webkit-inner-spin-button {
   background: #ED4040;
   cursor: pointer; }
 
+.search-page__buttons-filters-accept {
+  display: none; }
+
+.search-page__button-fullmap {
+  display: none; }
+
 .range-slider {
   padding-bottom: 30px;
-  height: 100%;
+  height: auto;
   width: 270px;
   margin-top: 30px !important;
   padding-top: 25px;
@@ -1511,7 +1517,9 @@ input::-webkit-inner-spin-button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 40px; }
+    margin-top: 0px;
+    padding-left: 50px;
+    margin-right: 50px; }
   .range-slider__btn-remove {
     display: flex;
     align-items: center; }
@@ -1527,6 +1535,7 @@ input::-webkit-inner-spin-button {
     line-height: 35px;
     color: #fff;
     font-size: 16px;
+    text-align: center;
     cursor: pointer;
     font-weight: 500; }
     .range-slider__btn-accept:hover, .range-slider__btn-accept:active {
@@ -1561,9 +1570,10 @@ input::-webkit-inner-spin-button {
   border-color: #131313; }
 
 .search-page__block-top {
-  height: 100% !important;
+  height: calc(100% - 85px) !important;
   border-radius: 0 !important;
-  z-index: 99999999; }
+  z-index: 99999999;
+  box-shadow: 0 0 0 0 transparent !important; }
 
 .search-page__block-bottom {
   height: 110px !important; }
@@ -2475,9 +2485,44 @@ span.flatpickr-weekday {
     flex: 0 0 47%;
     margin-bottom: 30px; } }
 @media (max-width: 1300px) {
+  .search-page__block-bottom .search-page__title {
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center; }
+  .search-page__block-bottom .search-page__block-button {
+    margin-bottom: 10px; }
+
+  .search-page__block-top {
+    height: 100% !important; }
+    .search-page__block-top .search-page__filters {
+      display: flex !important; }
+    .search-page__block-top .search-page__block-button {
+      display: none; }
+    .search-page__block-top .search-page__button-fullmap {
+      display: flex;
+      width: 245px;
+      position: fixed;
+      height: 50px;
+      line-height: 50px;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      align-items: center;
+      justify-content: center;
+      background-color: #ED4040;
+      border-radius: 5px;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #FFFFFF; }
+      .search-page__block-top .search-page__button-fullmap svg {
+        margin-right: 10px; }
+
   .search-page__map iframe {
     position: absolute;
     z-index: -1; }
+  .search-page__map--active {
+    z-index: 1; }
 
   .search-page--active .search-page__buttons {
     width: calc(100% - 40px); }
@@ -2500,13 +2545,11 @@ span.flatpickr-weekday {
     height: 115px; }
 
   .search-page__title {
-    text-align: center;
+    text-align: left;
     font-weight: 500;
-    font-size: 24px;
-    line-height: 29px;
-    border-bottom: 1px solid #C4C4C4;
-    padding-bottom: 30px;
-    margin-bottom: 40px; }
+    font-size: 34px;
+    line-height: 39px;
+    margin-bottom: 25px; }
 
   .search-page__inner {
     padding-left: 60px;
@@ -2521,7 +2564,7 @@ span.flatpickr-weekday {
     flex: 0 0 100%;
     order: 1;
     display: none;
-    justify-content: center; }
+    justify-content: start; }
 
   .search-page__buttons-filters--active {
     display: flex; }
@@ -2535,8 +2578,10 @@ span.flatpickr-weekday {
     background-color: #D8D8D8;
     top: 30px;
     margin: auto;
-    margin-top: -30px;
-    margin-bottom: 30px; } }
+    margin-bottom: 50px; }
+
+  .search-page__inner {
+    padding-top: 30px; } }
 @media (max-width: 1200px) {
   .office-page__sidebar {
     max-width: 100%;
@@ -2851,6 +2896,56 @@ span.flatpickr-weekday {
     .search-page__button-post-open svg, .search-page__button-filter svg {
       margin-right: 0; } }
 @media (max-width: 768px) {
+  .search-page__map iframe {
+    z-index: -1 !important; }
+
+  .search-page__title {
+    font-size: 24px;
+    line-height: 29px; }
+
+  .search-page__block-bottom .search-page__title {
+    text-align: center; }
+
+  .search-page__block-top {
+    height: calc(100% - 85px) !important; }
+    .search-page__block-top .search-page__filters {
+      display: none !important; }
+    .search-page__block-top .search-page__inner {
+      padding-top: 30px; }
+    .search-page__block-top .search-page__block-button {
+      display: none; }
+    .search-page__block-top .search-page__title {
+      display: none; }
+
+  .search-page__buttons-filters-accept {
+    display: block;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 50px;
+    height: 50px;
+    line-height: 50px !important;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #ED4040;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px; }
+
+  .range-slider__btn-accept {
+    display: none; }
+
+  .search-page__filter-comfort-subtitle {
+    display: none; }
+
+  .range-slider__btns {
+    position: absolute;
+    top: -60px;
+    right: 0;
+    padding-left: 0;
+    margin-right: 0; }
+
   .search-page__filter-booking-modal {
     height: 170px;
     position: initial;
@@ -2910,7 +3005,10 @@ span.flatpickr-weekday {
     order: 1; }
 
   .search-page__filter-booking {
-    order: 3; }
+    order: 3;
+    height: 100px !important;
+    overflow: hidden;
+    margin-bottom: 40px; }
 
   .search-page__filter-feature {
     order: 0; }
@@ -3170,9 +3268,12 @@ span.flatpickr-weekday {
 
   .search-page__buttons--active {
     z-index: 99999;
-    background-color: #fff; }
+    background-color: #fff;
+    height: 100%; }
     .search-page__buttons--active .search-page__button-filter path {
       fill: #ED4040; }
+    .search-page__buttons--active .search-page__resize {
+      display: none; }
 
   .calendar-form__inner {
     right: 0;
@@ -3229,9 +3330,11 @@ span.flatpickr-weekday {
       border-radius: 0; }
     .search-page__buttons-filters .search-page__filter-price-modal {
       position: relative;
+      overflow: visible;
       box-shadow: 0 0 0 0 transparent;
       border-radius: 0;
-      height: 100%;
+      height: 100px;
+      margin-bottom: 40px;
       top: 0;
       width: calc(100% - 40px);
       padding: 20px;
@@ -3591,6 +3694,14 @@ span.flatpickr-weekday {
   .calendar-form__input input {
     padding-left: 40px; } }
 @media (max-width: 440px) {
+  .search-page__buttons-filters {
+    height: calc(100vh - 120px);
+    top: auto;
+    bottom: 0; }
+
+  .search-page__block-top {
+    height: calc(100% - 150px) !important; }
+
   .search-page__item-price {
     font-size: 16px;
     margin-bottom: 25px; }
