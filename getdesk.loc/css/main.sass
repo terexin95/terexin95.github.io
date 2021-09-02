@@ -80,7 +80,16 @@ a
 		font-size: 20px
 		color: $text
 		margin-bottom: 15px
-		padding: 0 30px
+		padding: 8px 30px
+		transition: all .3s ease
+		cursor: pointer
+		&:hover
+			background-color: #FFECEC
+			transition: all .3s ease
+		&--active
+			background-color: #FFECEC
+			transition: all .3s ease
+			font-weight: bold
 	&__border
 		border-bottom: 1px solid #C7C7C7
 		margin-top: 5px
@@ -193,6 +202,10 @@ a
 
 .calendar
 	width: 365px
+	.flatpickr-calendar
+		box-shadow: 0 0 0 0 transparent
+	.calendar-input
+		display: none
 	&__header
 		display: flex
 		justify-content: space-between
@@ -262,6 +275,11 @@ a
 	background-repeat: no-repeat
 	height: 1080px
 
+#header-sticky
+	position: fixed
+	width: 100%
+	top: 0
+
 .selection
 	background: #FFFFFF
 	box-shadow: 20px 20px 130px rgba(37, 1, 0, 0.2)
@@ -270,7 +288,9 @@ a
 	width: auto
 	display: inline-block
 	position: relative
-	margin-top: 90px
+	margin-top: 200px
+	&--active
+		border-radius: 10px 0 0 10px
 	&__button
 		button
 			width: 250px
@@ -343,6 +363,7 @@ a
 		&--active
 			width: 530px
 			transition: all .3s ease
+			border-radius: 0 10px 10px 0
 	&__title
 		font-size: 36px
 		color: #000
@@ -360,6 +381,17 @@ a
 			margin-bottom: 15px
 			padding-left: 30px
 			padding-right: 30px
+			padding-top: 8px
+			padding-bottom: 8px
+			cursor: pointer
+			transition: all .3s ease
+			&:hover
+				background: #FFECEC
+				transition: all .3s ease
+			&--active
+				background: #FFECEC
+				font-weight: bold
+				transition: all .3s ease
 		&-border
 			border-bottom: 1px solid #C7C7C7
 			margin-top: 5px
@@ -1114,7 +1146,7 @@ a
 						width: 70px
 						height: 35px
 						display: block
-						background-color: #FBFAFA
+						background-color: #c7c7c7
 						border-radius: 100px
 						position: relative
 						cursor: pointer
@@ -1157,6 +1189,7 @@ a
 				box-shadow: -20px 0px 130px rgba(37, 1, 0, 0.15)
 				border-radius: 10px	
 				left: 0
+				z-index: 1
 				top: calc(100% + 35px)
 				height: 0
 				transition: all .3s ease
@@ -1232,8 +1265,66 @@ a
 		&-img
 			max-width: 47%
 			flex: 0 0 47%
+			position: relative
+			&-dots
+				position: absolute
+				bottom: 20px
+				display: flex
+				justify-content: center
+				left: 0
+				width: 100%
+			&-dot
+				background: rgba(255, 255, 255, 0.6)
+				cursor: pointer
+				width: 7px
+				height: 7px
+				border-radius: 100px
+				margin: 0 5px
+				&--active
+					background-color: #fff
+			&-btns
+				opacity: 0
+				transition: all .3s ease
+			&-btn
+				width: 44px
+				height: 44px
+				border-radius: 100%
+				background-color: #fff
+				border: 0.5px solid #C4C4C4
+				box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2)
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				display: flex
+				align-items: center
+				justify-content: center
+				transition: all .3s ease
+				cursor: pointer
+				&:hover
+					background-color: $accent
+					border-color: $accent
+					transition: all .3s ease
+					path
+						fill: #fff
+						stroke: #fff
+						transition: all .3s ease
+				&-left
+					left: 10px
+					svg
+						margin-left: -3px
+				&-right
+					right: 10px
+					svg
+						margin-right: -3px
+			&:hover
+				.search-page__item-img-btns
+					opacity: 1
+					transition: all .3s ease
 			img
 				width: 100%
+				display: none
+			.search-page__item-img--active
+				display: block
 		&-block
 			max-width: calc(53% - 40px)
 			flex: 0 0 calc(53% - 40px)
@@ -1504,9 +1595,833 @@ input::-webkit-inner-spin-button
 .search-page__block-top
 	height: 100% !important
 	border-radius: 0 !important
+	z-index: 99999999
 
 .search-page__block-bottom
 	height: 110px !important
 
+.office-item
+	box-sizing: border-box
+	border-radius: 10px
+	margin-bottom: 25px
+	border: 1px solid transparent
+	&:nth-child(2n)
+		background-color: #F2F2F2
+	&--active
+		border: 1px solid #C4C4C4
+		.office-item__main
+			height: auto
+			transition: all .3s ease
+	&__main
+		display: flex
+		height: 0
+		transition: all .3s ease
+		overflow: hidden
+	&__img
+		max-width: calc(40% - 20px)
+		flex: 0 0 calc(40% - 20px)
+		margin-right: 20px
+		.search-page__item-img
+			max-width: 100%
+			flex: 0 0 100%
+	&__text
+		font-size: 15px
+		line-height: 1.2
+		color: $text
+	&__buttons
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		margin-top: 15px
+	&__button
+		height: 35px
+		width: 170px
+		border-radius: 5px
+		background-color: $accent
+		font-weight: 500
+		font-size: 16px
+		line-height: 35px
+		color: #FFFFFF
+		text-align: center
+	&__checkup
+		display: flex
+		align-items: center
+		margin-right: 70px
+		svg
+			margin-right: 7px
+	&__content
+		max-width: calc(60% - 30px)
+		flex: 0 0 calc(60% - 30px)
+		padding-right: 30px
+		padding-bottom: 30px
+		.search-page__item-filters
+			margin-top: 0
+			margin-bottom: 20px
+	.office-page__offer-opt
+		display: inline-block
+	&__header
+		display: flex
+		align-items: center
+		cursor: pointer
+		padding: 15px 0
+		position: relative
+		&::after
+			content: ""
+			background-color: #C4C4C4
+			height: 1px
+			bottom: 0
+			left: 40px
+			right: 40px
+			display: none
+			position: absolute
+	&__column
+		max-width: 16.6666%
+		flex: 0 0 16.6666%
+		text-align: center
+
+.reviews-item
+	&--active
+		.reviews-item__text
+			height: 100%
+	&__header
+		display: flex
+		margin-bottom: 10px
+		align-items: center
+	&__text
+		height: 77px
+		overflow: hidden
+		font-weight: normal
+		font-size: 16px
+		line-height: 19px
+		color: $text
+		margin-bottom: 10px
+	&__title
+		font-weight: normal
+		font-size: 16px
+		line-height: 19px
+		color: #717171
+	&__img
+		height: 60px
+		flex: 0 0 60px
+		max-width: 60px
+		margin-right: 15px
+		img
+			width: 60px
+			border-radius: 100%
+			object-fit: cover
+			height: 60px
+
+.office-page-button-fixed
+	display: none
+
+.office-page
+	.search-page__filter-comfort-item-button
+		color: #717171
+	&__reviews
+		position: relative
+		&-wrap
+			display: flex
+			margin-top: 60px
+			flex-wrap: wrap
+			> .office-page__offer-rating
+					position: absolute
+					right: 150px
+					top: 27.5px
+			> .search-page__filter-comfort-item-button
+				position: absolute
+				right: 0
+				top: 30px
+				svg
+					transform: rotate(-90deg)
+			&--active
+				.office-page__reviews-column
+					display: block
+		&-column
+			max-width: 23%
+			flex: 0 0 23%
+			margin-right: 2.666%
+			margin-bottom: 35px
+			display: none
+			&:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8)
+				display: block
+			&:nth-child(4n)
+				margin-right: 0
+	&__map
+		margin-top: 30px
+		margin-bottom: 60px
+		img
+			width: 100%
+	&__tabs
+		margin-bottom: 60px
+		&-nav
+			display: flex
+			margin-bottom: 10px
+			&-item
+				max-width: 16.6666%
+				flex: 0 0 16.6666%
+				text-align: center
+				font-weight: 500
+				font-size: 16px
+				line-height: 20px
+				color: #717171
+	&__subtitle
+		font-weight: normal
+		font-size: 28px
+		line-height: 33px
+		color: $text
+	&__comfort
+		margin-bottom: 60px
+		&--active
+			.office-page__comfort-wrap
+				height: 100%
+		&-wrap
+			flex-wrap: wrap
+			display: flex
+			margin-top: 30px
+			height: 215px
+			overflow: hidden
+			margin-bottom: 25px
+		&-item
+			max-width: 31%
+			flex: 0 0 31%
+			margin-right: 3.5%
+			margin-bottom: 10px
+			position: relative
+			&::before
+				content: ""
+				width: 5px
+				height: 5px
+				border-radius: 100%
+				background-color: $accent
+				top: 50%
+				transform: translateY(-50%)
+				left: 0
+				position: absolute
+			&:nth-child(3n)
+				margin-right: 0
+		&-text
+			height: 30px
+			padding: 0 12px
+			border: 0.5px solid #DADADA
+			border-radius: 50px
+			display: inline-block
+			line-height: 30px
+			margin-left: 15px
+			overflow: hidden
+	&__text
+		font-size: 20px
+		line-height: 1.5
+		color: #000
+		margin-bottom: 60px
+		&-item
+			height: 365px
+			overflow: hidden
+			margin-bottom: 10px
+		&--active
+			.office-page__text-item
+				height: 100%
+	&__nav
+		display: flex
+		margin: 60px 0
+		&-item
+			display: block
+			font-weight: normal
+			font-size: 18px
+			line-height: 21px
+			color: #717171
+			margin-right: 30px
+			&--active
+				font-weight: 500
+				font-size: 18px
+				line-height: 22px
+				color: $text
+	&__offer
+		padding: 25px 40px
+		border: 1px solid #C7C7C7
+		box-sizing: border-box
+		border-radius: 10px
+		display: flex
+		justify-content: space-between
+		color: $text
+		&-right
+			flex-direction: column
+			justify-content: space-between
+			display: flex
+		&-price
+			font-weight: bold
+			font-size: 36px
+			line-height: 44px
+			color: $accent
+			text-align: right
+			white-space: nowrap
+		&-opts
+			display: flex
+			justify-content: flex-end
+		&-opt
+			position: relative
+			padding-left: 15px
+			margin-right: 15px
+			&::before
+				content: ""
+				width: 5px
+				height: 5px
+				border-radius: 100px
+				background-color: $accent
+				top: 50%
+				transform: translateY(-50%)
+				left: 0
+				position: absolute
+		&-time
+			display: flex
+			align-items: center
+			font-weight: normal
+			font-size: 18px
+			line-height: 21px
+			color: #131313
+			svg
+				margin-right: 15px
+		&-map
+			display: flex
+			align-items: center
+			font-size: 18px
+			line-height: 21px
+			color: #717171
+			margin-bottom: 13px
+			svg
+				margin-right: 15px
+				path
+					fill: #717171
+		&-rating
+			font-weight: 300
+			font-size: 18px
+			line-height: 22px
+			display: flex
+			align-items: center
+			margin-bottom: 13px
+			svg
+				margin-left: 5px
+		&-reviews
+			margin-left: 15px
+			font-weight: normal
+			font-size: 18px
+			line-height: 21px
+	&__title
+		font-size: 52px
+		line-height: 63px
+		color: #000000
+		margin: 0
+	&__header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 60px
+		&-btns
+			display: flex
+			align-items: center
+		&-repost
+			height: 38px
+			width: 38px
+			display: flex
+			align-items: center
+			justify-content: center
+			background-color: #fff
+			border-radius: 100%
+			cursor: pointer
+			box-shadow: 0px 2px 5px rgba(#000, .1)
+			margin-right: 15px
+	&__main
+		display: flex
+		flex-wrap: wrap
+		margin-top: 50px
+	&__content
+		max-width: calc(70% - 40px)
+		flex: 0 0 calc(70% - 40px)
+		margin-right: 40px
+	&__sidebar
+		max-width: 30%
+		flex: 0 0 30%
+	&__gallery
+		display: flex
+		position: relative
+		.office-page__header-btns
+			display: none
+		.search-page__item-img
+			display: none
+		&-button
+			position: absolute
+			right: 30px
+			bottom: 65px
+			background-color: #fff
+			cursor: pointer
+			display: flex
+			align-items: center
+			padding: 0 15px
+			height: 44px
+			box-shadow: 0px 5px 50px rgba(37, 1, 0, 0.2)
+			border-radius: 5px
+			z-index: 1
+			svg
+				margin-right: 12px
+		img
+			width: 100%
+			border-radius: 5px
+			height: 100%
+			object-fit: cover
+		&-img
+			&-1
+				max-width: 50%
+				flex: 0 0 50%
+				margin-right: 40px
+				max-height: 665px
+				overflow: hidden
+				border-radius: 5px
+			&-2
+				max-width: calc(50% - 40px)
+				flex: 0 0 calc(50% - 40px)
+				display: flex
+				flex-wrap: wrap
+				height: 100%
+			&-item
+				max-width: calc(50% - 20px)
+				flex: 0 0 calc(50% - 20px)
+				margin-right: 20px
+				margin-bottom: 40px
+				&:nth-child(2n)
+					margin-right: 0
+					margin-left: 20px
+
+@import "_carusel.scss"
+
+.carousel__slide
+	width: 1180px
+	height: 620px
+
+.carousel__slide--main-text
+	position: absolute
+	bottom: 0
+	background: rgba(19, 19, 19, 0.5)
+	backdrop-filter: blur(15px)
+	height: 60px
+	widows: 100%
+	color: #fff
+	text-align: center
+	left: 0
+	right: 0
+	font-size: 20px
+	line-height: 60px
+	font-weight: normal
+
+.carousel__slide--main-count
+	position: absolute
+	bottom: 18px
+	right: 20px
+	font-size: 20px
+	color: #fff
+
+.gallery-modal__close
+	position: absolute
+	cursor: pointer
+	right: -75px
+	top: 15px
+
+.carousel__img
+	width: 100%
+	height: 100%
+	object-fit: cover
+	border-radius: 5px
+
+.carousel__slide--thumbnail
+	width: 250px
+	flex: 0 0 250px
+	height: 200px
+	margin-right: 40px
+
+.carousel__slides--thumbnails
+	display: flex
+	margin-top: 40px
+	justify-content: flex-start
+	overflow: hidden
+	width: 100%
+	overflow-x: scroll
+	margin-bottom: 30px
+	&::-webkit-scrollbar 
+		width: 7px /* ширина для вертикального скролла */
+		height: 10px/* высота для горизонтального скролла */
+	/* ползунок скроллбара */
+	&::-webkit-scrollbar-thumb 
+		background-color: #C7C7C7
+		border-radius: 10px
+		transition: all .3s ease
+		-webkit-appearance: none
+		&:hover
+			background-color: darken(#C7C7C7, 15%)
+			transition: all .3s ease
+
+.carousel
+	margin: 0
+	width: 1180px
+	position: relative
+
+.gallery-modal
+	z-index: 11
+	position: fixed
+	background-color: $text
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	display: flex
+	align-items: center
+	justify-content: center
+	display: none
+	&--active
+		display: flex
+
+.carousel__slides
+	padding-left: 0
+
+.carousel__button
+	border: 2px solid #FFFFFF
+	box-sizing: border-box
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2)
+	border-radius: 100px
+	width: 70px
+	height: 70px
+
+.office-time
+	background: #FFFFFF
+	border: 1px solid #C4C4C4
+	box-sizing: border-box
+	box-shadow: 0px 10px 30px rgba(37, 1, 0, 0.1)
+	border-radius: 10px
+	padding: 70px 75px 60px
+	width: 100%
+	margin-bottom: 60px
+	position: relative
+	&__modal
+		position: absolute
+		top: 2px 
+		left: 2px 
+		right: 2px 
+		height: calc(100% - 135px)
+		bottom: 5px 
+		background-color: #fff
+		z-index: 2
+		padding: 70px 75px 60px
+		display: none
+		&--active
+			display: block
+		&-button
+			background: $accent
+			border-radius: 5px
+			cursor: pointer
+			height: 70px
+			line-height: 70px
+			text-align: center
+			font-weight: bold
+			font-size: 24px
+			color: #FFFFFF
+			transition: all .3s ease
+			&:hover
+				background-color: darken($accent, 10%)
+				transition: all .3s ease
+		&-wrap
+			display: flex
+			justify-content: space-between
+			margin: 70px 0
+		&-item
+			max-width: 47%
+			flex: 0 0 47%
+	&__total
+		margin-left: -75px
+		background-color: #F2F2F2
+		padding: 35px 75px
+		width: 100%
+		margin-right: -75px
+		margin-bottom: 50px
+		&-wrap
+			display: flex
+			justify-content: space-between
+			margin-bottom: 10px
+		.office-time__item-total
+			margin-top: 20px
+		&-title
+			display: flex
+			font-size: 20px
+			line-height: 24px
+			color: $text
+		&-num
+			margin-left: 2px
+			font-weight: bold
+	&__button
+		background: $accent
+		border-radius: 5px
+		cursor: pointer
+		height: 70px
+		line-height: 70px
+		text-align: center
+		font-weight: bold
+		font-size: 24px
+		color: #FFFFFF
+		transition: all .3s ease
+		&:hover
+			background-color: darken($accent, 10%)
+			transition: all .3s ease
+	&__input
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 60px
+		cursor: pointer
+		border: 1px solid #C7C7C7
+		box-sizing: border-box
+		border-radius: 5px
+		margin-bottom: 50px
+		font-size: 20px
+		line-height: 24px
+		color: $text
+		svg
+			margin-right: 15px
+	&__item
+		padding-bottom: 50px
+		margin-bottom: 35px
+		border-bottom: 1px solid #C4C4C4
+		position: relative
+		&:last-child
+			padding-bottom: 0
+			border-bottom: 0px solid #000
+			margin-bottom: 55px
+		&-remove
+			top: 58px
+			position: absolute
+			right: -30px
+			cursor: pointer
+		&-header
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin-bottom: 20px
+		&-qty
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin-bottom: 30px
+			.quantity input
+				line-height: 37px
+		&-total
+			text-align: right
+			font-size: 20px
+			line-height: 24px
+			color: $text
+			span
+				display: inline-block
+				font-weight: bold
+				color: $accent
+				font-size: 24px
+				line-height: 29px
+				margin-left: 20px
+		&-title
+			font-size: 20px
+			line-height: 24px
+			color: $text
+		&-price
+			font-weight: bold
+			color: $text
+			font-size: 24px
+			line-height: 29px
+
+.time
+	border: 1px solid #C7C7C7
+	box-sizing: border-box
+	border-radius: 5px
+	&--active
+		.time__dropdown
+			height: 245px
+			transition: all .3s ease
+	&__dropdown
+		height: 0px
+		margin-right: 10px
+		margin-left: 10px
+		overflow-y: scroll
+		transition: all .3s ease
+		&::-webkit-scrollbar 
+			width: 7px /* ширина для вертикального скролла */
+			height: 10px/* высота для горизонтального скролла */
+		/* ползунок скроллбара */
+		&::-webkit-scrollbar-thumb 
+			background-color: #C7C7C7
+			border-radius: 10px
+			transition: all .3s ease
+			-webkit-appearance: none
+			&:hover
+				background-color: darken(#C7C7C7, 15%)
+				transition: all .3s ease
+	&__input
+		height: 60px
+		width: 100%
+		border-radius: 5px
+		outline: none
+		border: 0
+		box-shadow: 0 0 0 0 transparent
+		padding: 0
+		text-align: center
+		font-weight: normal
+		font-size: 20px
+		color: $text
+	&__inner
+		position: relative
+		svg
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: 20%
+	&__item
+		font-size: 16px
+		color: $text
+		margin-bottom: 15px
+		text-align: center
+		&--font-size-18
+			font-size: 18px
+		&--font-size-20
+			font-size: 20px
+		&--active
+			color: $accent
+			font-size: 22px
+
+.tabs
+	ul
+		padding: 0
+		margin-left: 0
+		margin-top: 0
+		li
+			list-style-type: none
+	&__button-group
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 50px
+		.active
+			color: $accent
+	&__toggle
+		list-style-type: none
+		font-weight: 500
+		font-size: 22px
+		line-height: 27px
+		color: $text
+		margin-right: 35px
+		margin-top: 15px
+		cursor: pointer
+	&__container
+		.active
+			display: block
+	&__tab-panel
+		list-style-type: none
+		display: none
+
+
+.flatpickr-months
+	position: relative
+
+.flatpickr-months .flatpickr-prev-month svg path, .flatpickr-months .flatpickr-next-month svg path
+	fill: $accent
+
+.flatpickr-months .flatpickr-prev-month
+	position: absolute
+	right: 25px
+	left: auto !important
+
+.flatpickr-current-month .numInputWrapper
+
+.flatpickr-current-month
+	text-align: left
+	left: 0
+
+select
+	-webkit-appearance: none !important
+	-moz-appearance: none !important
+	appearance: none !important
+
+
+.flatpickr-day.selected.startRange, .flatpickr-day.startRange.startRange, .flatpickr-day.endRange.startRange, .flatpickr-day.selected.endRange, .flatpickr-day.startRange.endRange, .flatpickr-day.endRange.endRange
+	border-radius: 50px
+
+.flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.selected.inRange, .flatpickr-day.startRange.inRange, .flatpickr-day.endRange.inRange, .flatpickr-day.selected:focus, .flatpickr-day.startRange:focus, .flatpickr-day.endRange:focus, .flatpickr-day.selected:hover, .flatpickr-day.startRange:hover, .flatpickr-day.endRange:hover, .flatpickr-day.selected.prevMonthDay, .flatpickr-day.startRange.prevMonthDay, .flatpickr-day.endRange.prevMonthDay, .flatpickr-day.selected.nextMonthDay, .flatpickr-day.startRange.nextMonthDay, .flatpickr-day.endRange.nextMonthDay
+	background: $accent
+	border-color: $accent
+	
+
+.flatpickr-day.selected
+	position: relative
+	z-index: 2
+
+.flatpickr-day.selected.startRange + .endRange:not(:nth-child(7n+1)), .flatpickr-day.startRange.startRange + .endRange:not(:nth-child(7n+1)), .flatpickr-day.endRange.startRange + .endRange:not(:nth-child(7n+1))
+	box-shadow: 0 0 0 0 transparent
+
+.flatpickr-day.inRange
+	display: block
+	width: 100%
+	height: 39px
+	border-color: transparent !important
+	box-shadow: 0 0 0 0 transparent !important
+	background-color: transparent !important
+	// position: absolute
+	// z-index: 3
+	// width: 100%
+	&:hover
+		border-color: transparent !important
+
+.flatpickr-day
+	&:hover
+		background-color: transparent
+		border-color: transparent
+
+div.flatpickr-day > span.flatpickr-day.inRange
+	position: absolute
+	z-index: 2
+	line-height: 37px
+
+div.flatpickr-day
+	position: relative
+	// height: 39px
+	// line-height: 39px
+	padding: 0
+	margin: 0
+	border: 0 !important
+	&::before
+		content: ""
+		z-index: 1
+		height: 28px
+		background-color: #FFECEC
+		width: 230%
+		border-radius: 30px
+		position: absolute
+		left: -65%
+		background-repeat: no-repeat
+		top: 50%
+		transform: translateY(-50%)
+
+.prevMonthDay
+	opacity: 0
+	&:first-child
+		display: none
+
+.nextMonthDay
+	opacity: 0
+
+.flatpickr-day
+	&:nth-child(9), &:nth-child(16), &:nth-child(23), &:nth-child(30)
+		&::before
+			content: ""
+			width: 160%
+			left: 0
+			right: -50%
+	&:nth-child(8), &:nth-child(15), &:nth-child(22), &:nth-child(29)
+		&::before
+			content: ""
+			width: 160%
+			right: 0
+			left: -50%
+
+span.flatpickr-weekday
+	font-weight: 300
 
 @import "_media.sass"

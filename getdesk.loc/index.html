@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="font/stylesheet.css">
+	<link rel="stylesheet" href="css/flatpckr.css">
 	<link rel="stylesheet" href="css/main.css">
 	<title>GETDESK</title>
 </head>
@@ -109,70 +110,8 @@
 								<input type="text" placeholder="Укажите дату">
 								<div class="calendar-form__inner">
 									<div class="calendar">
-										<div class="calendar__header">
-											<div class="calendar__title">
-												October 2021
-											</div>
-											<div class="calendar__btns">
-												<div class="calendar__btn calendar__left">
-													<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M6.65685 1.00001L1 6.65686L6.65685 12.3137" stroke="#ED4040" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-													</svg>
-												</div>
-												<div class="calendar__btn calendar__right">
-													<svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-														<path d="M1.97059 1.00001L7.62744 6.65686L1.97059 12.3137" stroke="#ED4040" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-													</svg>
-												</div>
-											</div>
-										</div>
-										<div class="calendar__body">
-											<div class="calendar__week">
-												<div class="calendar__item">Пн</div>
-												<div class="calendar__item">Вт</div>
-												<div class="calendar__item">Ср</div>
-												<div class="calendar__item">Чт</div>
-												<div class="calendar__item">Пт</div>
-												<div class="calendar__item">Сб</div>
-												<div class="calendar__item">Вс</div>
-											</div>
-											<div class="calendar__days">
-												<div class="calendar__item"></div>
-												<div class="calendar__item"></div>
-												<div class="calendar__item"></div>
-												<div class="calendar__item"><div class="calendar__item-text">1</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">2</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">3</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">4</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">5</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">6</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">7</div></div>
-												<div class="calendar__item calendar__item--active"><div class="calendar__item-text">8</div></div>
-												<div class="calendar__item calendar__item--active-color"><div class="calendar__item-text">9</div></div>
-												<div class="calendar__item calendar__item--active-color"><div class="calendar__item-text">10</div></div>
-												<div class="calendar__item calendar__item--active-color"><div class="calendar__item-text">11</div></div>
-												<div class="calendar__item calendar__item--active"><div class="calendar__item-text">12</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">13</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">14</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">15</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">16</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">17</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">18</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">19</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">20</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">21</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">22</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">23</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">24</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">25</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">26</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">27</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">28</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">29</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">30</div></div>
-												<div class="calendar__item"><div class="calendar__item-text">31</div></div>
-												<div class="calendar__item"></div>
-											</div>
+										<div class="calendar">
+											<input class="calendar-input flatpickr flatpickr-input" type="text" placeholder="Select Date.." readonly="readonly">
 										</div>
 									</div>
 								</div>
@@ -304,7 +243,7 @@
 							<div class="selection__city-item">Москва</div>
 							<div class="selection__city-item">Санкт- Петербург</div>
 							<div class="selection__city-border"></div>
-							<div class="selection__city-item">Брест</div>
+							<div class="selection__city-item selection__city-item--active">Брест</div>
 							<div class="selection__city-item">Астана</div>
 							<div class="selection__city-item">Архангельск</div>
 							<div class="selection__city-item">Белгород</div>
@@ -340,71 +279,7 @@
 					</div>
 					<div class="selection__calendar-wrap">
 						<div class="calendar">
-							<div class="calendar__header">
-								<div class="calendar__title">
-									October 2021
-								</div>
-								<div class="calendar__btns">
-									<div class="calendar__btn calendar__left">
-										<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M6.65685 1.00001L1 6.65686L6.65685 12.3137" stroke="#ED4040" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-										</svg>
-									</div>
-									<div class="calendar__btn calendar__right">
-										<svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M1.97059 1.00001L7.62744 6.65686L1.97059 12.3137" stroke="#ED4040" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-										</svg>
-									</div>
-								</div>
-							</div>
-							<div class="calendar__body">
-								<div class="calendar__week">
-									<div class="calendar__item">Пн</div>
-									<div class="calendar__item">Вт</div>
-									<div class="calendar__item">Ср</div>
-									<div class="calendar__item">Чт</div>
-									<div class="calendar__item">Пт</div>
-									<div class="calendar__item">Сб</div>
-									<div class="calendar__item">Вс</div>
-								</div>
-								<div class="calendar__days">
-									<div class="calendar__item"></div>
-									<div class="calendar__item"></div>
-									<div class="calendar__item"></div>
-									<div class="calendar__item"><div class="calendar__item-text">1</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">2</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">3</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">4</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">5</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">6</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">7</div></div>
-									<div class="calendar__item calendar__item--active"><div class="calendar__item-text">8</div></div>
-									<div class="calendar__item calendar__item--active-color"><div class="calendar__item-text">9</div></div>
-									<div class="calendar__item calendar__item--active-color"><div class="calendar__item-text">10</div></div>
-									<div class="calendar__item calendar__item--active-color"><div class="calendar__item-text">11</div></div>
-									<div class="calendar__item calendar__item--active"><div class="calendar__item-text">12</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">13</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">14</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">15</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">16</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">17</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">18</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">19</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">20</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">21</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">22</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">23</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">24</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">25</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">26</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">27</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">28</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">29</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">30</div></div>
-									<div class="calendar__item"><div class="calendar__item-text">31</div></div>
-									<div class="calendar__item"></div>
-								</div>
-							</div>
+							<input class="calendar-input flatpickr flatpickr-input" type="text" placeholder="Select Date.." readonly="readonly">
 						</div>
 					</div>
 				</div>
@@ -1242,7 +1117,7 @@
 			</div>
 		</div>
 	</footer>
-
+	<script src="js/flatpckr.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
