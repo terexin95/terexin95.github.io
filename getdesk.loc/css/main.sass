@@ -851,11 +851,64 @@ a
 .div.gm-bundled-control div.gmnoprint, .search-page__map .gm-style .default-card 
 	display: none !important
 
+.overflow-hidden
+	overflow: hidden
+
+.mobile-menu
+	width: 0px
+	position: fixed
+	right: 0
+	top: 140px
+	background: #FFFFFF
+	box-shadow: 0px 5px 50px rgba(37, 1, 0, 0.2)
+	border-radius: 5px
+	z-index: 11
+	transition: all .3s ease
+	&__wrap
+		padding: 30px
+	&--active
+		width: 320px
+		transition: all .3s ease
+	&__nav
+		border-bottom: 1px solid #C7C7C7
+		padding-bottom: 25px
+	&__link
+		display: block
+		font-weight: 500
+		font-size: 16px
+		line-height: 20px
+		color: #131313
+		margin-bottom: 13px
+		&:last-child
+			margin-bottom: 0
+	&__user
+		padding-bottom: 25px
+		border-bottom: 1px solid #C7C7C7
+		margin-bottom: 20px
+		margin-top: 20px
+		&-item
+			display: flex
+			align-items: center
+			margin-bottom: 17px
+			font-weight: 500
+			font-size: 16px
+			line-height: 20px
+			color: #131313
+			svg
+				flex: 0 0 24px
+				margin-right: 13px
+			&:nth-child(1)
+				svg
+					margin-left: -5px
+					margin-right: 18px
+
 .search-page
 	height: calc(100vh - 125px)
 	position: relative
 	overflow: hidden
 	&--active
+		.search-page__resize
+			position: initial
 		.search-page__block
 			width: 0
 			transition: all .3s ease
@@ -876,6 +929,9 @@ a
 		background: #FFFFFF
 		box-shadow: 0px 5px 50px rgba(37, 1, 0, 0.2)
 		border-radius: 100px
+		position: absolute
+		top: 100%
+		left: 40px
 		&-item
 			height: 45px
 			text-align: center
@@ -1786,8 +1842,47 @@ input
 	&__map
 		margin-top: 30px
 		margin-bottom: 60px
-		img
-			width: 100%
+		position: relative
+		&-btns
+			position: absolute
+			top: 20px
+			display: flex
+			width: calc(100% - 40px)
+			left: 50%
+			transform: translateX(-50%)
+			justify-content: space-between
+		&-btn
+			&-zooms
+				width: 44px
+				height: 88px
+				border-radius: 100px
+				background: #FFFFFF
+				box-shadow: 0px 5px 50px rgba(37, 1, 0, 0.2)
+				border-radius: 100px
+			&-zoom
+				width: 100%
+				height: 44px
+				display: flex
+				align-items: center
+				justify-content: center
+				cursor: pointer
+				&:nth-child(1)
+					border-bottom: 1px solid #C7C7C7
+				&:nth-child(2)
+					svg
+						margin-top: 7px
+			&-expand
+				display: flex
+				align-items: center
+				height: 45px
+				justify-content: center
+				background-color: #fff
+				width: 225px
+				box-shadow: 0px 5px 50px rgba(37, 1, 0, 0.2)
+				border-radius: 5px
+				cursor: pointer
+				svg
+					margin-right: 10px
 	&__tabs
 		margin-bottom: 60px
 		&-nav

@@ -684,6 +684,13 @@ if (document.getElementsByClassName("office-itemwrp")) {
 	}
 }
 
+if (document.querySelector('.header__burger')) {
+	document.querySelector('.header__burger').addEventListener('click', function(){
+		document.querySelector('.mobile-menu').classList.toggle('mobile-menu--active');
+		document.querySelector('body').classList.toggle('overflow-hidden');
+	});
+}
+
 
 if(document.querySelector('.carousel')){
 
