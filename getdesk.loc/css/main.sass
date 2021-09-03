@@ -859,6 +859,9 @@ a
 		.search-page__block
 			width: 0
 			transition: all .3s ease
+		.search-page__map
+			width: 100%
+			margin-left: 0
 		.search-page__buttons
 			width: calc(100% - 80px)
 			transition: all .3s ease
@@ -1008,11 +1011,26 @@ a
 					.search-page__filter-comfort-wrap
 						height: 100%
 				&-button
+				&-button
 					display: flex
 					align-items: center
 					cursor: pointer
+					span
+						&:nth-child(2)
+							display: none
 					svg
 						margin-left: 10px
+						transition: all .3s ease
+					&--active
+						span
+							&:nth-child(1)
+								display: none
+							&:nth-child(2)
+								display: block
+						svg
+							transform: rotate(-180deg)
+							transition: all .3s ease
+							margin-top: 2px
 			&-title
 				font-size: 22px
 				color: $text
@@ -1366,6 +1384,8 @@ a
 				line-height: 28px
 	&__map
 		height: 100%
+		width: 50%
+		margin-left: 50%
 		&--active
 			iframe
 				z-index: 1 !important
@@ -1600,13 +1620,12 @@ input::-webkit-inner-spin-button
 		height: 37px
 		background-color: #fff
 		border-color: $text
-		
-.search-page__block-top
-	height: calc(100% - 85px) !important
-	border-radius: 0 !important
-	z-index: 99999999
-	box-shadow: 0 0 0 0 transparent !important
-	
+
+input
+	outline: none
+
+.office-item__additionally
+	display: none
 
 .search-page__block-bottom
 	height: 110px !important
@@ -1617,9 +1636,15 @@ input::-webkit-inner-spin-button
 	margin-bottom: 25px
 	border: 1px solid transparent
 	&:nth-child(2n)
-		background-color: #F2F2F2
+		.office-item__header
+			background-color: #F2F2F2
+			border-radius: 10px 10px 0 0
 	&--active
 		border: 1px solid #C4C4C4
+		.office-item__header::after
+			display: block
+		.office-item__header
+			margin-bottom: 35px
 		.office-item__main
 			height: auto
 			transition: all .3s ease
@@ -1654,10 +1679,12 @@ input::-webkit-inner-spin-button
 		line-height: 35px
 		color: #FFFFFF
 		text-align: center
+		cursor: pointer
 	&__checkup
 		display: flex
 		align-items: center
 		margin-right: 70px
+		cursor: pointer
 		svg
 			margin-right: 7px
 	&__content
@@ -1689,11 +1716,10 @@ input::-webkit-inner-spin-button
 		max-width: 16.6666%
 		flex: 0 0 16.6666%
 		text-align: center
-
+.reviews-item.active
+	.reviews-item__text
+		height: 100%
 .reviews-item
-	&--active
-		.reviews-item__text
-			height: 100%
 	&__header
 		display: flex
 		margin-bottom: 10px
@@ -1726,10 +1752,15 @@ input::-webkit-inner-spin-button
 	display: none
 
 .office-page
+	margin-top: 125px
 	.search-page__filter-comfort-item-button
 		color: #717171
 	&__reviews
 		position: relative
+		margin-bottom: 90px
+		&-wrap.active
+			.office-page__reviews-column
+				display: block
 		&-wrap
 			display: flex
 			margin-top: 60px
@@ -1742,11 +1773,6 @@ input::-webkit-inner-spin-button
 				position: absolute
 				right: 0
 				top: 30px
-				svg
-					transform: rotate(-90deg)
-			&--active
-				.office-page__reviews-column
-					display: block
 		&-column
 			max-width: 23%
 			flex: 0 0 23%
@@ -1780,11 +1806,11 @@ input::-webkit-inner-spin-button
 		font-size: 28px
 		line-height: 33px
 		color: $text
+	&__comfort.active
+		.office-page__comfort-wrap
+			height: 100%
 	&__comfort
 		margin-bottom: 60px
-		&--active
-			.office-page__comfort-wrap
-				height: 100%
 		&-wrap
 			flex-wrap: wrap
 			display: flex
@@ -1819,6 +1845,9 @@ input::-webkit-inner-spin-button
 			line-height: 30px
 			margin-left: 15px
 			overflow: hidden
+	&__text.active
+		.office-page__text-item
+			height: 100%
 	&__text
 		font-size: 20px
 		line-height: 1.5
@@ -1945,9 +1974,9 @@ input::-webkit-inner-spin-button
 		flex-wrap: wrap
 		margin-top: 50px
 	&__content
-		max-width: calc(70% - 40px)
-		flex: 0 0 calc(70% - 40px)
-		margin-right: 40px
+		max-width: calc(70% - 130px)
+		flex: 0 0 calc(70% - 130px)
+		margin-right: 130px
 	&__sidebar
 		max-width: 30%
 		flex: 0 0 30%
@@ -2039,7 +2068,7 @@ input::-webkit-inner-spin-button
 	width: 100%
 	height: 100%
 	object-fit: cover
-	border-radius: 5px
+	border-radius: 10px
 
 .carousel__slide--thumbnail
 	width: 250px
@@ -2434,5 +2463,15 @@ div.flatpickr-day
 
 span.flatpickr-weekday
 	font-weight: 300
+
+.calendar .flatpickr-calendar
+	margin-left: auto
+	margin-right: auto
+
+#prevButton svg
+	margin-left: -5px
+
+#nextButton svg
+	margin-left: 5px
 
 @import "_media.sass"

@@ -40,6 +40,20 @@
 		flex: 0 0 47%
 		margin-bottom: 30px
 @media (max-width: 1300px)
+	.search-page__map
+		width: 100%
+		margin-left: 0
+	.search-page__inner
+		overflow-y: hidden
+	.search-page__block-top
+		.search-page__inner
+			overflow-y: scroll
+	.search-page__block-top
+		height: calc(100% - 85px) !important
+		border-radius: 0 !important
+		z-index: 99999999
+		box-shadow: 0 0 0 0 transparent !important
+
 	.search-page__block-bottom
 		.search-page__title
 			font-size: 24px
@@ -128,6 +142,18 @@
 	.search-page__inner
 		padding-top: 30px
 @media (max-width: 1200px)
+	.gallery-modal
+		padding-left: 20px
+		padding-right: 20px
+	.office-time__total-wrap
+		margin-left: auto
+		max-width: 330px
+	.office-page__tabs-nav
+		margin-left: -40px !important
+		margin-right: -40px
+	.tabs__container
+		margin-left: -40px !important
+		margin-right: -40px
 	.office-page__sidebar
 		max-width: 100%
 		flex: 0 0 100%
@@ -172,21 +198,43 @@
 
 	.carousel__slide
 		width: 100%
-		height: 420px
+		height: 550px
 
 	.carousel
-		width: 90%
+		width: 100%
+		margin-top: 60px
+		#prevButton
+			order: 1
+		#nextButton
+			order: 2
+	.carousel__main
+		width: 100%
+		flex-wrap: wrap
+		justify-content: space-between
+	.carousel__slides--thumbnails
+		&::-webkit-scrollbar 
+			width: 0 /* ширина для вертикального скролла */
+			height: 0/* высота для горизонтального скролла */
+		/* ползунок скроллбара */
+	.carousel__slides
+		max-width: 100%
+		flex: 0 0 100%
+		height: 550px
 
 	.carousel__slide--thumbnail
-		width: 150px
-		height: 100px
-		flex: 0 0 150px
+		width: 250px
+		height: 200px
+		flex: 0 0 250px
 		margin-right: 20px
+
+	.gallery-modal__close
+		right: 0
+		top: -25px
 
 	.office-time__item
 		max-width: calc(48% - 80px)
 		flex: 0 0 calc(48% - 80px)
-		margin-right: 4%
+		margin-right: 3%
 		border: 1px solid #C4C4C4
 		border-radius: 5px
 		padding: 35px 40px
@@ -409,6 +457,73 @@
 		svg
 			margin-right: 0
 @media (max-width: 768px)
+	.office-item__additionally
+		display: flex
+		justify-content: space-between
+		margin-top: 20px
+		&-right
+			.office-item__additionally-item-value
+				text-align: right
+		&-column
+			max-width: 47%
+			flex: 0 0 47%
+		&-item
+			display: flex
+			align-items: start
+			justify-content: space-between
+			margin-bottom: 5px
+			&-text
+				font-size: 16px
+				line-height: 19px
+				color: #717171
+				max-width: 60%
+				flex: 0 0 60%
+				font-weight: normal
+			&-value
+				font-size: 16px
+				line-height: 19px
+				color: #000000
+				max-width: 35%
+				flex: 0 0 35%
+				font-weight: normal
+	.office-item__header::after
+		left: 0
+		right: 0
+		bottom: -25px
+		background-color: #FFECEC
+	.office-item--active 
+		.office-item__header
+			margin-bottom: 50px
+		.office-item__additionally
+			margin-bottom: 30px
+	.office-item
+		&:nth-child(1)
+			border-top: 1px solid transparent
+	.office-page
+		margin-top: 100px
+	.office-page__body
+		.header__wrap
+			width: 100%
+		.header
+			width: calc(100% - 40px)
+		.calendar-form__inner
+			right: 0
+			left: auto
+			transform: translate(0)
+	.office-page__header
+		margin-bottom: 20px
+	.office-page__main
+		margin-top: 10px
+	.office-page__nav-item
+		margin-top: 15px
+	.office-page__tabs-nav
+		margin-left: 0px !important
+		margin-right: 0px
+	.tabs__container
+		margin-left: 0px !important
+		margin-right: 0px
+	.office-item:nth-child(2n) .office-item__header
+		background-color: transparent
 	.search-page__map iframe
 		z-index: -1 !important
 	.search-page__title
@@ -532,9 +647,10 @@
 	.office-page__offer
 		flex-wrap: wrap
 		position: relative
+		padding: 20px
 	.office-page__offer-opts
 		position: absolute
-		top: 20px
+		top: 23px
 		right: 20px
 	.office-page__nav
 		flex-wrap: wrap
@@ -595,7 +711,7 @@
 		height: 100%
 		padding-left: 20px
 		padding-right: 20px
-		padding-bottom: 250px
+		padding-bottom: 50px
 		&::-webkit-scrollbar 
 			width: 0px
 			height: 0px
@@ -1094,6 +1210,17 @@
 	.calendar-form__input input
 		padding-left: 40px
 @media (max-width: 440px)
+	.office-page__body
+		.header__wrap
+			flex-wrap: wrap
+			.header__city
+				margin-right: 0
+				flex: 0 0 47%
+				max-width: 47%
+				margin-bottom: 0px
+			.header__calendar
+				max-width: 47%
+				flex: 0 0 47%
 	.search-page__buttons-filters
 		height: calc(100vh - 120px)
 		top: auto
