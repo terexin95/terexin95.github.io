@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=1400, initial-scale=1.0">
+	<link rel="stylesheet" href="fonts/alshauss/stylesheet.css">
+	<link rel="stylesheet" href="fonts/novigo/stylesheet.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>SELLAUTO</title>
+</head>
+<body>
+	<header class="header">
+		<div class="header__wrap">
+			<a href="#" class="header__logo">
+				<img src="img/logo.png" alt="">
+			</a>
+			<div class="header__menu">
+				<a href="#" class="header__menu-item header__menu-item--active">
+					Объявления
+				</a>
+				<a href="#" class="header__menu-item">
+					Каталог автомобилей
+				</a>
+			</div>
+			<div class="header__search">
+				<input type="text" placeholder="Поиск обьявлений">
+				<button>
+					<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9.40495 2.5C13.0868 2.5 16.0716 5.48477 16.0716 9.16667C16.0716 10.7068 15.5493 12.125 14.6722 13.2538L17.9109 16.4941L16.7324 17.6726L13.4921 14.4339C12.3633 15.3111 10.9451 15.8333 9.40495 15.8333C5.72305 15.8333 2.73828 12.8486 2.73828 9.16667C2.73828 5.48477 5.72305 2.5 9.40495 2.5ZM9.40495 4.16667C6.64352 4.16667 4.40495 6.40524 4.40495 9.16667C4.40495 11.9281 6.64352 14.1667 9.40495 14.1667C12.1664 14.1667 14.4049 11.9281 14.4049 9.16667C14.4049 6.40524 12.1664 4.16667 9.40495 4.16667Z" fill="#2B2D33" fill-opacity="0.24"/>
+					</svg>
+				</button>
+			</div>
+			<div class="header__messages">
+				<div class="header__icon">
+					<div class="header__icon-svg">
+						<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M20.7383 3C21.2906 3 21.7383 3.44772 21.7383 4V18C21.7383 18.5523 21.2906 19 20.7383 19H13.0716L9.33828 21.8C8.67905 22.2944 7.73828 21.824 7.73828 21V19H4.73828C4.186 19 3.73828 18.5523 3.73828 18V4C3.73828 3.44772 4.186 3 4.73828 3H20.7383ZM19.7383 5H5.73828V17H8.73828C9.29057 17 9.73828 17.4477 9.73828 18V19L12.1383 17.2C12.3114 17.0702 12.5219 17 12.7383 17H19.7383V5ZM15.7383 12V14H7.73828V12H15.7383ZM17.7383 8V10H7.73828V8H17.7383Z" fill="black"/>
+						</svg>
+						<div class="header__icon-num">3</div>
+					</div>
+					<div class="header__icon-text">Сообщения</div>
+				</div>
+			</div>
+			<div class="header__favorites">
+				<div class="header__icon">
+					<div class="header__icon-svg">
+						<svg width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M10.7381 0.664062C11.1375 0.664062 11.4986 0.901712 11.6566 1.26854L14.1256 7.00169L20.3411 7.57817C20.7387 7.61505 21.0763 7.88503 21.1998 8.26488C21.3232 8.64472 21.2087 9.06158 20.9087 9.32517L16.2191 13.4449L17.5915 19.5344C17.6793 19.924 17.5269 20.3285 17.2038 20.5632C16.8807 20.798 16.4489 20.818 16.1054 20.6141L10.7381 17.4271L5.37085 20.6141C5.02744 20.818 4.59562 20.798 4.27251 20.5632C3.94939 20.3285 3.79695 19.924 3.88476 19.5344L5.2572 13.4449L0.567593 9.32517C0.267538 9.06158 0.153104 8.64472 0.276523 8.26488C0.399942 7.88503 0.737543 7.61505 1.13523 7.57817L7.35074 7.00169L9.81969 1.26854C9.97766 0.901712 10.3388 0.664062 10.7381 0.664062ZM10.7381 4.19233L8.95279 8.33811C8.80801 8.67429 8.49114 8.90451 8.12668 8.93831L3.63211 9.35517L7.02327 12.3343C7.29826 12.5758 7.41929 12.9483 7.33881 13.3054L6.34637 17.7088L10.2276 15.4042C10.5423 15.2173 10.934 15.2173 11.2487 15.4042L15.1299 17.7088L14.1375 13.3054C14.057 12.9483 14.178 12.5758 14.453 12.3343L17.8442 9.35517L13.3496 8.93831C12.9851 8.90451 12.6683 8.67429 12.5235 8.33811L10.7381 4.19233Z" fill="black"/>
+						</svg>
+						<div class="header__icon-num">5</div>
+					</div>
+					<div class="header__icon-text">Избранное</div>
+				</div>
+			</div>
+			<a href="#" class="header__sell">Продать</a>
+			<a href="#" class="header__login">Войти</a>
+		</div>
+	</header>
+	<main>
+		<div class="container">
+			<div class="breadcrumbs">
+				<a href="#" class="breadcrumbs__link">
+					<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6 10.4404C6 10.0722 6.29848 9.77376 6.66667 9.77376H9.33333C9.70152 9.77376 10 10.0722 10 10.4404V13.1071H12.6667V8.71657L8 4.04991L3.33333 8.71657V13.1071H6V10.4404ZM7.33333 11.1071V13.7738C7.33333 14.142 7.03486 14.4404 6.66667 14.4404H2.66667C2.29848 14.4404 2 14.142 2 13.7738V8.44043C2 8.26362 2.07024 8.09405 2.19526 7.96903L7.5286 2.63569C7.78895 2.37534 8.21106 2.37534 8.4714 2.63569L13.8047 7.96903C13.9298 8.09405 14 8.26362 14 8.44043V13.7738C14 14.142 13.7015 14.4404 13.3333 14.4404H9.33333C8.96514 14.4404 8.66667 14.142 8.66667 13.7738V11.1071H7.33333Z" fill="#808185"/>
+					</svg>
+				</a>
+				<a href="#" class="breadcrumbs__link">Продажа автомобилей</a>
+				<a href="#" class="breadcrumbs__link">Новые</a>
+				<a href="#" class="breadcrumbs__link">Kia</a>
+				<a href="#" class="breadcrumbs__link">Creed</a>
+			</div>
+			<div class="single">
+				<div class="single__images">
+					<div class="single__images-top">
+						<img src="img/post.png" alt="post">
+						<div class="single__days-end">
+							Осталось 4 дня
+						</div>
+					</div>
+					<div class="single__images-wrap">
+						<div class="single__images-item">
+							<img src="img/post1.png" alt="">
+						</div>
+						<div class="single__images-item">
+							<img src="img/post2.png" alt="">
+						</div>
+						<div class="single__images-item single__images-item-overlay">
+							<div class="single__images-overlay">
+								<svg width="39" height="40" viewBox="0 0 39 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M13.811 6.13913C14.1114 5.8387 14.5189 5.66992 14.9438 5.66992H24.5556C24.9804 5.66992 25.3879 5.8387 25.6883 6.13913L28.4231 8.87386H34.1674C35.0521 8.87386 35.7693 9.59108 35.7693 10.4758V31.3014C35.7693 32.1861 35.0521 32.9034 34.1674 32.9034H5.33195C4.44721 32.9034 3.72998 32.1861 3.72998 31.3014V10.4758C3.72998 9.59108 4.44721 8.87386 5.33195 8.87386H6.93392V7.27189H10.1379V8.87386H11.0763L13.811 6.13913ZM15.6073 8.87386L12.8726 11.6086C12.5722 11.909 12.1647 12.0778 11.7398 12.0778H6.93392V29.6994H32.5654V12.0778H27.7595C27.3346 12.0778 26.9272 11.909 26.6267 11.6086L23.892 8.87386H15.6073Z" fill="white"/>
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M19.7497 24.0926C21.9615 24.0926 23.7546 22.2995 23.7546 20.0876C23.7546 17.8758 21.9615 16.0827 19.7497 16.0827C17.5378 16.0827 15.7447 17.8758 15.7447 20.0876C15.7447 22.2995 17.5378 24.0926 19.7497 24.0926ZM19.7497 27.2965C23.731 27.2965 26.9585 24.069 26.9585 20.0876C26.9585 16.1063 23.731 12.8788 19.7497 12.8788C15.7683 12.8788 12.5408 16.1063 12.5408 20.0876C12.5408 24.069 15.7683 27.2965 19.7497 27.2965Z" fill="white"/>
+								</svg>
+								Еще 34 фото
+							</div>
+							<img src="img/post1.png" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="single__content">
+					<h1 class="single__title">Kia Ceed III</h1>
+					<div class="single__content-specifications">1.6 AT (128 л.с.) Luxe, 2021</div>
+					<div class="single__content-inner">
+						<div class="single__content-artikul">№ 1104199613</div>
+						<div class="single__content-status">Новый автомобиль</div>
+					</div>
+					<div class="single__content-inner">
+						<div class="single__content-favorite">
+							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M18.6944 7.68548L13.4561 7.09148L11.2562 2.43166C11.137 2.17902 10.8772 2.01709 10.5913 2.01709C10.3054 2.01709 10.0457 2.17902 9.92638 2.43166L7.72657 7.09149L2.48817 7.6855C2.20417 7.71771 1.9655 7.90781 1.87714 8.17218C1.78879 8.43654 1.86694 8.72672 2.07723 8.91507L5.95604 12.389L4.91836 17.4159C4.86211 17.6884 4.97433 17.9679 5.20565 18.1313C5.43697 18.2946 5.745 18.312 5.99424 18.1758L10.5913 15.663L15.1884 18.1758C15.4376 18.312 15.7456 18.2946 15.977 18.1312C16.2083 17.9679 16.3205 17.6884 16.2642 17.4159L15.2266 12.389L19.1054 8.91505C19.3157 8.72671 19.3938 8.43653 19.3055 8.17216C19.2171 7.90779 18.9784 7.71769 18.6944 7.68548Z" fill="#2B2D33"/>
+							</svg>
+							В избранное  (11)
+						</div>
+						<div class="single__content-view">
+							<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5911 12.6419C9.21043 12.6419 8.09115 11.5226 8.09115 10.1419C8.09115 8.76122 9.21043 7.64193 10.5911 7.64193C11.9719 7.64193 13.0911 8.76122 13.0911 10.1419C13.0911 11.5226 11.9719 12.6419 10.5911 12.6419ZM10.5911 10.9753C11.0514 10.9753 11.4245 10.6022 11.4245 10.1419C11.4245 9.68169 11.0514 9.30859 10.5911 9.30859C10.1309 9.30859 9.75781 9.68169 9.75781 10.1419C9.75781 10.6022 10.1309 10.9753 10.5911 10.9753Z" fill="#2B2D33"/>
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5911 15.9753C7.82862 15.9753 5.11629 14.167 2.42883 10.6477C2.20081 10.3491 2.20081 9.93479 2.42883 9.63617C5.11629 6.11682 7.82862 4.30859 10.5911 4.30859C13.3537 4.30859 16.066 6.11682 18.7535 9.63617C18.9815 9.93479 18.9815 10.3491 18.7535 10.6477C16.066 14.167 13.3537 15.9753 10.5911 15.9753ZM10.5911 14.3086C12.6195 14.3086 14.7737 12.947 17.0324 10.1419C14.7737 7.33685 12.6195 5.97526 10.5911 5.97526C8.56282 5.97526 6.40862 7.33685 4.14989 10.1419C6.40862 12.947 8.56282 14.3086 10.5911 14.3086Z" fill="#2B2D33"/>
+							</svg>
+							1200
+						</div>
+					</div>
+					<div class="single__content-wrap">
+						<div class="single__content-item">
+							<div class="single__content-item-title">Заканчивается:</div>
+							<div class="single__content-item-value">24.10.2021, 10: 00МСК</div>
+						</div>
+						<div class="single__content-item">
+							<div class="single__content-item-title">Размещено:</div>
+							<div class="single__content-item-value">20.10.2021, 10: 00МСК</div>
+						</div>
+						<div class="single__content-item">
+							<div class="single__content-item-title">Продавец:</div>
+							<div class="single__content-item-value single__content-item-value--dealer">АвтоСпецЦентр Kia Север</div>
+						</div>
+						<div class="single__content-item">
+							<div class="single__content-item-title">Город продажи:</div>
+							<div class="single__content-item-value">г. Москва</div>
+						</div>
+					</div>
+					<div class="single__content-note">
+						<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M3 1.81445H4.66667V3.48112H3V1.81445Z" fill="#2B2D33"/>
+							<path d="M6.33333 1.81445H8V3.48112H6.33333V1.81445Z" fill="#2B2D33"/>
+							<path d="M11.3333 1.81445H9.66667V3.48112H11.3333V1.81445Z" fill="#2B2D33"/>
+							<path d="M13 1.81445H14.6667V3.48112H13V1.81445Z" fill="#2B2D33"/>
+							<path d="M18 1.81445H16.3333V3.48112H18V1.81445Z" fill="#2B2D33"/>
+							<path d="M7.16667 13.4811H13.8333V11.8145H7.16667V13.4811Z" fill="#2B2D33"/>
+							<path d="M13.8333 10.1478H7.16667V8.48112H13.8333V10.1478Z" fill="#2B2D33"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M3.83333 5.98112C3.83333 5.52088 4.20643 5.14779 4.66667 5.14779H16.3333C16.7936 5.14779 17.1667 5.52088 17.1667 5.98112V17.6478C17.1667 18.108 16.7936 18.4811 16.3333 18.4811H4.66667C4.20643 18.4811 3.83333 18.108 3.83333 17.6478V5.98112ZM5.5 6.81445V16.8145H8.83333V15.1478H12.1667V16.8145H15.5V6.81445H5.5Z" fill="#2B2D33"/>
+						</svg>
+						Создать заметку
+					</div>
+				</div>
+				<div class="single__dealer">
+					<div class="single__dealer-wrap">
+						<div class="single__dealer-brand">
+							<img src="img/auto/kia.png" alt="">
+							<div class="single__dealer-inner">
+								<div class="single__dealer-rating">
+									Рейтинг: <span>5.0</span>
+								</div>
+								<div class="single__dealer-info">
+									<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M11.8094 7.47233C11.8094 8.16269 11.2465 8.72233 10.5523 8.72233C9.85803 8.72233 9.29523 8.16269 9.29523 7.47233C9.29523 6.78197 9.85803 6.22233 10.5523 6.22233C11.2465 6.22233 11.8094 6.78197 11.8094 7.47233Z" fill="#008E7D"/>
+										<path d="M8.45719 14.5557V12.889H9.71425V11.2223H8.87621V9.55566H10.5523C11.0151 9.55566 11.3903 9.92876 11.3903 10.389V12.889H12.6474V14.5557H8.45719Z" fill="#008E7D"/>
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5523 18.7223C5.92391 18.7223 2.17188 14.9914 2.17188 10.389C2.17188 5.78662 5.92391 2.05566 10.5523 2.05566C15.1807 2.05566 18.9327 5.78662 18.9327 10.389C18.9327 14.9914 15.1807 18.7223 10.5523 18.7223ZM10.5523 17.0557C14.255 17.0557 17.2566 14.0709 17.2566 10.389C17.2566 6.7071 14.255 3.72233 10.5523 3.72233C6.84959 3.72233 3.84796 6.7071 3.84796 10.389C3.84796 14.0709 6.84959 17.0557 10.5523 17.0557Z" fill="#008E7D"/>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="single__dealer-price">
+							1 499 900 ₽
+						</div>
+						<div class="single__dealer-commission">
+							Комиссия: 20 356  ₽
+						</div>
+						<div class="single__dealer-open">Показать номер</div>
+						<div class="single__dealer-write">Написать сообщение</div>
+					</div>
+				</div>
+			</div>
+			<div class="tabs">
+			  <ul class="tabs__button-group">
+			    <li class="tabs__toggle active" data-tab="1">Описание</li>
+			    <li class="tabs__toggle" data-tab="2">Документы</li>
+			    <li class="tabs__toggle" data-tab="3">Проверка ЛКП</li>
+			    <li class="tabs__toggle" data-tab="4">Повреждения</li>
+			    <li class="tabs__toggle" data-tab="5">Комплектация</li>
+			    <li class="tabs__toggle" data-tab="6">Шины</li>
+			    <li class="tabs__toggle" data-tab="7">Тех. проверка</li>
+			  </ul>
+			  <ul class="tabs__container">
+			    <li class="tabs__tab-panel active" data-tab="1">
+			      <div class="tabs__content single-description">
+			        <h2 class="single__title">Спецификация</h2>
+			        <div class="single-description__wrap">
+			        	<div class="single__content-wrap">
+									<div class="single__content-item">
+										<div class="single__content-item-title">VIN номер:</div>
+										<div class="single__content-item-value">2021</div>
+									</div>
+									<div class="single__content-item">
+										<div class="single__content-item-title">Марка:</div>
+										<div class="single__content-item-value">1000 км</div>
+									</div>
+									<div class="single__content-item">
+										<div class="single__content-item-title">Модель:</div>
+										<div class="single__content-item-value">Ceed</div>
+									</div>
+									<div class="single__content-item">
+										<div class="single__content-item-title">Модификация:</div>
+										<div class="single__content-item-value">1.6 AT (128 л.с.) Luxe</div>
+									</div>
+									<div class="single__content-item">
+										<div class="single__content-item-title">Поколение:</div>
+										<div class="single__content-item-value">III</div>
+									</div>
+								</div>
+								<div class="single__content-wrap">
+									<div class="single__content-item">
+										<div class="single__content-item-title">Год выпуска:</div>
+										<div class="single__content-item-value">2021</div>
+									</div>
+									<div class="single__content-item">
+										<div class="single__content-item-title">Пробег:</div>
+										<div class="single__content-item-value">1000 км</div>
+									</div>
+									<div class="single__content-item">
+										<div class="single__content-item-title">Тип двигателя:</div>
+										<div class="single__content-item-value">Бензин</div>
+									</div>
+									<div class="single__content-item">
+										<div class="single__content-item-title">Объем двигателя:</div>
+										<div class="single__content-item-value">5154 см2</div>
+									</div>
+									<div class="single__content-item">
+										<div class="single__content-item-title">Мощность:</div>
+										<div class="single__content-item-value">128 л.с.</div>
+									</div>
+								</div>
+								<div class="single__content-wrap">
+									<div class="single__content-item">
+										<div class="single__content-item-title">Тип КПП:</div>
+										<div class="single__content-item-value">Автомат</div>
+									</div>
+									<div class="single__content-item">
+										<div class="single__content-item-title">Привод:</div>
+										<div class="single__content-item-value">Полный</div>
+									</div>
+									<div class="single__content-item">
+										<div class="single__content-item-title">Цвет:</div>
+										<div class="single__content-item-value">Черный</div>
+									</div>
+									<div class="single__content-item">
+										<div class="single__content-item-title">Рег. знак:</div>
+										<div class="single__content-item-value">м955мн 999</div>
+									</div>
+									<div class="single__content-item">
+										<div class="single__content-item-title">Тип кузова:</div>
+										<div class="single__content-item-value">Седан</div>
+									</div>
+								</div>
+			        </div>
+			        <div class="single-description__comment">
+			        	<h2 class="single__title">Комментарий продавца</h2>
+			        	<div class="single-description__comment-text">
+			        		<p>АвтоСпецЦентр Север официальный дилер KIA предоставляет полный спектр услуг по продаже и сервисному обслуживанию автомобилей.</p>
+									<p>В нашем автосалоне Вы можете ознакомиться со всей линейкой модельного ряда KIA.</p>
+			        	</div>
+			        	<div class="single-description__comment-more">
+			        		Показать больше
+			        	</div>
+			        </div>
+			      </div>
+			    </li>
+			    <li class="tabs__tab-panel" data-tab="2">
+			      <div class="tabs__content">
+			        
+			      </div>
+			    </li>
+			    <li class="tabs__tab-panel" data-tab="3">
+			      <div class="tabs__content">
+			        
+			      </div>
+			    </li>
+			    <li class="tabs__tab-panel" data-tab="4">
+			      <div class="tabs__content">
+			        
+			      </div>
+			    </li>
+			    <li class="tabs__tab-panel" data-tab="5">
+			      <div class="tabs__content">
+			        
+			      </div>
+			    </li>
+			    <li class="tabs__tab-panel" data-tab="6">
+			      <div class="tabs__content">
+			        
+			      </div>
+			    </li>
+			    <li class="tabs__tab-panel" data-tab="7">
+			      <div class="tabs__content">
+			        
+			      </div>
+			    </li>
+			  </ul>
+			</div>
+			<div class="other-auto">
+				<div class="other-auto__header">
+					<h2 class="single__title">Другие объявления</h2>
+					<a href="#" class="other-auto__button-more">
+						Показать другие обьявления
+					</a>
+				</div>
+				<div class="other-auto__wrap">
+					<div class="other-auto__item">
+						<a href="#">
+						<div class="other-auto__item-img">
+							<img src="img/other.png" alt="">
+						</div>
+						<div class="other-auto__item-city">Москва</div>
+						<div class="other-auto__item-title">Kia Ceed III, 2019</div>
+						<div class="other-auto__item-price">
+							1 499 900 ₽ 
+						</div>
+						</a>
+					</div>
+					<div class="other-auto__item">
+						<a href="#">
+						<div class="other-auto__item-img">
+							<img src="img/other.png" alt="">
+						</div>
+						<div class="other-auto__item-city">Москва</div>
+						<div class="other-auto__item-title">Kia Ceed III, 2019</div>
+						<div class="other-auto__item-price">
+							1 499 900 ₽ 
+						</div>
+						</a>
+					</div>
+					<div class="other-auto__item">
+						<a href="#">
+						<div class="other-auto__item-img">
+							<img src="img/other.png" alt="">
+						</div>
+						<div class="other-auto__item-city">Москва</div>
+						<div class="other-auto__item-title">Kia Ceed III, 2019</div>
+						<div class="other-auto__item-price">
+							1 499 900 ₽ 
+						</div>
+						</a>
+					</div>
+					<div class="other-auto__item">
+						<a href="#">
+						<div class="other-auto__item-img">
+							<img src="img/other.png" alt="">
+						</div>
+						<div class="other-auto__item-city">Москва</div>
+						<div class="other-auto__item-title">Kia Ceed III, 2019</div>
+						<div class="other-auto__item-price">
+							1 499 900 ₽ 
+						</div>
+						</a>
+					</div>
+					<div class="other-auto__item">
+						<a href="#">
+						<div class="other-auto__item-img">
+							<img src="img/other.png" alt="">
+						</div>
+						<div class="other-auto__item-city">Москва</div>
+						<div class="other-auto__item-title">Kia Ceed III, 2019</div>
+						<div class="other-auto__item-price">
+							1 499 900 ₽ 
+						</div>
+						</a>
+					</div>
+					<div class="other-auto__item">
+						<a href="#">
+						<div class="other-auto__item-img">
+							<img src="img/other.png" alt="">
+						</div>
+						<div class="other-auto__item-city">Москва</div>
+						<div class="other-auto__item-title">Kia Ceed III, 2019</div>
+						<div class="other-auto__item-price">
+							1 499 900 ₽ 
+						</div>
+						</a>
+					</div>
+					<div class="other-auto__item">
+						<a href="#">
+						<div class="other-auto__item-img">
+							<img src="img/other.png" alt="">
+						</div>
+						<div class="other-auto__item-city">Москва</div>
+						<div class="other-auto__item-title">Kia Ceed III, 2019</div>
+						<div class="other-auto__item-price">
+							1 499 900 ₽ 
+						</div>
+						</a>
+					</div>
+					<div class="other-auto__item">
+						<a href="#">
+						<div class="other-auto__item-img">
+							<img src="img/other.png" alt="">
+						</div>
+						<div class="other-auto__item-city">Москва</div>
+						<div class="other-auto__item-title">Kia Ceed III, 2019</div>
+						<div class="other-auto__item-price">
+							1 499 900 ₽ 
+						</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer__wrap">
+				<div class="footer__nav">
+					<a href="#" class="footer__link">Дилерам</a>
+					<a href="#" class="footer__link">Продать авто</a>
+					<a href="#" class="footer__link">Помощь</a>
+					<a href="#" class="footer__link">О проекте</a>
+					<a href="#" class="footer__link">Контакты</a>
+				</div>
+				<div class="footer__logo">
+					<a href="#">
+						<img src="img/logo.png" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="footer__line">
+				<a href="#" class="footer__politic">Политика конфиденциальности</a>
+				<div class="footer__copy">© 1996–2021 ООО «Название компании»</div>
+			</div>
+		</div>
+	</footer>
+	<script src="js/main.js"></script>
+</body>
+</html>

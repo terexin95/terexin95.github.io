@@ -1,0 +1,578 @@
+$red: #EB001B
+$green: #008E7D
+$text: #2B2D33
+
+body
+	margin: 0
+	padding: 0
+	font-family: 'ALS Hauss', sans-serif
+
+.header
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08)
+	&__login
+		display: block
+		width: 80px
+		height: 36px
+		line-height: 40px
+		border: 2px solid #D5D5D6
+		border-radius: 8px
+		text-align: center
+		line-height: 36px
+		font-weight: 500
+		font-size: 14px
+		text-decoration: none
+		color: $text
+		transition: all .3s ease
+		&:hover, &:active
+			transition: all .3s ease
+			background-color: #D5D5D6
+	&__sell
+		display: block
+		width: 100px
+		height: 40px
+		background-color: #FED500
+		border-radius: 8px
+		text-align: center
+		line-height: 40px
+		font-weight: 500
+		font-size: 14px
+		text-decoration: none
+		color: $text
+		transition: all .3s ease
+		&:hover, &:active
+			background-color: lighten(#FED500, 15%)
+			transition: all .3s ease
+	&__menu
+		height: 90px
+		display: flex
+		&-item
+			line-height: 90px
+			position: relative
+			display: block
+			height: 90px
+			margin-right: 30px
+			font-weight: 500
+			font-size: 16px
+			text-decoration: none
+			transition: all .3s ease
+			color: #808185
+			&--active, &:hover, &:active
+				color: $text
+				transition: all .3s ease
+				&::after
+					content: ""
+					position: absolute
+					bottom: 0
+					background-color: $green
+					height: 4px
+					width: 40px
+					border-radius: 4px
+					left: 50%
+					transform: translateX(-50%)
+					transition: all .3s ease
+	&__wrap
+		max-width: 1400px
+		padding: 0 30px
+		margin: auto
+		display: flex
+		justify-content: space-between
+		height: 90px
+		align-items: center
+	&__search
+		position: relative
+		input
+			width: 210px
+			height: 40px
+			padding-left: 40px
+			padding-right: 10px
+			border: 0
+			background-color: #F4F4F4
+			border-radius: 8px
+			outline: none
+			font-size: 14px
+			&::placeholder
+				font-weight: normal
+				font-size: 14px
+				line-height: 22px
+				color: rgba(43, 45, 51, 0.24)
+		button
+			position: absolute
+			top: 50%
+			left: 15px
+			transform: translateY(-50%)
+			background-color: transparent
+			border: 0
+			outline: none
+			padding: 0
+	&__icon
+		text-align: center
+		&-svg
+			position: relative
+			display: inline-block
+			height: 29px
+		&-num
+			position: absolute
+			top: -3px
+			right: -10px
+			background: $red
+			width: 16px
+			height: 16px
+			border: 2px solid #fff
+			text-align: center
+			border-radius: 100%
+			font-weight: bold
+			font-size: 9px
+			line-height: 16px
+			color: #fff
+		&-text
+			font-weight: normal
+			font-size: 10px
+			line-height: 10px
+			color: rgba(#000, .5)
+
+img
+	vertical-align: bottom
+
+.container
+	max-width: 1060px
+	margin: auto
+	padding: 0 15px
+
+.breadcrumbs
+	display: flex
+	align-items: center
+	margin-top: 25px
+	margin-bottom: 25px
+	&__link
+		margin-right: 40px
+		position: relative
+		font-size: 12px
+		line-height: 18px
+		display: flex
+		align-items: center
+		text-decoration: none
+		color: $text
+		&:nth-child(2n)
+			color: #808185
+		&::after
+			content: ""
+			width: 5px
+			height: 8px
+			background-image: url(../img/right.svg)
+			background-size: cover
+			background-repeat: no-repeat
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			right: -20px
+		&:last-child
+			&::after
+				content: ""
+				display: none
+
+.single
+	display: flex
+	justify-content: space-between
+	&__dealer
+		max-width: 200px
+		flex: 0 0 200px
+		margin-left: 20px
+		&-price
+			text-align: right
+			font-family: 'Navigo'
+			font-weight: bold
+			font-size: 26px
+			line-height: 26px
+			color: $text
+			margin-top: 25px
+		&-write
+			width: 100%
+			height: 50px
+			border-radius: 8px
+			line-height: 50px
+			color: #19B28D
+			font-weight: 500
+			font-size: 14px
+			background-color: rgba(25, 178, 141, 0.2)
+			transition: all .3s ease
+			cursor: pointer
+			text-align: center
+			&:hover, &:active
+				background-color: rgba(25, 178, 141, 0.6)
+				transition: all .3s ease
+				color: #fff
+		&-open
+			width: 100%
+			margin-bottom: 10px
+			height: 50px
+			background-color: #19B28D
+			border-radius: 8px
+			line-height: 50px
+			text-align: center
+			color: #FFFFFF
+			font-weight: 500
+			font-size: 14px
+			cursor: pointer
+			transition: all .3s ease
+			&:hover, &:active
+				background-color: darken(#19B28D, 5%)
+				transition: all .3s ease
+		&-commission
+			font-weight: 500
+			margin-bottom: 10px
+			font-size: 14px
+			line-height: 14px
+			text-align: right
+			color: $green
+			margin-bottom: 10px
+		&-wrap
+			padding: 13px 12px
+			background-color: #F9F9F9
+			border-radius: 8px
+		&-brand
+			padding: 15px 18px
+			text-align: center
+			background-color: #fff
+			box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.04)
+			border-radius: 8px
+			img
+				max-width: 95px
+				height: auto
+		&-inner
+			display: flex
+			justify-content: space-between
+			margin-top: 15px
+			align-items: center
+		&-rating
+			font-weight: 500
+			font-size: 16px
+			line-height: 26px
+			color: #000
+			span
+				color: #FF5F00
+	&__days-end
+		padding-left: 8px
+		padding-right: 8px
+		height: 25px
+		background-color: #F0F0FE
+		border-radius: 4px
+		line-height: 25px
+		text-align: center
+		top: 12px
+		left: 15px
+		position: absolute
+	&__images
+		max-width: 440px
+		flex: 0 0 440px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+		&-top
+			width: 100%
+			height: 260px
+			position: relative
+			cursor: pointer
+		&-wrap
+			display: flex
+			justify-content: space-between
+		&-item
+			max-width: 32%
+			flex: 0 0 32%
+			height: 80px
+			overflow: hidden
+			border-radius: 8px
+			position: relative
+			cursor: pointer
+			img
+				border-radius: 8px
+		&-overlay
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))
+			text-align: center
+			font-weight: bold
+			font-size: 12px
+			color: #fff
+			svg
+				display: block
+				margin: auto
+				margin-bottom: 10px
+	&__content
+		max-width: 315px
+		flex: 0 0 315px
+		margin-left: 35px
+		&-note
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 160px
+			height: 40px
+			border-bottom: 1px solid #E9EAEA
+			margin-top: 30px
+			cursor: pointer
+			svg
+				margin-right: 10px
+		&-wrap
+			margin-top: 25px
+		&-item
+			display: flex
+			justify-content: space-between
+			margin-bottom: 10px
+			&-title
+				max-width: 110px
+				flex: 0 0 110px
+				font-weight: bold
+				font-size: 14px
+				line-height: 18px
+				color: $text
+			&-value
+				max-width: 180px
+				flex: 0 0 180px
+				font-weight: normal
+				font-size: 14px
+				line-height: 18px
+				color: rgba($text, .5)
+				&--dealer
+					color: #D71016
+					font-weight: 500
+		&-specifications
+			font-style: normal
+			font-weight: 500
+			font-size: 12px
+			line-height: 18px
+			color: rgba($text, .5)
+			margin-bottom: 12px
+		&-inner
+			display: flex
+			margin-bottom: 12px
+		&-artikul
+			font-weight: 500
+			font-size: 14px
+			line-height: 22px
+			color: $text
+			margin-right: 15px
+		&-status
+			color: $green
+			font-weight: 500
+			font-size: 14px
+			line-height: 22px
+		&-view
+			display: flex
+			align-items: center
+			font-weight: normal
+			font-size: 12px
+			line-height: 40px
+			color: rgba($text, .5)
+			svg
+				margin-right: 12px
+		&-favorite
+			display: flex
+			align-items: center
+			justify-content: center
+			padding-left: 20px
+			padding-right: 20px
+			height: 35px
+			border: 2px solid #D5D5D6
+			border-radius: 8px
+			color: $text
+			cursor: pointer
+			transition: all .3s ease
+			margin-right: 13px
+			svg
+				margin-right: 10px
+				transition: all .3s ease
+			&--active, &:hover, &:active
+				color: #fff
+				transition: all .3s ease
+				background-color: #D5D5D6
+				svg
+					path
+						fill: #fff
+						transition: all .3s ease
+	&__title
+		margin: 0
+		color: $text
+		font-weight: bold
+		font-size: 24px
+		font-family: 'Navigo'
+		line-height: 24px
+		margin-bottom: 12px
+
+ul
+	margin: 0
+	padding: 0
+	li
+		list-style-type: none
+
+.tabs
+	margin-top: 50px
+	.tabs__button-group
+		display: flex
+		justify-content: space-between
+		border-bottom: 1px solid #E9EAEA
+		.active
+			color: $text
+			&::after
+				content: ""
+				position: absolute
+				width: 100%
+				height: 4px
+				border-radius: 4px
+				bottom: -1px
+				background-color: #FF0000
+				left: 0
+				right: 0
+	.tabs__toggle
+		font-weight: bold
+		font-size: 18px
+		line-height: 18px
+		color: rgba($text, .5)
+		padding-bottom: 18px
+		position: relative
+		cursor: pointer
+	.tabs__tab-panel
+		display: none
+	.tabs__container .active
+		display: block
+
+.other-auto
+	margin-bottom: 40px
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+	&__item
+		max-width: 22%
+		flex: 0 0 22%
+		margin-right: 4%
+		margin-bottom: 25px
+		a
+			text-decoration: none
+		&-title
+			font-weight: normal
+			font-size: 16px
+			line-height: 22px
+			color: $text
+		&-price
+			font-weight: bold
+			font-size: 16px
+			line-height: 22px
+			color: $text
+		&-city
+			padding-left: 8px
+			padding-right: 8px
+			background: #F0F0FE
+			border-radius: 4px
+			display: inline-block
+			font-weight: normal
+			font-size: 12px
+			line-height: 30px
+			height: 30px
+			margin-top: 15px
+			margin-bottom: 15px
+			color: $text
+		&:nth-child(4n)
+			margin-right: 0
+		&-img
+			height: 150px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+	&__header
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 25px
+	&__button-more
+		border-radius: 8px
+		border: 2px solid #D5D5D6
+		width: 230px
+		height: 40px
+		line-height: 40px
+		text-align: center
+		color: $text
+		font-weight: 500
+		font-size: 14px
+		cursor: pointer
+		transition: all .3s ease
+		display: block
+		text-decoration: none
+		&:hover, &:active
+			background-color: #D5D5D6
+			color: #fff
+			transition: all .3s ease
+
+.footer
+	padding: 40px 0
+	background-color: #2B2D33
+	&__line
+		margin-top: 18px
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__copy
+		font-size: 16px
+		line-height: 26px
+		color: #808185
+	&__politic
+		color: #808185
+		border-bottom: 1px solid #808185
+		text-decoration: none
+	&__wrap
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-bottom: 30px
+		border-bottom: 1px solid #55575C
+	&__nav
+		display: flex
+	&__link
+		font-weight: 500
+		font-size: 16px
+		line-height: 26px
+		color: #808185
+		text-decoration: none
+		margin-right: 50px
+		transition: all .3s ease
+		&:hover, &:active
+			color: lighten(#808185, 15%)
+			transition: all .3s ease
+		&:last-child
+			margin-right: 0
+
+.single-description
+	margin-top: 50px
+	&__comment
+		max-width: 580px
+		margin-top: 50px
+		margin-bottom: 50px
+		&-text
+			p
+				font-weight: normal
+				font-size: 14px
+				line-height: 22px
+				color: rgba($text, .8)
+		&-more
+			color: #00809C
+			border-bottom: 1px solid #00809C
+			font-weight: normal
+			font-size: 14px
+			line-height: 22px
+			display: inline-block
+			cursor: pointer
+	&__wrap
+		display: flex
+		justify-content: space-between
+		.single__content-wrap
+			max-width: 30%
+			flex: 0 0 30%
+		.single__content-item-title
+			max-width: 150px
+			flex: 0 0 150px
+		.single__content-item-value
+			max-width: 140px
+			flex: 0 0 140px
