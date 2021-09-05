@@ -5,6 +5,8 @@ body {
 
 .header {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08); }
+  .header__logo {
+    height: 40px; }
   .header__login {
     display: block;
     width: 80px;
@@ -133,6 +135,8 @@ img {
   max-width: 1060px;
   margin: auto;
   padding: 0 15px; }
+  .container-min {
+    max-width: 880px; }
 
 .breadcrumbs {
   display: flex;
@@ -295,7 +299,8 @@ img {
       .single__images-overlay svg {
         display: block;
         margin: auto;
-        margin-bottom: 10px; }
+        margin-bottom: 5px;
+        margin-top: 10px; }
   .single__content {
     max-width: 315px;
     flex: 0 0 315px;
@@ -407,7 +412,8 @@ ul {
   .tabs .tabs__button-group {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #E9EAEA; }
+    border-bottom: 1px solid #E9EAEA;
+    margin-bottom: 50px; }
     .tabs .tabs__button-group .active {
       color: #2B2D33; }
       .tabs .tabs__button-group .active::after {
@@ -434,7 +440,8 @@ ul {
     display: block; }
 
 .other-auto {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  margin-top: 50px; }
   .other-auto__wrap {
     display: flex;
     flex-wrap: wrap; }
@@ -538,36 +545,688 @@ ul {
     .footer__link:last-child {
       margin-right: 0; }
 
-.single-description {
-  margin-top: 50px; }
-  .single-description__comment {
-    max-width: 580px;
-    margin-top: 50px;
-    margin-bottom: 50px; }
-    .single-description__comment-text p {
-      font-weight: normal;
+.single-description__comment {
+  max-width: 580px;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+  .single-description__comment-text p {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgba(43, 45, 51, 0.8); }
+  .single-description__comment-more {
+    color: #00809C;
+    border-bottom: 1px solid #00809C;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    display: inline-block;
+    cursor: pointer; }
+.single-description__wrap {
+  display: flex;
+  justify-content: space-between; }
+  .single-description__wrap .single__content-wrap {
+    max-width: 30%;
+    flex: 0 0 30%; }
+  .single-description__wrap .single__content-item-title {
+    max-width: 150px;
+    flex: 0 0 150px; }
+  .single-description__wrap .single__content-item-value {
+    max-width: 140px;
+    flex: 0 0 140px; }
+
+.modal-carusel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center; }
+  .modal-carusel__inner {
+    position: relative; }
+  .modal-carusel__btn {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F8F8F8;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease; }
+    .modal-carusel__btn:hover, .modal-carusel__btn:active {
+      background-color: #dfdfdf;
+      transition: all 0.3s ease; }
+    .modal-carusel__btn-left {
+      position: absolute;
+      left: -60px;
+      top: 50%;
+      transform: translateY(-50%); }
+    .modal-carusel__btn-right {
+      position: absolute;
+      right: -60px;
+      top: 50%;
+      transform: translateY(-50%); }
+  .modal-carusel__close {
+    width: 44px;
+    height: 44px;
+    border: 2px solid #00A5BC;
+    border-radius: 4px;
+    background-color: #F8F8F8;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; }
+    .modal-carusel__close:hover, .modal-carusel__close:active {
+      background-color: #dfdfdf;
+      transition: all 0.3s ease; }
+  .modal-carusel--active {
+    display: flex; }
+  .modal-carusel__title {
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: "Navigo";
+    color: #fff;
+    text-align: center; }
+  .modal-carusel__wrap {
+    max-width: 1020px;
+    margin: auto;
+    padding-left: 60px;
+    padding-right: 60px;
+    position: relative; }
+  .modal-carusel__top {
+    height: 60%; }
+    .modal-carusel__top img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border-radius: 8px; }
+  .modal-carusel__thumbs {
+    display: flex;
+    overflow: hidden; }
+  .modal-carusel__thumb {
+    margin-right: 11.5px;
+    cursor: pointer;
+    flex: 0 0 160px;
+    max-width: 160px;
+    height: 100px; }
+    .modal-carusel__thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px; }
+
+.single-paintwork__wrap {
+  display: flex;
+  justify-content: space-between; }
+.single-paintwork__img {
+  flex: 0 0 420px;
+  max-width: 420px; }
+.single-paintwork__inner {
+  flex: 0 0 calc(100% - 510px);
+  max-width: calc(100% - 510px); }
+.single-paintwork__right {
+  display: flex;
+  align-items: center; }
+.single-paintwork__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid #E9EAEA; }
+  .single-paintwork__item-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    color: #2B2D33;
+    margin-bottom: 10px; }
+  .single-paintwork__item-subtitle {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: rgba(43, 45, 51, 0.5); }
+  .single-paintwork__item-img {
+    width: 64px;
+    height: 64px; }
+    .single-paintwork__item-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px; }
+  .single-paintwork__item-text {
+    margin-right: 15px;
+    font-weight: normal;
+    font-size: 16px;
+    color: rgba(43, 45, 51, 0.5);
+    line-height: 18px; }
+  .single-paintwork__item:last-child {
+    border-bottom: 1px solid #E9EAEA; }
+
+.offer-dealer {
+  padding: 20px;
+  background: #FCFCFC;
+  border-radius: 8px;
+  padding-right: 40px;
+  margin-top: 80px; }
+  .offer-dealer__inner {
+    display: flex;
+    justify-content: flex-end; }
+  .offer-dealer__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
+  .offer-dealer__title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    color: #2B2D33;
+    font-family: "Navigo";
+    margin-bottom: 5px; }
+  .offer-dealer__art {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(43, 45, 51, 0.5); }
+  .offer-dealer__btns {
+    display: flex;
+    max-width: 60%;
+    flex: 0 0 60%;
+    justify-content: flex-end; }
+  .offer-dealer__btn {
+    margin-left: 30px;
+    flex: 0 0 230px; }
+  .offer-dealer__item {
+    display: flex;
+    padding: 15px;
+    padding-right: 30px;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.04);
+    border-radius: 8px;
+    background-color: #fff;
+    align-items: center;
+    margin-top: 5px; }
+    .offer-dealer__item-map {
+      display: flex;
+      align-items: center;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      color: rgba(43, 45, 51, 0.5); }
+      .offer-dealer__item-map svg {
+        margin-right: 10px; }
+    .offer-dealer__item-title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 16px;
+      color: #D71016; }
+    .offer-dealer__item-img {
+      flex: 0 0 40px;
+      margin-right: 15px; }
+      .offer-dealer__item-img img {
+        width: 100%;
+        height: auto; }
+
+.accordion {
+  border: 1px solid #E9EAEA;
+  border-radius: 12px; }
+  .accordion__title {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 60px;
+    padding-left: 25px;
+    padding-right: 25px;
+    align-items: center;
+    cursor: pointer; }
+    .accordion__title svg {
+      transition: all 0.3s ease; }
+  .accordion__content {
+    padding: 15px 25px;
+    display: none;
+    padding-top: 5px; }
+  .accordion__item {
+    border-bottom: 1px solid #E9EAEA; }
+    .accordion__item:last-child {
+      border-bottom: none; }
+    .accordion__item--active .accordion__title svg {
+      transform: rotate(-180deg);
+      transition: all 0.3s ease; }
+    .accordion__item--active .accordion__content {
+      display: block; }
+
+.option-auto__wrap {
+  display: flex;
+  flex-wrap: wrap; }
+.option-auto__item {
+  max-width: 50%;
+  flex: 0 0 50%; }
+
+.counters {
+  padding-left: 25px;
+  padding-right: 25px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(43, 45, 51, 0.5);
+  position: relative; }
+  .counters::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: #00809C;
+    border-radius: 100%; }
+
+.single-equipment__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px; }
+.single-equipment__accordion {
+  max-width: 67%;
+  flex: 0 0 67%; }
+.single-equipment__dealer {
+  margin-left: 25px;
+  flex: 0 0 calc(33% - 25px);
+  max-width: calc(33% - 25px); }
+  .single-equipment__dealer .single__dealer-wrap {
+    padding-bottom: 35px; }
+  .single-equipment__dealer .single__dealer-stock {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 15px; }
+  .single-equipment__dealer .single__dealer-rating {
+    margin-top: 15px; }
+  .single-equipment__dealer .single__dealer-price {
+    text-align: left; }
+  .single-equipment__dealer .single__dealer-commission {
+    text-align: left;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    font-family: "Navigo";
+    color: rgba(43, 45, 51, 0.5);
+    margin-top: 10px;
+    margin-bottom: 15px; }
+  .single-equipment__dealer .offer-dealer__item {
+    padding-right: 15px; }
+
+.new-auto {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .new-auto__btns {
+    max-width: 100%;
+    flex: 0 0 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px; }
+  .new-auto__btn-search {
+    color: #00809C;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    border-bottom: 1px solid #00809C;
+    cursor: pointer; }
+  .new-auto__btn-show {
+    width: 260px;
+    flex: 0 0 260px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #FED500;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #2B2D33;
+    transition: all 0.3s ease; }
+    .new-auto__btn-show:hover, .new-auto__btn-show:active {
+      background-color: #ffe24c;
+      transition: all 0.3s ease; }
+  .new-auto__column {
+    max-width: 32%;
+    flex: 0 0 32%; }
+  .new-auto__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .new-auto__inner-item {
+      max-width: 47%;
+      flex: 0 0 47%; }
+
+.select-input {
+  position: relative;
+  margin-bottom: 10px; }
+  .select-input input {
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 40px;
+    height: 36px;
+    outline: none;
+    border: 1px solid #D5D5D6;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: #2B2D33;
+    font-family: "ALS Hauss", sans-serif; }
+    .select-input input::placeholder {
+      color: rgba(43, 45, 51, 0.5); }
+  .select-input svg {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%); }
+
+.filter {
+  padding: 15px 30px 20px;
+  border: 1px solid #E9EAEA;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  margin-top: 25px; }
+  .filter .tabs {
+    margin-top: 0; }
+  .filter .tabs__button-group {
+    margin-left: -30px;
+    padding-left: 30px;
+    margin-right: -30px;
+    padding-right: 30px;
+    margin-bottom: 20px;
+    justify-content: start; }
+  .filter .tabs__toggle {
+    margin-right: 30px; }
+
+.title {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+  font-family: "Navigo";
+  color: #2B2D33;
+  margin-top: 20px;
+  margin-bottom: 0; }
+
+.subtitle {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(43, 45, 51, 0.5); }
+
+.advantages {
+  display: flex;
+  flex-wrap: wrap; }
+  .advantages__item {
+    position: relative;
+    background: #F0F0FE;
+    border-radius: 4px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 22px;
+    color: #2B2D33;
+    padding-left: 8px;
+    padding-right: 8px;
+    height: 22px;
+    margin-right: 10px; }
+    .advantages__item:last-child {
+      margin-right: 0; }
+    .advantages__item svg {
+      height: 22px; }
+
+.single__dealer-info {
+  display: flex;
+  align-items: center; }
+
+.auto-item {
+  display: flex;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #E9EAEA;
+  margin-bottom: 25px; }
+  .auto-item__dealer {
+    flex: 0 0 190px;
+    min-width: 190px; }
+    .auto-item__dealer-wrap {
+      padding: 7px;
+      padding-top: 15px;
+      background: #F9F9F9;
+      border-radius: 8px; }
+    .auto-item__dealer-img {
+      width: 50px;
+      margin: auto;
+      margin-bottom: 10px; }
+      .auto-item__dealer-img img {
+        width: 100%;
+        height: auto; }
+    .auto-item__dealer-price {
+      height: 40px;
+      line-height: 40px;
+      background: #F0F0FE;
+      border-radius: 8px;
+      font-weight: bold;
       font-size: 14px;
+      text-align: center;
+      margin-bottom: 5px; }
+    .auto-item__dealer-commission {
+      font-weight: 500;
+      font-size: 12px;
       line-height: 22px;
-      color: rgba(43, 45, 51, 0.8); }
-    .single-description__comment-more {
-      color: #00809C;
-      border-bottom: 1px solid #00809C;
-      font-weight: normal;
+      color: #008E7D;
+      text-align: center;
+      margin-bottom: 10px; }
+    .auto-item__dealer-open {
+      height: 50px;
+      line-height: 50px;
+      background: #19B28D;
+      border-radius: 8px;
+      font-weight: 500;
       font-size: 14px;
-      line-height: 22px;
-      display: inline-block;
-      cursor: pointer; }
-  .single-description__wrap {
+      color: #fff;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease; }
+      .auto-item__dealer-open:hover, .auto-item__dealer-open:active {
+        background-color: #169c7b;
+        transition: all 0.3s ease; }
+  .auto-item__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 32px;
+    color: #2B2D33; }
+  .auto-item .single__dealer-inner {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    max-width: 150px; }
+  .auto-item__inner {
     display: flex;
     justify-content: space-between; }
-    .single-description__wrap .single__content-wrap {
+    .auto-item__inner-title {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: rgba(43, 45, 51, 0.5);
+      margin-bottom: 3px; }
+    .auto-item__inner-text {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: #55575C; }
+    .auto-item__inner-item {
       max-width: 30%;
       flex: 0 0 30%; }
-    .single-description__wrap .single__content-item-title {
-      max-width: 150px;
-      flex: 0 0 150px; }
-    .single-description__wrap .single__content-item-value {
-      max-width: 140px;
-      flex: 0 0 140px; }
+  .auto-item__img {
+    max-width: 260px;
+    flex: 0 0 260px;
+    height: 170px;
+    margin-right: 25px; }
+    .auto-item__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px; }
+  .auto-item__content {
+    max-width: 320px;
+    flex: 0 0 320px;
+    margin-right: 85px; }
+  .auto-item__dealer {
+    max-width: 190px;
+    flex: 0 0 190px; }
+
+.catalog__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #E9EAEA; }
+.catalog__title {
+  font-family: "Navigo";
+  font-weight: 500;
+  font-size: 18px;
+  color: #2B2D33; }
+.catalog__sorts {
+  display: flex; }
+.catalog__sort {
+  max-width: 150px;
+  margin-right: 20px; }
+.catalog__date {
+  max-width: 180px; }
+.catalog .select-input {
+  margin-bottom: 0; }
+
+.company-dealer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #FFFFFF;
+  border-radius: 8px; }
+  .company-dealer__wrap {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #E9EAEA; }
+  .company-dealer__btns {
+    max-width: 230px;
+    flex: 0 0 230px; }
+  .company-dealer .single__dealer-open {
+    margin-bottom: 0;
+    margin-top: 15px; }
+  .company-dealer__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    font-family: "Navigo";
+    color: #2B2D33; }
+  .company-dealer .single__dealer-inner {
+    max-width: 150px;
+    margin-top: 10px; }
+  .company-dealer__map {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: rgba(43, 45, 51, 0.5); }
+    .company-dealer__map svg {
+      margin-right: 10px; }
+  .company-dealer__content {
+    max-width: calc(100% - 150px);
+    flex: 0 0 calc(100% - 150px); }
+  .company-dealer__block {
+    display: flex;
+    max-width: calc(100% - 300px);
+    flex: 0 0 calc(100% - 300px);
+    align-items: center; }
+  .company-dealer__img {
+    flex: 0 0 120px;
+    display: flex;
+    align-items: center;
+    margin-right: 30px; }
+    .company-dealer__img img {
+      width: 100%;
+      height: auto; }
+
+.company {
+  background: #FCFCFC;
+  padding-bottom: 15px; }
+
+.title-min {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 40px;
+  font-family: "Navigo";
+  color: #2B2D33;
+  margin-top: 15px;
+  margin-bottom: -25px; }
+
+.profile {
+  display: flex; }
+  .profile__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 40px;
+    font-family: "Navigo";
+    color: #2B2D33;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #E9EAEA; }
+  .profile__content {
+    max-width: calc(100% - 340px);
+    flex: 0 0 calc(100% - 340px); }
+  .profile__sidebar {
+    max-width: 310px;
+    flex: 0 0 310px;
+    margin-left: 30px; }
+  .profile__account {
+    background: #FFFFFF;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.17);
+    border-radius: 4px;
+    padding: 30px;
+    margin-top: 20px; }
+    .profile__account-help {
+      font-weight: normal;
+      font-size: 16px;
+      color: rgba(43, 45, 51, 0.5);
+      padding-top: 15px;
+      margin-top: 15px;
+      border-top: 1px solid #C4C4C4;
+      display: block; }
+      .profile__account-help span {
+        border-bottom: 1px solid rgba(43, 45, 51, 0.5); }
+    .profile__account-link {
+      display: block;
+      font-weight: 500;
+      font-size: 18px;
+      color: #008E7D;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      margin-bottom: 7px; }
+      .profile__account-link:hover {
+        color: #007567;
+        transition: all 0.3s ease; }
+    .profile__account-title {
+      font-weight: 500;
+      font-size: 20px;
+      color: #2B2D33;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #C4C4C4; }
 
 /*# sourceMappingURL=styles.css.map */
