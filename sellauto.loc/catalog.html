@@ -221,7 +221,7 @@
 					      	</div>
 					      	<div class="new-auto__btns">
 					      		<div class="new-auto__btn-search">Расширенный поиск</div>
-					      		<div class="new-auto__btn-show">Показать 1034 предложения</div>
+					      		<a class="new-auto__btn-show scrollto" href="#auto">Показать 1034 предложения</a>
 					      	</div>
 					      </div>
 					    </li>
@@ -352,7 +352,7 @@
 					      	</div>
 					      	<div class="new-auto__btns">
 					      		<div class="new-auto__btn-search">Расширенный поиск</div>
-					      		<div class="new-auto__btn-show">Показать 1034 предложения</div>
+					      		<a class="new-auto__btn-show scrollto" href="#auto">Показать 1034 предложения</a>
 					      	</div>
 					      </div>
 					    </li>
@@ -368,23 +368,124 @@
 						<div class="catalog__sorts">
 							<div class="catalog__sort">
 								<div class="select-input">
-				      		<input type="text" value="Сортировка">
+				      		<input type="text" value="Сортировка" disabled="disabled">
 				      		<svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M6.69222 7.51184L0.858887 1.67851L2.0374 0.5L7.28148 5.74408L12.5256 0.5L13.7041 1.67851L7.87073 7.51184C7.54529 7.83728 7.01766 7.83728 6.69222 7.51184Z" fill="#2B2D33"/>
 									</svg>
+									<div class="select-input__result">
+										<div class="select-input__item select-input__item--active">
+											<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.38685 7.21729L11.834 3.77015L10.6849 2.6211L7.2378 6.06824L3.79065 2.62109L2.64161 3.77014L6.08875 7.21729L2.6416 10.6644L3.79065 11.8135L7.2378 8.36634L10.6849 11.8135L11.834 10.6644L8.38685 7.21729Z" fill="#2B2D33"/>
+											</svg>
+											<div class="select-input__item-text">По актуальности</div>
+										</div>
+										<div class="select-input__item">
+											<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.38685 7.21729L11.834 3.77015L10.6849 2.6211L7.2378 6.06824L3.79065 2.62109L2.64161 3.77014L6.08875 7.21729L2.6416 10.6644L3.79065 11.8135L7.2378 8.36634L10.6849 11.8135L11.834 10.6644L8.38685 7.21729Z" fill="#2B2D33"/>
+											</svg>
+											<div class="select-input__item-text">По дате размещения</div>
+										</div>
+										<div class="select-input__item">
+											<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.38685 7.21729L11.834 3.77015L10.6849 2.6211L7.2378 6.06824L3.79065 2.62109L2.64161 3.77014L6.08875 7.21729L2.6416 10.6644L3.79065 11.8135L7.2378 8.36634L10.6849 11.8135L11.834 10.6644L8.38685 7.21729Z" fill="#2B2D33"/>
+											</svg>
+											<div class="select-input__item-text">По возрастанию цены</div>
+										</div>
+										<div class="select-input__item">
+											<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.38685 7.21729L11.834 3.77015L10.6849 2.6211L7.2378 6.06824L3.79065 2.62109L2.64161 3.77014L6.08875 7.21729L2.6416 10.6644L3.79065 11.8135L7.2378 8.36634L10.6849 11.8135L11.834 10.6644L8.38685 7.21729Z" fill="#2B2D33"/>
+											</svg>
+											<div class="select-input__item-text">По убыванию цены</div>
+										</div>
+										<div class="select-input__item">
+											<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.38685 7.21729L11.834 3.77015L10.6849 2.6211L7.2378 6.06824L3.79065 2.62109L2.64161 3.77014L6.08875 7.21729L2.6416 10.6644L3.79065 11.8135L7.2378 8.36634L10.6849 11.8135L11.834 10.6644L8.38685 7.21729Z" fill="#2B2D33"/>
+											</svg>
+											<div class="select-input__item-text">По году: новее</div>
+										</div>
+										<div class="select-input__item">
+											<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.38685 7.21729L11.834 3.77015L10.6849 2.6211L7.2378 6.06824L3.79065 2.62109L2.64161 3.77014L6.08875 7.21729L2.6416 10.6644L3.79065 11.8135L7.2378 8.36634L10.6849 11.8135L11.834 10.6644L8.38685 7.21729Z" fill="#2B2D33"/>
+											</svg>
+											<div class="select-input__item-text">По году: старше</div>
+										</div>
+										<div class="select-input__item">
+											<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.38685 7.21729L11.834 3.77015L10.6849 2.6211L7.2378 6.06824L3.79065 2.62109L2.64161 3.77014L6.08875 7.21729L2.6416 10.6644L3.79065 11.8135L7.2378 8.36634L10.6849 11.8135L11.834 10.6644L8.38685 7.21729Z" fill="#2B2D33"/>
+											</svg>
+											<div class="select-input__item-text">По пробегу</div></div>
+										<div class="select-input__item">
+											<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.38685 7.21729L11.834 3.77015L10.6849 2.6211L7.2378 6.06824L3.79065 2.62109L2.64161 3.77014L6.08875 7.21729L2.6416 10.6644L3.79065 11.8135L7.2378 8.36634L10.6849 11.8135L11.834 10.6644L8.38685 7.21729Z" fill="#2B2D33"/>
+											</svg>
+											<div class="select-input__item-text">По названию</div></div>
+										<div class="select-input__item">
+											<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.38685 7.21729L11.834 3.77015L10.6849 2.6211L7.2378 6.06824L3.79065 2.62109L2.64161 3.77014L6.08875 7.21729L2.6416 10.6644L3.79065 11.8135L7.2378 8.36634L10.6849 11.8135L11.834 10.6644L8.38685 7.21729Z" fill="#2B2D33"/>
+											</svg>
+											<div class="select-input__item-text">По уникальности</div></div>
+									</div>
 							  </div>
 							</div>
 							<div class="catalog__date">
 								<div class="select-input">
-				      		<input type="text" value="Дата размещения">
+				      		<input type="text" value="Дата размещения" disabled="disabled">
 				      		<svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M6.69222 7.51184L0.858887 1.67851L2.0374 0.5L7.28148 5.74408L12.5256 0.5L13.7041 1.67851L7.87073 7.51184C7.54529 7.83728 7.01766 7.83728 6.69222 7.51184Z" fill="#2B2D33"/>
 									</svg>
+									<div class="select-input__result">
+										<div class="select-input__item select-input__item--active">
+											<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.38685 7.21729L11.834 3.77015L10.6849 2.6211L7.2378 6.06824L3.79065 2.62109L2.64161 3.77014L6.08875 7.21729L2.6416 10.6644L3.79065 11.8135L7.2378 8.36634L10.6849 11.8135L11.834 10.6644L8.38685 7.21729Z" fill="#2B2D33"/>
+											</svg>
+											<div class="select-input__item-text">За все время</div>
+										</div>
+										<div class="select-input__item">
+											<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.38685 7.21729L11.834 3.77015L10.6849 2.6211L7.2378 6.06824L3.79065 2.62109L2.64161 3.77014L6.08875 7.21729L2.6416 10.6644L3.79065 11.8135L7.2378 8.36634L10.6849 11.8135L11.834 10.6644L8.38685 7.21729Z" fill="#2B2D33"/>
+											</svg>
+											<div class="select-input__item-text">За сутки</div>
+										</div>
+										<div class="select-input__item">
+											<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.38685 7.21729L11.834 3.77015L10.6849 2.6211L7.2378 6.06824L3.79065 2.62109L2.64161 3.77014L6.08875 7.21729L2.6416 10.6644L3.79065 11.8135L7.2378 8.36634L10.6849 11.8135L11.834 10.6644L8.38685 7.21729Z" fill="#2B2D33"/>
+											</svg>
+											<div class="select-input__item-text">За 2 дня</div>
+										</div>
+										<div class="select-input__item">
+											<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.38685 7.21729L11.834 3.77015L10.6849 2.6211L7.2378 6.06824L3.79065 2.62109L2.64161 3.77014L6.08875 7.21729L2.6416 10.6644L3.79065 11.8135L7.2378 8.36634L10.6849 11.8135L11.834 10.6644L8.38685 7.21729Z" fill="#2B2D33"/>
+											</svg>
+											<div class="select-input__item-text">За 3 дня</div>
+										</div>
+										<div class="select-input__item">
+											<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.38685 7.21729L11.834 3.77015L10.6849 2.6211L7.2378 6.06824L3.79065 2.62109L2.64161 3.77014L6.08875 7.21729L2.6416 10.6644L3.79065 11.8135L7.2378 8.36634L10.6849 11.8135L11.834 10.6644L8.38685 7.21729Z" fill="#2B2D33"/>
+											</svg>
+											<div class="select-input__item-text">За неделю</div>
+										</div>
+										<div class="select-input__item">
+											<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.38685 7.21729L11.834 3.77015L10.6849 2.6211L7.2378 6.06824L3.79065 2.62109L2.64161 3.77014L6.08875 7.21729L2.6416 10.6644L3.79065 11.8135L7.2378 8.36634L10.6849 11.8135L11.834 10.6644L8.38685 7.21729Z" fill="#2B2D33"/>
+											</svg>
+											<div class="select-input__item-text">За 2 недели</div>
+										</div>
+										<div class="select-input__item">
+											<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.38685 7.21729L11.834 3.77015L10.6849 2.6211L7.2378 6.06824L3.79065 2.62109L2.64161 3.77014L6.08875 7.21729L2.6416 10.6644L3.79065 11.8135L7.2378 8.36634L10.6849 11.8135L11.834 10.6644L8.38685 7.21729Z" fill="#2B2D33"/>
+											</svg>
+											<div class="select-input__item-text">За 3 недели</div></div>
+										<div class="select-input__item">
+											<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M8.38685 7.21729L11.834 3.77015L10.6849 2.6211L7.2378 6.06824L3.79065 2.62109L2.64161 3.77014L6.08875 7.21729L2.6416 10.6644L3.79065 11.8135L7.2378 8.36634L10.6849 11.8135L11.834 10.6644L8.38685 7.21729Z" fill="#2B2D33"/>
+											</svg>
+											<div class="select-input__item-text">За месяц</div></div>
+									</div>
 							  </div>
 							</div>
 						</div>
 					</div>
-					<div class="catalog__wrap">
+					<div class="catalog__wrap" id="auto">
 						<div class="auto-item">
 							<div class="auto-item__img">
 								<img src="img/auto.png" alt="">

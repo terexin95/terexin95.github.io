@@ -219,3 +219,108 @@ if(document.querySelector('.modal-carusel__thumbs')){
   }
 }
 
+if (document.querySelector('.select-input')) {
+  // var selectInpt = document.querySelectorAll('.select-input');
+  // for (var i = 0; i < selectInpt.length; i++) {
+  //   selectInpt[i].addEventListener('focusin', function(){
+  //     this.parentElement.querySelector('.select-input__result').style.height = 'auto';
+  //   });
+  //    selectInpt[i].addEventListener('focusout', function(){
+  //     this.parentElement.querySelector('.select-input__result').style.height = '0';
+  //   });
+  // }
+
+  var slInpItem = document.querySelectorAll('.select-input__item');
+  for (var i = 0; i < slInpItem.length; i++) {
+    slInpItem[i].addEventListener('click', function(){
+      this.parentElement.querySelector('.select-input__item--active').classList.remove('select-input__item--active');
+      this.classList.add('select-input__item--active');
+      var parent = this.parentElement.parentElement
+      parent.querySelector('.select-input input').value = this.querySelector('.select-input__item-text').textContent;
+    });
+  }
+
+  var selectInptSvg = document.querySelectorAll('.select-input');
+  for (var i = 0; i < selectInptSvg.length; i++) {
+    selectInptSvg[i].addEventListener("click", function(){
+     this.parentElement.querySelector('.select-input__result').style.height = 'auto';
+    });
+  }
+}
+
+document.addEventListener('mouseup', function(){
+  var resultSort = document.querySelectorAll('.select-input__result');
+  for (var i = 0; i < resultSort.length; i++) {
+    if (!resultSort[i].classList.contains(event.target) && isVisible(resultSort[i])) { // и не по его дочерним элементам
+      resultSort[i].style.height = '0'; // скрываем его
+    }
+  }
+});
+
+document.addEventListener('mouseup', function(){
+  var result = document.querySelector('.select-input__result');
+  if (!result.classList.contains(event.target) && isVisible(result)) { // и не по его дочерним элементам
+      result.style.height = '0'; // скрываем его
+    }
+});
+
+function isVisible(elem) { //открыто ли условное окно
+   return !!elem && !!( elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length );
+}
+if (document.querySelectorAll('a[href^="#"')) {
+  document.querySelectorAll('a[href^="#"').forEach(link => {
+
+      link.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          let href = this.getAttribute('href').substring(1);
+
+          const scrollTarget = document.getElementById(href);
+
+          const topOffset = document.querySelector('.scrollto').offsetHeight;
+          // const topOffset = 0; // если не нужен отступ сверху 
+          const elementPosition = scrollTarget.getBoundingClientRect().top;
+          const offsetPosition = elementPosition - topOffset;
+
+          window.scrollBy({
+              top: offsetPosition,
+              behavior: 'smooth'
+          });
+      });
+  });
+}
+
+if (document.querySelectorAll('.phone-input')) {
+[].forEach.call(document.querySelectorAll('.phone-input'), function (input) {
+        let keyCode;
+        function mask(event) {
+            event.keyCode && (keyCode = event.keyCode);
+            let pos = this.selectionStart;
+            if (pos < 3) event.preventDefault();
+            let matrix = "+7 (___) ___-__-__",
+                i = 0,
+                def = matrix.replace(/\D/g, ""),
+                val = this.value.replace(/\D/g, ""),
+                newValue = matrix.replace(/[_\d]/g, function (a) {
+                    return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+                });
+            i = newValue.indexOf("_");
+            if (i != -1) {
+                i < 5 && (i = 3);
+                newValue = newValue.slice(0, i);
+            }
+            let reg = matrix.substr(0, this.value.length).replace(/_+/g,
+                function (a) {
+                    return "\\d{1," + a.length + "}";
+                }).replace(/[+()]/g, "\\$&");
+            reg = new RegExp("^" + reg + "$");
+            if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = newValue;
+            if (event.type == "blur" && this.value.length < 5) this.value = "";
+        }
+
+        input.addEventListener("input", mask, false);
+        input.addEventListener("focus", mask, false);
+        input.addEventListener("blur", mask, false);
+        input.addEventListener("keydown", mask, false);
+    });
+}

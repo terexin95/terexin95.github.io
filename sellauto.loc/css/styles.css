@@ -939,9 +939,42 @@ ul {
 
 .select-input {
   position: relative;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  cursor: pointer; }
+  .select-input__result {
+    position: absolute;
+    top: calc(100% + 5px);
+    width: 100%;
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.08));
+    background-color: #fff;
+    border-radius: 8px;
+    z-index: 5;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease; }
+  .select-input__item {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #2B2D33;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer; }
+    .select-input__item--active {
+      background-color: #0f81e2;
+      color: #fff; }
+    .select-input__item svg {
+      margin-right: 5px;
+      margin-left: 5px;
+      position: initial !important;
+      transform: translate(0) !important;
+      cursor: pointer; }
+      .select-input__item svg path {
+        fill: #fff; }
   .select-input input {
     width: 100%;
+    cursor: pointer;
+    background: transparent;
     padding-left: 12px;
     padding-right: 40px;
     height: 36px;
@@ -1226,7 +1259,7 @@ ul {
 .catalog__sorts {
   display: flex; }
 .catalog__sort {
-  max-width: 150px;
+  max-width: 200px;
   margin-right: 20px; }
 .catalog__date {
   max-width: 180px; }
