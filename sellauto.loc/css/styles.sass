@@ -7,8 +7,30 @@ body
 	padding: 0
 	font-family: 'ALS Hauss', sans-serif
 
+a
+	text-decoration: none
+
 .header
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08)
+	&__out
+		display: flex
+	&__profile
+		display: flex
+		align-items: center
+		&-title
+			font-weight: 500
+			font-size: 14px
+			line-height: 22px
+			color: $text
+		&-img
+			flex: 0 0 32px
+			height: 32px
+			width: 32px
+			margin-left: 10px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
 	&__logo
 		height: 40px
 	&__login
@@ -106,6 +128,7 @@ body
 			border: 0
 			outline: none
 			padding: 0
+			cursor: pointer
 	&__icon
 		text-align: center
 		&-svg
@@ -661,6 +684,7 @@ ul
 	&__thumbs
 		display: flex
 		overflow: hidden
+		transition: all .3s ease
 	&__thumb
 		margin-right: 11.5px
 		cursor: pointer
@@ -948,6 +972,7 @@ ul
 			color: rgba($text, .5)
 	svg
 		position: absolute
+		cursor: pointer
 		top: 50%
 		right: 12px
 		top: 50%
@@ -1010,11 +1035,109 @@ ul
 	display: flex
 	align-items: center
 
+.progres-bar
+	&__title
+		font-weight: normal
+		font-size: 16px
+		line-height: 20px
+		color: #55575C
+		margin-bottom: 5px
+	&__wrap
+		background: #E9EAEA
+		border-radius: 8px
+		height: 8px
+		max-width: 320px
+	&__item
+		background: #00A5BC
+		border-radius: 8px
+		height: 8px
+		width: 39%
+
 .auto-item
 	display: flex
 	padding-bottom: 25px
 	border-bottom: 1px solid #E9EAEA
 	margin-bottom: 25px
+	&__change
+		max-width: calc(100% - 285px)
+		flex: 0 0 calc(100% - 285px)
+		&-btns
+			display: flex
+			position: relative
+			margin-top: 15px
+		&-static
+			position: absolute
+			right: 0
+			width: 36px
+			height: 36px
+			box-sizing: border-box
+			border: 2px solid #D5D5D6
+			display: flex
+			align-items: center
+			justify-content: center
+			border-radius: 8px
+			cursor: pointer
+		&-stop
+			font-weight: 500
+			font-size: 14px
+			height: 36px
+			line-height: 36px
+			width: 120px
+			text-align: center
+			border-radius: 8px
+			background: #E9EAEA
+			color: rgba(43, 45, 51, 0.24)
+			cursor: pointer
+		&-edit
+			width: 170px
+			height: 36px
+			border-radius: 8px
+			background: #2B2D33
+			display: flex
+			align-items: center
+			justify-content: center
+			color: #FFFFFF
+			font-weight: 500
+			font-size: 14px
+			cursor: pointer
+			transition: all .3s ease
+			margin-right: 15px
+			svg
+				margin-right: 10px
+			&:hover
+				background: lighten(#2B2D33, 10%)
+				transition: all .3s ease
+		&-inner
+			display: flex
+			margin-top: 5px
+		&-icon
+			display: flex
+			align-items: center
+			font-size: 12px
+			line-height: 40px
+			font-weight: normal
+			margin-right: 40px
+			color: rgba($text, .5)
+			svg
+				margin-right: 12px
+			
+		&-title
+			display: flex
+			justify-content: space-between
+			font-weight: bold
+			font-size: 18px
+			line-height: 32px
+			align-items: center
+			margin-bottom: 7px
+		&-price
+			font-weight: 500
+			font-size: 14px
+			line-height: 32px
+			height: 32px
+			padding-left: 29px
+			padding-right: 29px
+			background: #F0F0FE
+			border-radius: 8px
 	&__dealer
 		flex: 0 0 190px
 		min-width: 190px
@@ -1243,3 +1366,1007 @@ ul
 			padding-bottom: 15px
 			margin-bottom: 15px
 			border-bottom: 1px solid #C4C4C4
+
+.form-header
+	padding-top: 50px
+	padding-bottom: 50px
+	background: #FCFCFC
+	&__title
+		font-weight: bold
+		font-size: 32px
+		font-family: 'Navigo'
+		margin: 0
+		margin-bottom: 25px
+		color: $text
+	&__text
+		font-weight: 500
+		font-size: 16px
+		line-height: 22px
+		color: rgba($text, .5)
+
+.form
+	&__wrap
+		display: flex
+		margin-top: 40px
+		margin-bottom: 100px
+	&__sidebar
+		max-width: 200px
+		flex: 0 0 200px
+	&__content
+		max-width: calc(100% - 250px)
+		flex: 0 0 calc(100% - 250px)
+		margin-right: 50px
+
+
+.form-progress
+	background: #F9F9F9
+	border-radius: 8px
+	padding: 40px 30px
+	padding-right: 20px
+	&__wrap
+		position: relative
+		&::before
+			content: ""
+			width: 10px
+			left: -1px
+			position: absolute
+			height: calc(100% - 11px)
+			top: 50%
+			transform: translateY(-50%)
+			border-radius: 8px
+			background-color: #E9EAEA
+	&__item
+		position: relative
+		padding-left: 24px
+		margin-bottom: 20px
+		font-weight: normal
+		font-size: 14px
+		line-height: 22px
+		color: #808185
+		&::before
+			content: ""
+			width: 8px
+			height: 8px
+			border-radius: 100%
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			background-color: #AAABAD
+			position: absolute
+		&--active
+			color: #00809C
+			font-weight: bold
+			&::before
+				content: ""
+				background-color: #00809C
+
+.form-step
+	&__more
+		color: #00809C
+		font-weight: normal
+		font-size: 12px
+		line-height: 18px
+		border-bottom: 1px solid #00809C
+		display: inline-block
+		cursor: pointer
+	&__inner
+		display: flex
+		flex-wrap: wrap
+		margin-top: 25px
+		&--active
+			.form-step__column--none
+				display: block
+	&__column
+		max-width: 20%
+		flex: 0 0 20%
+		&--none
+			display: none
+	&__title
+		margin-top: 40px
+		font-weight: bold
+		font-size: 24px
+		line-height: 40px
+		font-family: 'Navigo'
+		margin-bottom: 40px
+		color: $text
+		&-auto
+			display: flex
+			align-items: center
+			padding-bottom: 25px
+			margin-bottom: 30px
+			border-bottom: 1px solid #E9EAEA
+			&-img
+				width: 64px
+				height: 64px
+				margin-right: 15px
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+			&-text
+				font-weight: bold
+				font-size: 24px
+				line-height: 32px
+				color: $text
+	&__search
+		position: relative
+		width: 100%
+		&-result
+			position: absolute
+			top: calc(100% + 5px)
+			width: 100%
+			background: #FFFFFF
+			box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08)
+			border-radius: 8px
+			height: 0
+			transition: height .3s ease
+			overflow: hidden
+			&--active
+				height: 216px
+				transition: height .3s ease
+		&-item
+			height: 40px
+			line-height: 40px
+			font-weight: normal
+			font-size: 14px
+			color: $text
+			padding-left: 15px
+			padding-right: 15px
+			cursor: pointer
+			&:last-child
+				padding-bottom: 8px
+			&:first-child
+				padding-top: 8px
+		&-input
+			position: relative
+			input
+				width: 100%
+				box-sizing: border-box
+				padding-left: 50px
+				padding-right: 10px
+				height: 50px
+				border-radius: 8px
+				border: 1px solid #D5D5D6
+				font-weight: normal
+				font-size: 16px
+				line-height: 26px
+				font-family: 'ALS Hauss'
+				color: $text
+				&::placeholder
+					color: #AAABAD
+			button
+				background-color: transparent
+				cursor: pointer
+				border: 0
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				left: 10px
+
+.brand-auto
+	display: flex
+	align-items: center
+	margin-bottom: 20px
+	padding-right: 15px
+	cursor: pointer
+	&__title
+		line-height: 32px
+		font-weight: bold
+		font-size: 14px
+		line-height: 18px
+		color: $text
+	&__img
+		width: 32px
+		flex: 0 0 32px
+		height: 32px
+		margin-right: 10px
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+.toggle-button
+	margin-bottom: 30px
+	padding-bottom: 30px
+	border-bottom: 1px solid #E9EAEA
+	&__title
+		font-weight: bold
+		font-size: 14px
+		line-height: 18px
+		color: $text
+		margin-bottom: 15px
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+	&__item
+		cursor: pointer
+		height: 48px
+		line-height: 44px
+		margin-right: 17px
+		padding-left: 24px
+		padding-right: 24px
+		border: 2px solid #2B2D33
+		box-sizing: border-box
+		border-radius: 8px
+		font-weight: 500
+		font-size: 16px
+		transition: all .3s ease
+		&:hover, &:active, &--active
+			background-color: #2B2D33
+			color: #fff
+			transition: all .3s ease
+
+.auto-colors
+	margin-bottom: 30px
+	padding-bottom: 30px
+	border-bottom: 1px solid #E9EAEA
+	&__title
+		font-weight: bold
+		font-size: 14px
+		line-height: 18px
+		color: $text
+		margin-bottom: 15px
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+	&__item
+		height: 48px
+		width: 48px
+		flex: 0 0 48px
+		border-radius: 100%
+		border: 1px solid #DADADA
+		margin-right: 15px
+		cursor: pointer
+		&--white
+			background-color: #fff
+		&--orange
+			background-color: #FF9966
+		&--yellow
+			background-color: #FDE910
+		&--sun
+			background-color: #FABE00
+		&--red
+			background-color: #FF2600
+		&--burgundy
+			background-color: #CC1D33
+		&--brown
+			background-color: #926547
+		&--blue
+			background-color: #0088FF
+		&--darkblue
+			background-color: #0433FF
+		&--purple
+			background-color: #9966CC
+		&--green
+			background-color: #35BA2B
+		&--black
+			background-color: #000000
+
+.text-center
+	text-align: center
+
+.input-block
+	position: relative
+	&__title
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__date
+		position: relative
+		max-width: 135px
+		flex: 0 0 135px
+		svg
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			right: 12px
+	&__help
+		width: 320px
+		position: absolute
+		box-sizing: border-box
+		border-radius: 8px
+		background-color: #fff
+		box-shadow: 0 0 10px 1px rgba(#000, .1)
+		padding: 12px 15px
+		font-weight: normal
+		font-size: 12px
+		line-height: 18px
+		color: #EE505A
+		top: 50%
+		transform: translateY(-50%)
+		left: calc(100% + 20px)
+		display: none
+		&::before
+			content: ""
+			display: none
+			border: 10px solid transparent
+			border-right: 10px solid white
+			border-radius: 2px
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: -10px
+			background-color: #fff
+			box-shadow: 0 0 10px 1px rgba(#000, .1)
+	input
+		width: 100%
+		height: 52px
+		border: 1px solid #D5D5D6
+		border-radius: 8px
+		box-sizing: border-box
+		padding-left: 12px
+		padding-right: 12px
+		font-weight: normal
+		font-size: 16px
+		color: $text
+		font-family: 'ALS Hauss'
+		&::placeholder
+			color: #AAABAD
+	label
+		margin-top: 5px
+		margin-bottom: 5px
+		font-weight: normal
+		font-size: 14px
+		line-height: 22px
+		color: #808185
+	&--error
+		input
+			border-color: #EE505A
+			outline-color: #EE505A
+			outline-width: 2px
+		label
+			color: #EE505A
+
+.step-block
+	margin-bottom: 30px
+	padding-bottom: 30px
+	border-bottom: 1px solid #E9EAEA
+	&__text
+		font-weight: normal
+		font-size: 14px
+		line-height: 18px
+		color: $text
+		margin-bottom: 15px
+	&__wrap
+		display: flex
+		align-items: center
+	&__title
+		font-weight: bold
+		font-size: 14px
+		line-height: 18px
+		color: $text
+		margin-bottom: 15px
+
+.form-group 
+	display: block
+	margin-right: 30px
+
+
+.form-group input 
+	padding: 0
+	height: initial
+	width: initial
+	margin-bottom: 0
+	display: none
+	cursor: pointer
+
+
+.form-group label 
+	position: relative
+	cursor: pointer
+	font-weight: normal
+	font-size: 16px
+	line-height: 26px
+	color: $text
+
+.form-group label:before 
+	content: ''
+	-webkit-appearance: none
+	background-color: transparent
+	border: 2px solid #D5D5D6
+	border-radius: 4px
+	padding: 10px
+	display: inline-block
+	position: relative
+	vertical-align: middle
+	cursor: pointer
+	margin-right: 10px
+
+
+.form-group input:checked + label:after 
+	content: ''
+	display: block
+	position: absolute
+	top: 2px
+	left: 9px
+	width: 6px
+	height: 14px
+	border: solid #2B2D33
+	border-width: 0 2px 2px 0
+	transform: rotate(45deg)
+
+.form-group input:checked + label:before
+	background-color: #FEE600
+	border-color: #FEE600
+
+.input-load
+	background: #F8F8F8
+	border: 1px dashed #D5D5D6
+	border-radius: 8px
+	height: 90px
+	display: flex
+	position: relative
+	align-items: center
+	justify-content: center
+	input
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		opacity: 0
+		z-index: 1
+		width: 100%
+	&__format
+		font-weight: normal
+		font-size: 12px
+		line-height: 18px
+		color: #AAABAD
+		text-align: center
+	&__title
+		display: flex
+		font-weight: normal
+		font-size: 14px
+		line-height: 22px
+		color: #808185
+		justify-content: center
+		span
+			display: inline-flex
+			align-items: center
+			font-weight: normal
+			font-size: 14px
+			line-height: 22px
+			color: #00809C
+			svg
+				margin-left: 10px
+				margin-right: 6px
+
+.load-file
+	margin-top: 30px
+	&__item
+		display: flex
+		margin-bottom: 30px
+		position: relative
+		&-close
+			top: 50%
+			transform: translateY(-50%)
+			right: 5px
+			position: absolute
+			cursor: pointer
+		&-img
+			width: 40px
+			flex: 0 0 40px
+			height: 40px
+			margin-right: 15px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		&-block
+			max-width: calc(100% - 95px)
+			flex: 0 0 calc(100% - 95px)
+			position: relative
+		&-progres
+			border-radius: 8px
+			margin-top: 10px
+			height: 4px
+			background-color: #E9EAEA
+			position: absolute
+			bottom: -14px
+			width: 100%
+			&-item
+				background-color: #00A5BC
+				height: 4px
+				border-radius: 8px
+				width: 0
+		&-title
+			font-weight: 500
+			font-size: 14px
+			line-height: 22px
+			color: $text
+		&-size
+			font-weight: normal
+			font-size: 12px
+			line-height: 18px
+			color: #AAABAD
+
+.form-step-2, .form-step-3, .form-step-4
+	display: none
+
+.bg-form
+	height: calc(100vh - 90px)
+	background-image: url(../img/bg.png)
+	box-sizing: border-box
+	padding: 10px 0
+	background-size: cover
+	background-repeat: no-repeat
+
+.form-reg
+	max-width: 470px
+	box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08)
+	border-radius: 16px
+	background-color: #fff
+	box-sizing: border-box
+	padding: 30px
+	margin-top: 60px
+	&__text
+		font-weight: normal
+		font-size: 14px
+		line-height: 14px
+		color: $text
+		margin-bottom: 25px
+	&__title
+		font-weight: bold
+		font-size: 26px
+		line-height: 26px
+		font-family: 'Navigo'
+		margin-bottom: 25px
+		color: $text
+	.input-block
+		margin-bottom: 15px
+	&__btns
+		display: flex
+		margin-top: 40px
+		align-items: center
+		a
+			font-weight: 500
+			font-size: 14px
+			line-height: 22px
+			color: $text
+			text-decoration: none
+		button
+			outline: none
+			background-color: #FED500
+			border-radius: 8px
+			border: 0
+			height: 40px
+			width: 180px
+			font-weight: 500
+			font-size: 14px
+			line-height: 22px
+			color: $text
+			font-family: 'ALS Hauss', sans-serif
+			margin-right: 30px
+			cursor: pointer
+			transition: all .3s ease
+			&:hover, &:active
+				background-color: lighten(#FED500, 15%)
+				transition: all .3s ease
+
+.cod
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 100%
+	&__form
+		padding: 30px
+		background: #FFFFFF
+		box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.08)
+		border-radius: 16px
+		max-width: 420px
+		width: 420px
+		box-sizing: border-box
+	&__title
+		font-weight: bold
+		font-size: 26px
+		line-height: 34px
+		color: $text
+		font-family: 'Navigo'
+		text-align: center
+		margin-bottom: 30px
+	&__input
+		width: 150px
+		display: block
+		margin-left: auto
+		margin-right: auto
+		font-family: 'Navigo'
+		font-weight: bold
+		font-size: 26px
+		line-height: 34px
+		text-align: center
+		border: 0
+		outline: none
+		height: 48px
+		margin-bottom: 10px
+		border-bottom: 2px solid #C74952
+	&__label
+		display: block
+		text-align: center
+		color: #C74952
+		font-weight: normal
+		font-size: 14px
+		line-height: 22px
+	&__repeat
+		display: block
+		text-align: center
+		margin-top: 25px
+		margin-bottom: 40px
+		font-weight: 500
+		font-size: 14px
+		line-height: 22px
+		color: $text
+	&__button
+		outline: none
+		background-color: #FED500
+		border-radius: 8px
+		border: 0
+		height: 40px
+		width: 130px
+		font-weight: 500
+		font-size: 14px
+		line-height: 22px
+		color: $text
+		font-family: 'ALS Hauss', sans-serif
+		margin-left: auto
+		margin-right: auto
+		display: block
+		cursor: pointer
+		transition: all .3s ease
+		&:hover, &:active
+			background-color: lighten(#FED500, 15%)
+			transition: all .3s ease
+
+.chat
+	&__wrap
+		display: flex
+		margin-bottom: 55px
+	&__sidebar
+		flex: 0 0 230px
+		max-width: 230px
+		margin-right: 30px
+	&__content
+		max-width: calc(100% - 260px)
+		flex: 0 0 calc(100% - 260px)
+
+.online
+	background: #CF030A
+	border: 1px solid #FFFFFF
+	box-sizing: border-box
+	border-radius: 100px
+	position: absolute
+	width: 10px
+	height: 10px
+	&--active
+		background: #018E01
+
+.massage
+	height: 100%
+	&__wrap
+		padding: 25px
+		border: 1px solid #E9EAEA
+		box-sizing: border-box
+		border-radius: 8px
+		margin-top: 10px
+		height: calc(100% - 105px)
+	&__item
+		display: flex
+		align-items: center
+		position: relative
+		padding-bottom: 10px
+		margin-bottom: 10px
+		border-bottom: 1px solid #E9EAEA
+		&:last-child
+			border-bottom: 0 solid #000
+		&-block
+			flex: 0 0 calc(100% - 80px)
+			max-width: calc(100% - 80px)
+		&-num
+			position: absolute
+			top: 40%
+			transform: translateY(-50%)
+			right: 0
+			background: #EB001B
+			border: 1px solid #FFFFFF
+			box-sizing: border-box
+			border-radius: 100px
+			width: 16px
+			height: 16px
+			font-weight: bold
+			font-size: 9px
+			line-height: 14px
+			text-align: center
+			color: #fff
+		&-title
+			font-weight: 500
+			font-size: 14px
+			line-height: 22px
+			color: #00809C
+		&-auto
+			font-weight: normal
+			font-size: 12px
+			line-height: 18px
+			color: #AAABAD
+		&-img
+			flex: 0 0 40px
+			max-width: 40px
+			margin-right: 15px
+			position: relative
+			.online
+				bottom: 0
+				right: 0
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+				border-radius: 100%
+	&__title
+		display: flex
+		font-family: 'Navigo'
+		font-weight: bold
+		font-size: 16px
+		line-height: 40px
+		color: $text
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 15px
+		&-new
+			font-weight: normal
+			font-size: 12px
+			line-height: 28px
+			font-family: 'ALS Hauss'
+			background-color: #fff
+			background: rgba(235, 0, 27, 0.1)
+			border-radius: 4px
+			height: 28px
+			padding-left: 8px
+			padding-right: 8px
+	&__search
+		position: relative
+		input
+			width: 100%
+			box-sizing: border-box
+			height: 40px
+			padding-left: 40px
+			padding-right: 10px
+			border: 0
+			background-color: #F4F4F4
+			border-radius: 8px
+			outline: none
+			font-size: 14px
+			&::placeholder
+				font-weight: normal
+				font-size: 14px
+				line-height: 22px
+				color: rgba(43, 45, 51, 0.24)
+		button
+			position: absolute
+			top: 50%
+			left: 15px
+			transform: translateY(-50%)
+			background-color: transparent
+			border: 0
+			outline: none
+			padding: 0
+			cursor: pointer
+
+.massage-block
+	border: 1px solid #E9EAEA
+	box-sizing: border-box
+	border-radius: 8px
+	&__send
+		display: flex
+		justify-content: space-between
+		padding-left: 56px
+		padding-right: 56px
+		padding-bottom: 25px
+		padding-top: 20px
+		border-top: 1px solid #E9EAEA
+		&-attach
+			width: 40px
+			flex: 0 0 40px
+			height: 40px
+			background: #D5D5D6
+			border-radius: 8px
+			display: flex
+			align-items: center
+			justify-content: center
+			cursor: pointer
+		&-submit
+			width: 40px
+			flex: 0 0 40px
+			height: 40px
+			background: #00809C
+			border-radius: 8px
+			display: flex
+			align-items: center
+			justify-content: center
+			cursor: pointer
+		&-textarea
+			flex: 0 0 calc(100% - 120px)
+			max-width: calc(100% - 120px)
+			textarea
+				height: 40px
+				box-sizing: border-box
+				padding-top: 10px
+				width: 100%
+				border: 0
+				outline: none
+				resize: none
+				font-family: 'ALS Hauss'
+				font-style: normal
+				font-weight: normal
+				font-size: 16px
+				line-height: 18px
+				color: $text
+				&::placeholder
+					color: #AAABAD
+	&__main
+		padding-left: 56px
+		padding-right: 56px
+		height: 500px
+	&__item
+		display: flex
+		align-items: start
+		margin-bottom: 25px
+		&-right
+			flex-direction: row-reverse
+			.massage-block__item-img
+				margin-right: 0
+				margin-left: 10px
+			.massage-block__item-time
+				left: auto
+				right: 0
+			.massage-block__item-text
+				background: #FCFCFC
+		&-img
+			width: 32px
+			height: 32px
+			flex: 0 0 32px
+			margin-right: 10px
+			img
+				width: 100%
+				height: 100%
+				border-radius: 100%
+				object-fit: cover
+		&-text
+			flex: 0 0 200px
+			max-width: 200px
+			box-sizing: border-box
+			border: 1px solid #D5D5D6
+			border-radius: 8px
+			padding-top: 13px
+			padding-left: 12px
+			padding-right: 12px
+			padding-bottom: 13px
+			position: relative
+		&-time
+			position: absolute
+			top: calc(100% + 5px)
+			left: 0
+			color: #AAABAD
+			font-weight: normal
+			font-size: 14px
+			line-height: 22px
+	&__auto
+		display: flex
+		align-items: center
+		&-phone
+			width: 140px
+			height: 40px
+			background-color: #19B28D
+			border-radius: 8px
+			line-height: 40px
+			text-align: center
+			color: #FFFFFF
+			font-weight: 500
+			font-size: 14px
+			cursor: pointer
+			transition: all .3s ease
+			&:hover, &:active
+				background-color: darken(#19B28D, 5%)
+				transition: all .3s ease
+		&-img
+			width: 42px
+			height: 42px
+			box-sizing: border-box
+			border-radius: 8px
+			margin-right: 10px
+			img
+				border: 1px solid #E9EAEA
+				width: 100%
+				height: 100%
+				object-fit: cover
+				border-radius: 8px
+				vertical-align: bottom
+	&__main
+		&-day
+			text-align: center
+			font-weight: normal
+			font-size: 14px
+			line-height: 22px
+			color: #AAABAD
+			margin-top: 25px
+			margin-bottom: 25px
+	&__header
+		padding-left: 50px
+		padding-right: 50px
+		padding-top: 25px
+		padding-bottom: 20px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		border-bottom: 1px solid #E9EAEA
+	&__man
+		display: flex
+		align-items: center
+		&-img
+			width: 56px
+			height: 56px
+			margin-right: 15px
+		&-title
+			font-weight: 500
+			font-size: 18px
+			line-height: 22px
+			color: $text
+		&-auto
+			font-weight: normal
+			font-size: 16px
+			line-height: 18px
+			color: #AAABAD
+			text-decoration: underline
+
+.overflow-hidden
+	overflow: hidden
+
+.lk
+	margin-bottom: 45px
+	&__submit
+		display: block
+		width: 130px
+		margin-top: 25px
+		height: 40px
+		background-color: #FED500
+		border-radius: 8px
+		text-align: center
+		line-height: 40px
+		font-weight: 500
+		font-size: 14px
+		text-decoration: none
+		color: $text
+		transition: all .3s ease
+		&:hover, &:active
+			background-color: lighten(#FED500, 15%)
+			transition: all .3s ease
+	&__container
+		max-width: 500px
+	&__inner
+		display: flex
+		justify-content: space-between
+		margin-bottom: 20px
+		&-item
+			max-width: 48%
+			flex: 0 0 48%
+	&__title
+		font-weight: bold
+		font-size: 16px
+		line-height: 40px
+		font-family: 'Navigo'
+		color: $text
+	&__header
+		display: flex
+		align-items: center
+		margin-top: 10px
+		margin-bottom: 20px
+		&-upload
+			flex: 0 0 calc(100% - 142px)
+			max-width: calc(100% - 142px)
+		&-img
+			width: 112px
+			flex: 0 0 112px
+			height: 112px
+			margin-right: 30px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+				border-radius: 100%
