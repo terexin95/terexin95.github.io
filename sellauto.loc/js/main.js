@@ -37,12 +37,13 @@ if (document.querySelector('.single__images img')) {
   document.querySelector('.single__images-item-overlay').addEventListener('click', function(){
     document.querySelector('.modal-carusel').classList.add('modal-carusel--active');
   });
+}
 
+if(document.querySelector('.modal-carusel__close')){
   document.querySelector('.modal-carusel__close').addEventListener('click', function(){
     document.querySelector('.modal-carusel').classList.remove('modal-carusel--active');
   });
 }
-
 if (document.getElementsByClassName("accordion__title")) {
   var acc = document.getElementsByClassName("accordion__title");
   var i;
@@ -219,6 +220,15 @@ if(document.querySelector('.modal-carusel__thumbs')){
   }
 }
 
+document.addEventListener('mouseup', function(){
+  var resultSort = document.querySelectorAll('.select-input__result');
+  for (var i = 0; i < resultSort.length; i++) {
+    if (!resultSort[i].classList.contains(event.target) && isVisible(resultSort[i])) { // и не по его дочерним элементам
+      resultSort[i].style.height = '0'; // скрываем его
+    }
+  }
+});
+
 if (document.querySelector('.select-input')) {
   // var selectInpt = document.querySelectorAll('.select-input');
   // for (var i = 0; i < selectInpt.length; i++) {
@@ -230,6 +240,13 @@ if (document.querySelector('.select-input')) {
   //   });
   // }
 
+  var selectInptSvg = document.querySelectorAll('.select-input');
+  for (var i = 0; i < selectInptSvg.length; i++) {
+    selectInptSvg[i].addEventListener("click", function(){
+     this.parentElement.querySelector('.select-input__result').style.height = 'auto';
+    });
+  }
+
   var slInpItem = document.querySelectorAll('.select-input__item');
   for (var i = 0; i < slInpItem.length; i++) {
     slInpItem[i].addEventListener('click', function(){
@@ -237,32 +254,88 @@ if (document.querySelector('.select-input')) {
       this.classList.add('select-input__item--active');
       var parent = this.parentElement.parentElement
       parent.querySelector('.select-input input').value = this.querySelector('.select-input__item-text').textContent;
+      this.parentElement.style.background = '0px !important';
     });
   }
 
-  var selectInptSvg = document.querySelectorAll('.select-input');
-  for (var i = 0; i < selectInptSvg.length; i++) {
-    selectInptSvg[i].addEventListener("click", function(){
-     this.parentElement.querySelector('.select-input__result').style.height = 'auto';
+  
+}
+
+
+
+if (document.querySelector('.mew-auto__mobile-brand')) {
+  document.querySelector('.mew-auto__mobile-brand').addEventListener('click', function(){
+    document.querySelector('.modal-catolog-1').style.display = "block";
+    document.querySelector('body').style.overflow = "hidden";
+  });
+
+  document.querySelector('.mew-auto__mobile-opt').addEventListener('click', function(){
+    document.querySelector('.modal-catolog-3').style.display = "block";
+    document.querySelector('body').style.overflow = "hidden";
+  });
+
+  document.querySelector('.mew-auto__mobile-model').addEventListener('click', function(){
+    document.querySelector('.modal-catolog-2').style.display = "block";
+    document.querySelector('body').style.overflow = "hidden";
+  });
+
+  var mCA = document.querySelectorAll('.modal-catolog__auto');
+  for (var i = 0; i < mCA.length; i++) {
+    mCA[i].addEventListener('click', function(){
+      document.querySelector('.modal-catolog-1').style.display = "none";
+      document.querySelector('body').style.overflow = "auto";
+      document.querySelector('.mew-auto__mobile-text').textContent = this.querySelector('.modal-catolog__auto-text').textContent;
+      document.querySelector('.mew-auto__mobile-text').style.color = '#2B2D33';
+    });
+  }
+  mCB = document.querySelectorAll('.modal-catolog__button');
+  for (var i = 0; i < mCB.length; i++) {
+    mCB[i].addEventListener('click', function(){
+      this.parentElement.parentElement.style.display = "none";
+      document.querySelector('body').style.overflow = "auto";
+    });
+  }
+
+  var mCC = document.querySelectorAll('.modal-catolog__close');
+  for (var i = 0; i < mCC.length; i++) {
+    mCC[i].addEventListener('click', function(){
+      this.parentElement.style.display = "none";
+      document.querySelector('body').style.overflow = "auto";
     });
   }
 }
 
-document.addEventListener('mouseup', function(){
-  var resultSort = document.querySelectorAll('.select-input__result');
-  for (var i = 0; i < resultSort.length; i++) {
-    if (!resultSort[i].classList.contains(event.target) && isVisible(resultSort[i])) { // и не по его дочерним элементам
-      resultSort[i].style.height = '0'; // скрываем его
+if (document.querySelector('.humburger')) {
+  document.querySelector('.humburger').addEventListener('click', function(){
+    document.querySelector('.mobile-menu').style.display = "block";
+    this.style.display = "none";
+    document.querySelector('body').style.overflow = "hidden";
+    document.querySelector('.close-menu').style.display = "block";
+    if (document.querySelector('.filter-mobile')) {
+      document.querySelector('.filter-mobile').style.display = "none";
     }
-  }
-});
+  })
 
-document.addEventListener('mouseup', function(){
-  var result = document.querySelector('.select-input__result');
-  if (!result.classList.contains(event.target) && isVisible(result)) { // и не по его дочерним элементам
-      result.style.height = '0'; // скрываем его
+   document.querySelector('.close-menu').addEventListener('click', function(){
+    document.querySelector('.mobile-menu').style.display = "none";
+    this.style.display = "none";
+    document.querySelector('.humburger').style.display = "block";
+    document.querySelector('body').style.overflow = "auto";
+    if (document.querySelector('.filter-mobile')) {
+      document.querySelector('.filter-mobile').style.display = "block";
     }
-});
+  })
+}
+
+if (document.querySelector('.auto-item-mobile__overlay')) {
+  var aIMO = document.querySelectorAll('.auto-item-mobile__overlay');
+  for (var i = 0; i < aIMO.length; i++) {
+    aIMO[i].addEventListener('click', function(){
+      document.querySelector('.modal-carusel').classList.add('modal-carusel--active');
+    });
+  }
+}
+
 
 function isVisible(elem) { //открыто ли условное окно
    return !!elem && !!( elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length );
