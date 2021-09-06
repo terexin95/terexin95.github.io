@@ -31,17 +31,20 @@ if (document.querySelector('.single__images img')) {
   for (var i = 0; i < singleImg.length; i++) {
     singleImg[i].addEventListener('click', function(){
       document.querySelector('.modal-carusel').classList.add('modal-carusel--active');
+      document.querySelector('body').style.overflow = "hidden";
     });
   }
 
   document.querySelector('.single__images-item-overlay').addEventListener('click', function(){
     document.querySelector('.modal-carusel').classList.add('modal-carusel--active');
+    document.querySelector('body').style.overflow = "hidden";
   });
 }
 
 if(document.querySelector('.modal-carusel__close')){
   document.querySelector('.modal-carusel__close').addEventListener('click', function(){
     document.querySelector('.modal-carusel').classList.remove('modal-carusel--active');
+    document.querySelector('body').style.overflow = "auto";
   });
 }
 if (document.getElementsByClassName("accordion__title")) {
@@ -254,7 +257,7 @@ if (document.querySelector('.select-input')) {
       this.classList.add('select-input__item--active');
       var parent = this.parentElement.parentElement
       parent.querySelector('.select-input input').value = this.querySelector('.select-input__item-text').textContent;
-      this.parentElement.style.background = '0px !important';
+      this.parentElement.style.height = '0px';
     });
   }
 
@@ -332,6 +335,7 @@ if (document.querySelector('.auto-item-mobile__overlay')) {
   for (var i = 0; i < aIMO.length; i++) {
     aIMO[i].addEventListener('click', function(){
       document.querySelector('.modal-carusel').classList.add('modal-carusel--active');
+      document.querySelector('body').style.overflow = "hidden";
     });
   }
 }
