@@ -1808,9 +1808,7 @@ ul {
   margin-right: 10px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0; }
+  box-sizing: border-box; }
 
 .form-group input:checked + label:after {
   content: "";
@@ -1825,9 +1823,7 @@ ul {
   transform: rotate(45deg);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0; }
+  box-sizing: border-box; }
 
 .form-group input:checked + label:before {
   background-color: #FEE600;
