@@ -1823,7 +1823,9 @@ ul {
   transform: rotate(45deg);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
 
 .form-group input:checked + label:before {
   background-color: #FEE600;
@@ -2851,6 +2853,26 @@ main {
   .header__logo svg {
     width: 150px; } }
 @media (max-width: 993px) {
+  .profile__sidebar {
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin-left: 0; }
+    .profile__sidebar .profile__account {
+      max-width: 310px;
+      margin-bottom: 45px;
+      margin-left: auto;
+      margin-right: auto; }
+
+  .profile__content {
+    max-width: 100%;
+    flex: 0 0 100%; }
+
+  .lk__container {
+    max-width: 100%; }
+
+  .profile {
+    flex-wrap: wrap; }
+
   .single__images-top {
     height: auto; }
 
@@ -3151,6 +3173,36 @@ main {
   .bg-form {
     height: calc(100vh - 64px); } }
 @media (max-width: 584px) {
+  .lk__header-upload {
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin-top: 12px; }
+
+  .input-load {
+    height: 120px; }
+
+  .input-load__title {
+    display: block;
+    text-align: center; }
+    .input-load__title span {
+      display: flex;
+      margin-top: 10px;
+      margin-bottom: 5px; }
+      .input-load__title span svg {
+        margin-left: 0; }
+
+  .lk__header {
+    flex-wrap: wrap; }
+
+  .lk__inner {
+    flex-wrap: wrap; }
+    .lk__inner-item {
+      max-width: 100%;
+      flex: 0 0 100%;
+      margin-bottom: 15px; }
+      .lk__inner-item:last-child {
+        margin-bottom: 0; }
+
   .form-reg {
     margin-left: 10px;
     margin-right: 10px; }
