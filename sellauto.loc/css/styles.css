@@ -1789,15 +1789,13 @@ ul {
 .form-group label {
   position: relative;
   cursor: pointer;
-  font-weight: normal;
-  font-size: 16px;
   color: #2B2D33; }
 
 .form-group label:before {
   content: "";
   -webkit-appearance: none;
   background-color: transparent;
-  border: 2px solid red;
+  border: 2px solid green;
   border-radius: 4px;
   padding: 10px;
   display: inline-block;
@@ -1819,12 +1817,7 @@ ul {
   height: 14px;
   border: solid #2B2D33;
   border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0; }
+  transform: rotate(45deg); }
 
 .form-group input:checked + label:before {
   background-color: #FEE600;
@@ -2859,6 +2852,53 @@ main {
   .header__logo svg {
     width: 150px; } }
 @media (max-width: 993px) {
+  .form-progress__item::before {
+    top: -19px;
+    transform: translateY(0) translateX(-50%);
+    left: 50%; }
+
+  .form-progress {
+    margin-left: -25px;
+    margin-right: -25px;
+    overflow: hidden;
+    border-radius: 0;
+    padding: 20px 25px;
+    padding-right: 0; }
+    .form-progress__wrap {
+      display: flex;
+      width: 100%;
+      overflow-y: scroll;
+      padding-top: 20px; }
+      .form-progress__wrap::-webkit-scrollbar {
+        width: 0px;
+        height: 0px; }
+      .form-progress__wrap::before {
+        content: "";
+        height: 10px;
+        width: 970px;
+        top: 5px;
+        left: 51px; }
+    .form-progress__item {
+      white-space: nowrap;
+      padding-left: 0;
+      margin-right: 25px;
+      margin-bottom: 0; }
+
+  .form__wrap {
+    flex-wrap: wrap;
+    flex-direction: row-reverse; }
+
+  .form__sidebar {
+    max-width: 100%;
+    flex: 0 0 100%;
+    order: 1; }
+
+  .form__content {
+    max-width: 100%;
+    flex: 0 0 100%;
+    margin-right: 0;
+    order: 2; }
+
   .massage-block__send-submit {
     display: none; }
 
