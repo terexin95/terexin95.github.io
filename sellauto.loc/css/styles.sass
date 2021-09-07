@@ -1824,7 +1824,8 @@ ul
 	background-color: transparent
 	border: 2px solid #D5D5D6
 	border-radius: 4px
-	padding: 10px
+	width: 24px
+	height: 24px
 	display: inline-block
 	position: relative
 	vertical-align: middle
@@ -2216,10 +2217,17 @@ ul
 			padding: 0
 			cursor: pointer
 
+.massage-block__auto-phone-mobile
+	display: none
+
 .massage-block
 	border: 1px solid #E9EAEA
 	box-sizing: border-box
 	border-radius: 8px
+	&__mobile
+		display: none
+		&-close
+			display: none
 	&__send
 		display: flex
 		justify-content: space-between
