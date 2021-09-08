@@ -1822,7 +1822,7 @@ ul {
   position: absolute;
   width: 24px;
   height: 24px;
-  top: -4px;
+  top: 0;
   border: 0;
   background-image: url(../img/check.svg);
   background-size: cover;
@@ -1833,8 +1833,8 @@ ul {
   box-sizing: border-box; }
 
 .form-group input:checked + label:before {
-  background-color: #FEE600;
-  border-color: #FEE600; }
+  background-color: transparent;
+  border-color: transparent; }
 
 .input-load {
   background: #F8F8F8;
@@ -2896,6 +2896,9 @@ main {
   .header__logo svg {
     width: 150px; } }
 @media (max-width: 993px) {
+  .form-group input:checked + label:after {
+    top: -4px; }
+
   .modal-catolog-4 {
     display: block; }
 

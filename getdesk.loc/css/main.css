@@ -306,7 +306,8 @@ a {
     margin-bottom: 45px; }
   .selection__calendar {
     position: relative;
-    margin-bottom: 45px; }
+    margin-bottom: 45px;
+    cursor: pointer; }
     .selection__calendar-wrap {
       display: none; }
       .selection__calendar-wrap--active {
@@ -364,7 +365,8 @@ a {
     max-width: 440px;
     width: 440px;
     position: relative;
-    margin-bottom: 45px; }
+    margin-bottom: 45px;
+    cursor: pointer; }
     .selection__city-item {
       color: #131313;
       font-size: 20px;
@@ -477,18 +479,24 @@ a {
   content: "";
   display: block;
   position: absolute;
-  top: 2px;
-  left: 6px;
-  width: 5px;
-  height: 10px;
-  border: solid #fff;
-  border-width: 0 3px 3px 0;
-  border-radius: 0 0 2px 0;
-  transform: rotate(45deg); }
+  top: 0px;
+  left: 0px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/inputcheck.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 0; }
 
 .input-checkbox input:checked + label:before {
   content: "";
-  background-color: #ED4040; }
+  border: 0; }
+
+.search-page__item-mobile {
+  display: none; }
+
+.search-page__item-img .search-page__item-favorites {
+  display: none; }
 
 .advantages {
   display: flex;
@@ -1772,7 +1780,8 @@ input {
 .office-page {
   margin-top: 125px; }
   .office-page .search-page__filter-comfort-item-button {
-    color: #717171; }
+    color: #717171;
+    font-size: 16px; }
   .office-page__reviews {
     position: relative;
     margin-bottom: 90px; }
@@ -2022,7 +2031,6 @@ input {
       margin-right: 15px; }
   .office-page__main {
     display: flex;
-    flex-wrap: wrap;
     margin-top: 50px; }
   .office-page__content {
     max-width: calc(70% - 130px);
@@ -2075,7 +2083,8 @@ input {
       max-width: calc(50% - 20px);
       flex: 0 0 calc(50% - 20px);
       margin-right: 20px;
-      margin-bottom: 40px; }
+      margin-bottom: 40px;
+      height: 312px; }
       .office-page__gallery-img-item:nth-child(2n) {
         margin-right: 0;
         margin-left: 20px; }
@@ -2428,10 +2437,6 @@ input {
     color: #131313;
     margin-bottom: 15px;
     text-align: center; }
-    .time__item--font-size-18 {
-      font-size: 18px; }
-    .time__item--font-size-20 {
-      font-size: 20px; }
     .time__item--active {
       color: #ED4040;
       font-size: 22px; }
@@ -2586,6 +2591,15 @@ span.flatpickr-weekday {
     max-width: calc(60% - 40px);
     flex: 0 0 calc(60% - 40px); } }
 @media (max-width: 1550px) {
+  .search-page__button-help {
+    margin-right: 0; }
+    .search-page__button-help .input-checkbox label {
+      font-size: 14px; }
+
+  .search-page__button-full-map {
+    font-size: 14px;
+    margin-right: 30px; }
+
   .search-page__inner {
     padding-left: 20px;
     padding-right: 20px; }
@@ -2614,6 +2628,12 @@ span.flatpickr-weekday {
     flex: 0 0 47%;
     margin-bottom: 30px; } }
 @media (max-width: 1300px) {
+  .search-page__resize {
+    position: initial;
+    top: auto;
+    left: auto;
+    margin-left: 35px; }
+
   .search-page__map {
     width: 100%;
     margin-left: 0; }
@@ -2629,6 +2649,13 @@ span.flatpickr-weekday {
     border-radius: 0 !important;
     z-index: 99999999;
     box-shadow: 0 0 0 0 transparent !important; }
+
+  .search-page--active .search-page__inner .search-page__title {
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center; }
+  .search-page--active .search-page__inner .search-page__block-button {
+    margin-bottom: 10px; }
 
   .search-page__block-bottom .search-page__title {
     font-size: 24px;
@@ -2728,6 +2755,9 @@ span.flatpickr-weekday {
   .search-page__inner {
     padding-top: 30px; } }
 @media (max-width: 1200px) {
+  .office-page__main {
+    flex-wrap: wrap; }
+
   .gallery-modal {
     padding-left: 20px;
     padding-right: 20px; }
@@ -2817,7 +2847,7 @@ span.flatpickr-weekday {
   .carousel__slides {
     max-width: 100%;
     flex: 0 0 100%;
-    height: 550px; }
+    height: auto; }
 
   .carousel__slide--thumbnail {
     width: 250px;
@@ -2951,8 +2981,16 @@ span.flatpickr-weekday {
 
   .search-page__item {
     flex-wrap: wrap;
-    position: relative;
-    padding-top: 110px; }
+    position: relative; }
+
+  .search-page__item-title {
+    display: none; }
+
+  .search-page__item-rating {
+    display: none; }
+
+  .search-page__item-footer {
+    display: none; }
 
   .search-page__item-header {
     position: absolute;
@@ -2966,10 +3004,53 @@ span.flatpickr-weekday {
     flex: 0 0 100%;
     height: 56px; }
 
+  .search-page__item-img {
+    position: relative; }
+    .search-page__item-img .search-page__item-favorites {
+      display: flex;
+      position: absolute;
+      top: 10px;
+      right: 10px; }
+
+  .search-page__item-favorites {
+    display: none; }
+
+  .search-page__item-mobile {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px; }
+    .search-page__item-mobile .search-page__item-mobile-block {
+      flex: 0 0 calc(100% - 170px);
+      max-width: calc(100% - 170px); }
+    .search-page__item-mobile .search-page__item-mobile-title {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 24px;
+      color: #131313;
+      margin-bottom: 10px; }
+    .search-page__item-mobile .search-page__item-status {
+      display: block; }
+    .search-page__item-mobile .search-page__item-mobile-price {
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+    .search-page__item-mobile .search-page__item-rating {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      line-height: 18px; }
+      .search-page__item-mobile .search-page__item-rating svg {
+        margin-left: 5px; }
+
   .search-page__item-header .search-page__item-favorites {
     position: absolute;
     top: 125px;
     right: -160px; }
+
+  .search-page__item-status {
+    display: none; }
 
   .search-page__item-title a {
     display: block; }
@@ -2978,12 +3059,12 @@ span.flatpickr-weekday {
 
   .search-page__item-price {
     color: #ED4040;
-    margin-bottom: 25px; }
+    text-align: right;
+    line-height: 22px; }
 
-  .search-page__item-status {
-    position: absolute;
-    top: 64px;
-    left: 80px; }
+  .search-page__item-mobile-rating {
+    display: flex;
+    align-items: center; }
 
   .search-page__item-footer {
     position: absolute;
@@ -2994,7 +3075,11 @@ span.flatpickr-weekday {
 
   .search-page__item-img, .search-page__item-block {
     max-width: 100%;
-    flex: 0 0 100%; }
+    flex: 0 0 100%;
+    padding: 0; }
+
+  .search-page__inner .search-page__filter {
+    font-size: 12px; }
 
   .footer__right {
     max-width: calc(100% - 350px);
@@ -3291,6 +3376,7 @@ span.flatpickr-weekday {
     width: calc(100% - 2px);
     padding: 0;
     z-index: 999;
+    box-shadow: 0 0 0 0 transparent;
     left: 0; }
     .search-city__result .search-city__inner {
       padding-top: 20px; }
@@ -3880,6 +3966,12 @@ span.flatpickr-weekday {
   .container {
     padding: 0 20px; } }
 @media (max-width: 550px) {
+  .office-page__text-item {
+    height: 355px; }
+
+  .office-page__text {
+    font-size: 18px; }
+
   .search-page__wrap {
     padding-left: 0;
     padding-right: 0; }
@@ -3944,6 +4036,15 @@ span.flatpickr-weekday {
       width: 56px;
       height: 25px; } }
 @media (max-width: 500px) {
+  .search-city__item {
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 10px; }
+
+  .search-city__inner {
+    padding-left: 0;
+    padding-right: 0; }
+
   .search-city__input input, .calendar-form__input input {
     height: 50px;
     width: 100%;
@@ -3954,7 +4055,16 @@ span.flatpickr-weekday {
     left: 10px; }
 
   .calendar-form__input input {
-    padding-left: 40px; } }
+    padding-left: 40px; }
+
+  .input-checkbox input:checked + label:after {
+    top: -4px; }
+
+  .search-page__header .header__city .search-city input {
+    font-size: 14px; }
+
+  .calendar-form__input input {
+    font-size: 14px; } }
 @media (max-width: 440px) {
   .office-page__body .header__wrap {
     flex-wrap: wrap; }
@@ -3978,9 +4088,6 @@ span.flatpickr-weekday {
   .search-page__item-price {
     font-size: 16px;
     margin-bottom: 25px; }
-
-  .search-page__item-options {
-    display: block; }
 
   .search-page__item-option {
     font-size: 14px; }
@@ -4022,7 +4129,12 @@ span.flatpickr-weekday {
       flex: 0 0 100%; } }
 @media (max-width: 430px) {
   .office-page__offer-opts {
-    top: 10px; } }
+    top: 52px;
+    left: 22px;
+    right: auto; }
+
+  .office-page__offer-rating {
+    margin-bottom: 40px; } }
 @media (max-width: 410px) {
   .calendar-form__inner {
     left: 0;

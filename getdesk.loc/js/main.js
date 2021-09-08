@@ -29,15 +29,19 @@ if (document.querySelector('.search-page__block-button')) {
 			}
 		} else {
 			if (yDiff > 0) {
-				// document.querySelector('.search-page__block').classList.add('search-page__block-bottom');
-				// document.querySelector('.search-page__map').classList.add('search-page__map--active');
-				// document.querySelector('.search-page__block').classList.remove('search-page__block-top');
-				// if (document.querySelector('.search-page__buttons--active')) {document.querySelector('.search-page__buttons--active').classList.remove('search-page__buttons--active');}
+				document.querySelector('.search-page__block').classList.add('search-page__block-bottom');
+				document.querySelector('.search-page__map').classList.add('search-page__map--active');
+				document.querySelector('.search-page__block').classList.remove('search-page__block-top');
+				document.querySelector('.search-page__inner').scroll(0, 0);
+				if (document.querySelector('.search-page__buttons--active')) {document.querySelector('.search-page__buttons--active').classList.remove('search-page__buttons--active');}
 			} else {
 				document.querySelector('.search-page__block').classList.add('search-page__block-top');
 				document.querySelector('.search-page__buttons').classList.add('search-page__buttons--active');
 				document.querySelector('.search-page__map').classList.remove('search-page__map--active');
 				document.querySelector('.search-page__block').classList.remove('search-page__block-bottom');
+				document.querySelector('.search-city__result').classList.remove('search-city__result--active');
+				document.querySelector('.calendar-form__inner').classList.remove('calendar-form__inner--active');
+				document.querySelector('.calendar-form__input').classList.remove('calendar-form__input--focused');
 			}
 		}
 	}
@@ -71,6 +75,8 @@ inputHeaderCity.addEventListener("focusin", function(){
 	document.querySelector('.search-city__result').classList.add('search-city__result--active');
 	if (document.querySelector('.search-page__block')) {
 		document.querySelector('.search-page__block').classList.add('search-page__block-bottom');
+		document.querySelector('.search-page__block').classList.remove('search-page__block-top');
+		document.querySelector('.search-page__buttons').classList.remove('search-page__buttons--active');
 	}
 });
 inputHeaderCity.addEventListener("focusout", function(){
@@ -83,6 +89,11 @@ var inputHeaderCalendar = document.querySelector('.calendar-form__input input');
 inputHeaderCalendar.addEventListener("focusin", function(){
 	inputHeaderCalendar.parentElement.classList.add('calendar-form__input--focused');
 	document.querySelector('.calendar-form__inner').classList.add('calendar-form__inner--active');
+	if (document.querySelector('.search-page__block')) {
+		document.querySelector('.search-page__block').classList.add('search-page__block-bottom');
+		document.querySelector('.search-page__block').classList.remove('search-page__block-top');
+		document.querySelector('.search-page__buttons').classList.remove('search-page__buttons--active');
+	}
 });
 // inputHeaderCalendar.addEventListener("focusout", function(){
 // 	inputHeaderCalendar.parentElement.classList.remove('calendar-form__input--focused');
@@ -90,11 +101,12 @@ inputHeaderCalendar.addEventListener("focusin", function(){
 // });
 
 
-if (document.querySelector('.selection__city-input')) {
-	var inputSelectionCity = document.querySelector('.selection__city-input');
+if (document.querySelector('.selection__city')) {
+	var inputSelectionCity = document.querySelector('.selection__city');
 
 	inputSelectionCity.addEventListener("click", function(){
-		inputSelectionCity.parentElement.classList.add('selection__city--focused');
+		inputSelectionCity.classList.add('selection__city--focused');
+		inputSelectionCity.querySelector('.selection__city-input').style.borderColor = "#ED4040";	
 		document.querySelector('.selection__city-result').classList.add('selection__city-result--active');
 		document.querySelector('.selection__block').classList.add('selection__block--active');
 		document.querySelector('.selection').classList.add('selection--active');
@@ -160,6 +172,51 @@ if (document.querySelector('.search-city__item')) {
 	};
 }
 
+document.addEventListener('mouseup', function(){
+  var resultSort = document.querySelectorAll('.selection__block');
+  for (var i = 0; i < resultSort.length; i++) {
+    if (!resultSort[i].classList.contains(event.target) && isVisible(resultSort[i])) { // и не по его дочерним элементам
+      document.querySelector('.selection__city-input').parentElement.classList.remove('selection__city--focused');
+			document.querySelector('.selection__city-result').classList.remove('selection__city-result--active');
+			document.querySelector('.selection__block').classList.remove('selection__block--active');
+			document.querySelector('.selection').classList.remove('selection--active');
+    }
+  }
+  // var h1 = document.querySelector('.search-page__filter-price-modal');
+  // if (!h1.classList.contains(event.target) && isVisible(h1)) { // и не по его дочерним элементам
+  //   document.querySelector('.search-page__filter-price').classList.remove('search-page__filter-price--active');
+  // }
+
+  // var h2 = document.querySelector('.search-page__filter-price-modal');
+  // if (!h2.classList.contains(event.target) && isVisible(h2)) { // и не по его дочерним элементам
+  //   document.querySelector('.search-page__filter-price--active').classList.remove('search-page__filter-price--active');
+  // }
+});
+
+function onClickClose(elem, active) { // вызвать в момент показа окна, где elem - окно
+    function outsideClickListener(event) {
+        if (!elem.parentElement.contains(event.target) && isVisible(elem.parentElement)) {  // проверяем, что клик не по элементу и элемент виден
+             elem.parentElement.classList.remove(active); //скрыть
+             document.removeEventListener('click', outsideClickListener);
+        }
+    }
+    document.addEventListener('click', outsideClickListener)
+}
+
+// function onClickClose(elem) { // вызвать в момент показа окна, где elem - окно
+//     function outsideClickListener(event) {
+//         if (!elem.parentElement.contains(event.target) && isVisible(elem.parentElement)) {  // проверяем, что клик не по элементу и элемент виден
+//              elem.parentElement.classList.remove('search-page__filter-price--active'); //скрыть
+//              document.removeEventListener('click', outsideClickListener);
+//         }
+//     }
+//     document.addEventListener('click', outsideClickListener)
+// }
+function isVisible(elem) { //открыто ли условное окно
+   return !!elem && !!( elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length );
+}
+
+
 if (document.querySelector('.selection__city-item')) {
 
 	var selCity = document.querySelectorAll('.selection__city-item');
@@ -170,6 +227,7 @@ if (document.querySelector('.selection__city-item')) {
 			this.classList.add('selection__city-item--active');
 			document.querySelector('.search-city__input input').value = this.textContent;
 			document.querySelector('.selection__city-input').value = this.textContent;
+			document.querySelector('.selection__city-input').style.borderColor = "#C7C7C7";
 
 			document.querySelector('.selection__city-input').parentElement.classList.remove('selection__city--focused');
 			document.querySelector('.selection__city-result').classList.remove('selection__city-result--active');
@@ -370,6 +428,7 @@ if (document.querySelector('.search-page__filter-price')) {
 	for(var i = 0; i < document.querySelectorAll('.search-page__filter-price-subtitle').length; i++){
 		document.querySelectorAll('.search-page__filter-price-subtitle')[i].addEventListener('click', function(){
 			this.parentElement.classList.add('search-page__filter-price--active');
+			onClickClose(this, 'search-page__filter-price--active');
 		});
 	}
 	document.querySelectorAll('.range-slider__btn-accept')[0].addEventListener('click', function(){
@@ -384,6 +443,7 @@ if (document.querySelector('.search-page__filter-price')) {
 if (document.querySelector('.search-page__filter-booking')) {
 	document.querySelectorAll('.search-page__filter-booking-subtitle')[0].addEventListener('click', function(){
 		document.querySelectorAll('.search-page__filter-booking')[0].classList.add('search-page__filter-booking--active');
+		onClickClose(this, 'search-page__filter-booking--active');
 	});
 	document.querySelectorAll('.search-page__filter-booking-modal-checkbox label')[0].addEventListener('click', function(){
 		document.querySelectorAll('.search-page__filter-booking')[0].classList.remove('search-page__filter-booking--active');
@@ -391,6 +451,7 @@ if (document.querySelector('.search-page__filter-booking')) {
 
 	document.querySelectorAll('.search-page__filter-booking-subtitle')[1].addEventListener('click', function(){
 		document.querySelectorAll('.search-page__filter-booking')[1].classList.add('search-page__filter-booking--active');
+		onClickClose(this, 'search-page__filter-booking--active');
 	});
 	document.querySelectorAll('.search-page__filter-booking-modal-checkbox label')[1].addEventListener('click', function(){
 		document.querySelectorAll('.search-page__filter-booking')[1].classList.remove('search-page__filter-booking--active');
@@ -401,6 +462,7 @@ if (document.querySelector('.search-page__filter-booking')) {
 if (document.querySelector('.search-page__filter-feature')) {
 	document.querySelectorAll('.search-page__filter-feature-subtitle')[0].addEventListener('click', function(){
 		document.querySelectorAll('.search-page__filter-feature')[0].classList.add('search-page__filter-feature--active');
+		onClickClose(this, 'search-page__filter-feature--active');
 	});
 	document.querySelectorAll('.search-page__filter-feature-btn-accept')[0].addEventListener('click', function(){
 		document.querySelectorAll('.search-page__filter-feature')[0].classList.remove('search-page__filter-feature--active');
@@ -408,6 +470,7 @@ if (document.querySelector('.search-page__filter-feature')) {
 
 	document.querySelectorAll('.search-page__filter-feature-subtitle')[1].addEventListener('click', function(){
 		document.querySelectorAll('.search-page__filter-feature')[1].classList.add('search-page__filter-feature--active');
+		onClickClose(this, 'search-page__filter-feature--active');
 	});
 	document.querySelectorAll('.search-page__filter-feature-btn-accept')[1].addEventListener('click', function(){
 		document.querySelectorAll('.search-page__filter-feature')[1].classList.remove('search-page__filter-feature--active');
@@ -417,6 +480,7 @@ if (document.querySelector('.search-page__filter-feature')) {
 if (document.querySelector('.search-page__filter-comfort')) {
 	document.querySelectorAll('.search-page__filter-comfort-subtitle')[0].addEventListener('click', function(){
 		document.querySelectorAll('.search-page__filter-comfort')[0].classList.add('search-page__filter-comfort--active');
+		onClickClose(this, 'search-page__filter-comfort--active');
 	});
 	document.querySelectorAll('.search-page__filter-comfort-btn-accept')[0].addEventListener('click', function(){
 		document.querySelectorAll('.search-page__filter-comfort')[0].classList.remove('search-page__filter-comfort--active');
@@ -424,6 +488,7 @@ if (document.querySelector('.search-page__filter-comfort')) {
 
 	document.querySelectorAll('.search-page__filter-comfort-subtitle')[1].addEventListener('click', function(){
 		document.querySelectorAll('.search-page__filter-comfort')[1].classList.add('search-page__filter-comfort--active');
+		onClickClose(this, 'search-page__filter-comfort--active');
 	});
 	document.querySelectorAll('.search-page__filter-comfort-btn-accept')[1].addEventListener('click', function(){
 		document.querySelectorAll('.search-page__filter-comfort')[1].classList.remove('search-page__filter-comfort--active');
