@@ -1820,11 +1820,11 @@ ul {
   content: "";
   display: block;
   position: absolute;
-  top: 25%;
+  top: 4px;
   left: 9px;
   width: 6px;
   height: 14px;
-  border: solid red;
+  border: solid #2B2D33;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
   -webkit-box-sizing: border-box;
@@ -2721,7 +2721,8 @@ main {
     overflow: hidden; }
   .modal-catolog__main {
     height: calc(100vh - 230px);
-    overflow-y: scroll; }
+    overflow-y: scroll;
+    overflow-x: hidden; }
   .modal-catolog__search {
     padding: 15px 25px;
     background: #FCFCFC;
@@ -2865,6 +2866,9 @@ main {
   .header__logo svg {
     width: 150px; } }
 @media (max-width: 993px) {
+  .modal-catolog-4 {
+    display: block; }
+
   .form-step__title-auto {
     padding-left: 25px;
     padding-right: 25px;
@@ -2899,12 +2903,15 @@ main {
     overflow: hidden;
     border-radius: 0;
     padding: 20px 25px;
+    margin-top: -20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
     padding-right: 0; }
     .form-progress__wrap {
       display: flex;
       width: 100%;
       overflow-y: scroll;
-      padding-top: 20px; }
+      padding-top: 20px;
+      padding-left: 25px; }
       .form-progress__wrap::-webkit-scrollbar {
         width: 0px;
         height: 0px; }
@@ -2913,7 +2920,7 @@ main {
         height: 10px;
         width: 970px;
         top: 5px;
-        left: 51px; }
+        left: 76px; }
     .form-progress__item {
       white-space: nowrap;
       padding-left: 0;
