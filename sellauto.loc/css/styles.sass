@@ -1538,6 +1538,7 @@ ul
 				width: 64px
 				height: 64px
 				margin-right: 15px
+				flex: 0 0 64px
 				img
 					width: 100%
 					height: 100%
@@ -1633,12 +1634,12 @@ ul
 		font-size: 14px
 		line-height: 18px
 		color: $text
-		margin-bottom: 15px
 	&__wrap
 		display: flex
 		flex-wrap: wrap
 	&__item
 		cursor: pointer
+		margin-top: 15px
 		height: 48px
 		line-height: 44px
 		margin-right: 17px
@@ -1664,11 +1665,11 @@ ul
 		font-size: 14px
 		line-height: 18px
 		color: $text
-		margin-bottom: 15px
 	&__wrap
 		display: flex
 		flex-wrap: wrap
 	&__item
+		margin-top: 15px
 		height: 48px
 		width: 48px
 		flex: 0 0 48px
@@ -1796,10 +1797,64 @@ ul
 		color: $text
 		margin-bottom: 15px
 
+// .form-group 
+// 	display: block
+// 	margin-right: 30px
+
+
+// .form-group input 
+// 	padding: 0
+// 	height: initial
+// 	width: initial
+// 	margin-bottom: 0
+// 	display: none
+// 	cursor: pointer
+
+
+// .form-group label 
+// 	position: relative
+// 	cursor: pointer
+// 	//font-weight: normal
+// 	//font-size: 16px
+// 	color: $text
+
+// .form-group label:before 
+// 	content: ''
+// 	-webkit-appearance: none
+// 	background-color: transparent
+// 	border: 2px solid green
+// 	border-radius: 4px
+// 	padding: 10px
+// 	display: inline-block
+// 	position: relative
+// 	vertical-align: middle
+// 	cursor: pointer
+// 	margin-right: 10px
+// 	-webkit-box-sizing: border-box
+// 	-moz-box-sizing: border-box
+// 	box-sizing: border-box
+
+
+// .form-group input:checked + label:after 
+// 	content: ''
+// 	display: block
+// 	position: absolute
+// 	top: 2px
+// 	left: 9px
+// 	width: 6px
+// 	height: 14px
+// 	border: solid #2B2D33
+// 	border-width: 0 2px 2px 0
+// 	transform: rotate(45deg)
+// 	// -webkit-box-sizing: border-box
+// 	// -moz-box-sizing: border-box
+// 	// box-sizing: border-box
+// 	//margin: 0
+// 	//padding: 0
+
 .form-group 
 	display: block
-	margin-right: 30px
-
+	margin-bottom: 15px
 
 .form-group input 
 	padding: 0
@@ -1809,47 +1864,41 @@ ul
 	display: none
 	cursor: pointer
 
-
 .form-group label 
 	position: relative
 	cursor: pointer
-	//font-weight: normal
-	//font-size: 16px
-	color: $text
+	color: #fff
 
 .form-group label:before 
 	content: ''
 	-webkit-appearance: none
 	background-color: transparent
-	border: 2px solid green
-	border-radius: 4px
-	padding: 10px
+	border: 1px solid $red
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05)
+	padding: 7px
+	background: #fff
 	display: inline-block
 	position: relative
 	vertical-align: middle
 	cursor: pointer
-	margin-right: 10px
-	-webkit-box-sizing: border-box
-	-moz-box-sizing: border-box
-	box-sizing: border-box
-
+	margin-right: 13px
+	border-radius: 2px
 
 .form-group input:checked + label:after 
 	content: ''
 	display: block
 	position: absolute
-	top: 2px
-	left: 9px
-	width: 6px
-	height: 14px
-	border: solid #2B2D33
+	top: 4px
+	left: 5px
+	width: 4px
+	height: 10px
+	border: solid #fff
 	border-width: 0 2px 2px 0
 	transform: rotate(45deg)
-	// -webkit-box-sizing: border-box
-	// -moz-box-sizing: border-box
-	// box-sizing: border-box
-	//margin: 0
-	//padding: 0
+
+.form-group input:checked + label:before 
+	content: ''
+	background: $red
 
 .form-group input:checked + label:before
 	background-color: #FEE600
