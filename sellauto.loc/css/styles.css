@@ -1820,13 +1820,14 @@ ul {
   content: "";
   display: block;
   position: absolute;
-  top: 4px;
-  left: 9px;
-  width: 6px;
-  height: 14px;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  border: 0;
+  background-image: url(../img/check.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
   border: solid #2B2D33;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
