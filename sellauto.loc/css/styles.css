@@ -1796,7 +1796,7 @@ ul {
   content: "";
   -webkit-appearance: none;
   background-color: transparent;
-  border: 2px solid #FEE600;
+  border: 2px solid #D5D5D6;
   border-radius: 4px;
   padding: 10px;
   display: inline-block;
@@ -1808,15 +1808,23 @@ ul {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.modal-catolog__main-wrap-1 {
+  display: none; }
+
+.form-step-5, .form-step-6 {
+  padding-left: 25px;
+  padding-right: 25px;
+  display: none; }
+
 .form-group input:checked + label:after {
   content: "";
   display: block;
   position: absolute;
-  top: 2px;
+  top: 27%;
   left: 9px;
   width: 6px;
   height: 14px;
-  border: solid #2B2D33;
+  border: solid red;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
   -webkit-box-sizing: border-box;
