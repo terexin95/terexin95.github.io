@@ -8,6 +8,137 @@
 			width: 150px
 
 @media (max-width: 993px)
+	.modal-catolog-4
+		display: block
+	.form-step__title-auto
+		padding-left: 25px
+		padding-right: 25px
+		margin-left: -25px
+		margin-right: -25px
+		padding-bottom: 10px
+	.auto-colors__wrap
+		max-width: 300px
+	.form-step__title-auto-text
+		font-size: 16px
+		line-height: 24px
+		margin-top: 10px
+		br
+			display: none
+	.form-progress__item::before
+		top: -19px
+		transform: translateY(0) translateX(-50%)
+		left: 50%
+	.form-step__title
+		display: none
+	.form-step__search
+		display: none
+	.form-progress
+		margin-left: -25px
+		margin-right: -25px
+		overflow: hidden
+		border-radius: 0
+		padding: 20px 25px
+		margin-top: -20px
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08)
+		padding-right: 0
+		&__wrap
+			display: flex
+			width: 100%
+			overflow-y: scroll
+			padding-top: 20px
+			padding-left: 25px
+			&::-webkit-scrollbar 
+				width: 0px /* ширина для вертикального скролла */
+				height: 0px/* высота для горизонтального скролла */
+			&::before
+				content: ""
+				height: 10px
+				width: 970px
+				top: 5px
+				left: 76px
+		&__item
+			white-space: nowrap
+			padding-left: 0
+			margin-right: 25px
+			margin-bottom: 0
+	.form__wrap
+		flex-wrap: wrap
+		flex-direction: row-reverse
+	.form__sidebar
+		max-width: 100%
+		flex: 0 0 100%
+		order: 1
+	.form__content
+		max-width: 100%
+		flex: 0 0 100%
+		margin-right: 0
+		order: 2
+	.massage-block__send-submit
+		display: none
+	.massage-block__send-textarea
+		flex: 0 0 calc(100% - 80px)
+		max-width: calc(100% - 80px)
+	.massage-block
+		height: 100vh
+		overflow: hidden
+		border: 0
+		border-radius: 0
+	.massage-block__main
+		height: calc(100vh - 330px)
+	.massage-block__mobile
+		display: block
+		height: 64px
+		text-align: center
+		line-height: 64px
+		background-color: #fff
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08)
+		font-style: normal
+		font-weight: 500
+		font-size: 16px
+		color: $text
+		&-close
+			display: block
+			position: absolute
+			top: 24px
+			left: 30px
+	.massage-block__header
+		flex-wrap: wrap
+	.massage-block__auto-phone-mobile
+		max-width: 100%
+		flex: 0 0 100%
+		margin-top: 20px
+		display: block
+		a
+			display: block
+			width: 100%
+	.massage__wrap
+		padding: 0
+		border: 0
+		border-radius: 0
+	.chat__sidebar
+		max-width: 100%
+		flex: 0 0 100%
+		margin-right: 0
+	.massage__item:last-child
+		border-bottom: 1px solid #E9EAEA
+	.chat__content
+		display: none
+		position: fixed
+		top: 0
+		right: 0
+		left: 0
+		bottom: 0
+		z-index: 20
+		background-color: #fff
+		width: 100%
+		min-width: 100%
+		flex: 0 0 100%
+		.massage-block__header, .massage-block__main, .massage-block__send
+			padding-left: 25px
+			padding-right: 25px
+	.massage-block__auto
+		.massage-block__auto-phone
+			display: none
 	.profile__sidebar
 		max-width: 100%
 		flex: 0 0 100%
@@ -274,6 +405,11 @@
 		height: calc(100vh - 64px)
 
 @media (max-width: 584px)
+	.profile__title
+		margin-left: -25px
+		margin-right: -25px
+		padding-left: 25px
+		padding-right: 25px
 	.lk__header-upload
 		max-width: 100%
 		flex: 0 0 100%

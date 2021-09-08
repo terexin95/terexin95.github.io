@@ -9,6 +9,34 @@
 	<title>SELLAUTO</title>
 </head>
 <body>
+	<div class="mobile-menu no-reg">
+		<div class="mobile-menu__wrap">
+			<div class="header__search">
+				<input type="text" placeholder="Поиск обьявлений">
+				<button>
+					<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9.40495 2.5C13.0868 2.5 16.0716 5.48477 16.0716 9.16667C16.0716 10.7068 15.5493 12.125 14.6722 13.2538L17.9109 16.4941L16.7324 17.6726L13.4921 14.4339C12.3633 15.3111 10.9451 15.8333 9.40495 15.8333C5.72305 15.8333 2.73828 12.8486 2.73828 9.16667C2.73828 5.48477 5.72305 2.5 9.40495 2.5ZM9.40495 4.16667C6.64352 4.16667 4.40495 6.40524 4.40495 9.16667C4.40495 11.9281 6.64352 14.1667 9.40495 14.1667C12.1664 14.1667 14.4049 11.9281 14.4049 9.16667C14.4049 6.40524 12.1664 4.16667 9.40495 4.16667Z" fill="#2B2D33" fill-opacity="0.24"/>
+					</svg>
+				</button>
+			</div>
+			<div class="mobile-menu__menu">
+				<div class="mobile-menu__menu-item"><a href="#">Обьявления</a></div>
+				<div class="mobile-menu__menu-item"><a href="#">Каталог автомобилей</a></div>
+				<div class="mobile-menu__menu-item"><a href="#">Добавить объявление</a></div>
+				<div class="mobile-menu__menu-item"><a href="#">Избранное <span class="mobile-menu__menu-favr">3</span></a></div>
+			</div>
+			<div class="mobile-menu__border"></div>
+			<div class="no-reg__item">
+				<div class="no-reg__title">Войдите, чтобы получать больше возможностей</div>
+				<a href="#" class="no-reg__link">Войти или зарегистрироваться</a>
+			</div>
+			<div class="mobile-menu__border"></div>
+			<div class="mobile-menu__footer">
+				<a href="#" class="mobile-menu__footer-politic">Политика конфиденциальности</a>
+				<div class="mobile-menu__footer-copy">© 1996–2021 ООО «SellAutoClub»</div>
+			</div>
+		</div>
+	</div>
 	<header class="header">
 		<div class="header__wrap">
 			<a href="#" class="header__logo">
@@ -60,7 +88,21 @@
 					<div class="header__icon-text">Избранное</div>
 				</div>
 			</div>
-			<a href="#" class="header__sell">Продать</a>
+			<div style="display: flex;align-items: center;">
+				<a href="#" class="header__sell">Продать</a>
+				<div class="humburger">
+					<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="0.5" y="0.878479" width="20.1766" height="2.60615" fill="#1C1B17"/>
+						<rect x="0.5" y="8.69693" width="20.1766" height="2.60615" fill="#1C1B17"/>
+						<rect x="0.5" y="16.5154" width="20.1766" height="2.60615" fill="#1C1B17"/>
+					</svg>
+				</div>
+				<div class="close-menu">
+					<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M9.35593 7.87438L14.6592 2.57109L12.8915 0.803319L7.58816 6.10661L2.28486 0.803314L0.517096 2.57108L5.8204 7.87438L0.51709 13.1777L2.28486 14.9455L7.58816 9.64215L12.8915 14.9454L14.6592 13.1777L9.35593 7.87438Z" fill="#2B2D33"/>
+					</svg>
+				</div>
+			</div>
 			<a href="#" class="header__login">Войти</a>
 		</div>
 	</header>
@@ -161,6 +203,14 @@
 					</div>
 					<div class="chat__content">
 						<div class="massage-block">
+							<div class="massage-block__mobile">
+								Чат
+							</div>
+							<div class="massage-block__mobile-close">
+								<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M12.0176 10.5713L17.3208 5.26805L15.5531 3.50028L10.2498 8.80357L4.94648 3.50027L3.17872 5.26804L8.48202 10.5713L3.17871 15.8746L4.94648 17.6424L10.2498 12.3391L15.5531 17.6424L17.3209 15.8746L12.0176 10.5713Z" fill="#2B2D33"/>
+								</svg>
+							</div>
 							<div class="massage-block__header">
 								<div class="massage-block__man">
 									<div class="massage-block__man-img">
@@ -175,6 +225,9 @@
 									<div class="massage-block__auto-img">
 										<img src="img/post2.png" alt="">
 									</div>
+									<a href="#" class="massage-block__auto-phone">Позвонить</a>
+								</div>
+								<div class="massage-block__auto-phone-mobile">
 									<a href="#" class="massage-block__auto-phone">Позвонить</a>
 								</div>
 							</div>
