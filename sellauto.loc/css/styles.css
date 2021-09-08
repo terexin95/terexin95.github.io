@@ -1822,12 +1822,12 @@ ul {
   position: absolute;
   width: 24px;
   height: 24px;
-  top: 0;
+  top: -2px;
   border: 0;
   background-image: url(../img/check.svg);
   background-size: cover;
   background-repeat: no-repeat;
-  border: solid #2B2D33;
+  border: solid red;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
