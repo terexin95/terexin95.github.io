@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -2256,7 +2257,22 @@ ul {
   .massage-block__main {
     padding-left: 56px;
     padding-right: 56px;
-    height: 500px; }
+    height: 500px;
+    overflow-y: scroll;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    /* ползунок скроллбара */ }
+    .massage-block__main::-webkit-scrollbar {
+      width: 7px;
+      height: 10px; }
+    .massage-block__main::-webkit-scrollbar-thumb {
+      background-color: #C7C7C7;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+      -webkit-appearance: none; }
+      .massage-block__main::-webkit-scrollbar-thumb:hover {
+        background-color: #a1a1a1;
+        transition: all 0.3s ease; }
   .massage-block__item {
     display: flex;
     align-items: start;
@@ -2873,7 +2889,8 @@ main {
   .auto-item-mobile__inner {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    align-items: center; }
   .auto-item-mobile__price {
     font-weight: bold;
     font-size: 18px;
@@ -2896,6 +2913,14 @@ main {
   .header__logo svg {
     width: 150px; } }
 @media (max-width: 993px) {
+  .mobile-menu__menu-favr, .mobile-menu__menu-messg {
+    line-height: 26px; }
+
+  .massage__item-num {
+    width: 24px;
+    height: 24px;
+    line-height: 22px; }
+
   .form-group input:checked + label:after {
     top: -4px; }
 
@@ -2989,7 +3014,7 @@ main {
     border-radius: 0; }
 
   .massage-block__main {
-    height: calc(100vh - 330px); }
+    height: calc(100vh - 300px); }
 
   .massage-block__mobile {
     display: block;
@@ -3326,9 +3351,10 @@ main {
     margin-top: 20px; }
 
   .catalog__sorts {
-    flex: 0 0 calc(100% + 50px);
-    max-width: calc(100% + 50px);
+    flex: 0 0 calc(100% + 0px);
+    max-width: calc(100% + 0px);
     display: flex;
+    justify-content: space-between;
     border-top: 5px solid #E9EAEA;
     border-bottom: 5px solid #E9EAEA;
     margin-top: 20px;
@@ -3340,7 +3366,9 @@ main {
     display: none; }
 
   .filter-mobile {
-    display: block; }
+    display: block;
+    padding-left: 25px;
+    padding-right: 25px; }
 
   .header {
     position: relative;
@@ -3437,5 +3465,10 @@ main {
 
   .catalog__date {
     max-width: 150px; } }
+@media (max-width: 425px) {
+  .catalog__sort, .catalog__date {
+    max-width: 48%;
+    flex: 0 0 48%;
+    margin: 0; } }
 
 /*# sourceMappingURL=styles.css.map */

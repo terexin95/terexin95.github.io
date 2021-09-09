@@ -25,6 +25,9 @@ document.querySelectorAll('.tabs').forEach(tab =>{
   tabs.init();
 })
 
+if (document.querySelector('.massage-block__main')) {
+  document.querySelector('.massage-block__main').scroll(0, document.querySelector('.massage-block__main').scrollHeight);
+}
 
 if (document.querySelector('.single__images img')) {
   var singleImg = document.querySelectorAll('.single__images img');
@@ -47,6 +50,9 @@ if (document.querySelector('.massage__item')) {
     msgI[i].addEventListener('click', function(){
       document.querySelector('.chat__content').style.display = "block";
       document.querySelector('body').style.overflow = "hidden";
+      if (document.querySelector('.massage-block__main')) {
+        document.querySelector('.massage-block__main').scroll(0, document.querySelector('.massage-block__main').scrollHeight);
+      }
     });
   }
 }

@@ -2286,6 +2286,21 @@ ul
 		padding-left: 56px
 		padding-right: 56px
 		height: 500px
+		overflow-y: scroll
+		padding-bottom: 40px
+		box-sizing: border-box
+		&::-webkit-scrollbar 
+			width: 7px /* ширина для вертикального скролла */
+			height: 10px/* высота для горизонтального скролла */
+		/* ползунок скроллбара */
+		&::-webkit-scrollbar-thumb 
+			background-color: #C7C7C7
+			border-radius: 10px
+			transition: all .3s ease
+			-webkit-appearance: none
+			&:hover
+				background-color: darken(#C7C7C7, 15%)
+				transition: all .3s ease
 	&__item
 		display: flex
 		align-items: start
@@ -2912,6 +2927,7 @@ main
 		display: flex
 		justify-content: space-between
 		margin-bottom: 15px
+		align-items: center
 	&__price
 		font-weight: bold
 		font-size: 18px
