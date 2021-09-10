@@ -1309,12 +1309,60 @@ ul
 	.select-input
 		margin-bottom: 0
 
+.auto-item__email
+	display: flex
+	align-items: center
+	font-weight: normal
+	font-size: 14px
+	color: $text
+	margin-top: 20px
+	margin-bottom: 25px
+	.input-checkbox
+		margin-left: 10px
+	.form-group label:before
+		padding: 7px
+	.form-group input:checked + label:after
+		width: 18px
+		height: 18px
+
 .company-dealer
 	display: flex
 	justify-content: space-between
 	padding: 20px
 	background: #FFFFFF
 	border-radius: 8px
+	&__more
+		font-weight: normal
+		font-size: 14px
+		line-height: 22px
+		color: #00809C
+		cursor: pointer
+		margin-top: 10px
+	&__subtitle
+		font-weight: 500
+		font-size: 12px
+		line-height: 18px
+		margin-bottom: 5px
+		margin-top: 5px
+	&__text
+		font-size: 14px
+		line-height: 22px
+		color: rgba(#2B2D33, .8)
+		height: 44px
+		overflow: hidden
+		&--active
+			height: auto
+	&__row
+		display: flex
+		margin-bottom: 10px
+		.single__dealer-inner
+			margin-right: 25px
+			&:first-child
+				min-width: 100px
+		.single__dealer-rating
+			font-weight: 500
+			font-size: 12px
+			color: $text
 	&__wrap
 		padding-bottom: 20px
 		margin-bottom: 20px
@@ -1331,9 +1379,6 @@ ul
 		line-height: 40px
 		font-family: 'Navigo'
 		color: $text
-	.single__dealer-inner
-		max-width: 150px
-		margin-top: 10px
 	&__map
 		display: flex
 		align-items: center
@@ -1350,12 +1395,13 @@ ul
 		display: flex
 		max-width: calc(100% - 300px)
 		flex: 0 0 calc(100% - 300px)
-		align-items: center
+		align-items: start
 	&__img
 		flex: 0 0 120px
 		display: flex
 		align-items: center
 		margin-right: 30px
+		margin-top: 30px
 		img
 			width: 100%
 			height: auto
@@ -1375,6 +1421,15 @@ ul
 
 .profile
 	display: flex
+	.tabs-profile
+		.profile__title
+			margin-bottom: 30px
+			border-bottom: 0 solid #000
+			padding-bottom: 0
+		.tabs__button-group
+			justify-content: start
+		.tabs__toggle
+			margin-right: 30px
 	&__title
 		font-weight: bold
 		font-size: 32px
@@ -2494,13 +2549,29 @@ ul
 		font-size: 18px
 		color: #AAABAD
 		cursor: pointer
+		&-from
+			border-right: 1px solid #D5D5D6
+			box-sizing: border-box
+		&-commission
+			max-width: 49%
+			flex: 0 0 49%
+			display: inline-block
+			border-bottom: 0px solid #000
+		.select-input
+			margin-bottom: 0
+			svg
+				right: -1px
+			input
+				padding-left: 0
+				border-radius: 0
+				padding-right: 15px
+				border: 0
+				font-size: 18px
+				color: #AAABAD
 		&:last-child
 			border-bottom: 0 solid #000
 	.mew-auto__mobile
 		width: 100%
-
-
-
 
 .lk
 	margin-bottom: 45px
@@ -2940,7 +3011,13 @@ main
 	&__comission
 		font-weight: 500
 		font-size: 12px
-		line-height: 22px
+		line-height: 20px
 		color: #008E7D
+		text-align: right
+		span
+			display: block
+			font-weight: bold
+			font-size: 18px
+
 
 @import "_media.sass"

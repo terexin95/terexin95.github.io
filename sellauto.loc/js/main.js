@@ -308,23 +308,38 @@ if (document.querySelector('.select-input')) {
   
 }
 
-
+if (document.querySelector('.company-dealer__more')) {
+  document.querySelector('.company-dealer__more').addEventListener('click', function(){
+    if(this.innerHTML === "Показать больше"){
+      this.innerHTML = "Скрыть";
+    } else {
+      this.innerHTML = "Показать больше";
+    }
+    document.querySelector('.company-dealer__text').classList.toggle('company-dealer__text--active');
+  })
+}
 
 if (document.querySelector('.mew-auto__mobile-brand')) {
-  document.querySelector('.mew-auto__mobile-brand').addEventListener('click', function(){
-    document.querySelector('.modal-catolog-1').style.display = "block";
-    document.querySelector('body').style.overflow = "hidden";
-  });
+  for (var i = 0; i < document.querySelectorAll('.mew-auto__mobile-brand').length; i++) {
+    document.querySelectorAll('.mew-auto__mobile-brand')[i].addEventListener('click', function(){
+      document.querySelector('.modal-catolog-1').style.display = "block";
+      document.querySelector('body').style.overflow = "hidden";
+    });
+  }
 
-  document.querySelector('.mew-auto__mobile-opt').addEventListener('click', function(){
-    document.querySelector('.modal-catolog-3').style.display = "block";
-    document.querySelector('body').style.overflow = "hidden";
-  });
+  for (var i = 0; i < document.querySelectorAll('.mew-auto__mobile-opt').length; i++) {
+    document.querySelectorAll('.mew-auto__mobile-opt')[i].addEventListener('click', function(){
+      document.querySelector('.modal-catolog-3').style.display = "block";
+      document.querySelector('body').style.overflow = "hidden";
+    });
+  }
 
-  document.querySelector('.mew-auto__mobile-model').addEventListener('click', function(){
-    document.querySelector('.modal-catolog-2').style.display = "block";
-    document.querySelector('body').style.overflow = "hidden";
-  });
+  for (var i = 0; i < document.querySelectorAll('.mew-auto__mobile-model').length; i++) {
+    document.querySelectorAll('.mew-auto__mobile-model')[i].addEventListener('click', function(){
+      document.querySelector('.modal-catolog-2').style.display = "block";
+      document.querySelector('body').style.overflow = "hidden";
+    });
+  }
 
   var mCA = document.querySelectorAll('.modal-catolog__auto');
   for (var i = 0; i < mCA.length; i++) {
