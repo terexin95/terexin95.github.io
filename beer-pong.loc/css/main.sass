@@ -71,6 +71,7 @@ img
 		max-width: 625px
 		justify-content: space-between
 		width: 100%
+		color: #fff
 	&__link a
 		font-weight: bold
 		font-size: 14px
@@ -122,12 +123,10 @@ img
 	border-bottom: 2px solid rgba(#fff, .2)
 	margin: auto
 	display: flex
+	position: relative
 	&__wrap
 		display: flex
 		transition: all .3s ease
-	&__block
-		max-width: 210px
-		margin-right: 100px
 	&__title
 		font-weight: bold
 		font-size: 32px
@@ -162,6 +161,16 @@ img
 			border-bottom: 2px solid #fff
 			line-height: 18px
 			padding: 2px 0
+	.slider-header__btn-left
+		position: absolute
+		left: -90px
+		top: 85px
+		margin-right: 0
+	.slider-header__btn-right
+		position: absolute
+		right: -90px
+		top: 85px
+		margin-right: 0
 
 .price
 	display: flex
@@ -1011,8 +1020,8 @@ input::-webkit-inner-spin-button
 			padding: 0 20px
 			margin-bottom: 35px
 	&__inner
-		max-width: 75%
-		flex: 0 0 75%
+		max-width: 100%
+		flex: 0 0 100%
 		display: flex
 		flex-wrap: wrap
 		.filter
@@ -1023,11 +1032,11 @@ input::-webkit-inner-spin-button
 			flex-wrap: wrap
 			display: flex
 	&__item
-		max-width: 31.5%
-		flex: 0 0 31.5%
+		max-width: 21.5%
+		flex: 0 0 21.5%
 		margin-right: 2.75%
 		margin-bottom: 30px
-		&:nth-child(3n)
+		&:nth-child(4n)
 			margin-right: 0
 
 .accordion

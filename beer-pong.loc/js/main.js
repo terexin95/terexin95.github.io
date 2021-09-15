@@ -20,16 +20,16 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-if(document.querySelector('.shop__filter')){
-	document.querySelector('.shop__filter').addEventListener('click', function(){
-		document.querySelector('.shop__sidebar').classList.add('shop__sidebar--active');
-	});
+// if(document.querySelector('.shop__filter')){
+// 	document.querySelector('.shop__filter').addEventListener('click', function(){
+// 		document.querySelector('.shop__sidebar').classList.add('shop__sidebar--active');
+// 	});
 
-	document.querySelector('.shop__sidebar-header-close').addEventListener('click', function(){
-		document.querySelector('.shop__sidebar').classList.remove('shop__sidebar--active');
-	});
+// 	document.querySelector('.shop__sidebar-header-close').addEventListener('click', function(){
+// 		document.querySelector('.shop__sidebar').classList.remove('shop__sidebar--active');
+// 	});
 
-}
+// }
 
 if(document.querySelector('.delivery__content-button')){
 	var delBtn = document.querySelectorAll('.delivery__content-button');
