@@ -335,6 +335,12 @@ img
 		max-width: 315px
 		flex: 0 0 315px
 		margin-left: 35px
+		color: #008E7D
+		&-nds
+			font-weight: 500
+			font-size: 14px
+			line-height: 22px
+			margin-left: 20px
 		&-note
 			display: flex
 			justify-content: center
@@ -397,21 +403,22 @@ img
 			font-size: 12px
 			line-height: 40px
 			color: rgba($text, .5)
+			margin-left: 12px
 			svg
 				margin-right: 12px
 		&-favorite
 			display: flex
 			align-items: center
 			justify-content: center
-			padding-left: 20px
-			padding-right: 20px
+			padding-left: 15px
+			padding-right: 15px
 			height: 35px
+			font-size: 15px
 			border: 2px solid #D5D5D6
 			border-radius: 8px
 			color: $text
 			cursor: pointer
 			transition: all .3s ease
-			margin-right: 13px
 			svg
 				margin-right: 10px
 				transition: all .3s ease
@@ -1202,32 +1209,51 @@ ul
 		min-width: 190px
 		&-wrap
 			padding: 7px
-			padding-top: 15px
+			padding-top: 7px
 			background: #F9F9F9
 			border-radius: 8px
+		&-item
+			display: flex
+			background: #FFFFFF
+			border: 1px solid #F0F0FE
+			box-sizing: border-box
+			border-radius: 8px
+			padding: 10px 15px
+			display: flex
+			align-items: center
+			justify-content: space-between
+			height: 46px
+			margin-bottom: 8px
 		&-img
-			width: 50px
+			width: 36px
 			margin: auto
-			margin-bottom: 10px
+			margin-left: 0
+			display: flex
+			align-items: center
+			justify-content: center
 			img
 				width: 100%
 				height: auto
 		&-price
-			height: 40px
-			line-height: 40px
-			background: #F0F0FE
-			border-radius: 8px
-			font-weight: bold
+			color: $text
 			font-size: 14px
-			text-align: center
-			margin-bottom: 5px
+			font-weight: bold
+			text-align: right
+			line-height: 14px
+			letter-spacing: 0.5px
+			span
+				letter-spacing: 0
+				display: block
+				font-weight: normal
+				font-size: 12px
+				line-height: 12px
 		&-commission
-			font-weight: 500
-			font-size: 12px
-			line-height: 22px
-			color: #008E7D
-			text-align: center
-			margin-bottom: 10px
+			background: #E3F0EE
+			border: 1px solid #F0F0FE
+			box-sizing: border-box
+			color: #047863
+			.auto-item__dealer-price
+				color: #047863
 		&-open
 			height: 50px
 			line-height: 50px
@@ -2484,12 +2510,14 @@ ul
 	padding-top: 0
 	border-bottom: 0
 	display: none
+	overflow-x: hidden
 	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08)
 	.tabs__button-group
 		position: relative
 		z-index: 11
 		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08)
 		padding-top: 15px
+		overflow-x: hidden
 	.mew-auto__mobile-wrap
 		border: 1px solid #D5D5D6
 		box-sizing: border-box
@@ -2883,6 +2911,18 @@ main
 	padding-right: 25px
 	border-bottom: 5px solid #E9EAEA
 	display: none
+	.auto-item__dealer-commission
+		background: #047863
+		.auto-item__dealer-price
+			color: #fff
+	.auto-item__dealer-item
+		max-width: 150px
+		flex: 0 0 150px
+		margin-right: 20px
+		.auto-item__dealer-price
+			text-align: left
+		&:last-child
+			margin-right: 0
 	.auto-item__change
 		width: 100%
 		flex: 0 0 100%
@@ -3019,5 +3059,126 @@ main
 			font-weight: bold
 			font-size: 18px
 
+.comments
+	&__title
+		font-weight: bold
+		font-size: 24px
+		line-height: 40px
+		color: $text
+		margin-bottom: 30px
+	&__panel
+		height: 90px
+		padding-left: 40px
+		padding-right: 60px
+		display: flex
+		align-items: center
+		justify-content: space-between
+		button
+			background: #00809C
+			border-radius: 8px
+			border: 0
+			width: 40px
+			flex: 0 0 40px
+			height: 40px
+			cursor: pointer
+			display: flex
+			align-items: center
+			justify-content: center
+			transition: all .3s ease
+			&:hover
+				background: darken(#00809C, 10%)
+				transition: all .3s ease
+			svg
+				margin-left: -1px
+				margin-top: -2px
+		textarea
+			flex: 0 0 calc(100% - 60px)
+			border: 0
+			padding: 0
+			height: 22px
+			font-weight: normal
+			font-size: 16px
+			line-height: 22px
+			color: #2B2D33
+			margin-top: 11px
+			resize: none
+			outline: none
+			&::-webkit-scrollbar 
+				width: 7px /* ширина для вертикального скролла */
+				height: 10px/* высота для горизонтального скролла */
+			/* ползунок скроллбара */
+			&::-webkit-scrollbar-thumb 
+				background-color: #C7C7C7
+				border-radius: 10px
+				transition: all .3s ease
+				-webkit-appearance: none
+				&:hover
+					background-color: darken(#C7C7C7, 15%)
+					transition: all .3s ease
+			&::placeholder
+				font-weight: normal
+				font-size: 16px
+				line-height: 16px
+				color: #AAABAD
+	&__block
+		border: 1px solid #E9EAEA
+		box-sizing: border-box
+		border-radius: 8px
+		max-width: 760px
+		height: 570px
+		padding-top: 35px
+		box-sizing: border-box
+	&__item
+		display: flex
+		margin-bottom: 30px
+		&-img
+			flex: 0 0 32px
+			height: 32px
+			margin-right: 10px
+			img
+				width: 100%
+				height: 100%
+				border-radius: 100%
+				object-fit: cover
+		&-block
+			max-width: calc(100% - 42px)
+			flex: 0 0 calc(100% - 42px)
+			box-sizing: border-box
+			padding-right: 60px
+		&-title
+			font-weight: 500
+			font-size: 14px
+			line-height: 22px
+			color: $text
+		&-text
+			font-weight: normal
+			font-size: 14px
+			line-height: 22px
+			color: #2B2D33
+			margin-bottom: 5px
+		&-time
+			font-weight: normal
+			font-size: 14px
+			line-height: 22px
+			color: #AAABAD
+	&__main
+		height: 440px
+		overflow-y: scroll
+		overflow-x: hidden
+		border-bottom: 1px solid #E9EAEA
+		padding-left: 40px
+		padding-right: 10px
+		&::-webkit-scrollbar 
+			width: 7px /* ширина для вертикального скролла */
+			height: 10px/* высота для горизонтального скролла */
+		/* ползунок скроллбара */
+		&::-webkit-scrollbar-thumb 
+			background-color: #C7C7C7
+			border-radius: 10px
+			transition: all .3s ease
+			-webkit-appearance: none
+			&:hover
+				background-color: darken(#C7C7C7, 15%)
+				transition: all .3s ease
 
 @import "_media.sass"
