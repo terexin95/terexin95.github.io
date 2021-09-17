@@ -1,0 +1,353 @@
+body
+	font-family: 'Montserrat', sans-serif
+	padding: 20px
+	margin: 0
+	overflow: hidden
+	background: #161B31
+	height: 100vh
+	box-sizing: border-box
+
+.header-site
+	background-color: #283046
+	border-radius: 6px
+	box-sizing: border-box
+	max-width: 100%
+	height: 62px
+	padding-left: 20px
+	padding-right: 20px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	&__inner
+		display: flex
+	&__user
+		display: flex
+		&-item
+			display: flex
+			align-items: center
+			margin-left: 25px
+		&-img
+			flex: 0 0 38px
+			height: 38px
+			margin-left: 10px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+				vertical-align: bottom
+		&-title
+			font-weight: normal
+			font-size: 16px
+			line-height: 20px
+			text-align: right
+			color: #B4B7BD
+			max-width: 170px
+		&-btns
+			display: flex
+			align-items: center
+		&-btn
+			position: relative
+			cursor: pointer
+			margin-right: 15px
+			&:last-child
+				margin-right: 0
+		&-num
+			background: #EA5455
+			width: 18px
+			height: 18px
+			border-radius: 100%
+			display: flex
+			align-items: center
+			justify-content: center
+			position: absolute
+			font-weight: 600
+			font-size: 12px
+			line-height: 18px
+			text-align: center
+			top: -8px
+			right: -6px
+			color: #FFFFFF
+	&__add
+		background-color: #28C76F
+		transition: all .3s ease
+		border-radius: 4px
+		margin-left: 40px
+		cursor: pointer
+		height: 40px
+		width: 50px
+		display: flex
+		align-items: center
+		justify-content: center
+		&:hover, &:active
+			background-color: darken(#28C76F, 10%)
+			transition: all .3s ease
+	&__date
+		display: flex
+		height: 40px
+		border: 1px solid #3B4253
+		border-radius: 4px
+		align-items: center
+		&-btn
+			width: 50px
+			text-align: center
+		&-body
+			width: 120px
+			text-align: center
+			font-weight: 500
+			font-size: 14px
+			line-height: 40px
+			text-align: center
+			letter-spacing: 0.4px
+			color: #BABFC7
+			border-left: 1px solid #3B4253
+			height: 40px
+		&-time
+			display: flex
+			border-left: 1px solid #3B4253
+			border-right: 1px solid #3B4253
+			display: flex
+			align-items: center
+			justify-content: center
+			height: 40px
+			width: 50px
+	&__btns
+		display: flex
+		align-items: center
+		height: 100%
+		&-item
+			margin-right: 20px
+			cursor: pointer
+			transition: all .3s ease
+			&:hover, &--active, &:active
+				path, rect
+					fill: #28C76F
+					transition: all .3s ease
+			&:last-child
+				margin-right: 0
+
+.user-msg
+	display: flex
+	margin-bottom: 20px
+	&--green
+		.user-msg__img
+			background: rgba(40, 199, 111, 0.12)
+			color: #28C76F
+	&--red
+		.user-msg__img
+			background-color: rgba(234, 84, 85, 0.12)
+			color: #EA5455
+	&--orange
+		.user-msg__img
+			background: rgba(255, 159, 67, 0.12)
+			color: #FF9F43
+	&--blue
+		.user-msg__img
+			background: rgba(0, 207, 232, 0.12)
+			color: #00CFE8
+	&__inner
+		display: flex
+		justify-content: space-between
+		flex: 0 0 calc(100% - 52px)
+	&__img
+		background: rgba(115, 103, 240, 0.12)
+		border-radius: 5px
+		flex: 0 0 42px
+		height: 42px
+		line-height: 42px
+		text-align: center
+		font-weight: 500
+		font-size: 14px
+		color: #7367F0
+		margin-right: 10px
+	&__price
+		font-weight: 600
+		font-size: 14px
+		line-height: 21px
+		text-align: right
+		color: #28C76F
+	&__num
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		font-weight: normal
+		font-size: 12px
+		line-height: 18px
+		color: #676D7D
+		height: 23px
+		svg
+			margin-right: 4px
+	&__time
+		font-weight: normal
+		font-size: 12px
+		line-height: 18px
+		color: #676D7D
+		margin-top: 3px
+	&__title
+		font-weight: 500
+		font-size: 14px
+		line-height: 23px
+		color: #D0D2D6
+		display: flex
+		align-items: center
+		svg
+			margin-left: 4px
+
+.sidebar-item
+	padding-bottom: 15px
+	border-bottom: 1px solid #3B4253
+	margin-bottom: 10px
+	&__title
+		display: flex
+		justify-content: space-between
+		align-items: center
+		font-weight: 500
+		font-size: 18px
+		line-height: 22px
+		color: #D0D2D6
+		margin-bottom: 15px
+		&-option
+			display: flex
+			align-items: center
+		&-inner
+			display: flex
+			align-items: center
+		&-result
+			font-weight: normal
+			font-size: 12px
+			line-height: 18px
+			color: #676D7D
+			margin-right: 10px
+			display: flex
+			align-items: center
+			svg
+				margin-right: 3px
+
+.sidebar
+	max-width: 295px
+	flex: 0 0 295px
+	background: #283046
+	border-radius: 6px
+	padding: 15px 20px
+	margin-right: 20px
+	box-sizing: border-box
+	overflow-y: scroll
+	height: calc(100vh - 125px)
+	&::-webkit-scrollbar 
+		width: 0px /* ширина для вертикального скролла */
+		height: 0px/* высота для горизонтального скролла */
+
+
+.content
+	margin-top: 20px
+	display: flex
+
+.main
+	height: calc(100vh - 125px)
+	flex: 0 0 calc(100% - 315px)
+	max-width: calc(100% - 315px)
+
+.desk-block
+	height: calc(100% - 75px)
+	overflow: hidden
+	background-color: #0F1221
+	border-radius: 0 0 6px 6px
+	&__main
+		position: relative
+		width: 100%
+		height: 100%
+
+.desk-one
+	position: absolute
+	&__title
+		max-width: 100px
+		font-weight: 500
+		font-size: 11px
+		line-height: 13px
+		text-align: center
+		letter-spacing: 0.366667px
+		color: #FFFFFF
+		margin-top: 3px
+	&__wrap
+		position: relative
+		svg
+			vertical-align: bottom
+	&__text
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		font-weight: 500
+		font-size: 14px
+		line-height: 17px
+		letter-spacing: 0.4px
+		color: #283046
+		text-align: center
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: space-evenly
+		&-time
+			font-weight: normal
+			font-size: 10px
+			line-height: 12px
+			text-align: center
+			color: #283046
+.dates
+	background-color: #283046
+	border-radius: 6px 6px 0 0
+	height: 75px
+	align-items: center
+	display: flex
+	padding-left: 30px
+	padding-right: 10px
+	overflow: hidden
+	overflow-x: scroll
+	&::-webkit-scrollbar 
+		width: 0px /* ширина для вертикального скролла */
+		height: 0px/* высота для горизонтального скролла */
+
+.date-item
+	flex: 0 0 70px
+	max-width: 70px
+	height: 55px
+	border-right: 1px solid #3B4253
+	position: relative
+	padding-left: 10px
+	box-sizing: border-box
+	&--white
+		.date-item__time
+			color: #BABFC7
+	&--active
+		&::before
+			content: ""
+			width: 68px
+			height: 68px
+			border: 2px solid #28C76F
+			position: absolute
+			box-sizing: border-box
+			top: -7px
+			left: 1px
+		.date-item__num
+			color: #28C76F
+			rect
+				fill: #28C76F
+		.date-item__icon
+			color: #28C76F
+			rect
+				fill: #28C76F
+		.date-item__time
+			color: #28C76F
+	&__num, &__icon
+		display: flex
+		align-items: center
+		font-weight: normal
+		font-size: 12px
+		line-height: 18px
+		color: #676D7D
+		svg
+			margin-right: 3px
+	&__time
+		font-weight: bold
+		font-size: 14px
+		line-height: 21px
+		color: #676D7D
