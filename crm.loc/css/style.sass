@@ -232,6 +232,7 @@ body
 	box-sizing: border-box
 	overflow-y: scroll
 	height: calc(100vh - 125px)
+	position: relative
 	&::-webkit-scrollbar 
 		width: 0px /* ширина для вертикального скролла */
 		height: 0px/* высота для горизонтального скролла */
@@ -245,16 +246,73 @@ body
 	height: calc(100vh - 125px)
 	flex: 0 0 calc(100% - 315px)
 	max-width: calc(100% - 315px)
+	position: relative
+
+.notice-bottom
+	position: fixed
+	z-index: 11
+	width: 290px
+	background: #283046
+	border-radius: 4px
+	bottom: 23px
+	right: 20px
+	padding: 12px 15px
+	&__block
+		max-width: calc(100% - 70px)
+		flex: calc(100% - 70px)
+	&__opt
+		display: flex
+		position: absolute
+		right: 10px
+		top: 10px
+		align-items: center
+	&__close
+		margin-left: 10px
+		display: flex
+		align-items: center
+	&__time
+		font-weight: normal
+		font-size: 12px
+		line-height: 18px
+		color: #676D7D
+	&__inner
+		display: flex
+	&__img
+		flex: 0 0 24px
+		max-width: 24px
+		margin-right: 10px
+		img
+			width: 100%
+			height: 100%
+			border-radius: 100%
+			object-fit: cover
+	&__title
+		font-weight: 600
+		font-size: 14px
+		line-height: 21px
+		color: #28C76F
+		margin-bottom: 5px
+	&__text
+		font-weight: normal
+		font-size: 12px
+		line-height: 18px
+		color: #B4B7BD
 
 .desk-block
 	height: calc(100% - 75px)
-	overflow: hidden
+	overflow: scroll
 	background-color: #0F1221
 	border-radius: 0 0 6px 6px
+	position: relative
+	&::-webkit-scrollbar 
+		width: 0px /* ширина для вертикального скролла */
+		height: 0px/* высота для горизонтального скролла */
 	&__main
 		position: relative
-		width: 100%
-		height: 100%
+		width: 1500px
+		height: 1500px
+		left: 0
+		top: 0
 
 .desk-one
 	position: absolute
@@ -351,3 +409,287 @@ body
 		font-size: 14px
 		line-height: 21px
 		color: #676D7D
+
+.btns-tabs-group
+	display: flex
+	border: 1px solid #3B4253
+	border-radius: 4px
+	height: 40px
+	position: fixed
+	left: 365px
+	bottom: 43px
+	background-color: #0F1221
+	&__item
+		padding: 0px 20px
+		height: 40px
+		cursor: pointer
+		border-right: 1px solid #3B4253
+		font-weight: 500
+		font-size: 14px
+		line-height: 40px
+		text-align: center
+		letter-spacing: 0.4px
+		color: #BABFC7
+		transition: all .3s ease
+		&:last-child
+			border-right: 0
+		&--active, &:hover, &:active
+			background: #B9B9C3
+			transition: all .3s ease
+			color: #161D31
+
+.modal-form
+	position: absolute
+	left: -700px
+	top: 0
+	bottom: 0
+	z-index: 8
+	background-color: #283046
+	padding: 20px
+	box-sizing: border-box
+	transition: left .3s ease
+	&--active
+		transition: left .3s ease
+		left: 0
+	&__form
+		display: none
+		&-1
+			display: block
+		&-wrap
+			height: calc(100vh - 300px)
+			overflow-y: scroll
+			&::-webkit-scrollbar 
+				width: 0px /* ширина для вертикального скролла */
+				height: 0px/* высота для горизонтального скролла */
+		&-buttons
+			display: flex
+			margin-top: 30px
+		&-check
+			display: flex
+			align-items: center
+			height: 40px
+			justify-content: center
+			border: 1px solid #28C76F
+			box-sizing: border-box
+			border-radius: 0px 4px 4px 0
+			flex: 0 0 170px
+			max-width: 170px
+			font-weight: 500
+			font-size: 14px
+			line-height: 17px
+			text-align: center
+			letter-spacing: 0.4px
+			color: #28C76F
+			cursor: pointer
+		&-button
+			flex: 0 0 65px
+			max-width: 65px
+			background: #B9B9C3
+			border-radius: 4px 0px 0px 4px
+			font-weight: 500
+			font-size: 14px
+			line-height: 40px
+			height: 40px
+			cursor: pointer
+			text-align: center
+			letter-spacing: 0.4px
+			color: #161D31
+		&-inner
+			display: flex
+			flex-wrap: wrap
+			padding-bottom: 15px
+			margin-bottom: 10px
+			border-bottom: 1px solid #3B4253
+	&__inputs
+		display: flex
+		align-items: center
+		margin-bottom: 15px
+		&:last-child
+			margin-bottom: 10px
+			padding-bottom: 15px
+			border-bottom: 1px solid #3B4253
+	&__label
+		flex: 0 0 30%
+		max-width: 30%
+		font-weight: normal
+		font-size: 12px
+		line-height: 18px
+		color: #B4B7BD
+	&__input
+		flex: 0 0 70%
+		max-width: 70%
+		input
+			width: 100%
+			height: 38px
+			box-sizing: border-box
+			padding-left: 15px
+			padding-right: 15px
+			border: 1px solid #404656
+			background-color: transparent
+			border-radius: 5px
+			font-weight: normal
+			font-size: 14px
+			line-height: 21px
+			color: #B4B7BD
+			font-family: 'Montserrat', sans-serif
+			outline: none
+	&__head
+		display: flex
+		margin-bottom: 20px
+		&-item
+			font-weight: 500
+			font-size: 14px
+			line-height: 23px
+			color: #D0D2D6
+			margin-right: 20px
+			display: flex
+			align-items: center
+			padding-bottom: 12px
+			cursor: pointer
+			padding-right: 20px
+			padding-left: 10px
+			position: relative
+			transition: all .3s ease
+			&--active, &:hover, &:active
+				color: #7367F0
+				transition: all .3s ease
+				svg
+					rect
+						fill: #7367F0
+						transition: all .3s ease
+				&::before
+					content: ""
+					width: 100%
+					transition: all .3s ease
+					left: 0
+					bottom: 0
+					height: 2px
+					position: absolute
+					background: linear-gradient(90deg, #7367F0 0%, #B0A9FF 100%)
+					box-shadow: 0px 0px 6px rgba(115, 103, 240, 0.45277)		
+			svg
+				margin-right: 7px
+			&:last-child
+				margin-right: 0
+
+.input-hall
+	flex: 0 0 117px
+	max-width: 117px
+	margin-right: 15px
+	&__title
+		display: block
+		font-weight: normal
+		font-size: 12px
+		line-height: 18px
+		color: #B4B7BD
+		margin-bottom: 2px
+	&__input
+		input
+			width: 100%
+			height: 38px
+			box-sizing: border-box
+			padding-left: 15px
+			padding-right: 15px
+			border: 1px solid #404656
+			background-color: transparent
+			border-radius: 5px
+			font-weight: normal
+			font-size: 14px
+			line-height: 21px
+			color: #B4B7BD
+			font-family: 'Montserrat', sans-serif
+			outline: none
+
+.input-desk
+	max-width: 122px
+	flex: 0 0 122px
+	margin-bottom: 15px
+	&__item
+		flex: 0 0 40px
+		max-width: 40px
+		border-right: 1px solid #404656
+		border-bottom: 1px solid #404656
+		box-sizing: border-box
+		height: 40px
+		text-align: center
+		line-height: 40px
+		font-weight: normal
+		font-size: 14px
+		cursor: pointer
+		color: #B4B7BD
+		&:last-child
+			border-radius: 0 0 5px 0
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		box-sizing: border-box
+		border-top: 1px solid #404656
+		border-left: 1px solid #404656
+		border-radius: 5px 5px 5px 0
+
+.input-guests
+	display: flex
+	align-items: center
+	flex: 0 0 92px
+	max-width: 92px
+	margin-right: 20px
+	&__title
+		margin-right: 13px
+		font-weight: normal
+		font-size: 12px
+		line-height: 18px
+		color: #B4B7BD
+	&__input
+		flex: 0 0 45px
+		max-width: 45px
+		input
+			width: 100%
+			height: 38px
+			box-sizing: border-box
+			padding-left: 10px
+			padding-right: 10px
+			text-align: center
+			border: 1px solid #404656
+			background-color: transparent
+			border-radius: 5px
+			font-weight: normal
+			font-size: 14px
+			line-height: 21px
+			color: #B4B7BD
+			font-family: 'Montserrat', sans-serif
+			outline: none
+
+.input-duration
+	margin-right: 0
+	flex: 0 0 140px
+	max-width: 140px
+	margin-right: 0
+	.input-guests__input
+		flex: 0 0 67px
+		max-width: 67px
+
+.form-textarea
+	&__title
+		font-weight: normal
+		font-size: 12px
+		line-height: 18px
+		color: #B4B7BD
+		margin-bottom: 5px
+	textarea
+		width: 100%
+		height: 60px
+		background: #283046
+		border: 1px solid #3B4253
+		border-radius: 6px
+		resize: none
+		box-sizing: border-box
+		padding: 8px 15px
+		font-weight: normal
+		font-size: 12px
+		line-height: 24px
+		color: #676D7D
+		font-family: 'Montserrat', sans-serif
+		outline: 0
+		&::-webkit-scrollbar 
+			width: 0px /* ширина для вертикального скролла */
+			height: 0px/* высота для горизонтального скролла */
