@@ -1,0 +1,265 @@
+$roboto: 'Roboto', sans-serif
+$circe: 'Circe Rounded', sans-serif
+$ubuntu: 'Ubuntu', sans-serif
+$background: #F3FBF8
+
+.bg-color
+	background-color: $background
+
+body
+	margin: 0
+	padding: 0
+	overflow-x: hidden
+
+a
+	text-decoration: none
+
+.flexbox-center
+	display: flex
+	align-items: center
+	justify-content: center
+	height: 100%
+
+.site-header
+	background-color: #fff
+	padding: 12px 0
+	&__wrap
+		display: flex
+		justify-content: space-between
+		align-items: center
+		max-width: 1280px
+		padding: 0 15px
+		margin: auto
+	&__login
+		display: block
+		background: linear-gradient(0deg, #AE84F3, #AE84F3), #FFFFFF
+		opacity: 0.9
+		box-shadow: 0px 10px 30px rgba(122, 138, 235, 0.25)
+		border-radius: 32px
+		height: 48px
+		width: 165px
+		line-height: 48px
+		text-align: center
+		font-family: $circe
+		font-size: 14px
+		color: #fff
+		transition: background .3s ease
+		&:hover
+			background: linear-gradient(0deg, darken(#AE84F3, 5%), darken(#AE84F3, 5%)), #FFFFFF
+			transition: background .3s ease
+	&__menu
+		&-item
+			font-weight: 500
+			font-size: 18px
+			font-family: $ubuntu
+			color: rgba(#000, .6)
+			margin: 0 24px
+			transition: all .3s ease
+			&:hover
+				color: #000
+				transition: all .3s ease
+
+.registration
+	margin-top: 55px
+	padding: 48px 92px
+	background: #FFFFFF
+	border: 1px solid #F3FBF8
+	box-sizing: border-box
+	border-radius: 48px
+	max-width: 625px
+	width: 100%
+	&__link
+		text-align: center
+		display: block
+		color: #0A1F6D
+		font-size: 14px
+		font-family: $circe
+		margin-top: 15px
+	&__code
+		font-size: 14px
+		font-family: $ubuntu
+		text-align: center
+		line-height: 1.22
+		color: rgba(0, 0, 0, .8)
+	&__politic
+		font-size: 12px
+		line-height: 1.22
+		font-family: $ubuntu
+		color: rgba(#000, .4)
+		text-align: center
+		margin-top: 100px
+		a
+			color: rgba(#000, .4)
+			text-decoration: underline
+	.form
+		max-width: 310px
+		margin: auto
+		margin-top: 35px
+	&__text
+		font-weight: 500
+		font-size: 18px
+		color: rgba(#000, .6)
+		font-weight: 500
+		font-family: $ubuntu
+		text-align: center
+	&__title
+		text-align: center
+		font-weight: normal
+		font-size: 32px
+		font-family: $circe
+		color: #1C2F76
+		margin-bottom: 100px
+
+.varification
+	.registration__title
+		margin-bottom: 30px
+	.registration__politic
+		margin-top: 30px
+
+.bg-image
+	background-image: url(../img/bg.svg)
+	background-position: center center
+	background-repeat: no-repeat
+
+.anketa
+	max-width: 675px
+	padding-left: 75px
+	padding-right: 75px
+	&__inner
+		display: flex
+		align-items: center
+		margin-bottom: 15px
+		.anketa__title
+			margin-bottom: 0
+			margin-right: 30px
+		.input-check
+			margin-right: 15px
+	&__title
+		font-weight: 500
+		font-size: 18px
+		color: #000
+		font-family: $ubuntu
+		font-weight: 500
+		margin-bottom: 15px
+	.registration__title
+		margin-bottom: 30px
+	.form-button
+		max-width: 310px
+		margin-top: 15px
+	.form
+		max-width: 510px
+
+.form-input
+	position: relative
+	margin-bottom: 15px
+	&-center
+		input
+			text-align: center
+
+.form-input input
+	display: block
+	width: 100%
+	height: 56px
+	background: transparent
+	border: solid 1px #9E9E9E
+	transition: all .3s ease
+	padding: 0 15px
+	border-radius: 8px
+	font-family: $roboto
+	box-sizing: border-box
+	font-size: 16px
+	color: rgba(0, 0, 0, 0.87)
+	outline: none
+	font-weight: normal
+
+.form-input input:focus
+
+
+.form-input label
+	position: absolute
+	cursor: text
+	font-weight: normal
+	z-index: 2
+	top: 50%
+	transform: translateY(-50%)
+	left: 10px
+	font-size: 12px
+	background: #fff
+	padding: 0 10px
+	color: #999
+	font-family: $roboto
+	transition: all .3s ease
+
+.form-input input:focus + label,
+.form-input input:valid + label
+	font-size: 11px
+	top: 0px
+
+.form-input input:focus + label
+
+.form-button
+	width: 100%
+	border: 0
+	background: linear-gradient(0deg, #AE84F3, #AE84F3), #FFFFFF
+	opacity: 0.9
+	box-shadow: 0px 10px 30px rgba(122, 138, 235, 0.25)
+	border-radius: 32px
+	height: 48px
+	font-family: $circe
+	font-size: 12px
+	color: #fff
+	cursor: pointer
+	transition: background .3s ease
+	&:hover
+		background: linear-gradient(0deg, darken(#AE84F3, 5%), darken(#AE84F3, 5%)), #FFFFFF
+		transition: background .3s ease
+
+.input-check
+	display: flex
+	align-items: center
+	color: rgba(#000, .8)
+	font-size: 16px
+	font-family: $ubuntu
+	&__input
+		width: 24px
+		height: 24px
+		position: relative
+		border: 2px solid #D5D5D6
+		box-sizing: border-box
+		border-radius: 4px
+		margin-right: 10px
+		&--active
+			background: #CA49FF
+			border-radius: 4px
+			background-image: url(../img/check.svg)
+			background-position: center center
+			background-repeat: no-repeat
+			border: 0
+		&:before
+			content: ""
+			position: absolute
+			width: 24px
+			height: 24px
+			background: #CA49FF
+			border-radius: 4px
+			background-image: url(../img/check.svg)
+			background-position: center center
+			background-repeat: no-repeat
+			display: none
+	input
+		position: relative
+		width: 24px
+		margin: 0
+		height: 24px
+		box-sizing: border-box
+		opacity: 0
+		&:checked
+			background-color: red
+			background-image: url(../img/bg.svg)
+			background-size: cover
+			&::before
+				top: 0
+				right: 0
+				left: 0
+				bottom: 0
+				background-color: red
