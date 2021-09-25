@@ -693,3 +693,166 @@ body
 		&::-webkit-scrollbar 
 			width: 0px /* ширина для вертикального скролла */
 			height: 0px/* высота для горизонтального скролла */
+
+.main-table
+	width: 100%
+	background: #283046
+	border-radius: 6px
+	height: calc(100vh - 122px)
+	overflow: scroll
+	position: fixed
+	bottom: -9999999px
+	transition: all .3s ease
+	&--active
+		transition: all .3s ease
+		left: 20px
+		right: 20px
+		bottom: 20px
+		width: calc(100% - 40px)
+		z-index: 11
+	&::-webkit-scrollbar 
+		width: 0px /* ширина для вертикального скролла */
+		height: 0px/* высота для горизонтального скролла */
+	&__desk
+		width: 146%
+		background: #3B4253
+		height: 30px
+		position: relative
+		z-index: 1
+		line-height: 30px
+		display: flex
+		align-items: center
+		padding: 0 12px
+		font-weight: 500
+		font-size: 12px
+		line-height: 23px
+		letter-spacing: 0.6px
+		text-transform: uppercase
+		color: #FFFFFF
+		&-inner
+			display: flex
+		&-num
+			margin-left: 8px
+			display: flex
+			align-items: center
+			svg
+				margin-right: 3px
+	&__people
+		cursor: pointer
+		position: relative
+		z-index: 1
+		&-block
+			display: flex
+			align-items: center
+			flex: 0 0 60%
+			margin-right: -10px
+		&-title
+			font-weight: normal
+			font-size: 14px
+			color: #283046
+			overflow: hidden
+			height: 28px
+			line-height: 28px
+		&-wrap
+			display: flex
+			align-items: center
+			max-width: 99%
+			justify-content: space-between
+			margin: auto
+			height: 27px
+			margin-top: 1px
+			background: #BABFC7
+			border-radius: 4px
+			box-sizing: border-box
+			padding-left: 7px
+			padding-right: 11px
+		&-num
+			display: flex
+			align-items: center
+			font-weight: normal
+			font-size: 12px
+			color: #283046
+			margin-right: 3px
+			margin-right: 10px
+			svg
+				margin-right: 3px
+		&-opt
+			display: flex
+			align-items: center
+		&-item
+			margin-left: 5px
+		&-green, &-orange
+			.main-table__people-wrap
+				background: #28C76F
+			.main-table__people-title, .main-table__people-num
+				color: #fff
+			svg
+				rect, path
+					fill: #fff
+		&-orange
+			.main-table__people-wrap
+				background: #FF9F43
+	&__line
+		display: flex
+		height: 30px
+		align-items: center
+	&__label
+		flex: 0 0 80px
+		display: flex
+		align-items: center
+		justify-content: space-evenly
+		font-weight: normal
+		font-size: 14px
+		line-height: 21px
+		text-align: center
+		color: #B4B7BD
+		border-right: 1px solid #3B4253
+		height: 30px
+		box-sizing: border-box
+		border-bottom: 1px solid #3B4253
+	&__item
+		height: 30px
+		border-right: 1px solid #3B4253
+		flex: 0 0 70px
+		box-sizing: border-box
+		border-bottom: 1px solid #3B4253
+	.dates
+		padding-left: 0
+		flex: calc(100% - 81px)
+		overflow: visible
+		overflow-x: visible
+	.date-item
+		height: 75px
+		padding-top: 10px
+		box-sizing: border-box
+		border-bottom: 1px solid #3B4253
+	.date-item--active::before
+		display: none
+	.date-item--active::after
+		content: ""
+		position: absolute
+		width: 2px
+		height: 100vh
+		background-color: #28C76F
+		top: 0
+		left: 0
+	&__head
+		display: flex
+	&__sidebar
+		max-width: 140px
+		flex: 0 0 140px
+		&-header
+			display: flex
+			justify-content: space-between
+			height: 75px
+			align-items: flex-end
+			flex: 0 0 80px
+			box-sizing: border-box
+			border-bottom: 1px solid #3B4253
+			border-right: 1px solid #3B4253
+			&-item
+				max-width: 50%
+				flex: 0 0 50%
+				display: flex
+				justify-content: center
+				padding-bottom: 10px

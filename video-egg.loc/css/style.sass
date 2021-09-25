@@ -60,6 +60,10 @@ body
 	text-decoration: none
 	font-size: 13px
 	display: block
+	transition: all .3s ease
+	&:hover
+		background-color: #f8a683
+		transition: all .3s ease
 
 .button-index-small
 	border-radius: 3px 25px 25px 25px
@@ -158,7 +162,7 @@ body
 		margin: 0
 		font-size: 50px
 		margin-bottom: 25px
-		font-weight: 600
+		font-weight: 700
 		color: #005046
 	&__text
 		color: #848b8a
@@ -240,5 +244,336 @@ body
 			display: flex
 			align-items: center
 			justify-content: center
+
+.variant
+	margin-top: 90px
+	margin-bottom: 90px
+	&__title
+		text-align: center
+		margin: 0
+		font-size: 50px
+		margin-bottom: 25px
+		font-weight: 700
+		color: #005046
+	&__wrap
+		display: flex
+		max-width: 1380px
+		margin: auto
+		flex-wrap: wrap
+		box-shadow: 1px 1px 10px 1px rgba(0,0,0, .1)
+	&__item
+		display: flex
+		max-width: 50%
+		padding: 50px 40px
+		box-sizing: border-box
+		flex: 0 0 50%
+		&:nth-child(2),&:nth-child(3)
+			background-color: #f8a683
+			.variant__item-title, a
+				color: #fff
+			a svg
+				path
+					fill: #fff
+		&-img
+			flex: 0 0 80px
+			margin-right: 25px
+			height: 80px
+		&-block
+			max-width: 0 0 calc(100% - 105px)
+			flex: calc(100% - 105px)
+		&-title
+			font-size: 30px
+			color: #005046
+			margin: 0
+			margin-bottom: 20px
+			font-weight: 600
+		a
+			font-size: 16px
+			line-height: 27px
+			color: #848b8a
+			text-decoration: none
+			svg
+				margin-left: 25px
+
+.helpful
+	background-image: url(../img/bg.jpg)
+	border-radius: 10px
+	margin-bottom: -10px
+	&__wrap
+		max-width: 1600px
+		margin: auto
+		padding: 50px 115px
+		display: flex
+		box-sizing: border-box
+		justify-content: space-between
+		align-items: center
+	&__text
+		margin-left: 95px
+		font-size: 36px
+		line-height: 48px
+		font-weight: 600
+		color: #005046
+
+.danger
+	background-image: url(../img/bg.jpg)
+	&__wrap
+		max-width: 1600px
+		margin: auto
+		padding: 50px 60px
+		display: flex
+		align-items: center
+		box-sizing: border-box
+		justify-content: center
+	&__img
+		flex: 0 0 140px
+		max-width: 140px
+		margin-right: 40px
+	&__title
+		margin: 0
+		color: #056c5f
+		margin-bottom: 20px
+		font-size: 30px
+		font-weight: 600
+	&__text
+		margin: 0
+		font-size: 24px
+		line-height: 30px
+		color: #1f1f1f
+		span
+			color: #f8a683
+
+.services-block
+	overflow: hidden
+	padding-right: 10px
+	padding-top: 10px
+	//box-sizing: border-box
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	&__column
+		max-width: 48%
+		flex: 0 48%
+
+.faq-block
+	margin-top: 70px
+	.button-index-secondary
+		margin-top: 30px
+	&__offer
+		background-color: #056c5f
+		border-radius: 10px
+		padding-left: 100px
+		padding-top: 25px
+		padding-bottom: 30px
+		padding-right: 90px
+		text-align: center
+		margin-bottom: -10px
+		position: relative
+		z-index: 1
+		&-title
+			font-size: 30px
+			line-height: 36px
+			color: #fff
+			span
+				font-size: 40px
+				line-height: 48px
+			strong
+				font-size: 60px
+				line-height: 60px
+	&__title
+		font-size: 36px
+		line-height: 48px
+		color: #005046
+		font-weight: 600
+		margin-top: 35px
+		margin-bottom: 30px
+		text-transform: uppercase
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	&__inner
+		flex: 0 0 62%
+		max-width: 62%
+		padding-top: 35px
+		background-color: #fbf7f3
+		padding-left: 30px
+		padding-right: 20px
+		box-sizing: border-box
+	&__img
+		flex: 0 0 38%
+		max-width: 38%
+		img
+			width: 100%
+
+.about-block-item
+	display: flex
+	align-items: center
+	margin-bottom: 30px
+	&__img
+		flex: 0 0 80px
+		height: 80px
+		margin-right: 25px
+	&__block
+		flex: 0 0 calc(100% - 120px)
+		max-width: calc(100% - 120px)
+	&__title
+		font-size: 27px
+		line-height: 30px
+		font-weight: 500
+		color: #005046
+		margin: 0
+		margin-bottom: 10px
+		text-transform: uppercase
+	&__text
+		font-size: 16px
+		line-height: 27px
+		color: #848b8a
+		margin: 0
+
+.about-block-site
+	margin-bottom: 110px
+	&__title
+		text-align: center
+		font-size: 40px
+		line-height: 60px
+		color: #005046
+		margin-bottom: 60px
+		margin-top: 0
+		font-weight: 600
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	&__column
+		flex: 0 0 30%
+		max-width: 30%
+	&__offer
+		flex: 0 0 270px
+		max-width: 270px
+		border-radius: 5px
+		background-color: #007163
+		padding-left: 15px
+		padding-right: 15px
+		padding-top: 35px
+		padding-bottom: 30px
+		box-sizing: border-box
+		color: #fff
+		&-title
+			font-size: 26px
+			line-height: 26px
+			font-weight: bold
+			strong
+				font-size: 132px
+				line-height: 70px
+			span
+				font-size: 48px
+				line-height: 48px
+
+
+.how-video
+	margin-top: 110px
+	margin-bottom: 110px
+	.button-index-secondary
+		text-transform: uppercase
+		margin-top: 40px
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+	&__img
+		flex: 0 0 50%
+		max-width: 50%
+		img
+			width: 100%
+	&__block
+		flex: 0 0 50%
+		max-width: 50%
+		box-sizing: border-box
+		padding-left: 70px
+	&__title
+		font-size: 36px
+		line-height: 48px
+		color: #005046
+		margin-top: 30px
+		margin-bottom: 30px
+	&__link
+		padding-left: 35px
+		a
+			display: block
+			position: relative
+			font-size: 18px
+			line-height: 20px
+			margin-bottom: 20px
+			color: #222222
+			text-decoration: none
+			&::before
+				content: ""
+				width: 20px
+				height: 20px
+				top: 50%
+				transform: translateY(-50%)
+				background-image: url(../img/check.png)
+				position: absolute
+				left: -35px
+
+.faq-accordion
+	border-bottom: 1px solid #e4dfd9
+	&__body
+		display: none
+		p
+			font-size: 16px
+			line-height: 20px
+		ul
+			li
+				position: relative
+				list-style-type: none
+				font-size: 18px
+				margin-bottom: 20px
+				&::before
+					content: ""
+					width: 20px
+					height: 20px
+					top: 50%
+					transform: translateY(-50%)
+					background-image: url(../img/check.png)
+					position: absolute
+					left: -35px
+	&__item
+		display: flex
+		justify-content: space-between
+		height: 80px
+		align-items: center
+		cursor: pointer
+		&--active
+			.faq-accordion__item-button
+				background-color: #056c5f
+			.faq-accordion__item-minus
+				display: block
+			.faq-accordion__item-plus
+				display: none
+		&-button
+			width: 25px
+			height: 25px
+			border-radius: 100%
+			cursor: pointer
+			display: flex
+			align-items: center
+			justify-content: center
+			background-color: #fff
+		&-minus
+			display: none
+			margin-left: 2px
+	&__title
+		font-size: 27px
+		color: #005046
+
+.interesting
+	display: flex
+	align-items: center
+	font-size: 14px
+	color: #848b8a
+	text-decoration: none
+	svg
+		margin-right: 20px
 
 @import "_media.sass"
