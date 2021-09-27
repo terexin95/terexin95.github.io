@@ -335,19 +335,39 @@
 			<div class="main__content">
 				<div class="pr-55">
 					<div class="banner">
-	<div class="banner__wrap">
-		<div class="banner__slide">
-			<div class="banner__slide-title">
-				Поможем исцелить <span>ментальные</span> травмы
+	<div class="banner__track">
+		<div class="banner__wrap">
+			<div class="banner__slide">
+				<div class="banner__slide-title">
+					Поможем исцелить <span>ментальные</span> травмы
+				</div>
+				<div class="banner__slide-text">
+					Запишитесь к любому специалисту <br> онлайн, а остальное мы возьмем на себя!
+				</div>
+				<a href="#" class="banner__slide-button">Выбрать психолога</a>
 			</div>
-			<div class="banner__slide-text">
-				Запишитесь к любому специалисту <br> онлайн, а остальное мы возьмем на себя!
+			<div class="banner__slide">
+				<div class="banner__slide-title">
+					Поможем исцелить <span>ментальные</span> травмы
+				</div>
+				<div class="banner__slide-text">
+					Запишитесь к любому специалисту <br> онлайн, а остальное мы возьмем на себя!
+				</div>
+				<a href="#" class="banner__slide-button">Выбрать психолога</a>
 			</div>
-			<a href="#" class="banner__slide-button">Выбрать психолога</a>
+			<div class="banner__slide">
+				<div class="banner__slide-title">
+					Поможем исцелить <span>ментальные</span> травмы
+				</div>
+				<div class="banner__slide-text">
+					Запишитесь к любому специалисту <br> онлайн, а остальное мы возьмем на себя!
+				</div>
+				<a href="#" class="banner__slide-button">Выбрать психолога</a>
+			</div>
 		</div>
 	</div>
 	<div class="banner__buttons">
-		<div class="banner__buttons-item banner__buttons-item--active">
+		<div class="banner__buttons-item banner__buttons-item-left banner__buttons-item--active">
 			<svg width="57" height="56" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<g opacity="0.3">
 				<rect width="56" height="56" rx="28" transform="matrix(-1 0 0 1 56.1875 0)" fill="white"/>
@@ -355,7 +375,7 @@
 				</g>
 			</svg>
 		</div>
-		<div class="banner__buttons-item">
+		<div class="banner__buttons-item banner__buttons-item-right">
 			<svg width="57" height="56" viewBox="0 0 57 56" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<g opacity="0.3">
 				<rect x="0.1875" width="56" height="56" rx="28" fill="white"/>
@@ -370,6 +390,66 @@
 		<div class="banner__dots-item"></div>
 	</div>
 </div>
+
+<script>
+	if(document.querySelector('.banner__wrap')){
+		var sliderHeaderPosition = 0;
+		var sliderHeaderWrap = document.querySelector('.banner__wrap');
+		var sliderHeaderLeft = document.querySelector('.banner__buttons-item-left');
+		var sliderHeaderRight = document.querySelector('.banner__buttons-item-right');
+		var sliderHeaderItem = document.querySelectorAll('.banner__slide').length;
+		var dotsBanner = document.querySelectorAll('.banner__dots-item');
+		var dotsBannerNum = 0;
+
+
+		var sliderHeaderWidth = sliderHeaderItem * -1045;
+		sliderHeaderRight.addEventListener('click', function(){
+			sliderHeaderPosition = sliderHeaderPosition - 1045;
+			console.log(sliderHeaderPosition, sliderHeaderWidth);
+			
+			dotsBannerNum++;
+			console.log(dotsBannerNum);
+			for (var i = 0; i < dotsBanner.length; i++) {
+				dotsBanner[i].classList.remove('banner__dots-item--active');
+			}
+			
+			if (sliderHeaderPosition === sliderHeaderWidth) {
+				sliderHeaderPosition = 0;
+				sliderHeaderWrap.style.transform = "translateX(0px)";
+				dotsBannerNum = 0;
+			} else {
+				sliderHeaderWrap.style.transform = "translateX("+sliderHeaderPosition+"px)";
+			}
+			dotsBanner[dotsBannerNum].classList.add('banner__dots-item--active');
+		});
+
+		sliderHeaderLeft.addEventListener('click', function(){
+
+			if (sliderHeaderPosition === 0) {
+				sliderHeaderWrap.style.transform = "translateX(0px)";
+			} else {
+				sliderHeaderPosition = sliderHeaderPosition + 1045;
+				sliderHeaderWrap.style.transform = "translateX("+sliderHeaderPosition+"px)";
+				for (var i = 0; i < dotsBanner.length; i++) {
+					dotsBanner[i].classList.remove('banner__dots-item--active');
+				}
+				--dotsBannerNum;
+				dotsBanner[dotsBannerNum].classList.add('banner__dots-item--active');
+			}
+		});
+		for (var i = 0; i < dotsBanner.length; i++) {
+			dotsBanner[i].setAttribute('data-dots', i);
+			dotsBanner[i].addEventListener('click', function(){
+				document.querySelector('.banner__dots-item--active').classList.remove('banner__dots-item--active');
+				this.classList.add('banner__dots-item--active');
+				console.log(this.getAttribute('data-dots'));
+				dotsBannerNum = this.getAttribute('data-dots');
+				sliderHeaderPosition = dotsBannerNum*-1045;
+				sliderHeaderWrap.style.transform = "translateX("+sliderHeaderPosition+"px)";
+			})
+		}
+	}
+</script>
 					<div class="main__title">Предстоящие сеансы:</div>
 					<div class="coming-session">
 	<div class="coming-session__wrap">
