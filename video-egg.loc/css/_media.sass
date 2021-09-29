@@ -10,8 +10,77 @@
 	.doctor-block__wrap
 		box-sizing: border-box
 		padding: 0 20px
+	.price-block-site__wrap
+		overflow-x: scroll
+		overflow-y: hidden
+		&::-webkit-scrollbar 
+			width: 0px /* ширина для вертикального скролла */
+			height: 0px/* высота для горизонтального скролла */
+	.price-block-site__item
+		flex: 0 0 360px
+		max-width: 360px
+		margin-right: 15px
+	.reviews-block-site__item
+		flex: 0 0 320px
+		max-width: 320px
+		padding-right: 15px
+	.reviews-block-site__wrap
+		overflow-x: scroll
+		overflow-y: hidden
+		padding: 20px 10px
+		&::-webkit-scrollbar 
+			width: 0px /* ширина для вертикального скролла */
+			height: 0px/* высота для горизонтального скролла */
+	.reviews-block-site__buttons
+		display: none
+	.reviews-block-site__track
+		padding-right: 0
+	.news-block-site__wrap
+		overflow-x: scroll
+		overflow-y: hidden
+		&::-webkit-scrollbar 
+			width: 0px /* ширина для вертикального скролла */
+			height: 0px/* высота для горизонтального скролла */
+	.news-block-site__item
+		flex: 0 0 380px
+		max-width: 380px
+		margin-right: 20px
+	.news-block-site, .price-block-site
+		padding-right: 0
+	.callback-form-site__wrap
+		flex-wrap: wrap
+	.callback-form-site__block
+		max-width: 100%
+		flex: 0 0 100%
+	.callback-form-site__form
+		display: none
+
 
 @media (max-width: 993px)
+	.materials-block__left
+		max-width: 100%
+		flex: 0 0 100%
+	.materials-block
+		display: none
+	.price-line
+		flex-wrap: wrap
+	.price-line__block
+		max-width: 100%
+		flex: 0 0 100%
+	.price-line__link
+		max-width: 100%
+		flex: 0 0 100%
+		margin-left: 0
+		margin-top: 30px
+	.sale-block
+		flex-wrap: wrap
+	.sale-block__text
+		max-width: 100%
+		flex: 0 0 100%
+	.sale-block__block
+		padding: 40px
+	.materials-block__wrap
+		flex-wrap: wrap
 	.services-block__wrap
 		padding: 0 15px
 	.how-video__img
@@ -100,6 +169,20 @@
 		padding-bottom: 30px
 		margin-bottom: 10px
 @media (max-width: 768px)
+	.price-line__block
+		flex-wrap: wrap
+		justify-content: center
+		&-text
+			max-width: 100%
+			flex: 0 0 100%
+			text-align: center
+			margin: 30px 0
+	.callback-form-site__item
+		max-width: 100%
+		flex: 0 0 100%
+	.callback-form-site__item:nth-child(2n)
+		padding-left: 0
+		border-left: 0 solid #000
 	.danger__wrap
 		flex-wrap: wrap
 	.danger__img
@@ -171,6 +254,14 @@
 		margin-right: 0
 	.doctor-block__item-text
 		margin-top: 20px
+	.callback-form-site__block p
+		font-size: 16px
+		line-height: 20px
+	.callback-form-site__item-text
+		font-size: 18px
+		line-height: 22px
+	.callback-form-site__block
+		padding-left: 20px
 
 @media (max-width: 374px)
 	.faq-accordion__title
@@ -178,7 +269,7 @@
 	.faq-accordion__body ul li
 		font-size: 16px
 		margin-bottom: 10px
-	.faq-block__title, .helpful__text, .faq-block__offer-title strong, .about-block-site__title, .how-video__title, .variant__title
+	.faq-block__title, .helpful__text, .faq-block__offer-title strong, .about-block-site__title, .how-video__title, .variant__title, .price-block-site__title, .reviews-block-site__title
 		font-size: 20px
 		line-height: 24px
 	.faq-block__offer-title
