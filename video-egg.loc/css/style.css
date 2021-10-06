@@ -86,7 +86,6 @@ body {
 
 .doctor-block {
   background-color: #faf4ee;
-  padding-top: 5px;
   margin-bottom: 50px; }
   .doctor-block__img {
     flex: 0 0 490px;
@@ -458,8 +457,7 @@ body {
     padding-top: 35px;
     padding-bottom: 30px;
     box-sizing: border-box;
-    color: #fff;
-    height: 100%; }
+    color: #fff; }
     .about-block-site__offer-title {
       font-size: 26px;
       line-height: 26px;
@@ -520,6 +518,11 @@ body {
   border-bottom: 1px solid #e4dfd9; }
   .faq-accordion__body {
     display: none; }
+    .faq-accordion__body a {
+      padding-bottom: 10px;
+      color: #056c5f;
+      text-decoration: none;
+      display: block; }
     .faq-accordion__body p {
       font-size: 16px;
       line-height: 20px; }
@@ -782,7 +785,7 @@ body {
   .callback-form-site__wrap {
     display: flex; }
   .callback-form-site__form {
-    flex: 0 0 470px;
+    flex: 0 0 570px;
     background-color: #f8a683; }
     .callback-form-site__form-title {
       text-align: center;
@@ -792,8 +795,8 @@ body {
       line-height: 150px;
       background-color: #056c5f; }
   .callback-form-site__block {
-    max-width: calc(100% - 470px);
-    flex: 0 0 calc(100% - 470px);
+    max-width: calc(100% - 570px);
+    flex: 0 0 calc(100% - 570px);
     box-sizing: border-box;
     padding-left: 70px;
     padding-right: 15px;
@@ -841,7 +844,10 @@ body {
       text-align: center;
       margin-top: -30px; }
       .price-block-site__item-button a {
-        margin: auto; }
+        margin: auto;
+        background-color: #f8a683; }
+        .price-block-site__item-button a:hover {
+          background-color: #056c5f; }
     .price-block-site__item-title {
       height: 210px;
       line-height: 210px;
@@ -1100,7 +1106,21 @@ body {
 @media (max-width: 1600px) {
   .services-block {
     overflow: hidden;
-    padding-right: 0; } }
+    padding: 0 15px; }
+
+  .services, .how-video, .about-block-site {
+    padding: 0 15px; }
+
+  .danger {
+    margin-left: 15px;
+    margin-right: 15px; }
+
+  .materials-block {
+    max-width: 1230px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto; } }
 @media (max-width: 1200px) {
   .offer {
     height: 420px; }
@@ -1304,11 +1324,11 @@ body {
 
   .doctor-block__item {
     height: auto;
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-bottom: 10px; } }
+    flex: 0 0 48%;
+    max-width: 48%;
+    padding: 10px; }
+    .doctor-block__item-text {
+      font-size: 18px; } }
 @media (max-width: 768px) {
   .price-line__block {
     flex-wrap: wrap;
@@ -1409,7 +1429,8 @@ body {
   .doctor-block__item-text {
     flex: 0 0 100%;
     max-width: 100%;
-    margin-right: 0; }
+    margin-right: 0;
+    font-size: 14px; }
 
   .doctor-block__item-image {
     margin-right: 0; }
