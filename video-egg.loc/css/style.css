@@ -91,11 +91,15 @@ body {
     flex: 0 0 490px;
     max-width: 490px;
     margin-right: 40px; }
+    .doctor-block__img img {
+      width: 100%;
+      height: auto; }
   .doctor-block__text {
     padding-right: 40px; }
   .doctor-block__inner {
     display: flex;
-    align-items: center; }
+    align-items: center;
+    padding-bottom: 30px; }
     .doctor-block__inner .button-index-secondary {
       margin-top: 130px; }
   .doctor-block__title {
