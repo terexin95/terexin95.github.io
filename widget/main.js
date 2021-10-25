@@ -1,7 +1,6 @@
 let remarkedWidgetClassic = document.createElement('div');
 remarkedWidgetClassic.classList.add('remarked-widget-none')
 
-
 //Получение даты
 let today = new Date();
 let dd = String(today.getDate()).padStart(2, '0');
@@ -125,7 +124,6 @@ remarkedPhone.addEventListener('input', function (e) {
 
 
 //Количество гостей
-
 /*
 *
 * Custom quantity input
@@ -282,3 +280,11 @@ nextStep3.addEventListener('click', function(){
 	document.querySelector('.remarked-widget-classic__step-2').classList.remove('remarked-widget-classic__step-2--active');
 	document.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
 });
+
+const remarkedReqUrl = "https://app.remarked.ru/api/v1/ApiReservesWidget";
+
+const remarkedXHR = new XMLHttpRequest();
+
+remarkedXHR.open('POST', remarkedReqUrl);
+
+remarkedXHR.send();
