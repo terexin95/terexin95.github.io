@@ -292,7 +292,7 @@ const remarkedBody = {
 
 let remarkedBodyJSON = JSON.stringify(remarkedBody);
 
-
+ 
 remarkedXHR.open('POST', remarkedBodyJSON, remarkedReqUrl);
 
 remarkedXHR.onload = function(){
