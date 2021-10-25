@@ -288,7 +288,7 @@ const remarkedXHR = new XMLHttpRequest();
 remarkedXHR.open('POST', remarkedReqUrl);
 
 remarkedXHR.onload = function(){
-	console.log(remarkedXHR.response);
+	console.log(remarkedXHR.response); 
 }
 
 remarkedXHR.send();
