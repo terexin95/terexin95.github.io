@@ -285,10 +285,15 @@ const remarkedReqUrl = "https://app.remarked.ru/api/v1/ApiReservesWidget";
 
 const remarkedXHR = new XMLHttpRequest();
 
-remarkedXHR.open('POST',{
+const remarkedBody = {
 	method: 'GetToken',
 	request_id: new Date().getTime()
-  },remarkedReqUrl);
+}
+
+let remarkedBodyJSON = JSON.stringify(remarkedBody);
+
+
+remarkedXHR.open('POST', remarkedBodyJSON, remarkedReqUrl);
 
 remarkedXHR.onload = function(){
 	console.log(remarkedXHR.response); 
