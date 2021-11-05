@@ -1127,6 +1127,8 @@ img, svg
 		margin-bottom: 25px
 		max-width: 46%
 		flex: 0 0 46%
+		&:nth-child(7), &:nth-child(8)
+			display: none
 		&-check
 			height: 48px
 			display: flex
@@ -1149,6 +1151,12 @@ img, svg
 		border: 1px solid #D3D3D3
 		box-sizing: border-box
 		border-radius: 4px
+		&--active
+			.registration__item
+				&:nth-child(7), &:nth-child(8)
+					display: block
+				&:nth-child(1), &:nth-child(2)
+					display: none
 	input
 		width: 100%
 		padding: 0
@@ -1210,3 +1218,122 @@ img, svg
 			margin: 0
 			padding: 0
 			box-sizing: border-box
+
+.overlay
+	position: fixed
+	display: none
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0
+	z-index: 10
+	background: #242328
+	opacity: 0.5
+
+.modal
+	padding: 40px 45px
+	background: #FFFFFF
+	border: 1px solid #D3D3D3
+	box-sizing: border-box
+	border-radius: 8px
+	position: fixed
+	left: 50%
+	top: 50%
+	transform: translate(-50%, -50%)
+	width: 880px
+	box-sizing: border-box
+	z-index: 11
+	text-align: center
+	img
+		width: 100%
+		height: auto
+	h2
+		margin: 0
+		margin-top: 30px
+		margin-bottom: 25px
+		color: #0C0C0C
+		font-weight: 500
+		font-size: 24px
+		line-height: 122%
+	&__buttons
+		display: flex
+		justify-content: center
+	&__select
+		flex: 0 0 210px
+		height: 48px
+		line-height: 48px
+		background: #DECECF
+		border-radius: 4px
+		text-align: center
+		cursor: pointer
+		&:hover
+			background: darken(#DECECF, 5%)
+	&__input
+		flex: 0 0 210px
+		height: 48px
+		line-height: 48px
+		position: relative
+		font-weight: 500
+		font-size: 12px
+		color: #7C6F71
+		text-decoration: underline
+		cursor: pointer
+		input
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			width: 100%
+			height: 100%
+			opacity: 0
+			cursor: pointer
+			outline: 0
+
+.mt-1
+	margin-top: 30px
+
+.modal-cover
+	display: none
+
+.modal-gallery
+	display: none
+	.modal__buttons
+		margin-top: 25px
+	.modal__select, .modal__input
+		flex: 0 0 180px
+	&__title
+		display: flex
+		align-items: center
+		justify-content: center
+		font-weight: 500
+		font-size: 24px
+		color: #0C0C0C
+		svg
+			margin-right: 25px
+	&__header
+		display: flex
+		justify-content: center
+		padding: 15px 45px
+		border-bottom: 1px solid #D3D3D3
+		margin: 0 -45px
+		margin-bottom: 30px
+		.tabs__wrap
+			margin-left: 0
+
+.modal-background
+	display: none
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-bottom: 65px
+	&__item
+		flex: 0 0 80px
+		height: 80px
+		border-radius: 8px
+		background-color: #AE7E7E
+		margin-right: 15px
+		cursor: pointer
+		&:last-child
+			margin-right: 0
