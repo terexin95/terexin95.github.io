@@ -13,7 +13,7 @@ img, svg
 	position: fixed
 	width: 100%
 	top: 0
-	z-index: 1
+	z-index: 2
 	.container
 		display: flex
 		align-items: center
@@ -389,6 +389,7 @@ img, svg
 	&__wrap
 		display: flex
 		justify-content: space-between
+		flex-wrap: wrap
 	&__item
 		max-width: calc(50% - 5px)
 		flex: 0 0 calc(50% - 5px)
@@ -1337,3 +1338,44 @@ img, svg
 		cursor: pointer
 		&:last-child
 			margin-right: 0
+
+.site-header__hum
+	display: none
+
+.site-header__close
+	display: none
+	align-items: center
+	justify-content: center
+
+.mobile-menu
+	position: fixed
+	left: 0
+	bottom: 0
+	height: calc(100% - 58px)
+	width: 350px
+	background-color: #fff
+	z-index: 10
+	box-sizing: border-box
+	display: none
+	.site-header__menu, .site-header__btns
+		display: block
+	&__wrap
+		padding: 50px
+		height: calc(100% - 100px)
+		overflow-y: scroll
+		overflow-x: hidden
+	.button-green
+		display: block
+		width: 100%
+		text-align: center
+		margin-bottom: 20px
+	.site-header__menu-item
+		display: block
+		margin-top: 20px
+	.site-header__menu
+		margin-top: 15px
+	.form-search
+		width: 100%
+		margin-right: 0
+
+@import "_media.sass"

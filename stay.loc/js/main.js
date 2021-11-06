@@ -61,3 +61,21 @@ if (document.querySelector('.registration__item-add')) {
 		document.querySelector('.registration__form').classList.toggle('registration__form--active')
 	});
 }
+
+if (document.querySelector('.site-header__hum')) {
+	document.querySelector('.site-header__hum').addEventListener('click', function(){
+		document.querySelector('body').style.overflow = "hidden";
+		document.querySelector('.mobile-menu').style.display = "block";
+		document.querySelector('.site-header__hum').style.display = "none";
+		document.querySelector('.site-header__close').style.display = "block";
+	});
+}
+
+if (document.querySelector('.site-header__close')) {
+	document.querySelector('.site-header__close').addEventListener('click', function(){
+		document.querySelector('body').style.overflow = "auto";
+		document.querySelector('.mobile-menu').style.display = "none";
+		document.querySelector('.site-header__hum').style.display = "block";
+		document.querySelector('.site-header__close').style.display = "none";
+	});
+}
