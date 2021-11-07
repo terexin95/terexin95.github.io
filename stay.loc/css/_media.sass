@@ -223,6 +223,9 @@
 		flex: 0 0 calc(100% - 140px)
 
 @media (max-width: 470px)
+	.reviews-form__button
+		flex: 0 0 100%
+		justify-content: center
 	.chat__title h1
 		font-size: 24px
 		flex: 0 0 100%
@@ -290,6 +293,7 @@
 	.about-callback__form input
 		flex: 0 0 100%
 		margin-right: 0
+		text-align: center
 	.about-callback__form button
 		flex: 0 0 100%
 		height: 48px
@@ -346,10 +350,16 @@
 		height: 100px
 	.callback p
 		font-size: 12px
+	.callback form
+		flex-wrap: wrap
 	.callback form button
-		flex: 0 0 40%
+		flex: 0 0 100%
+		margin-top: 20px
+		height: 48px
 	.callback form input
-		flex: 0 0 70%
+		flex: 0 0 100%
+		text-align: center
+		margin-right: 0
 
 @media (max-width: 370px)
 	.tabs__item
