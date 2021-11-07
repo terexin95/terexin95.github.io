@@ -1,4 +1,25 @@
+@media (max-width: 1200px)
+	.about-block
+		background-position-x: right
+	.about-chat__img
+		margin-left: 25px
+		img
+			width: 100%
+	.about-chat
+		align-items: center
 @media (max-width: 1060px)
+	.about-block
+		background-image: none
+		background-color: rgba(#F3DED7, .12)
+	.page-memory
+		img
+			width: 100%
+	.about-event__block
+		flex: 0 0 50%
+	.about-event__img
+		flex: 0 0 50%
+		img
+			width: 100%
 	.site-header__logo
 		svg
 			height: 44px
@@ -17,11 +38,82 @@
 		margin-left: 0
 	.site-main
 		margin-top: 75px
+	.main-content__banner img
+		min-height: 300px
+		object-fit: cover
 
+@media (max-width: 880px)
+	.modal
+		width: 90%
+		height: 90%
+		overflow-y: scroll
+		padding: 25px
+	.modal__buttons
+		flex-wrap: wrap
+	.modal-gallery__header
+		margin: 0 -25px
 @media (max-width: 768px)
+	.about-chat__img
+		display: none
+	.about-chat__block
+		flex: 0 0 100%
+	.about-chat__wrap
+		flex: 0 0 100%
+		max-width: 100%
+		justify-content: space-around
+	.about-chat__item
+		border: 0
+	.about-chat__bg
+		padding-top: 50px
+		padding-bottom: 70px
+	.about-block h1
+		font-size: 36px
+	.about-block p, .about-chat__block p, .about-event p, .about-callback > p
+		font-size: 18px
+	.page-memory h2, .about-event h2, .about-chat__block h2, .about-callback h2
+		font-size: 24px
+	.about-block
+		padding: 50px
+	.chat__content
+		display: none
+		position: fixed
+		z-index: 13
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background: #fff
+	.chat__header
+		padding: 0 20px
+	.chat__body
+		padding: 20px
+	.chat__footer
+		padding-left: 20px
+		padding-right: 20px
+	.chat__header .chat__item-title
+		font-size: 16px
+	.chat__msg-img img
+		width: 36px
+		height: 36px
+	.chat__back
+		display: block
+		margin-right: 20px
+	.chat__body
+		height: calc(100% - 210px)
+	.chat__msg-block
+		padding: 15px
+		padding-bottom: 10px
+	.chat__sidebar
+		flex: 0 0 100%
+	.chat__title h1
+		font-size: 36px
+	.chat
+		height: calc(100vh - 220px)
+	.card__text--big
+		font-size: 18px
 	.reviews-form__button button
 		width: 160px
-	.card__body, .card__footer, .youtube__footer, .card__header
+	.card__body, .card__footer, .youtube__footer, .card__header, .card__reviews
 		padding-left: 30px
 		padding-right: 30px
 	.card__opt
@@ -41,6 +133,29 @@
 		padding-top: 0
 
 @media (max-width: 700px)
+	.registration
+		height: auto
+	.registration__form
+		padding: 25px
+		margin-left: 20px
+		margin-right: 20px
+		margin-bottom: 30px
+	.about-event p
+		margin: auto
+	.about-event
+		flex-wrap: wrap
+		margin-top: 25px
+	.about-chat__wrap
+		flex-wrap: wrap
+		justify-content: center
+	.about-chat__item
+		padding: 0
+		max-width: 50%
+		flex: 0 0 50%
+		margin-bottom: 25px
+	.about-event__block, .about-event__img
+		flex: 0 0 100%
+		text-align: center
 	.card-gallery-column
 		.card__title
 			display: none
@@ -89,12 +204,17 @@
 			margin-right: 0
 
 @media (max-width: 520px)
+	.chat__title
+		flex-wrap: wrap
+	.chat__title-event
+		height: 48px
+		font-size: 16px
+		padding-left: 20px
+		flex: 0 0 auto
 	.reviews-form__button button
 		width: 120px
 	.container, .main-content__container
 		padding: 0 10px
-	.main-content__container
-		margin-top: -60px
 	.root
 		flex: 0 0 100%
 		margin-left: -3px
@@ -103,15 +223,26 @@
 		flex: 0 0 calc(100% - 140px)
 
 @media (max-width: 470px)
+	.chat__title h1
+		font-size: 24px
+		flex: 0 0 100%
+		margin-bottom: 25px
+	.chat
+		height: calc(100vh - 280px)
 	.tabs__item
 		font-size: 14px
 		margin-right: 20px
 	.reviews-form
-		flex: 0 0 calc(100% - 140px)
+		flex: 0 0 100%
+		flex-wrap: wrap
+		justify-content: center
 		img
-			display: none
+			margin-right: 0
 	.reviews-form textarea
 		flex: 0 0 100%
+		height: auto
+		margin-top: 20px
+		margin-bottom: 20px
 	.youtube__play
 		svg
 			width: 30px
@@ -131,18 +262,58 @@
 		font-size: 18px
 	.card__text
 		font-size: 16px
+	.gallery
+		margin-bottom: 0
 	.gallery__item
 		flex: 0 0 100%
 		max-width: 100%
 		height: 100%
-		margin-bottom: 20px
+		margin-bottom: 25px
 	.gallery__item-body
 		height: 100%
 	.callback h2
 		font-size: 18px
 
 @media (max-width: 430px)
-	.card__body, .card__footer, .youtube__footer, .card__header
+	.modal-gallery__title
+		font-size: 16px
+	.registration__item, .registration__upload-item
+		flex: 0 0 100%
+		max-width: 100%
+		margin-bottom: 25px
+	.registration h1
+		font-size: 18px
+	.registration__item--none
+		display: none
+	.about-callback__form
+		flex-wrap: wrap
+	.about-callback__form input
+		flex: 0 0 100%
+		margin-right: 0
+	.about-callback__form button
+		flex: 0 0 100%
+		height: 48px
+		margin-top: 25px
+	.about-callback form h3
+		font-size: 18px
+	.about-block
+		padding: 25px
+		margin-bottom: 50px
+	.about-block h1
+		font-size: 28px
+		margin-bottom: 20px
+	.about-chat__bg
+		padding: 0
+	.youtube__description
+		width: calc(100% - 30px)
+	.youtube__title
+		white-space: nowrap
+		overflow: hidden
+		br
+			display: none
+	.mobile-menu
+		width: 100%
+	.card__body, .card__footer, .youtube__footer, .card__header, .card__reviews
 		padding-left: 20px
 		padding-right: 20px
 	.event
@@ -170,8 +341,6 @@
 	.repost
 		margin-top: 0
 		margin-left: 3px
-	.main-content__container
-		margin-top: -20px
 	.people-card__img
 		width: 100px
 		height: 100px
@@ -188,6 +357,8 @@
 		margin-right: 15px
 
 @media (max-width: 330px)
+	.youtube__subtitle
+		font-size: 10px
 	.tabs__item
 		font-size: 10px
 		margin-right: 15px

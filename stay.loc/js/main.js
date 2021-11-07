@@ -2,7 +2,11 @@ if(document.querySelector('.input-checkbox__item')){
 	var inpCheck = document.querySelectorAll('input[type=checkbox]');
 	for (var i = 0; i < inpCheck.length; i++) {
 		inpCheck[i].addEventListener('click', function(){
-			this.parentElement.classList.toggle('input-checkbox__item--active')
+			if (this.parentElement.parentElement.parentElement.querySelector('.input-checkbox__item--active')) {
+				var parentEL = this.parentElement.parentElement.parentElement.querySelector('.input-checkbox__item--active');
+				parentEL.classList.remove('input-checkbox__item--active');
+			}
+			this.parentElement.classList.add('input-checkbox__item--active')
 		})
 	}
 }
@@ -78,4 +82,16 @@ if (document.querySelector('.site-header__close')) {
 		document.querySelector('.site-header__hum').style.display = "block";
 		document.querySelector('.site-header__close').style.display = "none";
 	});
+}
+
+if (document.querySelector('.chat__sidebar-wrap')) {
+	var msgItem = document.querySelectorAll('.chat__sidebar-wrap .chat__item');
+	for (var i = 0; i < msgItem.length; i++) {
+		msgItem[i].addEventListener('click', function(){
+			document.querySelector('.chat__content').style.display = "block";
+		})
+	}
+	document.querySelector('.chat__back').addEventListener('click', function(){
+		document.querySelector('.chat__content').style.display = "none";
+	})
 }
