@@ -727,11 +727,11 @@ img, svg {
         justify-content: center;
         cursor: pointer;
         height: 40px;
-        background: #F4DED7;
+        background: #DBF1F3;
         border-radius: 4px;
         transition: all 0.3s ease; }
         .chat__footer form button:hover, .chat__footer form button:active {
-          background-color: #efcec3;
+          background-color: #c8eaed;
           transition: all 0.3s ease; }
         .chat__footer form button svg {
           margin-right: 10px; }
@@ -821,7 +821,7 @@ img, svg {
       font-size: 48px;
       line-height: 122%; }
     .chat__title-event {
-      background: #F3DED7;
+      background: #DBF1F3;
       transition: all 0.3s ease;
       border: 1px solid #D3D3D3;
       box-sizing: border-box;
@@ -838,7 +838,7 @@ img, svg {
       cursor: pointer;
       flex: 0 0 373px; }
       .chat__title-event:hover, .chat__title-event:active {
-        background: #e7beb0;
+        background: #b5e2e6;
         transition: all 0.3s ease; }
     .chat__title-icon {
       margin-right: 10px; }
@@ -1049,14 +1049,14 @@ img, svg {
       cursor: pointer;
       border: 0;
       outline: 0;
-      background: rgba(232, 189, 175, 0.5);
+      background: #DBF1F3;
       transition: all 0.3s ease;
       border-radius: 4px;
       color: #7C6F71;
       font-weight: 500;
       font-size: 12px; }
       .registration__button button:hover, .registration__button button:active {
-        background: rgba(226, 173, 155, 0.5);
+        background: #c8eaed;
         transition: all 0.3s ease; }
   .registration h1 {
     color: #0C0C0C;
@@ -1721,6 +1721,9 @@ img, svg {
   .callback h2 {
     font-size: 18px; } }
 @media (max-width: 430px) {
+  .card__reviews-text {
+    font-size: 14px; }
+
   .modal-gallery__title {
     font-size: 16px; }
 
