@@ -1721,6 +1721,13 @@ img, svg {
   .callback h2 {
     font-size: 18px; } }
 @media (max-width: 430px) {
+  .people-card__opt-num {
+    font-weight: normal;
+    font-size: 14px; }
+
+  .card__user-title, .card__reviews-title {
+    font-size: 16px; }
+
   .card__reviews-text {
     font-size: 14px; }
 
