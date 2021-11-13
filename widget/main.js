@@ -1,4 +1,5 @@
 let remarkedToken;
+let remarkedArrDays;
 const remarkedReqUrl = "https://app.remarked.ru/api/v1/ApiReservesWidget";
 
 const remarkedXHR = new XMLHttpRequest();
@@ -40,7 +41,7 @@ let todayMax = yyyy + '-' + mm + '-' + ddMax;
 
 
 remarkedWidgetClassic.innerHTML += `
-  
+  <style>input{height:40px;border-radius:4px;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-box-shadow:0 0 0 0 transparent;box-shadow:0 0 0 0 transparent;border:1px solid #ccc;outline:0;padding:0 15px}input:focus{border-color:#1aaf33}input[type=tel],input[type=text]{width:100%}.overlay{position:fixed;left:0;right:0;top:0;bottom:0;background-color:rgba(0,0,0,.55);z-index:10000;opacity:0;visibility:hidden;-webkit-transition:.55s opacity,.55s visibility;-o-transition:.55s opacity,.55s visibility;transition:.55s opacity,.55s visibility}.remarked-widget{width:700px;position:fixed;background-color:#fff;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);z-index:10001;border-radius:20px;color:#fff;opacity:0;visibility:hidden;-webkit-transition:.55s opacity,.55s visibility;-o-transition:.55s opacity,.55s visibility;transition:.55s opacity,.55s visibility}.remarked-widget-classic__header{padding:20px 30px;background-color:#a50204;border-radius:20px 20px 0 0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}.remarked-widget__close{color:#fff;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.remarked-widget-classic__body{padding:30px}.remarked-widget__userdata{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin-bottom:20px}.remarked-widget__userdata input{max-width:47%;-webkit-box-flex:0;-ms-flex:0 0 47%;flex:0 0 47%}.remarked-widget-row{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 -20px;margin-bottom:20px}.remarked-widget-column{max-width:50%;-webkit-box-flex:0;-ms-flex:0 0 50%;flex:0 0 50%;padding:0 20px;-webkit-box-sizing:border-box;box-sizing:border-box}.remarked-widget__times{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}.remarked-widget__time{max-width:9%;-webkit-box-flex:0;-ms-flex:0 0 13%;flex:0 0 13%;margin-right:1%;color:#333;text-align:center;background-color:#ededed;height:40px;border-radius:8px;cursor:pointer;margin-bottom:1%;line-height:40px;user-select:none}.remarked-widget__time:nth-child(10n){margin-right:0}.remarked-widget__comment{margin-top:15px;margin-bottom:20px}.remarked-widget-days{position:relative}.remarked-widget-days__dropdown{position:absolute;top:calc(100% - 1px);z-index:1;color:#000;background-color:#fff;width:100%}.remarked-widget-days__dropdown-wrap{border:1px solid #1aaf33;border-radius:4px}.remarked-widget-days__dropdown-wrap>div{height:40px;padding:10px;box-sizing:border-box;color:#000}.remarked-widget__comment textarea{resize:none;height:60px;width:100%;box-sizing:border-box;border-radius:4px;-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-box-shadow:0 0 0 0 transparent;box-shadow:0 0 0 0 transparent;border:1px solid #ccc;outline:0;padding:10px 15px;font-family:sans-serif}button{height:40px;padding:0 30px;background-color:#1aaf33;border:0;border-radius:4px;-webkit-box-shadow:0 0 0 0 transparent;box-shadow:0 0 0 0 transparent;cursor:pointer;color:#fff;-webkit-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease}button:active,button:focus,button:hover{background-color:#19a330;-webkit-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease}.remarked-widget-none{position:relative;z-index:-1}.remarked-widget-active{position:relative;z-index:1}.remarked-widget-active .overlay,.remarked-widget-active .remarked-widget{opacity:1;visibility:visible}.remarked-widget-title{color:#8a8a8a;margin-bottom:15px;font-weight:500}.mt-2{margin-top:20px}.mb-2{margin-bottom:20px}.remarked-quantity{position:relative}.remarked-quantity input{width:70px;height:40px;line-height:1.65;float:left;display:block;padding:0;margin:0;padding-left:20px;border:1px solid #ccc}.remarked-quantity input:focus{outline:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}input[type=number]{-moz-appearance:textfield}.remarked-quantity-nav{float:left;position:relative;height:40px}.remarked-quantity-button{position:relative;cursor:pointer;border-left:1px solid #ccc;width:20px;text-align:center;color:#333;font-size:13px;font-family:"Trebuchet MS",Helvetica,sans-serif!important;line-height:1.7;-webkit-transform:translateX(-100%);transform:translateX(-100%);user-select:none}.remarked-quantity-button--up{position:absolute;height:50%;top:0;border-bottom:1px solid #ccc}.remarked-quantity-button--down{position:absolute;bottom:0;height:50%}.remarked-widget-room{height:40px;line-height:40px;padding-left:10px;padding-right:10px;box-sizing:border-box;text-align:center;border:1px solid #1aaf33;color:#333;transition:all .3s ease;margin-bottom:20px;border-radius:4px;transition:all .3s ease;cursor:pointer}.remarked-widget__time--disabled{background-color:#e1dfdf;color:#ccc;cursor:default}.remarked-widget__time--active,.remarked-widget__time-work:active,.remarked-widget__time-work:hover{background-color:#1aaf33;color:#fff;transition:all .3s ease}.remarked-widget-room:active,.remarked-widget-room:hover{background-color:#1aaf33;color:#fff;transition:all .3s ease}.remarked-widget-classic__step-0{display:none}.remarked-widget-classic__step-1--none{overflow:hidden;height:0;transition:height .3s ease}.dremarkedDescriptionsText__wrap a{color:#333}.remarked-widget-classic__step-2,.remarked-widget-classic__step-3{display:none;opacity:0}.remarked-widget-classic__step-1--active,.remarked-widget-classic__step-2--active,.remarked-widget-classic__step-3--active{display:block;opacity:1;transition:opacity 3s ease}.remarked-widget-text{color:#333;text-align:center;font-size:12px;margin-bottom:20px;position:relative;padding:0 25px}.remarked-widget-info{position:absolute;top:50%;right:0;transform:translateY(-50%)}.circle,.circle-border{width:60px;height:60px;border-radius:50%}.circle{z-index:1;position:relative;background:#fff;transform:scale(1);animation:success-anim .7s ease}.circle-border{z-index:0;position:absolute;background:#8f6;transform:scale(1.1);animation:circle-anim .4s ease}.dremarkedDescriptionsText{position:fixed;width:800px;overflow-y:hidden;overflow-x:hidden;z-index:10002;box-sizing:border-box;left:50%;top:50%;transform:translate(-50%,-50%);background-color:#fff;border-radius:30px;padding:30px;user-select:none}.dremarkedDescriptionsText__close{position:absolute;right:15px;top:15px;cursor:pointer}.dremarkedDescriptionsText__wrap{height:100%;overflow-y:hidden;overflow-x:hidden}@keyframes success-anim{0%{transform:scale(0)}30%{transform:scale(0)}100%{transform:scale(1)}}@keyframes circle-anim{from{transform:scale(0)}to{transform:scale(1.1)}}.success::after,.success::before{content:"";display:block;height:4px;background:#8f6;position:absolute}.success::before{width:17px;top:58%;left:23%;transform:rotateZ(50deg)}.success::after{width:30px;top:50%;left:35%;transform:rotateZ(-50deg)}.remarked-success-wrap{width:60px;margin:auto;position:relative}.remarked-success-text{text-align:center;margin:30px 0;color:#333}.remarked-success-button{text-align:center}@media (max-width:800px){.dremarkedDescriptionsText{width:100%;height:100%;border-radius:0}}@media (max-width:701px){.remarked-widget{width:100%;height:100%;border-radius:0}.remarked-widget-classic__header{border-radius:0}}@media (max-width:470px){.remarked-widget-classic__body{height:calc(100vh - 121px);overflow-y:scroll}.remarked-widget-room{font-size:13px}.remarked-widget-column{max-width:100%;flex:0 0 100%}.remarked-widget-column:first-child{margin-bottom:20px}.remarked-widget__time{max-width:15%;flex:0 0 15%;margin-right:2%;margin-bottom:2%;font-size:14px}.remarked-widget__time:nth-child(10n){margin-right:2%}.remarked-widget__time:nth-child(6n){margin-right:0}.remarked-widget-classic__step-2 input{width:100%}}</style>
 	<div class="overlay"></div>
 	<div class="remarked-widget remarked-widget-classic">
 		<div class="remarked-widget-classic__header">
@@ -111,29 +112,6 @@ remarkedWidgetClassic.innerHTML += `
 			</div>
 			<div class="remarked-widget-classic__step remarked-widget-classic__step-3">
 				<div class="remarked-widget-title">Время</div>
-				<div class="remarked-widget__times">
-					<div class="remarked-widget__time remarked-widget__time--disabled">12:00</div>
-					<div class="remarked-widget__time remarked-widget__time-work remarked-widget__time--active">12:30</div>
-					<div class="remarked-widget__time remarked-widget__time-work">13:00</div>
-					<div class="remarked-widget__time remarked-widget__time-work">13:30</div>
-					<div class="remarked-widget__time remarked-widget__time-work">14:00</div>
-					<div class="remarked-widget__time remarked-widget__time-work">14:30</div>
-					<div class="remarked-widget__time remarked-widget__time-work">15:00</div>
-					<div class="remarked-widget__time remarked-widget__time-work">15:30</div>
-					<div class="remarked-widget__time remarked-widget__time-work">16:00</div>
-					<div class="remarked-widget__time remarked-widget__time-work">16:30</div>
-					<div class="remarked-widget__time remarked-widget__time-work">17:00</div>
-					<div class="remarked-widget__time remarked-widget__time-work">17:30</div>
-					<div class="remarked-widget__time remarked-widget__time-work">18:00</div>
-					<div class="remarked-widget__time remarked-widget__time-work">18:30</div>
-					<div class="remarked-widget__time remarked-widget__time-work">19:00</div>
-					<div class="remarked-widget__time remarked-widget__time-work">19:30</div>
-					<div class="remarked-widget__time remarked-widget__time-work">20:00</div>
-					<div class="remarked-widget__time remarked-widget__time-work">20:30</div>
-					<div class="remarked-widget__time remarked-widget__time-work">21:00</div>
-					<div class="remarked-widget__time remarked-widget__time-work">21:30</div>
-					<div class="remarked-widget__time remarked-widget__time-work">22:00</div>
-				</div>
 				<div class="remarked-widget__comment">
 					<textarea name="remarked-comment" placeholder="Пожелание к бронированию"></textarea>
 				</div>
@@ -186,9 +164,9 @@ for (let i = 0; i < remarkedDescriptions.length; i++) {
 				<div class="dremarkedDescriptionsText__wrap">
 					<strong>Мы бронируем столики на 2 часа. Если вам нужно больше времени – позвоните нам.</strong>
 					<br><br>
-					Мы разносторонние и многоуровневые – у нас есть высокие столики с высокими стульями, столики у окон, столики около растений и столики в тихих уголках. Позвоните и расскажите о столике своей мечты, а мы постараемся найти вариант, который подойдёт лучше всего. Вот номер: +78129028000
+					Мы разносторонние и многоуровневые – у нас есть высокие столики с высокими стульями, столики у окон, столики около растений и столики в тихих уголках. Позвоните и расскажите о столике своей мечты, а мы постараемся найти вариант, который подойдёт лучше всего. Вот номер: <a href="tel:+74957403034">+7 (495) 740-30-34</a>
 					<br><br>
-					Мы любим наше вино и десерты, но понимаем тех, кто хочет прийти со «своим». Сбор за бутылку вина (объемом 0.75 литра) составит 500 рублей, сбор за бутылку крепкого алкоголя (объемом до 1 литра) - 800 рублей. Пожалуйста, возьмите с собой чек – так надо по закону.
+					Мы любим наше вино и десерты, но понимаем тех, кто хочет прийти со «своим». Сбор за бутылку вина (объемом 0.75 литра) составит 500 рублей, за литр крепкого алкоголя – 800 рублей. Пожалуйста, возьмите с собой чек – так надо по закону.
 					<br><br>
 					Большие компании – это супер. Если вас будет больше чем шестеро, то позвоните нам по телефону, подумаем, как вместить всех!
 					<br><br>
@@ -203,9 +181,6 @@ for (let i = 0; i < remarkedDescriptions.length; i++) {
 		});
 	});
 }
-
-
-
 
 let remarkedOpenWidget = document.querySelectorAll('.remarked-open-widget');
 
@@ -355,6 +330,25 @@ let remarkedUserInputText;
 let remarkedPhoneInputText;
 let remarkedEmailInputText;
 
+let nextStep2 = document.querySelector('#nextStep2');
+nextStep2.addEventListener('click', function(){
+	if (remarkedUserInput.value == '') {
+		remarkedUserInput.style.border = "2px solid #A50204";
+	} else {
+		remarkedUserInput.style.border = "2px solid #1aaf33";
+	}
+	if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value.length == 14) {
+		remarkedPhoneInput.style.border = "2px solid #1aaf33";
+	} else {
+		remarkedPhoneInput.style.border = "2px solid #A50204";
+	}
+	if (remarkedEmailInput.value == '') {
+		remarkedEmailInput.style.border = "2px solid #A50204";
+	} else {
+		remarkedEmailInput.style.border = "2px solid #1aaf33";
+	}
+});
+
 remarkedUserInput.addEventListener('change', function(){
 	if (remarkedUserInput.value !== '') {
 		remarkedUserInputVal = true;
@@ -397,16 +391,56 @@ remarkedEmailInput.addEventListener('change', function(){
 let nextStep3 = document.querySelector('#nextStep3');
 
 nextStep3.addEventListener('click', function(){
+	let remarkedWidgetTimes = document.createElement('div');
+	remarkedWidgetTimes.classList.add('remarked-widget__times');
+	let remarkedTimeClick;
+	let remarkedGetDays = {
+		method: 'GetTimes',
+		token: remarkedToken,
+		request_id: new Date().getTime(),
+		reserve_date: document.querySelector("#start").value,
+		guests_count: document.querySelector('.remarked-quantity input').value
+	};
+	
+	
+	const remarkedXHRDays = new XMLHttpRequest();
+			
+	let remarkedGetDaysJSON = JSON.stringify(remarkedGetDays);
+
+
+	remarkedXHRDays.open('POST', remarkedReqUrl);
+
+	remarkedXHRDays.responseType = 'json';
+	remarkedXHRDays.setRequestHeader('Content-Type', 'application/json');
+
+	remarkedXHRDays.onload = function(){
+		remarkedArrDays = remarkedXHRDays.response;
+		remarkedArrDays = remarkedArrDays.times;
+		for (let i = 0; i < remarkedArrDays.length; i++) {
+			if (remarkedArrDays[i].is_free === true) {
+				remarkedWidgetTimes.innerHTML += `<div class="remarked-widget__time remarked-widget__time-work">${ remarkedArrDays[i].time }</div>`
+			} else {
+				remarkedWidgetTimes.innerHTML += `<div class="remarked-widget__time remarked-widget__time--disabled">${ remarkedArrDays[i].time }</div>`
+			}
+		}
+		document.querySelector('.remarked-widget-classic__step-3 .remarked-widget-title').after(remarkedWidgetTimes);
+		remarkedTimeClick = document.querySelectorAll('.remarked-widget__time-work');
+		for (let i = 0; i < remarkedTimeClick.length; i++) {
+			remarkedTimeClick[i].addEventListener('click', function(){
+				if (document.querySelector('.remarked-widget__time--active')){
+					document.querySelector('.remarked-widget__time--active').classList.remove('remarked-widget__time--active');
+				}
+				this.classList.add('remarked-widget__time--active');
+			});
+		}
+	}
+
+	remarkedXHRDays.send(remarkedGetDaysJSON);
+
 	document.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--none');
 	document.querySelector('.remarked-widget-classic__step-2').classList.remove('remarked-widget-classic__step-2--active');
 	document.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
-	let remarkedTimeClick = document.querySelectorAll('.remarked-widget__time-work');
-	for (let i = 0; i < remarkedTimeClick.length; i++) {
-		remarkedTimeClick[i].addEventListener('click', function(){
-			document.querySelector('.remarked-widget__time--active').classList.remove('remarked-widget__time--active');
-			this.classList.add('remarked-widget__time--active');
-		});
-	}
+	
 	let remarkedSend = document.querySelector('#remarkedSend');
 	let remarkedSucsess = document.createElement('div');
 	remarkedSucsess.innerHTML += `
@@ -451,7 +485,7 @@ nextStep3.addEventListener('click', function(){
 			remarkedXHRRoom.setRequestHeader('Content-Type', 'application/json');
 
 			remarkedXHRRoom.onload = function(){
-				console.log(remarkedBodyRooms);
+
 				if(remarkedXHRRoom.status == 200) {
 					document.querySelector('.remarked-widget-classic__step-3').style.display="none";
 					document.querySelector('.remarked-widget-classic__body').append(remarkedSucsess);

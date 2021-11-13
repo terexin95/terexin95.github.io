@@ -120,21 +120,22 @@
 			    flex-wrap: wrap;
 		}
 		.remarked-widget__time {
-			max-width: 13%;
+			max-width: 9%;
 			-webkit-box-flex: 0;
 			    -ms-flex: 0 0 13%;
 			        flex: 0 0 13%;
-			margin-right: 1.5%;
+			margin-right: 1%;
 			color: #333;
 			text-align: center;
 			background-color: #ededed;
 			height: 40px;
 			border-radius: 8px;
 			cursor: pointer;
-			margin-bottom: 1.5%;
+			margin-bottom: 1%;
 			line-height: 40px;
+			user-select: none;
 		}
-		.remarked-widget__time:nth-child(7n) {
+		.remarked-widget__time:nth-child(10n) {
 			margin-right: 0;
 		}
 		.remarked-widget__comment {
@@ -296,9 +297,10 @@ input[type=number] {
 .remarked-widget__time--disabled {
 	background-color: #e1dfdf;
     color: #ccc;
+	cursor: default;
 }
 
-.remarked-widget__time--active, .remarked-widget__time:hover, .remarked-widget__time:active {
+.remarked-widget__time--active, .remarked-widget__time-work:hover, .remarked-widget__time-work:active {
 	background-color: #1aaf33;
 	color: #fff;
 	transition: all .3s ease;
@@ -310,13 +312,21 @@ input[type=number] {
 	transition: all .3s ease;
 }
 
+.remarked-widget-classic__step-0 {
+	display: none;
+}
+
 .remarked-widget-classic__step-1--none {
 	overflow: hidden;
 	height: 0px;
 	transition: height .3s ease;
 }
 
-.remarked-widget-classic__step-2, .remarked-widget-classic__step-3, .remarked-widget-classic__step-1 {
+.dremarkedDescriptionsText__wrap a {
+	color: #333;
+}
+
+.remarked-widget-classic__step-2, .remarked-widget-classic__step-3 {
 	display: none;
 	opacity: 0;
 }
@@ -473,7 +483,11 @@ input[type=number] {
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 470px) {
+	.remarked-widget-classic__body {
+		height: calc(100vh - 121px);
+    	overflow-y: scroll;
+	}
 	.remarked-widget-room {
 		font-size: 13px;
 	}
@@ -487,17 +501,18 @@ input[type=number] {
 	}
 
 	.remarked-widget__time {
-		max-width: 23%;
-		flex: 0 0 23%;
-		margin-right: 2.6%;
-		margin-bottom: 2.6%;
+		max-width: 15%;
+		flex: 0 0 15%;
+		margin-right: 2%;
+		margin-bottom: 2%;
+		font-size: 14px;
 	}
 
-	.remarked-widget__time:nth-child(7n) {
-		margin-right: 2.6%;
+	.remarked-widget__time:nth-child(10n) {
+		margin-right: 2%;
 	}
 
-	.remarked-widget__time:nth-child(4n) {
+	.remarked-widget__time:nth-child(6n) {
 		margin-right: 0;
 	}
 
