@@ -24,6 +24,8 @@
 				&lt;script src="remarked.js"&gt;&lt;/script&gt;
 				&lt;script&gt;
 					widgetRemarked({
+						title: 'Название ресторана',
+						color_red: '#a50204',
 						email: true, 
 						date: true, 
 						qty: true, 
@@ -33,11 +35,16 @@
 				&lt;/script&gt;
 			</code>
 		</pre>
+		<p>
+			* к нужной кнопке добавить класс <strong>remarked-open-widget</strong>
+		</p>
 		<h4>Настройки виджета</h4>
 		<pre class="code-example">
 			<code class="code-example-body prettyprint">
 				&lt;script&gt;
 					widgetRemarked({
+						title: 'Название ресторана', // название в шапке
+						color_red: '#a50204', //Красный цвет в виджете
 						email: true, // Если написать false, то отключит поле email
 						date: true, // Если написать false, то отключит поле с датой
 						qty: true, // Если написать false, то отключит поле с количеством гостей
@@ -53,6 +60,8 @@
 				&lt;script src="remarked.js"&gt;&lt;/script&gt;
 				&lt;script&gt;
 					widgetRemarked({
+						title: 'Название ресторана',
+						color_red: '#a50204',
 						email: false, 
 						date: true, 
 						qty: true, 
