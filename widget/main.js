@@ -21,6 +21,7 @@ remarkedXHR.setRequestHeader('Content-Type', 'application/json');
 remarkedXHR.onload = function(){
 	
 	remarkedToken = remarkedXHR.response.token;
+	
 
 }
 

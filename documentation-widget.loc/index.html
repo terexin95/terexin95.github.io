@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=960px, initial-scale=1.0">
+	<title>Документация</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+		.code-example-body {
+			white-space: pre;
+	    word-wrap: break-word;
+		}
+		body {
+			margin: 4em 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h4>Подключаем виджет</h4>
+		<pre class="code-example">
+			<code class="code-example-body prettyprint">
+				&lt;script src="remarked.js"&gt;&lt;/script&gt;
+				&lt;script&gt;
+					widgetRemarked({
+						email: true, 
+						date: true, 
+						qty: true, 
+						time: true, 
+						text: true 
+					})
+				&lt;/script&gt;
+			</code>
+		</pre>
+		<h4>Настройки виджета</h4>
+		<pre class="code-example">
+			<code class="code-example-body prettyprint">
+				&lt;script&gt;
+					widgetRemarked({
+						email: true, // Если написать false, то отключит поле email
+						date: true, // Если написать false, то отключит поле с датой
+						qty: true, // Если написать false, то отключит поле с количеством гостей
+						time: true, // Если написать false, то отключит блок с выбором времени
+						text: true // Если написать false, то отключит поле с коментарием
+					})
+				&lt;/script&gt;
+			</code>
+		</pre>
+		<h4>Пример</h4>
+		<pre class="code-example">
+			<code class="code-example-body prettyprint">
+				&lt;script src="remarked.js"&gt;&lt;/script&gt;
+				&lt;script&gt;
+					widgetRemarked({
+						email: false, 
+						date: true, 
+						qty: true, 
+						time: true, 
+						text: false 
+					})
+				&lt;/script&gt;
+			</code>
+		</pre>
+		<p>
+			Если прописать такие настройки, то не будет поля с email и поля с коментарием
+		</p>
+	</div>
+</body>
+</html>
