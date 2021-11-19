@@ -22,11 +22,14 @@ function widgetRemarked(options) {
     remarkedXHR.onload = function(){
         
         remarkedToken = remarkedXHR.response.token;
+        console.log(remarkedXHR.response.token);
         
 
     }
 
     remarkedXHR.send(remarkedBodyJSON);
+
+    console.log(remarkedToken);
 
     let remarkedWidgetClassic = document.createElement('div');
     remarkedWidgetClassic.classList.add('remarked-widget-none')
