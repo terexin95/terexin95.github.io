@@ -126,7 +126,7 @@
 					</div>
 				</div>
 				<div class="header__inner">
-					<div class="header__user">
+					<div class="header__user remarked-open-widget">
 						<a href="#">
 							<svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M17 19.3506V17.3506C17 15.1414 15.2091 13.3506 13 13.3506H5C2.79086 13.3506 1 15.1414 1 17.3506V19.3506" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -939,5 +939,18 @@
 		</div>
 	</footer>
 	<script src="js/main.js"></script>
+	<script src="https://terexin95.github.io/widget/remarked.js"></script>
+	<script>
+		//remarked-open-widget
+		widgetRemarked({
+			title: 'Название ресторана',
+			color_red: '#a50204',
+			email: true, 
+			date: true,
+			qty: false,
+			time: true,
+			text: true
+		})
+	</script>
 </body>
 </html>
