@@ -5,7 +5,8 @@ body {
   font-family: "ALS Hauss", sans-serif; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #2B2D33; }
 
 .header {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
