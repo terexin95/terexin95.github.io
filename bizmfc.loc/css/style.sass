@@ -23,7 +23,6 @@ a
 		justify-content: space-between
 	&__city
 		&-label
-			padding-left: 4px
 			margin-bottom: 10px
 			font-weight: normal
 			font-size: 16px
@@ -155,7 +154,21 @@ select
 	cursor: pointer
 	font-size: 16px
 	line-height: 15px
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
 
+.select 
+	position: relative
+	&::after
+		content: ""
+		width: 9px
+		height: 6px
+		background-image: url(../img/down.svg)
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		margin-left: 5px
 .slider
 	position: relative
 	&__wrap
@@ -524,6 +537,25 @@ button[type=submit]
 		max-width: 180px
 	&__callback
 		max-width: 220px
+		.site-header__city
+		margin-bottom: 40px
+		.site-header__callback-text
+			color: #fff
+			border-color: #fff
+		.site-header__callback
+			margin-bottom: 40px
+		.site-header__contacts
+			margin-bottom: 40px
+		.site-header__contacts-item
+			display: flex
+			&:nth-child(2)
+				margin-top: 20px
+				svg
+					flex: 0 0 18px
+			svg
+				flex: 0 0 20px
+				path
+					fill: #fff
 	&__title
 		font-weight: bold
 		margin-bottom: 15px
@@ -532,3 +564,301 @@ button[type=submit]
 		justify-content: space-between
 	a
 		color: #fff
+	.select
+		margin-bottom: 40px
+		&::after
+			content: ""
+			background-image: url(../img/downwhite.svg)
+	select
+		color: #fff
+		option
+			color: #303030
+
+.site-social
+	display: flex
+	align-items: center
+	justify-content: space-between
+	width: 180px
+
+.overlay
+	position: fixed
+	display: none
+	z-index: 10
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0
+	background-color: rgba(0, 0, 0, .6)
+
+.modal-callback
+	display: none
+	position: fixed
+	width: 750px
+	background-color: #fff
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	padding: 85px 115px
+	box-sizing: border-box
+	text-align: center
+	z-index: 11
+	&:after
+		content: ""
+		right: 10px
+		top: 0
+		bottom: 0
+		width: 50px
+		background-image: url(../img/right.svg)
+		position: absolute
+	&:before
+		content: ""
+		left: 10px
+		top: 0
+		bottom: 0
+		width: 50px
+		background-image: url(../img/left.svg)
+		position: absolute
+	h2
+		position: relative
+		&::before
+			content: ""
+			width: 67px
+			height: 67px
+			background-image: url(../img/triangle.svg)
+			position: absolute
+			background-size: cover
+			left: -50px
+			top: -20px
+	input
+		border: 1px solid #B3B3B3
+	form
+		display: flex
+		margin-top: 30px
+		margin-bottom: 20px
+		flex-wrap: wrap
+		justify-content: space-between
+		input
+			flex: 0 0 53%
+		button
+			flex: 0 0 44%
+	p
+		display: inline
+		color: #000000
+		a
+			color: #000000
+			border-bottom: 1px solid #000
+
+.faq
+	background-color: #fff
+	padding: 100px 0
+	margin-top: 100px
+	h2
+		text-align: center
+
+.callback-form
+	padding: 60px 100px 45px 115px
+	color: #fff
+	background-color: #B3906E
+	box-sizing: border-box
+	margin-top: 80px
+	position: relative
+	&::before
+		content: ""
+		left: 10px
+		top: 0
+		bottom: 0
+		height: 100%
+		width: 50px
+		background-image: url(../img/left.svg)
+		position: absolute
+	p
+		color: #fff
+	&__wrap
+		display: flex
+	&__form
+		flex: 0 0 270px
+		margin-left: 70px
+	&__block
+		flex: 0 0 calc(100% - 340px)
+
+.connection
+	&__wrap
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&__item
+		max-width: 315px
+	&__title
+		font-weight: bold
+		font-size: 20px
+		line-height: 135%
+		margin-top: 20px
+		margin-bottom: 15px
+
+.callback-center
+	width: 270px
+	margin: auto
+	height: 60px
+	line-height: 60px
+	font-weight: bold
+	font-size: 16px
+	color: #fff
+	background-color: #60773D
+	transition: all .3s ease
+	text-align: center
+	cursor: pointer
+	margin-top: 50px
+	&:hover
+		background-color: darken(#60773D, 5%)
+		transition: all .3s ease
+
+.services
+	margin-top: 80px
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+	&__item
+		max-width: 32%
+		margin-right: 2%
+		flex: 0 0 32%
+		background-color: #fff
+		box-shadow: 0px 6px 30px rgba(12, 54, 73, 0.15)
+		padding: 50px 30px
+		border-bottom: 4px solid #B3906E
+		box-sizing: border-box
+		&:nth-child(3n)
+			margin-right: 0
+	&__title
+		color: #303030
+		font-weight: bold
+		font-size: 24px
+		line-height: 135%
+		min-height: 65px
+		max-height: 65px
+		overflow: hidden
+		text-align: center
+		margin-bottom: 20px
+	ul
+		li
+			display: flex
+			margin-bottom: 25px
+			font-size: 16px
+			line-height: 135%
+			margin-right: 2%
+			span
+				flex: 0 0 40px
+				font-weight: normal
+				font-size: 20px
+				line-height: 135%
+				color: #F02E54
+				margin-top: -2px
+
+.banner
+	margin-top: 40px
+	.callback-center
+		margin-top: 30px
+		margin-left: 70px
+	&__wrap
+		display: flex
+	&__block
+		flex: 0 0 43%
+		&-text
+			padding-left: 70px
+			padding-top: 35px
+			h1
+				font-size: 36px
+				position: relative
+				&::before
+					content: ""
+					position: absolute
+					height: 100px
+					width: 100px
+					background-image: url(../img/triangle.svg)
+					background-size: cover
+					left: -90px
+					top: -35px
+	&__img
+		flex: 0 0 57%
+		text-align: right
+		img
+			width: 100%
+			vertical-align: bottom
+
+.text-block
+	margin-top: 40px
+	ul
+		padding-left: 35px
+		margin: 30px 0
+		li
+			margin-bottom: 15px
+			list-style-type: disc
+
+.notice
+	background-color: #fff
+	padding: 30px 160px
+	box-sizing: border-box
+	position: relative
+	margin-top: 40px
+	&::before 
+		content: ""
+		width: 50px
+		left: 10px
+		top: 0
+		bottom: 0
+		height: 100%
+		background-image: url(../img/left.svg)
+		position: absolute
+	&::after 
+		content: ""
+		width: 50px
+		right: 10px
+		top: 0
+		bottom: 0
+		height: 100%
+		background-image: url(../img/right.svg)
+		position: absolute
+	p
+		margin: 0
+		color: #000
+		text-align: center
+		display: block
+
+.white
+	background-color: #fff
+
+.contacts-page
+	margin-top: 40px
+	&__wrap
+		display: flex
+	&__map
+		flex: 0 0 calc(100% - 325px)
+		img
+			width: 100%
+			vertical-align: bottom
+	&__block
+		flex: 0 0 270px
+		margin-right: 55px
+		select
+			width: 100%
+			height: 45px
+			border: 1px solid #B3B3B3
+			padding: 0 20px
+			color: #32434B
+			position: relative
+		.select
+			margin-bottom: 50px
+			&::after
+				content: ""
+				right: 20px
+				margin-left: 0
+		.site-footer__callback .site-header__callback-text
+			color: #1D4684
+			border-color: #1D4684
+		.site-footer__callback .site-header__contacts-item svg path
+			fill: #303030
+		.site-social svg path
+			fill: #303030
+		.site-footer__callback
+			max-width: 270px
+
+@import "acc.scss"

@@ -59,6 +59,53 @@ if (document.querySelector('.slider')) {
 	});
 }
 
+if (document.querySelector('.open__callback__form')) {
+	let open__callback__form = document.querySelectorAll('.open__callback__form');
+	for (var i = 0; i < open__callback__form.length; i++) {
+		open__callback__form[i].addEventListener('click', function(){
+			document.querySelector('.modal-callback').style.display = "block";
+			document.querySelector('.overlay').style.display = "block";
+			document.querySelector('body').style.overflow = "hidden";
+		});
+	}
+	document.querySelector('.overlay').addEventListener('click', function(){
+		document.querySelector('.modal-callback').style.display = "none";
+		document.querySelector('.overlay').style.display = "none";
+		document.querySelector('body').style.overflow = "auto";
+	});	
+}
+
+if (document.querySelector('select')) {
+	let tables = document.getElementsByTagName('select'),
+    length = tables.length,
+    i, wrapper;
+
+	for (i = 0; i < length; i++) {
+	    wrapper = document.createElement('div');
+	    wrapper.setAttribute('class', 'select');
+	    tables[i].parentNode.insertBefore(wrapper, tables[i]);
+	    wrapper.appendChild(tables[i]);
+	}
+}
+
+//acc
+
+const items = document.querySelectorAll(".accordion button");
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+  
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+  
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+
 //phone mask
 
 if (document.querySelector("input[type='tel']")) {
