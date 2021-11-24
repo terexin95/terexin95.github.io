@@ -60,7 +60,7 @@ function widgetRemarked(options) {
             <div class="remarked-widget-classic__body">
                 <div class="remarked-widget-classic__step remarked-widget-classic__step-1">
                     <div class="remarked-widget-text">
-                        «Пожалуйста, сохраните в телефоне сообщение о подтверждении бронирования от ресторана.» 
+                        Пожалуйста, сохраните в телефоне сообщение о подтверждении бронирования от ресторана.
                         <a href="#" class="remarked-widget-info">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 0C3.58203 0 0 3.58332 0 8C0 12.4193 3.58203 16 8 16C12.418 16 16 12.4193 16 8C16 3.58332 12.418 0 8 0ZM8 14.4516C4.43445 14.4516 1.54839 11.5667 1.54839 8C1.54839 4.43564 4.43458 1.54839 8 1.54839C11.5642 1.54839 14.4516 4.43455 14.4516 8C14.4516 11.5655 11.5667 14.4516 8 14.4516ZM11.4595 6.21935C11.4595 8.38232 9.12332 8.41561 9.12332 9.21494V9.41935C9.12332 9.63313 8.95 9.80645 8.73623 9.80645H7.26374C7.04997 9.80645 6.87664 9.63313 6.87664 9.41935V9.14003C6.87664 7.98697 7.75084 7.52603 8.41145 7.15564C8.97794 6.83806 9.32513 6.62206 9.32513 6.20148C9.32513 5.64516 8.61548 5.2759 8.04177 5.2759C7.29374 5.2759 6.94842 5.63 6.463 6.24265C6.33213 6.40781 6.09332 6.43848 5.92539 6.31116L5.02784 5.63058C4.8631 5.50568 4.82619 5.27361 4.94255 5.10274C5.70471 3.98358 6.67548 3.35484 8.1869 3.35484C9.76984 3.35484 11.4595 4.59045 11.4595 6.21935V6.21935ZM9.35484 11.6129C9.35484 12.36 8.74706 12.9677 8 12.9677C7.25294 12.9677 6.64516 12.36 6.64516 11.6129C6.64516 10.8658 7.25294 10.2581 8 10.2581C8.74706 10.2581 9.35484 10.8658 9.35484 11.6129Z" fill="#BBBBBB"/>
@@ -91,7 +91,7 @@ function widgetRemarked(options) {
                                 <path d="M0.238655 6.45579L6.83882 0.2253C7.15702 -0.0750999 7.67322 -0.0750999 7.99142 0.2253L8.7613 0.952094C9.07917 1.25217 9.07951 1.7382 8.76266 2.03892L3.53177 6.99984L8.76232 11.9611C9.07951 12.2618 9.07883 12.7478 8.76096 13.0479L7.99108 13.7747C7.67288 14.0751 7.15668 14.0751 6.83848 13.7747L0.238655 7.54389C-0.0795517 7.24349 -0.0795517 6.75619 0.238655 6.45579V6.45579Z" fill="#696969"/>
                             </svg>                    
                         </div>
-                        «Пожалуйста, сохраните в телефоне сообщение о подтверждении бронирования от ресторана.» 
+                        Пожалуйста, сохраните в телефоне сообщение о подтверждении бронирования от ресторана.
                         <div class="remarked-widget-info">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 0C3.58203 0 0 3.58332 0 8C0 12.4193 3.58203 16 8 16C12.418 16 16 12.4193 16 8C16 3.58332 12.418 0 8 0ZM8 14.4516C4.43445 14.4516 1.54839 11.5667 1.54839 8C1.54839 4.43564 4.43458 1.54839 8 1.54839C11.5642 1.54839 14.4516 4.43455 14.4516 8C14.4516 11.5655 11.5667 14.4516 8 14.4516ZM11.4595 6.21935C11.4595 8.38232 9.12332 8.41561 9.12332 9.21494V9.41935C9.12332 9.63313 8.95 9.80645 8.73623 9.80645H7.26374C7.04997 9.80645 6.87664 9.63313 6.87664 9.41935V9.14003C6.87664 7.98697 7.75084 7.52603 8.41145 7.15564C8.97794 6.83806 9.32513 6.62206 9.32513 6.20148C9.32513 5.64516 8.61548 5.2759 8.04177 5.2759C7.29374 5.2759 6.94842 5.63 6.463 6.24265C6.33213 6.40781 6.09332 6.43848 5.92539 6.31116L5.02784 5.63058C4.8631 5.50568 4.82619 5.27361 4.94255 5.10274C5.70471 3.98358 6.67548 3.35484 8.1869 3.35484C9.76984 3.35484 11.4595 4.59045 11.4595 6.21935V6.21935ZM9.35484 11.6129C9.35484 12.36 8.74706 12.9677 8 12.9677C7.25294 12.9677 6.64516 12.36 6.64516 11.6129C6.64516 10.8658 7.25294 10.2581 8 10.2581C8.74706 10.2581 9.35484 10.8658 9.35484 11.6129Z" fill="#BBBBBB"/>
@@ -119,7 +119,7 @@ function widgetRemarked(options) {
                                 <path d="M0.238655 6.45579L6.83882 0.2253C7.15702 -0.0750999 7.67322 -0.0750999 7.99142 0.2253L8.7613 0.952094C9.07917 1.25217 9.07951 1.7382 8.76266 2.03892L3.53177 6.99984L8.76232 11.9611C9.07951 12.2618 9.07883 12.7478 8.76096 13.0479L7.99108 13.7747C7.67288 14.0751 7.15668 14.0751 6.83848 13.7747L0.238655 7.54389C-0.0795517 7.24349 -0.0795517 6.75619 0.238655 6.45579V6.45579Z" fill="#696969"/>
                             </svg>                    
                         </div>
-                        «Пожалуйста, сохраните в телефоне сообщение о подтверждении бронирования от ресторана.» 
+                        Пожалуйста, сохраните в телефоне сообщение о подтверждении бронирования от ресторана.
                         <div class="remarked-widget-info">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M8 0C3.58203 0 0 3.58332 0 8C0 12.4193 3.58203 16 8 16C12.418 16 16 12.4193 16 8C16 3.58332 12.418 0 8 0ZM8 14.4516C4.43445 14.4516 1.54839 11.5667 1.54839 8C1.54839 4.43564 4.43458 1.54839 8 1.54839C11.5642 1.54839 14.4516 4.43455 14.4516 8C14.4516 11.5655 11.5667 14.4516 8 14.4516ZM11.4595 6.21935C11.4595 8.38232 9.12332 8.41561 9.12332 9.21494V9.41935C9.12332 9.63313 8.95 9.80645 8.73623 9.80645H7.26374C7.04997 9.80645 6.87664 9.63313 6.87664 9.41935V9.14003C6.87664 7.98697 7.75084 7.52603 8.41145 7.15564C8.97794 6.83806 9.32513 6.62206 9.32513 6.20148C9.32513 5.64516 8.61548 5.2759 8.04177 5.2759C7.29374 5.2759 6.94842 5.63 6.463 6.24265C6.33213 6.40781 6.09332 6.43848 5.92539 6.31116L5.02784 5.63058C4.8631 5.50568 4.82619 5.27361 4.94255 5.10274C5.70471 3.98358 6.67548 3.35484 8.1869 3.35484C9.76984 3.35484 11.4595 4.59045 11.4595 6.21935V6.21935ZM9.35484 11.6129C9.35484 12.36 8.74706 12.9677 8 12.9677C7.25294 12.9677 6.64516 12.36 6.64516 11.6129C6.64516 10.8658 7.25294 10.2581 8 10.2581C8.74706 10.2581 9.35484 10.8658 9.35484 11.6129Z" fill="#BBBBBB"/>
@@ -370,33 +370,17 @@ function widgetRemarked(options) {
     if(options.date == false && options.qty == false && options.time == false && options.text == false) {
         nextStep2.textContent = "Забронировать";
     }
-    nextStep2.addEventListener('click', function(){
-        if(remarkedUserInputVal && remarkedPhoneInputVal && remarkedEmailInputVal && remarkedLastInputVal) {
-            checkInputs();
+    function checkInputs() {
+        if(options.date == false && options.qty == false && options.time == false && options.text == false) {
+            sendReserveRemarked();
+        } else if(options.date == false && options.qty == false) {
+            document.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
+            document.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
         } else {
-            if (remarkedUserInput.value == '') {
-                remarkedUserInput.style.border = "2px solid " + options.color_red;
-            } else {
-                remarkedUserInput.style.border = "2px solid #1aaf33";
-            }
-            if (remarkedLastInput.value == '') {
-                remarkedLastInput.style.border = "2px solid " + options.color_red;
-            } else {
-                remarkedLastInput.style.border = "2px solid #1aaf33";
-            }
-            if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value !== '+ ') {
-                remarkedPhoneInput.style.border = "2px solid #1aaf33";
-            } else {
-                remarkedPhoneInput.style.border = "2px solid" + options.color_red;
-            }
-            if (remarkedEmailInput.value == '') {
-                remarkedEmailInput.style.border = "2px solid" + options.color_red;
-            } else {
-                remarkedEmailInput.style.border = "2px solid #1aaf33";
-            }
+            document.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
+            document.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
         }
-        
-    });
+    }
 
     let remarkedSucsess = document.createElement('div');
     remarkedSucsess.innerHTML += `
@@ -479,20 +463,8 @@ function widgetRemarked(options) {
 
         remarkedXHRRoom.send(remarkedBodyRoomsJSON);
     }
-    
-    function checkInputs() {
-        if(options.date == false && options.qty == false && options.time == false && options.text == false) {
-            sendReserveRemarked();
-        } else if(options.date == false && options.qty == false) {
-            document.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
-            document.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
-        } else {
-            document.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
-            document.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
-        }
-    }
 
-    remarkedUserInput.addEventListener('change', function(){
+    remarkedUserInput.addEventListener('input', function(){
         if (remarkedUserInput.value !== '') {
             remarkedUserInputVal = true;
             remarkedUserInputText = remarkedUserInput.value;
@@ -501,7 +473,7 @@ function widgetRemarked(options) {
         }
     });
 
-    remarkedLastInput.addEventListener('change', function(){
+    remarkedLastInput.addEventListener('input', function(){
         if (remarkedLastInput.value !== '') {
             remarkedLastInputVal = true;
             remarkedLastInputText = remarkedLastInput.value;
@@ -510,22 +482,57 @@ function widgetRemarked(options) {
         }
     });
 
-    remarkedPhoneInput.addEventListener('change', function(){
-        if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value !== '+ ') {
+    remarkedPhoneInput.addEventListener('input', function(){
+        if (remarkedPhoneInput.value == '+ ') {
+            remarkedPhoneInputVal = false;
+        } else {
             remarkedPhoneInputVal = true;
             remarkedPhoneInputText = remarkedPhoneInput.value;
-        } else {
-            remarkedPhoneInputVal = false;
         }
     });
 
-    remarkedEmailInput.addEventListener('change', function(){
+    remarkedEmailInput.addEventListener('input', function(){
         if (remarkedEmailInput.value !== '') {
             remarkedEmailInputVal = true;
             remarkedEmailInputText = remarkedEmailInput.value;
         } else {
             remarkedEmailInputVal = false;
         }
+    });
+    nextStep2.addEventListener('click', function(){
+        if(remarkedUserInputVal && remarkedPhoneInputVal && remarkedEmailInputVal && remarkedLastInputVal) {
+            if(options.date == false && options.qty == false && options.time == false && options.text == false) {
+                sendReserveRemarked();
+            } else if(options.date == false && options.qty == false) {
+                document.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
+                document.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
+            } else {
+                document.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
+                document.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
+            }
+        } else {
+            if (remarkedUserInput.value == '') {
+                remarkedUserInput.style.border = "2px solid " + options.color_red;
+            } else {
+                remarkedUserInput.style.border = "2px solid #1aaf33";
+            }
+            if (remarkedLastInput.value == '') {
+                remarkedLastInput.style.border = "2px solid " + options.color_red;
+            } else {
+                remarkedLastInput.style.border = "2px solid #1aaf33";
+            }
+            if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value !== '+ ') {
+                remarkedPhoneInput.style.border = "2px solid #1aaf33";
+            } else {
+                remarkedPhoneInput.style.border = "2px solid" + options.color_red;
+            }
+            if (remarkedEmailInput.value == '') {
+                remarkedEmailInput.style.border = "2px solid" + options.color_red;
+            } else {
+                remarkedEmailInput.style.border = "2px solid #1aaf33";
+            }
+        }
+        
     });
 
     let nextStep3 = document.querySelector('#nextStep3');
