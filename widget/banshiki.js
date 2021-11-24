@@ -421,7 +421,7 @@ function widgetRemarked(options) {
             method: 'CreateReserve',
             token: remarkedToken,
             reserve: {
-                name: remarkedUserInputText + remarkedLastInputText,
+                name: remarkedUserInputText + " " + remarkedLastInputText,
                 phone: remarkedPhoneInputText,
                 email: "",
                 date: "",
