@@ -68,9 +68,12 @@ a
 		text-transform: uppercase
 		position: relative
 		cursor: pointer
+		transition: all .3s ease
 		&:hover
+			background: lighten(#40545E, 5%)
+			transition: all .3s ease
 			.site-nav__menu-sub
-				display: block
+				display: block !important
 		svg
 			margin-right: 15px
 		&-sub
@@ -132,12 +135,18 @@ a
 		> ul
 			display: flex
 			li
-				padding: 15px
+				
 				a
 					font-weight: normal
 					font-size: 16px
 					line-height: 15px
 					color: #FFFFFF
+					padding: 15px
+					display: block
+					transition: all .3s ease
+					&:hover
+						background-color: lighten(#32434B, 5%)
+						transition: all .3s ease
 ul
 	padding: 0
 	margin: 0
@@ -169,21 +178,35 @@ select
 		top: 50%
 		transform: translateY(-50%)
 		margin-left: 5px
+
 .slider
 	position: relative
 	&__wrap
 		display: flex
 		justify-content: flex-end
+		height: 391px
+		position: relative
+		overflow: hidden
+		background-color: #fff
+		box-shadow: 0px 4px 20px rgba(12, 54, 73, 0.15)
+		background-image: url(../img/bannerbg.png)
+		background-position: center right
+		background-repeat: no-repeat
 	&__item
 		flex: calc(100% - 290px)
 		max-width: calc(100% - 290px)
 		height: 391px
-		box-shadow: 0px 4px 20px rgba(12, 54, 73, 0.15)
 		background-size: cover
 		display: none
 		align-items: center
 		padding: 0 40px
 		box-sizing: border-box
+		position: absolute
+		width: 870px
+		background-position-x: 85%
+		background-position-y: center
+		background-size: 350px
+		background-repeat: no-repeat
 		&:nth-child(1)
 			display: flex
 	&__content
@@ -234,6 +257,32 @@ select
 			background-color: #32434B
 			transition: all .3s ease
 
+.leftAnimation
+	animation-name: leftAnimation
+	animation-duration: .5s
+	animation-iteration-count: 1
+
+.rightAnimation
+	animation-name: rightAnimation
+	animation-duration: .5s
+	animation-iteration-count: 1
+
+@keyframes rightAnimation
+	0%
+		left: -1400px
+		opacity: 0
+	100%
+		left: 290px
+		opacity: 1
+
+@keyframes leftAnimation
+	0% 
+		right: -1200px
+		opacity: 0
+	100% 
+		right: 0
+		opacity: 1
+
 .title-h1, h1
 	font-weight: bold
 	font-size: 38px
@@ -283,6 +332,13 @@ p
 			margin-top: 4px
 			svg
 				margin-left: 10px
+				transition: all .3s ease
+			&:hover
+				svg
+					margin-left: 20px
+					transition: all .3s ease
+					path
+						color: darken(#60773D, 5%)
 		h2
 			margin-right: 30px
 	p
@@ -364,6 +420,10 @@ button[type=submit]
 		padding: 30px 20px
 		color: #303030
 		margin-bottom: 20px
+		transition: all .3s ease
+		&:hover
+			transform: scale(1.1)
+			transition: all .3s ease
 		&-title
 			display: block
 			font-weight: bold
@@ -398,6 +458,10 @@ button[type=submit]
 		display: flex
 		flex-direction: column
 		justify-content: space-between
+		transition: all .3s ease
+		&:hover
+			transform: scale(1.05)
+			transition: all .3s ease
 		&:nth-child(5)
 			margin-right: 0
 		&-title
@@ -485,6 +549,10 @@ button[type=submit]
 		box-shadow: 0px 6px 30px rgba(12, 54, 73, 0.15)
 		color: #303030
 		border-bottom: 4px solid #B3906E
+		transition: all .3s ease
+		&:hover
+			transform: scale(1.05)
+			transition: all .3s ease
 		&:nth-child(4)
 			margin-right: 0
 		img
@@ -501,6 +569,11 @@ button[type=submit]
 			display: block
 
 .footer-line
+	position: fixed
+	box-shadow: 0px 6px 30px rgba(12, 54, 73, 0.15)
+	z-index: 10
+	bottom: 0
+	width: 100%
 	height: 50px
 	display: flex
 	align-items: center
@@ -542,6 +615,11 @@ button[type=submit]
 		.site-header__callback-text
 			color: #fff
 			border-color: #fff
+			transition: all .3s ease
+			&:hover
+				color: darken(#fff, 25%)
+				border-color: darken(#fff, 25%)
+				transition: all .3s ease
 		.site-header__callback
 			margin-bottom: 40px
 		.site-header__contacts
@@ -564,6 +642,10 @@ button[type=submit]
 		justify-content: space-between
 	a
 		color: #fff
+		transition: all .3s ease
+		&:hover
+			color: darken(#fff, 25%)
+			transition: all .3s ease
 	.select
 		margin-bottom: 40px
 		&::after
@@ -860,5 +942,15 @@ button[type=submit]
 			fill: #303030
 		.site-footer__callback
 			max-width: 270px
+
+.site-nav--fixed
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	width: 100%
+	z-index: 10
+	.menu-block .site-nav__menu-sub
+		display: none
 
 @import "acc.scss"
