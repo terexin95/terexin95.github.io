@@ -313,6 +313,9 @@ function widgetRemarked(options) {
     }
 
     document.querySelector('.prevStep2').addEventListener('click', function(){
+        if (document.querySelector('.remarked-widget__times')) {
+            document.querySelector('.remarked-widget__times').remove();
+        }
         document.querySelector('.remarked-widget-classic__step-3--active').classList.remove('remarked-widget-classic__step-3--active');
         document.querySelector('.remarked-widget-classic__step-2--none').classList.remove('remarked-widget-classic__step-2--none');
         document.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
