@@ -113,12 +113,12 @@ function widgetRemarked(options) {
                     <button id="nextStep3" class="mb-2">Продолжить</button>
                 </div>
                 <div class="remarked-widget-classic__step remarked-widget-classic__step-3">
-                    <div class="prevStep2 arrow-remarked-prev">
-                        <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.238655 6.45579L6.83882 0.2253C7.15702 -0.0750999 7.67322 -0.0750999 7.99142 0.2253L8.7613 0.952094C9.07917 1.25217 9.07951 1.7382 8.76266 2.03892L3.53177 6.99984L8.76232 11.9611C9.07951 12.2618 9.07883 12.7478 8.76096 13.0479L7.99108 13.7747C7.67288 14.0751 7.15668 14.0751 6.83848 13.7747L0.238655 7.54389C-0.0795517 7.24349 -0.0795517 6.75619 0.238655 6.45579V6.45579Z" fill="#696969"/>
-                        </svg>                    
-                    </div>
-                    <div class="remarked-widget-text">
+                    <div class="remarked-widget-text" style="position: relative;">
+                        <div class="prevStep2 arrow-remarked-prev">
+                            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.238655 6.45579L6.83882 0.2253C7.15702 -0.0750999 7.67322 -0.0750999 7.99142 0.2253L8.7613 0.952094C9.07917 1.25217 9.07951 1.7382 8.76266 2.03892L3.53177 6.99984L8.76232 11.9611C9.07951 12.2618 9.07883 12.7478 8.76096 13.0479L7.99108 13.7747C7.67288 14.0751 7.15668 14.0751 6.83848 13.7747L0.238655 7.54389C-0.0795517 7.24349 -0.0795517 6.75619 0.238655 6.45579V6.45579Z" fill="#696969"/>
+                            </svg>                    
+                        </div>
                         «Пожалуйста, сохраните в телефоне сообщение о подтверждении бронирования от ресторана.» 
                         <div class="remarked-widget-info">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
