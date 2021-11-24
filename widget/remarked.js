@@ -70,7 +70,7 @@ function widgetRemarked(options) {
                     <div class="remarked-widget-title">Ваши данные</div>
                     <div class="remarked-widget-row">
                         <div class="remarked-widget-column">
-                            <input type="text" placeholder="Имя" id="remarkedUserInput" name="userName">
+                            <input type="text" placeholder="Имя Фамилия" id="remarkedUserInput" name="userName">
                         </div>
                         <div class="remarked-widget-column">
                             <input type="tel" class="remarked-phone" id="remarkedPhoneInput" name="userPhone" placeholder="(900) 123-4567">
