@@ -423,7 +423,7 @@ function widgetRemarked(options) {
             token: remarkedToken,
             reserve: {
                 name: remarkedUserInputText + " " + remarkedLastInputText,
-                phone: remarkedPhoneInputText,
+                phone: remarkedPhoneInputText.split(' ').join(''),
                 email: "",
                 date: "",
                 time: "",
