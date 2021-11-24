@@ -201,6 +201,7 @@ function widgetRemarked(options) {
 
     remarkedPhone.addEventListener('input', function (e) {
         this.value = this.value.replace(/[^\d.]/g, '');
+        this.value = "+ " + this.value;
     });
 
 
@@ -383,7 +384,7 @@ function widgetRemarked(options) {
             } else {
                 remarkedLastInput.style.border = "2px solid #1aaf33";
             }
-            if (remarkedPhoneInput.value !== '') {
+            if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value !== '+ ') {
                 remarkedPhoneInput.style.border = "2px solid #1aaf33";
             } else {
                 remarkedPhoneInput.style.border = "2px solid" + options.color_red;
@@ -510,7 +511,7 @@ function widgetRemarked(options) {
     });
 
     remarkedPhoneInput.addEventListener('change', function(){
-        if (remarkedPhoneInput.value !== '') {
+        if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value !== '+ ') {
             remarkedPhoneInputVal = true;
             remarkedPhoneInputText = remarkedPhoneInput.value;
         } else {
