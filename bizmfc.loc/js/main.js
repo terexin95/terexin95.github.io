@@ -78,6 +78,22 @@ document.addEventListener('scroll', function(){
 	}
 });
 
+let menu_has_item = document.querySelectorAll('.menu-has-item')
+for (var i = 0; i < menu_has_item.length; i++) {
+	let arrowDown = document.createElement('div');
+	arrowDown.classList.add('arrowDown')
+	menu_has_item[i].append(arrowDown);
+	arrowDown.addEventListener('click', function(){
+		this.parentElement.classList.toggle('menu-has-item--active')
+	});
+}
+
+let mobileOpen = document.querySelector('.header-mobile__humburger');
+
+mobileOpen.addEventListener('click', function(){
+	document.querySelector('.mobile-menu').classList.toggle('mobile-menu--open');
+});
+
 if (document.querySelector('.open__callback__form')) {
 	let open__callback__form = document.querySelectorAll('.open__callback__form');
 	for (var i = 0; i < open__callback__form.length; i++) {
