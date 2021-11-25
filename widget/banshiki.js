@@ -393,7 +393,17 @@ function widgetRemarked(options) {
                 </div>
             </div>
             <div class="remarked-success-text">
-                Успешно забронировано
+                ${remarkedUserInputText}, мы ждем встречи с вами в ресторане «Банщики»!
+                <br>
+                Ваша бронь успешно подтверждена.
+                Детали бронирования:
+                ${document.querySelector("#start").value}, ${document.querySelector('.remarked-widget__time--active').textContent}, 
+                ${document.querySelector('.remarked-quantity input').value}. <br>
+                Не забудьте зайти в наш "Гастроном" за домашними заготовками и выпечкой на первом этаже! <br>
+                Ресторан «Банщики»
+                Дягтярная ул., д. 1A
+                941-17-44y
+                <a href="banshiki.spb.ru">banshiki.spb.ru</a>
             </div>
             <div class="remarked-success-button">
                 <button id="remarkedCloseModal">Завершить</button>
