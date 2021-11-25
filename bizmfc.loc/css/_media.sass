@@ -1,4 +1,8 @@
 @media (max-width: 1140px)
+	.banner
+		margin-top: 130px
+	.banner_img img
+		width: 100%
 	.site-header
 		display: none
 	.header-mobile
@@ -48,6 +52,21 @@
 					flex: 0 0 220px
 
 @media (max-width: 993px)
+	.connection__wrap
+		justify-content: center
+	.connection__item
+		padding: 0 20px
+		box-sizing: border-box
+		margin-bottom: 20px
+	.services__item
+		flex: 0 0 305px
+		margin-left: 20px !important
+		margin-right: 20px !important
+		max-width: 305px
+		margin-bottom: 20px
+	.services__wrap
+		flex-wrap: wrap
+		justify-content: center
 	.title-h1, h1
 		font-size: 36px
 	h2
@@ -100,6 +119,23 @@
 		margin-top: 30px
 
 @media (max-width: 768px)
+	.banner_img
+		display: none
+	.banner__block
+		flex: 0 0 100%
+	.banner
+		margin-top: 80px
+	.callback-form__wrap
+		flex-wrap: wrap
+	.callback-form__block
+		flex: 0 0 100%
+	.callback-form__form
+		margin: auto
+		margin-top: 30px
+	.contacts-page__map
+		flex: 0 0 100%
+	.contacts-page__wrap
+		flex-wrap: wrap
 	.modal-callback form input, .modal-callback form button
 		flex: 0 0 100%
 	.modal-callback
@@ -135,6 +171,32 @@
 		background-image: none !important
 
 @media (max-width: 586px)
+	.accordion button[aria-expanded='true'] + .accordion-content
+		max-height: 39em
+	.banner__block-text
+		padding-left: 30px
+	.banner .callback-center
+		margin-left: auto
+		margin-right: auto
+	.notice
+		padding: 50px
+	.notice::before
+		content: ""
+		left: 5px
+		width: 30px
+		background-size: contain
+	.callback-form
+		padding: 50px
+	.callback-form::before
+		content: ""
+		width: 30px
+		left: 5px
+		background-size: contain
+	.notice::after
+		content: ""
+		width: 30px
+		right: 5px
+		background-size: contain
 	.vantage__column--form .vantage__form form input
 		flex: 0 0 100%
 		max-width: 100%
@@ -169,6 +231,8 @@
 		padding: 0
 
 @media (max-width: 420px)
+	.callback-form__form
+		flex: 0 0 100%
 	.modal-callback p
 		font-size: 10px
 	.slider__item

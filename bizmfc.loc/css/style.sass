@@ -36,9 +36,18 @@ a
 			line-height: 23px
 			color: #32434B
 			margin-bottom: 10px
+			transition: all .3s ease
+			&:hover
+				color: lighten(#32434B, 10%)
+				transition: all .3s ease
 		&-text
 			color: #1D4684
 			border-bottom: 1px solid #1D4684
+			transition: all .3s ease
+			&:hover
+				color: lighten(#1D4684, 10%)
+				border-bottom: 1px solid lighten(#1D4684, 10%)
+				transition: all .3s ease
 	&__contacts
 		&-item
 			display: block
@@ -46,12 +55,21 @@ a
 			font-size: 16px
 			line-height: 15px
 			color: #303030
+			transition: all .3s ease
 			svg
 				margin-right: 15px
+				transition: all .3s ease
 			&:nth-child(2)
 				margin-top: 10px
 				svg
 					margin-right: 19px
+			&:hover
+				color: lighten(#303030, 20%)
+				transition: all .3s ease
+				svg
+					path
+						fill: lighten(#303030, 20%)
+						transition: all .3s ease
 
 .site-nav
 	background-color: #32434B
@@ -166,6 +184,7 @@ select
 	-webkit-appearance: none
 	-moz-appearance: none
 	appearance: none
+	transition: all .3s ease
 
 .select 
 	position: relative
@@ -178,6 +197,15 @@ select
 		top: 50%
 		transform: translateY(-50%)
 		margin-left: 5px
+		transition: all .3s ease
+	&:hover
+		select
+			color: #2667C8
+			transition: all .3s ease
+		&::after
+			content: ""
+			background-image: url(../img/downhover.svg)
+			transition: all .3s ease
 
 .slider
 	position: relative
@@ -651,6 +679,11 @@ button[type=submit]
 		&::after
 			content: ""
 			background-image: url(../img/downwhite.svg)
+		&:hover
+			select
+				color: #BFBCBC
+			&::after
+				background-image: url(../img/downwhitehover.svg)
 	select
 		color: #fff
 		option
@@ -907,6 +940,10 @@ button[type=submit]
 
 .white
 	background-color: #fff
+
+.banner_img
+	img
+		width: 100%
 
 .contacts-page
 	margin-top: 40px
