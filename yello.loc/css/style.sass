@@ -1,0 +1,474 @@
+body
+	margin: 0
+	padding: 0
+	background-color: #F3F5F9
+	font-family: 'Montserrat', sans-serif
+	overflow-x: hidden
+
+button, input
+	font-family: 'Montserrat', sans-serif
+
+a
+	text-decoration: none
+
+img
+	vertical-align: bottom
+	max-width: 100%
+
+ul
+	padding: 0
+	margin: 0
+	li
+		list-style-type: none
+
+.site-header
+	padding: 15px 0
+	background-color: #fff
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+		flex-wrap: wrap
+		max-width: 1550px
+		padding: 0 10px
+		margin: auto
+	&__left, &__right
+		display: flex
+		align-items: center
+	&__right
+		.lang
+			margin-right: 20px
+	&__logo
+		margin-right: 70px
+	&__cart
+		border: 1px solid rgba(0, 0, 0, 0.1)
+		box-sizing: border-box
+		border-radius: 10px
+		display: block
+		width: 43px
+		height: 40px
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-right: 20px
+		position: relative
+		&-num
+			position: absolute
+			width: 23px
+			height: 23px
+			display: block
+			text-align: center
+			line-height: 23px
+			background-color: rgba(#36AC50, .9)
+			border-radius: 100%
+			color: #fff
+			font-weight: 500
+			font-size: 14px
+			overflow: hidden
+			top: -4px
+			right: -4px
+	&__lk
+		font-weight: 600
+		font-size: 16px
+		line-height: 60px
+		color: #fff
+		text-align: center
+		background: #FAA826
+		border-radius: 10px
+		display: block
+		width: 215px
+		height: 60px
+		transition: all .3s ease
+		&:hover
+			background: lighten(#FAA826, 5)
+			transition: all .3s ease
+	&__menu
+		display: flex
+		margin-top: 7px
+		&-item
+			margin-right: 50px
+			font-weight: 500
+			font-size: 16px
+			line-height: 20px
+			color: rgba(0, 0, 0, 0.75)
+			border-bottom: 3px solid transparent
+			transition: all .3s ease
+			&:last-child
+				margin-right: 0
+			&--active, &:hover, &:active
+				color: #000
+				border-bottom: 3px solid #FAA826
+				transition: all .3s ease
+
+.lang
+	width: 185px
+	border: 1px solid rgba(0, 0, 0, 0.1)
+	box-sizing: border-box
+	border-radius: 10px
+	padding: 13px
+	position: relative
+	&__item
+		display: flex
+		align-items: center
+		cursor: pointer
+		svg
+			margin-right: 10px
+	&__list
+		display: none
+		position: absolute
+		background-color: #fff
+		border: 1px solid rgba(0, 0, 0, 0.1)
+		box-sizing: border-box
+		border-radius: 0 0 10px 10px
+		left: -1px
+		right: -1px
+		top: 100%
+		width: calc(100% + 2px)
+		padding: 13px
+		margin-top: -13px
+		border-top: 0 solid #000
+		padding-bottom: 0
+		.lang__item
+			margin-bottom: 10px
+	&__instance
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+.title-block
+	text-align: center
+	margin-top: 135px
+	&__item
+		background: rgba(255, 255, 255, 0.95)
+		box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08)
+		border-radius: 40px
+		padding: 33px
+		width: 270px
+		box-sizing: border-box
+		position: absolute
+		z-index: 1
+		p
+			margin: 0
+			margin-top: 30px
+			text-align: left
+			color: #000
+			font-weight: 500
+			font-size: 15px
+			line-height: 18px
+		&-1
+			top: 50%
+			left: 0
+			transform: translateY(-50%)
+		&-2
+			right: 0
+			top: -50px
+		&-3
+			left: 50%
+			bottom: -85px
+	&__wrap
+		margin: auto
+		max-width: 1400px
+		padding: 0 10px
+		position: relative
+	h1
+		margin-bottom: 30px
+	> p
+		margin-bottom: 200px
+
+h1
+	font-weight: 500
+	font-size: 48px
+	line-height: 59px
+	margin: 0
+
+p
+	font-weight: 500
+	font-size: 18px
+	line-height: 22px
+	color: rgba(0, 0, 0, 0.5)
+
+h2
+	font-weight: 500
+	font-size: 48px
+	line-height: 59px
+	margin: 0
+	color: #000000
+
+.how
+	background-color: #fff
+	margin-top: 100px
+	padding: 75px 0 115px
+	.site-header__lk
+		display: block
+		margin: auto
+		width: 285px
+		margin-top: 65px
+	h2
+		text-align: center
+	&__wrap
+		max-width: 1155px
+		padding: 0 10px
+		margin: auto
+		display: flex
+		margin-top: 70px
+	&__item
+		flex: 0 0 225px
+		height: 225px
+		padding: 50px 25px 20px
+		box-sizing: border-box
+		margin-right: 85px
+		background: #FFFFFF
+		border: 1px solid rgba(255, 255, 255, 0.2)
+		box-sizing: border-box
+		box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1)
+		border-radius: 10px
+		text-align: center
+		position: relative
+		&:nth-child(4n)
+			margin-right: 0
+			&::before
+				content: ""
+				display: none
+		&--yellow
+			background: #FAA826
+			border: 1px solid rgba(255, 255, 255, 0.2)
+			box-sizing: border-box
+			box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1)
+			color: #fff
+		&-text
+			margin-top: 30px
+			font-weight: 600
+			font-size: 16px
+			line-height: 20px
+		&::before
+			content: ""
+			width: 21px
+			height: 21px
+			top: 50%
+			transform: translateY(-50%)
+			right: -53px
+			background-image: url(../img/left.svg)
+			position: absolute
+
+.vista
+	padding: 70px 0 90px
+	h2
+		text-align: center
+	&__wrap
+		display: flex
+		margin: auto
+		max-width: 1225px
+		padding: 0 10px
+		flex-wrap: wrap
+		margin-top: 70px
+	&__item
+		max-width: 185px
+		flex: 0 0 185px
+		margin: 0 30px
+		text-align: center
+		margin-bottom: 90px
+	&__title
+		font-weight: 600
+		font-size: 16px
+		line-height: 20px
+		margin: 25px 0 10px
+	&__text
+		font-weight: normal
+		font-size: 14px
+		line-height: 17px
+		color: rgba(0, 0, 0, 0.75)
+
+.integration
+	text-align: center
+	&__title
+		font-weight: 500
+		font-size: 16px
+		line-height: 20px
+		text-align: center
+		color: rgba(0, 0, 0, 0.2)
+		margin-bottom: 25px
+	&__wrap
+		img
+			margin: 0 5px
+
+.logic
+	background-color: #fff
+	padding-top: 80px
+	padding-bottom: 120px
+	&__block
+		border-top: 1px solid rgba(0, 0, 0, 0.05)
+		max-width: 1150px
+		padding: 0 10px
+		margin: auto
+		padding-top: 80px
+		text-align: center
+	&__wrap
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-top: 130px
+		flex-wrap: wrap
+	&__faq
+		max-width: 390px
+		margin: 0 55px
+	&__img
+		max-width: 760px
+		margin: 0 55px
+
+.slider
+	overflow: hidden
+	padding: 85px 0
+	&__header
+		display: flex
+		align-items: center
+		margin: auto
+		max-width: 1150px
+		padding: 0 20px
+		justify-content: space-between
+		margin-bottom: 50px
+	&__button
+		display: flex
+		&-item
+			flex: 0 0 50px
+			text-align: center
+			height: 50px
+			font-weight: 600
+			font-size: 18px
+			line-height: 50px
+			margin-left: 10px
+			cursor: pointer
+			border-radius: 10px
+			transition: all .3s ease
+			&--active, &:hover, &:active
+				background: #000000
+				border-radius: 10px
+				transition: all .3s ease
+				color: #fff
+	&__wrap
+		max-width: 1550px
+		margin: auto
+		display: flex
+		transition: all .3s ease
+		padding: 0 20px
+	&__item
+		display: flex
+		flex: 0 0 85%
+		justify-content: space-between
+		padding-right: 10%
+		align-items: center
+		opacity: .5
+		&--active
+			opacity: 1
+	&__img
+		flex: 0 0 67%
+	&__text
+		flex: 0 0 26%
+
+.mobile-none
+	display: none
+
+.partners
+	background-color: #fff
+	text-align: center
+	padding: 65px 0 110px
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-top: 75px
+		img
+			margin: 0 30px
+
+.site-footer
+	max-width: 1150px
+	margin: auto
+	padding: 0 10px
+	&__line
+		display: flex
+		padding: 35px 0
+		a, p
+			font-weight: normal
+			font-size: 14px
+			line-height: 17px
+			color: rgba(0, 0, 0, 0.5)
+			margin: 0
+			margin-right: 70px
+	.lang__list
+		background-color: #F3F5F9
+	&__wrap
+		display: flex
+		padding: 55px 0 75px
+		justify-content: space-between
+		border-bottom: 1px solid rgba(0, 0, 0, 0.05)
+	&__contacts
+		a
+			margin: 0
+			font-weight: 500
+			font-size: 14px
+			line-height: 17px
+			color: #000000
+			margin-bottom: 15px
+		p
+			font-weight: normal
+			font-size: 14px
+			line-height: 23px
+			color: #000000
+	&__menu
+		h3
+			margin: 0
+			font-weight: 500
+			font-size: 14px
+			line-height: 17px
+			color: #000000
+			margin-bottom: 15px
+		ul li a
+			font-weight: normal
+			font-size: 14px
+			line-height: 23px
+			color: #000000
+
+.title-block__wrap-text
+	display: none
+
+.site-header__hum
+	display: none
+
+.mobile-menu
+	position: fixed
+	display: none
+	top: 90px
+	height: calc(100% - 90px)
+	box-sizing: border-box
+	border-top: 1px solid #E6E6E6
+	background-color: #fff
+	left: 0
+	right: 0
+	bottom: 0
+	text-align: center
+	z-index: 11
+	&__wrap
+		height: 100%
+		overflow-y: scroll
+	ul
+		margin-top: 140px
+		margin-bottom: 120px
+		li
+			margin-bottom: 45px
+			a
+				font-weight: 500
+				font-size: 24px
+				line-height: 29px
+				color: rgba(0, 0, 0, 0.5)
+		.active
+			a
+				color: #000
+	.site-header__lk
+		display: block !important
+		margin: auto
+		margin-bottom: 40px
+	.lang
+		margin: auto
+		margin-bottom: 40px
+
+@import "acc.scss"
+@import "_media.sass"

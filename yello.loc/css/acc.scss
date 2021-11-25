@@ -1,0 +1,103 @@
+
+$bg: #fff;
+$text: #7288a2;
+$gray: #4d5974;
+$lightgray: #e5e5e5;
+$blue: #03b5d2;
+
+.accordion {
+  .accordion-item {
+    border-bottom: 1px solid #000;
+    button[aria-expanded='true'] {
+    }
+  }
+  button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 40px 0;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    background: none;
+    outline: none;
+    &:hover, &:focus {
+      cursor: pointer;
+      color: #000;
+      &::after {
+        cursor: pointer;
+        color: #000;
+        border: 1px solid $blue;
+      }
+    }
+    .accordion-title {
+      padding: 1em 1.5em 1em 0;
+    }
+    .icon {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 22px;
+      background-color: #000;
+      &::before {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        width: 11px;
+        height: 2px;
+        background: #fff;
+      }
+      &::after {
+        display: block;
+        position: absolute;
+        content: '';
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        width: 2px;
+        height: 11px;
+        background: #fff;
+      }
+    }
+  }
+  button[aria-expanded='true'] {
+    .icon {
+      &::after {
+        width: 0;
+      }
+    }
+    + .accordion-content {
+      opacity: 1;
+      max-height: 12em;
+      margin-top: -20px;
+      transition: all 200ms linear;
+      will-change: opacity, max-height;
+    }
+  }
+  .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+    p {
+      font-size: 15px;
+      margin: 0;
+      line-height: 23px;
+      font-weight: 400;
+      color: rgba(0, 0, 0, 0.75);
+      text-align: left;
+      margin-bottom: 20px;
+    }
+  }
+}
