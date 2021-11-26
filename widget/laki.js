@@ -369,7 +369,7 @@ function widgetRemarked(options) {
                 </div>
             </div>
             <div class="remarked-success-text">
-                Ваша заявка на бронирование отправлена.
+                Ваша заявка на бронирование отправлена. <br>
                 Для подтверждения и утончения деталей мы свяжемся с Вами в рабочее время.
             </div>
             <div class="remarked-success-button">
