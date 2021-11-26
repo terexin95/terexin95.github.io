@@ -460,3 +460,30 @@ if (document.querySelectorAll('.phone-input')) {
         input.addEventListener("keydown", mask, false);
     });
 }
+
+if (document.querySelector('.auto-item-mobile__dealer-btn')) {
+  let autoItemMobileDealerBtn = document.querySelectorAll('.auto-item-mobile__dealer-btn');
+  for (var i = 0; i < autoItemMobileDealerBtn.length; i++) {
+    autoItemMobileDealerBtn[i].addEventListener('click', function(){
+      this.classList.toggle('auto-item-mobile__dealer-btn--active');
+    });
+  }
+}
+
+if (document.querySelector('.auto-item__dealer-open')) {
+  let autoItemDealerOpen = document.querySelectorAll('.auto-item__dealer-open');
+  for (var i = 0; i < autoItemDealerOpen.length; i++) {
+    autoItemDealerOpen[i].addEventListener('click', function(){
+      this.classList.toggle('auto-item__dealer-open--active');
+    });
+  }
+}
+
+if (document.querySelector('.single__dealer-open')) {
+  let autoItemDealerOpen = document.querySelectorAll('.single__dealer-open');
+  for (var i = 0; i < autoItemDealerOpen.length; i++) {
+    autoItemDealerOpen[i].addEventListener('click', function(){
+      this.classList.toggle('single__dealer-open--active');
+    });
+  }
+}

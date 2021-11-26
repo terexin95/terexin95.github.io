@@ -8,6 +8,35 @@ a {
   text-decoration: none;
   color: #2B2D33; }
 
+.auto-item-mobile__dealer-btn-phone {
+  display: none; }
+
+.auto-item-mobile__dealer-btn--active {
+  overflow: hidden; }
+  .auto-item-mobile__dealer-btn--active .auto-item-mobile__dealer-btn-phone {
+    display: block; }
+
+.auto-item__change-sold {
+  border-bottom: 1px solid #047863;
+  color: #047863;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease;
+  cursor: pointer; }
+  .auto-item__change-sold:hover {
+    color: #02473a;
+    border-color: #02473a;
+    transition: all 0.3s ease; }
+
+.auto-item-mobile .auto-item__change-sold {
+  top: auto;
+  bottom: 10px; }
+
 .header {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
   background-color: #fff; }
@@ -2068,6 +2097,8 @@ ul {
       margin-right: 30px;
       cursor: pointer;
       transition: all 0.3s ease; }
+      .form-reg__btns button a {
+        margin-top: 0; }
       .form-reg__btns button:hover, .form-reg__btns button:active {
         background-color: #ffe24c;
         transition: all 0.3s ease; }
@@ -3145,6 +3176,24 @@ main {
     .comments__main::-webkit-scrollbar-thumb:hover {
       background-color: #a1a1a1;
       transition: all 0.3s ease; }
+
+.auto-item__dealer-open {
+  overflow: hidden; }
+
+.auto-item__dealer-open-phone {
+  display: none; }
+
+.auto-item__dealer-open--active .auto-item__dealer-open-phone {
+  display: block; }
+
+.single__dealer-open-phone {
+  display: none; }
+
+.single__dealer-open {
+  overflow: hidden; }
+
+.single__dealer-open--active .single__dealer-open-phone {
+  display: block; }
 
 @media (max-width: 1400px) {
   .header__search {
