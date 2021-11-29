@@ -179,7 +179,7 @@ function widgetRemarked(options) {
         });
     }
 
-    let remarkedOpenWidget = document.querySelectorAll('.remarked-open-widget');
+    let remarkedOpenWidget = document.querySelectorAll('.'+options.classButton);
 
     for (var i = 0; i < remarkedOpenWidget.length; i++) {
         remarkedOpenWidget[i].addEventListener('click', function(){

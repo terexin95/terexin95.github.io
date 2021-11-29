@@ -74,6 +74,32 @@
 		<p>
 			Если прописать такие настройки, то не будет поля с email и поля с коментарием
 		</p>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<h2 id="new">
+			Новый виджет
+		</h2>
+		<pre class="code-example">
+			<code class="code-example-body prettyprint">
+				&lt;script src="https://terexin95.github.io/widget/remarkednew.js"&gt;&lt;/script&gt;
+				&lt;script&gt;
+					widgetRemarked({
+						POINT: '7999999', //point
+						classButton: 'remarked-open-widget', // класс для кнопки чтобы открывался виджет
+						title: 'Название ресторана', // название в шапке
+						color_red: '#a50204', //Красный цвет в виджете
+						email: true, // Если написать false, то отключит поле email
+						date: true, // Если написать false, то отключит поле с датой
+						qty: true, // Если написать false, то отключит поле с количеством гостей
+						time: true, // Если написать false, то отключит блок с выбором времени
+						text: true // Если написать false, то отключит поле с коментарием
+					})
+				&lt;/script&gt;
+			</code>
+		</pre>
 	</div>
 </body>
 </html>
