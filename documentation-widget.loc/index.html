@@ -101,6 +101,36 @@
 			</code>
 		</pre>
 		<h2>Пример</h2>
+		<pre class="code-example">
+			<code class="code-example-body prettyprint">
+				&lt;script src="https://terexin95.github.io/widget/remarkednew.js"&gt;&lt;/script&gt;
+				&lt;script&gt;
+					widgetRemarked({
+						POINT: '7999999', //point
+						classButton: 'remarked-open-widget', // класс для кнопки чтобы открывался виджет
+						title: 'Название ресторана', // название в шапке
+						color_red: '#a50204', //Красный цвет в виджете
+						email: true, // Если написать false, то отключит поле email
+						date: true, // Если написать false, то отключит поле с датой
+						qty: true, // Если написать false, то отключит поле с количеством гостей
+						time: true, // Если написать false, то отключит блок с выбором времени
+						text: true // Если написать false, то отключит поле с коментарием
+					})
+					widgetRemarked({
+						POINT: '9777777', //point
+						classButton: 'remarked-open-widget1', // класс для кнопки чтобы открывался виджет
+						title: 'Название ресторана 2', // название в шапке
+						color_red: '#a50204', //Красный цвет в виджете
+						email: true, // Если написать false, то отключит поле email
+						date: true, // Если написать false, то отключит поле с датой
+						qty: true, // Если написать false, то отключит поле с количеством гостей
+						time: true, // Если написать false, то отключит блок с выбором времени
+						text: true // Если написать false, то отключит поле с коментарием
+					})
+				&lt;/script&gt;
+			</code>
+		</pre>
+		<p>Будет 2 виджета которые будут открываться на кнопку <strong>remarked-open-widget</strong> (1 виджет) <strong>remarked-open-widget1</strong> ( 2виджет)</p>
 	</div>
 </body>
 </html>
