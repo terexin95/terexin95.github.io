@@ -7,6 +7,7 @@ function widgetRemarked(options) {
 
     const remarkedBody = {
         method: 'GetToken',
+        point: POINT,
         request_id: new Date().getTime()
     }
 
