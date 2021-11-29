@@ -389,12 +389,27 @@ if (document.querySelector('.humburger')) {
   })
 }
 
-if (document.querySelector('.auto-item-mobile__overlay')) {
-  var aIMO = document.querySelectorAll('.auto-item-mobile__overlay');
-  for (var i = 0; i < aIMO.length; i++) {
-    aIMO[i].addEventListener('click', function(){
-      document.querySelector('.modal-carusel').classList.add('modal-carusel--active');
-      document.querySelector('body').style.overflow = "hidden";
+// if (document.querySelector('.auto-item-mobile__overlay')) {
+//   var aIMO = document.querySelectorAll('.auto-item-mobile__overlay');
+//   for (var i = 0; i < aIMO.length; i++) {
+//     aIMO[i].addEventListener('click', function(){
+//       document.querySelector('.modal-carusel').classList.add('modal-carusel--active');
+//       document.querySelector('body').style.overflow = "hidden";
+//     });
+//   }
+// }
+
+if(document.querySelector('.single-description__comment-more')) {
+  let single_description__comment_more = document.querySelectorAll('.single-description__comment-more');
+  for (var i = 0; i < single_description__comment_more.length; i++) {
+    single_description__comment_more[i].textContent = "Показать больше";
+    single_description__comment_more[i].addEventListener('click', function(){
+      this.parentElement.classList.toggle('single-description__comment-text--active');
+      if (this.textContent == "Показать больше") {
+        this.textContent = "Скрыть";
+      } else {
+        this.textContent = "Показать больше";
+      }
     });
   }
 }

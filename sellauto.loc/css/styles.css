@@ -3008,7 +3008,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(0deg, #D5D5D6, #D5D5D6);
+    background: rgba(213, 213, 214, 0.7);
     border-radius: 8px;
     cursor: pointer; }
   .auto-item-mobile__overlay-item {
@@ -3194,6 +3194,24 @@ main {
 
 .single__dealer-open--active .single__dealer-open-phone {
   display: block; }
+
+.auto-item__dealer-img {
+  position: relative; }
+
+.auto-item__dealer-img img {
+  position: absolute; }
+
+.single__images-top {
+  margin-bottom: 10px; }
+  .single__images-top img {
+    border-radius: 10px; }
+
+.single-description__comment-text {
+  height: 50px;
+  overflow: hidden; }
+
+.single-description__comment-text--active .single-description__comment-text {
+  height: 100%; }
 
 @media (max-width: 1400px) {
   .header__search {
