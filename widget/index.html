@@ -36,13 +36,27 @@
 </head>
 <body>
 	<div class="remarked-open-widget btn">Забронировать</div>
+	<div class="remarked-open-widget1 btn">Забронировать</div>
 <!-- 	<script src="main.js"></script> -->
-	<script src="https://terexin95.github.io/widget/remarkednew.js"></script>
+	<script src="remarkednew.js"></script>
 	<script>
 		widgetRemarked({
 			POINT: '7999999',
 			classButton: 'remarked-open-widget',
+			classWidget: 'remarked-widget',
 			title: 'Сайт',
+			color_red: '#87302C',
+			email: false, 
+			date: true,
+			qty: true,
+			time: true,
+			text: true
+		});
+		widgetRemarked({
+			POINT: '7999999',
+			classButton: 'remarked-open-widget1',
+			classWidget: 'remarked-widget1',
+			title: 'Сайт1',
 			color_red: '#87302C',
 			email: false, 
 			date: true,

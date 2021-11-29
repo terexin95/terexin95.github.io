@@ -80,7 +80,7 @@ function widgetRemarked(options) {
                             <input type="text" placeholder="email@exemple.ru" id="remarkedEmailInput" name="userEmail">
                         </div>
                     </div>
-                    <button id="nextStep2" class="mb-2">Продолжить</button>
+                    <button class="mb-2 nextStep2">Продолжить</button>
                 </div>
                 <div class="remarked-widget-classic__step remarked-widget-classic__step-2">
                     <div class="prevStep1 arrow-remarked-prev">
@@ -108,7 +108,7 @@ function widgetRemarked(options) {
                             </div>
                         </div>
                     </div>
-                    <button id="nextStep3" class="mb-2">Продолжить</button>
+                    <button class="nextStep3">Продолжить</button>
                 </div>
                 <div class="remarked-widget-classic__step remarked-widget-classic__step-3">
                     <div class="prevStep2 arrow-remarked-prev">
@@ -128,29 +128,32 @@ function widgetRemarked(options) {
                     <div class="remarked-widget__comment">
                         <textarea name="remarked-comment" placeholder="Пожелание к бронированию"></textarea>
                     </div>
-                    <button type="submit" id="remarkedSend">Подтвердить</button>
+                    <button type="submit" class="remarkedSend">Подтвердить</button>
                 </div>
             </div>
         </div>
     `;
 
     document.querySelector('body').append(remarkedWidgetClassic);
-    let remarkedOverlay = document.querySelector('.overlay'); 
-    let remarkedClose = document.querySelector('.remarked-widget__close');
+    let remarkedOverlay = document.querySelectorAll('.overlay'); 
+    let remarkedClose = document.querySelectorAll('.remarked-widget__close');
+    for (var i = remarkedClose.length - 1; i >= 0; i--) {
+        remarkedClose[i].addEventListener('click', function(){
+            this.parentElement.parentElement.parentElement.classList.remove('remarked-widget-active');
+            this.parentElement.parentElement.parentElement.classList.add('remarked-widget-none');
+        });
+    }
+    for (var i = remarkedOverlay.length - 1; i >= 0; i--) {
+        remarkedOverlay[i].addEventListener('click', function(){
+            remarkedWidgetClassic.classList.remove('remarked-widget-active');
+            remarkedWidgetClassic.classList.add('remarked-widget-none');
+        });
+    }
 
-    remarkedClose.addEventListener('click', function(){
-        remarkedWidgetClassic.classList.remove('remarked-widget-active');
-        remarkedWidgetClassic.classList.add('remarked-widget-none');
-    });
-
-    remarkedOverlay.addEventListener('click', function(){
-        remarkedWidgetClassic.classList.remove('remarked-widget-active');
-        remarkedWidgetClassic.classList.add('remarked-widget-none');
-    });
-
-    let remarkedDescriptions = document.querySelectorAll('.remarked-widget-info');
+    let remarkedDescriptions = remarkedWidgetClassic.querySelectorAll('.remarked-widget-info');
 
     for (let i = 0; i < remarkedDescriptions.length; i++) {
+        remarkedDescriptions[i].style.display = "none"
         remarkedDescriptions[i].addEventListener('click', function(e){
             e.preventDefault();
             let dremarkedDescriptionsText = document.createElement('div');
@@ -171,11 +174,15 @@ function widgetRemarked(options) {
                     </div>
             `;
             document.querySelector('body').append(dremarkedDescriptionsText);
-            let dremarkedDescriptionsText__close = document.querySelector('.dremarkedDescriptionsText__close');
+            let remarkedDescriptionsText__close = remarkedWidgetClassic.querySelectorAll('.dremarkedDescriptionsText__close');
+            console.log(remarkedDescriptionsText__close);
 
-            dremarkedDescriptionsText__close.addEventListener('click', function(){
-                document.querySelector('body > .dremarkedDescriptionsText').remove();
-            });
+            for (var i = 0; i < remarkedDescriptionsText__close.length; i++) {
+                remarkedDescriptionsText__close[i].addEventListener('click', function(){
+                    console.log(remarkedDescriptionsText__close);
+                    remarkedWidgetClassic.querySelector('body > .dremarkedDescriptionsText').remove();
+                });
+            }
         });
     }
 
@@ -187,19 +194,19 @@ function widgetRemarked(options) {
             remarkedWidgetClassic.classList.remove('remarked-widget-none');
             
 
-            let remarkedWidgetRoom = document.querySelectorAll('.remarked-widget-room');
+            let remarkedWidgetRoom = remarkedWidgetClassic.querySelectorAll('.remarked-widget-room');
             for (let index = 0; index < remarkedWidgetRoom.length; index++) {
                 remarkedWidgetRoom[index].addEventListener('click', function(){
                     this.classList.add('remarked-widget-room--active');
-                    document.querySelector('.remarked-widget-classic__step-0').style.display = "none";
-                    document.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--active');
+                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-0').style.display = "none";
+                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--active');
                 });
             }
         });
     }
 
 
-    let remarkedPhone = document.querySelector('.remarked-phone');
+    let remarkedPhone = remarkedWidgetClassic.querySelector('.remarked-phone');
 
     remarkedPhone.addEventListener('input', function (e) {
     var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
@@ -313,23 +320,23 @@ function widgetRemarked(options) {
     });
     }
 
-    document.querySelector('.prevStep2').addEventListener('click', function(){
-        if (document.querySelector('.remarked-widget__times')) {
-            document.querySelector('.remarked-widget__times').remove();
+    remarkedWidgetClassic.querySelector('.prevStep2').addEventListener('click', function(){
+        if (remarkedWidgetClassic.querySelector('.remarked-widget__times')) {
+            remarkedWidgetClassic.querySelector('.remarked-widget__times').remove();
         }
-        document.querySelector('.remarked-widget-classic__step-3--active').classList.remove('remarked-widget-classic__step-3--active');
-        document.querySelector('.remarked-widget-classic__step-2--none').classList.remove('remarked-widget-classic__step-2--none');
-        document.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
+        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3--active').classList.remove('remarked-widget-classic__step-3--active');
+        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2--none').classList.remove('remarked-widget-classic__step-2--none');
+        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
     });
 
-    document.querySelector('.prevStep1').addEventListener('click', function(){
-        document.querySelector('.remarked-widget-classic__step-2--active').classList.remove('remarked-widget-classic__step-2--active');
-        document.querySelector('.remarked-widget-classic__step-1--none').classList.remove('remarked-widget-classic__step-1--none');
+    remarkedWidgetClassic.querySelector('.prevStep1').addEventListener('click', function(){
+        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2--active').classList.remove('remarked-widget-classic__step-2--active');
+        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1--none').classList.remove('remarked-widget-classic__step-1--none');
     });
 
-    let remarkedUserInput = document.querySelector('#remarkedUserInput');
-    let remarkedPhoneInput = document.querySelector('#remarkedPhoneInput');
-    let remarkedEmailInput = document.querySelector('#remarkedEmailInput');
+    let remarkedUserInput = remarkedWidgetClassic.querySelector('#remarkedUserInput');
+    let remarkedPhoneInput = remarkedWidgetClassic.querySelector('#remarkedPhoneInput');
+    let remarkedEmailInput = remarkedWidgetClassic.querySelector('#remarkedEmailInput');
 
     let remarkedUserInputVal = false;
     let remarkedPhoneInputVal = false;
@@ -337,60 +344,63 @@ function widgetRemarked(options) {
 
     if (options.email == false) {
         remarkedEmailInputVal = true;
-        document.querySelector('#remarkedEmailInput').style.display = "none";
+        remarkedWidgetClassic.querySelector('#remarkedEmailInput').style.display = "none";
     } else {
         remarkedEmailInputVal = false;
     }
 
     if (options.date == false) {
-        document.querySelector('#start').parentElement.style.display = "none";
+        remarkedWidgetClassic.querySelector('#start').parentElement.style.display = "none";
     }
 
     if (options.qty == false) {
-        document.querySelector('.remarked-quantity').parentElement.style.display = "none";
+        remarkedWidgetClassic.querySelector('.remarked-quantity').parentElement.style.display = "none";
     }
 
     if (options.time == false) {
-        document.querySelector('.remarked-widget-classic__step-3 .remarked-widget-title').style.display = "none";
-        if (document.querySelector('.remarked-widget__times')) {
-            document.querySelector('.remarked-widget__times').style.display = "none";
+        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3 .remarked-widget-title').style.display = "none";
+        if (remarkedWidgetClassic.querySelector('.remarked-widget__times')) {
+            remarkedWidgetClassic.querySelector('.remarked-widget__times').style.display = "none";
         }
     }
     
     if (options.text == false) {
-        document.querySelector('.remarked-widget__comment').style.display = "none";
+        remarkedWidgetClassic.querySelector('.remarked-widget__comment').style.display = "none";
     }
 
     let remarkedUserInputText;
     let remarkedPhoneInputText;
     let remarkedEmailInputText;
 
-    let nextStep2 = document.querySelector('#nextStep2');
+    let nextStep2 = document.querySelectorAll('.nextStep2');
     if(options.date == false && options.qty == false && options.time == false && options.text == false) {
         nextStep2.textContent = "Забронировать";
     }
-    nextStep2.addEventListener('click', function(){
-        if(remarkedUserInputVal && remarkedPhoneInputVal && remarkedEmailInputVal) {
-            checkInputs();
-        } else {
-            if (remarkedUserInput.value == '') {
-                remarkedUserInput.style.border = "2px solid " + options.color_red;
+    for (var i = nextStep2.length - 1; i >= 0; i--) {
+        nextStep2[i].addEventListener('click', function(){
+            if(remarkedUserInputVal && remarkedPhoneInputVal && remarkedEmailInputVal) {
+                checkInputs();
             } else {
-                remarkedUserInput.style.border = "2px solid #1aaf33";
+                if (remarkedUserInput.value == '') {
+                    remarkedUserInput.style.border = "2px solid " + options.color_red;
+                } else {
+                    remarkedUserInput.style.border = "2px solid #1aaf33";
+                }
+                if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value.length == 14) {
+                    remarkedPhoneInput.style.border = "2px solid #1aaf33";
+                } else {
+                    remarkedPhoneInput.style.border = "2px solid" + options.color_red;
+                }
+                if (remarkedEmailInput.value == '') {
+                    remarkedEmailInput.style.border = "2px solid" + options.color_red;
+                } else {
+                    remarkedEmailInput.style.border = "2px solid #1aaf33";
+                }
             }
-            if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value.length == 14) {
-                remarkedPhoneInput.style.border = "2px solid #1aaf33";
-            } else {
-                remarkedPhoneInput.style.border = "2px solid" + options.color_red;
-            }
-            if (remarkedEmailInput.value == '') {
-                remarkedEmailInput.style.border = "2px solid" + options.color_red;
-            } else {
-                remarkedEmailInput.style.border = "2px solid #1aaf33";
-            }
-        }
+            
+        });
+    }
         
-    });
 
     let remarkedSucsess = document.createElement('div');
     remarkedSucsess.innerHTML += `
@@ -431,17 +441,17 @@ function widgetRemarked(options) {
             remarkedBodyRooms.reserve.email = "";
         }
         if (options.date == true) {
-            remarkedBodyRooms.reserve.date = document.querySelector("#start").value;
+            remarkedBodyRooms.reserve.date = remarkedWidgetClassic.querySelector("#start").value;
         } else {
             remarkedBodyRooms.reserve.date = "";
         }
         if (options.time == true) {
-            remarkedBodyRooms.reserve.time = document.querySelector('.remarked-widget__time--active').textContent;
+            remarkedBodyRooms.reserve.time = remarkedWidgetClassic.querySelector('.remarked-widget__time--active').textContent;
         } else {
             remarkedBodyRooms.reserve.time = "";
         }
         if (options.qty == true) {
-            remarkedBodyRooms.reserve.guests_count = document.querySelector('.remarked-quantity input').value;
+            remarkedBodyRooms.reserve.guests_count = remarkedWidgetClassic.querySelector('.remarked-quantity input').value;
         } else {
             remarkedBodyRooms.reserve.guests_count = ""; 
         }
@@ -459,11 +469,11 @@ function widgetRemarked(options) {
         remarkedXHRRoom.onload = function(){
 
             if(remarkedXHRRoom.status == 200) {
-                document.querySelector('.remarked-widget-classic__step-3').style.display="none";
-                document.querySelector('.remarked-widget-classic__step-2').style.display="none";
-                document.querySelector('.remarked-widget-classic__step-1').style.display="none";
-                document.querySelector('.remarked-widget-classic__body').append(remarkedSucsess);
-                let remarkedCloseModal = document.querySelector('#remarkedCloseModal');
+                remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').style.display="none";
+                remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').style.display="none";
+                remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').style.display="none";
+                remarkedWidgetClassic.querySelector('.remarked-widget-classic__body').append(remarkedSucsess);
+                let remarkedCloseModal = remarkedWidgetClassic.querySelector('#remarkedCloseModal');
                 remarkedCloseModal.addEventListener('click', function(){
                     remarkedWidgetClassic.classList.remove('remarked-widget-active');
                     remarkedWidgetClassic.classList.add('remarked-widget-none');
@@ -478,11 +488,11 @@ function widgetRemarked(options) {
         if(options.date == false && options.qty == false && options.time == false && options.text == false) {
             sendReserveRemarked();
         } else if(options.date == false && options.qty == false) {
-            document.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
-            document.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
+            remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
+            remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
         } else {
-            document.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
-            document.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
+            remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
+            remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
         }
     }
 
@@ -513,13 +523,13 @@ function widgetRemarked(options) {
         }
     });
 
-    let nextStep3 = document.querySelector('#nextStep3');
+    let nextStep3 = remarkedWidgetClassic.querySelectorAll('.nextStep3');
 
     if (options.text == false && options.time == false) {
         nextStep3.textContent = "Забронировать";
     }
-
-    nextStep3.addEventListener('click', function(){
+    for (var i = nextStep3.length - 1; i >= 0; i--) {
+        nextStep3[i].addEventListener('click', function(){
         if (options.text == false && options.time == false) {
             sendReserveRemarked();
         } else {
@@ -530,8 +540,8 @@ function widgetRemarked(options) {
                 method: 'GetTimes',
                 token: remarkedToken,
                 request_id: new Date().getTime(),
-                reserve_date: document.querySelector("#start").value,
-                guests_count: document.querySelector('.remarked-quantity input').value
+                reserve_date: remarkedWidgetClassic.querySelector("#start").value,
+                guests_count: remarkedWidgetClassic.querySelector('.remarked-quantity input').value
             };
             
             
@@ -555,12 +565,12 @@ function widgetRemarked(options) {
                         remarkedWidgetTimes.innerHTML += `<div class="remarked-widget__time remarked-widget__time--disabled">${ remarkedArrDays[i].time }</div>`
                     }
                 }
-                document.querySelector('.remarked-widget-classic__step-3 .remarked-widget-title').after(remarkedWidgetTimes);
-                remarkedTimeClick = document.querySelectorAll('.remarked-widget__time-work');
+                remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3 .remarked-widget-title').after(remarkedWidgetTimes);
+                remarkedTimeClick = remarkedWidgetClassic.querySelectorAll('.remarked-widget__time-work');
                 for (let i = 0; i < remarkedTimeClick.length; i++) {
                     remarkedTimeClick[i].addEventListener('click', function(){
-                        if (document.querySelector('.remarked-widget__time--active')){
-                            document.querySelector('.remarked-widget__time--active').classList.remove('remarked-widget__time--active');
+                        if (remarkedWidgetClassic.querySelector('.remarked-widget__time--active')){
+                            remarkedWidgetClassic.querySelector('.remarked-widget__time--active').classList.remove('remarked-widget__time--active');
                         }
                         this.classList.add('remarked-widget__time--active');
                     });
@@ -569,16 +579,19 @@ function widgetRemarked(options) {
 
             remarkedXHRDays.send(remarkedGetDaysJSON);
 
-            document.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--none');
-            document.querySelector('.remarked-widget-classic__step-2').classList.remove('remarked-widget-classic__step-2--active');
-            document.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
+            remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--none');
+            remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').classList.remove('remarked-widget-classic__step-2--active');
+            remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
             
-            let remarkedSend = document.querySelector('#remarkedSend');
-            
-            remarkedSend.addEventListener('click', function(){
-                sendReserveRemarked();
-            });
+            let remarkedSend = remarkedWidgetClassic.querySelectorAll('.remarkedSend');
+            for (var i = remarkedSend.length - 1; i >= 0; i--) {
+                remarkedSend[i].addEventListener('click', function(){
+                    sendReserveRemarked();
+                });
+            }
         }
     });
+    }
+    
 
 }
