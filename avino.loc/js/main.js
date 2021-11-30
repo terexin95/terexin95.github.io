@@ -586,52 +586,52 @@ if (document.querySelector('.nmo-ter .mc-left')) {
   wrapProducts.append(cloneProducts);
 }
 
-function checkSubmitForm() {
-  let name = false;
-  let phone = false;
-  let address = false;
-  let button = document.querySelector('.mcr-btn2');
-  let nameInput = document.querySelector('input[name="name2"]');
-  let phoneInput = document.querySelector('#phone22');
-  console.log(phoneInput.textContent)
-  let addressInput = document.querySelector('input[name="adress"]');
-  nameInput.addEventListener('input', function(){
-    if (!nameInput.value == "") {
-      name = true;
-    } else {
-      name = false;
-    }
-    if (name && phone && address) {
-      button.classList.remove('disabled');
-      button.setAttribute('disabled', ' ');
-    }
-    console.log(nameInput, name)
-  });
-  phoneInput.addEventListener('change', function(){
-    if (!phoneInput.value == "") {
-      phone = true
-    } else {
-      phone = false
-    }
-    if (name && phone && address) {
-      button.classList.remove('disabled');
-      button.setAttribute('disabled', ' ');
-    }
-    console.log(phoneInput, phone);
-  });
-  addressInput.addEventListener('input', function(){
-    if (!addressInput.value == "") {
-      address = true
-    } else {
-      address = false
-    }
-    if (name && phone && address) {
-      button.classList.remove('disabled');
-      button.setAttribute('disabled', ' ');
-    }
-    console.log(addressInput, address)
-    console.log(phoneInput.value, phone)
-  });
-}
+// function checkSubmitForm() {
+//   let name = false;
+//   let phone = false;
+//   let address = false;
+//   let button = document.querySelector('.mcr-btn2');
+//   let nameInput = document.querySelector('input[name="name2"]');
+//   let phoneInput = document.querySelector('#phone22');
+//   console.log(phoneInput.textContent)
+//   let addressInput = document.querySelector('input[name="adress"]');
+//   nameInput.addEventListener('input', function(){
+//     if (!nameInput.value == "") {
+//       name = true;
+//     } else {
+//       name = false;
+//     }
+//     if (name && phone && address) {
+//       button.classList.remove('disabled');
+//       button.setAttribute('disabled', ' ');
+//     }
+//     console.log(nameInput, name)
+//   });
+//   phoneInput.addEventListener('change', function(){
+//     if (!phoneInput.value == "") {
+//       phone = true
+//     } else {
+//       phone = false
+//     }
+//     if (name && phone && address) {
+//       button.classList.remove('disabled');
+//       button.setAttribute('disabled', ' ');
+//     }
+//     console.log(phoneInput, phone);
+//   });
+//   addressInput.addEventListener('input', function(){
+//     if (!addressInput.value == "") {
+//       address = true
+//     } else {
+//       address = false
+//     }
+//     if (name && phone && address) {
+//       button.classList.remove('disabled');
+//       button.setAttribute('disabled', ' ');
+//     }
+//     console.log(addressInput, address)
+//     console.log(phoneInput.value, phone)
+//   });
+// }
 
-checkSubmitForm();
+// checkSubmitForm();
