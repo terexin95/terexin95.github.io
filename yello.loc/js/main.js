@@ -67,3 +67,13 @@ document.querySelector('.site-header__hum .close').addEventListener('click', fun
 	document.querySelector('.mobile-menu').style.display = 'none';
 	document.querySelector('body').style.overflow = "auto";
 });
+
+document.addEventListener('touchstart', touchStart, false);
+document.addEventListener('touchstart', touchEnd, false);
+
+let x1 = null;
+let y1 = null;
+
+function touchStart() {
+	
+}
