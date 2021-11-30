@@ -2,7 +2,29 @@ const observer = lozad();
 observer.observe();
 
 document.addEventListener("DOMContentLoaded", function() {
-  
+  let terProductsBlockPay = document.querySelectorAll('.ter-products-block__pay')
+  for (var i = 0; i < terProductsBlockPay.length; i++) {
+    terProductsBlockPay[i].addEventListener('click', function(){
+      document.querySelector('.nmo-ter').style.display = "block";
+      document.querySelector('.modal-back').style.display = "block";
+      document.querySelector('body').style.overflow = "hidden";
+    })
+  }
+  document.querySelector('.ter-block-title__button').addEventListener('click', function(){
+    document.querySelector('.nmo-ter').style.display = "block";
+    document.querySelector('.modal-back').style.display = "block";
+    document.querySelector('body').style.overflow = "hidden";
+  })
+  document.querySelector('.nmo-ter .modal_close').addEventListener('click', function(){
+      document.querySelector('.nmo-ter').style.display = "none";
+      document.querySelector('.modal-back').style.display = "none";
+      document.querySelector('body').style.overflow = "auto";
+  });
+  document.querySelector('.modal-back').addEventListener('click', function(){
+      document.querySelector('.nmo-ter').style.display = "none";
+      document.querySelector('.modal-back').style.display = "none";
+      document.querySelector('body').style.overflow = "auto";
+  });
   let trSlAll = document.querySelectorAll('.ter-slider-block__wrap .ter-slider-block__wrap--img');
   let trSlWrap = document.querySelector('.ter-slider-block__wrap');
   let trWSl = 875;
@@ -520,11 +542,10 @@ if (document.querySelector('.nmo-ter .mc-left')) {
       let text = parent.querySelector('.ter-prod-count');
       let textNum = text.value;
       let sku = this.getAttribute('data-sku');
-      if (textNum <= 1) {
-        parent.querySelector('.ter-prod-check').classList.remove('ter-prod-check--active');
-        textNum = 0;
-      } else {
-        textNum--;
+      if (textNum == 0) {
+        textNum = 0
+        text.value = textNum;
+        sum;
         let obj = {
           name: parent.querySelector('.ter-products-block__title h2').textContent,
           qty: textNum
@@ -537,14 +558,27 @@ if (document.querySelector('.nmo-ter .mc-left')) {
             cartText += value.name + ", количество:" + value.qty + '  '
           }
         });
-        console.log(cartText);
-      }
-      text.value = textNum;
-      if (sum -= +price <= 0) {
-        sum = 0;
       } else {
-        sum -= +price;
+        if (textNum == 1) {
+          parent.querySelector('.ter-prod-check--active').classList.remove('ter-prod-check--active');
+        }
+        textNum--;
+        text.value = textNum;
+        sum = sum - price;
+        let obj = {
+          name: parent.querySelector('.ter-products-block__title h2').textContent,
+          qty: textNum
+        }
+        cart[''+sku+''] = obj;
+        let cartArr = Object.entries(cart);
+        let cartText = "";
+        cartArr.forEach(([key, value]) => {
+          if (!value.qty == 0) {
+            cartText += value.name + ", количество:" + value.qty + '  '
+          }
+        });
       }
+      
       document.querySelector('.mc-right .mcr-total .t-total .order-total').textContent = sum;
     });
   }
