@@ -334,10 +334,18 @@ body {
 
 .ter-slider-block__inner {
 	overflow: hidden;
-	max-width: 1140px;
+	width: 1140px;
 	margin: auto;
-	position: relative;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 	user-select: none;
+}
+
+.ter-slider-block {
+	overflow: hidden;
+	position: relative;
+	height: 730px;
 }
 
 .ter-slider-block__wrap {
@@ -363,7 +371,7 @@ body {
 }
 
 .ter-slider-block__wrap img {
-	flex: 0 0 80%;
+	flex: 0 0 830px;
 	height: 500px;
 	width: 100%;
 	margin-left: 45px;

@@ -126,9 +126,9 @@ document.addEventListener("DOMContentLoaded", function() {
   // alert('resize ' + trWSl);
   let trLeft = document.querySelector('.ter-slider-block__left');
   let trRight = document.querySelector('.ter-slider-block__right');
-  let trCounter = 0;
-  let trPos = 0;
-  let trPosThumb = 0;
+  // let trCounter = 0;
+  // let trPos = 0;
+  // let trPosThumb = 0;
   // let trCloneImg = trSlWrap.cloneNode(true);
   let terSliderBlockNumMin = document.querySelector('.ter-slider-block__num-min');
   let terSliderBlockNumMax = document.querySelector('.ter-slider-block__num-max');
