@@ -57,8 +57,8 @@
 	align-items: center;
 	justify-content: center;
 	max-width: 555px;
-	margin: 30px auto;
-	margin-top: 5px;
+	margin: 25px auto;
+	margin-top: 0px;
 	text-align: center;
 }
 
@@ -344,7 +344,7 @@ body {
 .ter-slider-block {
 	overflow: hidden;
 	position: relative;
-	height: 790px;
+	height: 890px;
 }
 
 .ter-slider-block__wrap {
@@ -360,7 +360,7 @@ body {
 
 .ter-slider-block__wrap:before {
 	content: "";
-	height: 500px;
+	height: 600px;
 	width: 9%;
 	left: -9%;
 	top: 0;
@@ -371,7 +371,7 @@ body {
 
 .ter-slider-block__wrap img {
 	flex: 0 0 830px;
-	height: 500px;
+	height: 600px;
 	width: 100%;
 	margin-left: 45px;
 	border-radius: 10px;
@@ -401,7 +401,7 @@ body {
 .ter-slider-block__button {
 	cursor: pointer;
 	position: absolute;
-	top: 240px;
+	top: 290px;
 	background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 7px;
 	user-select: none;
@@ -1915,6 +1915,10 @@ color:#3d9a2c !important;
 }
 }
 
+* {
+   -webkit-font-smoothing: antialiased !important;
+}
+
 .nmo-ter h3 {
 	margin: 0;
 }
@@ -1928,7 +1932,7 @@ color:#3d9a2c !important;
 }
 
 .nmo-ter .mc-left .ter-filter-block__header-text {
-	flex: calc(100% - 100px);
+	flex: 0 0 100%;
 	font-size: 16px;
 }
 
@@ -1939,6 +1943,26 @@ color:#3d9a2c !important;
 
 .nmo-ter .mc-left .ter-filter-block__header-item {
 	height: 75px;
+	flex: 0 0 24%;
+	margin-right: 0;
+}
+
+.nmo-ter .mc-left .ter-filter-block__header-item .ter-filter-block__header-img {
+	display: none;	
+}
+
+.nmo-ter .mc-left .ter-filter-block__header {
+	justify-content: space-between;
+}
+
+.nmo-ter .mc-left .ter-filter-block__header-item:nth-child(3) .ter-filter-block__header-text {
+	font-size: 	14px;
+	padding: 10px;
+}
+
+.nmo-ter .mc-left .ter-filter-block__header-item:nth-child(4) .ter-filter-block__header-text {
+	padding: 15px;
+	font-size: 15px;
 }
 
 .nmo-ter .mc-left .ter-filter-block__button {
@@ -2078,34 +2102,57 @@ color:#3d9a2c !important;
 	position: absolute;
 }
 
-.nmo-ter .modal-main,
-.nmo-ter .mc-left,
-.nmo-ter .ter-filter-block
+.nmo-ter .modal-main
 {
 	overflow: hidden;
 	height: 100%;
 }
 
-.nmo-ter form.modal-order-form {
-	overflow: hidden;
+.nmo-ter div.modal-order-form {
+	overflow: scroll;
+	overflow-x: hidden;
 	height: calc(100% - 100px);
+}
+
+.nmo-ter .ter-filter-block {
+	height: calc(100vh - 220px);
+  overflow: hidden;
 }
 
 .nmo-ter .ter-filter-block__body {
 	overflow-y: scroll;
 	overflow-x: hidden;
-	height: calc(100% - 190px);
+	height: calc(100% - 100px);
 }
-/*.ter-filter-block__body::-webkit-scrollbar {
-	width: 10px; 
+
+.ter-filter-block__buttons--wrap--fixed {
+	position: fixed;
+	margin-top: -5px;
+	width: 70%;
+	background-color: #fff;
+	z-index: 12;
+}
+
+.ter-filter-block__buttons--wrap--fixed .ter-filter-block__button {
+	margin-bottom: 10px;
+}
+
+.nmo-ter .ter-filter-block__thumb:nth-child(3) .ter-filter-block__button {
+	font-size: 14px;
+}
+
+.nmo-ter div.modal-order-form::-webkit-scrollbar {
+	width: 0px; 
 	height: 25px;
 	background-color: transparent;
 	border-radius: 5px;
+	display: none;
 }
-.ter-filter-block__body::-webkit-scrollbar-thumb {
+.nmo-ter div.modal-order-form::-webkit-scrollbar-thumb {
 	background-color: #979797;
 	border-radius: 5px;
-}*/
+	display: none;
+}
 
 .nmo-ter .mc-left .ter-filter-block__thumb {
 	display: none;
@@ -2117,4 +2164,46 @@ color:#3d9a2c !important;
 
 .nmo-ter .ter-filter-block__buttons--height {
 	height: auto !important;
+}
+
+
+.modal-alert-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(104,67,58,0.75);
+	z-index: 6000;
+	display: none;
+}
+
+.modal-alert-overlay .modal-alert {
+	display: block;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+}
+
+.modal-thanks-overlay {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(104,67,58,0.75);
+	z-index: 6000;
+	display: none;
+}
+
+.modal-thanks-overlay .modal-thanks {
+	display: block;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
 }
