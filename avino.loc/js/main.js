@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
   let trSlAll = document.querySelectorAll('.ter-slider-block__wrap .ter-slider-block__wrap--img');
   let trSlWrap = document.querySelector('.ter-slider-block__wrap');
-  let trWSl = trSlAll[0].offsetWidth + 45;
+  let trWSl = 875;
   let trLeft = document.querySelector('.ter-slider-block__left');
   let trRight = document.querySelector('.ter-slider-block__right');
   let trCounter = 0;
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
     let trSlAll = document.querySelectorAll('.ter-slider-block__wrap .ter-slider-block__wrap--img');
   let trSlWrap = document.querySelector('.ter-slider-block__wrap');
-  let trWSl = trSlAll[0].offsetWidth + 45;
+  let trWSl = 875;
   // alert('resize ' + trWSl);
   let trLeft = document.querySelector('.ter-slider-block__left');
   let trRight = document.querySelector('.ter-slider-block__right');
