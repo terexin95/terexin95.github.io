@@ -351,7 +351,7 @@ body {
 .ter-slider-block__wrap {
 	display: flex;
 	transition: all .5s ease;
-	width: 91%;
+	width: 1040px;
 	margin: auto;
 	margin-right: 0;
 	transform: translateX(0);
