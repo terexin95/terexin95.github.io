@@ -420,6 +420,12 @@ body {
 	right: 145px;
 }
 
+.mc-right {
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
 .ter-slider-block__nums {
 	display: flex;
 	width: 60px;
