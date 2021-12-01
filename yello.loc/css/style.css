@@ -574,6 +574,17 @@ h2 {
     margin-left: 15px;
     margin-right: 15px; } }
 @media (max-width: 993px) {
+  .slider__button-item:hover, .slider__button-item:active {
+    background-color: transparent;
+    color: #000;
+  }
+  .slider__button-item--active {
+    background-color: #000000 !important;
+    color: #fff !important;  
+  }
+  .slider__item:nth-child(2) .slider__img {
+    margin-top: -20px;
+  }
   .site-header__hum svg:nth-child(2) {
     display: none; }
 

@@ -50,7 +50,10 @@ for (var i = 0; i < slBtn.length; i++) {
 		document.querySelector('.slider__button-item--active').classList.remove('slider__button-item--active');
 		this.classList.add('slider__button-item--active');
 		this.getAttribute('data-sl');
-		document.querySelector('.slider__item--active').classList.remove('.slider__item--active');
+		document.querySelector('.slider__header h2').textContent = this.getAttribute('data-title');
+		for (var i = 0; i < document.querySelectorAll('.slider__item--active').length; i++) {
+			document.querySelectorAll('.slider__item--active')[i].classList.remove('.slider__item--active');
+		}
 		slIAll[this.getAttribute('data-sl')].classList.add('slider__item--active');
 		document.querySelector('.slider__wrap').style.transform = "translateX(-" + this.getAttribute('data-sl') * slI.offsetWidth + 'px)';
 	});
@@ -69,11 +72,35 @@ document.querySelector('.site-header__hum .close').addEventListener('click', fun
 });
 
 document.addEventListener('touchstart', touchStart, false);
-document.addEventListener('touchstart', touchEnd, false);
+document.addEventListener('touchmove', touchEnd, false);
 
 let x1 = null;
 let y1 = null;
 
-function touchStart() {
-	
+function touchStart(event) {
+	const firstTouch = event.touches[0];
+	x1 = firstTouch.clientX;
+	y1 = firstTouch.clientY;
+}
+
+function touchEnd(event) {
+	if (!x1 || !y1) {
+		return false;
+	}
+
+	let x2 = event.touches[0].clientX;
+	let y2 = event.touches[0].clientY;
+
+	let xDiff = x2 - x1;
+	let yDiff = y2 - y1;
+
+	if (Math.abs(xDiff) > Math.abs(yDiff)) {
+		if (xDiff > 0) {
+			slBtn[0].click();
+			console.log('right')
+		} else {
+			slBtn[1].click();
+			console.log('left')
+		}
+	}
 }
