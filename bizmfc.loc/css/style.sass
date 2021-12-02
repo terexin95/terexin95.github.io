@@ -1060,5 +1060,617 @@ button[type=submit]
 			display: block
 			margin: 20px 0
 
+.banner__land
+	margin-top: 0
+	height: 455px
+	padding-top: 5px
+	background-position: center
+	background-repeat: no-repeat
+	.banner__block-text 
+		h1
+			font-size: 52px
+			line-height: 100%
+			margin-bottom: 20px
+		p
+			font-weight: normal
+			font-size: 24px
+			line-height: 135%
+			margin-bottom: 20px
+			max-width: 500px
+		span
+			font-weight: normal
+			font-size: 16px
+			line-height: 135%
+			margin-bottom: 20px
+			display: block
+	.banner__block
+		flex: 0 0 60%
+	.callback-center
+		margin-top: 0
+		width: 200px
+
+.land-notice
+	height: 200px
+	background-color: #32434B
+	.container
+		height: 100%
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		height: 100%
+		justify-content: space-between
+		padding: 0 60px
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			width: 50px
+			background-image: url(../img/leftgray.svg)
+			background-size: contain
+			background-position-y: 3px
+			bottom: 0
+		&::after
+			content: ""
+			position: absolute
+			top: 0
+			right: 0
+			width: 50px
+			background-image: url(../img/rightgray.svg)
+			background-size: contain
+			background-position-y: 3px
+			bottom: 0
+	&__text
+		flex: 0 0 60%
+		p
+			color: #fff
+			font-weight: bold
+			margin-top: 0
+			margin-bottom: 10px
+		span
+			color: #fff
+	&__button
+		flex: 0 0 35%
+		margin-top: 0
+		width: 100%
+		margin: 0
+
+.title-block__bg
+	position: relative
+	.title-block__header
+		position: relative
+		z-index: 1
+	&::after
+		position: absolute
+		letter-spacing: 7px
+		margin-top: 20px
+		right: 0
+		top: 50%
+		transform: translateY(-50%)
+		color: #EFF1F5
+		font-weight: bold
+		font-size: 100px
+		content: "ФРАНШИЗА"
+		text-shadow: 1px 0 0 #D4D4D4, -1px 0 0 #D4D4D4, 0 1px 0 #D4D4D4, 0 -1px 0 #D4D4D4, 1px 1px #D4D4D4, -1px -1px 0 #D4D4D4, 1px -1px 0 #D4D4D4, -1px 1px 0 #D4D4D4
+
+.for-you
+	&__wrap
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&__item
+		flex: 0 0 49%
+		margin-bottom: 20px
+		svg
+			margin-bottom: 20px
+		h3, p
+			margin: 0
+			font-weight: normal
+			font-size: 16px
+			line-height: 135%
+			color: #303030
+			max-width: 480px
+		h3
+			font-weight: bold
+			margin-bottom: 15px
+		&:nth-child(2n)
+			h3, p 
+				max-width: 100%
+
+.franchisee
+	background-image: url(../img/land5.png)
+	background-position: center
+	background-repeat: no-repeat
+	height: 410px
+	color: #fff
+	text-align: center
+	margin-top: 90px
+	.container
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: flex-end
+	.callback-center
+		margin-top: 15px
+		width: 300px
+	&__block
+		max-width: 750px
+		padding: 50px 120px
+		background: #32434B
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			top: 0
+			left: 10px
+			width: 50px
+			background-image: url(../img/leftgray.svg)
+			background-size: contain
+			background-position-y: 3px
+			bottom: 0
+		&::after
+			content: ""
+			position: absolute
+			top: 0
+			right: 10px
+			width: 50px
+			background-image: url(../img/rightgray.svg)
+			background-size: contain
+			background-position-y: 3px
+			bottom: 0
+		p
+			color: #fff
+			margin-top: 5px
+			margin-bottom: 0
+
+.profitably
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	&__item
+		flex: 0 0 32%
+		height: 203px
+		border-bottom: 2px solid #B3906F
+		box-shadow: 0px 6px 30px rgba(12, 54, 73, 0.15), inset 0px -4px 0px #B3906E
+		background-color: #fff
+		box-sizing: border-box
+		padding: 25px
+		margin-bottom: 20px
+		h3, p
+			font-style: normal
+			font-weight: normal
+			font-size: 16px
+			line-height: 135%
+			color: #303030
+		h3
+			margin: 0
+			margin-bottom: 15px
+			font-weight: bold
+		p
+			margin: 0
+
+.notice-dark
+	padding: 55px 70px
+	box-sizing: border-box
+	background: #32434B
+	color: #fff
+	text-align: center
+	position: relative
+	margin-top: 80px
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 10px
+		width: 50px
+		background-image: url(../img/leftgray.svg)
+		background-size: contain
+		background-position-y: 3px
+		bottom: 0
+	&::after
+		content: ""
+		position: absolute
+		top: 0
+		right: 10px
+		width: 50px
+		background-image: url(../img/rightgray.svg)
+		background-size: contain
+		background-position-y: 3px
+		bottom: 0
+	&__block
+		p
+			color: #fff
+			text-align: center
+			justify-content: center
+			max-width: 560px
+			margin: auto
+		h2
+			max-width: 810px
+			margin: auto
+			margin-bottom: 10px
+
+.discovery
+	&__wrap
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&__item
+		flex: 0 0 23.5%
+		box-sizing: border-box
+		height: 195px
+		padding: 30px
+		background: #FFFFFF
+		box-shadow: 0px 6px 30px rgba(12, 54, 73, 0.15), inset 0px -4px 0px #B3906E
+		border-bottom: 2px solid #B3906F
+		margin-bottom: 20px
+	&__header, &__footer
+		font-weight: normal
+		font-size: 16px
+		line-height: 135%
+		color: #000000
+	&__header
+		min-height: 22px
+	&__body
+		font-weight: bold
+		font-size: 30px
+		line-height: 135%
+		margin: 10px 0
+
+.attend
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		padding-left: 50px
+		margin-top: -30px
+	&__block
+		flex: 0 0 51%
+		.callback-center
+			margin-top: 40px
+			margin-left: 0
+			width: 220px
+		ul
+			padding-left: 30px
+			li
+				list-style-type: disc
+				font-weight: normal
+				font-size: 16px
+				line-height: 135%
+	&__img
+		flex: 0 0 44%
+
+.independently
+	&__wrap
+		background: #FFFFFF
+		box-shadow: 0px 4px 20px rgba(12, 54, 73, 0.15)
+		padding: 30px
+		box-sizing: border-box
+	&__header, &__body
+		display: flex
+		flex-wrap: wrap
+	&__body
+		h4
+			margin: 0
+			font-weight: bold
+			font-size: 20px
+			line-height: 135%
+			margin-bottom: 15px
+	&__header
+		border-bottom: 1px solid #B3B3B3
+		padding-bottom: 10px
+		margin-bottom: 20px
+		.independently__our::before, .independently__your::before
+			display: none
+		> div
+			margin-bottom: 0
+		h3
+			margin: 0
+			font-weight: bold
+			font-size: 20px
+			line-height: 135%
+	&__title
+		flex: 0 0 22%
+		padding-right: 35px
+		box-sizing: border-box
+		font-weight: bold
+		font-size: 14px
+		line-height: 135%
+		color: #000000
+		margin-bottom: 20px
+	&__our
+		padding-left: 40px
+		position: relative
+		flex: 0 0 38%
+		box-sizing: border-box
+		font-weight: normal
+		font-size: 14px
+		line-height: 135%
+		padding-right: 25px
+		color: #000000
+		margin-bottom: 20px
+		&::before
+			content: ""
+			width: 30px
+			height: 30px
+			background-image: url(../img/lend1.svg)
+			background-size: cover
+			left: 0
+			top: 0
+			position: absolute
+		h4
+			display: none
+	&__your
+		padding-left: 40px
+		position: relative
+		flex: 0 0 40%
+		box-sizing: border-box
+		font-weight: normal
+		font-size: 14px
+		line-height: 135%
+		color: #000000
+		margin-bottom: 20px
+		&::before
+			content: ""
+			width: 30px
+			height: 30px
+			background-image: url(../img/land2.svg)
+			background-size: cover
+			left: 0
+			top: 0
+			position: absolute
+		h4
+			display: none
+		h3
+			color: #60773D
+
+.earn
+	&__wrap
+		display: flex
+		justify-content: space-between
+	&__item
+		flex: 0 0 200px
+		text-align: center
+	&__num
+		font-weight: bold
+		font-size: 40px
+		line-height: 135%
+		text-align: center
+		color: #303030
+	&__text
+		font-weight: normal
+		font-size: 16px
+		line-height: 135%
+		text-align: center
+		color: #000000
+		margin-top: 5px
+
+.chart
+	img
+		width: 100%
+		height: auto
+
+.profitably--custom
+	.profitably__item
+		flex: 0 0 23.5%
+		height: 235px
+		h3
+			margin-bottom: 10px
+		p
+			color: #3E3E3E
+
+.callback-dark
+	background-color: #32434B
+	margin-top: 80px
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		padding-left: 80px
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			top: 0
+			left: 10px
+			width: 50px
+			background-image: url(../img/leftgray.svg)
+			background-size: contain
+			background-position-y: 3px
+			bottom: 0
+	&__img
+		flex: 0 0 270px
+		margin-right: 40px
+		margin-top: -50px
+		img
+			width: 100%
+			height: auto
+	&__form
+		flex: 0 0 calc(100% - 310px)
+		h2, p
+			text-align: center
+			color: #fff
+			margin: 0
+		p
+			margin-top: 10px
+		form
+			display: flex
+			justify-content: space-between
+			margin-top: 30px
+			input, button
+				flex: 0 0 32.5%
+			input
+				border: 1px solid #FFFFFF
+				background-color: transparent
+				color: #fff
+				margin-bottom: 0
+
+.faq--custom
+	padding: 0
+	margin: 0
+	background-color: transparent
+	.accordion .accordion-content p
+		margin: 20px
+	.accordion
+		max-width: 850px
+		border: 0
+		.accordion-item
+			margin-bottom: 10px
+			border: 0
+			button
+				background-color: #fff
+				border: 0
+				padding-left: 22px
+				box-shadow: 0px 6px 30px rgba(12, 54, 73, 0.15)
+				.icon
+					width: 40px
+					height: 40px
+					border-radius: 100%
+					background-color: #60773D
+					display: flex
+					align-items: center
+					justify-content: center
+					right: 10px
+					top: 8px
+					svg
+						path
+							stroke: #fff
+	.accordion .accordion-item button[aria-expanded='true']
+		border: 0
+	.accordion button[aria-expanded='true'] .icon
+		transform: rotate(-180deg)
+
+.slider--custom
+	.slider__wrap
+		height: 370px
+		max-width: 755px
+		margin: auto
+		background-image: none
+	.slider__item
+		flex: 0 0 100%
+		max-width: 100%
+		align-items: flex-start
+		padding: 40px
+	.slider__btns
+		width: 100%
+	.slider__content
+		max-width: 100%
+	.slider__prev, .slider__next
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		margin-top: -30px
+		&:hover
+			svg
+				circle
+					fill: darken(#60773D, 5%)
+	.slider__prev
+		left: 150px
+	.slider__next
+		right: 150px
+	.slider__btns
+		position: initial
+		margin-top: 30px
+	.slider__dot
+		border-color: #B3906E
+	.slider__dot--active, .slider__dot:hover
+		background-color: #B3906E
+
+.reviews
+	&__header
+		display: flex
+		align-items: center
+		font-weight: bold
+		font-size: 16px
+		line-height: 135%
+		color: #303030
+		margin-bottom: 20px
+		svg, img
+			margin-right: 15px
+	&__content
+		font-weight: normal
+		font-size: 16px
+		line-height: 135%
+		color: #000000
+
+.calculator
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		background-color: #fff
+		padding-left: 145px
+		padding-right: 70px
+		position: relative
+		padding-top: 30px
+		&::before
+			content: ""
+			left: 10px
+			top: 0
+			bottom: 0
+			width: 50px
+			height: 100%
+			background-image: url(../img/left.svg)
+			position: absolute
+		&::after
+			content: ""
+			right: 10px
+			top: 0
+			bottom: 0
+			width: 50px
+			height: 100%
+			background-image: url(../img/right.svg)
+			position: absolute
+	&__block
+		flex: 0 0 400px
+		margin-right: 60px
+		.callback-center
+			margin-left: 0
+			width: 330px
+			margin-top: 40px
+	&__range
+		margin-top: 40px
+		input
+			padding: 0
+		&-text
+			margin-top: 15px
+	&__img
+		flex: 0 0 390px
+		height: 320px
+		position: relative
+		&-text
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			top: 50px
+			color: #fff
+			text-align: center
+			p
+				text-align: center
+				color: #fff
+				justify-content: center
+				font-weight: bold
+				font-size: 22px
+				line-height: 135%
+				margin: 0
+				margin-top: 7px
+				white-space: nowrap
+		img
+			width: 390px
+			height: 320px
+			object-fit: cover
+
+.profitably--custom-icon
+	.callback-center
+		width: 220px
+		margin-top: 40px
+	.profitably__item
+		height: 290px
+		padding-right: 10px
+		svg
+			margin-bottom: 20px
+
+
 @import "acc.scss"
 @import "_media.sass"

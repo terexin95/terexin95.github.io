@@ -127,6 +127,8 @@ if (document.querySelector('select')) {
 
 const items = document.querySelectorAll(".accordion button");
 
+console.log(items.length)
+
 function toggleAccordion() {
   const itemToggle = this.getAttribute('aria-expanded');
   
@@ -176,4 +178,74 @@ if (document.querySelector("input[type='tel']")) {
         input.addEventListener("blur", mask, false);
         input.addEventListener("keydown", mask, false);
     });
+}
+
+
+if (document.querySelector('.calculator__range')) {
+	let range = document.querySelector('.calculator__range input');
+	let client = document.querySelector('.calculator__range-text');
+	let sum = document.querySelector('.calculator__img-text p');
+	range.addEventListener('input', function(){
+		if (this.value == 1) {
+			client.textContent = "1 клиент в день.";
+			sum.textContent = "от 1 234 800 ₽";
+		} else if (this.value == 2) {
+			client.textContent = "2 клиента в день.";
+			sum.textContent = "от 2 469 600 ₽";
+		} else if (this.value == 3) {
+			client.textContent = "3 клиента в день.";
+			sum.textContent = "от 3 704 400 ₽";
+		} else if (this.value == 4) {
+			client.textContent = "4 клиента в день.";
+			sum.textContent = "от 4 939 200 ₽";
+		} else if (this.value == 5) {
+			client.textContent = "5 клиентов в день.";
+			sum.textContent = "от 6 174 000 ₽";
+		} else if (this.value == 6) {
+			client.textContent = "6 клиентов в день.";
+			sum.textContent = "от 7 408 800 ₽";
+		} else if (this.value == 7) {
+			client.textContent = "7 клиентов в день.";
+			sum.textContent = "от 8 643 600 ₽";
+		} else if (this.value == 8) {
+			client.textContent = "8 клиентов в день.";
+			sum.textContent = "от 9 878 400 ₽";
+		} else if (this.value == 9) {
+			client.textContent = "9 клиентов в день.";
+			sum.textContent = "от 11 113 200 ₽";
+		} else if (this.value == 10) {
+			client.textContent = "10 клиентов в день.";
+			sum.textContent = "от 12 348 000 ₽";
+		} else if (this.value == 11) {
+			client.textContent = "11 клиентов в день.";
+			sum.textContent = "от 13 582 800 ₽";
+		} else if (this.value == 12) {
+			client.textContent = "12 клиентов в день.";
+			sum.textContent = "от 14 817 600 ₽";
+		} else if (this.value == 13) {
+			client.textContent = "13 клиентов в день.";
+			sum.textContent = "от 16 052 400 ₽";
+		} else if (this.value == 14) {
+			client.textContent = "14 клиентов в день.";
+			sum.textContent = "от 17 287 200 ₽";
+		} else if (this.value == 15) {
+			client.textContent = "15 клиентов в день.";
+			sum.textContent = "от 18 522 000 ₽";
+		} else if (this.value == 16) {
+			client.textContent = "16 клиентов в день.";
+			sum.textContent = "от 19 756 800 ₽";
+		} else if (this.value == 17) {
+			client.textContent = "17 клиентов в день.";
+			sum.textContent = "от 20 991 600 ₽";
+		} else if (this.value == 18) {
+			client.textContent = "18 клиентов в день.";
+			sum.textContent = "от 22 226 400 ₽";
+		} else if (this.value == 19) {
+			client.textContent = "19 клиентов в день.";
+			sum.textContent = "от 23 461 200 ₽";
+		} else if (this.value == 20) {
+			client.textContent = "20 клиентов в день.";
+			sum.textContent = "от 24 696 000 ₽";
+		}
+	});
 }
