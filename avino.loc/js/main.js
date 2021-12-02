@@ -710,16 +710,22 @@ function callbackTer() {
 callbackTer()
 
 document.querySelector('.nmo-ter div.modal-order-form').addEventListener('scroll', function(){
-  if(this.scrollTop > 250) {
-    for (var i = 0; i <  document.querySelectorAll('.nmo-ter .ter-filter-block__buttons--wrap').length; i++) {
-      document.querySelectorAll('.nmo-ter .ter-filter-block__buttons--wrap')[i].classList.add('ter-filter-block__buttons--wrap--fixed')
-    }
+  // if(this.scrollTop > 1) {
+  //   document.querySelector('.mc-right').style.top = "-22px";
+
+  // } else {
+  //   document.querySelector('.mc-right').style.top = "-27px";
+  //}
+  // if(this.scrollTop > 250) {
+  //   for (var i = 0; i <  document.querySelectorAll('.nmo-ter .ter-filter-block__buttons--wrap').length; i++) {
+  //     document.querySelectorAll('.nmo-ter .ter-filter-block__buttons--wrap')[i].classList.add('ter-filter-block__buttons--wrap--fixed')
+  //   }
     
-  } else {
-    for (var i = 0; i <  document.querySelectorAll('.nmo-ter .ter-filter-block__buttons--wrap').length; i++) {
-      document.querySelectorAll('.nmo-ter .ter-filter-block__buttons--wrap')[i].classList.remove('ter-filter-block__buttons--wrap--fixed')
-    }
-  }
+  // } else {
+  //   for (var i = 0; i <  document.querySelectorAll('.nmo-ter .ter-filter-block__buttons--wrap').length; i++) {
+  //     document.querySelectorAll('.nmo-ter .ter-filter-block__buttons--wrap')[i].classList.remove('ter-filter-block__buttons--wrap--fixed')
+  //   }
+  // }
 })
 
 
