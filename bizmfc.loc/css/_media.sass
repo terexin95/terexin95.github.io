@@ -118,7 +118,129 @@
 		margin-left: 0
 		margin-top: 30px
 
+	//new
+	.banner__land
+		margin-top: 60px
+	.land-notice__text
+		flex: 0 0 100%
+	.land-notice
+		height: auto
+	.land-notice__wrap
+		padding-top: 30px
+		padding-bottom: 30px
+	.land-notice__button
+		margin: auto
+		margin-top: 40px
+	.land-notice__text p
+		justify-content: center
+		text-align: center
+	.land-notice__text span
+		display: block
+		text-align: center
+	.profitably__item
+		height: auto
+	.calculator__wrap
+		justify-content: center
+		padding-left: 70px
+	.calculator__block
+		margin-right: 0
+		flex: 0 0 390px
+	.calculator__block .callback-center
+		margin-left: auto
+	.calculator__img
+		margin-top: 40px
+	.earn__item
+		margin: 20px
+	.earn__wrap
+		flex-wrap: wrap
+		justify-content: center
+	.profitably--custom .profitably__item
+		height: auto
+	.slider--custom .slider__prev
+		left: 10px
+	.slider--custom .slider__next
+		right: 10px
+//new end
+//new
+@media (max-width: 900px)
+	.attend__img
+		display: none
+	.profitably--custom .profitably__item, .discovery__item
+		flex: 0 0 270px
+		margin: 10px
+	.profitably--custom .profitably__wrap, .discovery__wrap
+		justify-content: center
+	.discovery__item
+		height: auto
+//new end
 @media (max-width: 768px)
+	.banner__land
+		height: auto
+		margin-bottom: 30px
+	.banner__land .banner__block
+		flex: 0 0 100%
+	.banner__land
+		background-image: none !important
+	.land-notice__button
+		flex: 0 0 290px
+		width: 290px
+	.franchisee__block
+		padding: 50px 70px
+	.profitably__item
+		flex: 0 0 270px
+		margin: 10px
+	.profitably__wrap
+		justify-content: center
+	.calculator__range-text, .calculator__block > p
+		text-align: center
+	.independently__body
+		.independently__title
+			flex: 0 0 100%
+			margin-bottom: 20px
+			text-align: center
+	.independently__our, .independently__your
+		flex: 0 0 50%
+		margin-bottom: 20px
+		> h4
+			display: block
+	.independently__header
+		display: none
+	.slider--custom .slider__prev
+		display: none
+	.slider--custom .slider__next
+		display: none
+	.callback-dark__form
+		flex: 0 0 100%
+		order: 1
+	.callback-dark__wrap
+		justify-content: center
+		padding-top: 30px
+	.callback-dark__img
+		margin-right: 0
+		margin-top: 30px
+		order: 2
+	.callback-dark__form p
+		max-width: 420px
+		margin: auto
+	.callback-dark__form form
+		max-width: 400px
+		flex-wrap: wrap
+		margin: auto
+		margin-top: 30px
+	.callback-dark__form form input, .callback-dark__form form button
+		flex: 0 0 100%
+	.callback-dark__form form input
+		margin-bottom: 10px
+	.faq--custom .accordion .accordion-item button
+		padding-right: 50px
+		position: relative
+	.faq--custom .accordion .accordion-item button .icon
+		transform: translateY(-50%)
+		top: 50%
+	.faq--custom .accordion button[aria-expanded='true'] .icon
+		transform: translateY(-50%) rotate(-180deg)
+
+
 	.banner_img
 		display: none
 	.banner__block
@@ -171,6 +293,42 @@
 		background-image: none !important
 
 @media (max-width: 586px)
+	.title-block__bg::after
+		display: none
+	.for-you__item
+		flex: 0 0 100%
+	.attend__block
+		flex: 0 0 100%
+	.independently__our, .independently__your
+		flex: 0 0 100%
+	.independently__our
+		padding-right: 0
+	.slider--custom .slider__wrap
+		height: auto
+	.slider--custom .slider__wrap
+		height: 550px
+		.slider__item
+			height: auto
+	.callback-dark__wrap
+		padding-left: 0
+	.callback-dark__wrap::before
+		display: none
+	.independently__your > h4
+		color: #60773D
+	.franchisee
+		height: auto
+	.franchisee__block
+		flex: 0 0 100%
+		padding: 30px 40px
+		box-sizing: border-box
+	.franchisee__block::before, .franchisee__block::after
+		width: 20px
+	.calculator__wrap::before
+		display: none
+	.calculator__wrap::after
+		display: none
+
+
 	.accordion button[aria-expanded='true'] + .accordion-content
 		max-height: 39em
 	.banner__block-text
@@ -231,6 +389,35 @@
 		padding: 0
 
 @media (max-width: 420px)
+	.reviews__content
+		font-size: 15px
+	.slider--custom .slider__item
+		padding: 20px
+	.calculator__block
+		flex: 0 0 100%
+		padding: 0 10px
+	.calculator__block .callback-center
+		width: 220px
+	.banner__land .banner__block-text h1
+		font-size: 28px
+	.banner__land .banner__block-text p
+		font-size: 18px
+	.land-notice__wrap::before, .land-notice__wrap::after
+		width: 20px
+	.land-notice__wrap
+		padding-left: 40px
+		padding-right: 40px
+	.land-notice__button
+		flex: 0 0 100%
+		font-size: 15px
+	.notice-dark
+		padding: 30px 40px
+	.franchisee .callback-center
+		width: 270px
+	.notice-dark::before, .notice-dark::after
+		width: 20px
+	.calculator
+		overflow: hidden
 	.callback-form__form
 		flex: 0 0 100%
 	.modal-callback p
@@ -249,8 +436,39 @@
 		height: 40px
 	.site-footer
 		margin-top: 50px
+	.franchisee .container
+		justify-content: center
+	.franchisee
+		background-image: none
+		margin-top: 40px
+	.attend__wrap
+		padding-left: 15px
+		margin-top: 20px
+	.independently__body .independently__title
+		padding-right: 0
+		padding-left: 40px
+		text-align: left
 
 @media (max-width: 360px)
+	.franchisee
+		overflow: hidden
+	.land-notice__wrap
+		padding-left: 30px
+		padding-right: 30px
+	.land-notice__button
+		font-size: 14px
+	.reviews__header svg, .reviews__header img
+		text-align: center
+		margin-right: 0
+		display: block
+		margin: auto
+		margin-bottom: 20px
+	.independently__wrap
+		padding: 20px
+	.slider--custom .slider__wrap
+		height: 670px
+	.reviews__header
+		flex-wrap: wrap
 	.modal-callback
 		padding: 30px 40px
 	.modal-callback h2::before
