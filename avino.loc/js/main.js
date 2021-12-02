@@ -372,8 +372,8 @@ if(document.querySelector('.ter-filter-block__body')) {
 
 
 
-if (document.querySelector('ter-filter-block__button--none')) {
-  const anchors = document.querySelectorAll('.ter-filter-block__button--none')
+if (document.querySelector('.ter-filter-block__button')) {
+  const anchors = document.querySelectorAll('.ter-filter-block__button')
   for (let anchor of anchors) {
     anchor.addEventListener('click', function (e) {
       e.preventDefault()
@@ -398,6 +398,7 @@ if (document.querySelector('.nmo-ter .mc-left')) {
   for (let i = 0; i < cloneProducts.querySelectorAll('.ter-filter-block__button').length; i++) {
     cloneProducts.querySelectorAll('.ter-filter-block__button')[i].addEventListener('click', function(e){
       e.preventDefault();
+      document.querySelector('.nmo-ter div.modal-order-form').scrollTop = 0;
       let attr = this.getAttribute('data-category-ter');
       document.querySelector('.nmo-ter .ter-filter-block__body').scrollTop = 0;
       let parent = this.parentElement.parentElement.parentElement.parentElement;
@@ -413,7 +414,6 @@ if (document.querySelector('.nmo-ter .mc-left')) {
   }
   for (var i = 0; i < cloneProducts.querySelectorAll('.ter-filter-block__header-item').length; i++) {
     cloneProducts.querySelectorAll('.ter-filter-block__header-item')[i].addEventListener('click', function(){
-      document.querySelector('.nmo-ter .ter-filter-block__body').scrollTop = 0;
       cloneProducts.querySelector('.ter-filter-block__header-item--active').classList.remove('ter-filter-block__header-item--active');
       this.classList.add('ter-filter-block__header-item--active');
       let attr = this.getAttribute('data-category-js');
@@ -709,8 +709,8 @@ function callbackTer() {
 
 callbackTer()
 
-document.querySelector('.nmo-ter .ter-filter-block__body').addEventListener('scroll', function(){
-  if(this.scrollTop > 50) {
+document.querySelector('.nmo-ter div.modal-order-form').addEventListener('scroll', function(){
+  if(this.scrollTop > 250) {
     for (var i = 0; i <  document.querySelectorAll('.nmo-ter .ter-filter-block__buttons--wrap').length; i++) {
       document.querySelectorAll('.nmo-ter .ter-filter-block__buttons--wrap')[i].classList.add('ter-filter-block__buttons--wrap--fixed')
     }
@@ -721,3 +721,127 @@ document.querySelector('.nmo-ter .ter-filter-block__body').addEventListener('scr
     }
   }
 })
+
+
+let terDate = new Date();
+let terMonth = terDate.getMonth();
+let terDay = terDate.getDate();
+let terMonthArr = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентебря', 'октября', 'ноября', 'декабря'];
+let terMonthArrNum = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
+console.log(terDay + ' ' + terMonthArr[terMonth]);
+
+let terYear = terDate.getFullYear()
+
+Date.prototype.daysInMonth = function() {
+  return 32 - new Date(this.getFullYear(), this.getMonth(), 32).getDate();
+};
+
+let terMonthMaxDay = terDate.daysInMonth()
+
+let terMonthNext;
+
+if (terDate.getMonth() + 1 == 12) {
+  terMonthNext = 0;
+} else {
+  terMonthNext = terDate.getMonth() + 1
+}
+
+console.log(terYear);
+
+function terDateText(terDay, terMonth, terMonthNext, terMonthArr, terYear, terMonthArrNum) {
+  let terTextSale;
+  let terTextDate;
+  if (terDay < 3) {
+    terTextSale = "Скидка до 3 " + terMonthArr[terMonth] + ' ' + terYear;
+    terTextDate = '03.' + terMonthArrNum[terMonth] + '.' + terYear
+  } else if (terDay < 6) {
+    terTextSale = "Скидка до 6 " + terMonthArr[terMonth] + ' ' + terYear;
+    terTextDate = '06.' + terMonthArrNum[terMonth] + '.' + terYear
+  } else if (terDay < 9) {
+    terTextSale = "Скидка до 9 " + terMonthArr[terMonth] + ' ' + terYear;
+    terTextDate = '09.' + terMonthArrNum[terMonth] + '.' + terYear
+  } else if (terDay < 12) {
+    terTextSale = "Скидка до 12 " + terMonthArr[terMonth] + ' ' + terYear;
+    terTextDate = '12.' + terMonthArrNum[terMonth] + '.' + terYear
+  } else if (terDay < 15) {
+    terTextSale = "Скидка до 15 " + terMonthArr[terMonth] + ' ' + terYear;
+    terTextDate = '15.' + terMonthArrNum[terMonth] + '.' + terYear
+  } else if (terDay < 18) {
+    terTextSale = "Скидка до 18 " + terMonthArr[terMonth] + ' ' + terYear;
+    terTextDate = '18.' + terMonthArrNum[terMonth] + '.' + terYear
+  } else if (terDay < 21) {
+    terTextSale = "Скидка до 21 " + terMonthArr[terMonth] + ' ' + terYear;
+    terTextDate = '21.' + terMonthArrNum[terMonth] + '.' + terYear
+  } else if (terDay < 24) {
+    terTextSale = "Скидка до 24 " + terMonthArr[terMonth] + ' ' + terYear;
+    terTextDate = '24.' + terMonthArrNum[terMonth] + '.' + terYear
+  } else if (terDay < 27) {
+    terTextSale = "Скидка до 27 " + terMonthArr[terMonth] + ' ' + terYear;
+    terTextDate = '27.' + terMonthArrNum[terMonth] + '.' + terYear
+  } else if (terDay >= 27) {
+    if (terMonthNext == 0) {
+      terYear += 1;
+      terTextSale = "Скидка до 1 " + terMonthArr[terMonthNext] + ' ' + terYear;
+      terTextDate = '01.' + terMonthArrNum[terMonthNext] + '.' + terYear
+    } else {
+      terTextSale = "Скидка до 1 " + terMonthArr[terMonthNext] + ' ' + terYear;
+      terTextDate = '01.' + terMonthArrNum[terMonth] + '.' + terYear
+    }
+  }
+  let terProductsBlockDate = document.querySelectorAll('.ter-products-block__date');
+  for (var i = 0; i < terProductsBlockDate.length; i++) {
+    terProductsBlockDate[i].textContent = terTextSale
+  }
+  let terProductOtherItemTime = document.querySelectorAll('.ter-product-other__item-time');
+  for (var i = 0; i < terProductOtherItemTime.length; i++) {
+    terProductOtherItemTime[i].textContent = terTextDate;
+  }
+  let terDateStyle = document.createElement('style');
+  terDateStyle.innerHTML += `.nmo-ter .mc-left .ter-products-block__price:after {content: "${terTextDate}"}`;
+  document.querySelector('body').append(terDateStyle);
+}
+
+terDateText(terDay, terMonth, terMonthNext, terMonthArr, terYear, terMonthArrNum);
+
+// selector of all videos on the page
+const tervideos = document.querySelectorAll('.tervideo');
+
+// generate video url
+let tergenerateUrl = function(id) {
+  let query = '?rel=0&showinfo=0&autoplay=1';
+
+  return 'https://www.youtube.com/embed/' + id + query;
+};
+
+// creating iframe
+let tercreateIframe = function(id) {
+  let iframe = document.createElement('iframe');
+
+  iframe.setAttribute('allowfullscreen', '');
+  iframe.setAttribute('allow', 'autoplay; encrypted-media');
+  iframe.setAttribute('src', tergenerateUrl(id));
+
+  return iframe;
+};
+
+// main code
+tervideos.forEach((el) => {
+  let videoHref = el.getAttribute('data-video');
+
+  let deletedLength = 'https://youtu.be/'.length;
+
+  let videoId = videoHref.substring(deletedLength, videoHref.length);
+
+  let img = el.querySelector('img');
+  let youtubeImgSrc = 'https://i.ytimg.com/vi/' + videoId + '/maxresdefault.jpg';
+  img.setAttribute('src', youtubeImgSrc);
+
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    let iframe = tercreateIframe(videoId);
+    el.querySelector('img').remove();
+    el.appendChild(iframe);
+    el.querySelector('button').remove();
+  });
+});
