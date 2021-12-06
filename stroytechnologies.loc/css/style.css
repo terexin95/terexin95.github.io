@@ -403,7 +403,11 @@ h3 {
     .slider__item:nth-child(1) {
       display: flex; }
   .slider__content {
-    max-width: 360px; }
+    max-width: 100%; }
+   .slider__content img {
+   	width: 100%;
+   	height: auto;
+   }
   .slider__btns {
     position: absolute;
     right: 0;
