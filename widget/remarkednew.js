@@ -44,27 +44,7 @@ function widgetRemarked(options) {
     let ddMax = +dd + 5;
     let todayMax = yyyy + '-' + mm + '-' + ddMax;
 
-    let dateSelect = document.createElement('select');
-    for (var i = 0; i < 5; i++) {
-        let arr = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентебря', 'октября', 'ноября', 'декабря'];
-        let arr1 = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
-        let date = new Date();
-        date.setDate(date.getDate() + i);
-        let option = document.createElement('option');
-        if (i == 0) {
-            option.setAttribute('selected', 'selected');
-        }
-        let day = date.getDate();
 
-        if (day < 10) {
-          day = day.toString();
-          day = '0' + day;
-        }
-        option.setAttribute('value', day + '.' + arr1[date.getMonth()] + '.' + date.getFullYear())
-        option.textContent = day + ' ' + arr[date.getMonth()] + ' ' + date.getFullYear();
-        dateSelect.append(option);
-    }
-    dateSelect.setAttribute('id', 'start');
 
 
 
@@ -120,8 +100,8 @@ function widgetRemarked(options) {
                     </div>
                     <div class="remarked-widget-row">
                         <div class="remarked-widget-column">
-                            <div class="remarked-widget-title clickDate">Выберите дату</div>
-                           
+                            <div class="remarked-widget-title">Выберите дату</div>
+                            <select id="start"><option selected="selected" value="07.12.2021">07 декабря 2021</option><option value="08.12.2021">08 декабря 2021</option><option value="09.12.2021">09 декабря 2021</option><option value="10.12.2021">10 декабря 2021</option><option value="11.12.2021">11 декабря 2021</option></select>
                         </div>
                         <div class="remarked-widget-column">
                             <div class="remarked-widget-title">Количество гостей</div>
@@ -214,9 +194,25 @@ function widgetRemarked(options) {
         remarkedOpenWidget[i].addEventListener('click', function(){
             remarkedWidgetClassic.classList.add('remarked-widget-active');
             remarkedWidgetClassic.classList.remove('remarked-widget-none');
-            for (var i = 0; i < document.querySelectorAll('.clickDate').length; i++) {
-                document.querySelectorAll('.clickDate')[i].after(dateSelect);
-            }
+                let dateSelect = document.querySelector('#start');
+                let option = dateSelect.querySelectorAll('option')
+                for (var i = 0; i < option.length; i++) {
+                    let arr = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентебря', 'октября', 'ноября', 'декабря'];
+                    let arr1 = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
+                    let date = new Date();
+                    date.setDate(date.getDate() + i);
+                    if (i == 0) {
+                        option[i].setAttribute('selected', 'selected');
+                    }
+                    let day = date.getDate();
+
+                    if (day < 10) {
+                      day = day.toString();
+                      day = '0' + day;
+                    }
+                    option[i].setAttribute('value', day + '.' + arr1[date.getMonth()] + '.' + date.getFullYear())
+                    option[i].textContent = day + ' ' + arr[date.getMonth()] + ' ' + date.getFullYear();
+                }
 
             let remarkedWidgetRoom = remarkedWidgetClassic.querySelectorAll('.remarked-widget-room');
             for (let index = 0; index < remarkedWidgetRoom.length; index++) {
