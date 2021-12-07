@@ -120,7 +120,7 @@ function widgetRemarked(options) {
                     </div>
                     <div class="remarked-widget-row">
                         <div class="remarked-widget-column">
-                            <div class="remarked-widget-title">Выберите дату</div>
+                            <div class="remarked-widget-title" id="clickDate">Выберите дату</div>
                         </div>
                         <div class="remarked-widget-column">
                             <div class="remarked-widget-title">Количество гостей</div>
