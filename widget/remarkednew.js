@@ -193,7 +193,7 @@ function widgetRemarked(options) {
             remarkedWidgetClassic.classList.add('remarked-widget-active');
             remarkedWidgetClassic.classList.remove('remarked-widget-none');
             remarkedWidgetClassic.classList.add('remarked-widget-' + options.classButton);
-                let numberInputs = document.querySelectorAll('remarked-widget-' + options.classButton +' .remarked-quantity');
+                let numberInputs = document.querySelectorAll('.remarked-widget-' + options.classButton + ' .remarked-quantity');
 
                     if (numberInputs.length > 0) {
                         numberInputs.forEach((el, index) => {
