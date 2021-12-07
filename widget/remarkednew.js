@@ -104,7 +104,7 @@ function widgetRemarked(options) {
                         <div class="remarked-widget-column">
                             <div class="remarked-widget-title">Количество гостей</div>
                             <div class="remarked-quantity">
-                            <input type="number" value="1" readonly>
+                            <input type="number" readonly>
                             </div>
                         </div>
                     </div>
