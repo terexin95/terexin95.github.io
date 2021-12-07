@@ -194,6 +194,7 @@ function widgetRemarked(options) {
         remarkedOpenWidget[i].addEventListener('click', function(){
             remarkedWidgetClassic.classList.add('remarked-widget-active');
             remarkedWidgetClassic.classList.remove('remarked-widget-none');
+            console.log(1)
                 let dateSelect = document.querySelector('#start');
                 let option = dateSelect.querySelectorAll('option')
                 for (var i = 0; i < option.length; i++) {
