@@ -120,8 +120,8 @@ function widgetRemarked(options) {
                     </div>
                     <div class="remarked-widget-row">
                         <div class="remarked-widget-column">
-                            <div class="remarked-widget-title">Выберите дату</div>
-                            ${dateSelect}
+                            <div class="remarked-widget-title clickDate">Выберите дату</div>
+                           
                         </div>
                         <div class="remarked-widget-column">
                             <div class="remarked-widget-title">Количество гостей</div>
@@ -214,7 +214,7 @@ function widgetRemarked(options) {
         remarkedOpenWidget[i].addEventListener('click', function(){
             remarkedWidgetClassic.classList.add('remarked-widget-active');
             remarkedWidgetClassic.classList.remove('remarked-widget-none');
-            //document.querySelector('#clickDate').after(dateSelect);
+            document.querySelector('.clickDate').after(dateSelect);
 
             let remarkedWidgetRoom = remarkedWidgetClassic.querySelectorAll('.remarked-widget-room');
             for (let index = 0; index < remarkedWidgetRoom.length; index++) {
