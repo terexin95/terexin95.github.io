@@ -214,7 +214,9 @@ function widgetRemarked(options) {
         remarkedOpenWidget[i].addEventListener('click', function(){
             remarkedWidgetClassic.classList.add('remarked-widget-active');
             remarkedWidgetClassic.classList.remove('remarked-widget-none');
-            document.querySelector('.clickDate').after(dateSelect);
+            for (var i = 0; i < document.querySelectorAll('.clickDate').length; i++) {
+                document.querySelectorAll('.clickDate')[i].after(dateSelect);
+            }
 
             let remarkedWidgetRoom = remarkedWidgetClassic.querySelectorAll('.remarked-widget-room');
             for (let index = 0; index < remarkedWidgetRoom.length; index++) {
