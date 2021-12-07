@@ -89,3 +89,10 @@ if (document.querySelector('.open__modal__callback')) {
 		document.querySelector('body').style.overflow = "auto";
 	})
 }
+
+if (document.querySelector('.header-mobile__humburger')) {
+	document.querySelector('.header-mobile__humburger').addEventListener('click', function(){
+		document.querySelector('.mobile-menu').classList.toggle('mobile-menu--active');
+		document.querySelector('body').classList.toggle('hidden');
+	});
+}

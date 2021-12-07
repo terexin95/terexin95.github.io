@@ -6,10 +6,79 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="fonts/stylesheet.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
 	<title>Document</title>
 </head>
 <body>
+
+	<div class="header-mobile">
+		<a href="#">
+			<img src="img/logo.png" alt="">
+		</a>
+		<div class="header-mobile__humburger">
+			<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><rect y="9" width="20" height="2"></rect><rect y="3" width="20" height="2"></rect><rect y="15" width="20" height="2"></rect></svg>
+		</div>
+	</div>
+
+	<div class="mobile-menu">
+		<div class="mobile-menu__wrap">
+			<div class="site-header__work">
+				Работаем: <br>
+				пн-пт: 8:00 - 17:00
+			</div>
+			<div class="site-header__phone">
+				<svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M2.61444 6.26093C3.65444 8.53545 5.33 10.392 7.37389 11.5574L8.96278 9.78924C9.15778 9.57224 9.44667 9.4999 9.69944 9.59635C10.5083 9.89372 11.3822 10.0545 12.2778 10.0545C12.675 10.0545 13 10.4161 13 10.8582V13.6631C13 14.1052 12.675 14.4669 12.2778 14.4669C5.49611 14.4669 0 8.35059 0 0.803714C0 0.361671 0.325 0 0.722222 0H3.25C3.64722 0 3.97222 0.361671 3.97222 0.803714C3.97222 1.80836 4.11667 2.77281 4.38389 3.67297C4.46333 3.95427 4.40556 4.26772 4.20333 4.49276L2.61444 6.26093Z" fill="#78b030"></path>
+				</svg>
+				<a href="tel:+790000000">8-804-333-55-35</a>
+				<span>
+					Звонок по России бесплатный
+				</span>
+			</div>
+			<div class="site-header__callback open__modal__callback">
+				Заказать звонок
+			</div>
+			<ul>
+				<li>
+					<a href="#">Главная</a>
+				</li>
+				<li class="has-sub-menu">
+					<a href="#">Техника</a>
+					<ul class="sub-menu">
+						<li><a href="#"><img src="img/tech/1.png" alt="">Фронтальные погрузчики</a></li>
+						<li><a href="#"><img src="img/tech/2.png" alt="">Бульдозеры</a></li>
+						<li><a href="#"><img src="img/tech/3.png" alt="">Экскаваторы-погрузчики</a></li>
+						<li><a href="#"><img src="img/tech/4.png" alt="">Грохоты</a></li>
+						<li><a href="#"><img src="img/tech/5.png" alt="">Телескопические погрузчики</a></li>
+						<li><a href="#"><img src="img/tech/6.png" alt="">Дробилки</a></li>
+						<li><a href="#"><img src="img/tech/7.png" alt="">Минипогрузчики</a></li>
+						<li><a href="#"><img src="img/tech/8.png" alt="">Шредеры</a></li>
+						<li><a href="#"><img src="img/tech/9.png" alt="">Карьерные самосвалы</a></li>
+						<li><a href="#"><img src="img/tech/10.png" alt="">Краны</a></li>
+						<li><a href="#"><img src="img/tech/11.png" alt="">Дорожные катки</a></li>
+						<li><a href="#"><img src="img/tech/12.png" alt="">Самосвалы</a></li>
+						<li><a href="#"><img src="img/tech/13.png" alt="">Прочее дорожное строительное оборудование</a></li>
+						<li><a href="#"><img src="img/tech/14.png" alt="">Экскаваторы</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Запчасти</a>
+				</li>
+				<li>
+					<a href="#">Доставка</a>
+				</li>
+				<li>
+					<a href="#">О компании</a>
+				</li>
+				<li>
+					<a href="#">Контакты</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
 	<header class="site-header">
 		<div class="site-header__container">
 			<div class="site-header__logo">
@@ -27,7 +96,7 @@
 			</div>
 			<div class="site-header__phone">
 				<svg width="13" height="15" viewBox="0 0 13 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M2.61444 6.26093C3.65444 8.53545 5.33 10.392 7.37389 11.5574L8.96278 9.78924C9.15778 9.57224 9.44667 9.4999 9.69944 9.59635C10.5083 9.89372 11.3822 10.0545 12.2778 10.0545C12.675 10.0545 13 10.4161 13 10.8582V13.6631C13 14.1052 12.675 14.4669 12.2778 14.4669C5.49611 14.4669 0 8.35059 0 0.803714C0 0.361671 0.325 0 0.722222 0H3.25C3.64722 0 3.97222 0.361671 3.97222 0.803714C3.97222 1.80836 4.11667 2.77281 4.38389 3.67297C4.46333 3.95427 4.40556 4.26772 4.20333 4.49276L2.61444 6.26093Z" fill="#FEB300"></path>
+					<path d="M2.61444 6.26093C3.65444 8.53545 5.33 10.392 7.37389 11.5574L8.96278 9.78924C9.15778 9.57224 9.44667 9.4999 9.69944 9.59635C10.5083 9.89372 11.3822 10.0545 12.2778 10.0545C12.675 10.0545 13 10.4161 13 10.8582V13.6631C13 14.1052 12.675 14.4669 12.2778 14.4669C5.49611 14.4669 0 8.35059 0 0.803714C0 0.361671 0.325 0 0.722222 0H3.25C3.64722 0 3.97222 0.361671 3.97222 0.803714C3.97222 1.80836 4.11667 2.77281 4.38389 3.67297C4.46333 3.95427 4.40556 4.26772 4.20333 4.49276L2.61444 6.26093Z" fill="#78b030"></path>
 				</svg>
 				<a href="tel:+790000000">8-804-333-55-35</a>
 				<span>
@@ -129,43 +198,46 @@
 			</ul>
 		</div>
 	</div>
-	<div class="container">
-		<h2>Каталог техники</h2>
-	</div>
-	<div class="catalog-category">
-		<div class="catalog-category__wrap">
-			<a href="#" class="catalog-category__item">
-				<img src="img/tech/1.png" width="200" height="160" alt="">
-				Фронтальные погрузчики
-			</a>
-			<a href="#" class="catalog-category__item">
-				<img src="img/tech/2.png" width="200" height="160" alt="">
-				Минипогрузчики
-			</a>
-			<a href="#" class="catalog-category__item">
-				<img src="img/tech/3.png" width="200" height="160" alt="">
-				Дорожные катки
-			</a>
-			<a href="#" class="catalog-category__item">
-				<img src="img/tech/4.png" width="200" height="160" alt="">
-				Самосвалы
-			</a>
-			<a href="#" class="catalog-category__item">
-				<img src="img/tech/5.png" width="200" height="160" alt="">
-				Грохоты
-			</a>
-			<a href="#" class="catalog-category__item">
-				<img src="img/tech/6.png" width="200" height="160" alt="">
-				Дробилки
-			</a>
-			<a href="#" class="catalog-category__item">
-				<img src="img/tech/7.png" width="200" height="160" alt="">
-				Карьерные самосвалы
-			</a>
-			<a href="#" class="catalog-category__item">
-				<img src="img/tech/8.png" width="200" height="160" alt="">
-				Экскаваторы
-			</a>
+	<div class="catalog-category__container">
+		<div class="container catalog-category__header">
+			<h2>Каталог техники</h2>
+			<a href="#" class="catalog-category__button">Все категории</a>
+		</div>
+		<div class="catalog-category">
+			<div class="catalog-category__wrap">
+				<a href="#" class="catalog-category__item">
+					<img src="img/tech/1.png" width="200" height="160" alt="">
+					Фронтальные погрузчики
+				</a>
+				<a href="#" class="catalog-category__item">
+					<img src="img/tech/2.png" width="200" height="160" alt="">
+					Минипогрузчики
+				</a>
+				<a href="#" class="catalog-category__item">
+					<img src="img/tech/3.png" width="200" height="160" alt="">
+					Дорожные катки
+				</a>
+				<a href="#" class="catalog-category__item">
+					<img src="img/tech/4.png" width="200" height="160" alt="">
+					Самосвалы
+				</a>
+				<a href="#" class="catalog-category__item">
+					<img src="img/tech/5.png" width="200" height="160" alt="">
+					Грохоты
+				</a>
+				<a href="#" class="catalog-category__item">
+					<img src="img/tech/6.png" width="200" height="160" alt="">
+					Дробилки
+				</a>
+				<a href="#" class="catalog-category__item">
+					<img src="img/tech/7.png" width="200" height="160" alt="">
+					Карьерные самосвалы
+				</a>
+				<a href="#" class="catalog-category__item">
+					<img src="img/tech/8.png" width="200" height="160" alt="">
+					Экскаваторы
+				</a>
+			</div>
 		</div>
 	</div>
 	<div class="vantage">
