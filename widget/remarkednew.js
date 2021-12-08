@@ -154,7 +154,6 @@ function widgetRemarked(options) {
     let remarkedDescriptions = remarkedWidgetClassic.querySelectorAll('.remarked-widget-info');
 
     for (let i = 0; i < remarkedDescriptions.length; i++) {
-        remarkedDescriptions[i].style.display = "none"
         remarkedDescriptions[i].addEventListener('click', function(e){
             e.preventDefault();
             let dremarkedDescriptionsText = document.createElement('div');
@@ -163,27 +162,14 @@ function widgetRemarked(options) {
 
                     <div class="dremarkedDescriptionsText__close">&#10006;</div>
                     <div class="dremarkedDescriptionsText__wrap">
-                        <strong>Мы бронируем столики на 2 часа. Если вам нужно больше времени – позвоните нам.</strong>
+                        Онлайн мы бронируем столики на 2 часа. Если вам нужно больше времени / ваша компания больше 6 человек / у вас есть определённые пожелания по столику - позвоните нам по телефону <a href="tel:+78129028000">+78129028000</a>
                         <br><br>
-                        Мы разносторонние и многоуровневые – у нас есть высокие столики с высокими стульями, столики у окон, столики около растений и столики в тихих уголках. Позвоните и расскажите о столике своей мечты, а мы постараемся найти вариант, который подойдёт лучше всего. Вот номер: <a href="tel:+74957403034">+7 (495) 740-30-34</a>
+                        В каждом ресторане есть столы, которые не бронируются, чтобы небольшие компании могли попасть к нам спонтанно. Но без брони, возможно, придется подождать.
                         <br><br>
-                        Мы любим наше вино и десерты, но понимаем тех, кто хочет прийти со «своим». Сбор за бутылку вина (объемом 0.75 литра) составит 500 рублей, за литр крепкого алкоголя – 800 рублей. Пожалуйста, возьмите с собой чек – так надо по закону.
-                        <br><br>
-                        Большие компании – это супер. Если вас будет больше чем шестеро, то позвоните нам по телефону, подумаем, как вместить всех!
-                        <br><br>
-                        Мы dog-friendly – к нам можно с собаками. Любим собачек. Приходите!
+                        Если вы хотите прийти со своим алкоголем, пробковый сбор за бутылку вина 0,75л составит 500 рублей, а за 1 литр крепкого алкоголя - 800 рублей. Обязательно возьмите с собой чек.
                     </div>
             `;
             document.querySelector('body').append(dremarkedDescriptionsText);
-            let remarkedDescriptionsText__close = remarkedWidgetClassic.querySelectorAll('.dremarkedDescriptionsText__close');
-            console.log(remarkedDescriptionsText__close);
-
-            for (var i = 0; i < remarkedDescriptionsText__close.length; i++) {
-                remarkedDescriptionsText__close[i].addEventListener('click', function(){
-                    //console.log(remarkedDescriptionsText__close);
-                    remarkedWidgetClassic.querySelector('body > .dremarkedDescriptionsText').remove();
-                });
-            }
         });
     }
 
@@ -193,7 +179,15 @@ function widgetRemarked(options) {
         remarkedOpenWidget[i].addEventListener('click', function(){
             remarkedWidgetClassic.classList.add('remarked-widget-active');
             remarkedWidgetClassic.classList.remove('remarked-widget-none');
-            
+            let remarkedDescriptionsText__close = remarkedWidgetClassic.querySelectorAll('.dremarkedDescriptionsText__close');
+            console.log(remarkedDescriptionsText__close);
+
+            for (var i = 0; i < remarkedDescriptionsText__close.length; i++) {
+                remarkedDescriptionsText__close[i].addEventListener('click', function(){
+                    //console.log(remarkedDescriptionsText__close);
+                    remarkedWidgetClassic.querySelector('body > .dremarkedDescriptionsText').remove();
+                });
+            }
 
                 let dateSelect = document.querySelector('.remarked-widget-' +  options.classButton + ' #start');
                 let option = dateSelect.querySelectorAll('option');
