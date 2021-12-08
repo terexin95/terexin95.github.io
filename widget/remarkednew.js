@@ -237,7 +237,6 @@ function widgetRemarked(options) {
 
     remarkedPhone.addEventListener('input', function (e) {
     var x = e.target.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,4})/);
-    console.log(x)
     e.target.value = !x[2] ? x[1] : x[1] + '(' + x[2] + ') ' + x[3] + (x[4] ? '-' + x[4] : '');
     });
 
@@ -419,6 +418,12 @@ function widgetRemarked(options) {
         
 
     let remarkedSucsess = document.createElement('div');
+    let remarkedSucsessStroke = remarkedBodyRooms.guests_count;
+    if (remarkedSucsessStroke == 1) {
+        remarkedSucsessStroke = remarkedSucsessStroke + ' человекa';
+    } else {
+        remarkedSucsessStroke = remarkedSucsessStroke + ' человек';
+    }
     remarkedSucsess.innerHTML += `
         <div class="remarked-widget-classic__step-4">
             <div class="remarked-success-wrap">
@@ -429,8 +434,8 @@ function widgetRemarked(options) {
                 </div>
             </div>
             <div class="remarked-success-text">
-                Вы забронировали столик, будем вас ждать!
-                ${remarkedBodyRooms.date}, ${remarkedBodyRooms.time}, столик на ${remarkedBodyRooms.guests_count} человек
+                Вы забронировали столик, будем вас ждать! <br>
+                ${remarkedBodyRooms.date}, ${remarkedBodyRooms.time}, столик на ${remarkedSucsessStroke}
             </div>
             <div class="remarked-success-button">
                 <button id="remarkedCloseModal">Завершить</button>
@@ -523,7 +528,7 @@ function widgetRemarked(options) {
     });
 
     remarkedPhoneInput.addEventListener('input', function(){
-        if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value.length == 14) {
+        if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value.length == 15) {
             remarkedPhoneInputVal = true;
             remarkedPhoneInputText = remarkedPhoneInput.value;
         } else {
