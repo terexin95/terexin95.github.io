@@ -176,7 +176,7 @@ function widgetRemarked(options) {
             for (var i = 0; i < remarkedDescriptionsText__close.length; i++) {
                 remarkedDescriptionsText__close[i].addEventListener('click', function(){
                     //console.log(remarkedDescriptionsText__close);
-                    remarkedWidgetClassic.querySelector('body > .dremarkedDescriptionsText').remove();
+                    document.querySelector('body > .dremarkedDescriptionsText').remove();
                 });
             }
         });
