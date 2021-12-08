@@ -417,32 +417,6 @@ function widgetRemarked(options) {
     }
         
 
-    let remarkedSucsess = document.createElement('div');
-    let remarkedSucsessStroke = remarkedBodyRooms.guests_count;
-    if (remarkedSucsessStroke == 1) {
-        remarkedSucsessStroke = remarkedSucsessStroke + ' человекa';
-    } else {
-        remarkedSucsessStroke = remarkedSucsessStroke + ' человек';
-    }
-    remarkedSucsess.innerHTML += `
-        <div class="remarked-widget-classic__step-4">
-            <div class="remarked-success-wrap">
-                <div class="circle-border"></div>
-                <div class="circle">
-                    <div class="success"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="remarked-success-text">
-                Вы забронировали столик, будем вас ждать! <br>
-                ${remarkedBodyRooms.date}, ${remarkedBodyRooms.time}, столик на ${remarkedSucsessStroke}
-            </div>
-            <div class="remarked-success-button">
-                <button id="remarkedCloseModal">Завершить</button>
-            </div>
-        </div>
-    `;
-
     function sendReserveRemarked() {
         let remarkedBodyRooms = {
             method: 'CreateReserve',
@@ -494,6 +468,31 @@ function widgetRemarked(options) {
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').style.display="none";
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').style.display="none";
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').style.display="none";
+                let remarkedSucsess = document.createElement('div');
+                let remarkedSucsessStroke = remarkedBodyRooms.guests_count;
+                if (remarkedSucsessStroke == 1) {
+                    remarkedSucsessStroke = remarkedSucsessStroke + ' человекa';
+                } else {
+                    remarkedSucsessStroke = remarkedSucsessStroke + ' человек';
+                }
+                remarkedSucsess.innerHTML += `
+                    <div class="remarked-widget-classic__step-4">
+                        <div class="remarked-success-wrap">
+                            <div class="circle-border"></div>
+                            <div class="circle">
+                                <div class="success"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="remarked-success-text">
+                            Вы забронировали столик, будем вас ждать! <br>
+                            ${remarkedBodyRooms.date}, ${remarkedBodyRooms.time}, столик на ${remarkedSucsessStroke}
+                        </div>
+                        <div class="remarked-success-button">
+                            <button id="remarkedCloseModal">Завершить</button>
+                        </div>
+                    </div>
+                `;
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__body').append(remarkedSucsess);
                 let remarkedCloseModal = remarkedWidgetClassic.querySelector('#remarkedCloseModal');
                 remarkedCloseModal.addEventListener('click', function(){
