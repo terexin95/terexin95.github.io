@@ -170,15 +170,6 @@ function widgetRemarked(options) {
                     </div>
             `;
             document.querySelector('body').append(dremarkedDescriptionsText);
-        });
-    }
-
-    let remarkedOpenWidget = document.querySelectorAll('.'+options.classButton);
-
-    for (var i = 0; i < remarkedOpenWidget.length; i++) {
-        remarkedOpenWidget[i].addEventListener('click', function(){
-            remarkedWidgetClassic.classList.add('remarked-widget-active');
-            remarkedWidgetClassic.classList.remove('remarked-widget-none');
             let remarkedDescriptionsText__close = remarkedWidgetClassic.querySelectorAll('.dremarkedDescriptionsText__close');
             console.log(remarkedDescriptionsText__close);
 
@@ -188,6 +179,15 @@ function widgetRemarked(options) {
                     remarkedWidgetClassic.querySelector('body > .dremarkedDescriptionsText').remove();
                 });
             }
+        });
+    }
+
+    let remarkedOpenWidget = document.querySelectorAll('.'+options.classButton);
+
+    for (var i = 0; i < remarkedOpenWidget.length; i++) {
+        remarkedOpenWidget[i].addEventListener('click', function(){
+            remarkedWidgetClassic.classList.add('remarked-widget-active');
+            remarkedWidgetClassic.classList.remove('remarked-widget-none');
 
                 let dateSelect = document.querySelector('.remarked-widget-' +  options.classButton + ' #start');
                 let option = dateSelect.querySelectorAll('option');
