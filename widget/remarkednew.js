@@ -170,7 +170,7 @@ function widgetRemarked(options) {
                     </div>
             `;
             document.querySelector('body').append(dremarkedDescriptionsText);
-            let remarkedDescriptionsText__close = remarkedWidgetClassic.querySelectorAll('.dremarkedDescriptionsText__close');
+            let remarkedDescriptionsText__close = document.querySelectorAll('.dremarkedDescriptionsText__close');
             console.log(remarkedDescriptionsText__close);
 
             for (var i = 0; i < remarkedDescriptionsText__close.length; i++) {
