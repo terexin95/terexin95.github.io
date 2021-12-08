@@ -469,7 +469,7 @@ function widgetRemarked(options) {
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').style.display="none";
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').style.display="none";
                 let remarkedSucsess = document.createElement('div');
-                let remarkedSucsessStroke = remarkedBodyRooms.guests_count;
+                let remarkedSucsessStroke = remarkedWidgetClassic.querySelector('.remarked-quantity input').value;
                 if (remarkedSucsessStroke == 1) {
                     remarkedSucsessStroke = remarkedSucsessStroke + ' человекa';
                 } else {
@@ -486,7 +486,7 @@ function widgetRemarked(options) {
                         </div>
                         <div class="remarked-success-text">
                             Вы забронировали столик, будем вас ждать! <br>
-                            ${remarkedBodyRooms.date}, ${remarkedBodyRooms.time}, столик на ${remarkedSucsessStroke}
+                            ${remarkedWidgetClassic.querySelector("#start").value}, ${remarkedWidgetClassic.querySelector('.remarked-widget__time--active').textContent}, столик на ${remarkedSucsessStroke}
                         </div>
                         <div class="remarked-success-button">
                             <button id="remarkedCloseModal">Завершить</button>
