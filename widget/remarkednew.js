@@ -429,7 +429,8 @@ function widgetRemarked(options) {
                 </div>
             </div>
             <div class="remarked-success-text">
-                Успешно забронировано
+                Вы забронировали столик, будем вас ждать!
+                ${remarkedBodyRooms.date}, ${remarkedBodyRooms.time}, столик на ${remarkedBodyRooms.guests_count} человек
             </div>
             <div class="remarked-success-button">
                 <button id="remarkedCloseModal">Завершить</button>
