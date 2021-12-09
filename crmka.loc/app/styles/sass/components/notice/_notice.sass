@@ -1,0 +1,71 @@
+.notice
+	position: fixed
+	top: 110px
+	right: 0
+	overflow: hidden
+	display: none
+	&__title
+		font-weight: bold
+		font-size: 25px
+		line-height: 30px
+		color: #fff
+		margin-bottom: 5px
+	&__content
+		display: flex
+		margin-bottom: 12px
+	&__link
+		font-weight: 600
+		font-size: 14px
+		line-height: 18px
+		text-decoration: underline
+		color: #FFFFFF
+		cursor: pointer
+	&__close
+		position: absolute
+		top: 16px
+		right: 16px
+		cursor: pointer
+	&__person	
+		font-weight: normal
+		font-size: 14px
+		line-height: 18px
+		color: #fff
+		margin-right: 25px
+	&__company
+		font-weight: 500
+		font-size: 14px
+		line-height: 18px
+		color: #FFFFFF
+	&__item
+		width: 510px
+		height: 110px
+		background-size: cover
+		box-sizing: border-box
+		padding: 15px 30px
+		margin-bottom: 28px
+		animation-name: noticeAnimation
+		animation-duration: .3s
+		animation-iteration-count: 1
+		position: relative
+		&--green
+			background-image: url(../images/dist/notice-green.png)
+		&--orange
+			background-image: url(../images/dist/notice-orange.png)
+		&--red
+			background-image: url(../images/dist/notice-red.png)
+
+	
+
+@keyframes noticeAnimation
+	0%
+		right: -2000px
+		opacity: 0
+		top: 50px
+		transform: scale(0.1)
+	90%
+		transform: scale(0.5)
+	100%
+		right: 0
+		opacity: 1
+		top: 0
+		transform: scale(1)

@@ -1,0 +1,77 @@
+.statistics
+	&__item
+		background-color: #fff
+		box-sizing: border-box
+		padding: 17px
+		border-radius: 6px
+		font-family: $font2
+		height: 100%
+	&__list
+		li
+			list-style-type: none
+			display: flex
+			justify-content: space-between
+			align-items: center
+			position: relative
+			font-weight: normal
+			font-size: 14px
+			line-height: 18px
+			color: #2F3747
+			&::before
+				content: ""
+				border-bottom: 1px dotted #2F3747
+				width: 100%
+				height: 1px
+				position: absolute
+				bottom: 5px
+			span
+				background-color: #fff
+				position: relative
+				display: inline-block
+			> span
+				> &:nth-child(1)
+					padding-right: 5px
+				> &:nth-child(2)
+					padding-left: 5px
+	&__title
+		font-weight: bold
+		font-size: 14px
+		line-height: 18px
+		text-transform: uppercase
+		color: #2F3747
+		margin-bottom: 20px
+	&__footer
+		font-weight: normal
+		font-size: 18px
+		line-height: 18px
+		text-transform: uppercase
+		color: #2F3747
+		white-space: nowrap
+		margin-top: 23px
+	.progress-bar
+		width: 100%
+		border-radius: 20px
+		background-color: #41B24D
+		height: 5px
+		&__line
+			height: 5px
+			background-color: #FA2D2D
+			margin-left: auto
+			border-radius: 20px
+		&__wrap
+			display: flex
+			justify-content: space-between
+			font-family: $font2
+			margin-top: 10px
+		&__text
+			font-weight: normal
+			font-size: 14px
+			line-height: 18px
+		&__green, &__red
+			font-weight: bold
+			font-size: 14px
+			line-height: 18px
+		&__green
+			color: #41B34D
+		&__red
+			color: #FA2D2D

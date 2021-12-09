@@ -1,0 +1,94 @@
+ul
+	padding-left: 0
+	margin: 0
+
+span.green
+	color: #41B24D
+
+span.red
+	color: #FA2D2D
+
+span.blue
+	color: #2F80ED
+
+.button-show-bid
+	background: #2F3747
+	height: 35px
+	width: 100%
+	line-height: 35px
+	border-radius: 3px
+	color: #FFFFFF
+	font-family: $font
+	font-weight: bold
+	font-size: 10px
+	text-align: center
+	cursor: pointer
+	transition: all .3s ease
+	&:hover
+		background-color: #13161D
+		transition: all .3s ease
+
+.button-status
+	background: #8E99A8
+	border-radius: 13px
+	height: 26px
+	line-height: 26px
+	border-radius: 13px
+	text-align: center
+	font-weight: 500
+	font-size: 13px
+	color: #fff
+	position: relative
+	&-info
+		position: absolute
+		top: -10px
+		right: -3px
+		&:hover
+			.button-status-info-text
+				display: block
+		&-icon
+			width: 20px
+			height: 20px
+			cursor: pointer
+		&-text
+			display: none
+			position: absolute
+			width: 200px
+			height: 27px
+			right: 10px
+			top: -30px
+			font-weight: normal
+			font-size: 13px
+			line-height: 27px
+	&-grey
+		background-color: #8E99A8
+		.button-status-info-icon
+			svg
+				rect
+					fill: #8E99A8
+				circle
+					stroke: #8E99A8
+		.button-status-info-text
+			background: #FFFFFF
+			color: #8E99A8
+			border: 1px solid #8E99A8
+			box-sizing: border-box
+			border-radius: 3px
+	&-orange
+		background-color: #FF8A00
+		.button-status-info-icon
+			svg
+				rect
+					fill: #FF8A00
+				circle
+					stroke: #FF8A00
+		.button-status-info-text
+			background: #FF8A00
+			color: #fff
+			border: 1px solid #FF8A00
+			box-sizing: border-box
+			border-radius: 3px
+	&-blue
+		background-color: #2F80ED
+	&-green
+		background-color: #00BF14

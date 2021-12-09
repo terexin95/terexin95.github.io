@@ -1,0 +1,237 @@
+.table-home
+	margin-bottom: 25px
+	&__footer
+		background-color: #fff
+		border-radius: 0 0 3px 3px
+		padding-top: 35px
+		padding-bottom: 25px
+		padding-left: 25px
+		padding-right: 25px
+	&__company
+		&-name
+			font-style: normal
+			font-weight: 500
+			font-size: 14px
+			line-height: 18px
+			color: #007344
+		&-city
+			font-size: 11px
+			line-height: 17px
+			color: #2F3747
+			font-family: $font
+		&-text
+			font-weight: 600
+			font-size: 9px
+			line-height: 17px
+			font-family: $font
+			color: #2F3747
+			margin-bottom: 5px
+			white-space: nowrap
+	&__new-massege
+		position: relative
+		&-num
+			width: 21px
+			height: 21px
+			position: absolute
+			font-weight: 500
+			font-size: 13px
+			line-height: 21px
+			color: #FFFFFF
+			background: #FF0000
+			border-radius: 100px
+			text-align: center
+			top: -8px
+			right: 0
+	&__link
+		font-weight: 500
+		font-size: 12px
+		line-height: 13px
+		color: #007344
+		text-decoration: underline
+		font-family: $font
+		display: block
+		&:hover, &:active
+			color: darken(#007344, 10%)
+			transition: all .3s ease
+	&__body
+		background-color: #fff
+		font-family: $font2
+	&__title
+		font-weight: normal
+		font-size: 13px
+		line-height: 18px
+		color: #2F3747
+	&__contact
+		&-name
+			font-weight: 500
+			font-size: 14px
+			line-height: 18px
+			color: #252733
+		&-phone
+			font-weight: normal
+			font-size: 14px
+			line-height: 18px
+			color: #252733
+		&-email
+			font-size: 12px
+			line-height: 18px
+			text-decoration: underline
+			color: #007344
+			font-family: $font
+		&-all
+			font-weight: 500
+			font-size: 12px
+			line-height: 18px
+			display: flex
+			align-items: center
+			color: #007344
+			display: flex
+			margin-top: 20px
+			align-items: center
+			cursor: pointer
+			transition: all .3s ease
+			svg
+				margin-left: 5px
+				path
+					transition: all .3s ease
+			&:hover, &:active
+				color: darken(#007344, 10%)
+				transition: all .3s ease
+				svg
+					path
+						fill: darken(#007344, 10%)
+						transition: all .3s ease
+	&__new-partner
+		font-weight: 500
+		font-size: 14px
+		line-height: 18px
+		color: #41B34D
+	&__time
+		font-weight: bold
+		font-size: 14px
+		line-height: 18px
+		color: #BCBCBC
+		margin-bottom: 6px
+		&--orange
+			display: flex
+			color: #FF8A00
+			align-items: center
+			svg
+				margin-left: 5px
+				flex: 0 0 16px
+				margin-top: -4px
+		&--red
+			display: flex
+			color: #FF0000
+			align-items: center
+			svg
+				margin-left: 5px
+				flex: 0 0 14px
+				margin-top: -4px
+		&--green
+			color: #007344
+	&__date
+		font-size: 12px
+		line-height: 18px
+		color: #2F3747
+	&__line
+		display: flex
+		padding: 25px 20px
+		transition: all .3s ease
+		&:nth-child(1), &:nth-child(2)
+			background-color: #D7FFD4
+		&:hover
+			background-color: #ECEFF3
+			transition: all .3s ease
+	&__person
+		font-weight: normal
+		font-size: 14px
+		line-height: 18px
+		color: #252733
+	&__crm
+		padding: 7px 20px
+		background: #FFFFFF
+		border: 1px solid #D7DDE6
+		box-sizing: border-box
+		border-radius: 3px
+		font-family: $font
+		font-weight: 600
+		font-size: 12px
+		text-transform: uppercase
+		display: inline-block
+		&-fensys
+			color: #007344
+			padding: 7px 10px
+		&-f24
+			color: #509844
+	&__head
+		display: flex
+		background-color: #EBEDF1
+		padding: 16px 19px 16px 23px
+		font-family: $font2
+		font-weight: 500
+		font-size: 14px
+		line-height: 18px
+		color: #2F3747
+		align-items: center
+	&__col
+		&-date
+			flex: 0 0 5%
+			max-width: 5%
+			margin-right: 1.6%
+		&-name
+			flex: 0 0 10.8%
+			max-width: 10.8%
+			margin-right: 2.2%
+		&-cannel
+			flex: 0 0 9.8%
+			max-width: 9.8%
+			margin-right: 2.2%
+		&-type
+			flex: 0 0 13.3%
+			max-width: 13.3%
+			margin-right: 3.3%
+		&-partner
+			flex: 0 0 14%
+			max-width: 14%
+			margin-right: 2.7%
+		&-contact
+			flex: 0 0 12.8%
+			max-width: 12.8%
+		&-bid
+			flex: 0 0 12.5%
+			max-width: 12.5%
+			margin-right: 1.7%
+			.table-home__link
+				margin-top: 40px
+		&-status
+			flex: 0 0 8%
+			max-width: 8%
+			.table-home__link
+				margin-top: 37px
+	&__header
+		display: flex
+		justify-content: space-between
+		padding: 25px 25px 20px
+		background-color: #fff
+		border-radius: 3px 3px 0 0
+		&-title
+			font-weight: 600
+			font-size: 22px
+			line-height: 26px
+			color: #252733
+	&__options
+		display: flex
+		&-item
+			display: flex
+			align-items: center
+			margin-left: 25px
+			font-family: $font2
+			font-weight: 500
+			font-size: 12px
+			line-height: 20px
+			cursor: pointer
+			letter-spacing: 0.2px
+			color: #2F3747
+			svg
+				margin-right: 7px

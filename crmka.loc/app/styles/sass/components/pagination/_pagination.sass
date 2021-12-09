@@ -1,0 +1,61 @@
+.pagination
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	&__list, &__buttons
+		display: flex
+		align-items: center
+	&__text
+		font-family: $font3
+		font-size: 14px
+		line-height: 20px
+		letter-spacing: 0.3px
+		color: #6E7681
+		margin-right: 25px
+	&__button
+		cursor: pointer
+		svg
+			vertical-align: bottom
+			path
+				transition: all .3s ease
+		&:hover
+			svg
+				path
+					&:nth-child(1)
+						fill: darken(#ECEFF3, 10%)
+						transition: all .3s ease
+		&-right
+			margin-left: 10px	
+	&__count
+		display: flex
+		align-items: center
+		height: 100%
+		flex: 0 0 220px
+		&-title
+			font-family: $font3
+			font-size: 14px
+			line-height: 20px
+			letter-spacing: 0.3px
+			color: #6E7681
+			margin-right: 5px
+	&__select
+		flex: 0 0 35px
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		select
+			border: 0
+			width: 35px
+			-webkit-appearance: none
+			-moz-appearance: none
+			appearance: none
+			background-color: transparent
+			outline: none
+			cursor: pointer
+			position: absolute
+			font-family: $font3
+			font-weight: normal
+			font-size: 14px
+			line-height: 20px
+			letter-spacing: 0.3px
+			color: #6E7681

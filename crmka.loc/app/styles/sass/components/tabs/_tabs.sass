@@ -1,0 +1,63 @@
+.tabs 
+	max-width: 100%
+	&__button-group 
+		display: flex
+		gap: 7px
+		margin-bottom: 20px
+		li
+			list-style-type: none
+			position: relative
+	&__toggle 
+		appearance: none
+		border: 0px solid #000
+		cursor: pointer
+		font-weight: bold
+		padding: 8px 30px
+		background-color: #2F3747
+		border-radius: 3px
+		list-style-type: none
+		font-weight: 600
+		font-family: $font
+		font-size: 12px
+		line-height: 17px
+		text-align: center
+		color: #FFFFFF
+		position: relative
+		transition: all .3s ease
+		&-num
+			height: 21px
+			background-color: #00BF14
+			line-height: 21px
+			position: absolute
+			display: block
+			padding: 0 8px
+			border-radius: 20px
+			top: - 11px
+			right: 5px
+			font-weight: 500
+			font-size: 13px
+		&::before
+			content: ""
+			background-image: url("data:image/svg+xml,%3Csvg width='29' height='10' viewBox='0 0 29 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29 0.781888C29 0.262419 28.7587 0.0134561 28.2368 0.0134561L0.763157 0.0134573C0.446879 -0.0204544 -4.44867e-07 -0.05509 -4.07836e-07 0.781889L-2.45058e-07 4.46108C-2.22075e-07 4.98055 0.241298 5.22952 0.763158 5.22952L7.63158 5.22952L13.7368 9.84013C14.0215 10.029 14.9311 10.0763 15.2632 9.84013L21.3684 5.22952C21.5107 5.13507 21.9418 5.22952 22.1316 5.22952L28.2368 5.22952C28.7587 5.22952 29 4.98055 29 4.46108L29 0.781888Z' fill='%232F3747'/%3E%3C/svg%3E%0A")
+			width: 30px
+			height: 10px
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			transition: all .3s ease
+			bottom: -5px
+			background-repeat: no-repeat
+		&.active, &:hover, &:active
+			background-color: #007344
+			border: 0px solid #000
+			transition: all .3s ease
+			&::before
+				content: ""
+				transition: all .3s ease
+				background-image: url("data:image/svg+xml,%3Csvg width='29' height='10' viewBox='0 0 29 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29 0.781888C29 0.262419 28.7587 0.0134561 28.2368 0.0134561L0.763157 0.0134573C0.446879 -0.0204544 -4.44867e-07 -0.05509 -4.07836e-07 0.781889L-2.45058e-07 4.46108C-2.22075e-07 4.98055 0.241298 5.22952 0.763158 5.22952L7.63158 5.22952L13.7368 9.84013C14.0215 10.029 14.9311 10.0763 15.2632 9.84013L21.3684 5.22952C21.5107 5.13507 21.9418 5.22952 22.1316 5.22952L28.2368 5.22952C28.7587 5.22952 29 4.98055 29 4.46108L29 0.781888Z' fill='%23007344'/%3E%3C/svg%3E%0A")
+	&__tab-panel 
+		display: none
+		&.active 
+			display: block
+    
+
