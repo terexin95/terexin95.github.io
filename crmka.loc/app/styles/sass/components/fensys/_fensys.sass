@@ -1,6 +1,8 @@
 .fensys
 	height: 100%
 	min-height: 100vh
+	&__humburger, &__mobile-option
+		display: none
 	&__header
 		display: flex
 		justify-content: space-between
@@ -173,7 +175,8 @@
 				path
 					fill: #9FA2B4
 					transition: all .3s ease
-			&--active, &:hover, &:active
+					transition: all .3s ease
+			&--active
 				background-color: #007344
 				color: #fff
 				transition: all .3s ease
@@ -183,6 +186,19 @@
 					path
 						opacity: 1
 						fill: #fff
+						transition: all .3s ease
+			&:hover, &:active
+				background-color: #2F3747
+				color: #fff
+				transition: all .3s ease
+				.fensys__menu-wrap
+					background-color: #2F3747
+				svg
+					path
+						opacity: 1
+						fill: #fff
+						transition: all .3s ease
+
 			&--active
 				&::after
 					opacity: 1

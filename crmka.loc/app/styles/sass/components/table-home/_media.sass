@@ -45,28 +45,51 @@
 		.table-home__head
 			font-size: 12px
 
-@media (max-width: 800px)
+@media (max-width: 1023px)
 	body
+		.table-home__col-partner
+			flex: 0 0 14%
+			max-width: 14%
+		.table-home__col-bid
+			flex: 0 0 14.5%
+			max-width: 14.5%
 		.table-home__time
 			font-size: 7px
+			line-height: 9px
 		.table-home__date
 			font-size: 6px
+			line-height: 9px
 		.table-home__person, .table-home__contact-name, .table-home__contact-phone
 			font-size: 7px
-			line-height: 1.2
+			line-height: 9px
 		.table-home__crm
 			font-size: 6px
+			line-height: 9px
 		.table-home__title
 			font-size: 7px
-			line-height: 1.2
+			line-height: 9px
 		.table-home__new-partner
 			font-size: 7px
-			line-height: 1.2
+			line-height: 9px
 		.table-home__contact-email
 			font-size: 6px
-			line-height: 1.2
+			line-height: 9px
+		.table-home__time--orange svg
+			width: 8px
+			flex: 0 0 8px
+			height: 7px
+			margin-top: 0
+			margin-left: 4px
+		.table-home__time--red svg
+			flex: 0 0 7px
+			height: 7px
+			margin-top: 0
+			margin-left: 4px
 		.table-home__contact-all
-			display: none
+			font-size: 6px
+			margin-top: 7px
+			svg
+				width: 6px
 		.button-show-bid
 			height: 17px
 			line-height: 17px
@@ -87,7 +110,7 @@
 			font-size: 7px
 			line-height: 10px
 			top: 0
-			right: 15px
+			right: 8px
 		.table-home__col-bid .table-home__link
 			margin-top: 20px
 		.table-home__col-status .table-home__link
@@ -115,3 +138,90 @@
 				width: 10px
 		.table-home__header
 			padding: 8px 13px
+		.table-home__head, .pagination__count-title, .pagination__select select, .pagination__text
+			font-size: 7px
+			line-height: 9px
+		.pagination__select svg
+			width: 4px
+		.pagination__select
+			flex: 0 0 18px
+		.pagination__select select
+			width: 18px
+		.pagination__button svg
+			width: 13px
+		.pagination__button-right
+			margin-left: 6px
+		.pagination__text
+			margin-right: 13px
+		.table-home__footer
+			padding: 20px 10px
+		.pagination__count
+			flex: 0 0 100px
+		.pagination__buttons
+			height: 13px
+
+
+@media (max-width: 767px)
+	body
+		.table-home__col-type
+			display: none
+		.table-home__col-date, .table-home__col-cannel, .table-home__col-partner, .table-home__col-contact, .table-home__col-bid, .table-home__col-status
+			flex: 0 0 33%
+			max-width: 33%
+			margin-right: 0
+			order: 1
+			&::before
+				content: "Дата/Время"
+				font-weight: 500
+				font-size: 7px
+				line-height: 9px
+				color: #2F80ED
+		.table-home__col-cannel
+			order: 5
+			&::before
+				content: "Канал получения"
+		.table-home__col-partner
+			order: 2
+			&::before
+				content: "Контрагент"
+		.table-home__col-contact
+			margin-top: -25px
+			order: 6
+			&::before
+				content: "Контакт"
+		.table-home__col-bid
+			order: 3
+			&::before
+				content: "Заявка"
+		.table-home__col-name
+			flex: 0 0 100%
+			max-width: 100%
+			margin-right: 0
+			order: 4
+			&::before
+				content: "От кого"
+				font-weight: 500
+				font-size: 7px
+				line-height: 9px
+				color: #2F80ED
+		.table-home__col-status
+			margin-top: -25px
+			order: 7
+			&::before
+				content: "Статус"
+		.table-home__line
+			flex-wrap: wrap
+			justify-content: space-between
+			border-bottom: 1px solid #96B094
+		.table-home__head
+			display: none
+		.table-home__col-bid .table-home__link
+			display: none
+		.button-status
+			max-width: 45px
+		.button-show-bid
+			max-width: 65px
+			line-height: 19px
+		.table-home__col-status .table-home__link
+			max-width: 50px
+	
