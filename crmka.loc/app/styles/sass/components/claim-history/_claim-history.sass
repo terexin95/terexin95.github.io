@@ -1,0 +1,125 @@
+.claim-history
+	margin: 0 -20px
+	&__header
+		padding: 25px
+		border: 1px solid #D7DDE5
+		box-sizing: border-box
+		border-radius: 3px
+		display: flex
+		margin: 0 -1px
+		font-size: 13px
+		line-height: 18px
+		color: #2F3747
+		font-family: $font2
+	&__date
+		font-family: $font2
+		font-size: 12px
+		line-height: 18px
+		text-align: center
+		color: #2F3747
+		margin-bottom: 10px
+	&__col
+		&-date
+			flex: 0 0 90px
+		&-step
+			flex: 0 0 220px
+		&-status
+			flex: 0 0 calc(100% - 293px)
+			text-align: center
+	&__body
+		padding: 25px
+		height: 290px
+		overflow: hidden
+		overflow-y: scroll
+		direction: rtl
+		margin-bottom: -20px
+	&__line
+		display: flex
+		border-bottom: 1px solid #D7DDE5
+		padding-bottom: 20px
+		margin-bottom: 25px
+		direction: ltr
+	&__inner
+		flex: 0 0 calc(100% - 97px)
+		margin-left: 7px
+		&-inference
+			display: flex
+			align-items: center
+			font-family: $font2
+			font-weight: normal
+			font-size: 14px
+			line-height: 18px
+			color: #252733
+		&-right
+			flex: 0 0 calc(90% - 369px)
+		&-info
+			display: flex
+			margin-left: 10px
+			position: relative
+			&-text
+				display: none
+			&:hover
+				.claim-history__inner-info-text
+					left: 50%
+					transform: translateX(-50%)
+					top: -103px
+					margin-left: -15px
+					font-family: $font2
+					font-weight: normal
+					font-size: 10px
+					line-height: 12px
+					color: #252733
+					display: block
+					position: absolute
+					width: 231px
+					height: 102px
+					overflow: hidden
+					padding: 10px 15px 25px
+					box-sizing: border-box
+					background-image: url("data:image/svg+xml,%3Csvg width='231' height='102' viewBox='0 0 231 102' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M140.593 84.25L131.5 100L122.407 84.25L140.593 84.25Z' fill='white' stroke='%232F3747'/%3E%3Crect x='1.5' y='0.5' width='229' height='87' rx='2.5' fill='white' stroke='%232F3747'/%3E%3Cpath d='M131.5 97L122.407 84.25L140.593 84.25L131.5 97Z' fill='white'/%3E%3C/svg%3E%0A")
+		&-center
+			flex: 0 0 284px
+			max-width: 284px
+		&-range
+			display: flex
+			align-items: center
+			svg
+				margin-right: 5px
+			.loudness
+				flex: 0 0 210px
+		&-left
+			max-width: 85px
+			flex: 0 0 85px
+			display: flex
+			align-items: center
+			justify-content: space-between
+			margin-right: 10%
+		&-circle
+			border-radius: 100%
+			width: 14px
+			height: 14px
+			&--green
+				background-color: #00BF14
+			&--blue
+				background-color: #2F80ED
+		&-text
+			font-weight: normal
+			font-size: 14px
+			line-height: 18px
+			color: #252733
+			font-family: $font2
+		&-time
+			font-weight: normal
+			font-size: 12px
+			line-height: 18px
+			color: #2F3747
+			font-family: $font2
+		&-line
+			display: flex
+			align-items: center
+			border-radius: 3px
+			padding-left: 13px
+			margin-right: -25px
+			margin-bottom: 3px
+			&:hover
+				background-color: #D7FFD4

@@ -1,0 +1,35 @@
+.loudness
+  display: flex
+  input[type=range] 
+    -webkit-appearance: none
+    padding: 0
+    margin: 0
+    width: 100%
+    background-color: #D7DDE6
+
+  input[type="range"]::-moz-range-progress
+    background-color: #43e5f7
+
+
+  input[type=range]:focus 
+    outline: none
+
+  input[type=range]::-webkit-slider-runnable-track 
+    width: 100%
+    height: 3px
+    cursor: pointer
+    background: transparent
+    border-radius: 70px
+
+  input[type=range]::-webkit-slider-thumb 
+    height: 17px
+    width: 51px
+    background: #32434B
+    cursor: pointer
+    -webkit-appearance: none
+    margin-top: -7px
+    border-radius: 3px
+    background-repeat: no-repeat
+    background-position: center
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='7' viewBox='0 0 6 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='2' height='7' fill='white'/%3E%3Crect x='4' width='2' height='7' fill='white'/%3E%3C/svg%3E%0A")
+

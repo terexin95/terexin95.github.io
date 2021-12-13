@@ -1,0 +1,103 @@
+.select-custom
+	display: block
+	width: max-content
+	min-width: 150px
+	position: relative
+	&-manager
+		font-weight: normal
+		max-width: 280px
+		font-size: 16px
+		line-height: 18px
+		font-family: $font2
+		width: 165px
+	&-step
+		width: 280px
+		font-weight: normal
+		max-width: 280px
+		font-size: 16px
+		line-height: 18px
+		font-family: $font2
+	&-folder
+		width: 280px
+		font-weight: normal
+		max-width: 280px
+		font-size: 16px
+		line-height: 18px
+		font-family: $font2
+		.select-custom__active
+			font-weight: bold
+	&-work
+		font-weight: bold
+		font-size: 16px
+		line-height: 18px
+		font-family: $font2
+	&-company
+		font-weight: bold
+		font-size: 16px
+		line-height: 18px
+		display: flex
+		align-items: center
+		color: #007344
+		font-family: $font2
+	select
+		display: none
+	&__wrap
+		border: 1px solid #D7DDE5
+		box-sizing: border-box
+		border-radius: 3px
+		background-color: #fff
+		width: 100%
+		&--active
+			border-color: #41B34D
+			.select-custom__list
+				max-height: 200px
+				transition: all .3s ease
+				border: 1px solid #41B34D
+				border-top: 0 solid #000
+				opacity: 1
+			.select-custom__active:after
+				transform: translateY(-50%) rotate(-180deg)
+				transition: all .3s ease
+				background-color: #EEEFF7
+			.select-custom__active
+				background-color: #EEEFF7
+				transition: all .3s ease
+	&__active
+		padding: 8px
+		position: relative
+		padding-right: 45px
+		transition: all .3s ease
+		white-space: nowrap
+		overflow: hidden
+		width: 100%
+		box-sizing: border-box
+		text-overflow: ellipsis
+		&::after
+			content: ""
+			background-image: url("data:image/svg+xml,%3Csvg width='29' height='29' viewBox='0 0 29 29' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22 12.5058L20.2476 10.7715L14.5429 16.4049L8.83814 10.7715L7.08571 12.5058L14.5429 19.8858L22 12.5058Z' fill='%232F3747'/%3E%3C/svg%3E%0A")
+			width: 29px
+			height: 29px
+			background-color: #fff
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			transition: all .3s ease
+			right: 8px
+			border-radius: 100%
+	&__list
+		max-height: 0
+		opacity: 0
+		transition: all .3s ease
+		overflow: hidden
+		position: absolute
+		background-color: #fff
+		box-sizing: border-box
+		left: 0
+		right: 0
+		top: calc(100% - 1px)
+		z-index: 1
+		&-item
+			padding: 8px
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis

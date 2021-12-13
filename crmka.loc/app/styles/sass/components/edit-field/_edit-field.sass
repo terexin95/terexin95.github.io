@@ -1,0 +1,123 @@
+.edit-field
+	width: calc(100% - 30px)
+	display: flex
+	justify-content: space-between
+	align-items: center
+	position: relative
+	margin-bottom: 25px
+	&__textarea
+		width: 100%
+		textarea
+			max-width: 310px
+			width: 90%
+			margin-right: 15px
+			border-color: #9091A0
+			padding: 8px
+			font-weight: normal
+	&__create
+		font-weight: 500
+		font-size: 13px
+		line-height: 13px
+		text-decoration-line: underline
+		color: #2F80ED
+		transition: all .3s ease
+		&:hover, &:active
+			color: darken(#2F80ED, 10%)
+			transition: all .3s ease
+	&__wrap
+		height: 146px
+		overflow-y: scroll
+		overflow-x: hidden
+		direction: rtl
+		margin-left: -14px
+		padding-left: 8px
+		margin-bottom: 16px
+		&-custom
+			margin-bottom: 29px
+			height: auto
+			overflow: hidden
+			margin-left: 0
+			padding-left: 0
+		.edit-field
+			margin-bottom: 14px
+			direction: ltr
+			margin-right: auto
+			margin-left: 0
+			&:last-child
+				margin-bottom: 0
+	&__input
+		flex: 0 0 100%
+		input
+			width: 100%
+			box-sizing: border-box
+			padding-right: 50px
+			border: 1px solid #D7DDE5
+			border-radius: 3px
+			height: 23px
+			padding-left: 9px
+		&--remove
+			position: relative
+			max-width: 310px
+			width: 90%
+			margin-right: 12px
+			input
+				padding-right: 30px
+				border-color: #9091A0
+				font-family: $font2
+			svg
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				right: 6px
+				cursor: pointer
+	&-input
+		.edit-field__options
+			position: absolute
+			top: 50%
+			right: 15px
+			transform: translateY(-50%)
+	&-more-text
+		.edit-field__text
+			font-style: normal
+			font-weight: 500
+			font-size: 14px
+			line-height: 18px
+			color: #2F80ED
+	&-full
+		width: 100%
+		align-items: flex-start
+		.edit-field__options
+			margin-left: 30px
+	&__text
+		font-size: 14px
+		line-height: 18px
+		font-weight: normal
+		color: #2F3747
+		font-family: $font2
+	&__title
+		font-weight: 600
+		font-size: 15px
+		line-height: 26px
+		color: #000000
+	&__link
+		font-family: $font2
+		font-size: 14px
+		line-height: 18px
+		text-decoration: underline
+		color: #2F80ED
+	&__add
+		cursor: pointer
+		position: absolute
+		right: -30px
+		top: 50%
+		transform: translateY(-50%)
+		display: flex
+		align-items: center
+	&__options
+		display: flex
+		align-items: center
+		svg
+			cursor: pointer
+			margin-right: 15px
+			&:last-child
+				margin-right: 0

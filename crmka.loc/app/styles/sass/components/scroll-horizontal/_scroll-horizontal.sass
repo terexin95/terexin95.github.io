@@ -1,0 +1,47 @@
+.scroll-horizontal
+	margin-bottom: -20px
+	margin-left: -20px
+	margin-right: -20px
+	&-custom
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-right: 20px
+		margin-top: 29px
+		> svg
+			flex: 0 0 25px
+			margin-top: -12px
+			cursor: pointer
+		.scroll-horizontal__wrap
+			flex: 0 0 calc(100% - 70px)
+	&__wrap
+		display: flex
+		overflow: hidden
+		overflow-x: scroll
+	&__item
+		padding: 6px 22px
+		background: #2F80ED
+		border-radius: 3px
+		white-space: nowrap
+		margin-right: 13px
+		font-weight: 500
+		font-size: 14px
+		color: #FFFFFF
+		cursor: pointer
+		user-select: none
+		box-sizing: border-box
+		transition: all .3s ease
+		max-width: 165px
+		text-overflow: ellipsis
+		overflow: hidden
+		flex: 0 0 165px
+		text-align: center
+		&:hover
+			background-color: #006DFF
+			transition: all .3s ease
+		&--active
+			border: 1px solid #D7DDE5
+			background-color: #fff
+			color: #2F3747
+			&:hover
+				background-color: #fff

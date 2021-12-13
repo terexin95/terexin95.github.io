@@ -1,0 +1,26 @@
+.add-block
+	display: flex
+	align-items: center
+	cursor: pointer
+	&__icon
+		margin-right: 10px
+		svg
+			vertical-align: bottom
+			circle
+				transition: all .3s ease
+	&__text
+		font-family: $font2
+		font-weight: normal
+		font-size: 12px
+		line-height: 18px
+		color: #2F80ED
+		transition: all .3s ease
+	&:hover, &:active
+		.add-block__icon
+			svg
+				circle
+					fill: darken(#2F80ED, 10%)
+					transition: all .3s ease
+		.add-block__text
+			color: darken(#2F80ED, 10%)
+			transition: all .3s ease

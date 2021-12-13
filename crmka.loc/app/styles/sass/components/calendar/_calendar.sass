@@ -1,0 +1,186 @@
+.calendar-custom, .flatpickr-calendar
+	font-family: $font4
+
+	.flatpickr-monthDropdown-months
+		font-weight: bold
+		font-size: 14.6px
+		line-height: 18px
+		font-feature-settings: 'tnum' on, 'lnum' on
+		color: #2F3747
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+	.flatpickr-current-month
+		.numInputWrapper, input
+			font-weight: bold
+			font-size: 14.6px
+			line-height: 18px
+			font-feature-settings: 'tnum' on, 'lnum' on
+			color: #2F3747
+	.flatpickr-calendar
+		background: #FFFFFF
+		border: 1.23737px solid #9091A0
+		box-sizing: border-box
+		border-radius: 2.47475px
+		width: 245px
+	.flatpickr-months
+		margin-bottom: 20px
+	.flatpickr-innerContainer, .flatpickr-rContainer, .flatpickr-weekdays, .flatpickr-days
+		width: 235px
+		margin: auto
+	.flatpickr-days .dayContainer
+		width: 235px
+		min-width: 235px
+		max-width: 235px
+		margin: auto
+		padding-bottom: 2px
+	.flatpickr-day
+		height: 33px
+		line-height: 33px
+		border: 1px solid #DFDFDF
+		border-left: 0 solid #000
+		border-radius: 0
+		margin-right: -1px
+		margin-bottom: -2px
+		&:nth-child(1n)
+			border-left: 1px solid #DFDFDF
+			border-right: 0
+		&:nth-child(7n)
+			border-right: 1.5px solid #DFDFDF
+	.dayContainer 
+		.selected
+			background-color: #007344
+			border-radius: 0
+		.startRange, .endRange, .inRange
+			border-radius: 0
+			background-color: #007344
+			color: #fff
+			box-shadow: 0 0 0 0 transparent
+		.prevMonthDay, .startRange
+			border-color: #DFDFDF
+	.flatpickr-weekdaycontainer
+		.flatpickr-weekday
+			font-style: normal
+			font-weight: 600
+			font-size: 9.75758px
+			line-height: 12px
+			text-transform: uppercase
+			text-align: center
+			font-feature-settings: 'tnum' on, 'lnum' on
+			color: #2F3747
+	.flatpickr-current-month
+		left: 0
+		text-align: left
+	.flatpickr-prev-month
+		position: absolute
+		right: 30px
+		left: auto !important
+		width: 30px
+	.flatpickr-rContainer
+		padding-bottom: 20px
+	.flatpickr-prev-month, .flatpickr-next-month
+		width: 10px
+		height: 14px
+		padding: 0
+		background-image: url("data:image/svg+xml,%3Csvg width='9' height='14' viewBox='0 0 9 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M-8.34742e-08 7L8.25 13.0622L8.25 0.937822L-8.34742e-08 7Z' fill='%232F3747'/%3E%3C/svg%3E%0A")
+		background-repeat: no-repeat
+		background-position: center
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		svg
+			display: none
+	.flatpickr-months
+		position: relative
+	.flatpickr-next-month
+		right: 10px !important
+		background-image: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 7L0.5 13.0622L0.5 0.937822L8 7Z' fill='%232F3747'/%3E%3C/svg%3E%0A")
+
+.flatpickr-calendar
+	width: 245px
+	user-select: none
+	border: 1px solid #9091A0
+	border-radius: 3px
+
+.calendar-custom__buttons
+	display: flex
+	justify-content: space-between
+	padding: 0 8px
+	padding-bottom: 16px
+	&-item
+		cursor: pointer
+		&:nth-child(2)
+			background: #2F3747
+			border-radius: 3px
+			flex: 0 0 100px
+			text-align: center
+			height: 26px
+			line-height: 26px
+			color: #fff
+			transition: all .3s ease
+			font-family: $font
+			&:hover, &:active
+				background: darken(#2F3747, 10%)
+				transition: all .3s ease
+		&:nth-child(1)
+			border: 1px solid #9091A0
+			border-radius: 3px
+			flex: 0 0 100px
+			transition: all .3s ease
+			text-align: center
+			font-weight: 500
+			font-size: 12.3737px
+			color: #2F3747
+			font-family: $font
+			&:hover, &:active
+				background: #2F3747
+				transition: all .3s ease
+				color: #fff
+
+.flatpickr-calendar:before, .flatpickr-calendar:after
+	display: none
+
+.calendar-custom
+	&__input
+		position: relative
+		width: 110px
+		&::before
+			content: ""
+			position: absolute
+			background-image: url("data:image/svg+xml,%3Csvg width='16' height='18' viewBox='0 0 16 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.28571 10.125C5.5 10.125 5.71429 9.94922 5.71429 9.70312V8.29688C5.71429 8.08594 5.5 7.875 5.28571 7.875H3.85714C3.60714 7.875 3.42857 8.08594 3.42857 8.29688V9.70312C3.42857 9.94922 3.60714 10.125 3.85714 10.125H5.28571ZM9.14286 9.70312V8.29688C9.14286 8.08594 8.92857 7.875 8.71429 7.875H7.28571C7.03571 7.875 6.85714 8.08594 6.85714 8.29688V9.70312C6.85714 9.94922 7.03571 10.125 7.28571 10.125H8.71429C8.92857 10.125 9.14286 9.94922 9.14286 9.70312ZM12.5714 9.70312V8.29688C12.5714 8.08594 12.3571 7.875 12.1429 7.875H10.7143C10.4643 7.875 10.2857 8.08594 10.2857 8.29688V9.70312C10.2857 9.94922 10.4643 10.125 10.7143 10.125H12.1429C12.3571 10.125 12.5714 9.94922 12.5714 9.70312ZM9.14286 13.0781V11.6719C9.14286 11.4609 8.92857 11.25 8.71429 11.25H7.28571C7.03571 11.25 6.85714 11.4609 6.85714 11.6719V13.0781C6.85714 13.3242 7.03571 13.5 7.28571 13.5H8.71429C8.92857 13.5 9.14286 13.3242 9.14286 13.0781ZM5.71429 13.0781V11.6719C5.71429 11.4609 5.5 11.25 5.28571 11.25H3.85714C3.60714 11.25 3.42857 11.4609 3.42857 11.6719V13.0781C3.42857 13.3242 3.60714 13.5 3.85714 13.5H5.28571C5.5 13.5 5.71429 13.3242 5.71429 13.0781ZM12.5714 13.0781V11.6719C12.5714 11.4609 12.3571 11.25 12.1429 11.25H10.7143C10.4643 11.25 10.2857 11.4609 10.2857 11.6719V13.0781C10.2857 13.3242 10.4643 13.5 10.7143 13.5H12.1429C12.3571 13.5 12.5714 13.3242 12.5714 13.0781ZM16 3.9375C16 3.02344 15.2143 2.25 14.2857 2.25H12.5714V0.421875C12.5714 0.210938 12.3571 0 12.1429 0H10.7143C10.4643 0 10.2857 0.210938 10.2857 0.421875V2.25H5.71429V0.421875C5.71429 0.210938 5.5 0 5.28571 0H3.85714C3.60714 0 3.42857 0.210938 3.42857 0.421875V2.25H1.71429C0.75 2.25 0 3.02344 0 3.9375V16.3125C0 17.2617 0.75 18 1.71429 18H14.2857C15.2143 18 16 17.2617 16 16.3125V3.9375ZM14.2857 16.1016C14.2857 16.2422 14.1786 16.3125 14.0714 16.3125H1.92857C1.78571 16.3125 1.71429 16.2422 1.71429 16.1016V5.625H14.2857V16.1016Z' fill='%23007344'/%3E%3C/svg%3E%0A")
+			width: 16px
+			height: 18px
+			background-position: center
+			background-repeat: no-repeat
+			top: 50%
+			transform: translateY(-50%)
+			right: 8px
+		.flatpickr-calendar
+			display: none
+			position: absolute
+			top: 100%
+			z-index: 1
+		&--active
+			.flatpickr-calendar
+				display: block
+		input
+			width: 110px
+			height: 26px
+			padding-right: 30px
+			border: 1px solid #D7DDE5
+			box-sizing: border-box
+			border-radius: 3px
+			font-weight: normal
+			font-size: 13px
+			line-height: 18px
+			color: #454C5A
+			padding-left: 8px
+
+.flatpickr-day.selected.startRange.endRange, .flatpickr-day.startRange.startRange.endRange, .flatpickr-day.endRange.startRange.endRange
+	border-radius: 0
+
+.flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.selected.inRange, .flatpickr-day.startRange.inRange, .flatpickr-day.endRange.inRange, .flatpickr-day.selected:focus, .flatpickr-day.startRange:focus, .flatpickr-day.endRange:focus, .flatpickr-day.selected:hover, .flatpickr-day.startRange:hover, .flatpickr-day.endRange:hover, .flatpickr-day.selected.prevMonthDay, .flatpickr-day.startRange.prevMonthDay, .flatpickr-day.endRange.prevMonthDay, .flatpickr-day.selected.nextMonthDay, .flatpickr-day.startRange.nextMonthDay, .flatpickr-day.endRange.nextMonthDay
+	border-color: #DFDFDF
+
+.flatpickr-day.nextMonthDay
+	background: #DADBEE

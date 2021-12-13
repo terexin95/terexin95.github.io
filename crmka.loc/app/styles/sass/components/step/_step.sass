@@ -1,0 +1,61 @@
+.step
+	&__block
+		margin-bottom: 16px
+	&__title
+		font-weight: 600
+		font-size: 14px
+		line-height: 26px
+		color: #252733
+	&__text
+		font-family: $font2
+		font-weight: 500
+		font-size: 14px
+		line-height: 18px
+		color: #2F80ED
+	&__date
+		text-align: center
+		font-weight: 500
+		font-size: 14px
+		line-height: 18px
+		color: #2F3747
+		font-family: $font2
+	&__table
+		&-header
+			display: flex
+			justify-content: space-between
+			margin: 0 -20px
+			border-top: 1px solid #D7DDE5
+			border-bottom: 1px solid #D7DDE5
+			box-sizing: border-box
+			border-radius: 3px
+			padding: 13px 25px 8px
+			font-family: $font2
+			font-weight: normal
+			font-size: 13px
+			line-height: 18px
+			color: #2F3747
+		&-line
+			display: flex
+			justify-content: space-between
+			margin: 0 -20px
+			padding: 10px 25px
+			margin-bottom: 5px
+			.step__col-status
+				text-align: center
+				.table-home__crm
+					margin-bottom: 10px
+					padding-top: 1px
+					padding-bottom: 1px
+			.step__col-comment
+				font-family: $font
+				font-weight: normal
+				font-size: 10px
+				line-height: 12px
+				color: #252733
+	&__col
+		&-date
+			flex: 0 0 85px
+		&-status
+			flex: 0 0 100px
+		&-comment
+			flex: 0 0 225px

@@ -1,0 +1,44 @@
+.history-chat
+	overflow: hidden
+	height: 387px
+	overflow-y: scroll
+	padding: 20px
+	&--card
+		padding: 0 !important
+	&__item
+		position: relative
+		padding-top: 12px
+		padding-bottom: 12px
+		&::before
+			content: ""
+			width: 80%
+			height: 1px
+			background-color: #41B34D
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+		&-reserve
+			text-align: right
+			.history-chat__text
+				margin-left: auto
+				margin-right: 0
+	&__title
+		font-weight: 600
+		font-size: 14px
+		line-height: 26px
+		margin-bottom: 5px
+	&__text
+		max-width: 80%
+		font-family: $font2
+		font-weight: normal
+		font-size: 14px
+		line-height: 18px
+		color: #2F3747
+		margin-bottom: 8px
+	&__time
+		font-family: $font2
+		font-weight: normal
+		font-size: 10px
+		line-height: 12px
+		color: #8E99A8

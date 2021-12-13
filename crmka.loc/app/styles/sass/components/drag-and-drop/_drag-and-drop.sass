@@ -1,0 +1,64 @@
+.drag-and-drop
+	position: relative
+	width: 180px
+	height: 180px
+	text-align: center
+	overflow: hidden
+	cursor: pointer
+	&-small
+		width: 70px
+		height: 70px
+		cursor: pointer
+		img
+			width: 100%
+		.drag-and-drop__text
+			font-size: 6px
+			line-height: 8px
+			margin-top: -22px
+		input
+			cursor: pointer
+	input
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		z-index: 1
+		opacity: 0
+		cursor: pointer
+		width: 100%
+		height: 100%
+	&__text
+		font-weight: normal
+		font-size: 15px
+		line-height: 17px
+		text-align: center
+		color: #2F80ED
+		margin-top: -28px
+
+.upload-file
+	display: flex
+	position: relative
+	align-items: center
+	position: relative
+	width: 100px
+	font-family: $font2
+	font-weight: 300
+	font-size: 11px
+	line-height: 13px
+	color: #2F80ED
+	cursor: pointer
+	svg
+		margin-right: 10px
+		flex: 0 0 14px
+	input
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		z-index: 1
+		opacity: 0
+		cursor: pointer
+		width: 100%
+		height: 100%

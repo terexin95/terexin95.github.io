@@ -1,0 +1,93 @@
+.modal-home
+	position: fixed
+	z-index: 12
+	width: calc(100% - 40px)
+	height: calc(100% - 50px)
+	max-width: 1400px
+	left: 50%
+	top: 50%
+	transform: translate(-50%, -50%)
+	overflow-y: hidden
+	&__container
+		height: 100%
+		overflow-y: scroll
+		overflow-x: hidden
+		&::-webkit-scrollbar 
+			display: none
+	&__header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		font-weight: 600
+		font-size: 22px
+		line-height: 26px
+		color: #252733
+		margin-bottom: 20px
+		&-close
+			cursor: pointer
+	&__content
+		padding: 20px
+		padding-bottom: 8px
+		background-color: #ECEFF3
+	.column
+		max-width: 33%
+		flex: 0 0 33%
+	.wrapper
+		gap: 0px
+		justify-content: space-between
+	.column-1
+		flex: 0 0 calc(60% - 8px)
+		max-width: calc(60% - 8px)
+	.column-2
+		flex: 0 0 40%
+		max-width: 40%
+	&__buttons
+		display: flex
+		justify-content: flex-end
+		background-color: #ECEFF3
+		margin-top: -1px
+		padding-bottom: 16px
+		padding-left: 20px
+		padding-right: 20px
+	&__button
+		&-save
+			background: #2F3747
+			border-radius: 3px
+			flex: 0 0 100px
+			text-align: center
+			height: 35px
+			line-height: 33px
+			font-size: 13px
+			color: #fff
+			transition: all .3s ease
+			font-family: $font
+			font-weight: bold
+			width: 220px
+			margin-left: 8px
+			flex: 0 0 220px
+			cursor: pointer
+			box-sizing: border-box
+			&:hover, &:active
+				background: darken(#2F3747, 10%)
+				transition: all .3s ease
+		&-cancel
+			border: 1px solid #9091A0
+			border-radius: 3px
+			font-weight: bold
+			flex: 0 0 100px
+			transition: all .3s ease
+			text-align: center
+			line-height: 33px
+			height: 35px
+			box-sizing: border-box
+			font-size: 13px
+			color: #2F3747
+			font-family: $font
+			cursor: pointer
+			width: 220px
+			flex: 0 0 220px
+			background-color: #fff
+			&:hover, &:active
+				background: #ECEFF3
+				transition: all .3s ease
+				color: #2F3747
