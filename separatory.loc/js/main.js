@@ -280,8 +280,11 @@ if (document.querySelector('.ter-products-block__text-open')) {
     terProductsBlockTextOpen[i].addEventListener('click', function(){
       if (this.textContent == "Показать все характеристики") {
         this.textContent = "Скрыть все характеристики";
+        console.log(this.closest('.ter-products-block').offsetTop)
       } else {
         this.textContent ="Показать все характеристики";
+        window.scrollTo(0, this.closest('.ter-products-block').offsetTop - 300);
+        console.log(this.closest('.ter-products-block').offsetTop)
       }
       this.parentElement.classList.toggle('ter-products-block__text--active');
     });

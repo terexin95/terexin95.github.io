@@ -1,0 +1,49 @@
+.input-block
+	&-textarea
+		.input-block__error
+			margin-top: -8px
+	&-submit
+		text-align: right
+	&__title
+		font-weight: 600
+		font-size: 13px
+		line-height: 17px
+		color: #1D232F
+		margin-bottom: 8px
+	&__error
+		font-weight: normal
+		font-size: 10px
+		line-height: 14px
+		font-family: $font2
+		color: #FF0000
+	input
+		height: 35px
+		border-color: #9091A0
+		font-family: $font2
+		color: #1D232F
+	textarea
+		font-weight: normal
+		padding: 8px
+		height: 75px
+		border-color: #9091A0
+		&::placeholder
+			color: #969696
+	button
+		padding: 10px 25px
+		background: #2F3747
+		border-radius: 3px
+		cursor: pointer
+		border: 0
+		outline: none
+		color: #fff
+		font-family: $font
+		font-weight: bold
+		font-size: 13px
+		line-height: 14px
+		transition: all .3s ease
+		&:hover
+			background-color: #13161D
+			transition: all .3s ease
+		&:disabled
+			background-color: #9091A0
+			cursor: not-allowed

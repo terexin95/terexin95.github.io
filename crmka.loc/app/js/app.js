@@ -60,6 +60,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
+	if (document.querySelector('.checkbox-custom')) {
+		for (var i = 0; i < document.querySelectorAll('.checkbox-custom').length; i++) {
+			let inpCheck = document.querySelectorAll('.checkbox-custom')[i].querySelector('input')
+			if (inpCheck.checked == true) {
+				inpCheck.parentElement.classList.add('checkbox-custom--active')
+			}
+			document.querySelectorAll('.checkbox-custom')[i].addEventListener('click', function(){
+				this.classList.toggle('checkbox-custom--active');
+			})
+		}
+	}
+
 
   var swiper1 = new Swiper(".slider-one", {
     navigation: {

@@ -294,14 +294,32 @@ body {
 	padding: 0 20px;
 }
 
-.ter-video-block__item, .ter-product-other__item {
+.ter-video-block__item {
+	max-width: 32%;
+	margin-right: 2%;
+	margin-bottom: 60px;
+	flex: 0 0 32%;
+}
+
+.ter-video-block__item--custom .tervideo  iframe {
+	height: 424px;
+}
+.ter-video-block__item--custom {
+	margin-right: 0;
+}
+
+.ter-video-block__item:nth-child(3n) {
+	margin-right: 0;
+}
+
+.ter-product-other__item {
 	max-width: 49%;
 	flex: 0 0 49%;
 	margin-right: 2%;
 	margin-bottom: 30px;
 }
 
-.ter-video-block__item:nth-child(2n), .ter-product-other__item:nth-child(2n) {
+.ter-product-other__item:nth-child(2n) {
 	margin-right: 0;
 }
 
@@ -316,6 +334,7 @@ body {
 	line-height: 130%;
 	color: #000000;
 	margin-bottom: 15px;
+	height: 47px;
 }
 
 .ter-product-other__item {
@@ -475,7 +494,7 @@ body {
 }
 
 .ter-filter-block__header-wrap {
-	height: 256px;
+	height: 100px;
 }
 
 .ter-slider-block__wrap img {
@@ -562,6 +581,7 @@ body {
 	flex-wrap: wrap;
 	max-width: 1140px;
 	margin: auto;
+	justify-content: space-between;
 }
 
 .ter-filter-block__header-item {
@@ -710,6 +730,10 @@ body {
 	height: 240px;
 	object-fit: cover;
 	width: 100%;
+}
+
+.mc-left .ter-products-block__img img {
+	height: 120px;
 }
 
 .ter-products-block__text {
@@ -1020,7 +1044,7 @@ body {
 	transform: translateX(-50%);
 }
 
-.ter-filter-block__buttons--active .ter-filter-block__header-item {
+.ter-filter-block__header-item {
 	margin-bottom: 0;
 	height: 85px;
 	flex: 0 0 24.5%;
@@ -1028,11 +1052,11 @@ body {
 	margin-right: 0;
 }
 
-.ter-filter-block__buttons--active .ter-filter-block__header-item .ter-filter-block__header-text {
+.ter-filter-block__header-item .ter-filter-block__header-text {
 	font-size: 15px;
 	padding: 0 15px;
 }
-.ter-filter-block__buttons--active .ter-filter-block__header-img {
+.ter-filter-block__header-img {
 	flex: 0 0 118px;
 }
 
@@ -2429,8 +2453,7 @@ color:#3d9a2c !important;
 
 .tervideo {
   position: relative;
-  width: 558px;
-  height: 314px;
+  width: 100%;
   background-color: white;
   display: inline-block;
   cursor: pointer;
@@ -2442,6 +2465,10 @@ color:#3d9a2c !important;
   display: block;
   object-fit: cover;
   border: none;
+}
+
+.tervideo iframe {
+	height: 205px;
 }
 
 .tervideo  .btn-reset {
