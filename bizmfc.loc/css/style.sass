@@ -563,6 +563,8 @@ button[type=submit]
 			margin-left: 10px
 
 .news
+	.slider-one__item-link
+		margin-top: 20px
 	&__wrap
 		display: flex
 		flex-wrap: wrap
@@ -571,6 +573,7 @@ button[type=submit]
 		flex: 0 0 23.5%
 		max-width: 23.5%
 		margin-right: 2%
+		margin-bottom: 20px
 		box-sizing: border-box
 		padding: 10px
 		background-color: #fff
@@ -581,7 +584,7 @@ button[type=submit]
 		&:hover
 			transform: scale(1.05)
 			transition: all .3s ease
-		&:nth-child(4)
+		&:nth-child(4n)
 			margin-right: 0
 		img
 			height: 160px
@@ -1671,6 +1674,601 @@ button[type=submit]
 		padding-right: 10px
 		svg
 			margin-bottom: 20px
+
+.slider-one
+	max-width: 1160px
+	padding: 0 40px
+	margin: auto
+	position: relative
+	padding-bottom: 50px
+	.slider-one-button-prev
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		cursor: pointer
+		margin-top: -20px
+		left: 0px
+	.swiper-pagination
+		z-index: 1
+		span
+			width: 10px
+			height: 10px
+			border: 1px solid #B3906E
+			box-sizing: border-box
+			background-color: transparent
+			opacity: 1
+		.swiper-pagination-bullet-active
+			background-color: #B3906E
+	.slider-one-button-next
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		cursor: pointer
+		margin-top: -20px
+		right: 0px
+	&__item
+		background: #FFFFFF
+		// box-shadow: 0px 6px 30px rgba(12, 54, 73, 0.15)
+		&-block
+			padding: 15px 15px 20px
+		&-img
+			height: 150px
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+		&-title
+			font-weight: bold
+			font-size: 16px
+			line-height: 135%
+			color: #000000
+			margin-bottom: 10px
+		&-text
+			font-weight: normal
+			font-size: 14px
+			line-height: 135%
+			color: #303030
+			height: 38px
+			overflow: hidden
+			text-overflow: ellipsis
+			margin-bottom: 10px
+		&-link
+			display: flex
+			align-items: center
+			color: #60773D
+			font-weight: bold
+			font-size: 16px
+			line-height: 135%
+			svg
+				margin-left: 10px
+				transition: all .3s ease
+			&:hover
+				svg
+					margin-left: 20px
+					transition: all .3s ease
+
+.catalog
+	margin-top: 60px
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+	&__sidebar
+		flex: 0 0 270px
+		box-sizing: border-box
+		padding: 30px 20px
+		height: 100%
+		background-color: #fff
+		box-shadow: 0px 6px 30px rgba(12, 54, 73, 0.15)
+		&-list, &-close
+			display: none
+			li
+				a
+					font-weight: normal
+					font-size: 16px
+					line-height: 135%
+					color: #303030
+		.checkbox-custom
+			margin-bottom: 15px
+		&-checkbox
+			padding-left: 11px
+			.checkbox-custom__label
+				font-weight: normal
+	&__inner
+		flex: 0 0 calc(100% - 290px)
+		margin-left: 20px
+	&__products
+		display: flex
+		flex-wrap: wrap
+	&__item
+		max-width: 32%
+		flex: 0 0 32%
+		box-sizing: border-box
+		padding: 15px
+		padding-bottom: 20px
+		box-shadow: 0px 6px 30px rgba(12, 54, 73, 0.15)
+		background-color: #fff
+		margin-right: 2%
+		margin-bottom: 20px
+		&:nth-child(3n)
+			margin-right: 0
+		&-img
+			position: relative
+			margin-bottom: 20px
+			img
+				display: block
+				width: 200px
+				height: 200px
+				object-fit: cover
+				margin: auto
+		&-tags
+			position: absolute
+			left: 0
+			top: 0
+			z-index: 1
+		&-tag
+			margin-bottom: 5px
+			background-color: #DFDFDF
+			padding-left: 12px
+			width: min-content
+			font-weight: normal
+			font-size: 13px
+			line-height: 22px
+			padding-right: 7px
+			color: #000
+			height: 22px
+			position: relative
+			&::before
+				content: ""
+				width: 16px
+				height: 16px
+				background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.19211e-07 -6.76069e-07L-4.04288e-07 16L16 0L3.19211e-07 -6.76069e-07Z' fill='%23B3906E'/%3E%3C/svg%3E%0A")
+				position: absolute
+				left: 0
+				top: 0
+		&-title
+			font-weight: bold
+			font-size: 16px
+			line-height: 135%
+			margin: 0
+			text-align: center
+			margin-bottom: 15px
+		&-list
+			margin-bottom: 15px
+			li
+				font-weight: normal
+				font-size: 14px
+				line-height: 135%
+				color: #807D7D
+				position: relative
+				padding-left: 25px
+				margin-bottom: 10px
+				&::before
+					content: ""
+					width: 16px
+					height: 16px
+					background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.19211e-07 -6.76069e-07L-4.04288e-07 16L16 0L3.19211e-07 -6.76069e-07Z' fill='%23B3906E'/%3E%3C/svg%3E%0A")
+					position: absolute
+					left: 0
+					top: 0
+		&-price
+			text-align: center
+			font-weight: bold
+			font-size: 24px
+			line-height: 135%
+			margin-bottom: 15px
+		&-pay
+			height: 50px
+			line-height: 50px
+			font-weight: bold
+			font-size: 15px
+			color: #fff
+			cursor: pointer
+			background-color: #60773D
+			transition: all .3s ease
+			text-align: center
+			margin-bottom: 18px
+			&:hover
+				background-color: darken(#60773D, 5%)
+				transition: all .3s ease
+		&-oneclick
+			text-align: center
+			color: #60773D
+			font-weight: 500
+			font-size: 15px
+			line-height: 100%
+			cursor: pointer
+			transition: all .3s ease
+			&:hover
+				color: darken(#60773D, 5%)
+				transition: all .3s ease
+	&__filter
+		display: flex
+		background: #FFFFFF
+		box-shadow: 0px 6px 30px rgba(12, 54, 73, 0.15)
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 20px
+		padding: 15px
+		&-mobile
+			display: none
+		.select-custom
+			margin-top: -8px
+			margin-bottom: -8px
+		.select-custom__wrap, .select-custom__wrap--active .select-custom__list
+			border: 0
+			z-index: 4
+		ul
+			display: flex
+			li
+				margin-right: 30px
+				&:last-child
+					margin-right: 0
+				a
+					font-weight: normal
+					font-size: 16px
+					line-height: 135%
+					color: #303030
+
+
+.price-slider
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	margin-bottom: 30px
+	&__title
+		flex: 0 0 100%
+		margin-bottom: 10px
+		font-weight: 500
+		font-size: 16px
+		line-height: 135%
+	&__input
+		flex: 0 0 48%
+		input
+			height: 40px
+			border: 1px solid #C4C4C4
+			padding: 10px
+
+.checkbox-custom
+	position: relative
+	display: flex
+	&--active
+		.checkbox-custom__icon
+			display: block
+		.checkbox-custom__input
+			background-color: #60773D
+			border-color: #60773D
+	&__input
+		width: 22px
+		height: 22px
+		flex: 0 0 22px
+		border: 1px solid #C4C4C4
+		box-sizing: border-box
+		position: relative
+	&__icon
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		display: none
+	input
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		z-index: 1
+		opacity: 0
+	&__label
+		font-family: 'Gotham Pro', sans-serif
+		font-weight: 500
+		font-size: 16px
+		line-height: 135%
+		color: #000000
+		margin-left: 13px
+
+.select-custom
+	display: block
+	width: max-content
+	position: relative
+	min-width: 130px
+	select
+		display: none
+	.select
+		&:after
+			display: none
+	&__wrap
+		border: 1px solid #D7DDE5
+		box-sizing: border-box
+		border-radius: 3px
+		background-color: #fff
+		width: 100%
+		&--active
+			border-color: #41B34D
+			.select-custom__list
+				max-height: 200px
+				transition: all .3s ease
+				border: 1px solid #41B34D
+				border-top: 0 solid #000
+				opacity: 1
+			.select-custom__active:after
+				transform: translateY(-50%) rotate(-180deg)
+				transition: all .3s ease
+				background-color: #EEEFF7
+			.select-custom__active
+				background-color: #EEEFF7
+				transition: all .3s ease
+	&__active
+		padding: 8px
+		position: relative
+		padding-right: 20px
+		transition: all .3s ease
+		white-space: nowrap
+		overflow: hidden
+		width: 100%
+		box-sizing: border-box
+		text-overflow: ellipsis
+		font-weight: 500
+		font-size: 16px
+		line-height: 135%
+		&::after
+			content: ""
+			background-image: url("data:image/svg+xml,%3Csvg width='8' height='5' viewBox='0 0 8 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L4 4L7 1' stroke='%23303030'/%3E%3C/svg%3E%0A")
+			width: 8px
+			height: 7px
+			background-position: center
+			background-repeat: no-repeat
+			background-color: #fff
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			transition: all .3s ease
+			right: 8px
+			border-radius: 100%
+	&__list
+		max-height: 0
+		opacity: 0
+		transition: all .3s ease
+		overflow: hidden
+		position: absolute
+		background-color: #fff
+		box-sizing: border-box
+		left: 0
+		right: 0
+		top: calc(100% - 1px)
+		z-index: 1
+		&-item
+			padding: 8px
+			white-space: nowrap
+			overflow: hidden
+			text-overflow: ellipsis
+
+.text-block-custom
+	max-width: 946px
+	p
+		color: #000
+
+.breadcrumbs
+	display: flex
+	margin-top: 20px
+	flex-wrap: wrap
+	&__link
+		font-weight: normal
+		font-size: 16px
+		line-height: 135%
+		color: #303030
+		&:after
+			content: " > "
+	&__text
+		font-weight: normal
+		font-size: 16px
+		line-height: 135%
+		margin-left: 5px
+		color: #969696
+
+.title-block--custom
+	margin-top: 30px
+
+.single
+	margin-top: 40px
+	margin-bottom: 70px
+	&__wrap
+		display: flex
+	&__block
+		flex: 0 0 calc(100% - 510px)
+		max-width: calc(100% - 510px)
+		h1
+			margin: 0
+			font-weight: bold
+			font-size: 36px
+			line-height: 135%
+			margin-bottom: 20px
+		p
+			font-weight: normal
+			font-size: 16px
+			line-height: 135%
+			margin-bottom: 30px
+		.catalog__item-list
+			margin-bottom: 30px
+	&__price
+		font-weight: bold
+		font-size: 34px
+		line-height: 135%
+		color: #303030
+		margin-bottom: 10px
+	&__pay
+		height: 60px
+		line-height: 60px
+		font-weight: bold
+		font-size: 16px
+		width: 240px
+		color: #fff
+		cursor: pointer
+		background-color: #60773D
+		transition: all .3s ease
+		text-align: center
+		margin-bottom: 18px
+		&:hover
+			background-color: darken(#60773D, 5%)
+			transition: all .3s ease
+	&__img
+		flex: 0 0 460px
+		overflow: hidden
+		margin-right: 50px
+		.slider-two
+			width: 460px
+			user-select: none
+			.catalog__item-tags
+				z-index: 2
+				left: 10px
+				top: 10px
+			.swiper
+				.swiper-slide
+					background-color: #fff
+					text-align: center
+					height: 460px
+					display: flex
+					justify-content: center
+					align-items: center
+					img
+						width: 400px
+						height: 400px
+				.slider-two-button-prev, .slider-two-button-next
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					z-index: 1
+					cursor: pointer
+				.slider-two-button-prev
+					left: 15px
+				.slider-two-button-next
+					right: 15px
+		.swiper-thumbs
+			margin-top: 10px
+			.swiper-slide
+				background-color: #fff
+				padding: 5px
+				box-sizing: border-box
+				border: 1px solid transparent
+				img
+					width: 70px
+					height: 70px
+			.swiper-slide-thumb-active
+				border: 1px solid #B3906E
+
+
+.tabs 
+	padding: 30px 40px
+	padding-right: 80px
+	background-color: #fff
+	&__button-group 
+		display: flex
+		margin-bottom: 5px
+		max-width: max-content
+		border-bottom: 1px solid #DFDFDF
+		li
+			margin-right: 60px
+			&:last-child
+				margin-right: 0
+	&__toggle 
+		appearance: none
+		cursor: pointer
+		font-weight: normal
+		font-size: 16px
+		line-height: 135%
+		padding: 5px 0
+		text-transform: uppercase
+		background-color: transparent
+		border: 0
+		color: #303030
+		&.active 
+			border-bottom: 2px solid #B3906E
+	&__tab-panel 
+		display: none
+		padding-top: 10px
+		li, p 
+			font-weight: normal
+			font-size: 16px
+			line-height: 135%
+		ul
+			padding-left: 20px
+			margin-bottom: 30px
+			li
+				list-style-type: disc
+		&.active 
+			display: block
+
+.pagination
+	margin-top: 40px
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: center
+	&__prev, &__next
+		flex: 0 0 40px
+		height: 40px
+		width: 40px
+		display: flex
+		align-items: center
+		justify-content: center
+		border: 1px solid #B3906E
+		transition: all .3s ease
+		svg
+			path
+				transition: all .3s ease
+		&:hover
+			transition: all .3s ease
+			background-color: #B3906E
+			svg
+				path
+					fill: #fff
+					transition: all .3s ease
+	&__prev
+		margin-right: 30px
+	&__next
+		margin-left: 10px
+	&__link
+		font-size: 16px
+		line-height: 15px
+		color: #807D7D
+		margin-right: 20px
+		display: block
+		transition: all .3s ease
+		&--active, &:hover
+			color: #000
+			transition: all .3s ease
+
+.newspage
+	margin-top: 40px
+	&__container
+		padding: 40px
+		max-width: 945px
+		box-sizing: border-box
+		margin: auto
+		background: #FFFFFF
+		box-shadow: 0px 6px 30px rgba(12, 54, 73, 0.15)
+		img
+			width: 100%
+			height: auto
+			display: block
+			margin-bottom: 30px
+		h1
+			margin: 0
+			margin-bottom: 20px
+			font-weight: bold
+			font-size: 36px
+			line-height: 135%
+		p, li 
+			color: #000000
+		ul
+			padding-left: 20px
+			li
+				list-style-type: disc
+
+.callback-form-custom
+	background-color: #32434B
+
 
 
 @import "acc.scss"

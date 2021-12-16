@@ -75,3 +75,183 @@
 			color: #41B34D
 		&__red
 			color: #FA2D2D
+
+.statistics-page
+	background-image: url(../images/dist/bg.png)
+	background-size: cover
+	background-repeat: no-repeat
+	.statistics__footer
+		display: none
+	.tabs__toggle:before
+		display: none
+	.tabs__toggle.active, .tabs__toggle:active
+		&::before
+			display: block
+		&:hover
+			background-color: #007344
+			&::before
+				background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='29' height='10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29 .782c0-.52-.241-.769-.763-.769H.763C.447-.02 0-.055 0 .782v3.68c0 .519.241.768.763.768h6.869l6.105 4.61c.284.189 1.194.236 1.526 0l6.105-4.61c.143-.095.574 0 .764 0h6.105c.522 0 .763-.25.763-.769V.781Z' fill='%23007344'/%3E%3C/svg%3E")
+	&__progress
+		margin-top: 30px
+		&-text
+			font-weight: 500
+			font-size: 10px
+			line-height: 17px
+			color: #1D232F
+			text-align: center
+			margin-bottom: 4px
+		&-item
+			&-num
+				text-align: center
+		&-line
+			display: flex
+			margin-bottom: 80px
+			&-item
+				.statistics-page__progress-liner
+					height: 13px
+			&--green
+				.statistics-page__progress-liner
+					background-color: #41B34D
+				.statistics-page__progress-num, .statistics-page__progress-item-num
+					color: #41B34D
+				.statistics-page__progress-line-item
+					&:nth-child(2)
+						.statistics-page__progress-liner
+							background-color: #007B0C
+					&:nth-child(3)
+						.statistics-page__progress-liner
+							background-color: #09C51B
+					&:nth-child(4)
+						.statistics-page__progress-liner
+							background-color: #6FFF7D
+					&:nth-child(5)
+						.statistics-page__progress-liner
+							background-color: #6FFF7D
+			&--red
+				.statistics-page__progress-liner
+					background-color: #FF0000
+				.statistics-page__progress-num, .statistics-page__progress-item-num
+					color: #FF0000
+				.statistics-page__progress-line-item
+					&:nth-child(2)
+						.statistics-page__progress-liner
+							background-color: #930000
+					&:nth-child(3)
+						.statistics-page__progress-liner
+							background-color: #FF4C4C
+					&:nth-child(4)
+						.statistics-page__progress-liner
+							background-color: #FFAFAF
+					&:nth-child(5)
+						.statistics-page__progress-liner
+							background-color: #FFD1D1
+			&--blue
+				.statistics-page__progress-liner
+					background-color: #2F80ED
+				.statistics-page__progress-num, .statistics-page__progress-item-num
+					color: #2F80ED
+				.statistics-page__progress-line-item
+					&:nth-child(2)
+						.statistics-page__progress-liner
+							background-color: #003F93
+					&:nth-child(3)
+						.statistics-page__progress-liner
+							background-color: #4C98FF
+					&:nth-child(4)
+						.statistics-page__progress-liner
+							background-color: #AFD1FF
+		&-block
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			.statistics-page__progress-liner
+				flex: 0 0 100%
+				max-width: 100%
+
+		&-liner
+			height: 21px
+			max-width: 650px
+			width: 650px
+			background-color: #2F3747
+			border-radius: 3px
+			margin-bottom: 7px
+		&-title
+			font-weight: 500
+			font-size: 16px
+			line-height: 17px
+			color: #1D232F
+			margin-right: 50px
+			flex: 0 0 90px
+		&-num
+			font-weight: 500
+			font-size: 24px
+			line-height: 17px
+			margin-right: 50px
+			span
+				font-weight: 500
+				font-size: 14px
+				line-height: 17px
+				display: block
+				text-align: center
+				margin-top: 10px
+	.tabs__button-group
+		margin-top: 50px
+		margin-bottom: 75px
+	.tabs__container
+		margin-top: 40px
+		margin-bottom: 70px
+	.column
+		max-width: 24.2%
+		flex: 0 0 24.2%
+	.wrapper
+		gap: 6px
+	.statistics__item
+		border: 1px solid #D7DDE5
+	&__container
+		padding: 15px
+	&__calendar
+		display: flex
+		align-items: center
+		margin-left: 25px
+		position: relative
+		flex: 0 0 410px
+		.calendar-custom
+			position: absolute
+			left: 0
+			top: 0
+			right: 0
+			bottom: 0
+		.calendar-custom__input:before
+			display: none
+		.calendar-custom__input
+			width: 100%
+			> input
+				width: 100%
+				height: 100%
+				opacity: 0
+		.calendar-custom__input .flatpickr-calendar
+			top: 40px
+			left: 142px
+		&-title	
+			margin-right: 10px
+			font-weight: 600
+			font-size: 15px
+			line-height: 17px
+			color: #1D232F
+		&-input
+			flex: 0 0 110px
+			margin-right: 20px
+			position: relative
+			input
+				border-color: #9091A0
+			&::before
+				content: ""
+				width: 16px
+				height: 18px
+				top: 50%
+				transform: translateY(-50%)
+				background-image: url("data:image/svg+xml,%3Csvg width='16' height='18' viewBox='0 0 16 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.28571 10.125C5.5 10.125 5.71429 9.94922 5.71429 9.70312V8.29688C5.71429 8.08594 5.5 7.875 5.28571 7.875H3.85714C3.60714 7.875 3.42857 8.08594 3.42857 8.29688V9.70312C3.42857 9.94922 3.60714 10.125 3.85714 10.125H5.28571ZM9.14286 9.70312V8.29688C9.14286 8.08594 8.92857 7.875 8.71429 7.875H7.28571C7.03571 7.875 6.85714 8.08594 6.85714 8.29688V9.70312C6.85714 9.94922 7.03571 10.125 7.28571 10.125H8.71429C8.92857 10.125 9.14286 9.94922 9.14286 9.70312ZM12.5714 9.70312V8.29688C12.5714 8.08594 12.3571 7.875 12.1429 7.875H10.7143C10.4643 7.875 10.2857 8.08594 10.2857 8.29688V9.70312C10.2857 9.94922 10.4643 10.125 10.7143 10.125H12.1429C12.3571 10.125 12.5714 9.94922 12.5714 9.70312ZM9.14286 13.0781V11.6719C9.14286 11.4609 8.92857 11.25 8.71429 11.25H7.28571C7.03571 11.25 6.85714 11.4609 6.85714 11.6719V13.0781C6.85714 13.3242 7.03571 13.5 7.28571 13.5H8.71429C8.92857 13.5 9.14286 13.3242 9.14286 13.0781ZM5.71429 13.0781V11.6719C5.71429 11.4609 5.5 11.25 5.28571 11.25H3.85714C3.60714 11.25 3.42857 11.4609 3.42857 11.6719V13.0781C3.42857 13.3242 3.60714 13.5 3.85714 13.5H5.28571C5.5 13.5 5.71429 13.3242 5.71429 13.0781ZM12.5714 13.0781V11.6719C12.5714 11.4609 12.3571 11.25 12.1429 11.25H10.7143C10.4643 11.25 10.2857 11.4609 10.2857 11.6719V13.0781C10.2857 13.3242 10.4643 13.5 10.7143 13.5H12.1429C12.3571 13.5 12.5714 13.3242 12.5714 13.0781ZM16 3.9375C16 3.02344 15.2143 2.25 14.2857 2.25H12.5714V0.421875C12.5714 0.210938 12.3571 0 12.1429 0H10.7143C10.4643 0 10.2857 0.210938 10.2857 0.421875V2.25H5.71429V0.421875C5.71429 0.210938 5.5 0 5.28571 0H3.85714C3.60714 0 3.42857 0.210938 3.42857 0.421875V2.25H1.71429C0.75 2.25 0 3.02344 0 3.9375V16.3125C0 17.2617 0.75 18 1.71429 18H14.2857C15.2143 18 16 17.2617 16 16.3125V3.9375ZM14.2857 16.1016C14.2857 16.2422 14.1786 16.3125 14.0714 16.3125H1.92857C1.78571 16.3125 1.71429 16.2422 1.71429 16.1016V5.625H14.2857V16.1016Z' fill='%23007344'/%3E%3C/svg%3E%0A")
+				background-position: center
+				background-repeat: no-repeat
+				right: 8px
+				position: absolute

@@ -37,3 +37,49 @@
 		line-height: 17px
 		color: #000000
 		margin-left: 13px
+
+.checkbox-custom-version
+	display: flex
+	align-items: center
+	&__label
+		font-family: $font2
+		font-weight: normal
+		font-size: 13px
+		line-height: 17px
+		color: #1D232F
+		margin-left: 15px
+	label
+		position: relative
+		width: 54px
+		height: 22px
+		cursor: pointer
+		flex: 0 0 54px
+	label input
+		position: relative
+		z-index: 1
+		appearance: none
+	label span
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: #8E99A8
+		border-radius: 8px
+		transition: 0.5s
+	label input:checked ~ span
+		background: #007344
+	label span i
+		position: absolute
+		top: 0px
+		left: 0px
+		width: 27px
+		height: 22px
+		background: #fff
+		border-radius: 7px
+		transition: 0.5s
+		border: 1px solid #8E99A8
+		box-sizing: border-box
+	label input:checked ~ span i
+		left: 27px
+		border-color: #007344

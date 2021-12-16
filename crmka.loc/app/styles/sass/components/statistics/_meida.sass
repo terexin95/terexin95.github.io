@@ -8,6 +8,8 @@
 
 @media (max-width: 1100px)
 	body
+		.statistics-page__progress-liner
+			width: 450px
 		.statistics__footer
 			font-size: 12px
 		.statistics__list li
@@ -16,3 +18,133 @@
 @media (max-width: 1024px)
 	.statistics .column
 		margin-bottom: 20px
+	body
+		.statistics-page
+			.statistics .progress-bar__text, .progress-bar__green, .progress-bar__red, .statistics__title
+				font-size: 7px
+				line-height: 8px
+			.statistics__title
+				margin-bottom: 10px
+			.statistics__list li
+				font-size: 7px
+				line-height: 8px
+			.statistics__item
+				padding: 10px
+			.column
+				max-width: 24%
+				flex: 0 0 24%
+			.statistics-page__calendar
+				margin-left: 0
+		.statistics-page__progress-liner
+			width: 343px
+		.statistics-page__progress-line--blue
+			.statistics-page__progress-block
+				max-width: 170px !important
+		.statistics-page__progress-text
+			font-size: 5px
+			line-height: 7px
+		.statistics-page__progress-item-num
+			font-size: 7px
+			line-height: 9px
+		.statistics-page__progress-num
+			font-size: 13px
+			line-height: 13px
+		.statistics-page__progress-num span
+			font-size: 7px
+			margin-top: 0
+			line-height: 9px
+		.statistics-page__progress-title
+			font-size: 8px
+			line-height: 10px
+			flex: 0 0 50px
+			margin-right: 25px
+		.statistics-page__progress-num
+			margin-right: 30px
+		.statistics-page__progress-line
+			margin-bottom: 50px
+		.statistics-page__progress-line--red
+			.statistics-page__progress-block
+				max-width: 140px !important
+		.statistics-page__progress-line--green
+			.statistics-page__progress-block
+				max-width: 120px !important
+		.statistics-page__progress
+			margin-top: 15px
+		.statistics-page .tabs__container
+			margin-bottom: 40px
+			margin-top: 15px
+		.statistics-page__calendar .calendar-custom__input
+			height: 100%
+		.statistics-page__calendar-input
+			flex: 0 0 55px
+		.statistics-page__calendar-input:before
+			width: 9px
+			height: 10px
+			background-size: cover
+			right: 4px
+			margin-top: 2px
+		.statistics-page__calendar-input
+			margin-right: 10px
+		.statistics-page__calendar-title
+			font-size: 8px
+			line-height: 9px
+			margin-top: 5px
+		.statistics-page .tabs__button-group
+			margin-bottom: 40px
+			margin-top: 30px
+			.tabs__toggle
+				padding-left: 20px
+				padding-right: 20px
+
+@media (max-width: 768px)
+	body
+		.statistics-page
+			.tabs__button-group
+				flex-wrap: wrap
+			
+			.tabs__button-group li
+				order: 2
+			.statistics-page__calendar
+				flex: 0 0 100%
+				order: 1 !important
+			.tabs__button-group
+				margin-top: 13px
+				margin-bottom: 12px
+			.tabs__container
+				margin-bottom: 0
+			.column
+				flex: 0 0 100%
+				max-width: 100%
+				margin-bottom: 0px
+			.statistics__title
+				font-size: 15px
+				line-height: 17px
+			.statistics .progress-bar__text, .statistics .progress-bar__green, .statistics .progress-bar__red
+				font-size: 14px
+				line-height: 17px
+			.statistics__list li
+				font-size: 14px
+				line-height: 22px
+			.wrapper
+				margin-bottom: 40px
+			.statistics__item
+				padding: 25px 15px
+			.statistics-page__progress-num
+				margin-right: 20px
+			.statistics-page__progress-title
+				margin-right: 10px
+			.tabs__button-group .tabs__toggle
+				padding-left: 15px
+				padding-right: 15px
+			.statistics-page__progress-liner
+				width: 200px
+			.statistics-page__progress-line--blue .statistics-page__progress-block
+				max-width: 192px !important
+			.statistics-page__progress-liner
+				height: 11px
+			.statistics-page__progress-title
+				line-height: 16px
+		.statistics-page__calendar .calendar-custom__input .flatpickr-calendar
+			left: 0
+			top: 30px
+

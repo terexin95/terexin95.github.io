@@ -3,6 +3,8 @@
 		a
 			font-size: 20px
 @media (max-width: 1140px)
+	.breadcrumbs
+		margin-top: 70px
 	.banner
 		margin-top: 130px
 	.banner_img img
@@ -56,6 +58,54 @@
 					flex: 0 0 220px
 
 @media (max-width: 993px)
+	.single__img
+		flex: 0 0 320px
+	.single__img .slider-two
+		width: 320px
+	.single__block
+		flex: 0 0 calc(100% - 370px)
+		max-width: calc(100% - 370px)
+	.single__img .slider-two .swiper .swiper-slide
+		height: 320px
+		img
+			width: 250px
+			height: 250px
+	.single__img .swiper-thumbs .swiper-slide img
+		width: 44px
+		height: 44px
+	.single__img .swiper-thumbs .swiper-slide
+		height: 56px
+	.tabs
+		padding: 20px 30px
+	.catalog__inner
+		flex: 0 0 100%
+		margin-left: 0
+	.catalog__sidebar
+		position: fixed
+		left: 0
+		top: 55px
+		bottom: 0
+		height: calc(100% - 50px)
+		width: 320px
+		z-index: 11
+		box-shadow: 0 0 0 0 transparent
+		overflow-y: scroll
+		display: none
+	.catalog__filter ul
+		display: none
+	.catalog__filter-mobile
+		display: flex
+	.catalog__sidebar-list
+		display: block
+		margin-bottom: 30px
+	.catalog__sidebar-close
+		display: block
+		position: absolute
+		right: 15px
+		top: 15px
+		svg
+			width: 15px
+			height: 15px
 	.connection__wrap
 		justify-content: center
 	.connection__item
@@ -178,6 +228,25 @@
 		height: auto
 //new end
 @media (max-width: 768px)
+	.single__wrap
+		flex-wrap: wrap
+		justify-content: center
+	.single__block
+		flex: 0 0 100%
+		max-width: 100%
+	.single__img
+		margin-right: 0
+		margin-bottom: 20px
+	.tabs__button-group li
+		margin-right: 20px
+	.catalog__item
+		max-width: 49%
+		margin-right: 2%
+		flex: 0 0 49%
+		&:nth-child(3n)
+			margin-right: auto
+		&:nth-child(2n)
+			margin-right: 0
 	.banner__land
 		height: auto
 		margin-bottom: 30px
@@ -297,6 +366,29 @@
 		background-image: none !important
 
 @media (max-width: 586px)
+	.newspage__container
+		padding: 20px
+	.newspage__container h1
+		font-size: 24px
+	.tabs
+		padding: 20px 15px
+	.tabs__tab-panel
+		padding-top: 0
+	.single__block h1
+		font-size: 24px
+	.single__price
+		font-size: 20px
+	.tabs__button-group
+		flex-wrap: wrap
+		border-bottom: 0 solid #000
+		justify-content: center
+	.tabs__button-group li
+		margin-bottom: 15px
+
+	.catalog__item
+		max-width: 100%
+		flex: 0 0 100%
+		margin-right: 0
 	.title-block__bg::after
 		display: none
 	.for-you__item

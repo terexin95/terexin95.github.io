@@ -1,0 +1,491 @@
+.modal-user
+	position: fixed
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	width: 1100px
+	z-index: 12
+	.tabs__container
+		padding: 20px 25px 25px
+		background-image: url(../images/dist/bg1.png)
+		background-size: cover
+		background-repeat: no-repeat
+		background-color: #fff
+		background-position-y: bottom
+	.tabs__button-group
+		margin-bottom: 0
+	.tabs__toggle::before
+		display: none
+	.tabs__toggle.active, .tabs__toggle:active
+		&::before
+			display: block
+		&:hover
+			background-color: rgb(0, 115, 68)
+			&::before
+				background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='29' height='10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M29 .782c0-.52-.241-.769-.763-.769H.763C.447-.02 0-.055 0 .782v3.68c0 .519.241.768.763.768h6.869l6.105 4.61c.284.189 1.194.236 1.526 0l6.105-4.61c.143-.095.574 0 .764 0h6.105c.522 0 .763-.25.763-.769V.781Z' fill='%23007344'/%3E%3C/svg%3E")
+	&__header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		font-weight: 600
+		font-size: 20px
+		line-height: 17px
+		color: #1D232F
+		margin-bottom: 20px
+		&-close
+			cursor: pointer
+	&__wrap
+		display: flex
+	&__person
+		flex: 0 0 300px
+		max-width: 300px
+		margin-left: 40px
+		&-wrap
+			height: 265px
+			overflow-y: scroll
+			direction: rtl
+			padding-left: 25px
+		&-title
+			font-weight: 600
+			font-size: 15px
+			line-height: 17px
+			color: #1D232F
+			margin-bottom: 15px
+		&-item
+			display: flex
+			direction: ltr
+			box-sizing: border-box
+			padding: 15px 20px
+			background: #ECEFF3
+			border: 1px solid #2F80ED
+			border-radius: 5px
+			margin-bottom: 15px
+			transition: all .3s ease
+			width: 260px
+			&:hover, &--active
+				background-color: #2F80ED
+				transition: all .3s ease
+				.modal-user__person-name
+					color: #fff
+					transition: all .3s ease
+				.modal-user__person-edit
+					color: #fff
+					border-color: #fff
+					transition: all .3s ease
+				.modal-user__person-remove
+					color: #2F3747
+					border-color: #2F3747
+					transition: all .3s ease
+		&-block
+			flex: 0 0 calc(100% - 50px)
+		&-options
+			display: flex
+			font-weight: normal
+			font-size: 12px
+			line-height: 14px
+			cursor: pointer
+			font-family: $font2
+		&-edit
+			margin-right: 15px
+			color: #007344
+			border-bottom: 1px solid #007344
+			transition: all .3s ease
+		&-remove
+			color: #FF0000
+			border-bottom: 1px solid #FF0000
+			transition: all .3s ease
+		&-name
+			font-weight: bold
+			font-size: 12px
+			line-height: 17px
+			color: #2F80ED
+			margin-bottom: 8px
+		&-img
+			flex: 0 0 43px
+			height: 43px
+			margin-right: 7px
+			img, svg
+				width: 43px
+				height: 43px
+				object-fit: cover
+	&__table
+		flex: 0 0 600px
+		&-body
+			margin-bottom: 40px
+		&-line
+			display: flex
+			justify-content: space-between
+			margin-bottom: 18px
+			align-items: center
+			.modal-user__table-hours
+				display: flex
+				justify-content: space-between
+				.time-custom
+					width: 100%
+			&--disabled
+				position: relative
+				&::after
+					position: absolute
+					content: ""
+					width: 100%
+					height: 100%
+					left: 0
+					right: 0
+					top: 0
+					bottom: 0
+					cursor: not-allowed
+					z-index: 1000
+				.checkbox-custom__input
+					border-color: #9091A0
+				.checkbox-custom__label, .time-custom input
+					color: #9091A0
+				.time-custom input
+					border-color: #D7DDE5
+				.modal-user__table-hours-item svg
+					path
+						fill: #9091A0
+		&-title
+			display: flex
+			justify-content: space-between
+			font-weight: 600
+			font-size: 15px
+			line-height: 17px
+			color: #1D232F
+			flex: 0 0 100%
+			margin-bottom: 15px
+		&-type
+			flex: 0 0 40%
+			max-width: 40%
+		&-hours
+			flex: 0 0 60%
+			max-width: 60%
+			&-item
+				flex: 0 0 100px
+				max-width: 100px
+				font-weight: 500
+				font-size: 13px
+				line-height: 17px
+				color: #41B34D
+				display: flex
+				align-items: center
+				flex-wrap: wrap
+				svg
+					margin-left: 3px
+				.time-custom
+					flex: 0 0 100%
+				&-text
+					display: none
+					justify-content: center
+					align-items: center
+					&--orange
+						color: #FF8A00
+					&--red
+						color: #FF0000
+		&-head
+			display: flex
+			flex: 0 0 100%
+			height: 20px
+			margin-bottom: 10px
+			.modal-user__table-hours
+				display: flex
+				justify-content: space-between
+				&-item
+					&:nth-child(2)
+						color: #FF8A00
+					&:nth-child(3)
+						color: #FF0000
+	&__company
+		flex: 0 0 140px
+		margin-right: 40px
+		&-mobile
+			display: none
+		&-item
+			height: 34px
+			line-height: 34px
+			width: 100%
+			font-weight: 600
+			font-size: 12px
+			text-align: center
+			color: #FFFFFF
+			background-color: #454C5A
+			transition: all .3s ease
+			cursor: pointer
+			margin-bottom: 3px
+			&:hover
+				background-color: #3D4862
+				transition: all .3s ease
+			&:active
+				background-color: #13161D
+			&--active
+				background-color: #007344
+				position: relative
+				&::after
+					content: ""
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					background-image: url("data:image/svg+xml,%3Csvg width='4' height='24' viewBox='0 0 4 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.121148 0.631581C0.121148 0.360159 0.192158 0.180443 0.338041 0.0843662C0.251795 0.0275653 0.139381 3.45972e-07 9.89654e-08 3.58463e-07L0.676081 2.97876e-07C0.5367 3.10366e-07 0.424286 0.0275653 0.338041 0.0843662C0.483924 0.180443 0.554935 0.360159 0.554935 0.631581L0.554936 5.68421C0.554936 5.84126 0.486728 6.198 0.554936 6.31579L3.88455 11.3684C4.05506 11.6433 4.02096 12.396 3.88455 12.6316L0.554937 17.6842L0.554937 23.3684C0.554937 23.654 0.476313 23.8381 0.314566 23.93C0.398196 23.9736 0.514704 24 0.676083 24L2.14577e-06 24C0.127067 24 0.23172 23.9771 0.314566 23.93C0.0849666 23.8102 0.103199 23.5603 0.12115 23.3684L0.121148 0.631581Z' fill='%23007344'/%3E%3C/svg%3E%0A")
+					width: 4px
+					height: 24px
+					right: -2px
+					background-repeat: no-repeat
+				&:hover, &:active
+					background-color: #007344
+		.add-block
+			margin-top: 15px
+	&__single
+		flex: 0 0 calc(100% - 320px)
+		&-footer
+			flex: 0 0 100%
+			margin-top: 25px
+			&-line
+				display: flex
+				align-items: center
+				flex-wrap: wrap
+				&-inner
+					display: flex
+					align-items: center
+				span
+					font-weight: 600
+					font-size: 15px
+					line-height: 17px
+					color: #1D232F
+				.select-custom 
+					margin: 0 25px
+				.select-custom__wrap--active .select-custom__list
+					bottom: calc(100% - 1px)
+					top: auto
+					border-bottom: 0 solid #000
+					border-top: 1px solid #007344
+				.calendar-custom
+					margin-left: 25px
+					margin-right: 50px
+				.calendar-custom__input .flatpickr-calendar
+					top: auto
+					bottom: - 15px
+					z-index: 1001
+		.modal-user__wrap
+			flex-wrap: wrap
+		&-title
+			font-weight: 600
+			font-size: 15px
+			line-height: 17px
+			color: #1D232F
+			margin-bottom: 20px
+			span
+				color: #007344
+		&-subtitle
+			font-weight: 500
+			font-size: 13px
+			line-height: 17px
+			color: #1D232F
+			font-family: $font2
+			margin-bottom: 15px
+		&-options
+			.checkbox-custom
+				margin-bottom: 15px
+				&--disabled
+					position: relative
+					&::after
+						position: absolute
+						content: ""
+						cursor: not-allowed
+						width: 100%
+						height: 100%
+						top: 0
+						left: 0
+						right: 0
+						bottom: 0
+						z-index: 1000
+					.checkbox-custom__label
+						color: #9091A0
+					.checkbox-custom__input
+						border-color: #9091A0
+						position: relative
+						&::after
+							content: ""
+							background-image: url("data:image/svg+xml,%3Csvg width='11' height='1' viewBox='0 0 11 1' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='11' height='1' rx='0.5' fill='%239091A0'/%3E%3C/svg%3E%0A")
+							width: 10px
+							height: 1px
+							position: absolute
+							background-repeat: no-repeat
+							top: 50%
+							left: 50%
+							transform: translate(-50%, -50%)
+			.checkbox-custom--name
+				display: flex
+				align-items: center
+				font-family: $font2
+				font-weight: normal
+				font-size: 13px
+				line-height: 17px
+				color: #000000
+				margin-left: 20px
+				svg
+					margin-right: 15px
+				span
+					text-decoration: underline
+					color: #007344
+					display: block
+					margin-left: 3px
+	&__manager
+		flex: 0 0 240px
+		margin-right: 80px
+		&-title
+			font-weight: 600
+			font-size: 15px
+			line-height: 17px
+			color: #1D232F
+			margin-bottom: 20px
+		.modal-user__company-item
+			display: flex
+			align-items: center
+			padding: 10px 8px
+			box-sizing: border-box
+			height: 60px
+			svg
+				margin-right: 13px
+			img, svg
+				height: 43px
+				width: 43px
+				object-fit: cover
+		.modal-user__company-item--active:after
+			background-image: url("data:image/svg+xml,%3Csvg width='10' height='39' viewBox='0 0 10 39' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.30287 1.02631C0.30287 0.585259 0.480394 0.293221 0.845098 0.137097C0.629484 0.0447967 0.348453 7.10938e-07 -2.31797e-07 7.36605e-07L1.6902 6.12104e-07C1.34175 6.37771e-07 1.06071 0.0447966 0.845098 0.137097C1.2098 0.293221 1.38734 0.585259 1.38734 1.02631L1.38734 9.23684C1.38734 9.49205 1.21682 10.0718 1.38734 10.2632L9.71137 18.4737C10.1377 18.9203 10.0524 20.1435 9.71137 20.5263L1.38734 28.7368L1.38734 37.9737C1.38734 38.4378 1.19078 38.7369 0.786412 38.8863C0.995485 38.9572 1.28676 39 1.69021 39L3.8147e-06 39C0.317664 39 0.579296 38.9628 0.786412 38.8863C0.497303 38.7882 0.365375 38.6365 0.311369 38.4703C0.208276 38.1529 0.302873 37.8062 0.302873 37.4725L0.30287 1.02631Z' fill='%23007344'/%3E%3C/svg%3E%0A")
+			width: 10px
+			height: 40px
+			background-repeat: no-repeat
+			right: -8px
+	&__form
+		flex: 0 0 490px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		.input-block
+			flex: 0 0 46.5%
+			margin-bottom: 25px
+		.input-block-textarea
+			flex: 0 0 100%
+		.input-block-submit
+			flex: 0 0 100%
+		&-saved
+			.input-block__error
+				display: none
+			.input-block
+				position: relative
+				&::after
+					content: ""
+					cursor: pointer
+					background-image: url("data:image/svg+xml,%3Csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.11748 8.79014L5.21289 11.8838L11.3735 5.71973L8.27806 2.62607L2.11748 8.79014Z' fill='%232F3747'/%3E%3Cpath d='M13.7433 2.11233L11.8873 0.256348C11.7175 0.0865156 11.4953 0.00112109 11.273 0H11.2638C11.0414 0.00112109 10.8195 0.0865156 10.6501 0.256348L9.41113 1.49368L12.506 4.58683L13.7433 3.3495C13.9132 3.17967 13.9986 2.95777 13.9997 2.73547V2.72623C13.9985 2.50403 13.9131 2.28214 13.7433 2.11233Z' fill='%232F3747'/%3E%3Cpath d='M0 14L4.0215 13.0717L0.926652 9.97852L0 14Z' fill='%232F3747'/%3E%3C/svg%3E%0A")
+					width: 14px
+					height: 14px
+					background-position: center
+					background-repeat: no-repeat
+					position: absolute
+					top: 35px
+					right: 8px
+				input
+					border: 0
+					color: #2F80ED
+					text-decoration: underline
+					background-color: transparent
+			.input-block-submit
+				&::after
+					display: none
+			.input-block-textarea
+				&::after
+					content: ""
+					background-image: url("data:image/svg+xml,%3Csvg width='14' height='12' viewBox='0 0 14 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.9035 0.667969L4.97862 7.52803L0.0940885 3.67346L0 5.46081L4.84932 11.3331L14 2.45292L13.9035 0.667969Z' fill='%23007344'/%3E%3C/svg%3E%0A")
+					top: 30px
+	&__role
+		flex: 0 0 160px
+		margin-right: 11%
+		.select-custom__wrap
+			border-color: #9091A0
+		.select-custom__wrap--active
+			border-color: #41b34d
+		&-edit
+			text-align: right
+			font-weight: normal
+			font-size: 11px
+			line-height: 18px
+			color: #007344
+			font-family: $font2
+			transition: all .3s ease
+			cursor: pointer
+			text-decoration: underline
+			&:hover
+				color: darken(#007344, 5%)
+				transition: all .3s ease
+		&-input
+			margin-bottom: 25px
+			input
+				height: 35px
+		.select-custom-manager
+			width: 160px
+			margin-bottom: 25px
+		.select-custom__active
+			font-size: 13px
+		.card__header
+			font-size: 15px
+			margin-bottom: 25px
+			span
+				font-weight: normal
+	&__img
+		flex: 0 0 190px
+		max-width: 190px
+		margin-right: 25px
+		&-block
+			img, svg
+				height: 230px
+				width: 190px
+				object-fit: cover
+		&-options
+			display: flex
+			align-items: center
+			margin-top: 25px
+			justify-content: space-between
+		&-delete
+			font-weight: bold
+			font-size: 10px
+			line-height: 24px
+			cursor: pointer
+			height: 24px
+			flex: 0 0 80px
+			background-color: #FF0000
+			border-radius: 3px
+			color: #fff
+			text-align: center
+			transition: all .3s ease
+			&:hover
+				background-color: darken(#FF0000, 5%)
+				transition: all .3s ease
+		&-open
+			font-weight: bold
+			font-size: 10px
+			line-height: 24px
+			cursor: pointer
+			color: #fff
+			background-color: #2F3747
+			border-radius: 3px
+			height: 24px
+			flex: 0 0 80px
+			text-align: center
+			transition: all .3s ease
+			&:hover
+				background-color: #13161D
+				transition: all .3s ease
+		&-upload
+			font-weight: bold
+			font-size: 10px
+			line-height: 24px
+			cursor: pointer
+			height: 24px
+			flex: 0 0 80px
+			background-color: #007344
+			border-radius: 3px
+			color: #fff
+			text-align: center
+			transition: all .3s ease
+			&:hover
+				background-color: darken(#007344, 5%)
+				transition: all .3s ease

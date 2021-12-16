@@ -18,6 +18,64 @@
 		flex: 0 0 calc(100% - 27px)
 		text-overflow: ellipsis
 		overflow: hidden
+	&__size
+		font-weight: normal
+		font-size: 15px
+		line-height: 17px
+		color: #2F80ED
+		text-align: center
+		margin-top: 10px
+	&__buttons
+		display: flex
+		align-items: center
+		justify-content: space-between
+		max-width: 85px
+		margin: auto
+		margin-top: 10px
+	&__delete
+		cursor: pointer
 		
-		
+.fiels-page
+	background-image: url(../images/dist/bg.png)
+	background-size: cover
+	background-repeat: no-repeat
+	&__title
+		margin-bottom: 40px
+		flex: 0 0 100%
+		font-weight: 600
+		font-size: 16px
+		line-height: 17px
+		color: #2F3747
+		margin-left: 25px
+	&__container
+		padding: 30px 25px
+	&__inner
+		padding: 0 75px
+		margin-top: 40px
+	&__wrap
+		height: 2100px
+		overflow-y: scroll
+		direction: rtl
+		padding: 0 50px
+	&__item
+		display: flex
+		direction: ltr
+		flex-wrap: wrap
+		padding: 25px 0
+		background-color: #fff
+		border: 1px solid #D7DDE5
+		box-sizing: border-box
+		border-radius: 3px
+		margin: 0 -25px
+		margin-bottom: 40px
+		.drag-and-drop
+			margin-left: 100px
+			flex: 0 0 178px
+		.file-block
+			flex: 0 0 130px
+			margin-left: 25px 
+			margin-right: 25px
+			margin-bottom: 80px
+	.file-block__content
+		font-size: 15px
 
