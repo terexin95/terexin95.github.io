@@ -434,7 +434,7 @@ function widgetRemarked(options) {
         let dataJSON = JSON.stringify(data);
 
 
-        remarkedXHRRoom.open('POST', remarkedReqUrl);
+        remarkedXHRCod.open('POST', remarkedReqUrl);
 
         remarkedXHRCod.responseType = 'json';
         remarkedXHRCod.setRequestHeader('Content-Type', 'application/json');
