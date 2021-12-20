@@ -456,7 +456,7 @@ function widgetRemarked(options) {
             remarkedBodyRooms.reserve.guests_count = ""; 
         }
         if (options.smsCode == true) {
-            remarkedBodyRooms.confirm_code: = document.querySelector('.remarked-cod-phone-input').value;
+            remarkedBodyRooms.confirm_code = document.querySelector('.remarked-cod-phone-input').value;
         }
         console.log(remarkedBodyRooms);
         const remarkedXHRRoom = new XMLHttpRequest();
