@@ -76,7 +76,7 @@ function widgetRemarked(options) {
                         </div>
                         <div class="remarked-widget-column">
                             <input type="tel" class="remarked-phone" id="remarkedPhoneInput" name="userPhone" placeholder="(900) 123-4567">
-                            <div class="remarked-cod-phone">
+                            <div class="remarked-cod-phone" style="display: none;">
                                 <input type="text" placeholder="Введите код" class="remarked-cod-phone-input">
                                 <button class="mb-2 nextCode">Продолжить</button>
                             </div>
@@ -513,7 +513,7 @@ function widgetRemarked(options) {
     }
     
     function checkInputs() {
-        if (options.smsCode) {
+        if (options.smsCode == true) {
             if(options.date == false && options.qty == false && options.time == false && options.text == false) {
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone .nextCode').addEventListener('click', function(){
