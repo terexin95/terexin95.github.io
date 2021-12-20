@@ -514,6 +514,7 @@ function widgetRemarked(options) {
     
     function checkInputs() {
         if (options.smsCode == true) {
+            console.log("we12e312")
             if(options.date == false && options.qty == false && options.time == false && options.text == false) {
                 console.log(remarkedWidgetClassic.querySelector('.remarked-cod-phone'));
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
