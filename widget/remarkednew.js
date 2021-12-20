@@ -515,17 +515,20 @@ function widgetRemarked(options) {
     function checkInputs() {
         if (options.smsCode == true) {
             if(options.date == false && options.qty == false && options.time == false && options.text == false) {
+                console.log(remarkedWidgetClassic.querySelector('.remarked-cod-phone'));
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone .nextCode').addEventListener('click', function(){
                     sendReserveRemarked();
                 });
             } else if (options.date == false && options.qty == false && options.time == false && options.text == false) {
+                console.log(remarkedWidgetClassic.querySelector('.remarked-cod-phone'));
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone .nextCode').addEventListener('click', function(){
                     remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
                     remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
                 });
             } else {
+                console.log(remarkedWidgetClassic.querySelector('.remarked-cod-phone'));
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
