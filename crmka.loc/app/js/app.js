@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	    paginationClickable: true,
 	    spaceBetween: 5,
 	    slidesPerView: 3,
+	    simulateTouch: false,
 	    breakpoints: {
 		    0: {
 		      slidesPerView: 1,
@@ -123,6 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	    paginationClickable: true,
 	    spaceBetween: 5,
 	    slidesPerView: 3,
+	    simulateTouch: false,
 	    breakpoints: {
 		    0: {
 		      slidesPerView: 1,
@@ -328,5 +330,24 @@ document.addEventListener('DOMContentLoaded', () => {
 				document.querySelector('.statistics-page__calendar-input-1').value = this.value;
 			}
 		})
+	}
+
+	if (document.querySelector('.checkbox-custom-version')) {
+		for (var i = 0; i < document.querySelectorAll('.checkbox-custom-version input').length; i++) {
+			document.querySelectorAll('.checkbox-custom-version input')[i].addEventListener('change', function(){
+				if (this.checked == true) {
+					this.parentElement.parentElement.querySelector('.checkbox-custom-version__label').textContent = "Включено";
+				} else {
+					this.parentElement.parentElement.querySelector('.checkbox-custom-version__label').textContent = "Выключено";
+				}
+			});
+		}
+	}
+	if (document.querySelector('.modal-user__company-mobile')) {
+		for (var i = 0; i < document.querySelectorAll('.modal-user__company-mobile').length; i++) {
+			document.querySelectorAll('.modal-user__company-mobile')[i].addEventListener('click', function(){
+				this.parentElement.classList.toggle('modal-user__company--active')
+			})
+		}
 	}
 })

@@ -76,6 +76,10 @@ function widgetRemarked(options) {
                         </div>
                         <div class="remarked-widget-column">
                             <input type="tel" class="remarked-phone" id="remarkedPhoneInput" name="userPhone" placeholder="(900) 123-4567">
+                            <div class="remarked-cod-phone">
+                                <input type="text" placeholder="Введите код" class="remarked-cod-phone-input">
+                                <button class="mb-2 nextCode">Продолжить</button>
+                            </div>
                         </div>
                         <div class="remarked-widget-column mt-2">
                             <input type="text" placeholder="email@exemple.ru" id="remarkedEmailInput" name="userEmail">
@@ -423,11 +427,11 @@ function widgetRemarked(options) {
             token: remarkedToken,
             reserve: {
                 name: remarkedUserInputText,
-                phone: "+7" + remarkedPhoneInputText,
+                phone: + remarkedPhoneInputText,
                 email: "",
                 date: "",
                 time: "",
-                guests_count: ""       
+                guests_count: ""  
             },
             request_id: new Date().getTime()
         };
@@ -450,6 +454,9 @@ function widgetRemarked(options) {
             remarkedBodyRooms.reserve.guests_count = remarkedWidgetClassic.querySelector('.remarked-quantity input').value;
         } else {
             remarkedBodyRooms.reserve.guests_count = ""; 
+        }
+        if (options.smsCode == true) {
+            remarkedBodyRooms.confirm_code: = document.querySelector('.remarked-cod-phone-input').value;
         }
         console.log(remarkedBodyRooms);
         const remarkedXHRRoom = new XMLHttpRequest();
@@ -506,15 +513,33 @@ function widgetRemarked(options) {
     }
     
     function checkInputs() {
-        if(options.date == false && options.qty == false && options.time == false && options.text == false) {
-            sendReserveRemarked();
-        } else if(options.date == false && options.qty == false) {
-            remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
-            remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
+        if (options.smsCode) {
+            if(options.date == false && options.qty == false && options.time == false && options.text == false) {
+                remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
+                remarkedWidgetClassic.querySelector('.remarked-cod-phone .nextCode').addEventListener('click', function(){
+                    sendReserveRemarked();
+                });
+            } else (options.date == false && options.qty == false && options.time == false && options.text == false) {
+                remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
+                remarkedWidgetClassic.querySelector('.remarked-cod-phone .nextCode').addEventListener('click', function(){
+                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
+                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
+                });
+            } else {
+                remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
+                remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
+            }
         } else {
-            remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
-            remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
-        }
+            if(options.date == false && options.qty == false && options.time == false && options.text == false) {
+                sendReserveRemarked();
+            } else if(options.date == false && options.qty == false) {
+                remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
+                remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
+            } else {
+                remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
+                remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
+            }
+        }   
     }
 
     remarkedUserInput.addEventListener('input', function(){

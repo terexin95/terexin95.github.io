@@ -39,6 +39,12 @@
 		padding-bottom: 20px
 		margin-bottom: 25px
 		direction: ltr
+		&:first-child
+			.claim-history__inner-info:hover .claim-history__inner-info-text
+				top: 20px
+				padding-bottom: 10px
+				padding-top: 25px
+				background-image: url("data:image/svg+xml,%3Csvg width='231' height='102' viewBox='0 0 231 102' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M90.4067 17.75L99.5 2L108.593 17.75L90.4067 17.75Z' fill='white' stroke='%232F3747'/%3E%3Crect x='229.5' y='101.5' width='229' height='87' rx='2.5' transform='rotate(180 229.5 101.5)' fill='white' stroke='%232F3747'/%3E%3Cpath d='M99.5 5L108.593 17.75L90.4067 17.75L99.5 5Z' fill='white'/%3E%3C/svg%3E%0A")
 	&__inner
 		flex: 0 0 calc(100% - 97px)
 		margin-left: 7px
@@ -60,8 +66,7 @@
 				display: none
 			&:hover
 				.claim-history__inner-info-text
-					left: 50%
-					transform: translateX(-50%)
+					left: -185px
 					top: -103px
 					margin-left: -15px
 					font-family: $font2
@@ -71,6 +76,7 @@
 					color: #252733
 					display: block
 					position: absolute
+					z-index: 1
 					width: 231px
 					height: 102px
 					overflow: hidden
@@ -121,5 +127,5 @@
 			padding-left: 13px
 			margin-right: -25px
 			margin-bottom: 3px
-			&:hover
+			&:hover, &--active
 				background-color: #D7FFD4

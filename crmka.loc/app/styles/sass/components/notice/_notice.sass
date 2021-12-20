@@ -3,16 +3,21 @@
 	top: 110px
 	right: 0
 	overflow: hidden
-	display: none
 	&__title
 		font-weight: bold
 		font-size: 25px
 		line-height: 30px
 		color: #fff
 		margin-bottom: 5px
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
 	&__content
 		display: flex
 		margin-bottom: 12px
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
 	&__link
 		font-weight: 600
 		font-size: 14px
@@ -20,6 +25,7 @@
 		text-decoration: underline
 		color: #FFFFFF
 		cursor: pointer
+		display: block
 	&__close
 		position: absolute
 		top: 16px

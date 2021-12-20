@@ -33,3 +33,54 @@
     background-position: center
     background-image: url("data:image/svg+xml,%3Csvg width='6' height='7' viewBox='0 0 6 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='2' height='7' fill='white'/%3E%3Crect x='4' width='2' height='7' fill='white'/%3E%3C/svg%3E%0A")
 
+  input[type=range]::-moz-range-track 
+    width: 100%
+    height: 3px
+    cursor: pointer
+    background: transparent
+    border-radius: 70px
+
+  input[type=range]::-moz-range-thumb 
+    height: 17px
+    width: 51px
+    background: #32434B
+    cursor: pointer
+    border-radius: 3px
+    -webkit-appearance: none
+    margin-top: -7px
+    background-repeat: no-repeat
+    background-position: center
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='7' viewBox='0 0 6 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='2' height='7' fill='white'/%3E%3Crect x='4' width='2' height='7' fill='white'/%3E%3C/svg%3E%0A")
+
+  input[type=range]::-ms-track 
+    width: 100%
+    height: 3px
+    cursor: pointer
+    background: transparent
+    border-radius: 70px
+
+  input[type=range]::-ms-fill-lower 
+    background: #2a6495
+    border: 0.2px solid #010101
+    border-radius: 2.6px
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d
+
+  input[type=range]::-ms-fill-upper 
+    background: #3071a9
+    border: 0.2px solid #010101
+    border-radius: 2.6px
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d
+
+  input[type=range]::-ms-thumb 
+    height: 17px
+    width: 51px
+    background: #32434B
+    cursor: pointer
+    -webkit-appearance: none
+    margin-top: -14px
+
+  input[type=range]:focus::-ms-fill-lower 
+    background: #32434B
+
+  input[type=range]:focus::-ms-fill-upper 
+    background: #32434B
