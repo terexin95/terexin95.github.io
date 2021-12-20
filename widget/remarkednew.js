@@ -398,6 +398,7 @@ function widgetRemarked(options) {
     for (var i = nextStep2.length - 1; i >= 0; i--) {
         nextStep2[i].addEventListener('click', function(){
             if(remarkedUserInputVal && remarkedPhoneInputVal && remarkedEmailInputVal) {
+                sendCodRemarked();
                 checkInputs();
             } else {
                 if (remarkedUserInput.value == '') {
@@ -419,7 +420,31 @@ function widgetRemarked(options) {
             
         });
     }
+    
+    function sendCodRemarked() {
+        let data = {
+             method: 'GetSMSCode',
+             token: remarkedToken,
+             phone: "+" + remarkedPhoneInputText,
+             request_id: new Date().getTime()
+        };
+        console.log(data);
+        const remarkedXHRCod = new XMLHttpRequest();
         
+        let dataJSON = JSON.stringify(data);
+
+
+        remarkedXHRRoom.open('POST', remarkedReqUrl);
+
+        remarkedXHRCod.responseType = 'json';
+        remarkedXHRCod.setRequestHeader('Content-Type', 'application/json');
+
+        remarkedXHRCod.onload = function(){
+            console.log(remarkedXHRCod.response)
+        }
+        console.log(dataJSON);
+        remarkedXHRCod.send(dataJSON);
+    }
 
     function sendReserveRemarked() {
         let remarkedBodyRooms = {
@@ -427,7 +452,7 @@ function widgetRemarked(options) {
             token: remarkedToken,
             reserve: {
                 name: remarkedUserInputText,
-                phone: + remarkedPhoneInputText,
+                phone: "+" + remarkedPhoneInputText,
                 email: "",
                 date: "",
                 time: "",
@@ -513,26 +538,26 @@ function widgetRemarked(options) {
     }
     
     function checkInputs() {
+
         if (options.smsCode == true) {
-            console.log("we12e312")
             if(options.date == false && options.qty == false && options.time == false && options.text == false) {
-                console.log(remarkedWidgetClassic.querySelector('.remarked-cod-phone'));
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone .nextCode').addEventListener('click', function(){
                     sendReserveRemarked();
                 });
             } else if (options.date == false && options.qty == false && options.time == false && options.text == false) {
-                console.log(remarkedWidgetClassic.querySelector('.remarked-cod-phone'));
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone .nextCode').addEventListener('click', function(){
                     remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
                     remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
                 });
             } else {
-                console.log(remarkedWidgetClassic.querySelector('.remarked-cod-phone'));
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
-                remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
-                remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
+                remarkedWidgetClassic.querySelector('.remarked-cod-phone .nextCode').addEventListener('click', function(){
+                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
+                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
+                });
+                
             }
         } else {
             if(options.date == false && options.qty == false && options.time == false && options.text == false) {
