@@ -379,6 +379,7 @@ function widgetRemarked(options) {
             remarkedCodInputVal = false;
         }
         console.log(remarkedCodInputVal)
+        //console.log(remarkedCodInputVal)
     });
 
     if (options.email == false) {
@@ -555,6 +556,7 @@ function widgetRemarked(options) {
                     remarkedWidgetClassic.classList.add('remarked-widget-none');
                 });
             }
+            console.log(remarkedXHRRoom.response);
         }
 
         remarkedXHRRoom.send(remarkedBodyRoomsJSON);
@@ -570,7 +572,7 @@ function widgetRemarked(options) {
                     if (remarkedCodInputVal) {
                         sendReserveRemarked();
                     } else {
-                        remarkedCodInput.style.border = "1px solid red"
+                        remarkedCod.style.border = "1px solid red"
                     }
                 });
             } else if (options.date == false && options.qty == false && options.time == false && options.text == false) {
@@ -581,7 +583,7 @@ function widgetRemarked(options) {
                         remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
                         remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
                     } else {
-                        remarkedCodInput.style.border = "1px solid red"
+                        remarkedCod.style.border = "1px solid red"
                     }
                 });
             } else {
@@ -592,7 +594,7 @@ function widgetRemarked(options) {
                         remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
                         remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
                     } else {
-                        remarkedCodInput.style.border = "1px solid red"
+                        remarkedCod.style.border = "1px solid red"
                     }
                 });
                 
