@@ -556,7 +556,7 @@ function widgetRemarked(options) {
                     remarkedWidgetClassic.classList.add('remarked-widget-none');
                 });
             } else {
-                if(!alert('Заполните анкету заново с правильными параметрами')){window.location.reload();}
+                // if(!alert('Заполните анкету заново с правильными параметрами')){window.location.reload();}
             }
             console.log(remarkedXHRRoom.response);
         }
