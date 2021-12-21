@@ -520,7 +520,7 @@ function widgetRemarked(options) {
 
         remarkedXHRRoom.onload = function(){
 
-            if(remarkedXHRRoom.status == 200 && !remarkedXHRRoom.response.status == 'error') {
+            if(remarkedXHRRoom.status == 200 && remarkedXHRRoom.response.status == "success") {
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').style.display="none";
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').style.display="none";
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').style.display="none";
@@ -556,7 +556,7 @@ function widgetRemarked(options) {
                     remarkedWidgetClassic.classList.add('remarked-widget-none');
                 });
             } else {
-                // if(!alert('Заполните анкету заново с правильными параметрами')){window.location.reload();}
+                if(!alert('Заполните анкету заново с правильными параметрами')){window.location.reload();}
             }
             console.log(remarkedXHRRoom.response);
         }
