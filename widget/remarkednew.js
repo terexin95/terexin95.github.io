@@ -372,11 +372,13 @@ function widgetRemarked(options) {
 
     remarkedCod.addEventListener('input', function(){
         this.value = this.value.replace(/[^\d.]/g, '');
-        if (!this.value == "" && this.value.length < 7) {
+
+        if (!this.value == "" && this.value.length == 6) {
             remarkedCodInputVal = true;
         } else {
             remarkedCodInputVal = false;
         }
+        console.log(remarkedCodInputVal)
     });
 
     if (options.email == false) {
