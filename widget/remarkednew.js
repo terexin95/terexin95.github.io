@@ -441,8 +441,9 @@ function widgetRemarked(options) {
 
         remarkedXHRCod.onload = function(){ 
             if (remarkedXHRCod.response.status == "error") {
-                alert('Alert For your User!');
-                if(!alert('Alert For your User!')){window.location.reload();}
+                alert('Введите правильный номер телефона');
+                // if(!alert('Введите правильный номер телефона')){window.location.reload();}
+                // remarkedPhoneInput.addEventListener('input', function(){}
             }
         }
         remarkedXHRCod.send(dataJSON);
@@ -590,6 +591,7 @@ function widgetRemarked(options) {
         if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value.length == 15) {
             remarkedPhoneInputVal = true;
             remarkedPhoneInputText = remarkedPhoneInput.value;
+            sendCodRemarked();
         } else {
             remarkedPhoneInputVal = false;
         }
