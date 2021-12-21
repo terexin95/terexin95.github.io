@@ -76,13 +76,15 @@ function widgetRemarked(options) {
                         </div>
                         <div class="remarked-widget-column">
                             <input type="tel" class="remarked-phone" id="remarkedPhoneInput" name="userPhone" placeholder="(900) 123-4567">
+                        </div>
+                        <div class="remarked-widget-column mt-2">
+                            <input type="text" placeholder="email@exemple.ru" id="remarkedEmailInput" name="userEmail">
+                        </div>
+                        <div class="remarked-widget-column mt-2">
                             <div class="remarked-cod-phone" style="display: none;">
                                 <input type="text" placeholder="Введите код" class="remarked-cod-phone-input">
                                 <button class="mb-2 nextCode">Продолжить</button>
                             </div>
-                        </div>
-                        <div class="remarked-widget-column mt-2">
-                            <input type="text" placeholder="email@exemple.ru" id="remarkedEmailInput" name="userEmail">
                         </div>
                     </div>
                     <button class="mb-2 nextStep2">Продолжить</button>
@@ -406,7 +408,7 @@ function widgetRemarked(options) {
                 } else {
                     remarkedUserInput.style.border = "2px solid #1aaf33";
                 }
-                if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value.length == 14) {
+                if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value.length == 15) {
                     remarkedPhoneInput.style.border = "2px solid #1aaf33";
                 } else {
                     remarkedPhoneInput.style.border = "2px solid" + options.color_red;
@@ -541,17 +543,20 @@ function widgetRemarked(options) {
 
         if (options.smsCode == true) {
             if(options.date == false && options.qty == false && options.time == false && options.text == false) {
+                remarkedWidgetClassic.querySelector('.nextStep2').style.display = "none";
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone .nextCode').addEventListener('click', function(){
                     sendReserveRemarked();
                 });
             } else if (options.date == false && options.qty == false && options.time == false && options.text == false) {
+                remarkedWidgetClassic.querySelector('.nextStep2').style.display = "none";
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone .nextCode').addEventListener('click', function(){
                     remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
                     remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
                 });
             } else {
+                remarkedWidgetClassic.querySelector('.nextStep2').style.display = "none";
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone .nextCode').addEventListener('click', function(){
                     remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
