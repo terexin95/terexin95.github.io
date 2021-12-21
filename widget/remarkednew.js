@@ -83,7 +83,7 @@ function widgetRemarked(options) {
                     </div>
                     <button class="mb-2 nextStep2">Продолжить</button>
                     <div class="remarked-cod-phone" style="display: none;">
-                        <input type="text" placeholder="Введите код" class="remarked-cod-phone-input">
+                        <input type="text" name="cod" maxlength="6" placeholder="Введите код" class="remarked-cod-phone-input">
                         <button class="mt-2 nextCode">Продолжить</button>
                     </div>
                 </div>
@@ -356,10 +356,28 @@ function widgetRemarked(options) {
     let remarkedUserInput = remarkedWidgetClassic.querySelector('#remarkedUserInput');
     let remarkedPhoneInput = remarkedWidgetClassic.querySelector('#remarkedPhoneInput');
     let remarkedEmailInput = remarkedWidgetClassic.querySelector('#remarkedEmailInput');
+    let remarkedCod = remarkedWidgetClassic.querySelector('.remarked-cod-phone-input');
+    
 
     let remarkedUserInputVal = false;
     let remarkedPhoneInputVal = false;
     let remarkedEmailInputVal = false;
+    let remarkedCodInputVal = false;
+
+    if (options.smsCode == false) {
+        remarkedCodInputVal = true;
+    } else {
+        remarkedEmailInputVal = false;
+    }
+
+    remarkedCod.addEventListener('input', function(){
+        this.value = this.value.replace(/[^\d.]/g, '');
+        if (!this.value == "" && this.value.length < 7) {
+            remarkedCodInputVal = true;
+        } else {
+            remarkedCodInputVal = false;
+        }
+    });
 
     if (options.email == false) {
         remarkedEmailInputVal = true;
@@ -428,7 +446,6 @@ function widgetRemarked(options) {
              phone: "+" + remarkedPhoneInputText,
              request_id: new Date().getTime()
         };
-        console.log(data);
         const remarkedXHRCod = new XMLHttpRequest();
         
         let dataJSON = JSON.stringify(data);
@@ -445,6 +462,7 @@ function widgetRemarked(options) {
                 // if(!alert('Введите правильный номер телефона')){window.location.reload();}
                 // remarkedPhoneInput.addEventListener('input', function(){}
             }
+            console.log(remarkedXHRCod.response)
         }
         remarkedXHRCod.send(dataJSON);
     }
@@ -547,21 +565,33 @@ function widgetRemarked(options) {
                 remarkedWidgetClassic.querySelector('.nextStep2').style.display = "none";
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone .nextCode').addEventListener('click', function(){
-                    sendReserveRemarked();
+                    if (remarkedCodInputVal) {
+                        sendReserveRemarked();
+                    } else {
+                        remarkedCodInput.style.border = "1px solid red"
+                    }
                 });
             } else if (options.date == false && options.qty == false && options.time == false && options.text == false) {
                 remarkedWidgetClassic.querySelector('.nextStep2').style.display = "none";
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone .nextCode').addEventListener('click', function(){
-                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
-                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
+                    if (remarkedCodInputVal) {
+                        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
+                        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
+                    } else {
+                        remarkedCodInput.style.border = "1px solid red"
+                    }
                 });
             } else {
                 remarkedWidgetClassic.querySelector('.nextStep2').style.display = "none";
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone .nextCode').addEventListener('click', function(){
-                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
-                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
+                    if (remarkedCodInputVal) {
+                        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
+                        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
+                    } else {
+                        remarkedCodInput.style.border = "1px solid red"
+                    }
                 });
                 
             }
