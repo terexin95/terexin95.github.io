@@ -520,7 +520,7 @@ function widgetRemarked(options) {
 
         remarkedXHRRoom.onload = function(){
 
-            if(remarkedXHRRoom.status == 200) {
+            if(remarkedXHRRoom.status == 200 && !remarkedXHRRoom.response.status == 'error') {
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').style.display="none";
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').style.display="none";
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').style.display="none";
