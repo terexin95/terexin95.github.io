@@ -462,7 +462,7 @@ function widgetRemarked(options) {
         remarkedXHRCod.onload = function(){ 
             if (remarkedXHRCod.response.status == "error") {
                 alert('Введите правильный номер телефона');
-                // if(!alert('Введите правильный номер телефона')){window.location.reload();}
+                remarkedPhoneInputVal == false;
                 // remarkedPhoneInput.addEventListener('input', function(){}
             }
             console.log(remarkedXHRCod.response)
@@ -625,11 +625,16 @@ function widgetRemarked(options) {
         if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value.length == 15) {
             remarkedPhoneInputVal = true;
             remarkedPhoneInputText = remarkedPhoneInput.value;
-            sendCodRemarked();
         } else {
             remarkedPhoneInputVal = false;
         }
     });
+
+    remarkedPhoneInput.addEventListener('change', function(){
+        if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value.length == 15) {
+            sendCodRemarked();
+        }
+    }
 
     remarkedEmailInput.addEventListener('input', function(){
         if (remarkedEmailInput.value !== '') {
