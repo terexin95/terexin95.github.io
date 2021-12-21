@@ -555,6 +555,8 @@ function widgetRemarked(options) {
                     remarkedWidgetClassic.classList.remove('remarked-widget-active');
                     remarkedWidgetClassic.classList.add('remarked-widget-none');
                 });
+            } else {
+                if(!alert('Заполните анкету заново с правильными параметрами')){window.location.reload();}
             }
             console.log(remarkedXHRRoom.response);
         }
@@ -634,7 +636,7 @@ function widgetRemarked(options) {
         if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value.length == 15) {
             sendCodRemarked();
         }
-    }
+    });
 
     remarkedEmailInput.addEventListener('input', function(){
         if (remarkedEmailInput.value !== '') {
