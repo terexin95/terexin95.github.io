@@ -80,14 +80,12 @@ function widgetRemarked(options) {
                         <div class="remarked-widget-column mt-2">
                             <input type="text" placeholder="email@exemple.ru" id="remarkedEmailInput" name="userEmail">
                         </div>
-                        <div class="remarked-widget-column mt-2">
-                            <div class="remarked-cod-phone" style="display: none;">
-                                <input type="text" placeholder="Введите код" class="remarked-cod-phone-input">
-                                <button class="mb-2 nextCode">Продолжить</button>
-                            </div>
-                        </div>
                     </div>
                     <button class="mb-2 nextStep2">Продолжить</button>
+                    <div class="remarked-cod-phone" style="display: none;">
+                        <input type="text" placeholder="Введите код" class="remarked-cod-phone-input">
+                        <button class="mt-2 nextCode">Продолжить</button>
+                    </div>
                 </div>
                 <div class="remarked-widget-classic__step remarked-widget-classic__step-2">
                     <div class="prevStep1 arrow-remarked-prev">
@@ -441,10 +439,12 @@ function widgetRemarked(options) {
         remarkedXHRCod.responseType = 'json';
         remarkedXHRCod.setRequestHeader('Content-Type', 'application/json');
 
-        remarkedXHRCod.onload = function(){
-            console.log(remarkedXHRCod.response)
+        remarkedXHRCod.onload = function(){ 
+            if (remarkedXHRCod.response.status == "error") {
+                alert('Alert For your User!');
+                if(!alert('Alert For your User!')){window.location.reload();}
+            }
         }
-        console.log(dataJSON);
         remarkedXHRCod.send(dataJSON);
     }
 
