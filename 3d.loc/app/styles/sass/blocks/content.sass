@@ -133,6 +133,12 @@
 				line-height: 140%
 				color: #F1F1F1
 				text-decoration: none
+				transition: all .3s ease
+				&:hover
+					text-shadow: 0px 0px 45px #61B0FF
+					color: #3198FF
+					transition: all .3s ease
+
 
 
 .single-post
@@ -206,12 +212,15 @@
 		line-height: 23px
 		color: rgba(255, 255, 255, 0.8)
 		transition: all .3s ease
+		position: absolute
+		bottom: 0
 		svg
 			margin-left: 15px
 			path
 				transition: all .3s ease
 	&__block
 		flex: 0 0 calc(100% - 390px)
+		position: relative
 		h3
 			margin: 0
 			font-weight: 500
@@ -225,6 +234,10 @@
 			font-size: 18px
 			line-height: 35px
 			color: rgba(#D6D6D6, 0.8)
+			&:nth-child(2)
+				overflow: hidden
+				max-height: 110px
+				text-overflow: ellipsis
 			span
 				font-weight: 500
 				color: rgba(#FAFAFA, .8)
@@ -276,6 +289,11 @@
 		flex: 0 0 100%
 		max-width: 100%
 		margin-right: 0
+	.single-post__block p:nth-child(2)
+		max-height: 100%
+	.single-post__link
+		position: relative
+		bottom: auto
 
 @media (max-width: 800px)
 	.single-post__pay

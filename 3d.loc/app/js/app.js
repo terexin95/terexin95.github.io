@@ -52,9 +52,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (document.querySelector('.breadcrumbs')) {
 		for (var i = 0; i < document.querySelectorAll('.breadcrumbs').length; i++) {
-			document.querySelectorAll('.breadcrumbs')[i].style.top = document.querySelectorAll('.breadcrumbs')[i].offsetWidth + 85 + "px";
+			console.log(document.querySelectorAll('.breadcrumbs')[i].offsetWidth)
+			console.log(document.querySelectorAll('.breadcrumbs')[i].clientWidth)
+			console.log(getComputedStyle(document.querySelectorAll('.breadcrumbs')[i]).width)
+			document.querySelectorAll('.breadcrumbs')[i].style.top = document.querySelectorAll('.breadcrumbs')[i].offsetWidth + 80 + "px";
 		}
 	}
+
+	function breadTop() {
+		if (document.querySelector('.breadcrumbs')) {
+			for (var i = 0; i < document.querySelectorAll('.breadcrumbs').length; i++) {
+				document.querySelectorAll('.breadcrumbs')[i].style.top = document.querySelectorAll('.breadcrumbs')[i].offsetWidth + 50 + "px";
+			}
+		}
+	}
+
+	window.addEventListener('resize', function(){
+		breadTop();
+	})
 
 	if (document.querySelector('.dropdown__arrow')) {
 		for (var i = 0; i < document.querySelectorAll('.dropdown__arrow').length; i++) {
@@ -65,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	window.addEventListener('scroll', function(){
+		breadTop();
 		if (this.pageYOffset > 1) {
 			if (document.querySelector('.site-header')) {
 				document.querySelector('.site-header').classList.add('site-header--active')

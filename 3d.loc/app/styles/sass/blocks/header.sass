@@ -7,6 +7,8 @@
 		background: rgba(19, 21, 30, 0.5)
 		box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.44), inset 67.3333px -67.3333px 67.3333px rgba(149, 149, 149, 0.027), inset -67.3333px 67.3333px 67.3333px rgba(255, 255, 255, 0.027)
 		backdrop-filter: blur(57.5333px)
+		@-moz-document url-prefix()
+			background: rgba(19, 21, 30, 0.96)
 	&__wrap
 		display: flex
 		align-items: center
@@ -368,6 +370,8 @@
 	background: rgba(39, 41, 60, 0.1)
 	backdrop-filter: blur(13px)
 	display: none
+	@-moz-document url-prefix()
+		background: rgba(39, 41, 60, 0.96)
 
 @media (max-width: 1600px)
 	.site-header__logo
@@ -401,3 +405,5 @@
 			box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.44), inset 67.3333px -67.3333px 67.3333px rgba(149, 149, 149, 0.027), inset -67.3333px 67.3333px 67.3333px rgba(255, 255, 255, 0.027)
 			backdrop-filter: blur(57.5333px)
 			z-index: 8
+			@-moz-document url-prefix()
+				background: rgba(19, 21, 30, 0.96)
