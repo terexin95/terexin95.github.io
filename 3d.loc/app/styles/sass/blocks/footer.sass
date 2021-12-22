@@ -16,11 +16,30 @@
 			opacity: 0.65
 			padding:  15px 0
 			text-decoration: none
+		&-politic
+			transition: all .3s ease
+			&:hover
+				color: #3198FF
+				text-shadow: 0px 0px 45px #61B0FF
+				transition: all .3s ease
 	&__wrap
 		display: flex
 		justify-content: space-between
 		padding-bottom: 50px
 		border-bottom: 1px solid rgba(#fff, .2)
+	&__up
+		svg
+			transition: all .3s ease
+		&:hover
+			svg
+				filter: drop-shadow(0px 0px 25px #61B0FF)
+				transition: all .3s ease
+				path
+					fill: #3198FF
+					transition: all .3s ease
+				circle
+					stroke: #3198FF
+					transition: all .3s ease
 	&__logo
 		flex: 0 0 340px
 		.social

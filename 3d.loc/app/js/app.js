@@ -52,9 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (document.querySelector('.breadcrumbs')) {
 		for (var i = 0; i < document.querySelectorAll('.breadcrumbs').length; i++) {
-			console.log(document.querySelectorAll('.breadcrumbs')[i].offsetWidth)
-			console.log(document.querySelectorAll('.breadcrumbs')[i].clientWidth)
-			console.log(getComputedStyle(document.querySelectorAll('.breadcrumbs')[i]).width)
 			document.querySelectorAll('.breadcrumbs')[i].style.top = document.querySelectorAll('.breadcrumbs')[i].offsetWidth + 80 + "px";
 		}
 	}
