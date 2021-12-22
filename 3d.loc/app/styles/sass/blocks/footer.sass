@@ -1,0 +1,212 @@
+.site-footer
+	background-color: #1B1E29
+	padding-top: 120px
+	padding-bottom: 110px
+	&__line
+		display: flex
+		flex-direction: row-reverse
+		flex-wrap: wrap
+		justify-content: space-between
+		margin-top: 25px
+		&-politic, &-digital
+			font-weight: normal
+			font-size: 12px
+			line-height: 20px
+			color: #FFFFFF
+			opacity: 0.65
+			padding:  15px 0
+			text-decoration: none
+	&__wrap
+		display: flex
+		justify-content: space-between
+		padding-bottom: 50px
+		border-bottom: 1px solid rgba(#fff, .2)
+	&__logo
+		flex: 0 0 340px
+		.social
+			margin-top: 60px
+		.subscription
+			margin-top: 60px
+	&__menu
+		flex: 0 0 120px
+		&--none
+			display: none
+		ul
+			padding: 0
+			margin: 0
+			li
+				list-style-type: none
+				margin-bottom: 30px
+				&:last-child
+					margin-bottom: 0
+				a
+					text-decoration: none
+					font-weight: normal
+					font-size: 18px
+					line-height: 17px
+					color: #DADADA
+					transition: all .3s ease
+					&:hover
+						text-shadow: 0px 0px 45px #61B0FF
+						color: #3198FF
+						transition: all .3s ease
+	&__submenu
+		flex: 0 0 235px
+		ul
+			li
+				font-size: 18px
+				line-height: 17px
+				color: #DADADA
+				a
+					font-size: 16px
+					line-height: 15px
+	&__social
+		display: none
+	&__callback
+		flex: 0 0 210px
+		&-item
+			display: flex
+			align-items: center
+			margin-bottom: 30px
+			font-size: 14px
+			line-height: 13px
+			color: #D6D6D6
+			text-decoration: none
+			svg
+				margin-right: 15px
+				flex: 0 0 24px
+			&:last-child
+				margin-bottom: 0
+
+
+.subscription
+	label
+		font-weight: normal
+		font-size: 18px
+		line-height: 18px
+		color: #A6A6A6
+		margin-bottom: 15px
+		display: block
+	&__input
+		position: relative
+		&::before
+			content: ""
+			background-image: url("data:image/svg+xml,%3Csvg width='20' height='16' viewBox='0 0 20 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.6211 5.45312C19.7734 5.33203 20 5.44531 20 5.63672V13.625C20 14.6602 19.1602 15.5 18.125 15.5H1.875C0.839844 15.5 0 14.6602 0 13.625V5.64062C0 5.44531 0.222656 5.33594 0.378906 5.45703C1.25391 6.13672 2.41406 7 6.39844 9.89453C7.22266 10.4961 8.61328 11.7617 10 11.7539C11.3945 11.7656 12.8125 10.4727 13.6055 9.89453C17.5898 7 18.7461 6.13281 19.6211 5.45312ZM10 10.5C10.9062 10.5156 12.2109 9.35938 12.8672 8.88281C18.0508 5.12109 18.4453 4.79297 19.6406 3.85547C19.8672 3.67969 20 3.40625 20 3.11719V2.375C20 1.33984 19.1602 0.5 18.125 0.5H1.875C0.839844 0.5 0 1.33984 0 2.375V3.11719C0 3.40625 0.132812 3.67578 0.359375 3.85547C1.55469 4.78906 1.94922 5.12109 7.13281 8.88281C7.78906 9.35938 9.09375 10.5156 10 10.5Z' fill='%23435060'/%3E%3C/svg%3E%0A")
+			width: 20px
+			height: 15px
+			background-repeat: no-repeat
+			background-size: contain
+			background-position: center
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: 20px
+		input
+			width: 100%
+			height: 66px
+			background: #262D37
+			border-radius: 15px
+			box-shadow: 0 0 0 0 transparent
+			box-sizing: border-box
+			padding-left: 60px
+			padding-right: 30px
+			font-weight: normal
+			font-size: 16px
+			line-height: 15px
+			color: #3198FF
+			border: 1px solid transparent
+			outline: none
+			&:focus
+				border-color: rgba(49, 152, 255, 0.5)
+				box-shadow: 0px 0px 20px rgba(97, 176, 255, 0.15)
+		button
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			right: 20px
+			background-color: #435060
+			border: 0
+			cursor: pointer
+			border-radius: 100%
+			width: 20px
+			height: 20px
+			display: flex
+			align-items: center
+			justify-content: center
+			padding: 0
+
+.back_to_top
+	cursor: pointer
+
+@media (max-width: 1350px)
+	.site-footer__submenu
+		display: none
+	.site-footer__menu--none
+		display: block
+
+@media (max-width: 993px)
+	.site-footer__logo
+		flex: 0 0 240px
+
+@media (max-width: 768px)
+	.site-footer__wrap
+		flex-wrap: wrap
+		position: relative
+	.site-footer__up
+		position: absolute
+		right: 0
+		top: 0
+	.site-footer__logo
+		flex: 0 0 100%
+		margin-bottom: 40px
+		.subscription
+			max-width: 315px
+			margin-top: 40px
+		.social
+			display: none
+	.site-footer
+		padding-top: 80px
+		padding-bottom: 80px
+
+@media (max-width: 640px)
+	.site-footer__line-digital, .site-footer__line-politic
+		flex: 0 0 100%
+@media (max-width: 440px)
+	.site-footer__logo
+		order: 1
+		a
+			svg
+				width: 70px
+				height: 20px
+	.site-footer__up
+		svg
+			width: 22px
+			height: 22px
+	.subscription label
+		font-size: 14px
+		line-height: 13px
+	.site-footer__logo .subscription
+		max-width: 100%
+	.site-footer__callback
+		flex: 0 0 100%
+		order: 2
+	.site-footer__menu
+		flex: 0 0 100%
+		order: 3
+		margin-top: 40px
+		ul
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			li
+				flex: 0 0 48%
+				max-width: 48%
+				margin-bottom: 25px
+				a
+					font-size: 14px
+					line-height: 13px
+	.site-footer__social
+		display: block
+		flex: 0 0 100%
+		order: 4
+		margin-top: 15px

@@ -1,0 +1,403 @@
+.site-header
+	padding: 30px 0
+	position: sticky
+	top: 0
+	z-index: 8
+	&--active
+		background: rgba(19, 21, 30, 0.5)
+		box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.44), inset 67.3333px -67.3333px 67.3333px rgba(149, 149, 149, 0.027), inset -67.3333px 67.3333px 67.3333px rgba(255, 255, 255, 0.027)
+		backdrop-filter: blur(57.5333px)
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__inner
+		display: flex
+		align-items: center
+	&__menu
+		display: flex
+		align-items: center
+		a
+			&:hover
+				color: #3198FF
+				transition: all .3s ease
+				text-shadow: 0px 0px 45px #61B0FF
+		&-item
+			text-decoration: none
+			color: #DADADA
+			font-weight: normal
+			font-size: 18px
+			line-height: 42px
+			margin-right: 55px
+			transition: all .3s ease
+			&:last-child
+				margin-right: 0
+		&-dropdown
+			position: relative
+			margin-right: 75px
+			span
+				position: relative
+				z-index: 5
+				&::before
+					content: ""
+					background-image: url("data:image/svg+xml,%3Csvg width='11' height='7' viewBox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.75 0.5L5.5 4.25L9.25 0.5L10.75 1.25L5.5 6.5L0.25 1.25L1.75 0.5Z' fill='%23DADADA'/%3E%3C/svg%3E%0A")
+					width: 11px
+					height: 6px
+					background-repeat: no-repeat
+					background-position: center
+					position: absolute
+					right: -30px
+					top: 50%
+					transform: translate(-50%)
+					transition: all .3s ease
+			&:hover
+				.dropdown-menu
+					animation-name: block
+					display: block
+				span
+					&::before
+						content: ""
+						transform: translateY(-50%) rotate(90deg)
+						transition: all .3s ease
+	&__logo
+		margin-right: 120px
+	&__phone
+		margin-right: 25px
+		position: relative
+		flex: 0 0 50px
+		height: 50px
+		width: 50px
+		border-radius: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		box-sizing: border-box
+		border: 2px solid #DADADA
+		transition: all .3s ease
+		&-icon
+			display: flex
+			position: relative
+			transition: all .3s ease
+			z-index: 5
+			svg
+				&:nth-child(2)
+					display: none
+		&-dropdown
+			position: absolute
+			animation-duration: .3s
+			animation-iteration-count: 1
+			z-index: 4
+			top: 0
+			width: 170px
+			height: 110px
+			background-image: url("data:image/svg+xml,%3Csvg width='173' height='113' viewBox='0 0 173 113' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_ii_14_4)'%3E%3Cpath d='M0 89C0 75.745 10.7452 65 24 65H30.5C47.3447 65 61 51.3447 61 34.5V25C61 11.1929 72.1929 0 86 0C99.8071 0 111 11.1929 111 25V34C111 51.1208 124.879 65 142 65H149C162.255 65 173 75.745 173 89C173 102.255 162.255 113 149 113H24C10.7452 113 0 102.255 0 89Z' fill='url(%23paint0_linear_14_4)' fill-opacity='0.96'/%3E%3Cpath d='M1 89C1 76.297 11.2975 66 24 66H30.5C47.897 66 62 51.897 62 34.5V25C62 11.7452 72.7452 1 86 1C99.2548 1 110 11.7452 110 25V34C110 51.6731 124.327 66 142 66H149C161.703 66 172 76.297 172 89C172 101.703 161.703 112 149 112H24C11.2975 112 1 101.703 1 89Z' stroke='%23DADADA' stroke-opacity='0.55' stroke-width='2'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_ii_14_4' x='-67.3333' y='-67.3333' width='307.667' height='247.667' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='-67.3333' dy='67.3333'/%3E%3CfeGaussianBlur stdDeviation='33.6667'/%3E%3CfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.027 0'/%3E%3CfeBlend mode='normal' in2='shape' result='effect1_innerShadow_14_4'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='67.3333' dy='-67.3333'/%3E%3CfeGaussianBlur stdDeviation='33.6667'/%3E%3CfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.584157 0 0 0 0 0.584157 0 0 0 0 0.584157 0 0 0 0.027 0'/%3E%3CfeBlend mode='normal' in2='effect1_innerShadow_14_4' result='effect2_innerShadow_14_4'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_14_4' x1='42.3232' y1='-20.0654' x2='70.6787' y2='130.747' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2313151E' stop-opacity='0'/%3E%3Cstop offset='0.0001' stop-color='%2313151E' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%2313151E'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A")
+			background-position: center
+			background-repeat: no-repeat
+			background-size: contain
+			padding-top: 73px
+			text-align: center
+			box-sizing: border-box
+			transition: all .3s ease
+			animation-duration: .5s
+			animation-name: none
+			animation-iteration-count: 1
+			display: none
+			a
+				font-weight: bold
+				font-size: 14px
+				line-height: 13px
+				text-align: center
+				color: #D6D6D6
+				text-decoration: none
+				transition: all .3s ease
+		&:hover
+			border-color: transparent
+			transition: all .3s ease
+			.site-header__phone-dropdown
+				display: block
+				animation-name: block
+				transition: all .3s ease
+			.site-header__phone-icon
+				transition: all .3s ease
+				svg
+					&:nth-child(1)
+						
+						animation-duration: .5s
+						animation-name: none
+						animation-iteration-count: 1
+						display: none
+					&:nth-child(2)
+						display: block
+						animation-duration: .5s
+						animation-name: block
+						animation-iteration-count: 1
+	&__mail
+		.site-header__phone-dropdown
+			background-image: url("data:image/svg+xml,%3Csvg width='211' height='241' viewBox='0 0 211 241' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_ii_15_10)'%3E%3Cpath d='M0 90C0 76.7452 10.7452 66 24 66H56C69.2548 66 80 55.2548 80 42V24.0592C80 11.1775 90.1694 0.593224 103.041 0.0783696L105 0L106.959 0.0783696C119.831 0.593224 130 11.1775 130 24.0592V42C130 55.2548 140.745 66 154 66H187C200.255 66 211 76.7452 211 90V217C211 230.255 200.255 241 187 241H24C10.7452 241 0 230.255 0 217V90Z' fill='url(%23paint0_linear_15_10)' fill-opacity='0.96'/%3E%3Cpath d='M1 90C1 77.2974 11.2975 67 24 67H56C69.8071 67 81 55.8071 81 42V24.0592C81 11.7143 90.7457 1.57096 103.081 1.07756L105 1.00079L106.919 1.07756C119.254 1.57096 129 11.7143 129 24.0592V42C129 55.8071 140.193 67 154 67H187C199.703 67 210 77.2974 210 90V217C210 229.703 199.703 240 187 240H24C11.2975 240 1 229.703 1 217V90Z' stroke='url(%23paint1_linear_15_10)' stroke-opacity='0.5' stroke-width='2'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_ii_15_10' x='-67.3333' y='-67.3333' width='345.667' height='375.667' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='-67.3333' dy='67.3333'/%3E%3CfeGaussianBlur stdDeviation='33.6667'/%3E%3CfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.027 0'/%3E%3CfeBlend mode='normal' in2='shape' result='effect1_innerShadow_15_10'/%3E%3CfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0' result='hardAlpha'/%3E%3CfeOffset dx='67.3333' dy='-67.3333'/%3E%3CfeGaussianBlur stdDeviation='33.6667'/%3E%3CfeComposite in2='hardAlpha' operator='arithmetic' k2='-1' k3='1'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.584157 0 0 0 0 0.584157 0 0 0 0 0.584157 0 0 0 0.027 0'/%3E%3CfeBlend mode='normal' in2='effect1_innerShadow_15_10' result='effect2_innerShadow_15_10'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_15_10' x1='51.6196' y1='-42.7944' x2='150.427' y2='257.735' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%2313151E' stop-opacity='0'/%3E%3Cstop offset='0.0001' stop-color='%2313151E' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%2313151E'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_15_10' x1='105.5' y1='-6.57504e-06' x2='106' y2='231' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23DADADA'/%3E%3Cstop offset='1' stop-color='%23DADADA' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A")
+			width: 210px
+			height: 240px
+			padding-top: 85px
+			a
+				display: flex
+				align-items: center
+				margin-bottom: 18px
+				margin-left: 30px
+				margin-right: 18px
+				white-space: nowrap
+				transition: all .3s ease
+				svg
+					margin-right: 8px
+					path
+						fill: #DADADA
+						transition: all .3s ease
+				&:hover
+					color: #3198FF
+					text-shadow: 0px 0px 45px #61B0FF
+					transition: all .3s ease
+					svg
+						path
+							fill: #3198FF
+							transition: all .3s ease
+	&__callback
+		padding: 0 30px
+		height: 48px
+		background: #3198FF
+		border-radius: 10px
+		line-height: 48px
+		font-size: 18px
+		text-align: center
+		color: #fff
+		user-select: none
+		cursor: pointer
+		&:hover
+			background: lighten(#3198FF, 5%)
+		&:active
+			background: #0B72D9
+			box-shadow: inset 2px 2px 5px rgba(#000, 0.5), 1px 1px 5px rgba(#000, 1)
+	&__hum
+		display: none
+
+
+.dropdown-menu
+	position: absolute
+	display: none
+	animation-duration: .5s
+	animation-iteration-count: 1
+	width: 280px
+	padding-top: 55px
+	background-repeat: no-repeat
+	left: -30px
+	top: -13px
+	height: 320px
+	z-index: 4
+	background-image: url("../images/dist/bg.png")
+	ul
+		padding: 0 30px
+		padding-right: 20px
+		margin: 0
+		li
+			list-style-type: none
+			a
+				text-decoration: none
+				color: #DADADA
+				font-weight: normal
+				font-size: 16px
+				line-height: 42px
+				transition: all .3s ease
+
+	
+
+@keyframes block
+	0%
+		display: block
+		opacity: 0
+	100%
+		opacity: 1
+		display: block
+
+@keyframes none
+	0%
+		display: none
+		opacity: 1
+	100%
+		opacity: 0
+		display: none
+
+.site-mobile-header
+	display: none
+	&__wrap
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 30px
+	&__buttons
+		display: flex
+		align-items: center
+	&__button
+		&:first-child
+			margin-right: 15px
+
+.site-mobile-menu
+	position: fixed
+	z-index: 11
+	left: 0
+	width: 310px
+	height: 100%
+	top: 0
+	bottom: 0
+	background: rgba(19, 21, 30, 0.35)
+	box-sizing: border-box
+	display: none
+	box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.44), inset 67.3333px -67.3333px 67.3333px rgba(149, 149, 149, 0.027), inset -67.3333px 67.3333px 67.3333px rgba(255, 255, 255, 0.027)
+	backdrop-filter: blur(87.5333px)
+	&__mail
+		right: 0
+		left: auto
+		.site-mobile-menu__container ul li a
+			display: flex
+			color: #D6D6D6
+			align-items: center
+			svg
+				margin-right: 8px
+				path
+					fill: #DADADA
+					transition: all .3s ease
+			&:hover
+				svg
+					path
+						fill: #3198FF
+						transition: all .3s ease
+	&__dropdown
+		display: none
+		&-open
+			cursor: pointer
+			&::before
+				content: ""
+				background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.23932 9.07864C0.0964006 8.7928 0.152423 8.44758 0.378399 8.2216L3.5 5.1L0.378398 1.9784C0.152422 1.75242 0.0964006 1.4072 0.23932 1.12136C0.465956 0.668088 1.07006 0.570056 1.4284 0.928398L4.89289 4.39289C5.28342 4.78342 5.28342 5.41658 4.89289 5.80711L1.4284 9.2716C1.07006 9.62994 0.465956 9.53191 0.23932 9.07864Z' fill='%23DADADA'/%3E%3C/svg%3E%0A")
+				width: 6px
+				height: 10px
+				background-size: contain
+				background-position: center
+				background-repeat: no-repeat
+				position: absolute
+				right: 0
+				top: 50%
+				transform: translateY(-50%)
+		&-prev
+			padding-left: 40px !important
+			cursor: pointer
+			&::before
+				background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' viewBox='0 0 6 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.36078 9.07864C5.5037 8.7928 5.44768 8.44758 5.2217 8.2216L2.1001 5.1L5.2217 1.9784C5.44768 1.75242 5.5037 1.4072 5.36078 1.12136C5.13414 0.668088 4.53004 0.570056 4.1717 0.928398L0.707205 4.39289C0.31668 4.78342 0.31668 5.41658 0.707204 5.80711L4.1717 9.2716C4.53004 9.62994 5.13414 9.53191 5.36078 9.07864Z' fill='%23DADADA'/%3E%3C/svg%3E%0A")
+				width: 6px
+				height: 10px
+				background-size: contain
+				background-position: center
+				background-repeat: no-repeat
+				position: absolute
+				right: 0
+				top: 50%
+				transform: translateY(-50%)
+				left: 0
+				content: ""
+	&__header
+		display: flex
+		justify-content: space-between
+		margin-bottom: 30px
+	&__close
+		cursor: pointer
+	&__container
+		padding: 30px
+		.site-header__callback
+			margin-top: 60px
+		.social
+			margin-top: 60px
+		ul
+			position: relative
+			padding: 0
+			margin: 0
+			&::before
+				content: ""
+				height: 1px
+				width: 100%
+				top: 0
+				left: 0
+				position: absolute
+				background: radial-gradient(circle, rgba(67,80,96,0.38139005602240894) 0%, rgba(67,80,96,0) 100%)
+			&::after
+				content: ""
+				height: 1px
+				width: 100%
+				bottom: 0
+				left: 0
+				position: absolute
+				background: radial-gradient(circle, rgba(67,80,96,0.38139005602240894) 0%, rgba(67,80,96,0) 100%)
+			li
+				list-style-type: none
+				padding: 25px 0
+				position: relative
+				&::after
+					content: ""
+					height: 1px
+					width: 100%
+					bottom: 0
+					left: 0
+					position: absolute
+					background: radial-gradient(circle, rgba(67,80,96,0.38139005602240894) 0%, rgba(67,80,96,0) 100%)
+				&:last-child
+					&::after
+						display: none
+				a
+					font-weight: normal
+					font-size: 16px
+					line-height: 15px
+					color: #DADADA
+					text-decoration: none
+					transition: all .3s ease
+					&:hover
+						color: #3198FF
+						text-shadow: 0px 0px 45px #61B0FF
+						transition: all .3s ease
+
+.overlay
+	position: fixed
+	z-index: 10
+	left: 0
+	top: 0
+	bottom: 0
+	right: 0
+	background: rgba(39, 41, 60, 0.1)
+	backdrop-filter: blur(13px)
+	display: none
+
+@media (max-width: 1600px)
+	.site-header__logo
+		margin-right: 50px
+	.site-header__menu-item
+		margin-right: 25px
+	.site-header__menu-dropdown
+		margin-right: 50px
+
+@media (max-width: 1400px)
+	.site-header__logo
+		margin-right: 30px
+		svg
+			width: 120px
+
+	.site-header
+		padding: 20px 0
+	.site-header__menu-item
+		font-size: 16px
+
+@media (max-width: 1200px)
+	.site-header
+		display: none
+	.site-mobile-header
+		display: block
+		position: sticky
+		top: 0
+		z-index: 1
+		&--active
+			background: rgba(19, 21, 30, 0.5)
+			box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.44), inset 67.3333px -67.3333px 67.3333px rgba(149, 149, 149, 0.027), inset -67.3333px 67.3333px 67.3333px rgba(255, 255, 255, 0.027)
+			backdrop-filter: blur(57.5333px)
+			z-index: 8

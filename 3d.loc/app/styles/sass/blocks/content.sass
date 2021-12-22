@@ -1,0 +1,341 @@
+.breadcrumbs
+	transform: rotate(270deg)
+	position: absolute
+	top: 2rem
+	left: 0
+	transform-origin: 0 0
+	color: #D6D6D6
+	span, a
+		text-decoration: none
+		color: #D6D6D6
+		font-size: 16px
+
+.sidebar-subscribe
+	padding: 15px 0
+	text-align: center
+	svg
+		path
+			transition: all .3s ease
+	&__title
+		font-weight: bold
+		font-size: 19.5px
+		line-height: 27px
+		text-align: center
+		color: #D6D6D6
+		margin-top: 25px
+		transition: color .3s ease
+	&__hover
+		&:hover
+			background: linear-gradient(270deg,rgba(#224A73,.4) 44%,rgba(#224A73,0) 74%)
+			cursor: pointer
+			transition: all .3s ease
+			.sidebar-subscribe__title
+				color: #3197FF
+				text-shadow: 60px -30px 100px #61B0FF
+				transition: color .3s ease
+			svg
+				path
+					fill: #3197FF
+					transition: all .3s ease
+
+.site-content
+	min-height: 80vh
+	margin-top: 75px
+	&__wrap
+		display: flex
+		position: relative
+	&__article
+		flex: 0 0 calc(100% - 385px)
+		margin-left: 115px
+		h1, h2
+			margin: 0
+			margin-bottom: 55px
+			font-weight: 900
+			font-size: 40px
+			line-height: 38px
+			display: flex
+			align-items: center
+			color: #D6D6D6
+		p
+			font-weight: normal
+			font-size: 18px
+			line-height: 35px
+			color: rgba(214, 214, 214, 0.8)
+			margin-bottom: 60px
+	&__sidebar
+		flex: 0 0 270px
+		box-sizing: border-box
+		max-width: 270px
+		&-bg
+			background: linear-gradient(270deg, rgba(218,218,218,0.4) 44%, rgba(218,218,218,0) 74%)
+			border-radius: 15px
+			padding: 1px
+			margin-bottom: 40px
+			transition: all .3s ease
+		&-inner
+			background-color: #13151E
+			border-radius: 15px
+			padding-left: 45px
+			padding-right: 25px
+			padding-top: 25px
+			padding-bottom: 35px
+			.dropdown
+				&:last-child
+					&:before
+						display: none
+
+.dropdown
+	position: relative
+	max-height: 45px
+	overflow: hidden
+	transition: all .3s ease
+	user-select: none
+	&--more
+		max-height: 65px
+	&::before
+		content: ""
+		width: 100%
+		left: 0
+		right: 0
+		height: 1px
+		background: radial-gradient(circle, rgba(67,80,96,0.78) 0%, rgba(67,80,96,0) 100%)
+		bottom: 0px
+		position: absolute
+	&--active
+		max-height: 600px
+		transition: all .3s ease
+		.dropdown__arrow
+			transform: rotate(90deg)
+			transition: all .3s ease
+	&__header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 15px 0
+	&__title
+		font-weight: bold
+		font-size: 16px
+		line-height: 15px
+		color: #C1C1C1
+	&__arrow
+		cursor: pointer
+		display: flex
+		transition: all .3s ease
+	ul
+		padding: 0
+		margin: 0
+		li
+			list-style-type: none
+			margin-bottom: 10px
+			a
+				font-weight: 300
+				font-size: 14px
+				line-height: 140%
+				color: #F1F1F1
+				text-decoration: none
+
+
+.single-post
+	position: relative
+	margin-bottom: 60px
+	&::before
+		content: ""
+		width: 100%
+		height: 100%
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		background: linear-gradient(0deg, rgba(97, 176, 255, 0.05), rgba(97, 176, 255, 0.05))
+		filter: blur(50px)
+		position: absolute
+		opacity: 0
+		transition: all .3s ease
+	&:hover
+		&:before
+			content: ""
+			opacity: 1
+			transition: all .3s ease
+		.single-post__img
+			border: 1px solid #3198FF
+			transition: all .3s ease
+		.single-post__link
+			color: #3198FF
+			transition: all .3s ease
+			svg
+				path
+					fill: #3198FF
+					transition: all .3s ease
+	&__container
+		display: flex
+		flex-wrap: wrap
+		position: relative
+		z-index: 1
+	&__img
+		flex: 0 0 360px
+		height: 360px
+		width: 360px
+		transition: all .3s ease
+		background: rgba(37, 45, 55, 0.51)
+		border: 1px solid rgba(67, 80, 96, 0.2)
+		box-sizing: border-box
+		border-radius: 15px
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-right: 30px
+	&__pay
+		display: flex
+		margin-top: 30px
+		margin-bottom: 40px
+		font-weight: normal
+		font-size: 24px
+		line-height: 23px
+		color: rgba(#D6D6D6, 0.8)
+		&-new
+			margin: 0 7px
+			font-weight: bold
+			color: rgba(#FAFAFA, .8)
+		&-old
+			text-decoration: line-through
+	&__link
+		display: flex
+		align-items: center
+		text-decoration: none
+		font-size: 24px
+		line-height: 23px
+		color: rgba(255, 255, 255, 0.8)
+		transition: all .3s ease
+		svg
+			margin-left: 15px
+			path
+				transition: all .3s ease
+	&__block
+		flex: 0 0 calc(100% - 390px)
+		h3
+			margin: 0
+			font-weight: 500
+			font-size: 24px
+			line-height: 23px
+			margin-bottom: 15px
+			color: #D6D6D6
+		p
+			margin: 0
+			font-weight: normal
+			font-size: 18px
+			line-height: 35px
+			color: rgba(#D6D6D6, 0.8)
+			span
+				font-weight: 500
+				color: rgba(#FAFAFA, .8)
+
+.other-post
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+	&__item
+		max-width: 48.5%
+		flex: 0 0 48.5%
+		margin-right: 3%
+		margin-bottom: 80px
+		&:nth-child(2n)
+			margin-right: 0
+		&-img
+			img
+				vertical-align: bottom
+				width: auto
+				height: 240px
+		p
+			font-size: 18px
+			line-height: 35px
+			span
+				font-weight: bold
+
+@media (max-width: 1350px)
+	.site-content__article
+		margin-left: 50px
+		flex: 0 0 calc(100% - 320px)
+	.single-post__img
+		flex: 0 0 300px
+		width: 300px
+		height: 300px
+		img
+			width: 200px
+	.single-post__block
+		flex: 0 0 calc(100% - 330px)
+
+@media (max-width: 1130px)
+	.single-post__container
+		flex-wrap: wrap
+	.single-post__block
+		flex: 0 0 100%
+		margin-top: 30px
+	.site-content
+		margin-top: 40px
+	.other-post__item
+		flex: 0 0 100%
+		max-width: 100%
+		margin-right: 0
+
+@media (max-width: 800px)
+	.single-post__pay
+		font-size: 20px
+		margin-top: 20px
+		margin-bottom: 30px
+	.single-post__link
+		font-size: 20px
+		svg
+			height: 10px
+
+@media (max-width: 768px)
+	.site-content__sidebar
+		display: none
+	.breadcrumbs
+		position: relative
+		top: 0 !important
+		transform: rotate(0)
+		flex: 0 0 100%
+		margin-bottom: 15px
+	.site-content__wrap
+		flex-wrap: wrap
+	.site-content__article
+		flex: 0 0 100%
+		margin-left: 0
+	.site-content
+		margin-top: 20px
+	.site-content__article h1, .site-content__article h2
+		margin-bottom: 30px
+		font-size: 21px
+		line-height: 20px
+	.other-post__item
+		margin-bottom: 20px
+
+@media (max-width: 400px)
+	.single-post__img
+		flex: 0 0 100%
+		width: 100%
+		height: 315px
+	.single-post__img img
+		max-width: 250px
+	.single-post__block p
+		font-size: 14px
+		line-height: 26px
+	.single-post__block h3
+		font-size: 20px
+		line-height: 20px
+	.single-post__pay
+		font-size: 16px
+		flex-wrap: wrap
+	.single-post__link
+		font-size: 16px
+	.single-post
+		margin-bottom: 45px
+	.site-content
+		margin-top: 10px
+	.site-content__article p
+		font-size: 14px
+		line-height: 26px
+	.breadcrumbs
+		font-size: 14px
+		a, span
+			font-size: 14px
