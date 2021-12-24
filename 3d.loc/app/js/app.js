@@ -115,9 +115,188 @@ document.addEventListener('DOMContentLoaded', () => {
 			document.querySelectorAll('.overlay')[i].addEventListener('click', function(){
 				for (var i = 0; i < document.querySelectorAll('.site-mobile-menu').length; i++) {
 					document.querySelectorAll('.site-mobile-menu')[i].style.display = "none";
-					this.style.display = "none"
+					this.style.display = "none";
+					document.querySelector('.modal-subscribe').style.display = "none";
+					document.querySelector('.modal-bid').style.display = "none";
+					document.querySelector('.modal-uslug').style.display = "none";
+					document.querySelector('.modal-thankyou').style.display = "none";
+					document.querySelector('body').style.overflow = "auto";
 				}
 			})
+		}
+	}
+
+	if (document.querySelector('.single-slider__init')) {
+		 var swiper = new Swiper(".single-slider__init", {
+		 		slidesPerView: 3,
+        spaceBetween: 25,
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+          el: ".single-slider__pagination",
+          type: "fraction",
+          formatFractionCurrent: function (number) {
+            return ('0' + number).slice(-2);
+	        },
+	        formatFractionTotal: function (number) {
+	            return ('0' + number).slice(-2);
+	        },
+	        renderFraction: function (currentClass, totalClass) {
+	            return '<span class="' + currentClass + '"></span>' +
+	                   ' / ' +
+	                   '<span class="' + totalClass + '"></span>';
+	        }        
+	      },
+        navigation: {
+          nextEl: ".single-slider__button-next",
+          prevEl: ".single-slider__button-prev",
+        },
+        breakpoints: {
+			    // when window width is >= 320px
+			    320: {
+			      slidesPerView: 1.2,
+			      spaceBetween: 20,
+			      centeredSlides: false,
+			      loop: true
+			    },
+			    // when window width is >= 480px
+			    586: {
+			      slidesPerView: 2,
+			      spaceBetween: 30,
+			    },
+			    // when window width is >= 640px
+			    768: {
+			      slidesPerView: 1,
+			      spaceBetween: 30
+			    },
+			    993: {
+			    	slidesPerView: 3,
+			    }
+			  }
+      });
+	}
+	if (document.querySelector('.checkbox-custom')) {
+		for (var i = 0; i < document.querySelectorAll('.checkbox-custom').length; i++) {
+			if (!document.querySelectorAll('.checkbox-custom')[i].classList.contains('checkbox-custom--disabled')) {
+				let inpCheck = document.querySelectorAll('.checkbox-custom')[i].querySelector('input')
+				if (inpCheck.checked == true) {
+					inpCheck.parentElement.classList.add('checkbox-custom--active')
+				}
+				document.querySelectorAll('.checkbox-custom')[i].addEventListener('click', function(){
+					this.classList.toggle('checkbox-custom--active');
+				})
+			}
+		}
+	}
+
+	if (document.querySelector('.select-custom')) {
+		let customSelect = document.querySelectorAll('.select-custom');
+	  function selectCusomaizer(div) {
+	  	let span = div
+	  	for (var i = 0; i < span.length; i++) {
+	  		
+	  		// console.log(span[i])
+	  		let selectWrap = document.createElement('div');
+				let selectList = document.createElement('div');
+				let selectActive = document.createElement('div');
+				selectActive.classList.add('select-custom__active');
+				selectList.classList.add('select-custom__list');
+				selectWrap.classList.add('select-custom__wrap');
+	  		let thx = span[i]
+	  		let selectOpt = thx.querySelectorAll('select option');
+	  		selectOpt = Array.from(selectOpt)
+
+	  		selectOpt.forEach(function(element){
+
+					let thx = element;
+					let selectOption = document.createElement('div');
+					selectOption.classList.add('select-custom__list-item');
+					selectOption.setAttribute('data-text', element.value)
+					if (element.getAttribute('data-color')) {
+						selectOption.setAttribute('data-color', element.getAttribute('data-color'))
+						selectOption.style.color = element.getAttribute('data-color');
+					}
+					selectOption.setAttribute('data-index', i);
+					selectOption.textContent = element.value;
+					selectList.append(selectOption);
+					if (thx.selected == true) {
+						selectActive.textContent = "Выберите услугу";
+						selectActive.style.color = thx.getAttribute('data-color')
+						selectOption.style.display = "none";
+					}
+
+	  		})
+	  		selectWrap.append(selectActive, selectList);
+				thx.append(selectWrap);
+				selectList.addEventListener('click', function(e){
+					if (e.target.classList.contains('select-custom__list-item')) {
+
+						selectActive.textContent = e.target.textContent;
+
+						if (e.target.getAttribute('data-color')) {
+							selectActive.style.color = e.target.getAttribute('data-color');
+						}
+
+						selectOpt[e.target.getAttribute('data-index')].selected = 'selected';
+						selectWrap.classList.remove('select-custom__wrap--active');
+
+						for (var i = 0; i < thx.querySelectorAll('.select-custom__list-item').length; i++) {
+							thx.querySelectorAll('.select-custom__list-item')[i].style.display = "block";
+						}
+
+						e.target.style.display = "none";
+					}
+				});
+
+				selectActive.addEventListener('click', function(){
+					selectWrap.classList.toggle('select-custom__wrap--active');
+				});
+	  	}
+	  }
+
+	  selectCusomaizer(customSelect);
+	}
+
+	if (document.querySelector('.sidebar-subscribe')) {
+		for (var i = 0; i < document.querySelectorAll('.sidebar-subscribe').length; i++) {
+			document.querySelectorAll('.sidebar-subscribe')[i].addEventListener('click', function(){
+				document.querySelector('.modal-subscribe').style.display = "block";
+				document.querySelector('.overlay').style.display = "block";
+				document.querySelector('body').style.overflow = "hidden";
+			});
+		}
+	}
+
+	if (document.querySelector('.open__modal__callback')) {
+		for (var i = 0; i < document.querySelectorAll('.open__modal__callback').length; i++) {
+			document.querySelectorAll('.open__modal__callback')[i].addEventListener('click', function(){
+				document.querySelector('.modal-bid').style.display = "block";
+				document.querySelector('.overlay').style.display = "block";
+				document.querySelector('body').style.overflow = "hidden";
+			})
+		}
+	}
+
+	if (document.querySelector('.open__modal__uslug')) {
+		for (var i = 0; i < document.querySelectorAll('.open__modal__uslug').length; i++) {
+			document.querySelectorAll('.open__modal__uslug')[i].addEventListener('click', function(){
+				document.querySelector('.modal-uslug').style.display = "block";
+				document.querySelector('.overlay').style.display = "block";
+				document.querySelector('body').style.overflow = "hidden";
+			})
+		}
+	}
+
+	if (document.querySelector('.modal__close')) {
+		for (var i = 0; i < document.querySelectorAll('.modal__close').length; i++) {
+			document.querySelectorAll('.modal__close')[i].addEventListener('click', function(){
+				this.parentElement.style.display = "none";
+				document.querySelector('.overlay').style.display = "none";
+				if (document.querySelectorAll('.overlay')[1]) {
+					document.querySelectorAll('.overlay')[1].style.display = "none";
+				}
+				document.querySelector('body').style.overflow = "auto";
+			});
 		}
 	}
 
