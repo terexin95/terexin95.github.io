@@ -175,6 +175,45 @@ document.addEventListener('DOMContentLoaded', () => {
 			  }
       });
 	}
+	if (document.querySelector('.modal-gallery__init')) {
+		let modalGalleryInit = new Swiper(".modal-gallery__init", {
+		slidesPerView: 1,
+	   spaceBetween: 25,
+	   centeredSlides: true,
+	   loop: true,
+	   pagination: {
+		 el: ".single-slider__pagination",
+		 type: "fraction",
+		 formatFractionCurrent: function (number) {
+		   return ('0' + number).slice(-2);
+		   },
+		   formatFractionTotal: function (number) {
+			   return ('0' + number).slice(-2);
+		   },
+		   renderFraction: function (currentClass, totalClass) {
+			   return '<span class="' + currentClass + '"></span>' +
+					  ' / ' +
+					  '<span class="' + totalClass + '"></span>';
+		   }        
+		 },
+	   navigation: {
+		 nextEl: ".single-slider__button-next",
+		 prevEl: ".single-slider__button-prev",
+	   },
+	 });
+			for (let i = 0; i < document.querySelectorAll('.gallery__item').length; i++) {
+				document.querySelectorAll('.gallery__item')[i].addEventListener('click', function(e){
+					e.preventDefault();
+					document.querySelector('.modal-gallery').style.display = "block"
+					modalGalleryInit.slideTo(this.getAttribute('data-gallery'), 0);
+				});
+			}
+			for (let i = 0; i < document.querySelectorAll('.modal-gallery__item-footer-close').length; i++) {
+				document.querySelectorAll('.modal-gallery__item-footer-close')[i].addEventListener('click', function(e){
+					document.querySelector('.modal__close').click();
+				});
+			}
+   }
 	if (document.querySelector('.checkbox-custom')) {
 		for (var i = 0; i < document.querySelectorAll('.checkbox-custom').length; i++) {
 			if (!document.querySelectorAll('.checkbox-custom')[i].classList.contains('checkbox-custom--disabled')) {

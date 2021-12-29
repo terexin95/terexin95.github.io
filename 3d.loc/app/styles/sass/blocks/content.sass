@@ -1,3 +1,125 @@
+.gallery
+	&-more
+		display: flex
+		align-items: center
+		font-size: 24px
+		line-height: 23px
+		color: rgba(255, 255, 255, 0.8)
+		cursor: pointer
+		transition: all .3s ease
+		margin-top: 50px
+		margin-bottom: 120px
+		svg
+			margin-left: 25px
+		&:hover
+			text-shadow: 15px 0px 40px #61B0FF
+			color: #3198FF
+			transition: all .3s ease
+			svg
+				path
+					fill: #3198FF
+	&-buttons
+		margin-bottom: 60px
+		&__container
+			display: flex
+			border-bottom: 2px solid #2B333E
+			width: fit-content
+			align-items: center
+		&__item
+			font-weight: normal
+			font-size: 18px
+			line-height: 102.32%
+			margin-right: 45px
+			color: #676870
+			cursor: pointer
+			padding-bottom: 15px
+			&:hover
+				text-shadow: 0px 0px 19px #61B0FF
+				color: #3198FF
+				transition: all .3s ease
+			&--active
+				font-weight: normal
+				font-size: 24px
+				line-height: 102.32%
+				color: #DADADA
+				border-bottom: 4px solid #3C7EBF
+				margin-bottom: -2px
+				padding-left: 3px
+				padding-right: 3px
+			&:last-child
+				margin-right: 0
+	&__container
+		width: 100%
+		display: grid
+		grid-auto-flow: dense
+		gap: 20px
+		grid-template: "1fr 1fr 1fr" 360px "1fr 2fr 2fr" 360px "1fr 2fr 2fr" 360px
+		grid-template-columns: 390px 1fr 1fr
+		margin-bottom: 20px
+		&-center
+			grid-template-columns: 1fr 390px 1fr
+		&-right
+			grid-template-columns: 1fr 1fr 390px
+			.gallery__item
+				&:nth-child(4)
+					img, .gallery__item-block
+						border-radius: 0 0 0 15px 
+				&:nth-child(3)
+					img, .gallery__item-block
+						border-radius: 0 0 15px 0 
+		&-left
+			.gallery__item
+				&:nth-child(1)
+					img, .gallery__item-block
+						border-radius: 15px 0 0 0
+				&:nth-child(3)
+					img, .gallery__item-block
+						border-radius: 0 15px 0 0
+	&__item
+		position: relative
+		&:hover
+			.gallery__item-block
+				opacity: 1
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			border: 1px solid rgba(218, 218, 218, 0.15)
+			box-sizing: border-box
+		&-big
+			grid-row: span 2
+		&-block
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			width: 100%
+			height: 100%
+			z-index: 1
+			background: linear-gradient(0deg, rgba(19, 21, 30, 0.55), rgba(19, 21, 30, 0.55)), url(.png)
+			border: 1.5px solid #3198FF
+			box-sizing: border-box
+			box-shadow: 0px 20px 60px rgba(0, 0, 0, 0.65)
+			padding: 60px 40px 40px
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			cursor: pointer
+			opacity: 0
+			transition: all .3s ease
+		&-title
+			font-style: normal
+			font-weight: 300
+			font-size: 22px
+			line-height: 21px
+			color: #E1E0E0
+		&-link
+			font-weight: bold
+			font-size: 22px
+			line-height: 21px
+			color: #D6D6D6
+
 .breadcrumbs
 	transform: rotate(270deg)
 	position: absolute
@@ -48,6 +170,9 @@
 		flex: 0 0 calc(100% - 385px)
 		max-width: calc(100% - 385px)
 		margin-left: 115px
+		&--custom
+			flex: 0 0 calc(100% - 115px)
+			max-width: calc(100% - 115px)
 		h1, h2
 			margin: 0
 			margin-bottom: 55px
@@ -737,6 +862,86 @@
 	border: 2px solid rgba(218, 218, 218, 0.17)
 	box-sizing: border-box
 	border-radius: 15px
+	&-gallery
+		width: 100%
+		height: 100%
+		background-color: #1B1E29
+		border-radius: 0
+		border: 0
+		z-index: 9
+		display: none
+		.single-slider__options
+			z-index: 1
+			position: absolute
+			top: 200px
+			left: 665px
+			user-select: none
+		.modal__close
+			z-index: 3
+			svg
+				border-radius: 100%
+				box-shadow: 0 0 80px 10px #1B1E29
+		&__item
+			height: 100vh
+			background-repeat: no-repeat
+			background-position: right center
+			background-size: contain
+			display: flex
+			&-footer
+				display: flex
+				align-items: center
+				justify-content: space-between
+				.site-header__callback
+					height: 62px
+					line-height: 62px
+					padding: 0 55px
+				&-title
+					font-size: 24px
+					line-height: 102.32%
+					color: #AFAFB1
+			&-img
+				flex: 0 0 calc(100% - 980px)
+				margin-left: 140px
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+					vertical-align: bottom
+			&-inner
+				display: flex
+				justify-content: space-between
+				text-align: center
+				margin-bottom: 40px
+				&-title
+					margin: 15px 0
+					font-weight: normal
+					font-size: 18px
+					line-height: 17px
+					color: #C1C1C1
+				&-text
+					font-weight: 300
+					color: #C1C1C1
+					font-size: 14px
+					line-height: 163.5%
+			&-block
+				width: 100%
+				max-width: 700px
+				box-sizing: border-box
+				padding-top: 220px
+				margin-left: 140px
+				flex: 0 0 700px
+			&-title
+				font-weight: bold
+				font-size: 36px
+				line-height: 34px
+				color: #C1C1C1
+				margin-bottom: 40px
+			&-text
+				font-weight: 300
+				font-size: 18px
+				line-height: 163.5%
+				color: #C1C1C1
+				margin-bottom: 45px
 	&-bid
 		width: 1340px
 		height: 900px
@@ -856,7 +1061,21 @@
 					stroke: #3198FF
 					transition: all .3s ease
 
+.modal-gallery__item-footer-close
+	display: none
 
+@media (max-width: 1500px)
+	.modal-gallery__item-block
+		margin-left: 30px
+		padding-top: 80px
+		max-width: 600px
+		flex: 0 0 600px
+	.modal-gallery .single-slider__options
+		top: 60px
+		left: 465px
+	.modal-gallery__item-img
+		margin-left: 30px
+		flex: 0 0 calc(100% - 660px)
 @media (max-width: 1350px)
 	.modal-bid
 		width: 100%
@@ -867,6 +1086,15 @@
 		margin-left: 50px
 		flex: 0 0 calc(100% - 320px)
 		max-width: calc(100% - 320px)
+	.site-content__article--custom
+		flex: 0 0 calc(100% - 50px)
+		max-width: calc(100% - 50px)
+	.gallery__container
+		grid-template-columns: 280px 1fr 1fr
+	.gallery__container-center
+		grid-template-columns: 1fr 280px 1fr
+	.gallery__container-right
+		grid-template-columns: 1fr 1fr 280px	
 	.single-post__img
 		flex: 0 0 300px
 		width: 300px
@@ -881,6 +1109,11 @@
 		bottom: 35px
 	.single-post__pay
 		font-size: 18px
+	.gallery-buttons__item--active
+		font-size: 18px
+	.gallery-buttons__item
+		font-size: 16px
+		margin-right: 25px
 @media (max-width: 1130px)
 	.single-content__wrap
 		flex-wrap: wrap
@@ -906,7 +1139,50 @@
 	.single-post__link
 		position: relative
 		bottom: auto
-
+@media (max-width: 993px)
+	.modal-gallery__item-img
+		margin-left: 0
+		flex: 0 0 100%
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+	.modal-gallery__item-block
+		position: relative
+		z-index: 1
+		margin-left: 0
+		padding: 30px
+		padding-top: 120px
+		background-color: rgba(#13151E, .85)
+		flex: 0 0 100%
+		max-width: 100%
+		box-sizing: border-box
+	.modal-gallery .swiper-slide
+		overflow-y: scroll
+	.modal-gallery .single-slider__options
+		top: 30px
+		left: 45px
+	.gallery-buttons__container
+		justify-content: space-between
+		flex-wrap: wrap
+		width: 100%
+		border: 0
+		gap: 20px 25px
+	.gallery-buttons__item
+		padding: 15px 25px
+		border: 1px solid rgba(67, 80, 96, 0.2)
+		border-radius: 8px
+		margin-right: 0
+		font-size: 14px
+		color: #676870
+	.gallery-buttons__item--active
+		color: #3198FF
+		text-shadow: 0px 0px 19px #61B0FF
+		border-color: #3198FF
+		font-weight: 500
 @media (max-width: 800px)
 	.single-post__pay
 		font-size: 20px
@@ -918,6 +1194,14 @@
 			height: 10px
 
 @media (max-width: 768px)
+	.gallery
+		display: none
+	.gallery-mobile
+		display: block
+		.gallery__container
+			grid-template-columns: 240px 1fr
+			&-mobile
+				grid-template-columns: 1fr 240px
 	.modal-subscribe
 		width: 100%
 		height: 100%
@@ -971,6 +1255,81 @@
 		margin-bottom: 20px
 
 @media (max-width: 586px)
+	.modal-gallery__item-footer-close
+		height: 43px
+		flex: 0 0 145px
+		max-width: 145px
+		line-height: 42px
+		padding: 0
+		display: block
+		font-size: 14px
+		border-radius: 10px
+	.modal-gallery__item-title
+		margin-bottom: 40px
+		font-size: 21px
+		line-height: 20px
+	.modal-gallery__item-inner-title
+		font-size: 16px
+	.modal-gallery__item-text
+		font-size: 14px
+		line-height: 26px
+		margin-bottom: 40px
+	.modal-gallery__item-footer-title
+		display: none
+	.modal-gallery__item-footer
+		padding-bottom: 30px
+	.modal-gallery__item-footer .site-header__callback
+		height: 43px
+		line-height: 43px
+		text-align: center
+		padding: 0
+		font-size: 13px
+		flex: 0 0 145px
+		max-width: 145px
+		box-sizing: border-box
+		overflow: hidden
+		border-radius: 10px
+	.modal-gallery__item-inner
+		flex-wrap: wrap
+		margin-bottom: 0
+		&-item
+			flex: 0 0 48%
+			max-width: 48%
+			text-align: left
+			margin-bottom: 30px
+	.gallery-buttons
+		margin-top: -33px
+		margin-bottom: 35px
+	.gallery__item-block
+		padding: 10px
+		.gallery__item-title, .gallery__item-link
+			font-size: 10px
+	.gallery-more
+		font-size: 16px
+		margin-top: 30px
+		margin-bottom: 70px
+	.gallery__item
+		height: 110px
+	.gallery__item-big
+		height: 230px
+	.gallery-mobile
+		.gallery__container
+			gap: 10px
+			margin-bottom: 10px
+			&:first-child
+				.gallery__item
+					&:first-child
+						.gallery__item-block, img
+							border-radius: 8px 0px 0px 0px
+			&:last-child
+				.gallery__item
+					&:nth-child(2)
+						.gallery__item-block, img
+							border-radius: 0px 0px 8px 0px
+	.gallery-mobile .gallery__container
+		grid-template-columns: 120px 1fr
+	.gallery-mobile .gallery__container-mobile
+		grid-template-columns: 1fr 120px
 	.single-slider
 		margin: 0 -30px
 		max-width: initial
@@ -1112,3 +1471,8 @@
 		font-size: 14px
 		a, span
 			font-size: 14px
+@media (max-width: 355px)
+	.modal-gallery__item-footer .site-header__callback, .modal-gallery__item-footer-close
+		flex: 0 0 125px
+		max-width: 125px
+		font-size: 12px
