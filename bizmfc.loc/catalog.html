@@ -452,7 +452,11 @@
 				</svg>
 		  </div>
 	</div>
-
+	<style>
+		.catalog__item__price {
+			display: none !important;
+		}
+	</style>
 	<div class="container catalog">
 		<div class="catalog__wrap">
 			<div class="catalog__sidebar">
@@ -472,10 +476,10 @@
 				<div class="price-slider">
 					<div class="price-slider__title">Цена</div>
 					<div class="price-slider__input">
-						<input type="text" placeholder="от">
+						<input type="number" placeholder="от" name="price-min">
 					</div>
 					<div class="price-slider__input">
-						<input type="text" placeholder="до">
+						<input type="number" placeholder="до" name="price-max">
 					</div>
 				</div>
 				<ul class="catalog__sidebar-list">
@@ -483,7 +487,7 @@
 					<li><a href="#">цена по возрастанию</a></li>
 					<li><a href="#">цена по убыванию</a></li>
 				</ul>
-				<div class="checkbox-custom checkbox-custom--active">
+				<div class="checkbox-custom" data-filter="online-chekout">
 					<div class="checkbox-custom__input">
 						<div class="checkbox-custom__icon">
 							<svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -491,12 +495,12 @@
 							</svg>
 						</div>
 					</div>
-					<input type="checkbox" checked="">
+					<input type="checkbox">
 					<div class="checkbox-custom__label">Онлайн кассы</div>
 				</div>
 				<div class="catalog__sidebar-checkbox">
 
-					<div class="checkbox-custom">
+					<div class="checkbox-custom" data-filter="stationary">
 						<div class="checkbox-custom__input">
 							<div class="checkbox-custom__icon">
 								<svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -508,7 +512,7 @@
 						<div class="checkbox-custom__label">Стационарные</div>
 					</div>
 
-					<div class="checkbox-custom">
+					<div class="checkbox-custom" data-filter="mobile">
 						<div class="checkbox-custom__input">
 							<div class="checkbox-custom__icon">
 								<svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -520,7 +524,7 @@
 						<div class="checkbox-custom__label">Мобильные</div>
 					</div>
 
-					<div class="checkbox-custom">
+					<div class="checkbox-custom" data-filter="acquiring">
 						<div class="checkbox-custom__input">
 							<div class="checkbox-custom__icon">
 								<svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -532,7 +536,7 @@
 						<div class="checkbox-custom__label">С эквайрингом</div>
 					</div>
 
-					<div class="checkbox-custom">
+					<div class="checkbox-custom" data-filter="noacquiring">
 						<div class="checkbox-custom__input">
 							<div class="checkbox-custom__icon">
 								<svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -544,7 +548,7 @@
 						<div class="checkbox-custom__label">Без эквайринга</div>
 					</div>
 
-					<div class="checkbox-custom">
+					<div class="checkbox-custom" data-filter="online-shop">
 						<div class="checkbox-custom__input">
 							<div class="checkbox-custom__icon">
 								<svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -556,7 +560,7 @@
 						<div class="checkbox-custom__label">Онлайн-кассы для интернет-магазина</div>
 					</div>
 
-					<div class="checkbox-custom">
+					<div class="checkbox-custom" data-filter="online-ip">
 						<div class="checkbox-custom__input">
 							<div class="checkbox-custom__icon">
 								<svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -568,7 +572,7 @@
 						<div class="checkbox-custom__label">Онлайн кассы для ИП</div>
 					</div>
 
-					<div class="checkbox-custom">
+					<div class="checkbox-custom" data-filter="online-ooo">
 						<div class="checkbox-custom__input">
 							<div class="checkbox-custom__icon">
 								<svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -581,7 +585,7 @@
 					</div>
 
 				</div>
-				<div class="checkbox-custom">
+				<div class="checkbox-custom" data-filter="smart">
 					<div class="checkbox-custom__input">
 						<div class="checkbox-custom__icon">
 							<svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -592,7 +596,7 @@
 					<input type="checkbox">
 					<div class="checkbox-custom__label">Смарт-терминалы</div>
 				</div>
-				<div class="checkbox-custom">
+				<div class="checkbox-custom" data-filter="fisk">
 					<div class="checkbox-custom__input">
 						<div class="checkbox-custom__icon">
 							<svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -603,7 +607,7 @@
 					<input type="checkbox">
 					<div class="checkbox-custom__label">Фискальный накопитель</div>
 				</div>
-				<div class="checkbox-custom">
+				<div class="checkbox-custom" data-filter="posterminal">
 					<div class="checkbox-custom__input">
 						<div class="checkbox-custom__icon">
 							<svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -614,7 +618,7 @@
 					<input type="checkbox">
 					<div class="checkbox-custom__label">Эквайринг (POS-терминалы)</div>
 				</div>
-				<div class="checkbox-custom">
+				<div class="checkbox-custom" data-filter="barcode">
 					<div class="checkbox-custom__input">
 						<div class="checkbox-custom__icon">
 							<svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -625,7 +629,7 @@
 					<input type="checkbox">
 					<div class="checkbox-custom__label">Сканер-штрих-кода</div>
 				</div>
-				<div class="checkbox-custom">
+				<div class="checkbox-custom" data-filter="po-dop">
 					<div class="checkbox-custom__input">
 						<div class="checkbox-custom__icon">
 							<svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -639,18 +643,18 @@
 			</div>
 			<div class="catalog__inner">
 				<div class="catalog__filter">
-					<div class="select-custom select-custom-company">
+					<!-- <div class="select-custom select-custom-company">
 						<select name="">
 							<option value="Сортировка" selected>Сортировка</option>
 							<option value="Дешевле">Дешевле</option>
 							<option value="Дороже">Дороже</option>
 							<option value="По умолчанию">По умолчанию</option>
 						</select>
-					</div>
+					</div> -->
 					<ul>
 						<li><a href="#">по популярности</a></li>
-						<li><a href="#">цена по возрастанию</a></li>
-						<li><a href="#">цена по убыванию</a></li>
+						<li><a href="#" class="catalog__filter__up">цена по возрастанию</a></li>
+						<li><a href="#" class="catalog__filter__down">цена по убыванию</a></li>
 					</ul>
 					<div class="catalog__filter-mobile">
 						<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -668,7 +672,7 @@
 				</div>
 				<div class="catalog__products">
 
-					<div class="catalog__item">
+					<div class="catalog__item catalog__item-online-chekout catalog__item-online-shop" data-price="12990">
 
 						<div class="catalog__item-img">
 							<img src="img/products/1.png" alt="">
@@ -690,7 +694,7 @@
 						</div>
 					</div>
 
-					<div class="catalog__item">
+					<div class="catalog__item catalog__item-online-ip" data-price="22990">
 
 						<div class="catalog__item-img">
 							<img src="img/products/2.png" alt="">
@@ -712,7 +716,7 @@
 						</div>
 					</div>
 
-					<div class="catalog__item">
+					<div class="catalog__item catalog__item-smart catalog__item-fisk" data-price="2990">
 
 						<div class="catalog__item-img">
 							<img src="img/products/3.png" alt="">
@@ -734,7 +738,7 @@
 						</div>
 					</div>
 
-					<div class="catalog__item">
+					<div class="catalog__item catalog__item-online-chekout" data-price="25990">
 
 						<div class="catalog__item-img">
 							<img src="img/products/1.png" alt="">
@@ -756,7 +760,7 @@
 						</div>
 					</div>
 
-					<div class="catalog__item">
+					<div class="catalog__item" data-price="8990">
 
 						<div class="catalog__item-img">
 							<img src="img/products/2.png" alt="">
@@ -778,7 +782,7 @@
 						</div>
 					</div>
 
-					<div class="catalog__item">
+					<div class="catalog__item" data-price="42990">
 
 						<div class="catalog__item-img">
 							<img src="img/products/3.png" alt="">
@@ -800,7 +804,7 @@
 						</div>
 					</div>
 
-					<div class="catalog__item">
+					<div class="catalog__item" data-price="122990">
 
 						<div class="catalog__item-img">
 							<img src="img/products/1.png" alt="">
@@ -822,7 +826,7 @@
 						</div>
 					</div>
 
-					<div class="catalog__item">
+					<div class="catalog__item" data-price="9990">
 
 						<div class="catalog__item-img">
 							<img src="img/products/2.png" alt="">
@@ -844,7 +848,7 @@
 						</div>
 					</div>
 
-					<div class="catalog__item">
+					<div class="catalog__item" data-price="4990">
 
 						<div class="catalog__item-img">
 							<img src="img/products/3.png" alt="">
@@ -866,7 +870,7 @@
 						</div>
 					</div>
 
-					<div class="catalog__item">
+					<div class="catalog__item" data-price="21990">
 
 						<div class="catalog__item-img">
 							<img src="img/products/1.png" alt="">
@@ -888,7 +892,7 @@
 						</div>
 					</div>
 
-					<div class="catalog__item">
+					<div class="catalog__item" data-price="19990">
 
 						<div class="catalog__item-img">
 							<img src="img/products/2.png" alt="">
@@ -910,7 +914,7 @@
 						</div>
 					</div>
 
-					<div class="catalog__item">
+					<div class="catalog__item" data-price="27990">
 
 						<div class="catalog__item-img">
 							<img src="img/products/3.png" alt="">

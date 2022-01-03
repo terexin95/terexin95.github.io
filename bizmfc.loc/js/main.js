@@ -68,7 +68,6 @@ if (document.querySelector('.slider')) {
 }
 
 document.addEventListener('scroll', function(){
-	console.log(window.pageYOffset);
 	if (window.pageYOffset > 550) {
 		document.querySelector('.site-nav').classList.add('site-nav--fixed');
 	} else {
@@ -126,8 +125,6 @@ if (document.querySelector('select')) {
 //acc
 
 const items = document.querySelectorAll(".accordion button");
-
-console.log(items.length)
 
 function toggleAccordion() {
   const itemToggle = this.getAttribute('aria-expanded');
@@ -419,3 +416,163 @@ if (document.querySelector('.tabs')) {
 	  tabs.init();
 	})
 }
+
+function bubbleSort(arr) {
+    for (var i = 0, endI = arr.length - 1; i < endI; i++) {
+        var wasSwap = false;
+        for (var j = 0, endJ = endI - i; j < endJ; j++) {
+            if (arr[j] > arr[j + 1]) {
+                var swap = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = swap;
+                wasSwap = true;
+            }
+        }
+        if (!wasSwap) break;
+    }
+    return arr;
+}
+
+function hideCatalogItem(arr) {
+	if (arr.length == 0) {
+		let product = document.querySelectorAll('.catalog__products .catalog__item');
+		for (var i = 0; i < product.length; i++) {
+			product[i].style.display = "block"
+		}
+	} else {
+		let product = document.querySelectorAll('.catalog__products .catalog__item');
+		for (var i = 0; i < product.length; i++) {
+			product[i].style.display = "none"
+		}
+
+		let products = document.querySelector('.catalog__products');
+		arr.forEach(function(el){
+			let show = products.querySelectorAll('.catalog__item-' + el);
+			for (var i = 0; i < products.querySelectorAll('.catalog__item-' + el).length; i++) {
+				products.querySelectorAll('.catalog__item-' + el)[i].style.display = "block";
+			}
+		});
+	}
+}
+
+function sortUp() {
+	let nav = document.querySelector('.catalog__products');
+	for (let i = 0; i < nav.children.length; i++) {
+		for (let j = i; j < nav.children.length; j++) {
+			if (+nav.children[i].getAttribute('data-price') > +nav.children[j].getAttribute('data-price')) {
+				let replace = nav.replaceChild(nav.children[j], nav.children[i]);
+				insertAfter(replace, nav.children[i]);
+			}
+		}
+	}
+}
+
+function sortDown() {
+	let nav = document.querySelector('.catalog__products');
+	for (let i = 0; i < nav.children.length; i++) {
+		for (let j = i; j < nav.children.length; j++) {
+			if (+nav.children[i].getAttribute('data-price') < +nav.children[j].getAttribute('data-price')) {
+				let replace = nav.replaceChild(nav.children[j], nav.children[i]);
+				insertAfter(replace, nav.children[i]);
+			}
+		}
+	}
+}
+
+function insertAfter(elem, refElem) {
+	return refElem.parentNode.insertBefore(elem, refElem.nextSibling)
+}
+
+if (document.querySelector('.catalog')) {
+
+	document.querySelector('.catalog__filter__up').addEventListener('click', function(e) {
+		e.preventDefault();
+		sortUp();
+	});
+	document.querySelector('.catalog__filter__down').addEventListener('click', function(e) {
+		e.preventDefault();
+		sortDown();
+	})
+	
+	let checkbox = document.querySelectorAll('.catalog__sidebar .checkbox-custom');
+	let arrFilter = [];
+	for (var i = 0; i < checkbox.length; i++) {
+		checkbox[i].addEventListener('click', function(){
+			if (this.classList.contains('checkbox-custom--active')) {
+				attr = this.getAttribute('data-filter');
+				arrFilter.push(attr);
+			} else {
+				attr = this.getAttribute('data-filter');
+				let removeItemArr = arrFilter.indexOf(attr);
+				arrFilter.splice(removeItemArr, 1);
+			}
+
+			hideCatalogItem(arrFilter);
+			sortUp();
+		});
+	}
+
+	let inputMax = document.querySelector('input[name="price-max"]');
+	let inputMin = document.querySelector('input[name="price-min"]');
+
+	let arrPrice = [];
+	let products = document.querySelectorAll('.catalog__item');
+
+	for (var i = 0; i < products.length; i++) {
+		arrPrice.push(+products[i].getAttribute('data-price'));
+	}
+	bubbleSort(arrPrice)
+
+	inputMin.value = arrPrice[0];
+	inputMin.setAttribute('min', arrPrice[0])
+	inputMin.setAttribute('max', arrPrice[arrPrice.length-1])
+
+	inputMax.value = arrPrice[arrPrice.length-1];
+	inputMax.setAttribute('min', arrPrice[0])
+	inputMax.setAttribute('max', arrPrice[arrPrice.length-1])
+
+	inputMin.addEventListener('input', function(){
+
+		if (+this.value < +inputMax.value) {
+			let thx = this.value
+			for (var i = 0; i < products.length; i++) {
+					let price = products[i].getAttribute('data-price');
+					
+					let product = products[i];
+
+						product.classList.add('catalog__item__price')
+
+					
+					
+					if (+thx <= +price && price <= +inputMax.value) {
+						product.classList.remove('catalog__item__price')
+					}
+				}	
+		} else {
+			this.value = inputMax.value
+		}
+	});
+
+	inputMax.addEventListener('input', function(){
+
+		if (+this.value != +inputMin.value) {
+			let thx = this.value
+			for (var i = 0; i < products.length; i++) {
+					let price = products[i].getAttribute('data-price');
+					
+					let product = products[i];
+
+						product.classList.add('catalog__item__price')
+
+					
+					
+					if (+inputMin.value <= +price && price <= +thx) {
+						product.classList.remove('catalog__item__price')
+					}
+				}	
+		} else {
+			this.value = this.getAttribute('max');
+		}
+	});
+}
+

@@ -370,6 +370,45 @@ if(document.querySelector('.ter-filter-block__body')) {
   });
 }
 
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 10,
+  slidesPerView: 7.5,
+  freeMode: true,
+  watchSlidesProgress: true,
+  breakpoints: {
+    0: {
+      slidesPerView: 4.5,
+      spaceBetween: 10
+    },
+    768: {
+      spaceBetween: 10,
+      slidesPerView: 7.5,
+    }
+  }
+});
+var swiper2 = new Swiper(".mySwiper2", {
+  spaceBetween: 45,
+  slidesPerView: 1.3,
+  centeredSlides: true,
+  loop: true,
+  navigation: {
+    nextEl: ".ter-button-next",
+    prevEl: ".ter-button-prev",
+  },
+  thumbs: {
+    swiper: swiper,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+      spaceBetween: 0
+    },
+    768: {
+      slidesPerView: 1.3,
+      spaceBetween: 45,
+    }
+  }
+});
 
 
 if (document.querySelector('.ter-filter-block--scroll')) {
