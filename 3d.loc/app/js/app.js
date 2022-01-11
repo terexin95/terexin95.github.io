@@ -177,30 +177,38 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 	if (document.querySelector('.modal-gallery__init')) {
 		let modalGalleryInit = new Swiper(".modal-gallery__init", {
-		slidesPerView: 1,
-	   spaceBetween: 25,
-	   centeredSlides: true,
-	   loop: true,
-	   pagination: {
-		 el: ".single-slider__pagination",
-		 type: "fraction",
-		 formatFractionCurrent: function (number) {
-		   return ('0' + number).slice(-2);
-		   },
-		   formatFractionTotal: function (number) {
-			   return ('0' + number).slice(-2);
-		   },
-		   renderFraction: function (currentClass, totalClass) {
-			   return '<span class="' + currentClass + '"></span>' +
-					  ' / ' +
-					  '<span class="' + totalClass + '"></span>';
-		   }        
-		 },
-	   navigation: {
-		 nextEl: ".single-slider__button-next",
-		 prevEl: ".single-slider__button-prev",
-	   },
-	 });
+			slidesPerView: 1,
+		   spaceBetween: 25,
+		   centeredSlides: true,
+		   loop: true,
+
+		 });
+		let childSwiper = document.querySelectorAll('.swiper-v');
+		childSwiper.forEach(function(index, value){
+			let swyper = new Swiper(index, {
+				slidesPerView: 1,
+				navigation: {
+					nextEl: index.parentElement.querySelector(".single-slider__button-next"),
+					prevEl: index.parentElement.querySelector(".single-slider__button-prev"),
+			  },
+			  pagination: {
+				 el: index.parentElement.querySelector(".single-slider__pagination"),
+				 type: "fraction",
+				 formatFractionCurrent: function (number) {
+				   return ('0' + number).slice(-2);
+				   },
+				   formatFractionTotal: function (number) {
+					   return ('0' + number).slice(-2);
+				   },
+				   renderFraction: function (currentClass, totalClass) {
+					   return '<span class="' + currentClass + '"></span>' +
+							  ' / ' +
+							  '<span class="' + totalClass + '"></span>';
+				   }        
+				 },
+			});
+		})
+		
 			for (let i = 0; i < document.querySelectorAll('.gallery__item').length; i++) {
 				document.querySelectorAll('.gallery__item')[i].addEventListener('click', function(e){
 					e.preventDefault();
