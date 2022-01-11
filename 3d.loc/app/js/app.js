@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		   spaceBetween: 25,
 		   centeredSlides: true,
 		   loop: true,
-
+			simulateTouch: false
 		 });
 		let childSwiper = document.querySelectorAll('.swiper-v');
 		childSwiper.forEach(function(index, value){
