@@ -2524,13 +2524,13 @@
 							<div class="mcr-txt">Оставьте свой телефон, <b>менеджер</b> перезвонит и решит все вопросы по оформлению <b>заказа</b></div>
 							<form class="callback-ter">
 								<input type="text" class="mcr-inp" name="name1" placeholder="*Фамилия Имя Отчество" required>
-								<input type="text" class="mcr-inp tel-ter" title="Пожалуйста введите сотовый номер телефона!" pattern="^(\+7|7)?[\s\-]?\(?(7|9)[0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$" name="phone1" placeholder="*Введите телефон">
+								<input type="text" class="mcr-inp tel-ter" title="Пожалуйста введите сотовый номер телефона!" pattern="^(\+7|7)?[\s\-]?\(?(7|9)[0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$" name="phone12" placeholder="*Введите телефон">
 								<button type="submit" class="mcr-btn mcr-btn1 disabled" name="submit" value="callme" disabled="disabled">Перезвоните мне</button>
 							</form>
 							<div class="mcr-txt">ИЛИ <b>Заполните форму </b></div>
 							<form class="dostavka-ter">
 								<input type="text" class="mcr-inp" name="name2" placeholder="*Фамилия Имя Отчество">
-								<input type="text" class="mcr-inp tel-ter" name="phone2" title="Пожалуйста введите сотовый номер телефона!" pattern="^(\+7|7)?[\s\-]?\(?(7|9)[0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$" id="phone22" placeholder="*Введите телефон">
+								<input type="text" class="mcr-inp tel-ter" name="phone22" title="Пожалуйста введите сотовый номер телефона!" pattern="^(\+7|7)?[\s\-]?\(?(7|9)[0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$" id="phone22" placeholder="*Введите телефон">
 								<input type="text" class="mcr-inp" name="email" placeholder="Е-mail (если есть)">
 								<input type="text" class="mcr-inp" name="adress" placeholder="Адрес доставки, индекс">
 								<textarea class="mcr-ta mcr-inp" name="comment" placeholder="Комментарий к заказу"></textarea>
@@ -2573,14 +2573,14 @@
 	<script src="js/main.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.2.2/imask.min.js"></script>
 	<script>
-		let element = document.querySelector('input[name="phone2"]');
+		let element = document.querySelector('input[name="phone22"]');
 		let maskOptions = {
 		    mask: '+7 (900) 000-0000',
 		    lazy: true
 		} 
 		let mask = new IMask(element, maskOptions);
 
-		let element1 = document.querySelector('input[name="phone1"]');
+		let element1 = document.querySelector('input[name="phone12"]');
 		let maskOptions1 = {
 		    mask: '+7 (900) 000-0000',
 		    lazy: true
