@@ -710,7 +710,7 @@ function callbackTer() {
   let phone = false;
   let button = document.querySelector('button.mcr-btn1');
   let nameInput = document.querySelector('input[name="name1"]');
-  let phoneInput = document.querySelector('input[name="phone1"]');
+  let phoneInput = document.querySelector('input[name="phone12"]');
   nameInput.addEventListener('input', function(){
       if (!nameInput.value == "") {
         name = true;

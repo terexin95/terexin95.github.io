@@ -4,7 +4,7 @@ $recepient = "C1378827@yandex.ru";
 $sitename = "#";
 
 $name = trim($_POST["name2"]);
-$phone = trim($_POST["phone2"]);
+$phone = trim($_POST["phone22"]);
 $addr = trim($_POST["adress"]);
 $email = trim($_POST["email"]);
 $header = trim($_POST["header"]);

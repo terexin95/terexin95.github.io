@@ -4,7 +4,7 @@ $recepient = "C1378827@yandex.ru";
 $sitename = "#";
 
 $name = trim($_POST["name1"]);
-$phone = trim($_POST["phone1"]);
+$phone = trim($_POST["phone12"]);
 
 $message = "ФИ0: $name\n Телефон: $phone \n\n\nЗаявка на обратный звонок";
 
