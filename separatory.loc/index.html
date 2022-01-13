@@ -2604,7 +2604,7 @@
  			} else {
 				$.ajax({
           type: "POST",
-          url: "/mail.php",
+          url: "mail.php",
           data: $(this).serialize()
         }).done(function() {
         	$('.modal-thanks-overlay').fadeIn();
@@ -2621,7 +2621,7 @@
  		$('.callback-ter').submit(function() {
 				$.ajax({
           type: "POST",
-          url: "/callback.php",
+          url: "callback.php",
           data: $(this).serialize()
         }).done(function() {
         	$('.modal-thanks-overlay').fadeIn();
