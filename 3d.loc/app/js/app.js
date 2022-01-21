@@ -347,6 +347,124 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 
+	var landingSlider__init = new Swiper(".landing-slider__init", {
+		loop: true,
+		direction: "vertical",
+    pagination: {
+      el: ".swiper-pagination",
+      type: "progressbar",
+    },
+    navigation: {
+      nextEl: ".landing-slider__next",
+    },
+    breakpoints: {
+	    0: {
+	      slidesPerView: 1,
+	      spaceBetween: 0,
+	      direction: "horizontal",
+	    },
+	    1300: {
+	      slidesPerView: 1,
+	      spaceBetween: 0,
+	      direction: "vertical",
+	    }
+	  }
+  });
 
+  		
+  var landingReview__initMobile = new Swiper(".landing-review__init-mobile", {
+ 		slidesPerView: 1.7,
+    spaceBetween: 20,
+    loop: true,
+    pagination: {
+      el: ".landing-review__mobile-pagination",
+      type: "fraction",
+      formatFractionCurrent: function (number) {
+        return ('0' + number).slice(-2);
+      },
+      formatFractionTotal: function (number) {
+          return ('0' + number).slice(-2);
+      },
+      renderFraction: function (currentClass, totalClass) {
+          return '<span class="' + currentClass + '"></span>' +
+                 ' / ' +
+                 '<span class="' + totalClass + '"></span>';
+      }        
+    },
+    navigation: {
+      nextEl: ".landing-review__mobile-next",
+      prevEl: ".landing-review__mobile-prev",
+    },
+  });
 
+  var landingPortfolio__init = new Swiper(".landing-portfolio__init", {
+ 		slidesPerView: 1,
+    spaceBetween: 0,
+    centeredSlides: true,
+    loop: true,
+    pagination: {
+      el: ".landing-portfolio__init-pagination",
+      type: "fraction",
+      formatFractionCurrent: function (number) {
+        return ('0' + number).slice(-2);
+      },
+      formatFractionTotal: function (number) {
+          return ('0' + number).slice(-2);
+      },
+      renderFraction: function (currentClass, totalClass) {
+          return '<span class="' + currentClass + '"></span>' +
+                 ' / ' +
+                 '<span class="' + totalClass + '"></span>';
+      }        
+    },
+    navigation: {
+      nextEl: ".landing-portfolio__init-next",
+      prevEl: ".landing-portfolio__init-prev",
+    },
+  });
+
+  var landingPortfolio__init = new Swiper(".landing-review__init", {
+ 		slidesPerView: 3,
+    spaceBetween: 180,
+    loop: true,
+    navigation: {
+      nextEl: ".landing-review__right",
+      prevEl: ".landing-review__left",
+    },
+    breakpoints: {
+    	0: {
+	      slidesPerView: 1.6,
+	      spaceBetween: 20,
+	    },
+	    768: {
+	      slidesPerView: 3,
+	      spaceBetween: 30,
+	    },
+	    1050: {
+	      slidesPerView: 3,
+    		spaceBetween: 180,
+	    }
+	  }
+  });
 })
+
+if (document.querySelector(".accordion button")) {
+	const items = document.querySelectorAll(".accordion button");
+
+	function toggleAccordion() {
+	  const itemToggle = this.getAttribute('aria-expanded');
+	  
+	  for (let i = 0; i < items.length; i++) {
+	    items[i].setAttribute('aria-expanded', 'false');
+	  }
+	  
+	  if (itemToggle == 'false') {
+	    this.setAttribute('aria-expanded', 'true');
+	  }
+	}
+
+	items.forEach(item => item.addEventListener('click', toggleAccordion));
+}
+
+
+document.querySelector('video').play();

@@ -1,0 +1,1035 @@
+.landing-slider
+	.swiper-pagination-progressbar.swiper-pagination-vertical, .swiper-vertical>.swiper-pagination-progressbar
+		width: 2px
+		background-color: #2B333E
+		opacity: 1
+		margin-left: 6px
+		border-radius: 3px
+		height: 80%
+		top: 10%
+		&::before
+			content: ""
+			width: 12px
+			height: 12px
+			border-radius: 100%
+			background-color: #3198FF
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			top: -10px
+	.swiper-pagination-progressbar .swiper-pagination-progressbar-fill
+		width: 5px
+		left: -1.05px
+		border-radius: 3px
+		background-color: #3198FF
+	&__bg
+		background-image: url(../images/dist/bgland.png)
+		background-position-x: left
+		background-position-y: top
+		background-repeat: no-repeat
+		padding-top: 260px
+		margin-top: -115px
+		padding-bottom: 170px
+	.site-footer__up svg
+		transform: rotate(180deg)
+	&__social
+		max-width: 340px
+		flex: 0 0 340px
+	&__inner
+		display: flex
+		max-width: 653px
+		justify-content: space-between
+		align-items: center
+	&__init
+		.swiper-wrapper
+			margin-left: 125px
+			max-width: 875px
+			max-height: 480px
+			margin-bottom: 150px
+		h1, h2
+			font-weight: 900
+			font-size: 54px
+			line-height: 63px
+			margin: 0
+			color: #C1C1C1
+			margin-bottom: 25px
+		p
+			font-size: 24px
+			line-height: 43px
+			color: rgba(214, 214, 214, 0.7)
+			margin: 0
+			margin-bottom: 40px
+			font-weight: 300
+	.site-header__callback
+		width: 340px
+		height: 87px
+		line-height: 87px
+		max-width: 340px
+		margin-right: 35px
+	.single-content__button-faq
+		height: 87px
+		width: 260px
+		line-height: 87px
+		max-width: 260px
+	.single-content__buttons
+		justify-content: start
+
+.vantage
+	position: relative
+	h2
+		font-weight: 900
+		font-size: 40px
+		line-height: 60px
+		margin: 0
+		max-width: 800px
+		margin-left: 130px
+		margin-bottom: 150px
+		color: #D6D6D6
+	&__item
+		display: flex
+		height: 562px
+		align-items: center
+		background-repeat: no-repeat
+		max-width: 1270px
+		margin-left: auto
+		justify-content: space-between
+		margin-right: 0
+		padding-right: 100px
+		background-image: url(../images/dist/vantage/bg.png)
+		margin-bottom: 120px
+		&:nth-child(2n)
+			background-image: url(../images/dist/vantage/bgrow.png)
+			margin-left: 0
+			margin-right: auto
+			padding-right: 0
+			padding-left: 150px
+			.vantage__item
+				&-img
+					margin-left: 0
+					margin-right: 0px
+		&:nth-child(5)
+			background-image: url(../images/dist/vantage/bgrow5.png)
+		&:nth-child(6)
+			background-image: url(../images/dist/vantage/bgrow6.png)
+			.vantage__item
+				&-img
+					margin-right: -50px
+		&-img
+			margin-left: -150px
+		&-block
+			max-width: 580px
+			h3
+				font-weight: bold
+				font-size: 35px
+				line-height: 33px
+				margin: 0
+				margin-bottom: 18px
+				color: #D6D6D6
+			p
+				margin: 0
+				font-weight: normal
+				font-size: 18px
+				line-height: 35px
+				color: rgba(214, 214, 214, 0.8)
+				margin-bottom: 40px
+		.site-header__callback
+			width: 270px
+			height: 62px
+			line-height: 62px
+			max-width: 270px
+			margin-right: 35px
+		.single-content__button-faq
+			height: 62px
+			width: 180px
+			line-height: 62px
+			max-width: 180px
+		.single-content__buttons
+			justify-content: start
+
+.landing-bar
+	display: flex
+	align-items: center
+	position: absolute
+	transform-origin: center top
+	transform: translateX(-50%) rotate(-90deg)
+	top: 3.6%
+	&__line
+		width: 210px
+		height: 2px
+		background: #2B333E
+		border-radius: 2px
+		position: relative
+		transform: rotate(180deg)
+		&::before
+			content: ""
+			width: 10px
+			height: 10px
+			border-radius: 100px
+			background-color: #1A5692
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+	&__progress
+		width: 16.666%
+		height: 2px
+		background-color: #1A5692
+	&__title
+		margin-left: 15px
+		font-size: 14px
+		line-height: 13px
+		color: #D6D6D6
+
+.accent
+	position: relative
+	background: #1B1E29
+	padding-top: 120px
+	margin-bottom: -80px
+	.landing-bar
+		top: calc(20% + 120px)
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+	&__item
+		padding: 0 110px
+		flex: 0 0 33%
+		max-width: 33%
+		box-sizing: border-box
+		position: relative
+		margin-bottom: 120px
+		&:nth-child(3n), &:nth-child(5)
+			&::after
+				content: ""
+				display: none
+		&:hover
+			&::before
+				content: ""
+				opacity: 1
+				transition: all .3s ease
+		h4
+			margin: 0
+			font-weight: bold
+			font-size: 26px
+			line-height: 25px
+			margin-bottom: 30px
+			color: #D6D6D6
+		p
+			margin: 0
+			font-weight: normal
+			font-size: 18px
+			line-height: 35px
+			color: rgba(214, 214, 214, 0.8)
+		&::before
+			content: ""
+			width: 80%
+			height: 60%
+			background: rgba(48, 152, 255, 0.35)
+			filter: blur(100px)
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			opacity: 0
+			transition: all .3s ease
+		&::after
+			content: ""
+			width: 1px
+			height: 100%
+			background: rgb(67,80,96)
+			right: 0
+			top: 0
+			bottom: 0
+			position: absolute
+			background: radial-gradient(circle, rgba(67,80,96,0.78) 0%, rgba(67,80,96,0) 100%)
+	&__more
+		background: #0E1116
+		border: 1px solid rgba(218, 218, 218, 0.15)
+		box-sizing: border-box
+		box-shadow: 14px 14px 50px rgba(0, 0, 0, 0.5)
+		border-radius: 15px 0px 0px 15px
+		padding-top: 70px
+		padding-bottom: 70px
+		padding-left: 60px
+		padding-right: 60px
+		margin-bottom: 0
+		margin-bottom: -50px
+		position: relative
+		z-index: 2
+		.single-post__link
+			position: initial
+			color: #3198FF
+			svg
+				path
+					fill: #3198FF
+		p
+			max-width: 318px
+			margin-bottom: 70px
+		&::before
+			display: none
+
+.landing-callback
+	display: flex
+	overflow: hidden
+	position: relative
+	align-items: center
+	&__block
+		flex: 0 0 900px
+		max-width: 860px
+		margin-left: 170px
+		h2
+			font-weight: bold
+			font-size: 53px
+			line-height: 74px
+			color: rgba(214, 214, 214, 0.8)
+			margin: 0
+			margin-bottom: 30px
+		.site-header__callback
+			width: 255px
+			max-width: 255px
+			height: 62px
+			line-height: 62px
+	&__img
+		position: relative
+		z-index: 1
+		img
+			vertical-align: bottom
+
+.landing-portfolio
+	background-color: #1B1E29
+	padding: 120px 0
+	position: relative
+	.landing-bar
+		top: 26%
+	&__init
+		margin-left: 130px
+	&__header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 55px
+		h2
+			font-weight: 900
+			font-size: 40px
+			line-height: 60px
+			color: #AFAFB1
+			margin: 0
+		.single-slider__options
+			margin-top: -15px
+			margin-left: 100px
+		.site-header__callback
+			width: 255px
+			max-width: 255px
+			height: 62px
+			line-height: 62px
+			font-size: 18px
+
+.landing-review
+	user-select: none
+	padding: 130px 0
+	position: relative
+	.landing-bar
+		top: 30%
+	h2
+		margin: 0
+		padding: 0 130px
+		margin-bottom: 130px
+		font-weight: 900
+		font-size: 40px
+		line-height: 38px
+		color: #AFAFB1
+	&__init
+		padding: 0 130px
+	&__buttons
+		position: relative
+	&__left, &__right
+		top: 50%
+		transform: translateY(-50%)
+		position: absolute
+		cursor: pointer
+		z-index: 5
+		svg
+			path
+				transition: all .3s ease
+		&:hover
+			svg
+				path
+					fill: #3198FF
+					transition: all .3s ease
+	&__left
+		left: 0
+	&__right
+		right: 0
+	&__item
+		&-img
+			margin-bottom: 50px
+			img
+				width: 200px
+				height: 200px
+				object-fit: cover
+				border-radius: 100%
+				vertical-align: bottom
+		&-title
+			font-size: 24px
+			line-height: 23px
+			color: rgba(255, 255, 255, 0.8)
+			margin-bottom: 15px
+		&-city
+			font-size: 24px
+			line-height: 23px
+			color: rgba(255, 255, 255, 0.8)
+			margin-bottom: 30px
+		&-text
+			font-size: 16px
+			line-height: 164%
+			color: #969696
+
+.landing-sale
+	background-color: #1B1E29
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+		flex-wrap: wrap
+	&__form
+		max-width: 40%
+		flex: 0 0 40%
+		padding: 70px 125px
+		box-sizing: border-box
+		background-color: #141920
+		h2
+			font-weight: 900
+			font-size: 40px
+			line-height: 60px
+			color: #D6D6D6
+			margin: 0
+			margin-bottom: 15px
+		p
+			color: rgba(214, 214, 214, 0.8)
+			font-size: 18px
+			line-height: 17px
+			margin: 0
+			margin-bottom: 45px
+	&__block
+		max-width: 50%
+		flex: 0 0 50%
+		img
+			width: 100%
+			max-width: 100%
+			height: auto
+			vertical-align: bottom
+	form
+		button
+			width: 100%
+			box-shadow: 0 0 0 0 transparent
+			border: 0
+			height: 64px
+			font-size: 18px
+			margin-bottom: 20px
+
+.landing-faq
+	position: relative
+	z-index: 1
+	margin: -150px 0
+	&__buttons
+		margin-top: 30px
+		.single-content__buttons-text
+			font-weight: normal
+			font-size: 24px
+			line-height: 102.32%
+			color: #AFAFB1
+		.single-content__buttons
+			align-items: center
+		.site-header__callback
+			height: 64px
+			line-height: 64px
+			width: 250px
+			max-width: 250px
+	&__container
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		width: 100%
+	&__inner
+		max-width: 660px
+		padding-left: 130px
+		position: relative
+		.landing-bar
+			left: 0
+			top: 23%
+		h2
+			font-weight: 900
+			font-size: 40px
+			line-height: 60px
+			margin: 0
+			margin-bottom: 30px
+			color: #AFAFB1
+	&__video
+		video
+			vertical-align: bottom
+
+
+.landing-care
+	padding: 120px 0
+	position: relative
+	background-color: #1B1E29
+	position: relative
+	&__more
+		width: 670px
+		height: 340px
+		position: absolute
+		right: 0
+		background: #0E1116
+		padding: 65px 105px
+		border: 1px solid rgba(218, 218, 218, 0.15)
+		box-sizing: border-box
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 14px 14px 50px rgba(0, 0, 0, 0.5)
+		border-radius: 15px 0px 0px 15px
+		bottom: -110px
+		.single-post__link
+			position: initial
+		p
+			font-weight: normal
+			font-size: 24px
+			line-height: 52px
+			color: rgba(214, 214, 214, 0.8)
+			margin: 0
+			margin-bottom: 40px
+	&__col
+		max-width: 45%
+		flex: 0 0 45%
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		padding-left: 130px
+		position: relative
+		.landing-bar
+			left: 0
+			z-index: 1
+			top: 16%
+		h2
+			font-weight: 900
+			font-size: 40px
+			line-height: 38px
+			display: flex
+			align-items: center
+			color: #AFAFB1
+			margin: 0
+		p
+			font-size: 18px
+			line-height: 164%
+			color: #969696
+			margin: 0
+		img
+			width: 100%
+			height: auto
+			vertical-align: bottom
+	&__one
+		h2
+			margin-bottom: 55px
+			position: relative
+			z-index: 1
+		p
+			margin-bottom: 75px
+	&__two
+		img
+			position: relative
+			z-index: 1
+		p
+			margin-top: 160px
+
+
+.vantage__item .site-header__callback
+	overflow: hidden
+
+.landing-review__init-mobile, .landing-review__mobile-buttons
+	display: none	
+
+@media (max-width: 1880px)
+	.landing-callback__img
+		margin-left: -200px
+	.landing-callback__block
+		margin-left: 70px
+
+@media (max-width: 1560px)
+	.landing-callback__img
+		margin-left: -400px
+
+@media (max-width: 1360px)
+	.landing-callback__img
+		margin-left: -500px
+	.landing-callback__block
+		margin-left: 30px
+
+@media (max-width: 1300px)
+
+	.vantage__item:nth-child(2n)
+		padding-left: 0
+	.vantage__item
+		padding-right: 0
+		max-width: 100%
+	.landing-slider .swiper-pagination-progressbar .swiper-pagination-progressbar-fill
+		width: inherit
+	.landing-slider
+		.swiper-pagination-progressbar
+			margin-left: 10px
+			max-width: 160px
+			background-color: #2B333E
+			border-radius: 4px
+			height: 1px
+			margin-top: 6px
+			&::before
+				content: ""
+				position: absolute
+				width: 11px
+				background: #3198FF
+				border-radius: 100%
+				height: 11px
+				left: -8px
+				top: -5px
+		.swiper-pagination-progressbar-fill
+			height: 5px
+			border-radius: 5px
+			margin-top: -2.5px
+		.landing-slider__init .swiper-wrapper
+			margin-left: 0
+			margin-top: 100px
+	.landing-faq__video
+		display: none
+	.landing-faq__container
+		position: inherit
+		top: auto
+		transform: translateY(0)
+	.landing-faq
+		margin: 130px 0
+	.landing-slider__init h1, .landing-slider__init h2
+		max-width: 700px
+	.landing-slider__init p
+		max-width: 700px
+	.landing-slider__bg
+		background-position: center
+		background-size: cover
+		padding-bottom: 280px
+	.landing-slider__init .swiper-wrapper
+		max-height: 100%
+
+@media (max-width: 1200px)
+	.landing-slider__social
+		display: none
+	.landing-slider .single-content__buttons
+		flex-wrap: wrap
+		max-width: 340px
+	.landing-slider .single-content__button-faq
+		flex: 0 0 260px
+	.landing-slider .site-header__callback
+		flex: 0 0 340px
+		margin-right: 0
+		margin-bottom: 20px
+
+@media (max-width: 1050px)
+	.landing-bar
+		position: inherit
+		transform: rotate(0)
+		flex-direction: row-reverse
+		justify-content: flex-end
+		margin-bottom: 12px
+	.landing-bar__line
+		transform: rotate(0)
+		margin-left: 10px
+	.vantage h2
+		margin: 0
+		margin-bottom: 70px
+	.landing-bar__title
+		margin-left: 0
+	.vantage__item
+		background-image: url(../images/dist/vantage/bgmob.png) !important
+		flex-wrap: wrap
+		height: 100%
+		justify-content: center
+		background-size: cover
+		max-width: inherit !important
+		margin-left: -20px !important
+		margin-right: -20px !important
+		padding-left: 20px !important
+		padding-right: 20px !important
+		background-position-y: bottom
+		background-repeat: no-repeat
+	.vantage__item-img
+		margin-left: 0
+		margin-bottom: 30px
+		margin-top: -50px
+	.vantage__item-block
+		flex: 0 0 100%
+		max-width: 100%
+	.vantage__item:nth-child(2n)
+		.vantage__item-img
+			order: 1
+		.vantage__item-block
+			order: 2
+	.landing-callback__block
+		position: absolute
+		left: 50%
+		top: 50%
+		transform: translate(-50%, -50%)
+		margin-left: 0
+		width: 90%
+		z-index: 1
+	.accent__item
+		padding-right: 20px
+		padding-left: 0
+		max-width: 49%
+		flex: 0 0 49%
+		&:nth-child(3n)
+			&::after
+				display: block
+		&:nth-child(2n)
+			&::after
+				display: none
+	.accent__more
+		padding-top: 30px
+		padding-bottom: 30px
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+	.accent__more p
+		margin-bottom: 30px
+	.landing-portfolio__init
+		margin-left: 0
+	.landing-care__wrap
+		padding-left: 0
+		.landing-bar
+			flex: 0 0 100%
+			max-width: 100%
+	.landing-care__more
+		width: 100%
+		position: inherit
+		margin-top: 50px
+	.landing-review h2
+		padding: 0
+	.landing-review__init
+		padding: 0 50px
+	.landing-sale__block
+		flex: 0 0 100%
+		max-width: 100%
+	.landing-sale
+		padding-top: 60px
+		padding-bottom: 60px
+	.landing-sale__form
+		flex: 0 0 600px
+		max-width: 600px
+		margin-top: 40px
+	.landing-sale__wrap
+		justify-content: center
+	.accent .landing-bar
+		margin-bottom: 60px
+
+@media (max-width: 890px)
+	.landing-portfolio__header
+		flex-wrap: wrap
+	.landing-portfolio__header .single-slider__options
+		flex: 0 0 100%
+		max-width: 100%
+		order: 1
+		margin-left: 0
+		margin-top: 20px
+	.landing-faq__inner
+		padding-left: 0
+		max-width: 100%
+
+@media (max-width: 767px)
+	.landing-review__init-mobile
+		display: block
+	.landing-review__mobile-buttons
+		display: flex
+	.landing-review__mobile-buttons
+		display: flex
+		position: relative
+		z-index: 2
+		justify-content: space-between
+		margin-top: 20px
+		.single-content__button
+			width: 180px
+			height: 43px
+			line-height: 43px
+			max-width: 180px
+			font-size: 14px
+			flex: 0 0 180px
+	.single-slider__options
+		margin-top: -20px
+	.gallery__item-big
+		min-height: 300px !important
+	.landing-faq__buttons .single-content__buttons-text
+		font-size: 16px
+		line-height: 102.32%
+		color: #AFAFB1
+		margin-top: 30px
+	.landing-faq__buttons .single-content__buttons
+		flex-wrap: wrap
+	.accent__item:nth-child(3n):after
+		display: none
+	.landing-faq__buttons
+		margin-top: 0
+	.landing-faq__buttons .site-header__callback
+		height: 43px
+		line-height: 43px
+		width: 146px
+		max-width: 146px
+		font-size: 14px
+		padding: 0
+		margin-top: 30px
+	.landing-slider__inner
+		max-width: 320px
+		position: relative
+		.landing-slider__next
+			position: absolute
+			right: 15px
+			bottom: 54px
+			z-index: 4
+	.landing-sale
+		padding-top: 90px
+		padding-bottom: 90px
+	.landing-sale__form
+		flex: 0 0 100%
+		background-color: transparent
+		padding: 0
+		margin-top: 20px
+	.landing-review__init
+		padding: 0
+	.landing-review__left, .landing-review__right
+		display: none
+	.landing-review h2
+		margin-bottom: 30px
+		font-size: 21px
+		line-height: 20px
+		margin-top: 15px
+	.landing-review
+		padding: 90px 0
+	.landing-care
+		padding: 90px 0
+		.landing-bar
+			margin-bottom: 15px
+	.landing-care__col
+		flex: 0 0 100%
+		max-width: 100%
+		margin-bottom: 25px
+	.landing-care__one h2
+		font-size: 21px
+		line-height: 20px
+		color: #D6D6D6
+		margin-bottom: 20px
+	.landing-care__one p
+		margin-bottom: 30px
+	.landing-care__two
+		display: flex
+		flex-direction: column-reverse
+	.landing-care__two p
+		margin-top: 0
+		margin-bottom: 30px
+	.landing-care__more
+		padding: 0
+		background-color: transparent
+		border-color: transparent
+		box-shadow: 0 0 0 0 transparent
+		margin: 0
+		height: 100%
+		p
+			display: none
+	.landing-faq
+		margin: 90px 0
+	.landing-care__wrap p
+		font-weight: normal
+		font-size: 14px
+		line-height: 26px
+	.landing-faq__inner h2
+		font-size: 21px
+		line-height: 20px
+		color: #D6D6D6
+	.accordion button
+		padding: 20px 0
+	.accordion button .accordion-title
+		font-size: 16px
+		line-height: 22px
+		color: #AFAFB1
+	.landing-portfolio__header
+		.single-slider__options
+			display: none
+		.site-header__callback
+			display: none
+	.landing-portfolio__init
+		.swiper-wrapper
+			display: none
+	.landing-portfolio
+		padding: 90px 0
+	.landing-portfolio__header h2
+		font-weight: 900
+		font-size: 21px
+		line-height: 20px
+		color: #D6D6D6
+	.landing-callback__block h2
+		font-size: 21px
+		line-height: 25px
+		color: rgba(214, 214, 214, 0.8)
+	.landing-callback__block .site-header__callback
+		width: 180px
+		max-width: 180px
+		height: 43px
+		line-height: 43px
+		font-size: 14px
+		font-weight: 300
+	.landing-callback__img
+		margin-left: auto
+		margin-right: -440px
+		img
+			transform: scaleX(-1)
+	.accent__item
+		flex: 0 0 100%
+		max-width: 100%
+		margin-bottom: 60px
+		padding-right: 0
+	.accent__item:after
+		display: none
+	.accent__more
+		display: block
+		background-color: transparent
+		box-shadow: 0 0 0 0 transparent
+		padding: 0
+		border: 0 
+		p
+			display: none
+	.accent
+		padding: 90px 0
+	.accent__item h4
+		font-weight: bold
+		font-size: 20px
+		line-height: 19px
+		color: #D6D6D6
+		margin-bottom: 15px
+	.accent__item p
+		font-size: 14px
+		line-height: 26px
+		color: rgba(214, 214, 214, 0.8)
+	.vantage__item-img
+		margin-right: 0 !important
+		img
+			width: 100%
+			height: auto
+	.vantage__item-block h3
+		font-weight: bold
+		font-size: 20px
+		line-height: 19px
+		color: #D6D6D6
+	.vantage__item-block p
+		font-size: 14px
+		line-height: 26px
+		color: rgba(214, 214, 214, 0.8)
+		margin-bottom: 30px
+	.vantage h2
+		font-weight: 900
+		font-size: 21px
+		line-height: 29px
+		color: #D6D6D6
+		margin-bottom: 100px
+	.landing-slider__init h1, .landing-slider__init h2
+		font-weight: 900
+		font-size: 24px
+		line-height: 30px
+		margin-bottom: 20px
+		max-width: 80%
+	.landing-slider__init p
+		max-width: 70%
+	.landing-slider__init p
+		font-size: 16px
+		line-height: 25px
+		color: rgba(214, 214, 214, 0.7)
+		margin-bottom: 80px
+	.landing-slider .site-header__callback
+		max-width: 315px
+		height: 60px
+		line-height: 60px
+		border-radius: 20px
+		font-size: 16px
+		font-weight: 300
+	.landing-slider .single-content__button-faq
+		max-width: 225px
+		height: 60px
+		font-size: 16px
+		line-height: 60px
+		border-radius: 20px
+		font-weight: 300
+	.landing-slider__bg
+		margin-top: -95px
+		padding-top: 155px
+		padding-bottom: 140px
+	.landing-slider .landing-slider__init .swiper-wrapper
+		margin-bottom: 0
+
+
+@media (max-width: 450px)
+	.landing-slider__bg
+		background-position-y: -125px
+		background-position-x: 54%
+	.vantage__item .site-header__callback, .vantage__item .single-content__button-faq
+		height: 43px
+		line-height: 43px
+		max-width: 146px
+		padding: 0
+		font-size: 14px
+		overflow: hidden
+	.vantage__item .site-header__callback
+		margin-right: 0
+	.vantage__item .single-content__buttons
+		justify-content: space-between
+	.landing-callback__img
+		margin-right: -240px
+		img
+			height: 400px
+	.landing-callback__block h2
+		max-width: 70%
+	.accordion button
+		padding-right: 50px
+	.landing-review__item-img img
+		width: 133px
+		height: 133px
+	.landing-review__item-title
+		font-size: 16px
+		line-height: 15px
+		color: rgba(255, 255, 255, 0.8)
+		margin-bottom: 15px
+	.landing-review__item-city
+		font-size: 16px
+		line-height: 15px
+		color: rgba(255, 255, 255, 0.8)
+		margin-bottom: 10px
+	.landing-review__item-text
+		font-size: 14px
+		line-height: 26px
+		color: #969696
+	.landing-sale__form h2
+		font-weight: 900
+		font-size: 21px
+		line-height: 20px
+		color: #D6D6D6
+		margin-bottom: 15px
+	.landing-sale__form p
+		font-size: 14px
+		line-height: 26px
+		color: rgba(214, 214, 214, 0.8)
+		margin-bottom: 30px
+	.landing-portfolio__header
+		margin-bottom: 40px
+
+@media (max-width: 360px)
+	.landing-slider .site-header__callback
+		max-width: 270px
+	.landing-review__mobile-buttons
+		flex-wrap: wrap
+		justify-content: center
+		.single-slider__options
+			margin-top: 0
+			flex: 0 0 100%
+			justify-content: center
+			order: 1
+			margin-bottom: 20px
+		.single-content__button
+			order: 2

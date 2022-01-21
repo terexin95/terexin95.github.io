@@ -1,0 +1,132 @@
+	<div class="modal-back"></div>
+	<div class="modal-order nmo nmo-ter">
+		<div class="modal_close"><svg xmlns="https://www.w3.org/2000/svg" width="16.25" height="16.63" viewBox="0 0 16.25 16.63"><path class="cls-1" d="M1442.99,1720.37l14.14,14.14-2.12,2.12-14.14-14.14Zm-2,13.55,13.93-13.93,2.09,2.09-13.93,13.93Z" transform="translate(-1440.88 -1720)"></path></svg>
+		</div>
+		<div class="modal-main">
+			<h3 class="modal-header">Оформление заказа</h3>
+			<div class="modal-cols modal-order-form">
+				<div class="mc-left">
+	        
+				</div>
+				<div class="mc-right">
+					<div class="mc-right__wrap">
+						<div class="mc-right__wrap__inner">
+							<div class="mcr-total">
+								<div class="t-txt">Общая стоимость заказа</div>
+								<div class="t-total"><span class="order-total">0</span><span> руб.</span></div>
+							</div>
+							<div class="mcr-txt">Оставьте свой телефон, <b>менеджер</b> перезвонит и решит все вопросы по оформлению <b>заказа</b></div>
+							<form class="callback-ter">
+								<input type="text" class="mcr-inp" name="name1" placeholder="*Фамилия Имя Отчество" required>
+								<input type="text" class="mcr-inp tel-ter" title="Пожалуйста введите сотовый номер телефона!" pattern="^(\+7|7)?[\s\-]?\(?(7|9)[0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$" name="phone12" placeholder="*Введите телефон">
+								<button type="submit" class="mcr-btn mcr-btn1 disabled" name="submit" value="callme" disabled="disabled">Перезвоните мне</button>
+							</form>
+							<div class="mcr-txt">ИЛИ <b>Заполните форму </b></div>
+							<form class="dostavka-ter">
+								<input type="text" class="mcr-inp" name="name2" placeholder="*Фамилия Имя Отчество">
+								<input type="text" class="mcr-inp tel-ter" name="phone22" title="Пожалуйста введите сотовый номер телефона!" pattern="^(\+7|7)?[\s\-]?\(?(7|9)[0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$" id="phone22" placeholder="*Введите телефон">
+								<input type="text" class="mcr-inp" name="email" placeholder="Е-mail (если есть)">
+								<input type="text" class="mcr-inp" name="adress" placeholder="Адрес доставки, индекс">
+								<textarea class="mcr-ta mcr-inp" name="comment" placeholder="Комментарий к заказу"></textarea>
+								<input type="hidden" name="title-products">
+								<input type="hidden" name="products-total">
+								<button class="mcr-btn mcr-btn2 disabled" disabled="disabled">Заказать товар</button>
+								<input type="hidden" name="header" value="Сепараторы"> 
+							</form>
+						</div>
+					</div>
+				</div>
+		</div>
+		</div>
+	</div>
+	<div class="modal-alert-overlay">
+		<div class="modal-alert">
+			<div class="modal-alert_close"></div>
+			<div class="modal-alert-main">
+				<h3 class="modal-header">Товар не выбран!</h3>
+				<img class="alert-img" src="img/alert2.jpg" alt="Товар не выбран">
+				<div class="mt-send-info">Пожалуйста выберите хотя бы одну единицу товара!</div>
+				<br>
+			</div>
+		</div>
+	</div>
+		<div class="modal-thanks-overlay">
+			<div class="modal-thanks">
+				<div class="modal-thanks_close"></div>
+				<form class="modal-thanks-main">
+					<h3 class="modal-header">Благодарим Вас за Заказ!</h3>
+					<div class="mt-send-info">Наш специалист перезвонит Вам в ближайшее время для оформления заказа.</div>
+					<div class="mc-polit">*Ваши контактные данные в безопасности<br>и не будут переданы третьим лицам</div>
+				</form>
+			</div>
+		</div>
+
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+	<script src="js/lozad.js"></script>
+	<script src="js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.2.2/imask.min.js"></script>
+	<script>
+		let element = document.querySelector('input[name="phone22"]');
+		let maskOptions = {
+		    mask: '+7 (900) 000-0000',
+		    lazy: true
+		} 
+		let mask = new IMask(element, maskOptions);
+
+		let element1 = document.querySelector('input[name="phone12"]');
+		let maskOptions1 = {
+		    mask: '+7 (900) 000-0000',
+		    lazy: true
+		} 
+		let mask1 = new IMask(element1, maskOptions1);
+		function formProductsSend(button) {
+		    console.log(1)
+		}
+		$('.modal-alert-overlay').click(function(){
+			$(this).fadeOut();
+		});
+		$('.modal-thanks-overlay').click(function(){
+			$(this).fadeOut();
+			$('.nmo-ter').fadeOut();
+			$('.modal-back').fadeOut();
+		});
+ 		$('.dostavka-ter').submit(function(e) {
+ 			if ($('.nmo-ter .order-total').text() == "0") {
+ 				e.preventDefault();
+ 				$('.modal-alert-overlay').fadeIn();
+ 			} else {
+				$.ajax({
+          type: "POST",
+          url: "mail.php",
+          data: $(this).serialize()
+        }).done(function() {
+        	$('.modal-thanks-overlay').fadeIn();
+          $(this).find("input").val("");
+          $(".dostavka-ter").trigger("reset");
+          $('.nmo-ter .order-total').text('0');
+          $('.ter-prod-check--active').removeClass('ter-prod-check--active')
+          $('.ter-prod-count').val('0');
+          $('body').css({'overflow' : 'auto'});
+        });
+        return false;
+ 			}
+      });
+ 		$('.callback-ter').submit(function() {
+				$.ajax({
+          type: "POST",
+          url: "callback.php",
+          data: $(this).serialize()
+        }).done(function() {
+        	$('.modal-thanks-overlay').fadeIn();
+          $(this).find("input").val("");
+          $(".callback-ter").trigger("reset");
+          $('.nmo-ter .order-total').text('0');
+          $('.ter-prod-check--active').removeClass('ter-prod-check--active')
+          $('.ter-prod-count').val('0');
+          $('body').css({'overflow' : 'auto'});
+        });
+        return false;
+ 			
+      });
+	</script>
