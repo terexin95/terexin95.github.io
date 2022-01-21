@@ -1008,8 +1008,11 @@
 	</div>
 	<div class="landing-faq">
 		<div class="landing-faq__video">
-			<video src="images/dist/video.mp4" autoplay="autoplay" loop="loop" type="video/mp4"></video>
+			<video src="images/dist/video.mp4" autoplay="autoplay" loop="loop" type="video/mp4" muted="muted"></video>
 		</div>
+		<script>
+			document.querySelector('.landing-faq__video video').play();
+		</script>
 		<div class="landing-faq__container">
 			<div class="container">
 				<div class="landing-faq__inner">

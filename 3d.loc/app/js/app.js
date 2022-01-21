@@ -467,4 +467,3 @@ if (document.querySelector(".accordion button")) {
 }
 
 
-document.querySelector('video').play();
