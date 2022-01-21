@@ -1,0 +1,816 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+.terexin__site {
+    font-family: "Roboto";
+    max-width: 1150px;
+    margin: auto;
+    padding: 0 25px;
+    box-sizing: border-box;
+}
+
+.terexin__bg {
+    background-color: #F6F3EE;
+}
+
+.terexin__block-one {
+    background-color: #F6F3EE;
+    position: relative;
+    padding-bottom: 130px;
+    padding-top: 50px;
+}
+
+.terexin__block-one-img img:nth-child(1){
+    position: absolute;
+    right: -30px;
+    top: 0px;
+    width: 550px;
+    height: 550px;
+}
+
+.terexin__block-one-img img:nth-child(2) {
+    position: absolute;
+    right: 500px;
+    bottom: 0px;
+}
+
+.terexin__block-one-img img:nth-child(3) {
+    position: absolute;
+    right: 750px;
+    bottom: 0px;
+}
+
+.terexin__block-one h2 {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 111.19%;
+    color: #D3B574;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.terexin__block-one p {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 85.69%;
+    margin-top: 0;
+    color: #D3B574;
+}
+
+.terexin__block-one ul li {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #563C04;
+    list-style-type: none;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+.terexin__block-one ul {
+    padding-left: 0;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.terexin__block-one h2 span {
+    display: block;
+    color: #563C04;
+}
+
+.terexin__block-one ul li:before {
+    position: absolute;
+    content: "";
+    width: 7px;
+    height: 7px;
+    background-color: #BEA190;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    left: 0;
+}
+
+.terexin__button {
+    width: 270px;
+    height: 60px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 60px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #FFFFFF;
+    background: #BEA190;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+    
+.terexin__button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(67,80,96);
+    background: linear-gradient(270deg, rgba(255,255,255,0.3) 0%, rgba(67,80,96,0) 74%);
+    animation: move-light 1.5s infinite ease;
+}
+      
+@keyframes move-light {
+    from {
+        width: 0%
+    }
+    to {
+        width: 110% 
+    }
+}
+
+.terexin__block-vantage {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.terexin__block-vantage-item {
+    max-width: 300px;
+    text-align: center;
+}
+
+.terexin__block-vantage-item img {
+    width: 90px;
+    vertical-align: bottom;
+    filter: brightness( 60% ) contrast( 50% ) saturate( 200% ) blur( 0px ) hue-rotate( 240deg);
+    margin-bottom: 15px;
+}
+
+.terexin__block-vantage-title {
+    font-size: 22px;
+    color: #A58779;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.terexin__block-vantage-text {
+    font-size: 14px;
+    color: #563C04;
+}
+
+.terexin__price-block {
+    max-width: 330px;
+    flex: 0 0 330px;
+    padding: 50px 30px;
+    border-radius: 10px;
+    background: #F6F3EE;
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.terexin__price-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #F6F3EE;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -60px;
+    right: 25px;
+}
+
+.terexin__price {
+    margin: 150px 0 120px;
+    display: flex;
+    align-items: center;
+}
+
+.terexin__price-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 calc(100% - 330px);
+    max-width: calc(100% - 330px);
+    position: relative;
+}
+
+.terexin__notice {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #BF9979;
+    height: 100px;
+}
+
+.terexin__notice-text {
+    flex: 0 0 100%;
+}
+
+.terexin__price-image-title span {
+    color: #563C04;
+}
+
+.terexin__price-image-block img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    vertical-align: bottom;
+}
+
+.terexin__sale {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 122%;
+    margin-bottom: 15px;
+}
+
+.terexin__sale span {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 122%;
+    color: #D3B574;
+    
+}
+
+.terexin__price-image-block .terexin__button {
+    margin: auto;
+}
+
+.terexin__price-image-text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 171.69%;
+    color: #563C04;
+    margin-bottom: 40px;
+}
+
+.terexin__price-image-items img {
+    position: absolute;
+}
+
+.terexin__price-image-items-1 img:nth-child(1) {
+    right: 70px;
+    bottom: -80px;
+}
+.terexin__price-image-items-1 img:nth-child(2) {
+    left: 0;
+    top: 0;
+}
+.terexin__price-image-items-1 img:nth-child(3) {
+    top: -140px;
+    right: 80px;
+}
+.terexin__price-image-items-1 img:nth-child(4) {
+    left: 30px;
+    bottom: 0;
+}
+
+.terexin__price-image-items-2 img:nth-child(1) {
+    left: 70px;
+    bottom: -80px;
+}
+.terexin__price-image-items-2 img:nth-child(2) {
+    right: 0;
+    bottom: 0;
+}
+.terexin__price-image-items-2 img:nth-child(3) {
+    top: -40px;
+    right: 20px;
+}
+.terexin__price-image-items-2 img:nth-child(4) {
+    left: 30px;
+    top: 0;
+}
+
+.terexin__price-block-new, .terexin__price-block-old {
+    display: block;
+    flex: 0 0 100%;  
+}
+
+.terexin__price-image--custom .terexin__price-image-text {
+    text-align: left;
+}
+
+.terexin__price-image .terexin__price-image-text span {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 171.69%;
+    /* or 31px */
+
+    text-transform: uppercase;
+
+    color: #563C04;
+    margin-top: 30px;
+}
+
+.terexin__price-image--custom .terexin__price-image-text {
+    margin-bottom: 10px;
+}
+
+.terexin__people {
+    display: flex;
+    justify-content: space-between;
+}
+
+.terexin__people img {
+    vertical-align: bottom;
+}
+
+.terexin__people-block {
+    padding: 25px;
+    background: #F6F3EE;
+    border-radius: 10px;
+    max-width: 457px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 144.19%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    box-sizing: border-box;
+}
+
+.terexin__people-block span {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 144.19%;
+    color: #000000;
+}
+
+.terexin__price-image-list {
+    padding-left: 0;
+    margin: 0;
+}
+
+.terexin__price-image-list li {
+    text-align: left;
+    position: relative;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: #563C04;
+    margin-bottom: 5px;
+}
+
+.terexin__price-image-list svg {
+    margin-right: 10px;
+    
+}
+
+.terexin__price-block-new {
+    color: #D8BE85;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.terexin__price-block-old {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    text-decoration-line: line-through;
+    color: rgba(0, 0, 0, 0.39);
+}
+
+.terexin__price-image-title {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #D3B574;
+    margin-bottom: 40px;
+}
+
+.terexin__price-image-inner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.terexin__price-image-block {
+    position: relative;
+}
+
+.terexin__price-block-item {
+    margin-bottom: 35px;
+}
+
+.terexin__price-block-item:last-child {
+    margin-bottom: 0;
+}
+
+.terexin__price-block-title {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #000000;
+}
+
+.terexin__price-block-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #000000;
+    flex-wrap: wrap;
+}
+
+.terexin__price-block-text svg {
+    margin-right: 15px;
+}
+
+.terexin__notice--custom .terexin__notice-text{
+    flex: 0 0 calc(100% - 300px);
+    max-width: calc(100% - 300px);
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: #D3B574;
+}
+
+.terexin__notice--custom {
+    justify-content: space-between;
+}
+
+.terexin__people--custom {
+    margin-top: 150px;
+}
+
+.terexin__people--custom .terexin__people-text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    color: #563C04;
+    text-align: center;
+}
+
+.terexin__people--custom .terexin__people-block {
+    padding: 40px 55px;
+    max-width: 600px;
+}
+
+.terexin__people-footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.terexin__people-footer-text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 144.19%;
+    color: #000000;
+}
+.terexin__people-footer-text span {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 144.19%;
+    color: #000000;
+}
+
+.terexin__notice-v2 {
+    height: 170px;
+}
+
+.terexin__notice-v2 .terexin__notice-text {
+    font-weight: 300;
+    font-size: 22px;
+}
+
+.terexin__notice-v2 .terexin__notice-text span {
+    font-weight: 400;
+}
+
+.terexin__hidden {
+    overflow: hidden;
+}
+
+.terexin__people-img {
+    display: flex;
+    align-items: flex-end;
+}
+
+@media (max-width: 1050px) {
+    .terexin__block-one h2 {
+        max-width: 500px;
+    }
+    .terexin__block-vantage {
+        flex-wrap: wrap;
+    }
+    .terexin__block-vantage-item {
+        margin: auto;
+    }
+
+    .terexin__price-image--custom .terexin__price-image-text, .terexin__price-image-list {
+        padding-right: 40px;
+    }
+
+    .terexin__price-image--custom .terexin__price-image-text br {
+        display: none;
+    }
+
+    .terexin__people-footer {
+        flex-wrap: wrap;
+    }
+
+    .terexin__people-footer-text {
+        flex: 0 0 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 940px) {
+    .terexin__notice-text {
+        font-size: 18px;
+    }
+    .terexin__people-block {
+        margin-bottom: 70px;
+    }
+
+    .terexin__people {
+        margin-top: -70px;
+    }
+
+    .terexin__people--custom {
+        margin-top: 100px;
+    }
+}
+@media (max-width: 949px) {
+    .terexin__block-vantage .terexin__block-vantage-item:nth-child(2){
+        margin-top: -130px;
+    }
+
+    .terexin__block-vantage .terexin__block-vantage-item:nth-child(3){
+        margin-right: 110px;
+        margin-top: -59px;
+    }
+
+    .terexin__block-one-img img:nth-child(2) {
+        right: 40%;
+        bottom: -80px;
+    }
+
+    .terexin__block-one-img img:nth-child(3) {
+        right: 81%;
+        bottom: 0px;
+    }
+
+    .terexin__button {
+        z-index: 1;
+    }
+    .terexin__block-one h2 {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 767px) {
+    .terexin__block-one-img img:nth-child(1) {
+        right: -30%;
+    }
+    .terexin__block-vantage .terexin__block-vantage-item:nth-child(2), .terexin__block-vantage .terexin__block-vantage-item:nth-child(3) {
+        margin: auto;
+    }
+
+    .terexin__block-vantage .terexin__block-vantage-item {
+        margin-bottom: 30px;
+    }
+
+    .terexin__block-one-img img:nth-child(2) {
+        right: 20%;
+    }
+
+    .terexin__price {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .terexin__price-image {
+        flex: 0 0 100%;
+        max-width: 100%;
+        order: 1;
+    }
+
+    .terexin__price-block {
+        order: 2;
+        position: relative;
+        z-index: 2;
+        margin-top: 100px;
+    }
+
+    .terexin__price-image-inner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+    }
+
+    .terexin__price-image-block img {
+        position: inherit;
+        left: 0;
+        top: 0;
+        transform: translate(0,0);
+    }
+
+    .terexin__notice {
+        height: auto;
+        padding: 15px 0;
+    }
+
+    .terexin__price-image--custom .terexin__price-image-block img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .terexin__price-image--custom .terexin__price-image-inner {
+        position: inherit;
+        left: 0;
+        top: 0;
+        transform: translate(0,0);
+    }
+
+    .terexin__people {
+        flex-wrap: wrap;
+    }
+
+    .terexin__people-inner {
+        max-width: 100%;
+        flex: 0 0 100%
+    }
+
+    .terexin__people-block {
+        max-width: 100%;
+    }
+
+    .terexin__people-img {
+        order: 1
+    }
+
+    .terexin__people--custom .terexin__people-img {
+        margin-top: 40px;
+    }
+
+    .terexin__people-img img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+}
+
+@media (max-width: 450px) {
+    .terexin__block-one h2, .terexin__price-image-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .terexin__block-one-img img:nth-child(1) {
+        right: -45%;
+        height: 350px;
+        width: 350px;
+        top: 125px
+    }
+
+    .terexin__price-image-text {
+        font-size: 16px;
+    }
+
+    .terexin__sale {
+        font-size: 12px;
+    }
+
+    .terexin__notice--custom .terexin__notice-text {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .terexin__notice--custom {
+        flex-wrap: wrap;
+    }
+
+    .terexin__price-image--custom .terexin__price-image-text {
+        padding: 0;
+    }
+
+    .terexin__people--custom .terexin__people-block {
+        padding: 25px;
+        text-align: left;
+    }
+
+    .terexin__people--custom .terexin__people-text {
+        text-align: left;
+    }
+
+    .terexin__notice-v2 .terexin__notice-text {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .terexin__people--custom {
+        margin-top: 50px;
+    }
+
+    .terexin__price-image-list {
+        padding-right: 0;
+    }
+
+    .terexin__price-image-items-1 img:nth-child(3) {
+        display: none;
+    }
+
+    .terexin__price {
+        margin: 80px 0;
+    }
+
+    .terexin__block-one-img img:nth-child(2), .terexin__block-one-img img:nth-child(3) {
+        display: none;
+    }
+    
+    .terexin__block-one {
+        padding-bottom: 30px;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .terexin__price-block {
+        max-width: 100%;
+        flex: 0 0 100%
+    }
+
+    .terexin__price-block .terexin__button {
+        width: 100%;
+    }
+
+    .terexin__price-image-inner {
+        max-width: 300px;
+        width: auto;
+    }
+}
