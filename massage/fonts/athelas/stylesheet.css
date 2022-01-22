@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Athelas Arabic';
+    src: url('AthelasArabic-Bold.eot');
+    src: local('Athelas Arabic Bold'), local('AthelasArabic-Bold'),
+        url('AthelasArabic-Bold.eot?#iefix') format('embedded-opentype'),
+        url('AthelasArabic-Bold.woff2') format('woff2'),
+        url('AthelasArabic-Bold.woff') format('woff'),
+        url('AthelasArabic-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Athelas Arabic Book';
+    src: url('AthelasArabic-Book.eot');
+    src: local('Athelas Arabic Book'), local('AthelasArabic-Book'),
+        url('AthelasArabic-Book.eot?#iefix') format('embedded-opentype'),
+        url('AthelasArabic-Book.woff2') format('woff2'),
+        url('AthelasArabic-Book.woff') format('woff'),
+        url('AthelasArabic-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Athelas Arabic';
+    src: url('AthelasArabic-Regular.eot');
+    src: local('Athelas Arabic'), local('AthelasArabic-Regular'),
+        url('AthelasArabic-Regular.eot?#iefix') format('embedded-opentype'),
+        url('AthelasArabic-Regular.woff2') format('woff2'),
+        url('AthelasArabic-Regular.woff') format('woff'),
+        url('AthelasArabic-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Athelas Arabic Semi';
+    src: url('AthelasArabic-SemiBold.eot');
+    src: local('Athelas Arabic Semi Bold'), local('AthelasArabic-SemiBold'),
+        url('AthelasArabic-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('AthelasArabic-SemiBold.woff2') format('woff2'),
+        url('AthelasArabic-SemiBold.woff') format('woff'),
+        url('AthelasArabic-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+

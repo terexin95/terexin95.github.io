@@ -1,0 +1,59 @@
+body
+    margin: 0
+    padding: 0
+
+.modal-master-prev, .modal-master-next
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    cursor: pointer
+
+.modal-master-prev
+    left: 15px
+
+.modal-master-next
+    right: 15px
+
+.modal-master
+    height: 100vh
+    position: relative
+    user-select: none
+    &__header
+        position: absolute
+        height: 60px
+        width: 100%
+        display: flex
+        justify-content: flex-end
+        background: rgba(5, 12, 14, 0.8)
+        z-index: 5
+        padding: 0 20px
+        box-sizing: border-box
+    &__buttons
+        display: flex
+        align-items: center
+        &--disabled
+            svg
+                path
+                    fill: #808080
+        > div
+            margin-right: 25px
+            cursor: pointer
+            &:last-child
+                margin-right: 0
+    &__container
+        max-width: 80%
+        margin: auto
+        height: 100%
+        .swiper
+            height: 100vh
+            &-slide
+                img
+                    max-width: 100%
+                    height: auto
+                    cursor: move
+                .zoom
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                .zoom, #container
+                    height: 100%

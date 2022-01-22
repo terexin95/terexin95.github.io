@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+.modal-master-prev, .modal-master-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer; }
+
+.modal-master-prev {
+  left: 15px; }
+
+.modal-master-next {
+  right: 15px; }
+
+.modal-master {
+  height: 100vh;
+  position: relative;
+  user-select: none; }
+  .modal-master__header {
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background: rgba(5, 12, 14, 0.8);
+    z-index: 5;
+    padding: 0 20px;
+    box-sizing: border-box; }
+  .modal-master__buttons {
+    display: flex;
+    align-items: center; }
+    .modal-master__buttons--disabled svg path {
+      fill: #808080; }
+    .modal-master__buttons > div {
+      margin-right: 25px;
+      cursor: pointer; }
+      .modal-master__buttons > div:last-child {
+        margin-right: 0; }
+  .modal-master__container {
+    max-width: 80%;
+    margin: auto;
+    height: 100%; }
+    .modal-master__container .swiper {
+      height: 100vh; }
+      .modal-master__container .swiper-slide img {
+        max-width: 100%;
+        height: auto;
+        cursor: move; }
+      .modal-master__container .swiper-slide .zoom {
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+      .modal-master__container .swiper-slide .zoom, .modal-master__container .swiper-slide #container {
+        height: 100%; }
+
+/*# sourceMappingURL=main.css.map */
