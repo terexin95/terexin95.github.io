@@ -457,9 +457,10 @@ function widgetRemarked(options) {
         let data = {
              method: 'GetSMSCode',
              token: remarkedToken,
-             phone: "+" + remarkedPhoneInputText,
+             phone: remarkedPhoneInputText.replace(/[^+\d]/g, ''),
              request_id: new Date().getTime()
         };
+        console.log(data);
         const remarkedXHRCod = new XMLHttpRequest();
         
         let dataJSON = JSON.stringify(data);
