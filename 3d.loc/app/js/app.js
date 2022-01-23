@@ -422,6 +422,10 @@ document.addEventListener('DOMContentLoaded', () => {
       prevEl: ".landing-portfolio__init-prev",
     },
   });
+  document.querySelector('.landing-review__header-next').addEventListener('click', function(){
+  	landingPortfolio__init.slideNext();
+  })
+  
 
   var landingPortfolio__init = new Swiper(".landing-review__init", {
  		slidesPerView: 3,

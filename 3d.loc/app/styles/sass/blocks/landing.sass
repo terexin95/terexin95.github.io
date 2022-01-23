@@ -364,16 +364,23 @@
 	user-select: none
 	padding: 130px 0
 	position: relative
+	&__header
+		&-next
+			display: none
 	.landing-bar
 		top: 30%
 	h2
 		margin: 0
-		padding: 0 130px
-		margin-bottom: 130px
 		font-weight: 900
 		font-size: 40px
 		line-height: 38px
 		color: #AFAFB1
+	&__header
+		margin-bottom: 130px
+		display: flex
+		align-items: center
+		padding: 0 130px
+		justify-content: space-between
 	&__init
 		padding: 0 130px
 	&__buttons
@@ -475,6 +482,8 @@
 			font-size: 24px
 			line-height: 102.32%
 			color: #AFAFB1
+		.single-content__button-faq
+			display: none
 		.single-content__buttons
 			align-items: center
 		.site-header__callback
@@ -678,6 +687,7 @@
 		margin-bottom: 20px
 
 @media (max-width: 1050px)
+
 	.landing-bar
 		position: inherit
 		transform: rotate(0)
@@ -739,12 +749,18 @@
 	.accent__more
 		padding-top: 30px
 		padding-bottom: 30px
+		padding-left: 30px
 		display: flex
 		flex-direction: column
 		align-items: center
 		justify-content: center
 	.accent__more p
 		margin-bottom: 30px
+		font-size: 20px
+		line-height: 26px
+	.accent__more .single-post__link
+		font-size: 18px
+		line-height: 20px
 	.landing-portfolio__init
 		margin-left: 0
 	.landing-care__wrap
@@ -756,10 +772,14 @@
 		width: 100%
 		position: inherit
 		margin-top: 50px
-	.landing-review h2
+	.landing-review__header
 		padding: 0
 	.landing-review__init
-		padding: 0 50px
+		padding: 0
+	.landing-review__left, .landing-review__right
+		display: none
+	.landing-review__header-next
+		display: block
 	.landing-sale__block
 		flex: 0 0 100%
 		max-width: 100%
@@ -789,6 +809,14 @@
 		max-width: 100%
 
 @media (max-width: 767px)
+	.accent__more:before
+		display: none
+	.accent__more
+		margin-top: 0
+		margin-bottom: 0 !important
+	.accent__more .single-post__link
+		font-size: 14px
+		line-height: 14px
 	.landing-review__init-mobile
 		display: block
 	.landing-review__mobile-buttons
@@ -850,10 +878,11 @@
 	.landing-review__left, .landing-review__right
 		display: none
 	.landing-review h2
-		margin-bottom: 30px
 		font-size: 21px
 		line-height: 20px
+	.landing-review__header
 		margin-top: 15px
+		margin-bottom: 30px
 	.landing-review
 		padding: 90px 0
 	.landing-care
@@ -1017,6 +1046,28 @@
 
 
 @media (max-width: 450px)
+	.landing-faq__buttons .single-content__button-faq
+		display: block
+		width: 146px
+		height: 43px
+		line-height: 43px
+		font-size: 14px
+		margin-top: 30px
+	.landing-faq__buttons .single-content__buttons-text
+		flex: 0 0 100%
+	.landing-sale__form
+		form
+			display: flex
+			flex-direction: column
+			button
+				order: 1
+				margin-bottom: 0
+				margin-top: 20px
+	.landing-care__more .single-post__link
+		font-size: 14px
+		line-height: 13px
+	.landing-bar__line
+		width: 150px
 	.landing-slider__bg
 		background-position-y: -125px
 		background-position-x: 54%
