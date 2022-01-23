@@ -75,7 +75,7 @@ function widgetRemarked(options) {
                             <input type="text" placeholder="Имя Фамилия" id="remarkedUserInput" name="userName">
                         </div>
                         <div class="remarked-widget-column">
-                            <input type="tel" class="remarked-phone" id="remarkedPhoneInput" name="userPhone" placeholder="(900) 123-4567">
+                            <input type="tel" class="remarked-phone" id="remarkedPhoneInput" name="userPhone" placeholder="7 (900) 123-4567">
                         </div>
                         <div class="remarked-widget-column mt-2">
                             <input type="text" placeholder="email@exemple.ru" id="remarkedEmailInput" name="userEmail">
@@ -83,6 +83,7 @@ function widgetRemarked(options) {
                     </div>
                     <button class="mb-2 nextStep2">Продолжить</button>
                     <div class="remarked-cod-phone" style="display: none;">
+                        <div class="remarked-widget-title">Секретный код придет на ваш телефон в течение пары минут</div>
                         <input type="text" name="cod" maxlength="6" placeholder="Введите код" class="remarked-cod-phone-input">
                         <button class="mt-2 nextCode">Продолжить</button>
                     </div>
@@ -213,17 +214,17 @@ function widgetRemarked(options) {
                     option[i].setAttribute('value', day + '.' + arr1[date.getMonth()] + '.' + date.getFullYear())
                     option[i].textContent = day + ' ' + arr[date.getMonth()] + ' ' + date.getFullYear();
                 }
-                let numberInputs = document.querySelectorAll('.remarked-widget-' + options.classButton + ' .remarked-quantity');
+                // let numberInputs = remarkedWidgetClassic.querySelectorAll('.remarked-widget-' + options.classButton + ' .remarked-quantity');
 
-                    if (numberInputs.length > 0) {
-                        numberInputs.forEach((el, index) => {
-                            quantityInput(el, {
-                            min: 1,
-                            max: 10,
-                            value: 1,
-                            });
-                        });
-                    }
+                //     if (numberInputs.length > 0) {
+                //         numberInputs.forEach((el, index) => {
+                //             quantityInput(el, {
+                //             min: 1,
+                //             max: 10,
+                //             value: 1,
+                //             });
+                //         });
+                //     }
 
             let remarkedWidgetRoom = remarkedWidgetClassic.querySelectorAll('.remarked-widget-room');
             for (let index = 0; index < remarkedWidgetRoom.length; index++) {
@@ -337,6 +338,16 @@ function widgetRemarked(options) {
             },
         }
         return obj.init();
+    }
+    const numberInputs = remarkedWidgetClassic.querySelectorAll(".remarked-quantity");
+    if (numberInputs.length > 0) {
+    numberInputs.forEach((el, index) => {
+        quantityInput(el, {
+        min: 1,
+        max: options.maxPeople,
+        value: 1,
+        });
+    });
     }
 
     remarkedWidgetClassic.querySelector('.prevStep2').addEventListener('click', function(){
@@ -505,7 +516,7 @@ function widgetRemarked(options) {
             remarkedBodyRooms.reserve.guests_count = ""; 
         }
         if (options.smsCode == true) {
-            remarkedBodyRooms.confirm_code = document.querySelector('.remarked-cod-phone-input').value;
+            remarkedBodyRooms.confirm_code = remarkedWidgetClassic.querySelector('.remarked-cod-phone-input').value;
         }
         console.log(remarkedBodyRooms);
         const remarkedXHRRoom = new XMLHttpRequest();
