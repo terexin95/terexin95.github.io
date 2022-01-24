@@ -90,3 +90,5 @@ document.querySelector('.modal-master__zoom-out').onclick = zoomOutImage;
 //     item.addEventListener('click', function())
     
 // }
+
+
