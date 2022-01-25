@@ -423,15 +423,15 @@ function widgetRemarked(options) {
     let remarkedPhoneInputText;
     let remarkedEmailInputText;
 
-    let nextStep2 = document.querySelectorAll('.nextStep2');
+    let nextStep2 = remarkedWidgetClassic.querySelectorAll('.nextStep2');
     if(options.date == false && options.qty == false && options.time == false && options.text == false) {
         nextStep2.textContent = "Забронировать";
     }
     for (var i = nextStep2.length - 1; i >= 0; i--) {
         nextStep2[i].addEventListener('click', function(){
             if(remarkedUserInputVal && remarkedPhoneInputVal && remarkedEmailInputVal) {
-                //sendCodRemarked();
-                checkInputs();
+                sendCodRemarked();
+                
             } else {
                 if (remarkedUserInput.value == '') {
                     remarkedUserInput.style.border = "2px solid " + options.color_red;
@@ -477,12 +477,16 @@ function widgetRemarked(options) {
                     alert('Введите правильный номер телефона');
                     remarkedPhoneInputVal == false;
                     // remarkedPhoneInput.addEventListener('input', function(){}
+                } else {
+                    checkInputs();
                 }
                 console.log(remarkedXHRCod.response)
             }
             remarkedXHRCod.send(dataJSON);
         }
     }
+
+
 
     function sendReserveRemarked() {
         let remarkedBodyRooms = {
@@ -686,7 +690,7 @@ function widgetRemarked(options) {
 
     remarkedPhoneInput.addEventListener('change', function(){
         if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value.length == 15) {
-            sendCodRemarked();
+            
         }
     });
 
