@@ -493,12 +493,12 @@ function widgetRemarked(options) {
             method: 'CreateReserve',
             token: remarkedToken,
             reserve: {
-                name: remarkedUserInputText,
-                phone: "+" + remarkedPhoneInputText,
+                name: remarkedPhoneInputText.replace(/[^+\d]/g, ''),
+                phone: remarkedPhoneInputText,
                 email: "",
                 date: "",
                 time: "",
-                guests_count: ""  
+                guests_count: "" 
             },
             request_id: new Date().getTime()
         };
@@ -506,6 +506,11 @@ function widgetRemarked(options) {
             remarkedBodyRooms.reserve.email = remarkedEmailInputText;
         } else {
             remarkedBodyRooms.reserve.email = "";
+        }
+        if (options.comment == true) {
+            remarkedBodyRooms.reserve.comment = remarkedWidgetClassic.querySelector('textarea[name"remarked-comment"]');
+        } else {
+            remarkedBodyRooms.reserve.comment = "";
         }
         if (options.date == true) {
             remarkedBodyRooms.reserve.date = remarkedWidgetClassic.querySelector("#start").value;
