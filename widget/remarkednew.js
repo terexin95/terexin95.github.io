@@ -454,32 +454,34 @@ function widgetRemarked(options) {
     }
     
     function sendCodRemarked() {
-        let data = {
-             method: 'GetSMSCode',
-             token: remarkedToken,
-             phone: remarkedPhoneInputText.replace(/[^+\d]/g, ''),
-             request_id: new Date().getTime()
-        };
-        console.log(data);
-        const remarkedXHRCod = new XMLHttpRequest();
-        
-        let dataJSON = JSON.stringify(data);
+        if (options.smsCode) {
+            let data = {
+                 method: 'GetSMSCode',
+                 token: remarkedToken,
+                 phone: remarkedPhoneInputText.replace(/[^+\d]/g, ''),
+                 request_id: new Date().getTime()
+            };
+            console.log(data);
+            const remarkedXHRCod = new XMLHttpRequest();
+            
+            let dataJSON = JSON.stringify(data);
 
 
-        remarkedXHRCod.open('POST', remarkedReqUrl);
+            remarkedXHRCod.open('POST', remarkedReqUrl);
 
-        remarkedXHRCod.responseType = 'json';
-        remarkedXHRCod.setRequestHeader('Content-Type', 'application/json');
+            remarkedXHRCod.responseType = 'json';
+            remarkedXHRCod.setRequestHeader('Content-Type', 'application/json');
 
-        remarkedXHRCod.onload = function(){ 
-            if (remarkedXHRCod.response.status == "error") {
-                alert('Введите правильный номер телефона');
-                remarkedPhoneInputVal == false;
-                // remarkedPhoneInput.addEventListener('input', function(){}
+            remarkedXHRCod.onload = function(){ 
+                if (remarkedXHRCod.response.status == "error") {
+                    alert('Введите правильный номер телефона');
+                    remarkedPhoneInputVal == false;
+                    // remarkedPhoneInput.addEventListener('input', function(){}
+                }
+                console.log(remarkedXHRCod.response)
             }
-            console.log(remarkedXHRCod.response)
+            remarkedXHRCod.send(dataJSON);
         }
-        remarkedXHRCod.send(dataJSON);
     }
 
     function sendReserveRemarked() {
@@ -537,6 +539,7 @@ function widgetRemarked(options) {
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').style.display="none";
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').style.display="none";
                 let remarkedSucsess = document.createElement('div');
+                remarkedSucsess.classList.add('success-reserve-remarked')
                 let remarkedSucsessStroke = remarkedWidgetClassic.querySelector('.remarked-quantity input').value;
                 if (remarkedSucsessStroke == 1) {
                     remarkedSucsessStroke = remarkedSucsessStroke + ' человекa';
