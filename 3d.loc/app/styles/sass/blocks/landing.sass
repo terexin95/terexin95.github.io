@@ -112,8 +112,20 @@
 				&-img
 					margin-left: 0
 					margin-right: 0px
+		&:nth-child(2)
+			max-width: 1450px
+			width: 1450px
+			background-image: url(../images/dist/vantage/bgrow2.png)
+			.vantage__item-img
+				margin-right: 105px
+			.vantage__item-block
+				p
+					max-width: 553px
 		&:nth-child(5)
 			background-image: url(../images/dist/vantage/bgrow5.png)
+			box-sizing: border-box
+			.vantage__item-img
+				margin-left: -216px
 		&:nth-child(6)
 			background-image: url(../images/dist/vantage/bgrow6.png)
 			.vantage__item
@@ -306,6 +318,8 @@
 	overflow: hidden
 	position: relative
 	align-items: center
+	max-width: 1920px
+	margin: auto
 	&__block
 		flex: 0 0 900px
 		max-width: 860px
@@ -326,12 +340,14 @@
 		position: relative
 		z-index: 1
 		margin-left: -85px
+		margin-bottom: -108px
 		img
 			vertical-align: bottom
 
 .landing-portfolio
 	background-color: #1B1E29
 	padding: 120px 0
+	padding-bottom: 150px
 	position: relative
 	.swiper
 		z-index: 2
@@ -520,6 +536,7 @@
 	position: relative
 	background-color: #1B1E29
 	position: relative
+	padding-top: 150px
 	&__more
 		width: 670px
 		height: 340px
@@ -687,7 +704,14 @@
 		margin-bottom: 20px
 
 @media (max-width: 1050px)
-
+	.vantage__item:nth-child(2)
+		width: 100%
+		.vantage__item-block p
+			max-width: 100%
+		.vantage__item-img
+			margin-right: 0
+	.vantage__item:nth-child(5) .vantage__item-img
+		margin-left: 0
 	.landing-bar
 		position: inherit
 		transform: rotate(0)
@@ -809,6 +833,8 @@
 		max-width: 100%
 
 @media (max-width: 767px)
+	.landing-callback__img
+		margin-bottom: 0
 	.accent__more:before
 		display: none
 	.accent__more
