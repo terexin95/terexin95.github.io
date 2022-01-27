@@ -518,6 +518,7 @@ function widgetRemarked(options) {
             } else {
                 remarkedCod.style.border = "1px solid red";
             }
+            alert(remarkedXHRRoom.response);
         }
         remarkedXHRRoom.send(remarkedBodyRoomsJSON);
     }
