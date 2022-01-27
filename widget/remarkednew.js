@@ -505,7 +505,19 @@ function widgetRemarked(options) {
         remarkedXHRRoom.responseType = 'json';
         remarkedXHRRoom.setRequestHeader('Content-Type', 'application/json');
         remarkedXHRRoom.onload = function(){
-            return remarkedXHRRoom.response.status
+            if(remarkedXHRRoom.response.status == "success") {
+                if(options.date == false && options.qty == false && options.time == false && options.text == false) {
+                    sendReserveRemarked();
+                } else if (options.date == false && options.qty == false && options.time == false && options.text == false) {
+                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
+                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
+                } else {
+                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
+                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
+                }
+            } else {
+                remarkedCod.style.border = "1px solid red";
+            }
         }
         remarkedXHRRoom.send(remarkedBodyRoomsJSON);
     }
@@ -650,41 +662,17 @@ function widgetRemarked(options) {
     function checkInputs() {
 
         if (options.smsCode == true) {
-            if(options.date == false && options.qty == false && options.time == false && options.text == false) {
-                remarkedWidgetClassic.querySelector('.nextStep2').style.display = "none";
-                remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
-                remarkedWidgetClassic.querySelector('.remarked-cod-phone .nextCode').addEventListener('click', function(){
-                    if (remarkedCodInputVal) {
-                        sendReserveRemarked();
-                    } else {
-                        remarkedCod.style.border = "1px solid red"
-                    }
-                });
-            } else if (options.date == false && options.qty == false && options.time == false && options.text == false) {
-                remarkedWidgetClassic.querySelector('.nextStep2').style.display = "none";
-                remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
-                remarkedWidgetClassic.querySelector('.remarked-cod-phone .nextCode').addEventListener('click', function(){
-                    if (remarkedCodInputVal) {
-                        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
-                        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
-                    } else {
-                        remarkedCod.style.border = "1px solid red"
-                    }
-                });
-            } else {
-                remarkedWidgetClassic.querySelector('.nextStep2').style.display = "none";
-                remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
-                remarkedWidgetClassic.querySelector('.remarked-cod-phone .nextCode').addEventListener('click', function(){
-                    // if (remarkedCodInputVal) {
-                    //     remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
-                    //     remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
-                    // } else {
-                    //     remarkedCod.style.border = "1px solid red"
-                    // }
+            
+            remarkedWidgetClassic.querySelector('.nextStep2').style.display = "none";
+            remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
+            remarkedWidgetClassic.querySelector('.remarked-cod-phone .nextCode').addEventListener('click', function(){
+                if (remarkedCodInputVal) {
                     validateCodRemarked();
-                });
-                
-            }
+                } else {
+                    remarkedCod.style.border = "1px solid red"
+                }
+            });
+
         } else {
             if(options.date == false && options.qty == false && options.time == false && options.text == false) {
                 sendReserveRemarked();
