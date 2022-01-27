@@ -541,7 +541,7 @@ function widgetRemarked(options) {
         } else {
             remarkedBodyRooms.reserve.email = "";
         }
-        if (options.comment == true) {
+        if (options.text == true) {
             remarkedBodyRooms.reserve.comment = remarkedWidgetClassic.querySelector('textarea[name="remarked-comment"]').value;
         } else {
             remarkedBodyRooms.reserve.comment = "";
