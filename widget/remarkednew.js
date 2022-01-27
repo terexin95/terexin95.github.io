@@ -486,15 +486,37 @@ function widgetRemarked(options) {
         }
     }
 
+    function validateCodRemarked() {
+        let data = {
+            method: "ValidateSMSCode",
+            phone: remarkedPhoneInputText.replace(/[^+\d]/g, ''),
+            confirm_code: remarkedWidgetClassic.querySelector('.remarked-cod-phone-input').value,
+            token: remarkedToken,
+            request_id: new Date().getTime()
+        }
+        console.log(data)
+        const remarkedXHRRoom = new XMLHttpRequest();
+        
+        let remarkedBodyRoomsJSON = JSON.stringify(data);
 
+
+        remarkedXHRRoom.open('POST', remarkedReqUrl);
+
+        remarkedXHRRoom.responseType = 'json';
+        remarkedXHRRoom.setRequestHeader('Content-Type', 'application/json');
+        remarkedXHRRoom.onload = function(){
+            console.log(remarkedXHRRoom.response)
+        }
+        remarkedXHRRoom.send(remarkedBodyRoomsJSON);
+    }
 
     function sendReserveRemarked() {
         let remarkedBodyRooms = {
             method: 'CreateReserve',
             token: remarkedToken,
             reserve: {
-                name: remarkedPhoneInputText.replace(/[^+\d]/g, ''),
-                phone: remarkedPhoneInputText,
+                name: remarkedUserInputText,
+                phone: remarkedPhoneInputText.replace(/[^+\d]/g, ''),
                 email: "",
                 date: "",
                 time: "",
@@ -508,7 +530,7 @@ function widgetRemarked(options) {
             remarkedBodyRooms.reserve.email = "";
         }
         if (options.comment == true) {
-            remarkedBodyRooms.reserve.comment = remarkedWidgetClassic.querySelector('textarea[name"remarked-comment"]').value;
+            remarkedBodyRooms.reserve.comment = remarkedWidgetClassic.querySelector('textarea[name="remarked-comment"]').value;
         } else {
             remarkedBodyRooms.reserve.comment = "";
         }
@@ -653,12 +675,13 @@ function widgetRemarked(options) {
                 remarkedWidgetClassic.querySelector('.nextStep2').style.display = "none";
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display = "block";
                 remarkedWidgetClassic.querySelector('.remarked-cod-phone .nextCode').addEventListener('click', function(){
-                    if (remarkedCodInputVal) {
-                        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
-                        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
-                    } else {
-                        remarkedCod.style.border = "1px solid red"
-                    }
+                    // if (remarkedCodInputVal) {
+                    //     remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
+                    //     remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').classList.add('remarked-widget-classic__step-2--active');
+                    // } else {
+                    //     remarkedCod.style.border = "1px solid red"
+                    // }
+                    validateCodRemarked();
                 });
                 
             }
