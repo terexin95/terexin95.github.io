@@ -505,7 +505,7 @@ function widgetRemarked(options) {
         remarkedXHRRoom.responseType = 'json';
         remarkedXHRRoom.setRequestHeader('Content-Type', 'application/json');
         remarkedXHRRoom.onload = function(){
-            console.log(remarkedXHRRoom.response)
+            return remarkedXHRRoom.response.status
         }
         remarkedXHRRoom.send(remarkedBodyRoomsJSON);
     }
