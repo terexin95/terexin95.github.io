@@ -474,7 +474,7 @@ function widgetRemarked(options) {
 
             remarkedXHRCod.onload = function(){ 
                 if (remarkedXHRCod.response.status == "error") {
-                    alert('Введите правильный номер телефона');
+                    remarkedPhoneInput.style.border = "2px solid" + options.color_red;
                     remarkedPhoneInputVal == false;
                     // remarkedPhoneInput.addEventListener('input', function(){}
                 } else {
@@ -616,7 +616,7 @@ function widgetRemarked(options) {
                 } else {
                     if(!alert('Заполните анкету заново с правильными параметрами')){window.location.reload();}
                 }
-                console.log(remarkedXHRRoom.response);
+                //console.log(remarkedXHRRoom.response);
             } else {
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').style.display="none";
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').style.display="none";
@@ -719,6 +719,13 @@ function widgetRemarked(options) {
         }
     });
 
+    let remarkedSend = remarkedWidgetClassic.querySelectorAll('.remarkedSend');
+    for (var i = remarkedSend.length - 1; i >= 0; i--) {
+        remarkedSend[i].addEventListener('click', function(){
+            sendReserveRemarked();
+        });
+    }
+
     let nextStep3 = remarkedWidgetClassic.querySelectorAll('.nextStep3');
 
     if (options.text == false && options.time == false) {
@@ -779,12 +786,7 @@ function widgetRemarked(options) {
             remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').classList.remove('remarked-widget-classic__step-2--active');
             remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').classList.add('remarked-widget-classic__step-3--active');
             
-            let remarkedSend = remarkedWidgetClassic.querySelectorAll('.remarkedSend');
-            for (var i = remarkedSend.length - 1; i >= 0; i--) {
-                remarkedSend[i].addEventListener('click', function(){
-                    sendReserveRemarked();
-                });
-            }
+            
         }
     });
     }
