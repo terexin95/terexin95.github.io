@@ -763,10 +763,16 @@ function widgetRemarked(options) {
                 remarkedArrDays = remarkedXHRDays.response;
                 remarkedArrDays = remarkedArrDays.times;
                 for (let i = 0; i < remarkedArrDays.length; i++) {
-                    if (remarkedArrDays[i].is_free === true) {
-                        remarkedWidgetTimes.innerHTML += `<div class="remarked-widget__time remarked-widget__time-work">${ remarkedArrDays[i].time }</div>`
+                    if (window.innerWidth > 450) {
+                        if (remarkedArrDays[i].is_free === true) {
+                            remarkedWidgetTimes.innerHTML += `<div class="remarked-widget__time remarked-widget__time-work">${ remarkedArrDays[i].time }</div>`
+                        } else {
+                            remarkedWidgetTimes.innerHTML += `<div class="remarked-widget__time remarked-widget__time--disabled">${ remarkedArrDays[i].time }</div>`
+                        }
                     } else {
-                        remarkedWidgetTimes.innerHTML += `<div class="remarked-widget__time remarked-widget__time--disabled">${ remarkedArrDays[i].time }</div>`
+                        if (remarkedArrDays[i].is_free === true) {
+                            remarkedWidgetTimes.innerHTML += `<div class="remarked-widget__time remarked-widget__time-work">${ remarkedArrDays[i].time }</div>`
+                        }
                     }
                 }
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3 .remarked-widget-title').after(remarkedWidgetTimes);
