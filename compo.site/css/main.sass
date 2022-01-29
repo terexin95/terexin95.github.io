@@ -1,0 +1,227 @@
+@import "_font.sass"
+@import "_var.sass"
+
+body
+	margin: 0
+	padding: 0
+	overflow-x: hidden
+	font-family: $font
+
+a
+	text-decoration: none
+
+ul
+	padding: 0
+	margin: 0
+
+li
+	list-style-type: none
+
+.container-site
+	max-width: 1280px
+	margin: auto
+
+.button-primary
+	padding: 12px 10px
+	border: 0
+	font-weight: 600
+	font-size: 16px
+	line-height: 19px
+	color: #FEFEFE
+	background: linear-gradient(249.83deg, #FFC136 11.17%, #FF8A2F 43.87%, #FF3676 83.17%)
+	border-radius: 60px
+	width: auto
+	display: inline-block
+	cursor: pointer
+	position: relative
+	overflow: hidden
+	transition: all .3s ease
+	&:hover, &:active
+		background: linear-gradient(309.83deg, #FFC136 11.17%, #FF8A2F 43.87%, #FF3676 83.17%)
+		transition: all .3s ease
+
+.overlay
+	position: fixed
+	display: none
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 9
+	background-color: rgba(#000, .3)
+
+.modal-callback
+	position: fixed
+	display: none
+	left: 50%
+	top: 50%
+	transform: translate(-50%, -50%)
+	background-color: #191C26
+	border-radius: 20px
+	width: 750px
+	z-index: 10
+	&__close
+		cursor: pointer
+		position: absolute
+		right: 25px
+		top: 20px
+	.button-primary
+		margin-top: 90px
+	&__container
+		padding: 55px 70px
+		form
+			max-width: 430px
+
+.form-row
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-bottom: 30px
+	.input-block
+		max-width: 45%
+		flex: 0 0 45%
+
+.input-block
+	&__error
+		opacity: 0
+		font-size: 16px
+		font-weight: normal
+		font-size: 10px
+		line-height: 16px
+		color: #E54322
+	label
+		display: block
+		font-weight: 600
+		font-size: 16px
+		line-height: 19px
+		color: #AFAEAC
+		padding: 0
+
+	input
+		height: 15px
+		border: 0
+		border-bottom: 1px solid #FEA632
+		padding: 0
+		margin: 0
+		background-color: transparent !important
+		box-shadow: 0 0 0 0 transparent !important
+		outline: none
+		font-weight: 400
+		font-family: $font
+		color: #AFAEAC
+		width: 100%
+		padding-bottom: 3px
+
+.banner
+	background-color: #111319
+	background-image: url(../img/bg.png)
+	&__container
+		padding-left: 105px
+		padding-top: 150px
+		padding-bottom: 260px
+		h1
+			font-weight: normal
+			font-size: 38px
+			line-height: 49px
+			color: #FEFEFE
+			margin: 0
+		p
+			margin: 0
+			font-weight: normal
+			font-size: 16px
+			line-height: 24px
+			color: #FEFEFE
+	&__inner
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		&-item
+			flex: 0 0 200px
+			max-width: 200px
+			font-weight: normal
+			font-size: 16px
+			line-height: 24px
+			color: #AFAEAC
+
+
+.site
+	&-wrap
+		display: flex
+	&-header
+		position: sticky
+		top: 0
+		width: 100%
+		background-color: #111319
+		padding: 35px 0
+		box-sizing: border-box
+		&__wrap
+			box-sizing: border-box
+			padding-left: 105px
+			padding-right: 125px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			justify-content: space-between
+		&__callback
+			margin-left: 150px
+		&__phone
+			font-weight: normal
+			font-size: 16px
+			line-height: 24px
+			color: #FEFEFE
+			transition: all .3s ease
+			&:hover, &:active
+				color: $accent
+				
+				transition: all .3s ease
+		&__logo
+			.edit-path
+				transition: all .3s ease
+			&:hover, &:active
+				.edit-path
+					fill: #fff
+					transform: translate(-2px, 1px)
+					transition: all .3s ease
+	&-content
+		flex: 0 0 calc(100% - 128px)
+		max-width: calc(100% - 128px)
+	&-sidebar
+		height: 100%
+		position: sticky
+		top: 0
+		flex: 0 0 123px
+		max-width: 123px
+		background-color: #191C26
+		min-height: 100vh
+		box-sizing: border-box
+		padding-top: 110px
+		nav
+			a
+				display: block
+				text-align: center
+				padding-top: 15px
+				padding-bottom: 10px
+				transition: all .3s ease
+				margin-bottom: 20px
+				font-weight: normal
+				font-size: 14px
+				line-height: 18px
+				color: #FEFEFE
+				.icon
+					display: block
+					text-align: center
+				&:hover, &:active
+					background-color: #2D3241
+					transition: all .3s ease
+					
+					
