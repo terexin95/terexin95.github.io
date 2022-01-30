@@ -17,6 +17,205 @@ ul
 li
 	list-style-type: none
 
+.block-wrapper	
+	padding-left: 106px
+	padding-right: 123px
+	background-color: #111319
+
+.animation-fade
+	transform: translate(0, 110%)
+	opacity: 0
+	//transition: all .3s ease 0s
+	&._active
+		transform: translate(0, 0)
+		opacity: 1
+
+.block-team
+	user-select: none
+	padding: 65px 0
+	&__item
+		position: relative
+		&-big
+			img
+				border-radius: 20px
+				vertical-align: bottom
+				width: 100%
+				height: 100%
+		&-info
+			position: absolute
+			bottom: 25px
+			left: 50%
+			transform: translateX(-50%)
+			display: flex
+			background: #FEFEFE
+			border-radius: 2px
+			width: 250px
+			height: 50px
+			align-items: center
+			padding-left: 10px
+			box-sizing: border-box
+		&-img
+			margin-right: 10px
+			img
+				vertical-align: bottom
+		&-title
+			font-weight: 600
+			font-size: 16px
+			line-height: 19px
+			color: #000000
+		&-text
+			font-weight: normal
+			font-size: 14px
+			line-height: 18px
+			color: #AFAEAC
+	&__description
+		font-size: 16px
+		line-height: 24px
+		color: #FEFEFE
+		margin-bottom: 50px
+	&__header
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 55px
+		&-prev
+			margin-right: 12px
+		&-prev, &-next
+			position: relative
+			cursor: pointer
+			padding-bottom: 9px
+			transition: all .3s ease
+			&::before, &::after
+				content: ""
+				width: 100%
+				height: 3px
+				border-radius: 10px
+				background-color: #fff
+				position: absolute
+				bottom: 0px
+				transition: all .3s ease
+			&::after
+				content: ""
+				background: linear-gradient(249.83deg, #FFC136 11.17%, #FF8A2F 43.87%, #FF3676 83.17%)
+				left: 0
+				z-index: 1
+				opacity: 0
+			&:hover
+				background: -webkit-linear-gradient(249.83deg, #FFC136 11.17%, #FF8A2F 43.87%, #FF3676 83.17%)
+				-webkit-background-clip: text
+				-webkit-text-fill-color: transparent
+				color: #FEA632
+				transition: all .3s ease
+				&::after
+					content: ""
+					transition: all .3s ease
+					opacity: 1
+
+
+		&-nav
+			display: flex
+			align-items: center
+			font-weight: normal
+			font-size: 14px
+			line-height: 18px
+			color: #FEFEFE
+		.block-title
+			margin-bottom: 0
+
+.block-create
+	padding: 60px 0
+	overflow: hidden
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+	&__item
+		flex: 0 0 31%
+		max-width: 31%
+		margin-right: 3.5%
+		margin-bottom: 3.5%
+		background: #191C26
+		border: 1px solid #191C26
+		box-sizing: border-box
+		border-radius: 20px
+		text-align: center
+		padding-top: 20px
+		box-sizing: border-box
+		padding-left: 20px
+		padding-right: 20px
+		padding-bottom: 25px
+		transition: border .5s ease, opacity 1000ms ease 0ms, transform 1000ms ease 0ms
+		&:nth-child(2)
+			transition: border .5s ease, opacity 1000ms ease 100ms, transform 1000ms ease 100ms
+		&:nth-child(3)
+			transition: border .5s ease, opacity 1000ms ease 200ms, transform 1000ms ease 200ms
+		&:nth-child(5)
+			transition: border .5s ease, opacity 1000ms ease 100ms, transform 1000ms ease 100ms
+		&:nth-child(6)
+			transition: border .5s ease, opacity 1000ms ease 200ms, transform 1000ms ease 200ms
+		&:nth-child(3n)
+			margin-right: 0
+		&:hover
+			border-color: #FEA632
+			transition: all .3s ease
+	&__price
+		font-weight: normal
+		font-size: 14px
+		line-height: 18px
+		color: #FEFEFE
+	&__link
+		font-size: 13px
+		line-height: 18px
+		text-decoration: underline
+		background: -webkit-linear-gradient(249.83deg, #FFC136 11.17%, #FF8A2F 43.87%, #FF3676 83.17%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		color: #FEA632
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			width: 100%
+			height: 1px
+			background: -webkit-linear-gradient(249.83deg, #FFC136 11.17%, #FF8A2F 43.87%, #FF3676 83.17%)
+			left: 0
+			right: 0
+			bottom: 0px
+	&__title
+		margin: 0
+		font-weight: 500
+		font-size: 20px
+		line-height: 24px
+		color: #FEFEFE
+		margin-top: 15px
+		white-space: nowrap
+	&__more
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-top: 50px
+
+.block-title
+	position: relative
+	margin-bottom: 55px
+	h2
+		margin: 0
+		font-weight: 500
+		font-size: 32px
+		line-height: 38px
+		text-transform: uppercase
+		color: #FEFEFE
+		padding-left: 54px
+		position: relative
+		&::before
+			content: ""
+			width: 42px
+			height: 3px
+			background-color: #FEA632
+			border-radius: 10px
+			position: absolute
+			top: 50%
+			left: 0
+
 .container-site
 	max-width: 1280px
 	margin: auto
@@ -116,6 +315,166 @@ li
 		width: 100%
 		padding-bottom: 3px
 
+.site-footer
+	background-color: #111319
+	&__container
+		padding-top: 120px
+		padding-left: 106px
+		padding-right: 123px
+		padding-bottom: 54px
+	&__dumbp
+		display: flex
+		align-items: center
+		justify-content: space-between
+		&-link
+			font-size: 14px
+			line-height: 18px
+			color: #FEFEFE
+	&__social
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-bottom: 45px
+		&-item
+			margin-right: 55px
+			&:last-child
+				margin-right: 0
+	&__line
+		display: flex
+		justify-content: space-between
+		margin-bottom: 55px
+		&-item
+			max-width: 176px
+		&-title
+			font-weight: 600
+			font-size: 16px
+			line-height: 19px
+			color: #FEA632
+		&-text, &-text a
+			font-weight: normal
+			font-size: 14px
+			line-height: 18px
+			color: #FEFEFE
+
+.block-callback
+	padding: 60px 0
+	&__img
+		position: absolute
+		top: -120px
+		right: -126px
+	&__container
+		position: relative
+		background: #191C26
+		border-radius: 20px
+		padding: 68px 88px
+		padding-bottom: 45px
+		.button-primary
+			margin-top: 110px
+			width: 237px
+			font-weight: 400
+			font-family: $font
+			font-size: 16px
+			line-height: 19px
+			text-transform: none
+	.modal-callback__container
+		padding: 0
+		form
+			max-width: 530px
+.block-products
+	user-select: none
+	padding: 60px 0
+	&__footer
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-top: 35px
+	&__link
+		font-weight: normal
+		font-size: 13px
+		line-height: 18px
+		color: #FFFFFF
+		border-bottom: 1px solid #FFFFFF
+		&:nth-child(2)
+			margin-left: 25px
+	&__download
+		font-size: 14px
+		line-height: 18px
+		background: -webkit-linear-gradient(249.83deg, #FFC136 11.17%, #FF8A2F 43.87%, #FF3676 83.17%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		color: $accent
+	&__title
+		font-weight: 500
+		font-size: 24px
+		line-height: 28px
+		color: #FEFEFE
+		margin-bottom: 20px
+	&__text
+		font-weight: normal
+		font-size: 16px
+		line-height: 24px
+		color: #FEFEFE
+		margin-bottom: 12px
+	&__description	
+		font-weight: normal
+		font-size: 16px
+		line-height: 24px
+		color: #FEFEFE
+		margin-bottom: 20px
+		span
+			color: #FEA632
+	.button-primary
+		margin-bottom: 115px
+		width: 257px
+		text-align: center
+	&__nav
+		position: relative
+	&__next, &__prev
+		cursor: pointer
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+	&__prev
+		left: -45px
+	&__next
+		right: -45px
+	&__wrap
+		display: flex
+	&__slider
+		flex: 0 0 500px
+		max-width: 500px
+		margin-left: 80px
+	&__item
+		height: 150px
+		cursor: pointer
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			vertical-align: bottom
+			border-radius: 20px
+	&__phone
+		position: relative
+		width: 345px
+		height: 689px
+		overflow: hidden
+		padding: 10px
+		box-sizing: border-box
+		&-mask
+			position: absolute
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			z-index: 1
+		&-img
+			height: 100%
+			img
+				height: 100%
+				width: 100%
+				object-fit: cover
+				border-radius: 50px
+
 .banner
 	background-color: #111319
 	background-image: url(../img/bg.png)
@@ -129,6 +488,9 @@ li
 			line-height: 49px
 			color: #FEFEFE
 			margin: 0
+			margin-bottom: 10px
+			span
+				color: #AE88CF
 		p
 			margin: 0
 			font-weight: normal
@@ -142,25 +504,33 @@ li
 		display: -o-flex
 		display: flex
 		flex-wrap: wrap
+		margin-top: 15px
 		&-item
-			flex: 0 0 200px
-			max-width: 200px
+			flex: 0 0 203px
+			max-width: 203px
+			margin-bottom: 30px
 			font-weight: normal
 			font-size: 16px
 			line-height: 24px
 			color: #AFAEAC
+			&:nth-child(1)
+				margin-right: 55px
 
 
 .site
+	&-body
+		overflow: hidden
 	&-wrap
 		display: flex
 	&-header
 		position: sticky
 		top: 0
+		z-index: 8
 		width: 100%
 		background-color: #111319
 		padding: 35px 0
 		box-sizing: border-box
+		box-shadow: 0px 4px 20px rgba(74, 75, 78, 0.18)
 		&__wrap
 			box-sizing: border-box
 			padding-left: 105px
@@ -185,6 +555,8 @@ li
 				
 				transition: all .3s ease
 		&__logo
+			&-text
+				display: none
 			.edit-path
 				transition: all .3s ease
 			&:hover, &:active
@@ -193,8 +565,8 @@ li
 					transform: translate(-2px, 1px)
 					transition: all .3s ease
 	&-content
-		flex: 0 0 calc(100% - 128px)
-		max-width: calc(100% - 128px)
+		flex: 0 0 calc(100% - 123px)
+		max-width: calc(100% - 123px)
 	&-sidebar
 		height: 100%
 		position: sticky
@@ -223,5 +595,38 @@ li
 				&:hover, &:active
 					background-color: #2D3241
 					transition: all .3s ease
-					
-					
+
+.mobile-humburger
+	display: none
+
+.mobile-menu
+	position: fixed
+	top: 107px
+	left: 0
+	right: 0
+	z-index: 8
+	background-color: #191C26
+	text-align: center
+	height: 0
+	overflow: hidden
+	transition: height .3s ease
+	.button-primary
+		width: 200px
+		font-weight: 600
+		font-size: 16px
+		line-height: 19px
+		color: #FEFEFE
+	ul
+		margin-bottom: 25px
+		li
+			margin-bottom: 15px
+			a
+				font-weight: 500
+				font-size: 24px
+				line-height: 28px
+				color: #FEFEFE
+
+.mobile-close
+	display: none
+	
+@import "_media.sass"
