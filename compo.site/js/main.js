@@ -1,5 +1,14 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-    var selector = document.getElementById("phone-mask");
+
+
+	for (var i = 0; i < document.querySelectorAll('.site-posts__item-more-copy').length; i++) {
+		document.querySelectorAll('.site-posts__item-more-copy')[i].addEventListener('click', function(){
+			var copyText = this.querySelector(".site-posts__item-more-copy-input");
+			copyText.select();
+			document.execCommand("copy");
+		})
+	}
+    var selector = document.getElementsByClassName("phone-mask");
 
 	var im = new Inputmask("9 (999)-999-99-99");
 	im.mask(selector);
@@ -34,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 				var fadeInAnimationItem = fadeInAnimation[i];
 				var fadeInAnimationItemHeight = fadeInAnimationItem.offsetHeight;
 				var fadeInAnimationItemOffset = offset(fadeInAnimationItem).top;
-				var animStart = 10;
+				var animStart = 4;
 
 				var animItemPoint = window.innerHeight - fadeInAnimationItemHeight / animStart;
 				if(fadeInAnimationItemHeight > window.innerHeight) {
@@ -105,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 	blockProductsInit.on('slideChange', function() {
 		document.querySelector('.block-products__phone-img img').src = document.querySelector('.block-products .swiper-slide[data-swiper-slide-index="'+ blockProductsInit.realIndex +'"] img').src;
-		console.log(blockProductsInit.previousIndex)
+		//console.log(blockProductsInit.previousIndex)
 	})
 
 	var blockProductsItem = document.querySelectorAll('.block-products__item');
@@ -133,5 +142,63 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		document.querySelector('.site-header__phone').style.opacity = "1";
 		document.querySelector('.mobile-menu').style.height = "0";
 	})
+
+	var anchors = document.querySelectorAll('a[href*="#"]')
+
+	for (let anchor of anchors) {
+	  anchor.addEventListener('click', function (e) {
+	    e.preventDefault()
+	    
+	    var blockID = anchor.getAttribute('href').substr(1)
+	    
+	    document.getElementById(blockID).scrollIntoView({
+	      behavior: 'smooth',
+	      block: 'start'
+	    })
+	  })
+	}
+
+	for (var i = 0; i < document.querySelectorAll('.click-close-js').length; i++) {
+		document.querySelectorAll('.click-close-js')[i].addEventListener('click', function(){
+			document.querySelector('.mobile-close').click();
+		});
+	}
+
+	var buttonInput = document.querySelectorAll('.form-ajax .button-primary');
+	for (var i = 0; i < buttonInput.length; i++) {
+		
+		buttonInput[i].addEventListener('click', function(e){
+		var parent = this.closest('.form-ajax');
+		if (parent.querySelector('input[name="name"]').value == "") {
+			e.preventDefault();
+			parent.querySelector('input[name="name"]').parentElement.querySelector('.input-block__error').style.opacity = 1;
+		} else if (parent.querySelector('input[name="phone"]').value.length != 17) {
+			e.preventDefault();
+			parent.querySelector('input[name="phone"]').parentElement.querySelector('.input-block__error').style.opacity = 1;
+		}
+	});
+	}
+
+	var msgInput = document.querySelectorAll('.input-block__msg input');
+	for (var i = 0; i < msgInput.length; i++) {
+		msgInput[i].addEventListener('input', function(){
+			if (this.value.length > 70) {
+				this.parentElement.querySelector('.input-block__error').style.opacity = 1;
+			}
+		});
+	}
+
+	var textareaInput = document.querySelectorAll('.input-block__textarea textarea');
+	for (var i = 0; i < textareaInput.length; i++) {
+		textareaInput[i].addEventListener('input', function(){
+			if (this.value.length > 70) {
+				this.parentElement.querySelector('.input-block__error').style.opacity = 1;
+			}
+		});
+	}
+
+
+	
+	
 	
 });

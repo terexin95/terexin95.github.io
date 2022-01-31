@@ -214,6 +214,8 @@
 		font-size: 16px
 		line-height: 24px
 		color: #AFAEAC
+		&::placeholder
+			color: #AFAEAC
 	.input-block
 		margin-bottom: 15px
 	.site-sidebar
@@ -263,6 +265,29 @@
 	.site-header
 		padding-bottom: 17px
 		padding-top: 42px
+	.modal-callback
+		width: 100%
+		background-color: #111319
+	.modal-callback .modal-callback__container
+		padding: 33px
+		padding-top: 70px
+	.modal-callback .button-primary
+		margin: auto
+		display: block
+	.input-block__textarea
+		display: block
+	.input-block__msg
+		display: none
+	.mobile-link
+		display: inline-block
 
-	
+@media (max-width: 433px)
+	.block-products__link
+		&:nth-child(1)
+			margin-right: 170px
+			margin-bottom: 15px
+
+@media (max-width: 355px)
+	.site-header__phone
+		display: none
 	
