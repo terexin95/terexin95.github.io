@@ -172,39 +172,40 @@
 						
 						<div class="site-nav-cat">
 							<ul>
+								<li><span class="reset-mixtup" data-filter="all">4234</span></li>
 								<li>
-									<a href="#">Реклама</a>
+									<span data-filter=".category-a">Реклама</span>
 								</li>
 								<li>
-									<a href="#">Разразработка</a>
+									<span data-filter=".category-b">Разразработка</span>
 								</li>
 								<li>
-									<a href="#">SMM</a>
+									<span data-filter=".category-c">SMM</span>
 								</li>
 								<li>
-									<a href="#">СЕО</a>
+									<span data-filter=".category-d">СЕО</span>
 								</li>
 								<li>
-									<a href="#">Реклама</a>
+									<span data-filter=".category-f">Реклама</span>
 								</li>
 								<li>
-									<a href="#">Реклама</a>
+									<span data-filter=".category-g">Реклама</span>
 								</li>
 								<li>
-									<a href="#">Реклама</a>
+									<span data-filter=".category-t">Реклама</span>
 								</li>
 								<li>
-									<a href="#">Реклама</a>
+									<span data-filter=".category-o">Реклама</span>
 								</li>
 								<li>
-									<a href="#">Реклама</a>
+									<span data-filter=".category-m">Реклама</span>
 								</li>
 							</ul>
 						</div>
 						<div class="site-posts">
 							<div class="site-posts__wrap">
 
-								<div class="site-posts__item">
+								<div class="site-posts__item mix category-a">
 									<div class="site-posts__item-border">
 										<div class="site-posts__item-inner">
 											<div class="site-posts__item-img">
@@ -285,7 +286,7 @@
 									</div>
 								</div>
 
-								<div class="site-posts__item">
+								<div class="site-posts__item mix category-a">
 									<div class="site-posts__item-border">
 										<div class="site-posts__item-inner">
 											<div class="site-posts__item-img">
@@ -366,7 +367,7 @@
 									</div>
 								</div>
 
-								<div class="site-posts__item">
+								<div class="site-posts__item mix category-b">
 									<div class="site-posts__item-border">
 										<div class="site-posts__item-inner">
 											<div class="site-posts__item-img">
@@ -447,7 +448,7 @@
 									</div>
 								</div>
 
-								<div class="site-posts__item">
+								<div class="site-posts__item mix category-b">
 									<div class="site-posts__item-border">
 										<div class="site-posts__item-inner">
 											<div class="site-posts__item-img">
@@ -528,7 +529,7 @@
 									</div>
 								</div>
 
-								<div class="site-posts__item">
+								<div class="site-posts__item mix category-c">
 									<div class="site-posts__item-border">
 										<div class="site-posts__item-inner">
 											<div class="site-posts__item-img">
@@ -609,7 +610,7 @@
 									</div>
 								</div>
 
-								<div class="site-posts__item">
+								<div class="site-posts__item mix category-c">
 									<div class="site-posts__item-border">
 										<div class="site-posts__item-inner">
 											<div class="site-posts__item-img">
@@ -690,7 +691,7 @@
 									</div>
 								</div>
 
-								<div class="site-posts__item">
+								<div class="site-posts__item mix category-d">
 									<div class="site-posts__item-border">
 										<div class="site-posts__item-inner">
 											<div class="site-posts__item-img">
@@ -771,7 +772,7 @@
 									</div>
 								</div>
 
-								<div class="site-posts__item">
+								<div class="site-posts__item mix category-d">
 									<div class="site-posts__item-border">
 										<div class="site-posts__item-inner">
 											<div class="site-posts__item-img">
@@ -852,7 +853,7 @@
 									</div>
 								</div>
 
-								<div class="site-posts__item">
+								<div class="site-posts__item mix category-f">
 									<div class="site-posts__item-border">
 										<div class="site-posts__item-inner">
 											<div class="site-posts__item-img">
@@ -1125,5 +1126,12 @@
 	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 	<script src="js/mask.js"></script>
 	<script src="js/main.js"></script>
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="js/mixitup.min.js"></script>
+	<script>
+		var mixer = mixitup('.site-posts');
+	</script>
+
 </body>
 </html>

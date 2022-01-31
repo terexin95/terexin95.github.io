@@ -830,7 +830,7 @@ li {
       border-radius: 32px;
       margin-right: 15px;
       margin-bottom: 15px; }
-      .site-nav-cat ul li a {
+      .site-nav-cat ul li a, .site-nav-cat ul li span {
         display: block;
         border-radius: 32px;
         padding: 10px 35px;
@@ -839,8 +839,9 @@ li {
         font-weight: normal;
         font-size: 16px;
         line-height: 24px;
-        color: #212223; }
-        .site-nav-cat ul li a:hover, .site-nav-cat ul li a:active {
+        color: #212223;
+        cursor: pointer; }
+        .site-nav-cat ul li a.mixitup-control-active, .site-nav-cat ul li span.mixitup-control-active {
           background-color: #2D3241;
           transition: all 0.5s ease;
           color: #FEFEFE; }
@@ -896,11 +897,13 @@ li {
 
 .site-posts__wrap {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin: 0 -1.8%; }
 .site-posts__item {
   max-width: 31.5%;
   flex: 0 0 31.5%;
-  margin-right: 2.75%;
+  margin-right: 0.9%;
+  margin-left: 0.9%;
   margin-bottom: 2.75%;
   overflow: hidden; }
   .site-posts__item:hover .site-posts__item-inner {
@@ -915,8 +918,6 @@ li {
   .site-posts__item:hover .site-posts__item-link-text {
     background-color: transparent;
     transition: all 0.3s ease; }
-  .site-posts__item:nth-child(3n) {
-    margin-right: 0; }
   .site-posts__item-border {
     background: transparent;
     transition: all 0.3s ease;
@@ -1107,6 +1108,7 @@ li {
   flex: 0 0 100%;
   max-width: 100%;
   margin-right: 0;
+  margin-left: 0;
   user-select: none; }
 
 .progress-bar {
@@ -1168,7 +1170,8 @@ li {
 
 .site-single-slider {
   user-select: none;
-  margin-top: 100px; }
+  margin-top: 100px;
+  margin-bottom: 100px; }
   .site-single-slider__footer {
     display: flex;
     align-items: center;
@@ -1300,12 +1303,12 @@ li {
   .site-posts__item {
     flex: 0 0 48%;
     max-width: 48%;
-    margin-right: 4%;
-    margin-bottom: 4%; }
-    .site-posts__item:nth-child(3n) {
-      margin-right: auto; }
-    .site-posts__item:nth-child(2n) {
-      margin-right: 0; }
+    margin-right: 1%;
+    margin-left: 1%;
+    margin-bottom: 2%; }
+
+  .site-posts__wrap {
+    margin: 0 -2%; }
 
   .block-create__item {
     flex: 0 0 49%;
@@ -1708,8 +1711,12 @@ li {
   .site-posts__item {
     flex: 0 0 100%;
     margin-right: 0;
+    margin-left: 0;
     max-width: 100%;
     margin-bottom: 25px; }
+
+  .site-posts__wrap {
+    margin: 0; }
 
   .site-nav-cat {
     max-height: 0;

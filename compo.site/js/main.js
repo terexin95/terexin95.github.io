@@ -18,6 +18,30 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		});
 	}
 
+	if (document.querySelector('.site-nav-cat')) {
+		var arrF = [];
+		for (var i = 0; i < document.querySelectorAll('.site-nav-cat ul li span').length; i++) {
+			document.querySelectorAll('.site-nav-cat ul li span')[i].setAttribute('data-click', '2');
+			document.querySelectorAll('.site-nav-cat ul li span')[i].addEventListener('click', function(){
+				var thx = this;
+				if (arrF.length > 0 && thx.getAttribute('data-filter') != arrF[arrF.length-1]) {
+					document.querySelector('span[data-filter="'+arrF[arrF.length-1]+'"]').setAttribute('data-click', '2');
+				}
+				if (thx.getAttribute('data-filter') != 'all') {
+					arrF.push(thx.getAttribute('data-filter'));
+				}
+				
+				if (this.getAttribute('data-click') == 1 && this.classList.contains('mixitup-control-active')){
+					thx.setAttribute('data-click', '2');
+					document.querySelector('.reset-mixtup').click();
+					
+				} else {
+					thx.setAttribute('data-click', '1');
+				}
+			})
+		}
+	}
+
 	if (document.querySelector('body.post') || document.querySelector('body.archive')) {
 		window.addEventListener('scroll', function() {
 			if (pageYOffset > 1000) {
