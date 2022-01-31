@@ -26,6 +26,25 @@
 		right: 0
 
 @media (max-width: 993px)
+	.site-single-block-image__text
+		flex: 0 0 100%
+		max-width: 100%
+		order: 1
+	.site-single-title__time
+		margin-right: 20px
+	.site-single-block-image__img
+		flex: 0 0 100%
+		max-width: 100%
+		margin-bottom: 20px
+	.site-posts__item
+		flex: 0 0 48%
+		max-width: 48%
+		margin-right: 4%
+		margin-bottom: 4%
+		&:nth-child(3n)
+			margin-right: auto
+		&:nth-child(2n)
+			margin-right: 0
 	.block-create__item
 		flex: 0 0 49%
 		max-width: 49%
@@ -56,6 +75,51 @@
 			padding-bottom: 100px
 
 @media (max-width: 768px)
+	.button-top
+		position: fixed
+		bottom: 20px
+		right: 20px
+		z-index: 8
+		display: block
+		opacity: 0
+		transition: all .3s ease
+	.site-single-slider__link
+		display: none
+	.site-single-slider__init
+		margin-right: -15px
+	.site-single-slider__next-button
+		display: block
+	.site-single-slider
+		margin-bottom: 95px
+		.site-posts__item-block
+			padding: 20px
+		.site-posts__item-options
+			padding: 20px
+			padding-top: 20px
+	.site-single-slider__footer
+		display: none
+	.progress-bar
+		top: 106px
+	.site-single-title__wrap
+		flex-wrap: wrap
+		.site-single-title
+			flex: 0 0 100%
+			order: 1
+			margin-top: 20px
+	.site-single-list__item
+		flex: 0 0 100%
+		max-width: 100%
+	.site-single-notice__text
+		font-size: 16px
+		line-height: 19px
+	.site-single-notice__block
+		padding: 15px
+	.white-theme-site .site-body, .white-theme-site .block-wrapper
+		background-color: #F9F9FD
+	.white-theme-site .mobile-menu
+		background-color: #EFEFF2
+	.white-theme-site .site-header
+		background-color: #EFEFF2 !important
 	.banner
 		background-image: url(../img/mobilebanner.png)
 		background-position-x: right
@@ -280,6 +344,73 @@
 		display: none
 	.mobile-link
 		display: inline-block
+
+@media (max-width: 500px)
+	.not-founded-page__bg
+		background-image: url(../img/404mobile.png)
+		text-align: center
+	.not-founded-page .button-primary
+		margin-top: 30px
+	.not-founded-page
+		padding-top: 50px
+		h1
+			font-weight: 500
+			font-size: 150px
+			line-height: 179px
+			color: #FEFEFE
+		p
+			font-size: 16px
+			line-height: 24px
+			color: #FEFEFE
+			max-width: 80%
+			margin: auto
+			text-align: left
+	.site-posts__item
+		flex: 0 0 100%
+		margin-right: 0
+		max-width: 100%
+		margin-bottom: 25px
+	.site-nav-cat
+		max-height: 0
+		margin: 0
+		overflow: hidden
+		transition: all .3s ease
+		&--active
+			max-height: 50em
+			transition: all .3s ease
+	.site-nav-cat ul li a
+		background-color: #F9F9FD
+	.site-breadcrumbs
+		display: none
+	.site-title-page
+		font-size: 28px
+		line-height: 46px
+	.white-theme-site .site-footer__dumbp-link
+		color: #7B7B7B
+	.site-breadcrumbs-mobile
+		display: block
+		margin-top: 30px
+		margin-bottom: 40px
+		a
+			display: flex
+			align-items: center
+			font-weight: normal
+			font-size: 16px
+			line-height: 24px
+			color: #212223
+			svg
+				margin-right: 15px
+	.open__cat
+		width: 136px
+		display: flex
+		align-items: center
+		justify-content: center
+		border: 2px solid #212223
+		box-sizing: border-box
+		border-radius: 32px
+		height: 42px
+		svg
+			margin-left: 10px
 
 @media (max-width: 433px)
 	.block-products__link

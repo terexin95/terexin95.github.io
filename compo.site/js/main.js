@@ -1,5 +1,79 @@
 document.addEventListener("DOMContentLoaded", function(event) {
+	if (document.querySelector('body.page-404')) {
+		if (window.innerWidth < 500) {
+			if (document.querySelector('body').classList.contains('white-theme-site')) {
+				document.querySelector('body').classList.remove('white-theme-site');
+			}
+		}
+		window.addEventListener('resize', function(){
+			if (window.innerWidth < 500) {
+				if (document.querySelector('body').classList.contains('white-theme-site')) {
+					document.querySelector('body').classList.remove('white-theme-site');
+				}
+			} else {
+				if (!document.querySelector('body').classList.contains('white-theme-site')) {
+					document.querySelector('body').classList.add('white-theme-site');
+				}
+			}
+		});
+	}
 
+	if (document.querySelector('body.post') || document.querySelector('body.archive')) {
+		window.addEventListener('scroll', function() {
+			if (pageYOffset > 1000) {
+				document.querySelector('.button-top').style.opacity = "1";
+			} else {
+				document.querySelector('.button-top').style.opacity = "0";
+			}
+		})
+	}
+
+	if (document.querySelector('#progressBar')) {
+		function progressBar() {
+		    // Узнаем на сколько страница прокручена
+		    let scroll = document.body.scrollTop || document.documentElement.scrollTop;
+		    // Узнаем высоту всей страницы
+		    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		    // Получаем в % на сколько прокручена страница
+		    let scrolled = scroll / height * 100;
+
+		    // Подставляем % прокрутки в ширину нашей линии
+		    document.getElementById('progressBar').style.width = scrolled + '%';
+		}
+
+		// Запускаем функцию, когда пользователя скролит
+		window.addEventListener('scroll', progressBar);
+	}
+	if (document.querySelector('.site-single-slider__init')) {
+		
+		var siteSingleSliderInit = new Swiper('.site-single-slider__init', {
+			loop: true,
+			slidesPerView: 2,
+			spaceBetween: 35,
+			navigation: {
+				nextEl: '.site-single-slider__next',
+				prevEl: '.site-single-slider__prev',
+			},
+			breakpoints: {
+				0: {
+					slidesPerView: 1.3,
+					spaceBetween: 20
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 30,
+				},
+				993: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+				},
+			}
+		});
+
+		document.querySelector('.site-single-slider__next-button').addEventListener('click', function(){
+			siteSingleSliderInit.slideNext();
+		})
+	}
 
 	for (var i = 0; i < document.querySelectorAll('.site-posts__item-more-copy').length; i++) {
 		document.querySelectorAll('.site-posts__item-more-copy')[i].addEventListener('click', function(){
@@ -8,8 +82,27 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			document.execCommand("copy");
 		})
 	}
-    var selector = document.getElementsByClassName("phone-mask");
+    
 
+    for (var i = 0; i < document.querySelectorAll('.site-posts__item-repost').length; i++) {
+    	document.querySelectorAll('.site-posts__item-repost')[i].addEventListener('click', function(){
+    		this.closest('.site-posts__item').querySelector('.site-posts__item-more').classList.add('site-posts__item-more--active')
+    	})
+    }
+
+    for (var i = 0; i < document.querySelectorAll('.site-posts__item-more-close').length; i++) {
+    	document.querySelectorAll('.site-posts__item-more-close')[i].addEventListener('click', function(){
+    		this.closest('.site-posts__item').querySelector('.site-posts__item-more').classList.remove('site-posts__item-more--active')
+    	})
+    }
+
+    for (var i = 0; i < document.querySelectorAll('.open__cat').length; i++) {
+    	document.querySelectorAll('.open__cat')[i].addEventListener('click', function(){
+    		document.querySelector('.site-nav-cat').classList.toggle('site-nav-cat--active')
+    	})
+    }
+
+	var selector = document.getElementsByClassName("phone-mask");
 	var im = new Inputmask("9 (999)-999-99-99");
 	im.mask(selector);
 

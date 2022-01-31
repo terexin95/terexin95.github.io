@@ -724,7 +724,56 @@ li
 			border-left-color: #E54322
 			background-color: #FADED9
 
+.open__cat
+	display: none
+
+.site-single-slider__next-button
+	display: none
+
+.button-top
+	display: none
+
+.not-founded-page
+	padding-top: 74px
+	h1
+		font-weight: 500
+		font-size: 200px
+		line-height: 239px
+		color: #212223
+		margin: 0
+	p
+		font-weight: normal
+		font-size: 16px
+		line-height: 24px
+		color: #000000
+		max-width: 367px
+		margin: 0
+	.button-primary
+		margin-top: 25px
+		width: 200px
+		text-align: center
+		height: 50px
+		line-height: 50px
+		padding-top: 0
+		padding-bottom: 0
+
+	&__bg
+		background-image: url(../img/404.png)
+		background-size: cover
+		background-repeat: no-repeat
+		min-height: 100vh !important
+		.block-wrapper
+			background-color: transparent !important
+
 .white-theme-site
+	.mobile-menu ul li a
+		color: #212223
+	.mobile-humburger
+		rect, path
+			fill: #212223
+	.mobile-close
+		path
+			stroke: #212223
 	.site-header
 		background-color: #EFEFF2
 	.white-logo-color
@@ -760,12 +809,19 @@ li
 	.kb_sep
 		margin: 0 10px
 
+.site-breadcrumbs-mobile
+	display: none
+
 .site-title-page
 	font-weight: 500
 	font-size: 28px
 	line-height: 46px
 	color: #212223
-	margin-bottom: 30px
+	&__wrap
+		margin-bottom: 30px
+		display: flex
+		align-items: center
+		justify-content: space-between
 
 .site-nav-cat
 	margin-bottom: 50px
@@ -797,6 +853,7 @@ li
 	position: relative
 	width: 29px
 	height: 29px
+	cursor: pointer
 	input
 		position: absolute
 		left: 0
@@ -807,15 +864,51 @@ li
 		height: 100%
 		padding: 0
 		opacity: 0
+		cursor: pointer
+		border-radius: 100%
+
+.site-posts__item-more-close
+	position: absolute
+	right: 5px
+	top: 5px
+	cursor: pointer
+	svg
+		path
+			fill: #fff
+
+.site-posts__item-more
+	position: absolute
+	background-color: #111319
+	height: 80px
+	width: calc(100% - 2px)
+	bottom: 0px
+	right: -500px
+	transition: all .3s ease
+	border-radius: 0 0 20px 20px
+	&--active
+		right: 2px
+		transition: all .3s ease
+
+.site-posts__item-social
+	height: 100%
+	display: flex
+	align-items: center
+	justify-content: center
+	> *
+		margin-right: 10px
+		&:last-child
+			margin-right: 0
 
 .site-posts
 	&__wrap
 		display: flex
 		flex-wrap: wrap
 	&__item
-		max-width: 31%
-		flex: 0 0 31%
-		margin-right: 3.5%
+		max-width: 31.5%
+		flex: 0 0 31.5%
+		margin-right: 2.75%
+		margin-bottom: 2.75%
+		overflow: hidden
 		&:hover
 			.site-posts__item-inner
 				background-color: #2D3241
@@ -929,6 +1022,247 @@ li
 			position: relative
 			z-index: 1
 
+.site-single-title
+	margin: 0
+	font-weight: 500
+	font-size: 28px
+	line-height: 46px
+	color: #212223
+	&__wrap
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 20px
+	&__description
+		display: flex
+		align-items: center
+	&__time, &__date
+		display: flex
+		align-items: center
+		font-weight: normal
+		font-size: 14px
+		line-height: 18px
+		color: #212223
+		img
+			margin-right: 10px
+	&__time
+		margin-right: 60px
+
+.site-single-paragrah
+	p
+		margin: 0
+		font-weight: normal
+		font-size: 16px
+		line-height: 24px
+		color: #212223
+		margin-bottom: 15px
+
+.site-single-block-image
+	margin-top: 25px
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+	&__text
+		max-width: 40%
+		flex: 0 0 40%
+		margin-right: 5%
+		h2, h3, h4, h5, h6
+			margin: 0
+			margin-bottom: 12px
+		h2
+			font-weight: 600
+			font-size: 16px
+			line-height: 19px
+			color: #212223
+		p
+			margin-bottom: 15px
+			font-weight: normal
+			font-size: 16px
+			line-height: 24px
+			color: #212223
+	&__img
+		flex: 0 0 55%
+		max-width: 55%
+		img
+			width: 100%
+			height: auto
+
+.site-single-notice
+	background-color: #191C26
+	margin: 35px 0
+	&__wrap
+		display: flex
+	&__icon
+		flex: 0 0 75px
+		max-width: 75px
+		background-color: #2D3241
+		display: flex
+		align-items: center
+		justify-content: center
+	&__block
+		flex: 0 0 calc(100% - 75px)
+		max-width: calc(100% - 75px)
+		box-sizing: border-box
+		padding: 25px 15px
+		h3
+			margin: 0
+	&__text
+		font-weight: 500
+		font-size: 24px
+		line-height: 28px
+		color: #FEFEFE
+
+.site-single-slider__init
+	.site-posts__item
+		flex: 0 0 100%
+		max-width: 100%
+		margin-right: 0
+		user-select: none
+
+.progress-bar 
+	left: 0
+	top: 0
+	height: 2px
+	width: 0%
+	background: #FEA632
+	position: absolute
+	top: 117px
+
+
+.site-single-list
+	margin-top: 35px
+	margin-bottom: 35px
+	&--num
+		.site-single-list__title
+			&::before
+				content: ""
+				display: none
+		.site-single-list__num
+			position: absolute
+			top: 0
+			left: 0px
+			font-weight: 600
+			font-size: 16px
+			line-height: 19px
+			color: #FEA632
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+	&__item
+		max-width: 49%
+		flex: 0 0 49%
+		margin-right: 2%
+		box-sizing: border-box
+		padding-left: 30px
+		margin-bottom: 13px
+		position: relative
+		&:nth-child(2n)
+			margin-right: 0
+	&__title
+		font-weight: 600
+		font-size: 16px
+		line-height: 19px
+		color: #212223
+		position: relative
+		&::before
+			content: ""
+			width: 20px
+			height: 2px
+			border-radius: 10px
+			background: #FEA632
+			position: absolute
+			left: -30px
+			top: 8px
+	&__text
+		font-weight: normal
+		font-size: 16px
+		line-height: 24px
+		color: #212223
+
+.site-single-slider
+	user-select: none
+	margin-top: 100px
+	&__footer
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-top: 40px
+	&__prev, &__next, .site-single-slider__link
+		position: relative
+		padding-bottom: 10px
+		margin: 0 6px
+		cursor: pointer
+		transition: all .3s ease
+		font-weight: normal
+		font-size: 14px
+		line-height: 18px
+		color: #212223
+		&:hover
+			background: -webkit-linear-gradient(249.83deg, #FFC136 11.17%, #FF8A2F 43.87%, #FF3676 83.17%)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			color: #FEA632
+			transition: all .3s ease
+			&::before
+				content: ""
+				background: linear-gradient(249.83deg, #FFC136 11.17%, #FF8A2F 43.87%, #FF3676 83.17%)
+				transition: all .3s ease
+		&::before
+			content: ""
+			position: absolute
+			transition: all .3s ease
+			width: 100%
+			height: 3px
+			border-radius: 10px
+			background-color: #212223
+			bottom: 0
+	&__link
+		margin: 0
+	&__header
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 30px
+
+.site-single-table
+	margin-left: -4px
+	margin-right: -4px
+	overflow-x: scroll
+	&::-webkit-scrollbar 
+		width: 6px
+		height: 6px
+		border-radius: 20px
+	&::-webkit-scrollbar-thumb 
+		background: #AFAEAC
+		border-radius: 20px
+	&::-webkit-scrollbar-track 
+		background: #EFEFF2
+		border-radius: 20px
+  
+	table, th, td
+		border: 2px solid #EFEFF2
+	thead
+		background-color: #2D3241
+		border-collapse: collapse
+		text-align: center
+		font-weight: 600
+		font-size: 16px
+		line-height: 19px
+		text-align: center
+		color: #FEFEFE
+		td
+			padding: 15px 0
+	tbody
+		background-color: #FEFEFE
+		td
+			padding: 30px 15px
+			font-weight: normal
+			font-size: 16px
+			line-height: 24px
+			color: #212223
+			min-width: 230px
+			max-width: 230px
+			box-sizing: border-box
 
 
 @import "_media.sass"
