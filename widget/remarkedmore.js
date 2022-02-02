@@ -44,6 +44,8 @@ function widgetRemarked(options) {
             
             remarkedToken = remarkedXHR.response.token;
             console.log(remarkedXHR.response);
+            return remarkedToken;
+            
 
         }
 
