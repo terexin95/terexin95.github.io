@@ -39,16 +39,18 @@ function widgetRemarked(options) {
 
         remarkedXHR.responseType = 'json';
         remarkedXHR.setRequestHeader('Content-Type', 'application/json');
-
+        let token;
         remarkedXHR.onload = function(){
             
             console.log(remarkedXHR.response);
-            return remarkedXHR.response.token;
+            token = remarkedXHR.response.token;
             
 
         }
 
         remarkedXHR.send(remarkedBodyJSON);
+        
+        return token;
     }
 
     
@@ -257,7 +259,7 @@ function widgetRemarked(options) {
                     this.classList.add('remarked-widget-room--active');
 
                     remarkedWidgetClassic.querySelector('.remarked-widget__title').textContent = this.getAttribute('data-title');
-                    console.log(+this.getAttribute('data-point'))
+                    //console.log(+this.getAttribute('data-point'))
                     let point = +this.getAttribute('data-point');
                     remarkedToken = getToken(point);
                     console.log(remarkedToken);
