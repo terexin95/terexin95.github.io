@@ -516,8 +516,8 @@ function widgetRemarked(options) {
                 if (remarkedXHRCod.response.status == "error") {
                     remarkedPhoneInput.style.border = "2px solid" + options.color_red;
                     remarkedPhoneInputVal == false;
-                    // remarkedPhoneInput.addEventListener('input', function(){}
                 } else {
+                    remarkedPhoneInput.setAttribute('readonly', 'readonly')
                     checkInputs();
                 }
                 console.log(remarkedXHRCod.response)
@@ -546,6 +546,7 @@ function widgetRemarked(options) {
         remarkedXHRRoom.setRequestHeader('Content-Type', 'application/json');
         remarkedXHRRoom.onload = function(){
             if(remarkedXHRRoom.response.status == "success") {
+                remarkedCod.setAttribute('readonly', 'readonly');
                 if(options.date == false && options.qty == false && options.time == false && options.text == false) {
                     sendReserveRemarked();
                 } else if (options.date == false && options.qty == false && options.time == false && options.text == false) {
