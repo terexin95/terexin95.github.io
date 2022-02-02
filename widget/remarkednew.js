@@ -437,8 +437,11 @@ function widgetRemarked(options) {
     for (var i = nextStep2.length - 1; i >= 0; i--) {
         nextStep2[i].addEventListener('click', function(){
             if(remarkedUserInputVal && remarkedPhoneInputVal && remarkedEmailInputVal) {
-                sendCodRemarked();
-                
+                if (options.smsCode) {
+                    sendCodRemarked();
+                } else {
+                    checkInputs();
+                }
             } else {
                 if (remarkedUserInput.value == '') {
                     remarkedUserInput.style.border = "2px solid " + options.color_red;
