@@ -40,7 +40,7 @@ function widgetRemarked(options) {
         remarkedXHR.responseType = 'json';
         remarkedXHR.setRequestHeader('Content-Type', 'application/json');
 
-        remarkedXHR.load = function(){
+        remarkedXHR.onload = function(){
             
             console.log(remarkedXHR.response);
             remarkedToken = remarkedXHR.response.token;
@@ -49,6 +49,7 @@ function widgetRemarked(options) {
         }
 
         remarkedXHR.send(remarkedBodyJSON);
+        console.log(remarkedXHR);
     }
 
     
