@@ -49,7 +49,9 @@ function widgetRemarked(options) {
         }
 
         remarkedXHR.send(remarkedBodyJSON);
-        console.log(remarkedXHR);
+        remarkedToken = remarkedXHR.response.token
+        //console.log(remarkedXHR);
+        return remarkedToken;
     }
 
     
