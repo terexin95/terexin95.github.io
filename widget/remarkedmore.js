@@ -43,7 +43,7 @@ function widgetRemarked(options) {
         remarkedXHR.onload = function(){
             
             remarkedToken = remarkedXHR.response.token;
-            //console.log(remarkedXHR.response.token);
+            console.log(remarkedXHR.response);
 
         }
 
@@ -256,7 +256,9 @@ function widgetRemarked(options) {
                     this.classList.add('remarked-widget-room--active');
 
                     remarkedWidgetClassic.querySelector('.remarked-widget__title').textContent = this.getAttribute('data-title');
-                    getToken(this.getAttribute('data-point'));
+                    console.log(+this.getAttribute('data-point'))
+                    let point = +this.getAttribute('data-point');
+                    getToken(point);
                     console.log(remarkedToken);
 
                     remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-0').style.display = "none";
