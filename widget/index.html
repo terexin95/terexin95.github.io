@@ -35,41 +35,56 @@
 	<link rel="stylesheet" href="css.css">
 </head>
 <body>
+<!-- 	<input type="text" id="mega"> -->
 	<button class="feedback-button remarked-open-widget1">Трубная, 20</button>
 	<button class="feedback-button remarked-open-widget2">Солянка, 1/2</button>
 <!-- 	<script src="main.js"></script> -->
-	<script src="remarkednew.js"></script>
+	<!-- <script src="https://terexin95.github.io/widget/remarkednew.js"></script> -->
+	<script src="remarkedmore.js"></script>
 	<!-- <script src="banshiki.js"></script> -->
 <!-- 	<script src="hachapuriivino.js"></script> -->
+<!-- <script>
+	document.querySelector('#mega').addEventListener('focusin', function(){
+
+		if (!this.classList.contains('clicked-phone-mask--active')) {
+			this.classList.add('clicked-phone-mask--active')
+			this.value = "+7"
+		}
+		
+	})
+	document.querySelector('#mega').addEventListener('input', function(){
+		
+		this.value = this.value.replace (/[^0-9+]/, '')
+		
+	})
+</script> -->
 	<script>
 		widgetRemarked({
-			POINT: '560065',
+			more: [
+				{
+					POINT: '12345',
+					title: 'Сайт 1'
+				},
+				{
+					POINT: '12345',
+					title: 'Сайт 2'
+				},
+				{
+					POINT: '12345',
+					title: 'Сайт 3'
+				},
+			],
 			classButton: 'remarked-open-widget1',
 			maxPeople: 6,
 			timeItem: true,
-			title: 'Сайт',
 			color_red: '#f54029',
 			email: true, 
 			date: true,
 			qty: true,
 			time: true,
 			text: true,
-			smsCode: true
+			smsCode: false
 		});
-		widgetRemarked({
-			POINT: '570075',
-			classButton: 'remarked-open-widget2',
-			maxPeople: 6,
-			timeItem: true,
-			title: 'Сайт',
-			color_red: '#f54029',
-			email: true, 
-			date: true,
-			qty: true,
-			time: true,
-			text: true,
-			smsCode: true
-		})
 	</script>
 
 <!-- 	<script>
