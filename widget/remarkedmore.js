@@ -60,9 +60,7 @@ function widgetRemarked(options) {
         //return remarkedToken;
     }
 
-    document.querySelector('.remarked-widget__title').addEventListener('click', function(){
-        console.log(remarkedToken);
-    });
+
 
     
 
@@ -178,6 +176,9 @@ function widgetRemarked(options) {
         </div>
     `;
     remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-0').append(remarkedWidgetRooms);
+    remarkedWidgetClassic.querySelector('.remarked-widget__title').addEventListener('click', function(){
+        console.log(remarkedToken);
+    });
     document.querySelector('body').append(remarkedWidgetClassic);
     let remarkedOverlay = document.querySelectorAll('.overlay'); 
     let remarkedClose = document.querySelectorAll('.remarked-widget__close');
