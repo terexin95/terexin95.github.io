@@ -43,16 +43,26 @@ function widgetRemarked(options) {
         remarkedXHR.onload = function(){
             
             console.log(remarkedXHR.response);
-            remarkedToken = remarkedXHR.response.token;
+            
             
 
         }
 
+        remarkedXHR.onreadystatechange = function() {
+            if (remarkedXHR.readyState == 4) {
+                remarkedToken = remarkedXHR.response.token;
+            }
+        }
+
         remarkedXHR.send(remarkedBodyJSON);
-        remarkedToken = remarkedXHR.response.token
+        //remarkedToken = remarkedXHR.response.token
         //console.log(remarkedXHR);
-        return remarkedToken;
+        //return remarkedToken;
     }
+
+    document.querySelector('.remarked-widget__title').addEventListener('click', function(){
+        console.log(remarkedToken);
+    });
 
     
 
