@@ -1688,11 +1688,6 @@ li {
   .block-products__init {
     max-width: calc(100% + 15px); }
 
-  .site-footer__line-item {
-    flex: 0 0 48%;
-    max-width: 48%;
-    margin-bottom: 40px; }
-
   .site-footer__line {
     flex-wrap: wrap;
     margin-bottom: 20px; }
@@ -1714,7 +1709,11 @@ li {
     padding-bottom: 30px; }
 
   .site-footer__dumbp-link {
-    color: #7B7B7B; }
+    color: #7B7B7B;
+    flex: 0 0 auto;
+    text-align: left; }
+    .site-footer__dumbp-link:nth-child(2n) {
+      margin-right: 10px; }
 
   .site-header__logo-wrap {
     max-width: 44px;
@@ -1764,6 +1763,11 @@ li {
 
   .mobile-link {
     display: inline-block; } }
+@media (max-width: 767px) {
+  .site-footer__line-item {
+    flex: 0 0 48%;
+    max-width: 48%;
+    margin-bottom: 40px; } }
 @media (max-width: 500px) {
   .not-founded-page__bg {
     min-height: 700px !important; }
