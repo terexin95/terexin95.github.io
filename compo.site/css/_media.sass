@@ -1,3 +1,30 @@
+@media (max-width: 1440px)
+	.container-site
+		max-width: 100%
+	
+	.block-wrapper, .site-footer__container 
+		max-width: 880px
+		margin: auto
+
+	.block-create__title
+		font-size: 17px
+
+	.block-products__phone
+		height: 495px
+	
+	.site-content 
+		background-color: #111319
+	
+	.site-header__wrap 
+		max-width: 1105px
+		margin: auto
+
+	.banner 
+		max-width: 1105px
+		margin: auto
+		background-position-x: 60%
+		background-repeat: no-repeat
+
 @media (max-width: 1279px)
 	.site-header__wrap
 		padding: 0 20px
@@ -74,6 +101,18 @@
 			padding-bottom: 100px
 
 @media (max-width: 768px)
+	.site-header--active
+		.site-header
+			background-color: #191C26
+			box-shadow: 0 0 0 0 transparent
+		.mobile-close
+			display: block
+		.site-header__phone
+			opacity: 0
+		.mobile-menu
+			height: 237px
+		.mobile-humburger
+			display: none
 	.button-top
 		position: fixed
 		bottom: 20px
@@ -98,7 +137,7 @@
 	.site-single-slider__footer
 		display: none
 	.progress-bar
-		top: 106px
+		top: 84px
 	.site-single-title__wrap
 		flex-wrap: wrap
 		.site-single-title
@@ -327,10 +366,14 @@
 		display: block
 	.site-header
 		padding-bottom: 17px
-		padding-top: 42px
+		padding-top: 20px
 	.modal-callback
 		width: 100%
 		background-color: #111319
+		top: 0
+		left: 0
+		transform: translate(0)
+		height: 100%
 	.modal-callback .modal-callback__container
 		padding: 33px
 		padding-top: 70px
@@ -345,6 +388,11 @@
 		display: inline-block
 
 @media (max-width: 500px)
+	.not-founded-page__bg
+		min-height: 700px !important
+	.page-404
+		.site-footer
+			background-color: #080B12
 	.not-founded-page__bg
 		background-image: url(../img/404mobile.png)
 		text-align: center
@@ -413,12 +461,18 @@
 		height: 42px
 		svg
 			margin-left: 10px
+			transition: all .3s ease
+		&--active
+			svg
+				transform: rotate(-180deg)
+				transition: all .3s ease
 
 @media (max-width: 433px)
 	.block-products__link
 		&:nth-child(1)
 			margin-right: 170px
 			margin-bottom: 15px
+			white-space: nowrap
 
 @media (max-width: 355px)
 	.site-header__phone

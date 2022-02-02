@@ -4,39 +4,18 @@
 	<meta charset="UTF-8">
 	<title>Composite</title>
 	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+	<link rel="stylesheet" href="css/lightbox.min.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<style>
-	body .container-site {
-		max-width: 100%;
-	}
-	body .block-wrapper, body .site-footer__container {
-		max-width: 930px;
-		margin: auto;
-	}
-	body .site-content {
-		background-color: #111319;
-	}
-	body .site-header__wrap {
-		max-width: 1155px;
-		margin: auto;
-	}
-
-	body .banner {
-		max-width: 1155px;
-		margin: auto;
-		background-position-x: 60%;
-		background-repeat: no-repeat;
-	}
-</style>
 <body>
 	<div class="mobile-menu">
 		<div class="mobile-menu__container">
 			<ul>
 				<li><a href="#about" class="click-close-js">О нас</a></li>
 				<li><a href="#">Статьи</a></li>
-				<li><a href="#footer" class="click-close-js">Контаты</a></li>
+				<li><a href="#footer" class="click-close-js">Контакты</a></li>
 			</ul>
 			<div class="button-primary open__modal__js">Получить варианты</div>
 		</div>
@@ -377,10 +356,12 @@
 							<div class="block-products__wrap">
 								<div class="block-products__phone animation-fade">
 									<div class="block-products__phone-img">
-										<img src="img/slider/1.jpg" alt="">
+										<a href="img/slider/1.jpg" data-lightbox="roadtrip">
+											<img src="img/slider/1.jpg" alt="">
+										</a>
 									</div>
 									<div class="block-products__phone-mask">
-										<img src="img/Phone11.png" alt="">
+										<!-- <img src="img/Phone11.png" alt=""> -->
 									</div>
 								</div>
 								<div class="block-products__slider animation-fade">
@@ -425,61 +406,81 @@
 
 												<div class="swiper-slide">
 													<div class="block-products__item">
-														<img src="img/slider/1.jpg" alt="">
+														<a href="img/slider/1.jpg" data-lightbox="roadtrip">
+															<img src="img/slider/1.jpg" alt="">
+														</a>
 													</div>
 												</div>
 
 												<div class="swiper-slide">
 													<div class="block-products__item">
-														<img src="img/slider/2.jpg" alt="">
+														<a href="img/slider/2.jpg" data-lightbox="roadtrip">
+															<img src="img/slider/2.jpg" alt="">
+														</a>
 													</div>
 												</div>
 
 												<div class="swiper-slide">
 													<div class="block-products__item">
-														<img src="img/slider/3.jpg" alt="">
+														<a href="img/slider/3.jpg" data-lightbox="roadtrip">
+															<img src="img/slider/3.jpg" alt="">
+														</a>
 													</div>
 												</div>
 
 												<div class="swiper-slide">
 													<div class="block-products__item">
-														<img src="img/slider/4.jpg" alt="">
+														<a href="img/slider/4.jpg" data-lightbox="roadtrip">
+															<img src="img/slider/4.jpg" alt="">
+														</a>
 													</div>
 												</div>
 
 												<div class="swiper-slide">
 													<div class="block-products__item">
-														<img src="img/slider/5.jpg" alt="">
+														<a href="img/slider/5.jpg" data-lightbox="roadtrip">
+															<img src="img/slider/5.jpg" alt="">
+														</a>
 													</div>
 												</div>
 
 												<div class="swiper-slide">
 													<div class="block-products__item">
-														<img src="img/slider/6.jpg" alt="">
+														<a href="img/slider/6.jpg" data-lightbox="roadtrip">
+															<img src="img/slider/6.jpg" alt="">
+														</a>
 													</div>
 												</div>
 
 												<div class="swiper-slide">
 													<div class="block-products__item">
-														<img src="img/slider/7.jpg" alt="">
+														<a href="img/slider/7.jpg" data-lightbox="roadtrip">
+															<img src="img/slider/7.jpg" alt="">
+														</a>
 													</div>
 												</div>
 
 												<div class="swiper-slide">
 													<div class="block-products__item">
-														<img src="img/slider/8.jpg" alt="">
+														<a href="img/slider/8.jpg" data-lightbox="roadtrip">
+															<img src="img/slider/8.jpg" alt="">
+														</a>
 													</div>
 												</div>
 
 												<div class="swiper-slide">
 													<div class="block-products__item">
-														<img src="img/slider/9.jpg" alt="">
+														<a href="img/slider/9.jpg" data-lightbox="roadtrip">
+															<img src="img/slider/9.jpg" alt="">
+														</a>
 													</div>
 												</div>
 
 												<div class="swiper-slide">
 													<div class="block-products__item">
-														<img src="img/slider/10.jpg" alt="">
+														<a href="img/slider/10.jpg" data-lightbox="roadtrip">
+															<img src="img/slider/10.jpg" alt="">
+														</a>
 													</div>
 												</div>
 
@@ -504,7 +505,7 @@
 										<div class="form-row">
 											<div class="input-block">
 												<label>Имя</label>
-												<input type="text" name="name" maxlength="20"  placeholder="Имя">
+												<input type="text" name="name" maxlength="200"  placeholder="Имя">
 												<div class="input-block__error">Введите имя</div>
 											</div>
 											<div class="input-block">
@@ -515,13 +516,13 @@
 										</div>
 										<div class="input-block input-block__msg">
 											<label>Сообщение</label>
-											<input type="text" name="msg" maxlength="100">
-											<div class="input-block__error">Сообщение не больше 100 символов</div>
+											<input type="text" name="msg" maxlength="500">
+											<div class="input-block__error">Сообщение не больше 500 символов</div>
 										</div>
 										<div class="input-block input-block__textarea">
 											<label>Сообщение</label>
-											<textarea name="msg-text" maxlength="100" placeholder="Сообщение"></textarea>
-											<div class="input-block__error">Сообщение не больше 100 символов</div>
+											<textarea name="msg-text" maxlength="500" placeholder="Сообщение"></textarea>
+											<div class="input-block__error">Сообщение не больше 500 символов</div>
 										</div>
 										<button class="button-primary" type="submit">Отправить сообщение</button>
 									</form>
@@ -646,13 +647,13 @@
 				</div>
 				<div class="input-block input-block__msg">
 					<label>Сообщение</label>
-					<input type="text" name="msg" maxlength="100">
-					<div class="input-block__error">Сообщение не больше 100 символов</div>
+					<input type="text" name="msg" maxlength="500">
+					<div class="input-block__error">Сообщение не больше 500 символов</div>
 				</div>
 				<div class="input-block input-block__textarea">
 					<label>Сообщение</label>
-					<textarea name="msg-text" maxlength="100" placeholder="Сообщение"></textarea>
-					<div class="input-block__error">Сообщение не больше 100 символов</div>
+					<textarea name="msg-text" maxlength="500" placeholder="Сообщение"></textarea>
+					<div class="input-block__error">Сообщение не больше 500 символов</div>
 				</div>
 				<button class="button-primary">Отправить сообщение</button>
 			</form>
@@ -712,5 +713,8 @@
 	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 	<script src="js/mask.js"></script>
 	<script src="js/main.js"></script>
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="js/lightbox.min.js"></script>
 </body>
 </html>
