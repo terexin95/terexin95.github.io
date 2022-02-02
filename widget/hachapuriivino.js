@@ -1,3 +1,26 @@
+$(function () {
+  $('.remarked-phone').mask('+7 (999) 999-99-99');
+  $('.remarked-phone').on('focus', function () {
+     if ($(this).val().length === 0) {
+       $(this).val('+7 (9');
+     }
+  });
+  
+  $('.remarked-phone').keydown(function (e) {
+        if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110, 190]) !== -1 ||
+             (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+             (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) ||
+             (e.keyCode == 88 && (e.ctrlKey === true || e.metaKey === true)) ||
+             (e.keyCode >= 35 && e.keyCode <= 39)) {
+                return;
+        }
+
+        if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) &&   (e.keyCode < 96 || e.keyCode > 105)) {
+            e.preventDefault();
+        }
+    });
+});
+
 function widgetRemarked(options) {
     if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
       window.document.addEventListener('touchmove', e => {
@@ -246,19 +269,19 @@ function widgetRemarked(options) {
     }
 
 
-    let remarkedPhone = remarkedWidgetClassic.querySelector('.remarked-phone');
+    // let remarkedPhone = remarkedWidgetClassic.querySelector('.remarked-phone');
 
-    remarkedPhone.addEventListener('input', function (e) {
-        this.value = this.value.replace (/[^0-9+]/, '')
-    });
-    remarkedPhone.addEventListener('focusin', function(){
+    // remarkedPhone.addEventListener('input', function (e) {
+    //     this.value = this.value.replace (/[^0-9+]/, '')
+    // });
+    // remarkedPhone.addEventListener('focusin', function(){
 
-        if (!this.classList.contains('clicked-phone-mask--active')) {
-            this.classList.add('clicked-phone-mask--active');
-            this.value = "+7";
-        }
+    //     if (!this.classList.contains('clicked-phone-mask--active')) {
+    //         this.classList.add('clicked-phone-mask--active');
+    //         this.value = "+7";
+    //     }
         
-    })
+    // })
 
     //Количество гостей
     /*
@@ -455,7 +478,7 @@ function widgetRemarked(options) {
                 } else {
                     remarkedUserInput.style.border = "2px solid #1aaf33";
                 }
-                if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value.length > 10) {
+                if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value.length == 18) {
                     remarkedPhoneInput.style.border = "2px solid #1aaf33";
                 } else {
                     remarkedPhoneInput.style.border = "2px solid" + options.color_red;
@@ -714,7 +737,7 @@ function widgetRemarked(options) {
     });
 
     remarkedPhoneInput.addEventListener('input', function(){
-        if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value.length > 10) {
+        if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value.length == 18) {
             remarkedPhoneInputVal = true;
             remarkedPhoneInputText = remarkedPhoneInput.value;
         } else {
@@ -723,7 +746,7 @@ function widgetRemarked(options) {
     });
 
     remarkedPhoneInput.addEventListener('change', function(){
-        if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value.length == 10) {
+        if (remarkedPhoneInput.value !== '' && remarkedPhoneInput.value.length == 18) {
             
         }
     });
