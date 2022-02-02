@@ -243,6 +243,20 @@ li
 		background: linear-gradient(309.83deg, #FFC136 11.17%, #FF8A2F 43.87%, #FF3676 83.17%)
 		transition: all .3s ease
 
+@keyframes fadeInModal
+	0%
+		opacity: 0
+	100% 
+		opacity: 1
+
+@keyframes fadeOutModal
+	0%
+		opacity: 1
+	100% 
+		opacity: 0
+
+
+
 .overlay
 	position: fixed
 	display: none
@@ -263,6 +277,13 @@ li
 	border-radius: 20px
 	width: 750px
 	z-index: 10
+	animation-name: fadeInModal
+	animation-duration: .5s
+	animation-iteration-count: 1
+	&.fadeOutModal
+		animation-name: fadeOutModal
+		animation-duration: .5s
+		animation-iteration-count: 1
 	&__close
 		cursor: pointer
 		position: absolute
