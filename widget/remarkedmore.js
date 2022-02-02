@@ -35,22 +35,20 @@ function widgetRemarked(options) {
         let remarkedBodyJSON = JSON.stringify(remarkedBody);
 
 
-        remarkedXHR.open('POST', remarkedReqUrl);
+        remarkedXHR.open('POST', remarkedReqUrl, false);
 
         remarkedXHR.responseType = 'json';
         remarkedXHR.setRequestHeader('Content-Type', 'application/json');
-        let token;
+
         remarkedXHR.onload = function(){
             
             console.log(remarkedXHR.response);
-            token = remarkedXHR.response.token;
+            remarkedToken = remarkedXHR.response.token;
             
 
         }
 
         remarkedXHR.send(remarkedBodyJSON);
-        
-        return token;
     }
 
     
