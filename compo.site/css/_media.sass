@@ -1,6 +1,14 @@
+@media (max-width: 1920px)
+	.not-founded-page__bg
+		min-height: 1237px !important
 @media (max-width: 1440px)
+	.not-founded-page__bg
+		min-height: 937px !important
 	.container-site
 		max-width: 100%
+
+	.block-products .button-primary
+		margin-bottom: 30px
 	
 	.block-wrapper, .site-footer__container 
 		max-width: 880px
@@ -37,6 +45,9 @@
 		padding: 0 50px
 
 @media (max-width: 1160px)
+	.block-products__item
+		> img 
+			display: none
 	.block-products__phone
 		display: none
 	.block-products__slider
@@ -374,7 +385,8 @@
 		top: 0
 		left: 0
 		transform: translate(0)
-		height: 100%
+		height: 150%
+		border-radius: 0
 	.modal-callback .modal-callback__container
 		padding: 33px
 		padding-top: 70px
@@ -483,4 +495,8 @@
 @media (max-width: 355px)
 	.site-header__phone
 		display: none
+	.site-header--active .mobile-menu
+		height: 260px
+	.mobile-menu .site-header__phone
+		display: block
 	

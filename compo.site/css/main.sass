@@ -81,9 +81,13 @@ li
 		align-items: center
 		justify-content: space-between
 		margin-bottom: 55px
-		&-prev
-			margin-right: 12px
+		&-nav
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-top: 40px
 		&-prev, &-next
+			margin: 0 6px
 			user-select: none
 			position: relative
 			cursor: pointer
@@ -353,7 +357,7 @@ li
 		margin: auto
 	&__dumbp
 		display: flex
-		align-items: center
+		align-items: flex-end
 		justify-content: space-between
 		&-link
 			font-size: 14px
@@ -369,6 +373,8 @@ li
 				color: $accent
 		.site-header__logo
 			flex: 0 0 33%
+			svg
+				vertical-align: bottom
 	&__social
 		display: flex
 		align-items: center
@@ -398,6 +404,11 @@ li
 			font-size: 14px
 			line-height: 18px
 			color: #FEFEFE
+		&-text a
+			transition: all .3s ease
+			&:hover
+				color: $accent
+				transition: all .3s ease
 
 .block-callback
 	padding: 60px 0
@@ -504,6 +515,7 @@ li
 	&__item
 		height: 150px
 		cursor: pointer
+		overflow: hidden
 		img
 			width: 100%
 			height: 100%
@@ -716,6 +728,11 @@ li
 	height: 0
 	overflow: hidden
 	transition: height .3s ease
+	.site-header__phone
+		display: block
+		opacity: 1 !important
+		margin-top: 20px
+		display: none
 	.button-primary
 		width: 200px
 		font-weight: 600
@@ -819,7 +836,7 @@ li
 		background-image: url(../img/404.png)
 		background-size: cover
 		background-repeat: no-repeat
-		min-height: 130vh !important
+		min-height: 1637px !important
 		.block-wrapper
 			background-color: transparent !important
 
@@ -853,6 +870,10 @@ li
 			border: 1px solid #000
 	.site-footer__line-text, .site-footer__line-text a, .site-footer__dumbp-link
 		color: #191C26
+
+.white-theme-site .site-footer__dumbp-link, .white-theme-site .site-footer__line-text a
+	&:hover
+		color: $accent
 
 .site-breadcrumbs
 	display: flex
