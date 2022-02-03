@@ -210,20 +210,12 @@ function widgetRemarked(options) {
             let dremarkedDescriptionsText = document.createElement('div');
             dremarkedDescriptionsText.classList.add('dremarkedDescriptionsText');
             dremarkedDescriptionsText.innerHTML += `
-
                     <div class="dremarkedDescriptionsText__close">&#10006;</div>
-                    <div class="dremarkedDescriptionsText__wrap">
-                        <strong>Онлайн мы бронируем столики на 2 часа. </strong>
-                        <br>Если вам нужно больше времени / ваша компания больше 6 человек / у вас есть определённые пожелания по столику - позвоните нам по телефону <a href="tel:+78129028000">+78129028000</a>
-                        <br><br>
-                        В каждом ресторане есть столы, которые не бронируются, чтобы небольшие компании могли попасть к нам спонтанно. Но без брони, возможно, придется подождать.
-                        <br><br>
-                        Если вы хотите прийти со своим алкоголем, пробковый сбор за бутылку вина 0,75л составит 500 рублей, а за 1 литр крепкого алкоголя - 800 рублей. Обязательно возьмите с собой чек.
-                    </div>
+                    <div class="dremarkedDescriptionsText__wrap"></div>
             `;
             document.querySelector('body').append(dremarkedDescriptionsText);
             let remarkedDescriptionsText__close = document.querySelectorAll('.dremarkedDescriptionsText__close');
-            console.log(remarkedDescriptionsText__close);
+            //console.log(remarkedDescriptionsText__close);
 
             for (var i = 0; i < remarkedDescriptionsText__close.length; i++) {
                 remarkedDescriptionsText__close[i].addEventListener('click', function(){
@@ -446,7 +438,7 @@ function widgetRemarked(options) {
         } else {
             remarkedCodInputVal = false;
         }
-        console.log(remarkedCodInputVal)
+        //console.log(remarkedCodInputVal)
         //console.log(remarkedCodInputVal)
     });
 
