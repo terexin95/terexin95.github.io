@@ -42,7 +42,7 @@ function widgetRemarked(options) {
 
         remarkedXHR.onload = function(){
             
-            console.log(remarkedXHR.response);
+            //console.log(remarkedXHR.response);
             remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-0').style.display = "none";
             remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--active');
             remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.remove('remarked-widget-classic__step-1--none');
@@ -99,6 +99,11 @@ function widgetRemarked(options) {
 
                 </div>
                 <div class="remarked-widget-classic__step remarked-widget-classic__step-1 remarked-widget-classic__step-1--none">
+                    <div class="prevStep0 arrow-remarked-prev">
+                        <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.238655 6.45579L6.83882 0.2253C7.15702 -0.0750999 7.67322 -0.0750999 7.99142 0.2253L8.7613 0.952094C9.07917 1.25217 9.07951 1.7382 8.76266 2.03892L3.53177 6.99984L8.76232 11.9611C9.07951 12.2618 9.07883 12.7478 8.76096 13.0479L7.99108 13.7747C7.67288 14.0751 7.15668 14.0751 6.83848 13.7747L0.238655 7.54389C-0.0795517 7.24349 -0.0795517 6.75619 0.238655 6.45579V6.45579Z" fill="#696969"/>
+                        </svg>                    
+                    </div>
                     <div class="remarked-widget-text">
                         Пожалуйста, ознакомьтесь с правилами бронирования
                         <a href="#" class="remarked-widget-info">
@@ -407,6 +412,12 @@ function widgetRemarked(options) {
     remarkedWidgetClassic.querySelector('.prevStep1').addEventListener('click', function(){
         remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2--active').classList.remove('remarked-widget-classic__step-2--active');
         remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1--none').classList.remove('remarked-widget-classic__step-1--none');
+    });
+
+    remarkedWidgetClassic.querySelector('.prevStep0').addEventListener('click', function(){
+        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-0').style.display = "block";
+            remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.remove('remarked-widget-classic__step-1--active');
+            remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--none');
     });
 
     let remarkedUserInput = remarkedWidgetClassic.querySelector('#remarkedUserInput');
