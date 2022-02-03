@@ -53,7 +53,7 @@ function widgetRemarked(options) {
     remarkedXHR.onload = function(){
         
         remarkedToken = remarkedXHR.response.token;
-        //console.log(remarkedXHR.response.token);
+        console.log(remarkedXHR.response.token);
         
 
     }
