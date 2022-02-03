@@ -18,7 +18,7 @@ function widgetRemarked(options) {
         remarkedWidgetRooms.append(room);
     })
 
-    console.log(remarkedWidgetRooms)
+    //console.log(remarkedWidgetRooms)
     let remarkedToken;
     let remarkedArrDays;
     const remarkedReqUrl = "https://app.remarked.ru/api/v1/ApiReservesWidget";
@@ -43,7 +43,9 @@ function widgetRemarked(options) {
         remarkedXHR.onload = function(){
             
             console.log(remarkedXHR.response);
-            
+            remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-0').style.display = "none";
+            remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--active');
+            remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.remove('remarked-widget-classic__step-1--none');
             
 
         }
@@ -273,12 +275,8 @@ function widgetRemarked(options) {
                     remarkedWidgetClassic.querySelector('.remarked-widget__title').textContent = this.getAttribute('data-title');
                     //console.log(+this.getAttribute('data-point'))
                     let point = +this.getAttribute('data-point');
-                    remarkedToken = getToken(point);
-                    console.log(remarkedToken);
-
-                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-0').style.display = "none";
-                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--active');
-                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.remove('remarked-widget-classic__step-1--none');
+                    getToken(point);
+                    //console.log(remarkedToken);
                 });
             }
         });
