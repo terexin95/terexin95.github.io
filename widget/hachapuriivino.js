@@ -102,20 +102,20 @@ function widgetRemarked(options) {
                     <div class="remarked-widget-title">Ваши данные</div>
                     <div class="remarked-widget-row">
                         <div class="remarked-widget-column">
-                            <input type="text" placeholder="Имя Фамилия" id="remarkedUserInput" name="userName">
+                            <input autocomplete="off" type="text" placeholder="Имя Фамилия" id="remarkedUserInput" name="userName">
                         </div>
                         
                         <div class="remarked-widget-column ">
-                            <input type="text" placeholder="email@exemple.ru" id="remarkedEmailInput" name="userEmail">
+                            <input autocomplete="off" type="text" placeholder="email@exemple.ru" id="remarkedEmailInput" name="userEmail">
                         </div>
                         <div class="remarked-widget-column mt-2">
-                            <input type="tel" class="remarked-phone" id="remarkedPhoneInput" name="userPhone" placeholder="7 (900) 123-4567">
+                            <input autocomplete="off" type="tel" class="remarked-phone" id="remarkedPhoneInput" name="userPhone" placeholder="7 (900) 123-4567">
                         </div>
                     </div>
                     <button class="mb-2 nextStep2">Продолжить</button>
                     <div class="remarked-cod-phone" style="display: none;">
                         <div class="remarked-widget-title">Секретный код придет на ваш телефон в течение пары минут</div>
-                        <input type="text" name="cod" maxlength="6" placeholder="Введите код" class="remarked-cod-phone-input">
+                        <input autocomplete="off" type="text" name="cod" maxlength="6" placeholder="Введите код" class="remarked-cod-phone-input">
                         <button class="mt-2 nextCode">Продолжить</button>
                     </div>
                 </div>
@@ -208,7 +208,7 @@ function widgetRemarked(options) {
             `;
             document.querySelector('body').append(dremarkedDescriptionsText);
             let remarkedDescriptionsText__close = document.querySelectorAll('.dremarkedDescriptionsText__close');
-            console.log(remarkedDescriptionsText__close);
+            //console.log(remarkedDescriptionsText__close);
 
             for (var i = 0; i < remarkedDescriptionsText__close.length; i++) {
                 remarkedDescriptionsText__close[i].addEventListener('click', function(){
@@ -426,7 +426,7 @@ function widgetRemarked(options) {
         } else {
             remarkedCodInputVal = false;
         }
-        console.log(remarkedCodInputVal)
+        //console.log(remarkedCodInputVal)
         //console.log(remarkedCodInputVal)
     });
 
@@ -606,7 +606,7 @@ function widgetRemarked(options) {
         if (options.smsCode == true) {
             remarkedBodyRooms.confirm_code = remarkedWidgetClassic.querySelector('.remarked-cod-phone-input').value;
         }
-        console.log(remarkedBodyRooms);
+        //console.log(remarkedBodyRooms);
         const remarkedXHRRoom = new XMLHttpRequest();
         
         let remarkedBodyRoomsJSON = JSON.stringify(remarkedBodyRooms);
