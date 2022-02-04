@@ -102,20 +102,20 @@ function widgetRemarked(options) {
                     <div class="remarked-widget-title">Ваши данные</div>
                     <div class="remarked-widget-row">
                         <div class="remarked-widget-column">
-                            <input autocomplete="off" type="text" placeholder="Имя Фамилия" id="remarkedUserInput" name="userName">
+                            <input autocomplete="hgbfiwyeal" type="text" placeholder="Имя Фамилия" id="remarkedUserInput" name="userName">
                         </div>
                         
                         <div class="remarked-widget-column ">
-                            <input autocomplete="off" type="text" placeholder="email@exemple.ru" id="remarkedEmailInput" name="userEmail">
+                            <input autocomplete="hgbfiwyeal" type="text" placeholder="email@exemple.ru" id="remarkedEmailInput" name="userEmail">
                         </div>
                         <div class="remarked-widget-column mt-2">
-                            <input autocomplete="off" type="tel" class="remarked-phone" id="remarkedPhoneInput" name="userPhone" placeholder="7 (900) 123-4567">
+                            <input autocomplete="hgbfiwyeal" type="tel" class="remarked-phone" id="remarkedPhoneInput" name="userPhone" placeholder="7 (900) 123-4567">
                         </div>
                     </div>
                     <button class="mb-2 nextStep2">Продолжить</button>
                     <div class="remarked-cod-phone" style="display: none;">
                         <div class="remarked-widget-title">Секретный код придет на ваш телефон в течение пары минут</div>
-                        <input autocomplete="off" type="text" name="cod" maxlength="6" placeholder="Введите код" class="remarked-cod-phone-input">
+                        <input autocomplete="hgbfiwyeal" type="text" name="cod" maxlength="6" placeholder="Введите код" class="remarked-cod-phone-input">
                         <button class="mt-2 nextCode">Продолжить</button>
                     </div>
                 </div>
