@@ -102,14 +102,14 @@ function widgetRemarked(options) {
                     <div class="remarked-widget-title">Ваши данные</div>
                     <div class="remarked-widget-row">
                         <div class="remarked-widget-column">
-                            <input autocomplete="hgbfiwyeal" type="text" placeholder="Имя Фамилия" id="remarkedUserInput" name="userName">
+                            <input autocomplete="hgbfiwyealdfwsse" type="text" placeholder="Имя Фамилия" id="remarkedUserInput" name="userName">
                         </div>
                         
                         <div class="remarked-widget-column ">
-                            <input autocomplete="hgbfiwyeal" type="text" placeholder="email@exemple.ru" id="remarkedEmailInput" name="userEmail">
+                            <input autocomplete="hgbfiwyealdsfdf" type="text" placeholder="email@exemple.ru" id="remarkedEmailInput" name="userEmail">
                         </div>
                         <div class="remarked-widget-column mt-2">
-                            <input autocomplete="hgbfiwyeal" type="tel" class="remarked-phone" id="remarkedPhoneInput" name="userPhone" placeholder="7 (900) 123-4567">
+                            <input autocomplete="hgbfiwyealqwewq" type="tel" class="remarked-phone" id="remarkedPhoneInput" name="userPhone" placeholder="7 (900) 123-4567">
                         </div>
                     </div>
                     <button class="mb-2 nextStep2">Продолжить</button>
