@@ -299,7 +299,7 @@ function widgetRemarked(options) {
         const defaultOptions = {
             min: 1,
             max: 250,
-            value: 1,
+            value: 2,
         };
 
         options = Object.assign({}, defaultOptions, options);
@@ -380,7 +380,7 @@ function widgetRemarked(options) {
     if (numberInputs.length > 0) {
     numberInputs.forEach((el, index) => {
         quantityInput(el, {
-        min: 1,
+        min: 2,
         max: options.maxPeople,
         value: 1,
         });
@@ -643,6 +643,8 @@ function widgetRemarked(options) {
                             <div class="remarked-success-text">
                                 Вы забронировали столик, будем вас ждать! <br>
                                 ${remarkedWidgetClassic.querySelector("#start").value}, ${remarkedWidgetClassic.querySelector('.remarked-widget__time--active').textContent}, столик на ${remarkedSucsessStroke}
+                                <br><br>
+                                <strong>Обращаем внимание</strong>, что столик будет в вашем распоряжении <strong>на 2 часа.</strong>
                             </div>
                             <div class="remarked-success-button">
                                 <button id="remarkedCloseModal">Завершить</button>
