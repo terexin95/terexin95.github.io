@@ -644,7 +644,7 @@ function widgetRemarked(options) {
                                 Вы забронировали столик, будем вас ждать! <br>
                                 ${remarkedWidgetClassic.querySelector("#start").value}, ${remarkedWidgetClassic.querySelector('.remarked-widget__time--active').textContent}, столик на ${remarkedSucsessStroke}
                                 <br><br>
-                                <strong>Обращаем внимание</strong>, что столик будет в вашем распоряжении <strong>на 2 часа.</strong>
+                                <strong>Обращаем внимание</strong>, что столик <br> будет в вашем распоряжении <strong>на 2 часа.</strong>
                             </div>
                             <div class="remarked-success-button">
                                 <button id="remarkedCloseModal">Завершить</button>
@@ -685,6 +685,8 @@ function widgetRemarked(options) {
                         <div class="remarked-success-text">
                             Вы забронировали столик, будем вас ждать! <br>
                             ${remarkedWidgetClassic.querySelector("#start").value}, ${remarkedWidgetClassic.querySelector('.remarked-widget__time--active').textContent}, столик на ${remarkedSucsessStroke}
+                            <br><br>
+                            <strong>Обращаем внимание</strong>, что столик <br> будет в вашем распоряжении <strong>на 2 часа.</strong>
                         </div>
                         <div class="remarked-success-button">
                             <button id="remarkedCloseModal">Завершить</button>
