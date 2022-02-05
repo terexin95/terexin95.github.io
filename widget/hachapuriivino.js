@@ -380,9 +380,9 @@ function widgetRemarked(options) {
     if (numberInputs.length > 0) {
     numberInputs.forEach((el, index) => {
         quantityInput(el, {
-        min: 2,
+        min: 1,
         max: options.maxPeople,
-        value: 1,
+        value: 2,
         });
     });
     }
