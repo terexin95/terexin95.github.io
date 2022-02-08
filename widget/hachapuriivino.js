@@ -114,7 +114,7 @@ function widgetRemarked(options) {
                     </div>
                     <button class="mb-2 nextStep2">Продолжить</button>
                     <div class="remarked-cod-phone" style="display: none;">
-                        <div class="remarked-widget-title">Секретный код придет на ваш телефон в течение пары минут</div>
+                        <div class="remarked-widget-title">Код авторизации придет на ваш телефон в течение пары минут</div>
                         <input autocomplete="hgbfiwyeal" type="text" name="cod" maxlength="6" placeholder="Введите код" class="remarked-cod-phone-input">
                         <button class="mt-2 nextCode">Продолжить</button>
                     </div>
