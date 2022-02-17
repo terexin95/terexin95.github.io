@@ -565,6 +565,7 @@ function widgetRemarked(options) {
     }
 
     function sendReserveRemarked() {
+        remarkedWidgetClassic.querySelector('.remarkedSend').setAttribute('disabled', 'disabled');
         let remarkedBodyRooms = {
             method: 'CreateReserve',
             token: remarkedToken,
