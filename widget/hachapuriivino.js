@@ -619,6 +619,7 @@ function widgetRemarked(options) {
         remarkedXHRRoom.setRequestHeader('Content-Type', 'application/json');
 
         remarkedXHRRoom.onload = function(){
+            console.log(remarkedXHRRoom.response);
             if (options.smsCode) {
                 if(remarkedXHRRoom.status == 200 && remarkedXHRRoom.response.status == "success") {
                     remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').style.display="none";
