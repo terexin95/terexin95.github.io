@@ -30,6 +30,7 @@ function widgetRemarked(options) {
       }, {passive: false});
     }
     let remarkedToken;
+    let remarkedLog = [];
     let remarkedArrDays;
     const remarkedReqUrl = "https://app.remarked.ru/api/v1/ApiReservesWidget";
 
@@ -51,7 +52,7 @@ function widgetRemarked(options) {
     remarkedXHR.setRequestHeader('Content-Type', 'application/json');
 
     remarkedXHR.onload = function(){
-        
+        remarkedLog.push(remarkedXHR.response);
         remarkedToken = remarkedXHR.response.token;
         console.log(remarkedXHR.response.token);
         
@@ -172,6 +173,10 @@ function widgetRemarked(options) {
     `;
 
     document.querySelector('body').append(remarkedWidgetClassic);
+
+    remarkedWidgetClassic.querySelector('.remarked-widget__title').addEventListener('click', function(){
+        alert(remarkedLog);
+    });
     let remarkedOverlay = document.querySelectorAll('.overlay'); 
     let remarkedClose = document.querySelectorAll('.remarked-widget__close');
     for (var i = remarkedClose.length - 1; i >= 0; i--) {
@@ -501,7 +506,7 @@ function widgetRemarked(options) {
                  phone: remarkedPhoneInputText.replace(/[^+\d]/g, ''),
                  request_id: new Date().getTime()
             };
-            console.log(data);
+            //console.log(data);
             const remarkedXHRCod = new XMLHttpRequest();
             
             let dataJSON = JSON.stringify(data);
@@ -513,6 +518,7 @@ function widgetRemarked(options) {
             remarkedXHRCod.setRequestHeader('Content-Type', 'application/json');
 
             remarkedXHRCod.onload = function(){ 
+                remarkedLog.push(remarkedXHRCod.response);
                 if (remarkedXHRCod.response.status == "error") {
                     remarkedPhoneInput.style.border = "2px solid" + options.color_red;
                     remarkedPhoneInputVal == false;
@@ -545,6 +551,7 @@ function widgetRemarked(options) {
         remarkedXHRRoom.responseType = 'json';
         remarkedXHRRoom.setRequestHeader('Content-Type', 'application/json');
         remarkedXHRRoom.onload = function(){
+            remarkedLog.push(remarkedXHRRoom.response);
             if(remarkedXHRRoom.response.status == "success") {
                 remarkedCod.setAttribute('readonly', 'readonly');
                 if(options.date == false && options.qty == false && options.time == false && options.text == false) {
@@ -619,7 +626,7 @@ function widgetRemarked(options) {
         remarkedXHRRoom.setRequestHeader('Content-Type', 'application/json');
 
         remarkedXHRRoom.onload = function(){
-            console.log(remarkedXHRRoom.response);
+            remarkedLog.push(remarkedXHRRoom.response);
             if (options.smsCode) {
                 if(remarkedXHRRoom.status == 200 && remarkedXHRRoom.response.status == "success") {
                     remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').style.display="none";
@@ -807,6 +814,7 @@ function widgetRemarked(options) {
             remarkedXHRDays.setRequestHeader('Content-Type', 'application/json');
 
             remarkedXHRDays.onload = function(){
+                remarkedLog.push(remarkedXHRDays.response);
                 remarkedArrDays = remarkedXHRDays.response;
                 remarkedArrDays = remarkedArrDays.times;
                 for (let i = 0; i < remarkedArrDays.length; i++) {
