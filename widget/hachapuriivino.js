@@ -31,6 +31,7 @@ function widgetRemarked(options) {
     }
     let remarkedToken;
     let remarkedLog = [];
+    let remarkedData = [];
     let remarkedArrDays;
     const remarkedReqUrl = "https://app.remarked.ru/api/v1/ApiReservesWidget";
 
@@ -44,6 +45,7 @@ function widgetRemarked(options) {
 
 
     let remarkedBodyJSON = JSON.stringify(remarkedBody);
+    remarkedData.push(remarkedBodyJSON);
 
 
     remarkedXHR.open('POST', remarkedReqUrl);
@@ -176,6 +178,7 @@ function widgetRemarked(options) {
 
     remarkedWidgetClassic.querySelector('.remarked-widget__title').addEventListener('click', function(){
         alert(remarkedLog);
+        alert(remarkedData);
         console.log(remarkedLog);
     });
     let remarkedOverlay = document.querySelectorAll('.overlay'); 
@@ -511,7 +514,7 @@ function widgetRemarked(options) {
             const remarkedXHRCod = new XMLHttpRequest();
             
             let dataJSON = JSON.stringify(data);
-
+            remarkedData.push(dataJSON);
 
             remarkedXHRCod.open('POST', remarkedReqUrl);
 
@@ -546,7 +549,7 @@ function widgetRemarked(options) {
         
         let remarkedBodyRoomsJSON = JSON.stringify(data);
 
-
+        remarkedData.push(remarkedBodyRoomsJSON);
         remarkedXHRRoom.open('POST', remarkedReqUrl);
 
         remarkedXHRRoom.responseType = 'json';
@@ -619,7 +622,7 @@ function widgetRemarked(options) {
         const remarkedXHRRoom = new XMLHttpRequest();
         
         let remarkedBodyRoomsJSON = JSON.stringify(remarkedBodyRooms);
-
+        remarkedData.push(remarkedBodyRoomsJSON);
 
         remarkedXHRRoom.open('POST', remarkedReqUrl);
 
@@ -807,7 +810,7 @@ function widgetRemarked(options) {
             const remarkedXHRDays = new XMLHttpRequest();
                     
             let remarkedGetDaysJSON = JSON.stringify(remarkedGetDays);
-
+            remarkedData.push(remarkedGetDaysJSON);
 
             remarkedXHRDays.open('POST', remarkedReqUrl);
 
