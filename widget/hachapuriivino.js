@@ -507,7 +507,7 @@ function widgetRemarked(options) {
             let data = {
                  method: 'GetSMSCode',
                  token: remarkedToken,
-                 phone: remarkedPhoneInputText.replace(/[^+\d]/g, ''),
+                 phone: remarkedPhoneInputText.replace(/\D+/g,""),
                  request_id: new Date().getTime()
             };
             //console.log(data);
