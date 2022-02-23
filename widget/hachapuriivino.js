@@ -52,7 +52,7 @@ function widgetRemarked(options) {
     remarkedXHR.setRequestHeader('Content-Type', 'application/json');
 
     remarkedXHR.onload = function(){
-        remarkedLog.push(remarkedXHR.response);
+        remarkedLog.push(JSON.stringify(remarkedXHR.response));
         remarkedToken = remarkedXHR.response.token;
         console.log(remarkedXHR.response.token);
         
@@ -176,6 +176,7 @@ function widgetRemarked(options) {
 
     remarkedWidgetClassic.querySelector('.remarked-widget__title').addEventListener('click', function(){
         alert(remarkedLog);
+        console.log(remarkedLog);
     });
     let remarkedOverlay = document.querySelectorAll('.overlay'); 
     let remarkedClose = document.querySelectorAll('.remarked-widget__close');
@@ -518,7 +519,7 @@ function widgetRemarked(options) {
             remarkedXHRCod.setRequestHeader('Content-Type', 'application/json');
 
             remarkedXHRCod.onload = function(){ 
-                remarkedLog.push(remarkedXHRCod.response);
+                remarkedLog.push(JSON.stringify(remarkedXHRCod.response));
                 if (remarkedXHRCod.response.status == "error") {
                     remarkedPhoneInput.style.border = "2px solid" + options.color_red;
                     remarkedPhoneInputVal == false;
@@ -551,7 +552,7 @@ function widgetRemarked(options) {
         remarkedXHRRoom.responseType = 'json';
         remarkedXHRRoom.setRequestHeader('Content-Type', 'application/json');
         remarkedXHRRoom.onload = function(){
-            remarkedLog.push(remarkedXHRRoom.response);
+            remarkedLog.push(JSON.stringify(remarkedXHRRoom.response));
             if(remarkedXHRRoom.response.status == "success") {
                 remarkedCod.setAttribute('readonly', 'readonly');
                 if(options.date == false && options.qty == false && options.time == false && options.text == false) {
@@ -626,7 +627,7 @@ function widgetRemarked(options) {
         remarkedXHRRoom.setRequestHeader('Content-Type', 'application/json');
 
         remarkedXHRRoom.onload = function(){
-            remarkedLog.push(remarkedXHRRoom.response);
+            remarkedLog.push(JSON.stringify(remarkedXHRRoom.response));
             if (options.smsCode) {
                 if(remarkedXHRRoom.status == 200 && remarkedXHRRoom.response.status == "success") {
                     remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').style.display="none";
@@ -814,7 +815,7 @@ function widgetRemarked(options) {
             remarkedXHRDays.setRequestHeader('Content-Type', 'application/json');
 
             remarkedXHRDays.onload = function(){
-                remarkedLog.push(remarkedXHRDays.response);
+                remarkedLog.push(JSON.stringify(remarkedXHRDays.response));
                 remarkedArrDays = remarkedXHRDays.response;
                 remarkedArrDays = remarkedArrDays.times;
                 for (let i = 0; i < remarkedArrDays.length; i++) {
