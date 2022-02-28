@@ -643,6 +643,7 @@ function widgetRemarked(options) {
             if (remarkedXHRRoom.response.status == "error" && remarkedXHRRoom.response.message == "Can not find or free table") {
                 remarkedWidgetClassic.querySelector('.remarked-widget__time--active').classList.remove('.remarked-widget__time--active');
                 alert('Выберите другое время');
+                remarkedWidgetClassic.querySelector('.remarkedSend').removeAttribute('disabled');
             } else {
                 if (options.smsCode) {
                     if(remarkedXHRRoom.status == 200 && remarkedXHRRoom.response.status == "success") {
