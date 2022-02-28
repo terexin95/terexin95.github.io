@@ -576,7 +576,7 @@ function widgetRemarked(options) {
     }
 
     function sendReserveRemarked() {
-        
+        console.log(remarkedWidgetClassic.querySelector('.remarkedSend'));
         let remarkedBodyRooms = {
             method: 'CreateReserve',
             token: remarkedToken,
@@ -629,7 +629,7 @@ function widgetRemarked(options) {
         remarkedXHRRoom.responseType = 'json';
         remarkedXHRRoom.setRequestHeader('Content-Type', 'application/json');
 
-        remarkedXHR.onreadystatechange = function() {
+        remarkedXHRRoom.onreadystatechange = function() {
             if (remarkedXHR.readyState == 0) {
                 remarkedWidgetClassic.querySelector('.remarkedSend').setAttribute('disabled', 'disabled');
             }
@@ -641,7 +641,7 @@ function widgetRemarked(options) {
         remarkedXHRRoom.onload = function(){
             remarkedLog.push(JSON.stringify(remarkedXHRRoom.response));
             if (remarkedXHRRoom.response.status == "error" && remarkedXHRRoom.response.message == "Can not find or free table") {
-                remarkedWidgetClassic.querySelector('.remarked-widget__time--active').classList.remove('.remarked-widget__time--active');
+                remarkedWidgetClassic.querySelector('.remarked-widget__time--active').classList.remove('remarked-widget__time--active');
                 alert('Выберите другое время');
                 remarkedWidgetClassic.querySelector('.remarkedSend').removeAttribute('disabled');
             } else {
