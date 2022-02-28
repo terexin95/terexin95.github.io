@@ -576,7 +576,7 @@ function widgetRemarked(options) {
     }
 
     function sendReserveRemarked() {
-        remarkedWidgetClassic.querySelector('.remarkedSend').setAttribute('disabled', 'disabled');
+        
         let remarkedBodyRooms = {
             method: 'CreateReserve',
             token: remarkedToken,
@@ -629,8 +629,21 @@ function widgetRemarked(options) {
         remarkedXHRRoom.responseType = 'json';
         remarkedXHRRoom.setRequestHeader('Content-Type', 'application/json');
 
+        remarkedXHR.onreadystatechange = function() {
+            if (remarkedXHR.readyState == 1) {
+                remarkedWidgetClassic.querySelector('.remarkedSend').setAttribute('disabled', 'disabled');
+            }
+            if (remarkedXHR.readyState == 2) {
+                remarkedWidgetClassic.querySelector('.remarkedSend').setAttribute('disabled', 'disabled');
+            }
+        }
+
         remarkedXHRRoom.onload = function(){
             remarkedLog.push(JSON.stringify(remarkedXHRRoom.response));
+            if (remarkedXHRRoom.response.status == "error" && remarkedXHRRoom.response.message == "Can not find or free table") {
+                remarkedWidgetClassic.querySelector('.remarked-widget__time--active').classList.remove('.remarked-widget__time--active');
+                alert('Выберите другое время');
+            }
             if (options.smsCode) {
                 if(remarkedXHRRoom.status == 200 && remarkedXHRRoom.response.status == "success") {
                     remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').style.display="none";
@@ -675,43 +688,45 @@ function widgetRemarked(options) {
                 }
                 //console.log(remarkedXHRRoom.response);
             } else {
-                remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').style.display="none";
-                remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').style.display="none";
-                remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').style.display="none";
-                let remarkedSucsess = document.createElement('div');
-                remarkedSucsess.classList.add('success-reserve-remarked')
-                let remarkedSucsessStroke = remarkedWidgetClassic.querySelector('.remarked-quantity input').value;
-                if (remarkedSucsessStroke == 1) {
-                    remarkedSucsessStroke = remarkedSucsessStroke + ' человекa';
-                } else {
-                    remarkedSucsessStroke = remarkedSucsessStroke + ' человек';
-                }
-                remarkedSucsess.innerHTML += `
-                    <div class="remarked-widget-classic__step-4">
-                        <div class="remarked-success-wrap">
-                            <div class="circle-border"></div>
-                            <div class="circle">
-                                <div class="success"></div>
+                if(remarkedXHRRoom.status == 200 && remarkedXHRRoom.response.status == "success") {
+                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').style.display="none";
+                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').style.display="none";
+                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').style.display="none";
+                    let remarkedSucsess = document.createElement('div');
+                    remarkedSucsess.classList.add('success-reserve-remarked')
+                    let remarkedSucsessStroke = remarkedWidgetClassic.querySelector('.remarked-quantity input').value;
+                    if (remarkedSucsessStroke == 1) {
+                        remarkedSucsessStroke = remarkedSucsessStroke + ' человекa';
+                    } else {
+                        remarkedSucsessStroke = remarkedSucsessStroke + ' человек';
+                    }
+                    remarkedSucsess.innerHTML += `
+                        <div class="remarked-widget-classic__step-4">
+                            <div class="remarked-success-wrap">
+                                <div class="circle-border"></div>
+                                <div class="circle">
+                                    <div class="success"></div>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="remarked-success-text">
+                                Вы забронировали столик, будем вас ждать! <br>
+                                ${remarkedWidgetClassic.querySelector("#start").value}, ${remarkedWidgetClassic.querySelector('.remarked-widget__time--active').textContent}, столик на ${remarkedSucsessStroke}
+                                <br><br>
+                                <strong>Обращаем внимание</strong>, что столик <br> будет в вашем распоряжении <strong>на 2 часа.</strong>
+                            </div>
+                            <div class="remarked-success-button">
+                                <button id="remarkedCloseModal">Завершить</button>
+                            </div>
                         </div>
-                        <div class="remarked-success-text">
-                            Вы забронировали столик, будем вас ждать! <br>
-                            ${remarkedWidgetClassic.querySelector("#start").value}, ${remarkedWidgetClassic.querySelector('.remarked-widget__time--active').textContent}, столик на ${remarkedSucsessStroke}
-                            <br><br>
-                            <strong>Обращаем внимание</strong>, что столик <br> будет в вашем распоряжении <strong>на 2 часа.</strong>
-                        </div>
-                        <div class="remarked-success-button">
-                            <button id="remarkedCloseModal">Завершить</button>
-                        </div>
-                    </div>
-                `;
-                remarkedWidgetClassic.querySelector('.remarked-widget-classic__body').append(remarkedSucsess);
-                let remarkedCloseModal = remarkedWidgetClassic.querySelector('#remarkedCloseModal');
-                remarkedCloseModal.addEventListener('click', function(){
-                    remarkedWidgetClassic.classList.remove('remarked-widget-active');
-                    remarkedWidgetClassic.classList.add('remarked-widget-none');
-                });
+                    `;
+                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__body').append(remarkedSucsess);
+                    let remarkedCloseModal = remarkedWidgetClassic.querySelector('#remarkedCloseModal');
+                    remarkedCloseModal.addEventListener('click', function(){
+                        remarkedWidgetClassic.classList.remove('remarked-widget-active');
+                        remarkedWidgetClassic.classList.add('remarked-widget-none');
+                    });
+                }
             }
         }
 
