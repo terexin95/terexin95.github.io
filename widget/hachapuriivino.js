@@ -576,7 +576,7 @@ function widgetRemarked(options) {
     }
 
     function sendReserveRemarked() {
-        console.log(remarkedWidgetClassic.querySelector('.remarkedSend'));
+        remarkedWidgetClassic.querySelector('.remarkedSend').setAttribute('disabled', 'disabled');
         let remarkedBodyRooms = {
             method: 'CreateReserve',
             token: remarkedToken,
@@ -606,7 +606,11 @@ function widgetRemarked(options) {
             remarkedBodyRooms.reserve.date = "";
         }
         if (options.time == true) {
-            remarkedBodyRooms.reserve.time = remarkedWidgetClassic.querySelector('.remarked-widget__time--active').textContent;
+            if (!remarkedWidgetClassic.querySelector('.remarked-widget__time--active').textContent) {
+                remarkedWidgetClassic.querySelector('.remarkedSend').removeAttribute('disabled');
+            } else {
+                remarkedBodyRooms.reserve.time = remarkedWidgetClassic.querySelector('.remarked-widget__time--active').textContent;
+            }
         } else {
             remarkedBodyRooms.reserve.time = "";
         }
@@ -631,7 +635,7 @@ function widgetRemarked(options) {
 
         remarkedXHRRoom.onreadystatechange = function() {
             if (remarkedXHR.readyState == 0) {
-                remarkedWidgetClassic.querySelector('.remarkedSend').setAttribute('disabled', 'disabled');
+                
             }
             if (remarkedXHR.readyState == 1) {
                 remarkedWidgetClassic.querySelector('.remarkedSend').setAttribute('disabled', 'disabled');
