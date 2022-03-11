@@ -256,6 +256,9 @@ function widgetRemarked(options) {
                     }
                     option[i].setAttribute('value', day + '.' + arr1[date.getMonth()] + '.' + date.getFullYear())
                     option[i].textContent = day + ' ' + arr[date.getMonth()] + ' ' + date.getFullYear();
+                    if (i == 0) {
+                        option[i].remove();
+                    }
                 }
                 // let numberInputs = remarkedWidgetClassic.querySelectorAll('.remarked-widget-' + options.classButton + ' .remarked-quantity');
 
@@ -845,6 +848,12 @@ function widgetRemarked(options) {
                 remarkedLog.push(JSON.stringify(remarkedXHRDays.response));
                 remarkedArrDays = remarkedXHRDays.response;
                 remarkedArrDays = remarkedArrDays.times;
+                if (!remarkedArrDays) {
+                    remarkedWidgetTimes.style.color = "#000";
+                    remarkedWidgetTimes.textContent = "Нету свободного времени выберите другую дату";
+                    remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3 .remarked-widget-title').after(remarkedWidgetTimes);
+                    return false;
+                }
                 for (let i = 0; i < remarkedArrDays.length; i++) {
                     if (window.innerWidth > 450) {
                         if (remarkedArrDays[i].is_free === true) {
