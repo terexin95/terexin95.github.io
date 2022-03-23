@@ -84,7 +84,7 @@ function widgetRemarked(options) {
             let dateSelect = document.querySelector('.remarked-widget-' +  options.classButton + ' #start');
             let option = dateSelect.querySelectorAll('option');
             for (var i = 0; i < option.length; i++) {
-                let date = dates.split('-');
+                let date = dates[i].split('-');
                 let day = date[2];
                 let mm = date[1];
                 let year = date[0];
