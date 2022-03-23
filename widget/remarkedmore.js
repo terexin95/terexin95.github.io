@@ -79,7 +79,7 @@ function widgetRemarked(options) {
         xhr.setRequestHeader('Content-Type', 'application/json');
 
         xhr.onload = function() {
-            console.log(xhr.response);
+            //console.log(xhr.response);
             let dates = xhr.response.dates;
             let dateSelect = document.querySelector('.remarked-widget-' +  options.classButton + ' #start');
             let option = dateSelect.querySelectorAll('option');
@@ -90,7 +90,6 @@ function widgetRemarked(options) {
                 let year = date[0];
                 let arr = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентебря', 'октября', 'ноября', 'декабря'];
                 let text = day + ' ' + arr[+mm-1] + ' ' + year;
-                console.log(text);
                 option[i].setAttribute('value', dates[i]);
                 option[i].textContent = text;
             }
@@ -579,7 +578,7 @@ function widgetRemarked(options) {
                  phone: remarkedPhoneInputText.replace(/[^+\d]/g, ''),
                  request_id: new Date().getTime()
             };
-            console.log(data);
+            //console.log(data);
             const remarkedXHRCod = new XMLHttpRequest();
             
             let dataJSON = JSON.stringify(data);
