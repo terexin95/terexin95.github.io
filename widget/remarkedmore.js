@@ -46,6 +46,7 @@ function widgetRemarked(options) {
             remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-0').style.display = "none";
             remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.add('remarked-widget-classic__step-1--active');
             remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.remove('remarked-widget-classic__step-1--none');
+            getDates();
             
 
         }
@@ -63,7 +64,39 @@ function widgetRemarked(options) {
     }
 
 
+      function getDates() {
+        let data = {
+            method: 'GetDates',
+            token: remarkedToken,
+            request_id: new Date().getTime()
+        }
+        const xhr = new XMLHttpRequest();
+        let json = JSON.stringify(data);
+        
+        xhr.open('POST', remarkedReqUrl);
 
+        xhr.responseType = 'json';
+        xhr.setRequestHeader('Content-Type', 'application/json');
+
+        xhr.onload = function() {
+            console.log(xhr.response);
+            let dates = xhr.response.dates;
+            let dateSelect = document.querySelector('.remarked-widget-' +  options.classButton + ' #start');
+            let option = dateSelect.querySelectorAll('option');
+            for (var i = 0; i < option.length; i++) {
+                let date = dates.split('-');
+                let day = date[2];
+                let mm = date[1];
+                let year = date[0];
+                let arr = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентебря', 'октября', 'ноября', 'декабря'];
+                let text = day + ' ' + arr[+mm-1] + ' ' + year;
+                console.log(text);
+            }
+        }
+
+        xhr.send(json);
+
+      }
     
 
     let remarkedWidgetClassic = document.createElement('div');
@@ -504,6 +537,34 @@ function widgetRemarked(options) {
             
         });
     }
+
+    function clearRemarkedReserve() {
+        remarkedWidgetClassic.classList.remove('remarked-widget-active');
+        remarkedWidgetClassic.classList.add('remarked-widget-none');
+        remarkedWidgetClassic.querySelector('.success-reserve-remarked').remove();
+        remarkedWidgetClassic.querySelector('.remarked-widget__times').remove();
+        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-0').style.display = "block";
+        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').removeAttribute('style');
+        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-3').classList.remove('remarked-widget-classic__step-3--active');
+        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').classList.remove('remarked-widget-classic__step-1--active');
+        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-2').removeAttribute('style');
+        remarkedWidgetClassic.querySelector('.remarked-widget-classic__step-1').removeAttribute('style');
+        remarkedUserInput.value = "";
+        remarkedUserInputText = "";
+        remarkedPhoneInput.value = "";
+        remarkedPhoneInputText = "";
+        remarkedEmailInput.value = "";
+        remarkedEmailInputText = "";
+        remarkedUserInputVal = false;
+        remarkedPhoneInputVal = false;
+        remarkedEmailInputVal = false;
+        remarkedWidgetClassic.querySelector('.remarked-quantity input').value = 1;
+        remarkedWidgetClassic.querySelector("#start").value = remarkedWidgetClassic.querySelector('#start option').value;
+        remarkedUserInput.removeAttribute('style');
+        remarkedPhoneInput.removeAttribute('style');
+        remarkedEmailInput.removeAttribute('style');
+        remarkedWidgetClassic.querySelector('.remarked-cod-phone').style.display="none";
+    }
     
     function sendCodRemarked() {
         if (options.smsCode) {
@@ -663,8 +724,7 @@ function widgetRemarked(options) {
                     remarkedWidgetClassic.querySelector('.remarked-widget-classic__body').append(remarkedSucsess);
                     let remarkedCloseModal = remarkedWidgetClassic.querySelector('#remarkedCloseModal');
                     remarkedCloseModal.addEventListener('click', function(){
-                        remarkedWidgetClassic.classList.remove('remarked-widget-active');
-                        remarkedWidgetClassic.classList.add('remarked-widget-none');
+                        clearRemarkedReserve();
                     });
                 } else {
                     if(!alert('Заполните анкету заново с правильными параметрами')){window.location.reload();}
@@ -703,8 +763,7 @@ function widgetRemarked(options) {
                 remarkedWidgetClassic.querySelector('.remarked-widget-classic__body').append(remarkedSucsess);
                 let remarkedCloseModal = remarkedWidgetClassic.querySelector('#remarkedCloseModal');
                 remarkedCloseModal.addEventListener('click', function(){
-                    remarkedWidgetClassic.classList.remove('remarked-widget-active');
-                    remarkedWidgetClassic.classList.add('remarked-widget-none');
+                    clearRemarkedReserve();
                 });
             }
         }
