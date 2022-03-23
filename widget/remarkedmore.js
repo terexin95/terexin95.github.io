@@ -91,6 +91,8 @@ function widgetRemarked(options) {
                 let arr = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентебря', 'октября', 'ноября', 'декабря'];
                 let text = day + ' ' + arr[+mm-1] + ' ' + year;
                 console.log(text);
+                option[i].setAttribute('value', dates[i]);
+                option[i].textContent = text;
             }
         }
 
@@ -266,25 +268,28 @@ function widgetRemarked(options) {
             remarkedWidgetClassic.classList.add('remarked-widget-active');
             remarkedWidgetClassic.classList.remove('remarked-widget-none');
 
-                let dateSelect = document.querySelector('.remarked-widget-' +  options.classButton + ' #start');
-                let option = dateSelect.querySelectorAll('option');
-                for (var i = 0; i < option.length; i++) {
-                    let arr = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентебря', 'октября', 'ноября', 'декабря'];
-                    let arr1 = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
-                    let date = new Date();
-                    date.setDate(date.getDate() + i);
-                    if (i == 0) {
-                        option[i].setAttribute('selected', 'selected');
-                    }
-                    let day = date.getDate();
+                // let dateSelect = document.querySelector('.remarked-widget-' +  options.classButton + ' #start');
+                // let option = dateSelect.querySelectorAll('option');
+                // for (var i = 0; i < option.length; i++) {
+                //     let arr = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентебря', 'октября', 'ноября', 'декабря'];
+                //     let arr1 = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
+                //     let date = new Date();
+                //     date.setDate(date.getDate() + i);
+                //     if (i == 0) {
+                //         option[i].setAttribute('selected', 'selected');
+                //     }
+                //     let day = date.getDate();
 
-                    if (day < 10) {
-                      day = day.toString();
-                      day = '0' + day;
-                    }
-                    option[i].setAttribute('value', day + '.' + arr1[date.getMonth()] + '.' + date.getFullYear())
-                    option[i].textContent = day + ' ' + arr[date.getMonth()] + ' ' + date.getFullYear();
-                }
+                //     if (day < 10) {
+                //       day = day.toString();
+                //       day = '0' + day;
+                //     }
+                //     option[i].setAttribute('value', day + '.' + arr1[date.getMonth()] + '.' + date.getFullYear())
+                //     option[i].textContent = day + ' ' + arr[date.getMonth()] + ' ' + date.getFullYear();
+                // }
+
+
+
                 // let numberInputs = remarkedWidgetClassic.querySelectorAll('.remarked-widget-' + options.classButton + ' .remarked-quantity');
 
                 //     if (numberInputs.length > 0) {
