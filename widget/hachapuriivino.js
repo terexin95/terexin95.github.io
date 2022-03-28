@@ -582,6 +582,9 @@ function widgetRemarked(options) {
     }
 
     function sendReserveRemarked() {
+        if (!remarkedWidgetClassic.querySelector('.remarked-widget__time--active')) {
+            return false;
+        }
         remarkedWidgetClassic.querySelector('.remarkedSend').setAttribute('disabled', 'disabled');
         let remarkedBodyRooms = {
             method: 'CreateReserve',
