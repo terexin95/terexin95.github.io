@@ -858,8 +858,8 @@ function widgetRemarked(options) {
                     return false;
                 }
                 for (let i = 0; i < remarkedArrDays.length; i++) {
-                    if (window.innerWidth > 450) {
-                        if (remarkedArrDays[i].is_free === true && remarkedArrDays[i].time.split(':')[1] != '15' && remarkedArrDays[i].time.split(':')[1] != '45') {
+                    if (window.innerWidth > 450 && remarkedArrDays[i].time.split(':')[1] != '15' && remarkedArrDays[i].time.split(':')[1] != '45') {
+                        if (remarkedArrDays[i].is_free === true) {
                             remarkedWidgetTimes.innerHTML += `<div class="remarked-widget__time remarked-widget__time-work">${ remarkedArrDays[i].time }</div>`
                         } else {
                             remarkedWidgetTimes.innerHTML += `<div class="remarked-widget__time remarked-widget__time--disabled">${ remarkedArrDays[i].time }</div>`
