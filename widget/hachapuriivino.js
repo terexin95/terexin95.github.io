@@ -139,7 +139,24 @@ function widgetRemarked(options) {
                     <div class="remarked-widget-row">
                         <div class="remarked-widget-column">
                             <div class="remarked-widget-title">Выберите дату</div>
-                            <select id="start"><option selected="selected" value="07.12.2021">07 декабря 2021</option><option value="08.12.2021">08 декабря 2021</option><option value="09.12.2021">09 декабря 2021</option><option value="10.12.2021">10 декабря 2021</option><option value="11.12.2021">11 декабря 2021</option><option value="11.12.2021">11 декабря 2021</option></select>
+                            <select id="start">
+                                <option selected="selected" value="07.12.2021">07 декабря 2021</option>
+                                <option value="08.12.2021">08 декабря 2021</option>
+                                <option value="09.12.2021">09 декабря 2021</option>
+                                <option value="10.12.2021">10 декабря 2021</option>
+                                <option value="11.12.2021">11 декабря 2021</option>
+                                <option value="11.12.2021">11 декабря 2021</option>
+                                <option selected="selected" value="07.12.2021">07 декабря 2021</option>
+                                <option value="08.12.2021">08 декабря 2021</option>
+                                <option value="09.12.2021">09 декабря 2021</option>
+                                <option value="10.12.2021">10 декабря 2021</option>
+                                <option value="11.12.2021">11 декабря 2021</option>
+                                <option value="11.12.2021">11 декабря 2021</option>
+                                <option value="10.12.2021">10 декабря 2021</option>
+                                <option value="11.12.2021">11 декабря 2021</option>
+                                <option value="11.12.2021">11 декабря 2021</option>
+                                <option value="11.12.2021">11 декабря 2021</option>
+                            </select>
                         </div>
                         <div class="remarked-widget-column">
                             <div class="remarked-widget-title">Количество гостей</div>
