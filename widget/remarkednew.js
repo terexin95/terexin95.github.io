@@ -205,7 +205,7 @@ function widgetRemarked(options) {
                 let dateSelect = document.querySelector('.remarked-widget-' +  options.classButton + ' #start');
                 let option = dateSelect.querySelectorAll('option');
                 for (var i = 0; i < option.length; i++) {
-                    let arr = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентебря', 'октября', 'ноября', 'декабря'];
+                    let arr = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
                     let arr1 = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
                     let date = new Date();
                     date.setDate(date.getDate() + i);
