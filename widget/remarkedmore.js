@@ -88,7 +88,7 @@ function widgetRemarked(options) {
                 let day = date[2];
                 let mm = date[1];
                 let year = date[0];
-                let arr = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентебря', 'октября', 'ноября', 'декабря'];
+                let arr = ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
                 let text = day + ' ' + arr[+mm-1] + ' ' + year;
                 option[i].setAttribute('value', dates[i]);
                 option[i].textContent = text;
